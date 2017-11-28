@@ -1,0 +1,130 @@
+@namespace "http://www.w3.org/1999/xhtml";
+
+@-moz-document url-prefix("about:home"), url-prefix("about:newtab") {
+
+	body {
+		background-color: var(--in-content-page-background) !important;
+		color: var(--in-content-page-color) !important;
+	}
+
+	.collapsible-section .section-top-bar .section-info-option .info-option::before {
+		/* TODO: SVG arrow */
+	}
+
+	.manual-migration-container {
+		color: var(--in-content-page-color) !important;
+	}
+
+	.prefs-pane [type="checkbox"]:not(:checked) + label::before,
+	.prefs-pane [type="checkbox"]:checked + label::before {
+		background-color: var(--grey-80) !important;
+		border-color: var(--in-content-box-border-color) !important;
+	}
+
+	.prefs-pane [type="checkbox"]:not(:disabled) + label:hover::before {
+		border-color: var(--blue-60) !important;
+	}
+
+	.search-wrapper input,
+	.topsite-form .form-wrapper input[type="text"] {
+		background-color: var(--in-content-box-background) !important;
+	}
+
+	.prefs-pane-button button {
+		fill: var(--grey-10) !important;
+		opacity: 0.8 !important;
+	}
+	.prefs-pane-button button:hover {
+		background-color: var(--grey-80) !important;
+	}
+
+	.prefs-pane {
+		color: var(--in-content-page-color) !important;
+	}
+	.prefs-pane hr {
+		border-bottom-color: var(--in-content-box-border-color) !important;
+	}
+
+	.prefs-pane .sidebar {
+		background-color: var(--in-content-page-background) !important;
+		border-left-color: var(--in-content-box-border-color) !important;
+	}
+
+	.prefs-pane .actions {
+		background-color: var(--grey-80) !important;
+		border-top-color: var(--in-content-box-border-color) !important;
+	}
+
+	.prefs-pane .sidebar,
+	.prefs-pane .actions {
+		border-left-color: var(--in-content-box-border-color) !important;
+	}
+
+	.prefs-pane .prefs-modal-inner-wrapper .options {
+		background-color: var(--grey-80) !important;
+		border-color: var(--in-content-box-border-color) !important;
+	}
+
+	.icon,
+	.search-wrapper .search-label,
+	.search-wrapper .search-button,
+	.section-top-bar .info-option-icon {
+		fill: var(--grey-10) !important;
+		opacity: 0.8 !important;
+	}
+
+	.section-top-bar .info-option {
+		background-color: var(--grey-80) !important;
+		border-color: var(--in-content-box-border-color) !important;
+	}
+
+	.edit-topsites-wrapper .edit-topsites-button button:focus {
+		background-color: var(--grey-80) !important;
+		border-bottom-color: var(--in-content-box-border-color) !important;
+	}
+
+	.card-outer {
+		background-color: var(--grey-80) !important;
+	}
+
+	.card-outer:-moz-any(:hover, :focus, .active):not(.placeholder),
+	.actions button:hover:not(.dismiss),
+	.top-sites-list .top-site-outer:hover .tile,
+	.top-sites-list .top-site-outer:focus .tile,
+	.top-sites-list .top-site-outer.active .tile {
+		box-shadow: 0 0 0 5px var(--in-content-box-border-color) !important;
+	}
+
+	.top-sites-list .top-site-outer .edit-menu button {
+		background-color: initial !important;
+		border-right: var(--in-content-box-border-color) !important;
+	}
+
+	.top-sites-list .top-site-outer .edit-menu {
+		background-color: var(--grey-80) !important;
+		border-color: var(--in-content-border-color) !important;
+	}
+
+	.topsite-form .form-wrapper input[type="text"] {
+		color: var(--in-content-text-color);
+	}
+
+	.modal {
+		background-color: var(--in-content-page-background) !important;
+		border-color: var(--in-content-border-color) !important;
+		color: var(--in-content-page-color);
+	}
+	.modal-overlay {
+		background-color: var(--grey-90) !important;
+	}
+
+	.modal .actions {
+		border-top: var(--in-content-border-color) !important;
+	}
+	.manual-migration-actions button,
+	.modal .actions button {
+		background-color: var(--grey-80) !important;
+		border-color: var(--in-content-box-border-color) !important;
+		color: var(--in-content-text-color) !important;
+	}
+}

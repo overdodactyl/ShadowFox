@@ -1,0 +1,7 @@
+@namespace "http://www.w3.org/1999/xhtml";
+
+@-moz-document url-prefix("about:url-classifier") {
+	:root {
+		--aboutUrlClassifier-table-background: var(--in-content-box-background) !important;
+	}
+}

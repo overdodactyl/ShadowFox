@@ -1,0 +1,108 @@
+@namespace "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+@namespace html "http://www.w3.org/1999/xhtml";
+
+@import "colors.css";
+
+@-moz-document
+		url-prefix("about:about")
+		url-prefix("about:addons"),
+		url-prefix("about:config"),
+		url-prefix("about:crashes"),
+		url-prefix("about:credits"),
+		url-prefix("about:debugging"),
+		url-prefix("about:downloads"),
+		url-prefix("about:home"),
+		url-prefix("about:license"),
+		url-prefix("about:networking"),
+		url-prefix("about:newtab"),
+		url-prefix("about:performance"),
+		url-prefix("about:preferences"),
+		url-prefix("about:privatebrowsing"),
+		url-prefix("about:profiles"),
+		url-prefix("about:profiles"),
+		url-prefix("about:rights"),
+		url-prefix("about:studies"),
+		url-prefix("about:support"),
+		url-prefix("about:telemetry"),
+		url-prefix("about:url-classifier") {
+
+	:root {
+	    --in-content-page-color: white !important;
+	    --in-content-page-background: var(--grey-70) !important;
+	    --in-content-text-color: white !important;
+	    --in-content-selected-text: white !important;
+	    --in-content-box-background: var(--grey-60) !important;
+	    --in-content-box-background-odd: red !important;
+	    --in-content-box-background-hover: var(--grey-60) !important;
+	    --in-content-box-background-active: var(--grey-50) !important;
+	    --in-content-box-border-color: var(--grey-50) !important;
+	    --in-content-item-hover: rgba(0,149,221,0.25);
+	    --in-content-item-selected: var(--blue-50) !important;
+	    --in-content-border-highlight: var(--blue-50) !important;
+	    --in-content-border-focus: var(--blue-50) !important;
+	    --in-content-border-color: var(--grey-50) !important;
+	    --in-content-category-outline-focus: 1px dotted var(--blue-50) !important;
+	    --in-content-category-text: white !important;
+	    --in-content-category-text-active: var(--blue-50) !important;
+	    --in-content-category-text-selected: var(--blue-50) !important;
+	    --in-content-category-text-selected-active: var(--blue-50) !important;
+	    --in-content-category-background: red !important;
+	    --in-content-category-background-hover: var(--grey-60) !important;
+	    --in-content-category-background-active: var(--grey-60) !important;
+	    --in-content-category-background-selected-hover: var(--grey-60) !important;
+	    --in-content-category-background-selected-active: var(--grey-60) !important;
+	    --in-content-tab-color: white !important;
+	    --in-content-link-color: #0a8dff !important;
+	    --in-content-link-color-hover: #0060df !important;
+	    --in-content-link-color-active: #003eaa !important;
+	    --in-content-link-color-visited: #0a8dff !important;
+	    --in-content-primary-button-background: #0a84ff !important;
+	    --in-content-primary-button-background-hover: #0060df !important;
+	    --in-content-primary-button-background-active: #003EAA !important;
+	    --in-content-table-border-dark-color: var(--grey-50) !important;
+	    --in-content-table-header-background: var(--in-content-box-background-hover) !important;
+	}
+
+	dialog,
+	window,
+	prefpane,
+	prefwindow,
+	.windowDialog {
+	  background-color: var(--in-content-page-background) !important;
+	  color: var(--in-content-page-color) !important;
+	}
+
+	.radio-check,
+	.checkbox-check,
+	html|input[type="checkbox"] {
+		background-image: initial !important;
+		box-shadow: initial !important;
+		background-color: var(--in-content-box-background) !important;
+		border-color: var(--in-content-box-border-color) !important;
+	}
+
+	html|input[type="checkbox"]:checked {
+		background-image: url("chrome://global/skin/in-content/check.svg") !important;
+	}
+
+	.tree-columnpicker-icon {
+		filter: invert(100%) !important;
+	}
+
+	menulist:not([editable="true"]) > .menulist-dropmarker,
+	treecol:not([hideheader="true"]) > .treecol-sortdirection[sortDirection],
+	html|select:not([size]):not([multiple]) {
+		fill: var(--in-content-text-color) !important;
+	}
+
+	treecol:not([hideheader="true"]):not(:first-child),
+	treecolpicker {
+		border-image: linear-gradient(
+			transparent 0%,
+			transparent 20%,
+			var(--in-content-box-border-color) 20%,
+			var(--in-content-box-border-color) 80%,
+			transparent 80%,
+			transparent 100%) 1 1 !important;
+	}
+}
