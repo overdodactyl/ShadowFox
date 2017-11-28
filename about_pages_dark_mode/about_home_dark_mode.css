@@ -1,0 +1,44 @@
+@-moz-document url(about:home) {
+
+	html, body, treechildren {
+		background: #323234 !important;
+		color: #ccc !important;
+	}
+
+	treecol {
+		background: #424040 !important;
+		color: #d2d2d2 !important;
+	}
+
+	treecol:hover {
+		text-decoration: underline !important;
+	}
+
+	button {
+		background-color: #292929 !important;
+		color: #ccc !important;
+		border: 1px #ccc solid !important;
+	}
+
+	button:hover {
+		background: #222 !important;
+	}
+
+	#block-snippet-overlay, #launcher, #brandLogo, #searchIconAndTextContainer, #aboutMozilla, .title, #errorLongDesc, #errorPageContainer {
+		display: none !important;
+	}
+
+	#searchText {
+		background-color: #292929 !important;
+	}
+
+	#searchIcon, #searchSubmit {
+		fill: #ccc !important;
+		opacity: .7 !important;
+	}
+
+	#defaultSnippet2 {
+		color: #ccc !important;
+	}
+
+}

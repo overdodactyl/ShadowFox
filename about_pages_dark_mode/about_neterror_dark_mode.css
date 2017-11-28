@@ -1,0 +1,21 @@
+@-moz-document url-prefix(about:neterror) {
+
+	html, body {
+    	background: #323234 !important;
+	}
+
+	h1, p, li, ul {
+		color: #ccc !important;
+	}
+
+	button {
+		background-color: #292929 !important;
+		color: #ccc !important;
+		border: 1px #ccc solid !important;
+	}
+
+	button:hover {
+    	background: #222 !important;
+	}
+
+}

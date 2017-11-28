@@ -1,0 +1,21 @@
+@-moz-document url(about:config) {
+
+	#configDeck {
+		background: #323234 !important;
+		color: darkcyan !important;
+	}
+
+	scrollbar {
+		-moz-appearance: none !important;
+		background: white !important;
+	}
+
+	thumb {
+		-moz-appearance: scalethumb-vertical !important;
+	}
+
+	#textbox, tree#configTree {
+		filter: invert(80%) hue-rotate(150deg);
+	}
+  
+}

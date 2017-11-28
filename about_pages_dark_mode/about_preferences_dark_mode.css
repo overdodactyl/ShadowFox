@@ -1,0 +1,26 @@
+@-moz-document url-prefix(about:preferences) {
+
+	page {
+		filter: invert(80%) hue-rotate(150deg);
+		background-color: #323234 !important;
+	}
+
+	#categories, .search-container {
+		background-color: white !important;
+	}
+
+	.category[selected], .category:hover {
+		background-color: #E9E9E9 !important;
+		color: #323234 !important;
+		-moz-border-start: unset !important;
+	}
+
+	#tabsElement tab[selected] {
+		-moz-border-bottom-colors: #323234 !important;
+	}
+
+	.help-button {
+		display: none !important;
+	}
+
+}

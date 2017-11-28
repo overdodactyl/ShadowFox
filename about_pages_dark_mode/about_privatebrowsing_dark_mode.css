@@ -1,0 +1,21 @@
+@-moz-document url("about:privatebrowsing"), url("about:Privatebrowsing"), url("about:PrivateBrowsing"), url("about:privateBrowsing") {
+	
+	html {
+    	background: #323234 !important;
+	}
+			
+	button {
+    	background-color: #292929 !important;
+    	color: #ccc !important;
+		border: 1px #ccc solid !important;
+	}
+	
+	button:hover {
+    	background: #222 !important;
+	}
+	
+	p {
+    	color: #ccc;
+  	}
+  
+}

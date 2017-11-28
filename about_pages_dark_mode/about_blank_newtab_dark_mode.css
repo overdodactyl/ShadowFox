@@ -1,0 +1,7 @@
+/* thank you u/Antabaka */
+@-moz-document url-prefix(about:blank), url-prefix(about:newtab) {
+	
+	html:not(#ublock0-epicker), html:not(#ublock0-epicker) body, #newtab-customize-overlay {
+		background: #323234 !important;
+	}
+}
