@@ -12,7 +12,7 @@ Like userChrome.css, userContent.css resides in a subdirectoy titled `chrome` wi
 
 #### How do I get to my profile directory?
 
-The location of your profile depends on your operating system.  Nevertheless, the following steps should always works:
+The location of your profile depends on your operating system.  Nevertheless, the following steps should always work:
 
 * Use the address bar to visit `about:support`
 
@@ -40,9 +40,9 @@ Here are just a few examples:
 
 # Can I contribute?
 
-Of course! Ideally, I would like this repository to be driven by user contributions.  There are a large number of `about` pages, and I have just scratched the surface (to see them all, visit `about:about`).  I would love to have your help completeing the rest! This project is truly in it's infancy, so please feel free to make suggestions, tell me where I've made mistakes, and make suggestions!  
+Of course! Ideally, I would like this repository to be driven by user contributions.  There are a large number of `about` pages, and I have just scratched the surface (to see them all, visit `about:about`).  I would love to have your help completeing the rest. This project is truly in it's infancy, so please feel free to make suggestions, tell me where I've made mistakes, and make suggestions.
 
-I'm open to anything, so if you would like to contribute in any way, please let me know! I don't want to limit this repository to only changes in `about` pages...that's just what I began working on.  You can submit pull requests, or message me on Reddit if you have something you want to discuss/share :)
+I'm open to anything, so if you would like to contribute in any way, please let me know. I don't want to limit this repository to only changes in `about` pages...that's just what I began working on.  You can submit pull requests, or message me on Reddit if you have something you want to discuss/share :)
 
 ### [ToDo]
 
