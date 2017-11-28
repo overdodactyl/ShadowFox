@@ -6,7 +6,9 @@ Currently, the scope of this project involves improving `about` pages for Firefo
 
 In short, userContent.css is a file used to define and customize web page content.  This file does not exist in a Firefox profile by default, and must be created by the user.
 
-Firefox currently has restrictions on the pages extensions can access.  Therefore, something such as Stylus can not be used to stlye `about` pages.  
+## Why userContent.css?
+
+Firefox has restrictions on the pages extensions can access.  Therefore, something such as Stylus can not be used to stlye `about` pages.  
 
 #### Where does the userContent.css file go?
 
