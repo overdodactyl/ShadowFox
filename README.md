@@ -6,6 +6,8 @@ Currently, the scope of this project involves improving `about` pages for Firefo
 
 In short, userContent.css is a file used to define and customize web page content.  This file does not exist in a Firefox profile by default, and must be created by the user.
 
+Firefox currently has restrictions on the pages extensions can access.  Therefore, something such as Stylus can not be used to stlye `about` pages.  
+
 #### Where does the userContent.css file go?
 
 Like userChrome.css, userContent.css resides in a subdirectoy titled `chrome` within your Firefox profile.  
@@ -18,7 +20,7 @@ The location of your profile depends on your operating system.  Nevertheless, th
 
 * Click on the Show in Finder/Show Folder button available next to the label `Profile Finder`.
 
-##### I'm in my profile directory, what now?
+#### I'm in my profile directory, what now?
 
 Look for a folder titled `chrome`.  This folder does not exist by default, so if you don't see it, create it yourself.  
 
