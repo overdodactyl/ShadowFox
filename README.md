@@ -36,6 +36,8 @@ Here are just a few examples:
 
 ![about:preferences](Screenshots/about_addons.png)
 
+![about:preferences](Screenshots/about_privatebrowsing.png)
+
 # Can I contribute?
 
 Of course! Ideally, I would like this repository to be driven by user contributions.  There are a large number of `about` pages, and I have just scratched the surface (to see them all, visit `about:about`).  I would love to have your help completeing the rest! This project is truly in it's infancy, so please feel free to make suggestions, tell me where I've made mistakes, and make suggestions!  
