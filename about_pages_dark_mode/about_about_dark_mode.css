@@ -1,0 +1,16 @@
+@-moz-document url(about:about) {
+
+	html, body {
+		background: #323234 !important;
+		color: #ccc !important;
+	}
+
+	a:link {
+		color: darkcyan !important;
+	}
+	
+	h1 {
+		color: #ccc !important;
+	}
+
+}
