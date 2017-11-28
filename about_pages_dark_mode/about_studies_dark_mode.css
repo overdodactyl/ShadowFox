@@ -1,0 +1,8 @@
+@namespace "http://www.w3.org/1999/xhtml";
+
+@-moz-document url-prefix("about:studies") {
+	:root {
+		--info-box-background-color: var(--in-content-box-background) !important;
+		--info-box-border-color: var(--in-content-box-border-color) !important;
+	}
+}
