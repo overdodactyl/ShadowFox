@@ -26,7 +26,7 @@ The location of your profile depends on your operating system.  Nevertheless, th
 
 Look for a folder titled `chrome`.  This folder does not exist by default, so if you don't see it, create it yourself.  
 
-You can now dowload the zip file of this repository, and put it's contents within your `chrome` folder.  
+You can now dowload the zip file of this repository, and put the userContent-about_pages.css file in your `chrome` folder.  
 
 *_IMPORTANT_: if you already have a userContent.css file, copy the contents of `userContent-about_pages.css` to your existing file.  If you do not, change the name of `userContent-about_pages.css` to `userContent.css`.   
 
@@ -50,9 +50,13 @@ Of course! Ideally, I would like this repository to be driven by user contributi
 
 I'm open to anything, so if you would like to contribute in any way, please let me know. I don't want to limit this repository to only changes in `about` pages...that's just what I began working on.  You can submit pull requests, or message me on Reddit if you have something you want to discuss/share :)
 
+Edit: Due to some very helpful tips and suggestions, I was able to complete the rest of the `about:pages` (I think?)...so I no longer need help with that...yay!
+
+I would still love your help finding areas to improve, things I messed, ways to improve the code etc.~
+
 ### [ToDo]
 
-Code standardization
+Condense code where possible
 
-Site sources
+Create variable so users can easily change the theme
 
