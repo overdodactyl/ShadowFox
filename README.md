@@ -26,9 +26,9 @@ The location of your profile depends on your operating system.  Nevertheless, th
 
 Look for a folder titled `chrome`.  This folder does not exist by default, so if you don't see it, create it yourself.  
 
-You can now dowload the zip file of this repository, and put the userContent-about_pages.css file in your `chrome` folder.  
+You can now download the zip file of this repository, and put the userContent.css file in your `chrome` folder.  
 
-*_IMPORTANT_: if you already have a userContent.css file, copy the contents of `userContent-about_pages.css` to your existing file.  If you do not, change the name of `userContent-about_pages.css` to `userContent.css`.   
+*_IMPORTANT_: if you already have a userContent.css file, combine the contents of the two files as to not lose any changes you have made.   
 
 ## What do the changes look like?
 
