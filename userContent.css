@@ -9,7 +9,7 @@
 }
 
 
-@-moz-document url-prefix(about:about), url-prefix(about:crashes), url(about:debugging), url-prefix(about:downloads), url-prefix(about:privatebrowsing), url-prefix(about:buildconfig), url-prefix(about:networking),url-prefix(about:license), url(about:studies), url(about:telemetry), url(about:support)   {
+@-moz-document url-prefix(about:about), url-prefix(about:crashes), url(about:debugging), url-prefix(about:downloads), url-prefix(about:privatebrowsing), url-prefix(about:buildconfig), url-prefix(about:networking),url-prefix(about:license), url(about:studies), url(about:telemetry), url(about:support), url(about:sessionrestore)   {
     :root {
 	    --in-content-page-color: var(--primary-light-color) !important;
 	    --in-content-page-background: var(--dark-accent) !important;
