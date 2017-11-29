@@ -60,5 +60,3 @@ Condense code where possible
 
 Create variable so users can easily change the theme
 
-Add License
-
