@@ -36,13 +36,13 @@ Here are just a few examples:
 
 ![about:preferences](Screenshots/about_preferences.png)
 
-![about:preferences](Screenshots/about_config.png)
+![about:config](Screenshots/about_config.png)
 
-![about:preferences](Screenshots/about_addons.png)
+![about:addons](Screenshots/about_addons.png)
 
-![about:preferences](Screenshots/about_privatebrowsing.png)
+![about:privatebrowsing](Screenshots/about_privatebrowsing.png)
 
-![about:preferences](Screenshots/about_sessionrestore.png)
+![about:sessionrestore](Screenshots/about_sessionrestore.png)
 
 # Can I contribute?
 
