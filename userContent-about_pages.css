@@ -43,7 +43,7 @@
     }
 }
 
-@-moz-document url(about:blank), url(about:newtab), url(about:buildconfig), url(about:), url(about:accounts), url(about:cache), url(about:memory), url(about:mozilla), url(about:performance), url(about:plugins), url(about:profiles), url(about:rights), url(about:robots), url(about:serviceworkers), url(about:studies), url(about:sync-log), url(about:url-classifier), url(about:webrtc), url(https://www.mozilla.org/credits/) {
+@-moz-document url(about:blank), url(about:newtab), url(about:buildconfig), url(about:), url(about:accounts), url(about:cache), url(about:memory), url(about:mozilla), url(about:performance), url(about:plugins), url(about:profiles), url(about:rights), url(about:robots), url(about:serviceworkers), url(about:studies), url(about:sync-log), url(about:url-classifier), url(about:webrtc), url(https://www.mozilla.org/credits/), url(about:sessionrestore) {
 	
 	html:not(#ublock0-epicker), html:not(#ublock0-epicker) body, #newtab-customize-overlay {
 		background: var(--primary-dark-color) !important;
