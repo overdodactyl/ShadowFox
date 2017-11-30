@@ -1,3 +1,7 @@
+# New changelog created
+
+To stay up-to-date with all changes made to this repository, please see [here](changelog.md).
+
 # Important Update 11/29/2017 
 
 Some extensions have preferences built into the `about:addon` page that do not utilize the default styling settings utilized by Firefox.  
