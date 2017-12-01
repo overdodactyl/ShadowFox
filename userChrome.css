@@ -2,11 +2,4 @@
 @import "userChrome-files/dark_nav_bar_menus.css";
 @import "userChrome-files/dark_context_menus.css";
 @import "userChrome-files/remove_white_flash.css";
-
-	
-
-   
-
-
-
-
+@import "userChrome-files/remove_bookmarks_bottom_border.css";

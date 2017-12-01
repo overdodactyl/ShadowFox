@@ -30,3 +30,12 @@
 #PopupAutoCompleteRichResult .autocomplete-richlistbox, .search-one-offs {
   background: var(--grey-60) !important;
 }
+
+#appMenu-mainView toolbarbutton:hover,  #customizationui-widget-multiview toolbarbutton:hover,
+#widget-overflow-list toolbarbutton:hover {
+  background: var(--grey-80) !important;
+}
+
+#BMB_bookmarksPopup {
+  background: none !important;
+}

@@ -1,3 +1,12 @@
+## 11/30/2017 - UTC 5:10
+
+* Made some fixes to context and drop down menus that lacked conformity 
+
+* Added `remove_bookmarks_bottom_border.css` to remove 1px black border between the bookmarks toolbar and the webpage.
+
+Huge thanks to u/markdarkness for pointing these out
+
+
 ## 11/30/2017
 
 * Added userChrome.css and accompanying files to include support for:

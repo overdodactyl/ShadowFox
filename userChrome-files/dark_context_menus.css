@@ -1,8 +1,8 @@
 /* Main context menu */
 menupopup, popup, popup > menu > menupopup, menupopup > menu > menupopup {
       -moz-appearance: none !important;
-      background: var(--grey-70) !important;
-      border: 1px solid var(--primary-light-color) !important;
+      background: var(--grey-60) !important;
+      border: none !important;
       padding: 6px 0px 6px 0px  !important;
 }
 
@@ -14,11 +14,11 @@ menupopup, popup, popup > menu > menupopup, menupopup > menu > menupopup {
 /* Top Row of Navigation Options */
 #context-navigation menuitem {
       color: var(--grey-10) !important;
-      background: var(--grey-80) !important;
+      background: var(--grey-70) !important;
 }
 
 #context-navigation menuitem:hover {
-      background: var(--grey-90) !important;
+      background: var(--grey-80) !important;
 }
 
 /* Menu items */
@@ -44,5 +44,5 @@ menupopup menu:hover, menuitem:hover {
 /* Sidebar Header Context Menue */ 
 .panel-arrowcontent {
   color: var(--grey-10) !important;
-  background: var(--url-and-searchbar-background-color) !important;
+  background: var(--grey-60) !important;
 }
