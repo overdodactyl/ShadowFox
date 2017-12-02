@@ -1,3 +1,13 @@
+# Seeking help from a Windows user
+
+Currently, I am limited to testing this project on macOS.  Unfortunately, that means I can not foresee any issues that may arise on different operating systems.  It has been recently brought to my attention that there may be some compitibility problems with the context menus.  If there are any Windows users out there that like this project and would like to contribute, I would greatly appreciate some help maintaining compatibility!
+
+For reference, the various menus/context menus should look like this:
+
+![dark_menus](Screenshots/dark_menus.png)
+
+Thanks!
+
 # New changelog created
 
 To stay up-to-date with all changes made to this repository, please see [here](changelog.md).
