@@ -13,7 +13,7 @@
 	--primary-accent-color-dark: #007878; /* Darker cyan color */
 }
 
-@-moz-document url-prefix(about:about), url-prefix(about:crashes), url(about:debugging), url-prefix(about:downloads), url-prefix(about:privatebrowsing), url-prefix(about:buildconfig), url-prefix(about:networking),url-prefix(about:license), url(about:studies), url(about:telemetry), url(about:support), url(about:sessionrestore)   {
+@-moz-document url-prefix(about:about), url-prefix(about:crashes), url(about:debugging), url-prefix(about:downloads), url-prefix(about:privatebrowsing), url-prefix(about:buildconfig), url-prefix(about:networking),url-prefix(about:license), url(about:studies), url(about:telemetry), url(about:support), url(about:sessionrestore), url(about:neterror), url(about:home)   {
     :root {
 	    --in-content-page-color: var(--primary-light-color) !important;
 	    --in-content-page-background: var(--dark-accent) !important;
@@ -80,7 +80,7 @@
 	
 }
 
-@-moz-document url(about:blank), url(about:newtab), url(about:buildconfig), url(about:), url(about:accounts), url(about:cache), url(about:memory), url(about:mozilla), url(about:performance), url(about:plugins), url(about:profiles), url(about:rights), url(about:robots), url(about:serviceworkers), url(about:studies), url(about:sync-log), url(about:url-classifier), url(about:webrtc), url(https://www.mozilla.org/credits/), url(about:sessionrestore), url(about:addons) {
+@-moz-document url(about:blank), url(about:newtab), url(about:buildconfig), url(about:), url(about:accounts), url(about:cache), url(about:memory), url(about:mozilla), url(about:performance), url(about:plugins), url(about:profiles), url(about:rights), url(about:robots), url(about:serviceworkers), url(about:studies), url(about:sync-log), url(about:url-classifier), url(about:webrtc), url(https://www.mozilla.org/credits/), url(about:sessionrestore), url(about:addons), url(about:neterror), url(about:home) {
 	
 	html:not(#ublock0-epicker), html:not(#ublock0-epicker) body, #newtab-customize-overlay {
 		background: var(--primary-dark-color) !important;
@@ -417,6 +417,23 @@
 }
 
 
+@-moz-document url-prefix(about:newtab), url(about:home) {
+	
+	.search-wrapper .search-label, .search-wrapper .search-button {
+	    fill: #ccc !important;
+		opacity: .7 !important;
+	}
+
+	.search-wrapper input {
+	    color: #ccc !important;
+	    background: #4a4a4f !important;
+	}
+
+	.prefs-pane-button button {
+		fill: #4a4a4f !important
+	}
+	
+}
 
 
 

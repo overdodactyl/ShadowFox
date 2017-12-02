@@ -1,3 +1,20 @@
+## 12/2/2017 22:50 UTC
+
+* Improved the design of the address bar drop down
+
+* Added support for `about:neterror`
+
+* Added support for the "Problem Loading Page" page
+
+* Made improvements to `about:newtab` and `about:home`
+
+* Changed the color of status panels (small pop-ups that show links/loading links) to adhere to the dark theme 
+
+* Changed the the color of the "Done" button on the customize page
+
+* Fixed the context menu for bookmark submenus in Windows (thanks u/mrkwatz)
+
+
 ## 11/30/2017 - UTC 5:10
 
 * Made some fixes to context and drop down menus that lacked conformity 

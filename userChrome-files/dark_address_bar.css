@@ -1,0 +1,54 @@
+/* The following code is based on that found on
+* https://www.jeffersonscher.com/gm/url-bar-tweaks.html
+* Copyright © 2017 Jefferson Scher (BSD-3-Clause License or CC-BY License) */
+
+
+#PopupAutoCompleteRichResult .autocomplete-richlistbox { 
+	background-color: var(--grey-60) !important; 
+} 
+
+
+#PopupAutoCompleteRichResult .autocomplete-richlistitem { 
+	border-bottom-color: var(--primary-light-color) !important; 
+}
+ 
+.autocomplete-richlistitem .ac-title,  
+.autocomplete-richlistitem .ac-action, 
+.autocomplete-richlistitem .ac-separator,
+#PopupSearchAutoComplete { 
+	color: var(--primary-light-color) !important; 
+}
+ 
+.autocomplete-richlistitem[selected=true] { 
+	background-color: var(--primary-accent-color) !important; 
+}
+ 
+.autocomplete-richlistitem[selected=true] .ac-title,  
+.ac-title[selected], 
+.autocomplete-richlistitem[selected=true] .ac-action, 
+.ac-action[selected], 
+.autocomplete-richlistitem[selected=true] .ac-separator, 
+.ac-separator[selected] { 
+	color: white !important; 
+} 
+
+.autocomplete-richlistitem[selected=true] .ac-url,  
+.ac-url[selected] { 
+	color: white !important; 
+}
+
+.ac-url { 
+	color: var(--primary-accent-color) !important; 
+} 
+
+.search-one-offs {
+	background: var(--grey-60) !important;
+}
+
+.search-panel-input-value {
+	color: var(--primary-accent-color) !important;;
+}
+
+.search-panel-one-offs {
+	background: var(--grey-80) !important;
+}
