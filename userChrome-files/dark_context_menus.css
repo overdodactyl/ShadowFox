@@ -1,5 +1,5 @@
 /* Main context menu */
-menupopup, popup, popup > menu > menupopup, menupopup > menu > menupopup {
+menupopup, popup, popup > menu > menupopup, menupopup > menu > menupopup, menupopup scrollbox {
       -moz-appearance: none !important;
       background: var(--grey-60) !important;
       border: none !important;
