@@ -20,6 +20,13 @@
   background: var(--grey-90);
 }
 
+/* Fix for downloads menu */
+photonpanelmultiview panelview {
+    background: none !important;
+    color: var(--primary-light-color) !important;
+}
+
+
 
 #appMenu-mainView toolbarbutton:hover,  #customizationui-widget-multiview toolbarbutton:hover,
 #widget-overflow-list toolbarbutton:hover {
@@ -61,4 +68,5 @@
 #BMB_bookmarksPopup {
   background: none !important;
 }
+
 
