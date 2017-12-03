@@ -3,7 +3,7 @@
 * Fixed the secure connection sub menu that was not style - issue #8 (thanks 
 @chinook77 for bringing this to my attention)
 
-* Added dark scroll bars to the side bar (thanks u/\_Dimitri\_ for the code)
+* Added dark scroll bars to the side bar (thanks u/\_Dimitri\_ for the code) - this section is optional and may be uncommented based on your OS or preferences.
 
 
 ## 12/3/2017 7:58 UTC
