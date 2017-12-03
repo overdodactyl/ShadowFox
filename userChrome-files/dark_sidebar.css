@@ -53,3 +53,14 @@
 }
 
 
+/* Siderbar slider - thank you u/_Dimitri_ */
+scrollbar > slider {
+  background-color: var(--grey-60);
+}
+
+scrollbar > slider > thumb, scrollbar > scrollbarbutton {
+  -moz-appearance: none !important;
+  background-color: var(--grey-80);
+}
+
+

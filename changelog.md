@@ -1,3 +1,11 @@
+## 12/3/2017  21:43 UTC
+
+* Fixed the secure connection sub menu that was not style - issue #8 (thanks 
+@chinook77 for bringing this to my attention)
+
+* Added dark scroll bars to the side bar (thanks u/\_Dimitri\_ for the code)
+
+
 ## 12/3/2017 7:58 UTC
 
 * Improvements to `about:newtab` and `about:home`
