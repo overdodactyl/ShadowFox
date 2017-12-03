@@ -6,7 +6,7 @@
 
 * First draft at a dark sidebar (Windows users - if this doesn't work for you, please let me know and I'll upload a separate file)
 
-* Reversed the icon color of Tree Style Tabs to dark gray to match them
+* Reversed the icon color of Tree Style Tabs to dark gray to match theme
 
 ## 12/2/2017 22:50 UTC
 
