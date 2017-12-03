@@ -22,10 +22,10 @@
 /* Sidebar search box */
 #sidebar-search-container textbox {
     -moz-appearance: none !important;
-    border-radius: .2em !important;
+    border-radius: .3em !important;
     background-color: var(--grey-60) !important;
     color: var(--primary-light-color) !important;
-    border: 1px solid black !important;
+    border: solid 1px var(--mid-way-color) !important;
 }
 
 /* Sidebar "view" button */
@@ -41,7 +41,9 @@
 
 /* Sidebar splitter */
 #sidebar-splitter {
-    width: 5px !important;
+    width: 1px !important;
+    background: var(--primary-light-color) !important;
+    opacity: .3 !important;
 }
 
 /* Reverse color of sidebar header icon for Tree Style Tabs

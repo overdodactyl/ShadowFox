@@ -2,6 +2,7 @@
 /* IMPORTANT: change the Internal UUID in the corresponding css file */
 @import "webextension-tweaks/tree_style_tabs.css";
 @import "webextension-tweaks/stylus.css";
+@import "color_variables.css";
 
 :root {
 	--primary-dark-color: #323234;  /* Color of FF dark theme nav-bar */
@@ -420,17 +421,108 @@
 @-moz-document url-prefix(about:newtab), url(about:home) {
 	
 	.search-wrapper .search-label, .search-wrapper .search-button {
-	    fill: #ccc !important;
+	    fill: var(--primary-light-color) !important;
 		opacity: .7 !important;
 	}
 
 	.search-wrapper input {
-	    color: #ccc !important;
+	    color: var(--primary-light-color) !important;
 	    background: #4a4a4f !important;
 	}
 
 	.prefs-pane-button button {
 		fill: #4a4a4f !important
+	}
+	
+	/* Preferencs/close button */   
+	  .prefs-pane-button button:hover {
+	    background-color: var(--grey-90) !important;;
+	  }
+  
+  
+	/* Main background */
+	.prefs-pane .sidebar {
+		background: var(--primary-dark-color) !important;
+		border-left: 1px solid var(--primary-light-color) !important;
+		color: var(--primary-light-color) !important;
+	}
+
+	/* Inner options panel */
+	.prefs-pane .prefs-modal-inner-wrapper .options {
+		background: #4a4a4f !important;
+		border: 1px solid var(--primary-light-color);
+	}
+
+	/* Check boxes */
+	.prefs-pane [type="checkbox"]:not(:checked) + label::before, .prefs-pane [type="checkbox"]:checked + label::before {
+		border: 1px solid var(--primary-light-color) !important;
+		background: var(--grey-90) !important;
+	}
+
+	/* Check marks */
+	.prefs-pane [type="checkbox"]:not(:checked) + label::after, .prefs-pane [type="checkbox"]:checked + label::after {
+		fill: var(--primary-accent-color);
+	}
+
+	/* Bottom Panel */
+	.prefs-pane .actions {
+		background-color: var(--primary-dark-color) !important;
+		border-left: 1px solid var(--primary-light-color) !important;
+		border-top: 1px solid var(--primary-light-color) !important;
+	}
+
+	/* "Done Button */
+	.actions button.done {
+		background: var(--primary-accent-color) !important;;
+		border: solid 1px var(--primary-accent-color-dark) !important;;
+		color: var(--primary-light-color) !important;
+	}
+
+	.actions button:hover:not(.dismiss) {
+		box-shadow: 0 0 0 5px var(--primary-light-color) !important;
+	}
+
+	/* Search Bar */
+	.search-wrapper:active input, .search-wrapper input:focus {
+		border-color: var(--primary-accent-color-dark) !important;
+		box-shadow: 0 0 0 2px var(--primary-accent-color) !important;
+	}
+
+
+	/* Onboarding Message */
+	#onboarding-notification-bar {
+		background: var(--grey-90) !important;
+		color: var(--primary-light-color) !important;
+		border-top: 2px solid var(--primary-dark-color) !important;
+	}
+
+	#onboarding-notification-body {
+		color: var(--primary-light-color) !important;
+	}
+
+	.onboarding-action-button {
+		background: var(--primary-accent-color) !important;
+		border: 1px solid var(--primary-accent-color-dark) !important;
+		color: var(--primary-light-color) !important;
+	}
+
+	#onboarding-notification-close-btn {
+		filter: invert(65%)!important;
+	}
+	
+	.contentSearchHeader, .search-wrapper .contentSearchSuggestionTable {
+	    background-color: var(--grey-60) !important;
+	    color: var(--primary-light-color) !important;
+	    border-bottom: 1px solid var(--primary-light-color) !important;
+	}
+
+	.contentSearchSuggestionsContainer, .contentSearchHeaderRow, .contentSearchSuggestionRow, #contentSearchDefaultEngineHeader, #contentSearchSearchWithHeader {
+	    background: var(--grey-60) !important;
+	    color: var(--primary-light-color) !important;
+	}
+	
+	.contentSearchSearchWithHeaderSearchText {
+	    color: var(--primary-accent-color) !important;
 	}
 	
 }

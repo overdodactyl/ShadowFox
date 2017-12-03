@@ -1,3 +1,15 @@
+## 12/3/2017 7:58 UTC
+
+* Improvements to `about:newtab` and `about:home`
+
+	* Support for the preferences page
+	
+	* Search bar
+	
+* Improvements to the sidebar
+
+	* Replaced harsh black lines with light gray ones
+
 ## 12/3/2017 5:18 UTC
 
 * Fixed the download drop down menu from the nav bar that still had a white background 
