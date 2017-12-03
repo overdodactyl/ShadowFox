@@ -69,4 +69,22 @@ photonpanelmultiview panelview {
   background: none !important;
 }
 
+/* Secure Connection Drop Down */
+#identity-popup-securityView {
+    background: var(--grey-60) !important;
+}
+
+/* Divider */
+#identity-popup-multiView > .panel-viewcontainer > .panel-viewstack > .panel-subviews {
+    background: var(--primary-light-color) !important;
+}
+
+/* Button */
+.identity-popup-expander[panel-multiview-anchor] {
+    background-color: darkcyan !important;
+    fill: var(--primary-light-color) !important;
+}
+
+
+
 
