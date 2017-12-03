@@ -1,0 +1,53 @@
+/* Sidebar */
+.sidebar-placesTree {
+    -moz-appearance: none !important;
+    background: var(--grey-70) !important;
+    color: var(--primary-light-color) !important;
+    opacity: 1 !important;
+}
+
+/* Sidebar Header */
+.sidebar-header, #sidebar-header {
+    background: var(--grey-80) !important;
+    color: var(--primary-light-color) !important;
+}
+
+/* Sidebar search container */
+#sidebar-search-container {
+    background: var(--grey-80) !important;
+    color: var(--primary-light-color) !important;
+}
+
+
+/* Sidebar search box */
+#sidebar-search-container textbox {
+    -moz-appearance: none !important;
+    border-radius: .2em !important;
+    background-color: var(--grey-60) !important;
+    color: var(--primary-light-color) !important;
+    border: 1px solid black !important;
+}
+
+/* Sidebar "view" button */
+#sidebar-search-container #viewButton {
+    color: var(--primary-light-color) !important;
+
+}
+
+/* Drop down arrow - next to "view" */
+.button-menu-dropmarker, .button-menubutton-dropmarker {
+    filter: invert(65%);
+}
+
+/* Sidebar splitter */
+#sidebar-splitter {
+    width: 5px !important;
+}
+
+/* Reverse color of sidebar header icon for Tree Style Tabs
+*  you may delete this snippit if you don't use the extension */
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-icon {
+    filter: invert(60%);
+}
+
+

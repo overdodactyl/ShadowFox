@@ -1,3 +1,13 @@
+## 12/3/2017 5:18 UTC
+
+* Fixed the download drop down menu from the nav bar that still had a white background 
+
+* Made the separators between one-off search engines lighter to help stand out
+
+* First draft at a dark sidebar (Windows users - if this doesn't work for you, please let me know and I'll upload a separate file)
+
+* Reversed the icon color of Tree Style Tabs to dark gray to match them
+
 ## 12/2/2017 22:50 UTC
 
 * Improved the design of the address bar drop down

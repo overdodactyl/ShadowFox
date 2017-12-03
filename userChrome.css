@@ -4,22 +4,8 @@
 @import "userChrome-files/dark_address_bar.css";
 @import "userChrome-files/remove_white_flash.css";
 @import "userChrome-files/remove_bookmarks_bottom_border.css";
+@import "userChrome-files/dark_customization_page.css";
+@import "userChrome-files/dark_status_panels.css";
+@import "userChrome-files/dark_sidebar.css";
 
-
-#customization-done-button {
-    color: var(--primary-light-color);
-    font-weight: 700;
-    border-color: var(--primary-accent-color-dark) !important;
-    background-color: var(--primary-accent-color) !important;
-}
-
-#customization-done-button:-moz-any(:focus, :active, :hover):not([disabled]) {
-    background-color: var(--primary-accent-color-dark) !important;
-}
-
-statuspanel .statuspanel-label {
-  background-color: var(--grey-80) !important;
-  color: var(--primary-light-color) !important;
-  border: none !important;
-}
 
