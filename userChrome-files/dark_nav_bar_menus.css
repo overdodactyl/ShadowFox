@@ -17,7 +17,7 @@
 
 /* webextension popup fix */
 .webextension-popup-browser {
-  background: var(--grey-90);
+  background: white !important;;
 }
 
 /* Fix for downloads menu */
@@ -27,7 +27,6 @@ photonpanelmultiview panelview {
 }
 
 
-
 #appMenu-mainView toolbarbutton:hover,  #customizationui-widget-multiview toolbarbutton:hover,
 #widget-overflow-list toolbarbutton:hover {
   background: var(--grey-80) !important;
@@ -37,37 +36,6 @@ photonpanelmultiview panelview {
   background: none !important;
 }
 
-/*Pop Down Arrow */
-.panel-arrow { 
-  filter: invert(70%) !important; 
-}
-
-/* main menu */
-.panel-subview-body, #appMenu-zoomReset-button {
-  color: var(--grey-10) !important;
-  background: var(--grey-60) !important;
-}
-
-/* header of sub menus */
-.panel-subview-footer,[class^="PanelUI-"] {
-  color: var(--grey-10) !important;
-  background: var(--grey-70) !important;
-}
-
-/* webextension popup fix */
-.webextension-popup-browser {
-  background: var(--grey-90);
-}
-
-
-#appMenu-mainView toolbarbutton:hover,  #customizationui-widget-multiview toolbarbutton:hover,
-#widget-overflow-list toolbarbutton:hover {
-  background: var(--grey-80) !important;
-}
-
-#BMB_bookmarksPopup {
-  background: none !important;
-}
 
 /* Secure Connection Drop Down */
 #identity-popup-securityView {
@@ -84,7 +52,3 @@ photonpanelmultiview panelview {
     background-color: darkcyan !important;
     fill: var(--primary-light-color) !important;
 }
-
-
-
-
