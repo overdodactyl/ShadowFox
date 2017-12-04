@@ -48,38 +48,6 @@
     }
 }
 
-@-moz-document url-prefix("moz-extension://52a7ff28-5d56-f640-8594-7a12dc8a4fd6"){
-	html, body {
-		color: var(--primary-light-color) !important;
-		background-color: var(--primary-dark-color) !important;
-	}	
-	
-	a {
-	    color: var(--primary-accent-color) !important;
-	}
-	
-	#externalLists {
-	    background: transparent !important;
-	}
-	
-	#lists > .groupEntry > .geName {
-	    color: darkcyan !important;
-	}
-	
-	.tabButton {
-	    background-color: var(--mid-way-color) !important;
-	    color: var(--primary-light-color) !important;
-	}
-	
-	textarea {
-	    background-color: darkgray !important;
-	}
-	
-	.userFilters {
-	    background: transparent !important;
-	}
-	
-}
 
 @-moz-document url(about:blank), url(about:newtab), url(about:buildconfig), url(about:), url(about:accounts), url(about:cache), url(about:memory), url(about:mozilla), url(about:performance), url(about:plugins), url(about:profiles), url(about:rights), url(about:robots), url(about:serviceworkers), url(about:studies), url(about:sync-log), url(about:url-classifier), url(about:webrtc), url(https://www.mozilla.org/credits/), url(about:sessionrestore), url(about:addons), url(about:neterror), url(about:home) {
 	
