@@ -1,6 +1,11 @@
+## 12/4/2017 3:23 UTC
+
+* Added `secure_connection_colors.css`, which changes the secure connection color (green), to the default primary accent color used in this repository.
+
+
 ## 12/3/2017  21:43 UTC
 
-* Fixed the secure connection sub menu that was not style - issue #8 (thanks 
+* Fixed the secure connection sub menu that was not styled - issue #8 (thanks 
 @chinook77 for bringing this to my attention)
 
 * Added dark scroll bars to the side bar (thanks u/\_Dimitri\_ for the code) - this section is optional and may be uncommented based on your OS or preferences.
