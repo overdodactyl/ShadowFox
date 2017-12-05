@@ -6,6 +6,11 @@
     opacity: 1 !important;
 }
 
+/* Change the outline of icons to light instead of dark */
+.sidebar-placesTree::-moz-tree-image, .sidebar-placesTreechildren::-moz-tree-image {
+    fill: var(--primary-light-color) !important;
+ }
+
 /* Sidebar Header */
 .sidebar-header, #sidebar-header {
     background: var(--grey-80) !important;
@@ -54,6 +59,10 @@
 *  you may delete this snippit if you don't use the extension */
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-icon {
     filter: invert(60%);
+}
+
+#button_treestyletab_piro_sakura_ne_jp-sidebar-action .toolbarbutton-icon {
+    filter: invert(87%);
 }
 
 /* Siderbar slider - thank you u/_Dimitri_ 

@@ -6,9 +6,15 @@
 	--panel-separator-color: var(--grey-60) !important;
 }
 
-#PopupAutoCompleteRichResult .autocomplete-richlistbox { 
+#PopupAutoCompleteRichResult .autocomplete-richlistbox {
 	background-color: var(--grey-60) !important; 
 } 
+
+/* Hover color */
+.autocomplete-richlistitem:hover,
+treechildren.searchbar-treebody::-moz-tree-row(hover) {
+  background-color: var(--primary-dark-color) !important;
+}
 
 
 #PopupAutoCompleteRichResult .autocomplete-richlistitem { 
@@ -60,6 +66,7 @@
 }
 
 .search-panel-header {
+	  background-color: var(--grey-80) !important;
     border-top: none !important;	
 }
 
