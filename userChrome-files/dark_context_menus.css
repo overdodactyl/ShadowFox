@@ -32,7 +32,12 @@ menupopup menu, menuitem {
 menupopup menuseparator {
       padding: 0 !important;
       border-top: none !important;
-      margin: 2px 6px 2px 6px !important;
+      margin: 2px 6px 2px 6px !important;      
+      /* following added as a Windows fix, 
+       * thanks u/markdarkness! */
+      -moz-appearance:none !important;
+      background: rgba(0, 0, 0, 0) !important;
+      border: 0px !important;
 }
  
 menupopup menu:hover, menuitem:hover {
