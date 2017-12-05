@@ -39,12 +39,16 @@
     filter: invert(65%);
 }
 
-/* Sidebar splitter */
+/* Sidebar splitter 
+ * Adjust width to personal preference - 
+ * I keep it at 4 for easy mobility and Tree Style Tabs
+ * utilizes it for container indicators */
 #sidebar-splitter {
-    width: 1px !important;
-    background: var(--primary-light-color) !important;
-    opacity: .3 !important;
+    width: 4px !important;
+    background: var(--primary-dark-color) !important;
+    opacity: 0 !important;
 }
+
 
 /* Reverse color of sidebar header icon for Tree Style Tabs
 *  you may delete this snippit if you don't use the extension */
@@ -55,12 +59,12 @@
 /* Siderbar slider - thank you u/_Dimitri_ 
  *  Add this section if on Windows 
 scrollbar > slider {
-  background-color: var(--grey-60);
+  max-width: 4px !important;
 }
 
 scrollbar > slider > thumb, scrollbar > scrollbarbutton {
   -moz-appearance: none !important;
-  background-color: var(--grey-80);
+  background-color: var(--grey-80) !important;;
 }
 */
 

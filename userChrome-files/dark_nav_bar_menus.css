@@ -26,6 +26,16 @@ photonpanelmultiview panelview {
     color: var(--primary-light-color) !important;
 }
 
+#emptyDownloads {
+    background: var(--grey-60) !important;
+    color: var(--primary-light-color) !important;
+}
+
+#downloadsFooterButtons {
+    background: var(--grey-70) !important;
+    color: var(--primary-light-color) !important;
+}
+
 
 #appMenu-mainView toolbarbutton:hover,  #customizationui-widget-multiview toolbarbutton:hover,
 #widget-overflow-list toolbarbutton:hover {
@@ -51,4 +61,20 @@ photonpanelmultiview panelview {
 .identity-popup-expander[panel-multiview-anchor] {
     background-color: darkcyan !important;
     fill: var(--primary-light-color) !important;
+}
+
+
+/* New update is available */
+.popup-notification-button[default][highlight="true"]:not([disabled]) {
+    background-color: darkcyan !important;
+    color: #ccc;
+}
+
+#update-available-whats-new {
+    color: darkcyan !important;
+}
+
+.popup-notification-icon[popupid="update-available"], .popup-notification-icon[popupid="update-manual"], .popup-notification-icon[popupid="update-restart"] {
+    background-color: #712b00 !important;
+    border-radius: 50%;
 }

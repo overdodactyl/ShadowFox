@@ -3,7 +3,7 @@ menupopup, popup, popup > menu > menupopup, menupopup > menu > menupopup, menupo
       -moz-appearance: none !important;
       background: var(--grey-60) !important;
       border: none !important;
-      padding: 6px 0px 6px 0px  !important;
+      padding: 0px 0px 0px 0px  !important;
 }
 
 /* More options right arrow */
@@ -33,11 +33,6 @@ menupopup menuseparator {
       padding: 0 !important;
       border-top: none !important;
       margin: 2px 6px 2px 6px !important;      
-      /* following added as a Windows fix, 
-       * thanks u/markdarkness! */
-      -moz-appearance:none !important;
-      background: rgba(0, 0, 0, 0) !important;
-      border: 0px !important;
 }
  
 menupopup menu:hover, menuitem:hover {
@@ -51,3 +46,28 @@ menupopup menu:hover, menuitem:hover {
   color: var(--grey-10) !important;
   background: var(--grey-60) !important;
 }
+
+/* The following snippets are designed to fix promblems 
+ * only noticed on Windows computers. Thank you to u/u/markdarkness!
+ * for helping me with these issues. */
+
+/* Remove white separators between menu items */
+menupopup menuseparator {
+      -moz-appearance:none !important;
+      background: rgba(0, 0, 0, 0) !important;
+      border: 0px !important;
+}
+
+/* Increase height between menu items */
+menupopup menu, menuitem {
+      padding-top: .5px !important;
+}
+
+/* Removes white bar between icons and menu items */
+#context-navigation, #context-sep-navigation { 
+      padding: 0px !important; 
+}
+
+
+
+
