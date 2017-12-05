@@ -1,7 +1,7 @@
 /* Alters the preferences page */
 /* IMPORTANT: change the Internal UUID */
 
-@-moz-document url-prefix("moz-extension://3c48cf03-2bbf-b240-b420-7bb4f1a44a8c/") {
+@-moz-document url-prefix("moz-extension://19684a2f-ee86-d644-961c-ab8b8ad10aca/") {
 
   body {
     background: var(--primary-dark-color) !important;

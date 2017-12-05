@@ -1,6 +1,6 @@
 /* Alters the preferences page */
 
-@-moz-document url-prefix("moz-extension://31c49f04-168c-0b4a-a5e4-b86c6c355db3/") {
+@-moz-document url-prefix("moz-extension://2a3d122c-dc21-7f4c-a805-82cbd472de98/") {
   p, ul {
     color: var(--primary-light-color) !important;
   }

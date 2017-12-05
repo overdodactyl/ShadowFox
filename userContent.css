@@ -14,7 +14,12 @@
 	--primary-accent-color-dark: #007878; /* Darker cyan color */
 }
 
-@-moz-document url-prefix(about:about), url-prefix(about:crashes), url(about:debugging), url-prefix(about:downloads), url-prefix(about:privatebrowsing), url-prefix(about:buildconfig), url-prefix(about:networking),url-prefix(about:license), url(about:studies), url(about:telemetry), url(about:support), url(about:sessionrestore), url(about:neterror), url(about:home)   {
+@-moz-document url-prefix(about:about), url-prefix(about:crashes), url(about:debugging), 
+	             url-prefix(about:downloads), url-prefix(about:privatebrowsing), 
+	             url-prefix(about:buildconfig), url-prefix(about:networking),
+	             url-prefix(about:license), url(about:studies), url(about:telemetry), 
+	             url(about:support), url(about:sessionrestore), url(about:neterror), url(about:home)
+	             url(about:debugging#addons){
     :root {
 	    --in-content-page-color: var(--primary-light-color) !important;
 	    --in-content-page-background: var(--dark-accent) !important;
@@ -49,7 +54,12 @@
 }
 
 
-@-moz-document url(about:blank), url(about:newtab), url(about:buildconfig), url(about:), url(about:accounts), url(about:cache), url(about:memory), url(about:mozilla), url(about:performance), url(about:plugins), url(about:profiles), url(about:rights), url(about:robots), url(about:serviceworkers), url(about:studies), url(about:sync-log), url(about:url-classifier), url(about:webrtc), url(https://www.mozilla.org/credits/), url(about:sessionrestore), url(about:addons), url(about:neterror), url(about:home) {
+@-moz-document url(about:blank), url(about:newtab), url(about:buildconfig), url(about:), url(about:accounts), 
+	             url(about:cache), url(about:memory), url(about:mozilla), url(about:performance), 
+	             url(about:plugins), url(about:profiles), url(about:rights), url(about:robots), url(about:serviceworkers), 
+	             url(about:studies), url(about:sync-log), url(about:url-classifier), url(about:webrtc), 
+	             url(https://www.mozilla.org/credits/), url(about:sessionrestore), url(about:addons), 
+	             url(about:neterror), url(about:home), url(about:debugging#addons) {
 	
 	html:not(#ublock0-epicker), html:not(#ublock0-epicker) body, #newtab-customize-overlay {
 		background: var(--primary-dark-color) !important;
@@ -214,7 +224,7 @@
   
 }
 
-@-moz-document url(about:addons) {
+@-moz-document url(about:addons), url(about:debugging#addons) {
 	
 	.detail-view-container {
     	color: var(--primary-light-color) !important;
@@ -355,6 +365,11 @@
     	color: var(--primary-light-color) !important;
     	background-color: #4a4a4f !important;
 	 }
+	
+	 /* about:debugging#addons */
+	 .addon-target-container {
+      background: var(--grey-80) !important;;
+  }
 	
 }
 

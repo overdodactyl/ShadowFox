@@ -6,9 +6,25 @@
 	--panel-separator-color: var(--grey-60) !important;
 }
 
+
+
+#urlbar[focused=true],
+.searchbar-textbox[focused=true] {
+  border: 1px solid var(--primary-accent-color) !important;
+  box-shadow: 0 1px 4px var(--primary-accent-color) !important;
+}
+
+
+/* URL Bar Drop Down */
+
 #PopupAutoCompleteRichResult .autocomplete-richlistbox {
 	background-color: var(--grey-60) !important; 
 } 
+
+#PopupAutoCompleteRichResult .autocomplete-richlistitem { 
+	border-bottom-color: var(--primary-light-color) !important; 
+}
+
 
 /* Hover color */
 .autocomplete-richlistitem:hover,
@@ -16,10 +32,6 @@ treechildren.searchbar-treebody::-moz-tree-row(hover) {
   background-color: var(--grey-70) !important;
 }
 
-
-#PopupAutoCompleteRichResult .autocomplete-richlistitem { 
-	border-bottom-color: var(--primary-light-color) !important; 
-}
  
 .autocomplete-richlistitem .ac-title,  
 .autocomplete-richlistitem .ac-action, 
@@ -75,9 +87,8 @@ treechildren.searchbar-treebody::-moz-tree-row(hover) {
 }
 
 /* Searchbar */
-/* Why won't the menu items change color?? */
 
-/* Changes header */
+
 panel[type="autocomplete"], panel[type="autocomplete-richlistbox"], .autocomplete-history-popup {
 	  color: var(--primary-light-color) !important;
     background: var(--primary-dark-color) !important;
@@ -86,8 +97,18 @@ panel[type="autocomplete"], panel[type="autocomplete-richlistbox"], .autocomplet
 
 /* Changes the hover color and text color */
 .autocomplete-tree {
-    background-color: var(--grey-60) !important;
-	  color: black !important;
+	  color: var(--primary-light-color) !important;
 }
 
+.searchbar-treebody::-moz-tree-row {
+    background-color: var(--grey-60) !important;
+}
+
+.searchbar-treebody::-moz-tree-row(hover) {
+    background-color: background-color: var(--grey-70) !important;
+}
+
+.searchbar-treebody::-moz-tree-row(selected) {
+    background-color: var(--primary-accent-color) !important;
+}
 

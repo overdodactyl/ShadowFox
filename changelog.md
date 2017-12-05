@@ -1,3 +1,41 @@
+## 12/5/2017 5:49 UTC
+
+* Changes to the address bar/search bar
+
+	* Added support for the search bar
+	
+	* Changed the border color when in focus (from blue to the default accent color used in this repository)
+	
+	* Increased the contrast found when hovering over an item in the search dropdown
+
+* Sidebar
+
+	* Changed the outline color of icons from black to light gray
+	
+	* Changed the width and color of the sidebar separator.
+	
+* Downloads drop down menu from the nav bar
+
+	* Altered colors to for consistency 
+	
+* Added support for the "New Update Available" pop-up
+
+* Windows specific fixes
+
+	* Increased spacing in context menus
+	
+	* Removed white line between icons and entries
+	
+	* Removed menu separators 
+	
+* Extensions
+
+	* Fixed an issue that caused some extension drop downs to adapt the dark them and become unreadable 
+	
+	* Inverted the color of the Tree Style Tabs logo in the sidebar drop down 
+
+**Huge thanks to u/markdarkness for all the helpful suggestions, opinions, caught bugs, and code contributions for Windows specific problems**
+
 ## 12/4/2017 3:23 UTC
 
 * Added `secure_connection_colors.css`, which changes the secure connection color (green), to the default primary accent color used in this repository.
