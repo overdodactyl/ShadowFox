@@ -13,7 +13,7 @@
 /* Hover color */
 .autocomplete-richlistitem:hover,
 treechildren.searchbar-treebody::-moz-tree-row(hover) {
-  background-color: var(--primary-dark-color) !important;
+  background-color: var(--grey-70) !important;
 }
 
 
