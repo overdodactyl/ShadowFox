@@ -18,8 +18,8 @@
 	             url-prefix(about:downloads), url-prefix(about:privatebrowsing), 
 	             url-prefix(about:buildconfig), url-prefix(about:networking),
 	             url-prefix(about:license), url(about:studies), url(about:telemetry), 
-	             url(about:support), url(about:sessionrestore), url(about:neterror), url(about:home)
-	             url(about:debugging#addons){
+	             url(about:support), url(about:sessionrestore), url-prefix(about:neterror), url(about:home)
+	             url(about:debugging#addons), url-prefix(about:preferences) {
     :root {
 	    --in-content-page-color: var(--primary-light-color) !important;
 	    --in-content-page-background: var(--dark-accent) !important;
@@ -59,7 +59,7 @@
 	             url(about:plugins), url(about:profiles), url(about:rights), url(about:robots), url(about:serviceworkers), 
 	             url(about:studies), url(about:sync-log), url(about:url-classifier), url(about:webrtc), 
 	             url(https://www.mozilla.org/credits/), url(about:sessionrestore), url(about:addons), 
-	             url(about:neterror), url(about:home), url(about:debugging#addons) {
+	             url-prefix(about:neterror), url(about:home), url(about:debugging#addons) {
 	
 	html:not(#ublock0-epicker), html:not(#ublock0-epicker) body, #newtab-customize-overlay {
 		background: var(--primary-dark-color) !important;
@@ -77,8 +77,45 @@
 	h1 {
 	    color: var(--primary-light-color) !important;
 	}
+	
+	/* about:neterror button */
+	#errorTryAgain {
+		background: var(--primary-accent-color) !important;
+		color: var(--primary-light-color) !important;
+	}
 		
 }
+
+
+
+
+@-moz-document url-prefix(about:preferences) {
+
+	page {
+		filter: invert(80%) hue-rotate(150deg);
+		background-color: var(--primary-dark-color) !important;
+	}
+
+	#categories, .search-container {
+		background-color: white !important;
+	}
+
+	.category[selected], .category:hover {
+		color: #3e8bdb !important;
+		-moz-border-start: 4px solid #3e8bdb !important;
+	}
+
+	#tabsElement tab[selected] {
+		-moz-border-bottom-colors: var(--primary-dark-color) !important;
+	}
+
+	.help-button {
+		display: none !important;
+	}
+
+}
+	
+
 
 @-moz-document url(about:debugging) {
 	.addon-target-container {
@@ -115,6 +152,8 @@
 	
 	
 }
+
+
 
 @-moz-document url(about:performance) {
 	
@@ -374,31 +413,7 @@
 }
 
 
-@-moz-document url-prefix(about:preferences) {
 
-	page {
-		filter: invert(80%) hue-rotate(150deg);
-		background-color: var(--primary-dark-color) !important;
-	}
-
-	#categories, .search-container {
-		background-color: white !important;
-	}
-
-	.category[selected], .category:hover {
-		color: #3e8bdb !important;
-		-moz-border-start: 4px solid #3e8bdb !important;
-	}
-
-	#tabsElement tab[selected] {
-		-moz-border-bottom-colors: var(--primary-dark-color) !important;
-	}
-
-	.help-button {
-		display: none !important;
-	}
-
-}
 
 
 @-moz-document url-prefix(about:newtab), url(about:home) {
