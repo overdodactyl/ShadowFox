@@ -86,6 +86,30 @@
 		
 }
 
+@-moz-document url-prefix(view-source) {
+	*|*:root {
+	  background-color: var(--primary-dark-color) !important;
+	  color: var(--primary-light-color) !important;
+	}
+	
+	.highlight .attribute-value {
+	    color: var(--primary-accent-color) !important;
+	}
+	
+	.highlight .start-tag {
+	    color: var(--magenta-60) !important;
+	}
+	
+	.highlight .error, .highlight .error > :-moz-any(.start-tag, .end-tag, .comment, .cdata, .doctype, .pi, .entity, .attribute-name, .attribute-value) {
+	    color: var(--red-60) !important;
+	}
+	
+	.highlight .attribute-name {
+	    color: var(--primary-light-color) !important;
+	}
+
+}
+
 
 
 
