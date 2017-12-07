@@ -114,7 +114,7 @@
 	 color: #ff7de9 !important;
 	}
 	.highlight .entity {
-	 color: #FF4500 !important;
+	 color: #dea174 !important;
 	}
 	.highlight .attribute-name {
 	    color: #86de74 !important;
@@ -129,7 +129,7 @@
 	.highlight .error,
 	.highlight .error > :-moz-any(.start-tag, .end-tag, .comment, .cdata, .doctype,
 	                              .pi, .entity, .attribute-name, .attribute-value) {
-	  color: red;
+	  color: #de7474 !important;
 	}
 
 }
