@@ -18,7 +18,7 @@
 	             url-prefix(about:downloads), url-prefix(about:privatebrowsing), 
 	             url-prefix(about:buildconfig), url-prefix(about:networking),
 	             url-prefix(about:license), url(about:studies), url(about:telemetry), 
-	             url(about:support), url(about:sessionrestore), url-prefix(about:neterror), url(about:home)
+	             url(about:support), url(about:sessionrestore), url-prefix(about:neterror), url(about:home),
 	             url(about:debugging#addons), url-prefix(about:preferences) {
     :root {
 	    --in-content-page-color: var(--primary-light-color) !important;
