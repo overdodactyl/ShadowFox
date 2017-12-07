@@ -117,8 +117,7 @@
 	 color: #FF4500 !important;
 	}
 	.highlight .attribute-name {
-	 color: var(--primary-light-color) !important;
-	 font-weight: bold;
+	    color: #86de74 !important;
 	}
 	.highlight .attribute-value {
 	 color: #75bfff !important;
