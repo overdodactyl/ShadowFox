@@ -36,6 +36,11 @@ photonpanelmultiview panelview {
     color: var(--primary-light-color) !important;
 }
 
+/* Fix downloads list - only appears to be necessary in Nightly */
+#downloadsListBox {
+    background: var(--primary-dark-color) !important;
+}
+
 
 #appMenu-mainView toolbarbutton:hover,  #customizationui-widget-multiview toolbarbutton:hover,
 #widget-overflow-list toolbarbutton:hover {
