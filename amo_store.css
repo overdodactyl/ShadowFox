@@ -34,7 +34,8 @@
 	.Card-footer-link,
 	.MetadataCard,
 	.AddonDescription-more-addons:not(.AddonDescription-more-addons--theme) .Card-contents .AddonsCard-list,
-	.AddonDescription-more-addons--theme .Card-contents .AddonsCard-list {
+	.AddonDescription-more-addons--theme .Card-contents .AddonsCard-list,
+	.Search .SearchResults .SearchResult {
 	    background: var(--grey-60) !important;
 	}
 	
@@ -61,7 +62,8 @@
 	.Button--action.Button--small:link,
 	.Button--action,
 	.Addon-title,
-	.ReportAbuseButton-show-more
+	.ReportAbuseButton-show-more,
+	.SearchResult-summary
 	 {
 	    color: var(--primary-light-color) !important;
 	}
