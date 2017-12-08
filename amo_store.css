@@ -35,7 +35,8 @@
 	.MetadataCard,
 	.AddonDescription-more-addons:not(.AddonDescription-more-addons--theme) .Card-contents .AddonsCard-list,
 	.AddonDescription-more-addons--theme .Card-contents .AddonsCard-list,
-	.Search .SearchResults .SearchResult {
+	.Search .SearchResults .SearchResult,
+	.Paginate-page-number {
 	    background: var(--grey-60) !important;
 	}
 	
@@ -63,7 +64,9 @@
 	.Button--action,
 	.Addon-title,
 	.ReportAbuseButton-show-more,
-	.SearchResult-summary
+	.SearchResult-summary,
+	.SearchContextCard-header,
+	.Paginate-page-number
 	 {
 	    color: var(--primary-light-color) !important;
 	}
@@ -87,7 +90,8 @@
 	}
 	
 	.Button--action,
-	.Button--action.Button--small {
+	.Button--action.Button--small,
+	.Paginate .Paginate-item {
 	    background: var(--primary-accent-color) !important;
 	}
 	
