@@ -4,6 +4,8 @@
 @import "webextension-tweaks/stylus.css";
 @import "color_variables.css";
 
+@import "amo_store.css";
+
 :root {
 	--primary-dark-color: #323234;  /* Color of FF dark theme nav-bar */
 	--primary-light-color: #A6A6A6; /* Off white */
