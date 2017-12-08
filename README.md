@@ -20,6 +20,10 @@ Dark address bar and search bars
 Dark `view-source:` pages
 ![dark_menus](Screenshots/view_source.png)
 
+Dark addon store (not yet finalized)
+
+![dark_menus](Screenshots/amo1.png)
+
 # New changelog created
 
 To stay up-to-date with all changes made to this repository, please see [here](changelog.md).
