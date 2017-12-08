@@ -91,8 +91,7 @@
 	.Card-footer-link a:link,
 	.DropdownMenuItem-link a:hover,
 	.AddonMoreInfo-contents a:link,
-	.LanguageTools-table a:link,
-	.Card-contents a:link {
+	.LanguageTools-table a:link {
 	    color: var(--primary-accent-color) !important;
 	}
 	
