@@ -2,8 +2,13 @@
 	
 	/* Header & Footer */
 	.Header, 
-	.Footer-wrapper {
+	.Footer-wrapper,
+	.LanguageTools-header-row {
 	    background: var(--grey-80) !important;
+	}
+	
+	.LanguageTools-table-row:nth-child(2n) {
+	    background: var(--grey-70) !important;
 	}
 	
 	
@@ -36,7 +41,9 @@
 	.AddonDescription-more-addons:not(.AddonDescription-more-addons--theme) .Card-contents .AddonsCard-list,
 	.AddonDescription-more-addons--theme .Card-contents .AddonsCard-list,
 	.Search .SearchResults .SearchResult,
-	.Paginate-page-number {
+	.Paginate-page-number,
+	.SearchForm-suggestions-item.SearchForm-suggestions-item
+	{
 	    background: var(--grey-60) !important;
 	}
 	
@@ -66,11 +73,13 @@
 	.ReportAbuseButton-show-more,
 	.SearchResult-summary,
 	.SearchContextCard-header,
-	.Paginate-page-number
+	.Paginate-page-number,
+	.SearchSuggestion-name
 	 {
 	    color: var(--primary-light-color) !important;
 	}
 	
+
 	
 	.Home-SubjectShelf-link:active,
 	.Home-SubjectShelf-link:focus,
@@ -81,7 +90,9 @@
 	.Card-footer-link a:hover, 
 	.Card-footer-link a:link,
 	.DropdownMenuItem-link a:hover,
-	.AddonMoreInfo-contents a:link {
+	.AddonMoreInfo-contents a:link,
+	.LanguageTools-table a:link,
+	.Card-contents a:link {
 	    color: var(--primary-accent-color) !important;
 	}
 	
@@ -91,7 +102,9 @@
 	
 	.Button--action,
 	.Button--action.Button--small,
-	.Paginate .Paginate-item {
+	.Paginate .Paginate-item,
+	.SearchForm-suggestions-item.SearchForm-suggestions-item--highlighted,
+	{
 	    background: var(--primary-accent-color) !important;
 	}
 	
