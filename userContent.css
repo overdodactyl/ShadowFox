@@ -86,41 +86,13 @@
 		color: var(--primary-light-color) !important;
 	}
 	  #snippets-container {
-    display: none;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 12px;
-    background: #323234;
-    font-size: 13px;
-    min-height: 60px;
-    padding-inline-end: 36px;
-    box-shadow: 0 -1px 4px 0 rgba(12, 12, 13, 0.1);
+    background: var(--primary-dark-color) !important;
   }
 	.snippet .block-snippet-button {
-    position: absolute;
-    top: 50%;
-    margin-top: -8px;
-    height: 12px;
-    width: 12px;
-    padding: 0;
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48cGF0aCBmaWxsPSJjb250ZXh0LWZpbGwiIGQ9Ik05LjQxNCA4bDMuNTMxLTMuNTMxYTEgMSAwIDEgMC0xLjQxNC0xLjQxNEw4IDYuNTg2IDQuNDY5IDMuMDU1YTEgMSAwIDEgMC0xLjQxNCAxLjQxNEw2LjU4NiA4bC0zLjUzMSAzLjUzMWExIDEgMCAxIDAgMS40MTQgMS40MTRMOCA5LjQxNGwzLjUzMSAzLjUzMWExIDEgMCAxIDAgMS40MTQtMS40MTR6Ii8+PC9zdmc+");
-    opacity: 0.6;
-    background-repeat: no-repeat;
-    background-size: 12px;
-    background-position: center;
-    background-color: transparent;
-    padding: 2px;
-    box-sizing: content-box;
-    border: 0;
-    cursor: pointer;
-    offset-inline-end: 12px;
-    filter: invert(100%);
+    filter: invert(100%) !important;
   }
 	.snippet section {
-    color: #FFF;
-    font-size: 12px;
+    color: #FFF !important;
   }
 		
 }
