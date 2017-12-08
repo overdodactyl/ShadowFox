@@ -1,12 +1,24 @@
-# Seeking help from a Windows user
+## What do the changes look like?
 
-Currently, I am limited to testing this project on macOS.  Unfortunately, that means I can not foresee any issues that may arise on different operating systems.  It has been recently brought to my attention that there may be some compitibility problems with the context menus.  If there are any Windows users out there that like this project and would like to contribute, I would greatly appreciate some help maintaining compatibility!
+Here are just a few examples:
 
-For reference, the various menus/context menus should look like this:
+Dark Context Menus and Sidebar: 
 
-![dark_menus](Screenshots/dark_menus.png)
+![dark_menus](Screenshots/context_menus.png)
 
-Thanks!
+Dark `about:` pages
+
+![dark_menus](Screenshots/about_addons.png)
+
+![dark_menus](Screenshots/about_about.png)
+
+![dark_menus](Screenshots/about_preferences.png)
+
+Dark address bar and search bars
+![dark_menus](Screenshots/smart_bar.png)
+
+Dark `view-source:` pages
+![dark_menus](Screenshots/view_source.png)
 
 # New changelog created
 
@@ -68,20 +80,6 @@ Look for a folder titled `chrome`.  This folder does not exist by default, so if
 You can now download the zip file of this repository, and put the userContent.css file in your `chrome` folder.  
 
 *_IMPORTANT_: if you already have a userContent.css file, combine the contents of the two files as to not lose any changes you have made.   
-
-## What do the changes look like?
-
-Here are just a few examples:
-
-![about:preferences](Screenshots/about_preferences.png)
-
-![about:config](Screenshots/about_config.png)
-
-![about:addons](Screenshots/about_addons.png)
-
-![about:privatebrowsing](Screenshots/about_privatebrowsing.png)
-
-![about:sessionrestore](Screenshots/about_sessionrestore.png)
 
 # Can I contribute?
 
