@@ -1,115 +1,106 @@
 @-moz-document url-prefix("https://addons.mozilla.org") {
-
-	/* Register or Log in Button */
-	.Button--action.Button--outline-only {
-	    border-color: var(--primary-accent-color) !important;
-	    color: var(--primary-light-color) !important;
-	}
-
-
-	.Home {
-	    background: black !important;
-	}
-
-	.Hero .Card-contents,
-	.Home-SubjectShelf .Card-contents,
-	.AddonsCard--horizontal .Card-contents,
-	.Card-header {
-		color: #ccc !important;
-	    background: var(--primary-dark-color) !important;
-	}
 	
-	.Home-SubjectShelf-subheading {
-	    color: var(--primary-light-color) !important;
-	}
-	
-	.Home-SubjectShelf-link {
-	    font-size: 14px;
-	    color: #ccc !important;
-	}
-	
-	.App-content {
-	    background: var(--grey-90) !important;
-	}
-	
-	.SearchForm-query {
-	    background-color: lightgray !important;
-	    border: 1px solid white;
-	}
-	
-	.Icon-arrow {
-	    filter: invert(65%) !important;
-	}
-	
-	
-	
-	
-	/* Drop Down Menu */
-	.DropdownMenu-items {
-	    background: var(--grey-60) !important;
-	}
-	
-	.DropdownMenuItem-link a, .DropdownMenuItem-link a:link, .DropdownMenuItem-link button, .DropdownMenuItem-link button:link {
-	    color: var(--primary-light-color) !important;
-	}
-
-	.DropdownMenuItem {
-	    color: var(--primary-accent-color) !important;
-	}
-	
-	
-	/* Cards */
-	.CardList ul > li {
-	    background: var(--primary-dark-color) !important;
-	}
-	
-	.SearchResult-name {
-		color: var(--primary-light-color) !important;
-	}
-	
-	.SearchResult-summary {
-		color: var(--primary-light-color) !important;
-	}
-	
-	.Card-footer-link a, .Card-footer-link a:active, .Card-footer-link a:hover, .Card-footer-link a:link, .Card-footer-link a:visited, .Card-footer-text a, .Card-footer-text a:active, .Card-footer-text a:hover, .Card-footer-text a:link, .Card-footer-text a:visited {
-	    color: var(--primary-accent-color) !important;
+	/* Header & Footer */
+	.Header, 
+	.Footer-wrapper {
 	    background: var(--grey-80) !important;
 	}
 	
 	
-	/* Extensions Page */
-	.LandingPage-header {
-	    background: var(--primary-dark-color) !important;
-	    color: var(--primary-light-color) !important;
-	}
-	
-	h1 {
-	    color: var(--primary-light-color) !important;
-	}
-	
-	.Categories .Card-contents {
-	    padding-bottom: 12px;
+	/* Background Colors */
+	.LandingPage, 
+	.Home, 
+	.App-content {
 	    background: var(--primary-dark-color) !important;
 	}
 	
-	a:hover {
+	/* Search Box */
+	.SearchForm-icon-magnifying-glass {
+	    filter: invert(65%) !important;
+	}
+	
+	
+	/* Cards */
+	.Hero .Card-contents, 
+	.Home-SubjectShelf .Card-contents,
+	.Card-header,
+	.AddonsCard--horizontal .Card-contents,
+	.AddonsCard--horizontal ul.AddonsCard-list .SearchResult-link,
+	.SearchForm-query,
+	.LandingPage-header,
+	.Categories .Card-contents,
+	.SectionLinks-dropdown .DropdownMenu-items,
+	.Card-contents, .Card--photon .Card-contents,
+	.Card-footer-link,
+	.MetadataCard,
+	.AddonDescription-more-addons:not(.AddonDescription-more-addons--theme) .Card-contents .AddonsCard-list,
+	.AddonDescription-more-addons--theme .Card-contents .AddonsCard-list {
 	    background: var(--grey-60) !important;
 	}
 	
-	/* Extension Page */
-	.Card-contents, .Card--photon .Card-contents {
-	    background: var(--primary-dark-color) !important;
+	.Home-SubjectShelf-subheading,
+	.Home-SubjectShelf-link:link,
+	.Home-SubjectShelf-link:visited,
+	.Card-header,
+	.SearchResult-name,
+	.SearchForm-query,
+	.LandingPage-addonType-name,
+	.LandingPage-heading-content,
+	.Footer-links-header a:link,
+	.Footer a:active, .Footer a:hover,
+	.DropdownMenuItem,
+	.DropdownMenuItem-section,
+	.DropdownMenuItem-link a, .DropdownMenuItem-link a:link,
+	.Card-contents, .Card--photon .Card-contents,
+	.AddonBadges .Badge,
+	.Addon-author, 
+	.Addon-author a, 
+	.Addon-author a:link
+	.Button--action, 
+	.Button--action:link,
+	.Button--action.Button--small:link,
+	.Button--action,
+	.Addon-title,
+	.ReportAbuseButton-show-more
+	 {
 	    color: var(--primary-light-color) !important;
 	}
 	
-	[dir="ltr"] .AddonBadges .Badge {
-	    color: var(--primary-light-color) !important;
+	
+	.Home-SubjectShelf-link:active,
+	.Home-SubjectShelf-link:focus,
+	.Home-SubjectShelf-link:hover,
+	.SearchResult-link:focus .SearchResult-name,
+	.SearchResult-link:hover .SearchResult-name,
+	.Card-footer-link a, 
+	.Card-footer-link a:hover, 
+	.Card-footer-link a:link,
+	.DropdownMenuItem-link a:hover,
+	.AddonMoreInfo-contents a:link {
+	    color: var(--primary-accent-color) !important;
 	}
 	
-	.Addon-author, .Addon-author a, .Addon-author a:link {
-	    color: var(--grey-50) !important;
+	.Button--action.Button--outline-only {
+		border-color: var(--primary-accent-color) !important;
+	}
+	
+	.Button--action,
+	.Button--action.Button--small {
+	    background: var(--primary-accent-color) !important;
+	}
+	
+	.Button--action.Button--outline-only:hover,
+	.SearchForm-query:hover,
+	.Button--action:hover {
+		border-color: var(--primary-accent-color-dark) !important;
+		
+	}
+	
+	.AddonsCard--horizontal ul.AddonsCard-list .SearchResult-link:hover {
+		background: var(--grey-70) !important;
+		border-radius: 0px !important;
 	}
 
-@import "amo_store.css";
+}
 	
 
