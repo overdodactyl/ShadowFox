@@ -6,6 +6,15 @@
 
 @import "amo_store.css";
 
+:root {
+	--primary-dark-color: #323234;  /* Color of FF dark theme nav-bar */
+	--primary-light-color: #A6A6A6; /* Off white */
+	--light-accent-color: #9c9d9f; /* Slightly darker off white */
+	--dark-accent: #3C3C3C; /* darker shade of main color */
+	--mid-way-color: #5c5a5a; /* inbetween main dark and light color */
+	--primary-accent-color: darkcyan; 
+	--primary-accent-color-dark: #007878; /* Darker cyan color */
+}
 
 @-moz-document url-prefix(about:about), url-prefix(about:crashes), url(about:debugging), 
 	             url-prefix(about:downloads), url-prefix(about:privatebrowsing), 
@@ -52,7 +61,7 @@
 	             url(about:plugins), url(about:profiles), url(about:rights), url(about:robots), url(about:serviceworkers), 
 	             url(about:studies), url(about:sync-log), url(about:url-classifier), url(about:webrtc), 
 	             url(https://www.mozilla.org/credits/), url(about:sessionrestore), url(about:addons), 
-	             url-prefix(about:neterror), url(about:home), url(about:debugging#addons), url(about:about) {
+	             url-prefix(about:neterror), url(about:home), url(about:debugging#addons) {
 	
 	html:not(#ublock0-epicker), html:not(#ublock0-epicker) body, #newtab-customize-overlay {
 		background: var(--primary-dark-color) !important;
