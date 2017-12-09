@@ -143,6 +143,11 @@
 	    color: #FFF !important;
 	 }
 	 
+	 /* Background color of top site icons */
+	 .top-sites-list .top-site-outer .top-site-icon {
+	     background-color: var(--primary-dark-color) !important;
+	 }
+	 
 	 /* Edit Top Sites */
 	 .section-title span,
 	 .actions button.dismiss,
