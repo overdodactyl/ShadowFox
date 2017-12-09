@@ -66,5 +66,9 @@
 		background: var(--grey-60) !important;
 	}
 	
+	.navigation {
+    background: var(--primary-dark-color) !important;
+}
+	
 	
 }
