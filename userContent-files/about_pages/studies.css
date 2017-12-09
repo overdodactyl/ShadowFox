@@ -1,0 +1,7 @@
+@-moz-document url(about:studies) {
+	
+	.info-box-content {
+	    background-color: var(--dark-accent) !important;
+	}
+	
+}

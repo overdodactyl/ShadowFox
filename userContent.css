@@ -4,14 +4,22 @@
 
 /* Import about page files 
  * Recomended for everyone using the dark theme */
-@import "userContent-files/about_pages/accounts.css";
 @import "userContent-files/about_pages/about.css";
+@import "userContent-files/about_pages/accounts.css";
+@import "userContent-files/about_pages/addons.css";
 @import "userContent-files/about_pages/config.css";
 @import "userContent-files/about_pages/memory.css";
-@import "userContent-files/about_pages/performance.css";
 @import "userContent-files/about_pages/neterror.css";
+@import "userContent-files/about_pages/newtab_and_home.css";
+@import "userContent-files/about_pages/performance.css";
+@import "userContent-files/about_pages/plugins.css";
+@import "userContent-files/about_pages/preferences.css";
+@import "userContent-files/about_pages/profiles.css";
+@import "userContent-files/about_pages/studies.css";
+@import "userContent-files/about_pages/support.css";
+@import "userContent-files/about_pages/url-classifier.css";
 @import "userContent-files/about_pages/webrtc.css";
-@import "userContent-files/about_pages/addons.css";
+
 
 
 /* Import Relevant webextension tweaks here
@@ -21,6 +29,7 @@
 
 
 /* Import relevent website dark themes */
+@import "userContent-files/webpages/view_source.css";
 @import "userContent-files/webpages/amo_store.css";
 
 
@@ -38,67 +47,6 @@
 	}
 }
 
-@-moz-document url-prefix(about:preferences) {
-	
-	::-moz-selection {
-    background: var(--primary-accent-color) !important;
-  }
-	
-	.checkbox-check,
-	.radio-check {
-		background: var(--grey-50) !important;
-	}
-	
-	*.checkbox-check[checked],
-	*.radio-check[selected] {
-		fill: var(--primary-accent-color) !important;
-	}
-
-	#categories,
-	.main-content,
-	.search-container {
-		background: var(--primary-dark-color) !important;
-	}
-	
-	.category[selected], .category.selected {
-		-moz-border-start: 4px solid var(--primary-accent-color) !important;
-	}
-	
-	#searchInput {
-    background: var(--grey-60) !important;
-  }
-	
-
-	#handlersView {
-    background: var(--grey-60) !important;
-  }
-	
-	listheader {
-		background: var(--grey-80) !important;
-	}
-	
-	#handlersView richlistitem[selected="true"] {
-    background: var(--primary-accent-color) !important;
-		color: var(--primary-light-color) !important;;
-  }
-	
-	#handlersView richlistitem:hover {
-    background: var(--grey-70) !important;
-		color: var(--primary-light-color) !important;;
-  }
-	
-	
-	.dialogBox {
-		filter: invert(80%) !important;
-	}
-	
-	/* Search Engines */
-	#engineChildren::-moz-tree-row() {
-		background: var(--grey-60) !important;
-	}
-	
-	
-}
 
 
 
@@ -108,104 +56,16 @@
 
 
 
-@-moz-document url(about:plugins) {
-
-	
-	th {
-	    background-color: var(--primary-accent-color-dark) !important;
-	}
-	
-	td {
-	    color: var(--primary-light-color) !important;
-	    background-color: var(--dark-accent) !important;
-	}
-	
-	.notice {
-	    background: var(--dark-accent) !important;
-	}
-	
-	h2 {
-	    color: var(--primary-accent-color) !important;
-	}
-	
-}
 
 
-@-moz-document url(about:profiles) {
-	
-	/* Upper right box */
-	#action-box {
-	    background-color: var(--dark-accent) !important;
-		color: var(--primary-light-color) !important;
-	}
-	
-	th {
-	    background-color: var(--primary-accent-color-dark) !important;
-	}
-	
-	td {
-	    color: var(--primary-light-color) !important;
-	    background-color: var(--dark-accent) !important;
-	}
-	
-	button {
-	    border: 1px solid var(--primary-light-color) !important;
-		  color: var(--primary-light-color) !important;
-	}
-		
-	
-}
-
-@-moz-document url(about:support) {
-	
-	/* Upper right box */
-	#action-box {
-	    background-color: var(--dark-accent) !important;
-		color: var(--primary-light-color) !important;
-	}
-	
-	th {
-	    background-color: var(--primary-accent-color-dark) !important;
-	}
-	
-	td {
-	    color: var(--primary-light-color) !important;
-	    background-color: var(--dark-accent) !important;
-	}
-	
-	button {
-	    border: 1px solid var(--primary-light-color) !important;
-		  color: var(--primary-light-color) !important;
-	}
-		
-	
-}
 
 
-@-moz-document url(about:url-classifier) {
-	
-	/* Upper right box */
-	#action-box {
-	    background-color: var(--dark-accent) !important;
-		color: var(--primary-light-color) !important;
-	}
-	
-	th {
-	    background-color: var(--primary-accent-color-dark) !important;
-	}
-	
-	td {
-	    color: var(--primary-light-color) !important;
-	    background-color: var(--dark-accent) !important;
-	}
-	
-	button {
-	    border: 1px solid var(--primary-light-color) !important;
-		  color: var(--primary-light-color) !important;
-	}
-		
-	
-}
+
+
+
+
+
+
 
 
 	

@@ -1,0 +1,24 @@
+@-moz-document url(about:url-classifier) {
+	
+	/* Upper right box */
+	#action-box {
+	    background-color: var(--dark-accent) !important;
+		color: var(--primary-light-color) !important;
+	}
+	
+	th {
+	    background-color: var(--primary-accent-color-dark) !important;
+	}
+	
+	td {
+	    color: var(--primary-light-color) !important;
+	    background-color: var(--dark-accent) !important;
+	}
+	
+	button {
+	    border: 1px solid var(--primary-light-color) !important;
+		  color: var(--primary-light-color) !important;
+	}
+		
+	
+}
