@@ -26,6 +26,8 @@
  * IMPORTANT: If used, change the Internal UUID in the corresponding css file */
 @import "webextension-tweaks/tree_style_tabs.css";
 @import "webextension-tweaks/stylus.css";
+@import "webextension-tweaks/multiple_tabs_handler.css";
+
 
 
 /* Import relevent website dark themes */
