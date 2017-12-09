@@ -1,4 +1,5 @@
-/* Alters the preferences page */
+/* Alters the preferences page 
+ * and context menus */
 
 @-moz-document url-prefix("moz-extension://2a3d122c-dc21-7f4c-a805-82cbd472de98/") {
   p, ul {
