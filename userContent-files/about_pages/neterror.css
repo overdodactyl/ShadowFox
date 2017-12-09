@@ -1,0 +1,7 @@
+@-moz-document url(about:neterror) {
+	/* about:neterror button */
+	#errorTryAgain {
+		background: var(--primary-accent-color) !important;
+		color: var(--primary-light-color) !important;
+	}
+}

@@ -1,0 +1,22 @@
+@-moz-document url(about:performance) {
+	
+	#subprocess-reports th {
+	   background-color: var(--primary-accent-color) !important;
+		color: white !important;
+	}
+	
+	#subprocess-reports td {
+	    background-color: var(--primary-light-color) !important;
+	}
+	
+	table {
+    background-color: red !important;;
+    color: -moz-DialogText;
+    font: message-box;
+    text-align: start;
+    width: 100%;
+    border: 1px solid ThreeDShadow;
+    border-spacing: 0px;
+}
+		
+}

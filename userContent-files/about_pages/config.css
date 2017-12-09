@@ -1,0 +1,63 @@
+@-moz-document url(about:config) {
+	
+	/* Warning Message */
+	#warningScreen,
+	#warningTitle {
+    color: var(--primary-light-color) !important;
+  }
+	
+	/* Text Box */
+	textbox {
+    background: var(--grey-60) !important;
+		color: var(--primary-light-color) !important;
+  }
+	
+	/* Body Color */
+	#configTreeBody::-moz-tree-row() {
+		background: var(--grey-60) !important;
+	} 
+	
+	/* Selected Color */
+	#configTreeBody::-moz-tree-row(selected) {
+		background: var(--primary-accent-color) !important;
+	}
+	
+	/* Hover Color */
+	#configTreeBody::-moz-tree-row(hover) {
+		background: var(--grey-70) !important;
+	}
+	
+	#configTreeBody::-moz-tree-row(header) {
+		background: orange !important;
+	}
+	
+	window {
+		color: var(--primary-light-color) !important;
+		background: var(--primary-dark-color) !important;
+	}
+	
+	
+	
+	
+}
+
+	
+	
+	
+	
+	
+
+	
+	
+	@-moz-document url(about:debugging) {
+	.addon-target-container {
+	    background: var(--dark-accent) !important;
+	}
+	
+	.addon-target-button:enabled:focus, .addon-target-button:enabled:hover {
+	    color: var(--primary-accent-color-dark) !important;
+	}
+	.addon-target-button:enabled:focus, .addon-target-button:enabled {
+	    color: var(--primary-accent-color) !important;
+	}
+}

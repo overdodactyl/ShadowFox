@@ -1,0 +1,14 @@
+@-moz-document url(about:accounts) {
+	#stage {
+	    background: var(--dark-accent) !important;
+	}
+	
+	.button-row button, .button-row a.button {
+	    background: var(--primary-accent-color) !important;
+	}
+	
+	.button-row a.button:active, .button-row a.button:hover, .button-row a.button:focus, .button-row button:active, .button-row button:hover, .button-row button:focus {
+	    background: var(--primary-accent-color-dark) !important;
+	}
+	
+}

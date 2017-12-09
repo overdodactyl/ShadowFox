@@ -1,0 +1,11 @@
+@-moz-document url(about:webrtc) {
+	
+	#content > div {
+	    background: var(--dark-accent) !important;
+	}
+	
+	div.fold-trigger {
+		color: var(--primary-accent-color) !important;
+	}
+	
+}
