@@ -103,12 +103,12 @@ photonpanelmultiview panelview {
 
 /* New update is available */
 .popup-notification-button[default][highlight="true"]:not([disabled]) {
-    background-color: darkcyan !important;
+    background-color: var(--primary-accent-color) !important;
     color: #ccc;
 }
 
 #update-available-whats-new {
-    color: darkcyan !important;
+    color: var(--primary-accent-color) !important;
 }
 
 .popup-notification-icon[popupid="update-available"], .popup-notification-icon[popupid="update-manual"], .popup-notification-icon[popupid="update-restart"] {
