@@ -13,6 +13,12 @@
   a {
     color: var(--primary-accent-color-dark) !important;;
   }
+  
+  #tabContextMenu {
+    background: var(--grey-60) !important;
+    border: none !important;
+    color: var(--primary-light-color) !important;
+  }
       
 }
 
