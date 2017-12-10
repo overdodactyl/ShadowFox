@@ -91,7 +91,8 @@
 	.Card-footer-link a:link,
 	.DropdownMenuItem-link a:hover,
 	.AddonMoreInfo-contents a:link,
-	.LanguageTools-table a:link {
+	.LanguageTools-table a:link,
+	.Addon-details .AddonDescription-contents a:link {
 	    color: var(--primary-accent-color) !important;
 	}
 	
@@ -103,7 +104,7 @@
 	.Button--action.Button--small,
 	.Paginate .Paginate-item,
 	.SearchForm-suggestions-item.SearchForm-suggestions-item--highlighted,
-	{
+	.Addon .InstallButton-button {
 	    background: var(--primary-accent-color) !important;
 	}
 	
@@ -118,7 +119,10 @@
 		background: var(--grey-70) !important;
 		border-radius: 0px !important;
 	}
+	
+	.Button--report {
+	    text-shadow: none !important;
+	}
+
 
 }
-	
-
