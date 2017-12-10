@@ -100,8 +100,7 @@
 	.DropdownMenuItem-link a:hover,
 	.AddonMoreInfo-contents a:link,
 	.LanguageTools-table a:link,
-	.Addon-details .AddonDescription-contents a:link,
-	.Card-contents a:link {
+	.Addon-details .AddonDescription-contents a:link {
 	    color: var(--primary-accent-color) !important;
 	}
 	
@@ -136,6 +135,14 @@
 	
 	.Button--report {
 	    text-shadow: none !important;
+	}
+	
+	.Icon-external {
+	    filter: invert(20%) !important;
+	}
+	
+	.Icon-featured { 
+	    filter: invert(85%) !important;
 	}
 
 
