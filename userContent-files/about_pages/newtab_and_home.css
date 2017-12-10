@@ -176,6 +176,11 @@
 	 	color: var(--primary-light-color) !important;2
 	 }
 	 
+	 /* overlay background */
+	 .modal-overlay {
+	     background: var(--grey-60) !important;
+	 }
+	 
 	
 	
 	
