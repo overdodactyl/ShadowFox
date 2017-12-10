@@ -15,7 +15,8 @@
 	/* Background Colors */
 	.LandingPage, 
 	.Home, 
-	.App-content {
+	.App-content,
+	.Paginate-page-number {
 	    background: var(--primary-dark-color) !important;
 	}
 	
@@ -41,7 +42,6 @@
 	.AddonDescription-more-addons:not(.AddonDescription-more-addons--theme) .Card-contents .AddonsCard-list,
 	.AddonDescription-more-addons--theme .Card-contents .AddonsCard-list,
 	.Search .SearchResults .SearchResult,
-	.Paginate-page-number,
 	.SearchForm-suggestions-item.SearchForm-suggestions-item
 	{
 	    background: var(--grey-60) !important;
@@ -74,9 +74,17 @@
 	.SearchResult-summary,
 	.SearchContextCard-header,
 	.Paginate-page-number,
-	.SearchSuggestion-name
+	.SearchSuggestion-name,
+	.ExpandableCard-ToggleLink:link,
+	.Paginate .Paginate-item
 	 {
 	    color: var(--primary-light-color) !important;
+	}
+	
+	.Paginate-previous::before,
+	.Paginate-next::after
+	 {
+		filter: invert(70%) !important
 	}
 	
 
@@ -114,6 +122,11 @@
 	.Button--action:hover {
 		border-color: var(--primary-accent-color-dark) !important;
 		
+	}
+	
+	.SearchForm-query:focus {
+	    box-shadow: 0 0 5px 0 var(--primary-accent-color) !important;
+	    border-color: var(--primary-accent-color-dark) !important;
 	}
 	
 	.AddonsCard--horizontal ul.AddonsCard-list .SearchResult-link:hover {
