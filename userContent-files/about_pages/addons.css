@@ -132,7 +132,7 @@
 	/*Dark context menu*/
   menupopup, popup, popup > menu > menupopup, menupopup > menu > menupopup {
     	-moz-appearance: none !important;
-    	background: var(--grey-60) !important;
+    	background: var(--grey-70) !important;
 		  border: none !important;
     	
 	}
@@ -143,13 +143,23 @@
  
   	menupopup menu, menuitem {
     	-moz-appearance: none !important;
-    	color: var(--primary-light-color) !important;   
+    	color: var(--grey-10) !important;   
   	}
  
   	menupopup menu:hover, menuitem:hover {
     	color: var(--primary-light-color) !important;
-    	background-color: #4a4a4f !important;
+    	background-color: var(--grey-80) !important;
 	 }
+	
+	/* Menu Separators - removed */
+    menupopup menuseparator {
+      padding: 0 !important;
+      border-top: none !important;
+      margin: 2px 6px 2px 6px !important; 
+			-moz-appearance:none !important;
+      background: rgba(0, 0, 0, 0) !important;
+      border: 0px !important;
+    }
 	
 	 /* about:debugging#addons */
 	 .addon-target-container {
