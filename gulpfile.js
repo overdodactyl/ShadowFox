@@ -37,3 +37,10 @@ gulp.task('userChrome_all', function() {
     .pipe(gulp.dest('.'));
 });
 
+/* Remove White Flash and Bookmarks Border  */
+gulp.task('userChrome_basic', function() {
+  return gulp.src(['userChrome-files/remove_white_flash.css', 'userChrome-files/remove_bookmarks_bottom_border.css'])
+    .pipe(concatCss('userChrome.css'))
+    .pipe(gulp.dest('.'));
+});
+
