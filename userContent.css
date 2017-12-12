@@ -979,7 +979,8 @@
   .DropdownMenuItem-link a:hover,
   .AddonMoreInfo-contents a:link,
   .LanguageTools-table a:link,
-  .Addon-details .AddonDescription-contents a:link {
+  .Addon-details .AddonDescription-contents a:link,
+  .Card.ShowMoreCard.AddonDescription-version-notes a:link {
     color: var(--primary-accent-color) !important;
   }
 
