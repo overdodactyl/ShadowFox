@@ -233,37 +233,40 @@ menuitem:hover {
   background-color: var(--grey-80) !important;
 }
 
-/* Sidebar Header Context Menue */
+/* Sidebar Header Context Menu */
 
 .panel-arrowcontent {
   color: var(--grey-10) !important;
   background: var(--grey-60) !important;
 }
 
-/* The following snippets are designed to fix promblems 
- * only noticed on Windows computers. Thank you to u/markdarkness!
- * for helping me with these issues. */
+/* Windows Specific Changes */
 
-/* Remove white separators between menu items */
+@media screen and (-moz-windows-theme) {
+  /* Increase height between menu items */
 
-menupopup menuseparator {
-  -moz-appearance: none !important;
-  background: rgba(0, 0, 0, 0) !important;
-  border: 0px !important;
-}
+  menupopup menu,
+  menuitem {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+  }
 
-/* Increase height between menu items */
+  /* Removes white bar between icons and menu items */
 
-menupopup menu,
-menuitem {
-  padding-top: .5px !important;
-}
+  #context-navigation,
+  #context-sep-navigation {
+    padding: 0px !important;
+  }
 
-/* Removes white bar between icons and menu items */
+  /* Remove white separators between menu items */
 
-#context-navigation,
-#context-sep-navigation {
-  padding: 0px !important;
+  menupopup menuseparator {
+    -moz-appearance: none !important;
+    background: rgba(0, 0, 0, 0) !important;
+    /* If you want to see the separators, use this instead */
+    /* background: var(--primary-light-color) !important; */
+    border: 0px !important;
+  }
 }
 #customization-done-button {
   color: var(--primary-light-color);
