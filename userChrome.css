@@ -1,12 +1,539 @@
-@import "color_variables.css";
-@import "userChrome-files/dark_nav_bar_menus.css";
-@import "userChrome-files/dark_context_menus.css";
-@import "userChrome-files/dark_address_bar.css";
-@import "userChrome-files/remove_white_flash.css";
-@import "userChrome-files/remove_bookmarks_bottom_border.css";
-@import "userChrome-files/dark_customization_page.css";
-@import "userChrome-files/dark_status_panels.css";
-@import "userChrome-files/dark_sidebar.css";
-@import "userChrome-files/secure_connection_colors.css";
-@import "userChrome-files/tab_line_color.css";
+/* Photon Colors CSS Variables v1.4.0
+* Colors are taken from: https://github.com/FirefoxUX/design-tokens */
 
+:root {
+  --magenta-50: #ff1ad9;
+  --magenta-60: #ed00b5;
+  --magenta-70: #b5007f;
+  --magenta-80: #7d004f;
+  --magenta-90: #440027;
+  --purple-50: #9400ff;
+  --purple-60: #8000d7;
+  --purple-70: #6200a4;
+  --purple-80: #440071;
+  --purple-90: #25003e;
+  --blue-40: #45a1ff;
+  --blue-50: #0a84ff;
+  --blue-60: #0060df;
+  --blue-70: #003eaa;
+  --blue-80: #002275;
+  --blue-90: #000f40;
+  --teal-50: #00feff;
+  --teal-60: #00c8d7;
+  --teal-70: #008ea4;
+  --teal-80: #005a71;
+  --teal-90: #002d3e;
+  --green-50: #30e60b;
+  --green-60: #12bc00;
+  --green-70: #058b00;
+  --green-80: #006504;
+  --green-90: #003706;
+  --yellow-50: #ffe900;
+  --yellow-60: #d7b600;
+  --yellow-70: #a47f00;
+  --yellow-80: #715100;
+  --yellow-90: #3e2800;
+  --red-50: #ff0039;
+  --red-60: #d70022;
+  --red-70: #a4000f;
+  --red-80: #5a0002;
+  --red-90: #3e0200;
+  --orange-50: #ff9400;
+  --orange-60: #d76e00;
+  --orange-70: #a44900;
+  --orange-80: #712b00;
+  --orange-90: #3e1300;
+  --grey-10: #f9f9fa;
+  --grey-20: #ededf0;
+  --grey-30: #d7d7db;
+  --grey-40: #b1b1b3;
+  --grey-50: #737373;
+  --grey-60: #4a4a4f;
+  --grey-70: #38383d;
+  --grey-80: #2a2a2e;
+  --grey-90: #0c0c0d;
+  --ink-70: #363959;
+  --ink-80: #202340;
+  --ink-90: #0f1126;
+}
+
+:root {
+  --primary-dark-color: #323234;
+  /* Color of FF dark theme nav-bar */
+  --primary-light-color: #A6A6A6;
+  /* Off white */
+  --light-accent-color: #9c9d9f;
+  /* Slightly darker off white */
+  --dark-accent: #3C3C3C;
+  /* darker shade of main color */
+  --mid-way-color: s#5c5a5a;
+  /* inbetween main dark and light color */
+  --primary-accent-color: darkcyan;
+  --primary-accent-color-dark: #007878;
+  /* Darker cyan color */
+}
+/* The following code is based on that found on
+* https://www.jeffersonscher.com/gm/url-bar-tweaks.html
+* Copyright © 2017 Jefferson Scher (BSD-3-Clause License or CC-BY License) */
+
+:root {
+  --panel-separator-color: var(--grey-60) !important;
+}
+
+#urlbar[focused=true],
+.searchbar-textbox[focused=true] {
+  border: 1px solid var(--primary-accent-color) !important;
+  box-shadow: 0 1px 4px var(--primary-accent-color) !important;
+}
+
+/* URL Bar Drop Down */
+
+#PopupAutoCompleteRichResult .autocomplete-richlistbox {
+  background-color: var(--grey-60) !important;
+}
+
+#PopupAutoCompleteRichResult .autocomplete-richlistitem {
+  border-bottom-color: var(--primary-light-color) !important;
+}
+
+/* Hover color */
+
+.autocomplete-richlistitem:hover,
+treechildren.searchbar-treebody::-moz-tree-row(hover) {
+  background-color: var(--grey-70) !important;
+}
+
+.autocomplete-richlistitem .ac-title,
+.autocomplete-richlistitem .ac-action,
+.autocomplete-richlistitem .ac-separator,
+#PopupSearchAutoComplete {
+  color: var(--primary-light-color) !important;
+}
+
+.autocomplete-richlistitem[selected=true] {
+  background-color: var(--primary-accent-color) !important;
+}
+
+.autocomplete-richlistitem[selected=true] .ac-title,
+.ac-title[selected],
+.autocomplete-richlistitem[selected=true] .ac-action,
+.ac-action[selected],
+.autocomplete-richlistitem[selected=true] .ac-separator,
+.ac-separator[selected] {
+  color: white !important;
+}
+
+.autocomplete-richlistitem[selected=true] .ac-url,
+.ac-url[selected] {
+  color: white !important;
+}
+
+.ac-url {
+  color: var(--primary-accent-color) !important;
+}
+
+.search-one-offs {
+  background: var(--grey-60) !important;
+}
+
+.search-panel-input-value {
+  color: var(--primary-accent-color) !important;
+}
+
+/* Search one-offs */
+
+.search-panel-one-offs {
+  background: var(--grey-80) !important;
+}
+
+.search-panel-header {
+  background-color: var(--grey-80) !important;
+  border-top: none !important;
+}
+
+.search-panel-one-offs {
+  border-top: none !important;
+}
+
+/* Searchbar */
+
+panel[type="autocomplete"],
+panel[type="autocomplete-richlistbox"],
+.autocomplete-history-popup {
+  color: var(--primary-light-color) !important;
+  background: var(--primary-dark-color) !important;
+}
+
+/* Changes the hover color and text color */
+
+.autocomplete-tree {
+  color: var(--primary-light-color) !important;
+}
+
+.searchbar-treebody::-moz-tree-row {
+  background-color: var(--grey-60) !important;
+}
+
+.searchbar-treebody::-moz-tree-row(hover) {
+  background-color: background-color: var(--grey-70) !important;
+}
+
+.searchbar-treebody::-moz-tree-row(selected) {
+  background-color: var(--primary-accent-color) !important;
+}
+/* Main context menu */
+
+menupopup,
+popup,
+popup > menu > menupopup,
+menupopup > menu > menupopup,
+menupopup scrollbox {
+  -moz-appearance: none !important;
+  background: var(--grey-60) !important;
+  border: none !important;
+  padding: 0px 0px 0px 0px  !important;
+}
+
+/* More options right arrow */
+
+.menu-right {
+  filter: invert(95%)!important;
+}
+
+/* Top Row of Navigation Options */
+
+#context-navigation menuitem {
+  color: var(--grey-10) !important;
+  background: var(--grey-70) !important;
+}
+
+#context-navigation menuitem:hover {
+  background: var(--grey-80) !important;
+}
+
+/* Menu items */
+
+menupopup menu,
+menuitem {
+  -moz-appearance: none !important;
+  color: var(--grey-10) !important;
+}
+
+/* Menu Separators - removed */
+
+menupopup menuseparator {
+  padding: 0 !important;
+  border-top: none !important;
+  margin: 2px 6px 2px 6px !important;
+}
+
+menupopup menu:hover,
+menuitem:hover {
+  color: var(--grey-10) !important;
+  background-color: var(--grey-80) !important;
+}
+
+/* Sidebar Header Context Menue */
+
+.panel-arrowcontent {
+  color: var(--grey-10) !important;
+  background: var(--grey-60) !important;
+}
+
+/* The following snippets are designed to fix promblems 
+ * only noticed on Windows computers. Thank you to u/markdarkness!
+ * for helping me with these issues. */
+
+/* Remove white separators between menu items */
+
+menupopup menuseparator {
+  -moz-appearance: none !important;
+  background: rgba(0, 0, 0, 0) !important;
+  border: 0px !important;
+}
+
+/* Increase height between menu items */
+
+menupopup menu,
+menuitem {
+  padding-top: .5px !important;
+}
+
+/* Removes white bar between icons and menu items */
+
+#context-navigation,
+#context-sep-navigation {
+  padding: 0px !important;
+}
+#customization-done-button {
+  color: var(--primary-light-color);
+  font-weight: 700;
+  border-color: var(--primary-accent-color-dark) !important;
+  background-color: var(--primary-accent-color) !important;
+}
+
+#customization-done-button:-moz-any(:focus, :active, :hover):not([disabled]) {
+  background-color: var(--primary-accent-color-dark) !important;
+}
+/*Pop Down Arrow */
+
+.panel-arrow {
+  filter: invert(70%) !important;
+}
+
+/* main menu */
+
+.panel-subview-body,
+#appMenu-zoomReset-button {
+  color: var(--grey-10) !important;
+  background: var(--grey-60) !important;
+}
+
+/* header of sub menus */
+
+.panel-subview-footer,
+[class^="PanelUI-"] {
+  color: var(--grey-10) !important;
+  background: var(--grey-70) !important;
+}
+
+/* webextension popup fix */
+
+.webextension-popup-browser {
+  background: white !important;
+}
+
+/* Fix for downloads menu */
+
+photonpanelmultiview panelview {
+  background: none !important;
+  color: var(--primary-light-color) !important;
+}
+
+#emptyDownloads {
+  background: var(--grey-60) !important;
+  color: var(--primary-light-color) !important;
+}
+
+#downloadsFooterButtons {
+  background: var(--grey-70) !important;
+  color: var(--primary-light-color) !important;
+}
+
+/* Fix downloads list - only appears to be necessary in Nightly */
+
+#downloadsListBox {
+  background: var(--primary-dark-color) !important;
+}
+
+#appMenu-mainView toolbarbutton:hover,
+#customizationui-widget-multiview toolbarbutton:hover,
+#widget-overflow-list toolbarbutton:hover {
+  background: var(--grey-80) !important;
+}
+
+#BMB_bookmarksPopup {
+  background: none !important;
+}
+
+/* Secure Connection Drop Down */
+
+#identity-popup-securityView {
+  background: var(--grey-60) !important;
+}
+
+/* Divider */
+
+#identity-popup-multiView > .panel-viewcontainer > .panel-viewstack > .panel-subviews {
+  background: var(--primary-light-color) !important;
+}
+
+/* Button */
+
+.identity-popup-expander[panel-multiview-anchor] {
+  background-color: darkcyan !important;
+  fill: var(--primary-light-color) !important;
+}
+
+/* Secure connection drop-down - necessary change for FF 59 */
+
+/* Main Background */
+
+#identity-popup-mainView {
+  background: var(--grey-60) !important;
+  color: var(--primary-light-color) !important;
+}
+
+/* Lock color */
+
+#identity-popup[connection^="secure"] .identity-popup-security-content {
+  fill: var(--primary-accent-color) !important;
+}
+
+/* Permissions logo - white (can't change background image only) 
+ * Temporary hack until I fish out the icon and invert that */
+
+#identity-popup-permissions-content {
+  filter: invert(90%) !important;
+}
+
+/* Change color of text to account for ^^ */
+
+#identity-popup-permissions-content {
+  color: var(--grey-70) !important;
+}
+
+/* More info right button */
+
+.identity-popup-expander {
+  border-right: solid 1px var(--grey-50) !important;
+  background-color: var(--grey-60) !important;
+  fill: var(--grey-50) !important;
+}
+
+/* New update is available */
+
+.popup-notification-button[default][highlight="true"]:not([disabled]) {
+  background-color: var(--primary-accent-color) !important;
+  color: #ccc;
+}
+
+#update-available-whats-new {
+  color: var(--primary-accent-color) !important;
+}
+
+.popup-notification-icon[popupid="update-available"],
+.popup-notification-icon[popupid="update-manual"],
+.popup-notification-icon[popupid="update-restart"] {
+  background-color: #712b00 !important;
+  border-radius: 50%;
+}
+/* Sidebar */
+
+.sidebar-placesTree {
+  -moz-appearance: none !important;
+  background: var(--grey-70) !important;
+  color: var(--primary-light-color) !important;
+  opacity: 1 !important;
+}
+
+/* Change the outline of icons to light instead of dark */
+
+.sidebar-placesTree::-moz-tree-image,
+.sidebar-placesTreechildren::-moz-tree-image {
+  fill: var(--primary-light-color) !important;
+}
+
+/* Sidebar Header */
+
+.sidebar-header,
+#sidebar-header {
+  background: var(--grey-80) !important;
+  color: var(--primary-light-color) !important;
+}
+
+/* Sidebar search container */
+
+#sidebar-search-container {
+  background: var(--grey-80) !important;
+  color: var(--primary-light-color) !important;
+}
+
+/* Sidebar search box */
+
+#sidebar-search-container textbox {
+  -moz-appearance: none !important;
+  border-radius: .3em !important;
+  background-color: var(--grey-60) !important;
+  color: var(--primary-light-color) !important;
+  border: solid 1px var(--mid-way-color) !important;
+}
+
+/* Sidebar "view" button */
+
+#sidebar-search-container #viewButton {
+  color: var(--primary-light-color) !important;
+}
+
+/* Drop down arrow - next to "view" */
+
+.button-menu-dropmarker,
+.button-menubutton-dropmarker {
+  filter: invert(65%);
+}
+
+/* Sidebar splitter 
+ * Adjust width to personal preference - 
+ * I keep it at 4 for easy mobility and Tree Style Tabs
+ * utilizes it for container indicators */
+
+#sidebar-splitter {
+  width: 4px !important;
+  background: var(--primary-dark-color) !important;
+  opacity: 0 !important;
+}
+
+/* Reverse color of sidebar header icon for Tree Style Tabs
+*  you may delete this snippit if you don't use the extension */
+
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-icon {
+  filter: invert(60%);
+}
+
+#button_treestyletab_piro_sakura_ne_jp-sidebar-action .toolbarbutton-icon {
+  filter: invert(87%);
+}
+
+/* Siderbar slider - thank you u/_Dimitri_ 
+ *  Add this section if on Windows 
+scrollbar > slider {
+  max-width: 4px !important;
+}
+
+scrollbar > slider > thumb, scrollbar > scrollbarbutton {
+  -moz-appearance: none !important;
+  background-color: var(--grey-80) !important;;
+}
+*/
+statuspanel .statuspanel-label {
+  background-color: var(--grey-80) !important;
+  color: var(--primary-light-color) !important;
+  border: none !important;
+}
+/* Remove 1px border underneath bookmarks bar */
+
+#navigator-toolbox::after {
+  border-bottom: 0px !important;
+}
+/* Minimize white flash when loading some sites */
+
+browser[type="content-primary"],
+#content,
+browser[type="content"] > html {
+  background: #323234 !important;
+}
+#connection-icon {
+  fill: var(--primary-accent-color) !important;
+}
+
+#identity-box.verifiedIdentity #identity-icon-labels {
+  color: var(--primary-accent-color) !important;
+}
+
+#identity-box.verifiedIdentity {
+  --urlbar-separator-color: var(--primary-accent-color) !important;
+}
+
+.identity-popup-connection-secure {
+  color: var(--primary-accent-color) !important;
+}
+
+#identity-popup[connection^=secure] #identity-popup-securityView,
+#identity-popup[connection^=secure] #identity-popup-security-content {
+  fill: var(--primary-accent-color) !important;
+}
+/* Change active tab line color */
+
+.tab-line[selected="true"] {
+  background-color: var(--primary-accent-color) !important;
+}
