@@ -58,18 +58,18 @@
 }
 
 :root {
-  --primary-dark-color: #323234;
+  --primary-dark-color: var(--grey-70);
   /* Color of FF dark theme nav-bar */
-  --primary-light-color: #A6A6A6;
+  --primary-light-color: var(--grey-40);
   /* Off white */
   --light-accent-color: #9c9d9f;
   /* Slightly darker off white */
-  --dark-accent: #3C3C3C;
+  --dark-accent: var(--grey-80);
   /* darker shade of main color */
-  --mid-way-color: s#5c5a5a;
+  --mid-way-color: #5c5a5a;
   /* inbetween main dark and light color */
-  --primary-accent-color: darkcyan;
-  --primary-accent-color-dark: #007878;
+  --primary-accent-color: var(--orange-70);
+  --primary-accent-color-dark: var(--orange-80);
   /* Darker cyan color */
 }
 /* The following code is based on that found on
@@ -408,7 +408,7 @@ photonpanelmultiview panelview {
 .popup-notification-icon[popupid="update-available"],
 .popup-notification-icon[popupid="update-manual"],
 .popup-notification-icon[popupid="update-restart"] {
-  background-color: #712b00 !important;
+  background-color: var(--primary-accent-color) !important;
   border-radius: 50%;
 }
 /* Sidebar */
