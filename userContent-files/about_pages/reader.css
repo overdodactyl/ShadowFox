@@ -1,0 +1,5 @@
+@-moz-document url-prefix(about:reader) {
+  body.dark a:link {
+	  color: var(--primary-accent-color) !important;
+  }
+}

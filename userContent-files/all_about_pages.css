@@ -33,7 +33,7 @@
 }
 
 /* Basic changes fundamental to all pages */
-@-moz-document url-prefix(about:), url(https://www.mozilla.org/credits/) {	
+@-moz-document regexp("^about:(?!reader).*"), url(https://www.mozilla.org/credits/) {	
 	
 	html:not(#ublock0-epicker), html:not(#ublock0-epicker) body, #newtab-customize-overlay {
 		background: var(--primary-dark-color) !important;
@@ -44,3 +44,4 @@
 		color: var(--primary-accent-color) !important;
 	}
 }
+
