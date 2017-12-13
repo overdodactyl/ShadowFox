@@ -112,6 +112,6 @@ photonpanelmultiview panelview {
 }
 
 .popup-notification-icon[popupid="update-available"], .popup-notification-icon[popupid="update-manual"], .popup-notification-icon[popupid="update-restart"] {
-    background-color: #712b00 !important;
+    background-color: var(--primary-accent-color) !important;
     border-radius: 50%;
 }
