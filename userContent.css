@@ -320,6 +320,8 @@
   menuitem {
     -moz-appearance: none !important;
     color: var(--grey-10) !important;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
   }
 
   menupopup menu:hover,
