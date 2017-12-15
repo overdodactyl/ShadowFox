@@ -1,19 +1,14 @@
-#connection-icon {
-	fill: var(--primary-accent-color) !important;
+#identity-box.verifiedIdentity { 
+	--urlbar-separator-color: var(--grey-50) !important;
 }
 
+.identity-popup-connection-secure,
 #identity-box.verifiedIdentity #identity-icon-labels {
 	color: var(--primary-accent-color) !important;
 }
 
-#identity-box.verifiedIdentity { 
-	--urlbar-separator-color: var(--primary-accent-color) !important;
-}
-
-.identity-popup-connection-secure {
-	color: var(--primary-accent-color) !important;
-}
-
-#identity-popup[connection^=secure] #identity-popup-securityView, #identity-popup[connection^=secure] #identity-popup-security-content {
+#identity-popup[connection^=secure] #identity-popup-securityView, 
+#identity-popup[connection^=secure] #identity-popup-security-content,
+#connection-icon {
 	fill: var(--primary-accent-color) !important;
 }
