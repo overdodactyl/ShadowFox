@@ -585,6 +585,10 @@
     background: var(--primary-dark-color) !important;
   }
 
+  #snippets {
+    color: var(--primary-light-color) !important;
+  }
+
   .snippet .block-snippet-button {
     filter: invert(100%) !important;
   }
