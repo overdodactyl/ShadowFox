@@ -62,14 +62,14 @@
   /* Color of FF dark theme nav-bar */
   --primary-light-color: var(--grey-40);
   /* Off white */
-  --light-accent-color: #9c9d9f;
+  --light-accent-color: var(--grey-50);
   /* Slightly darker off white */
   --dark-accent: var(--grey-80);
   /* darker shade of main color */
-  --mid-way-color: #5c5a5a;
+  --mid-way-color: var(--grey-60);
   /* inbetween main dark and light color */
-  --primary-accent-color: var(--orange-70);
-  --primary-accent-color-dark: var(--orange-80);
+  --primary-accent-color: var(--blue-50);
+  --primary-accent-color-dark: var(--blue-60);
   /* Darker cyan color */
 }
 @-moz-document url-prefix(about:)  {
