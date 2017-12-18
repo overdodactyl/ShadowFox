@@ -16,8 +16,8 @@ Modification to the following items have been made to match the Firefox dark the
 * Context menus 
 * Menus accesssed from the nav bar
 * Customization page
-* Tab line and secure connection icon colors
-* About Firefox Dialog Box
+* Tab line and secure connection icon
+* About Firefox dialog box
 * Status panels
 * Remove white flash on page load
 
