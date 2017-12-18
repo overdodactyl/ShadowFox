@@ -185,7 +185,19 @@
 	     background: var(--grey-60) !important;
 	 }
 	 
-	
-	
-	
+	 /* Onboarding */
+	 
+	#onboarding-overlay {
+		background: var(--grey-60) !important;
+	}
+
+	#onboarding-overlay-dialog,
+	.onboarding-hidden,
+	#onboarding-tour-sync-page[data-login-state=logged-in] .show-on-logged-out,
+	#onboarding-tour-sync-page[data-login-state=logged-out] .show-on-logged-in {
+		background: var(--primary-dark-color) !important;
+		color: var(--primary-light-color) !important;
+	}
+	 
+
 }
