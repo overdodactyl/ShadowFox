@@ -1,3 +1,36 @@
+## 12/18/2017 21:03 UTC
+
+I've neglected to update the changelog for quite some time, so I'm going to try and just hit the major changes here:
+
+* Added support for the following things
+
+	* Library
+	
+	* Addon store (addons.mozilla.org)
+	
+	* About Firefox Dialog
+
+	* `view-source` pages
+	
+	* `about:healthreport`
+	
+	* `about:serviceworkers`
+		
+* Changed the main accent color to blue
+
+* Fixes/improvements:
+
+	* Onboarding overlay accessible through the newtab/home page
+	
+	* Fix to prevent styling from overriding `about:reader`
+	
+	* Top site edit page/dialog boxes (newtab/home)
+
+* Webextensions
+
+	* Dark context menus for Tree Style Tabs
+
+
 ## 12/5/2017 5:49 UTC
 
 * Changes to the address bar/search bar
