@@ -68,9 +68,8 @@
   /* darker shade of main color */
   --mid-way-color: var(--grey-60);
   /* inbetween main dark and light color */
-  --primary-accent-color: var(--blue-50);
-  --primary-accent-color-dark: var(--blue-60);
-  /* Darker cyan color */
+  --primary-accent-color: var(--blue-40);
+  --primary-accent-color-dark: var(--blue-50);
 }
 /* The following code is based on that found on
 * https://www.jeffersonscher.com/gm/url-bar-tweaks.html
@@ -499,6 +498,101 @@ statuspanel .statuspanel-label {
   background-color: var(--grey-80) !important;
   color: var(--primary-light-color) !important;
   border: none !important;
+}
+@-moz-document url(chrome://browser/content/places/places.xul),
+url(chrome://browser/content/places/bookmarkProperties.xul)  {
+  /* Toolbar and Details Dock */
+
+  toolbar,
+  #detailsDeck,
+  #bookmarkproperties {
+    -moz-appearance: none !important;
+    background-color: var(--grey-70) !important;
+    color: var(--primary-light-color) !important;
+    border: 0px solid black !important;
+  }
+
+  /* Sidebar and Main Area */
+
+  #places tree {
+    -moz-appearance: none !important;
+    border: 1px solid rgb(0,0,0) !important;
+    color: rgb(200,200,200) !important;
+    background-color: var(--grey-60) !important;
+  }
+
+  /* Column Header */
+
+  #contentView treecol {
+    -moz-appearance: none !important;
+    border: 0px solid !important;
+    border-bottom: 1px solid !important;
+    border-right: 1px solid rgb(0,0,0) !important;
+    -moz-border-bottom-colors: rgb(0,0,0) !important;
+    background: linear-gradient(to bottom, 
+		           rgba(56,70,82,1) 0%,
+		           rgba(35,39,48,1) 100%) !important;
+    color: white !important;
+  }
+
+  /* Text Boxes - One Line */
+
+  #places textbox:not([multiline="true"]),
+  #editBookmarkPanelContent textbox:not([multiline="true"]) {
+    -moz-appearance: none !important;
+    color: var(--primary-light-color) !important;
+    background-color: var(--grey-60) !important;
+  }
+
+  /* Bookmarks Description Field */
+
+  #places #editBMPanel_descriptionField,
+  #editBookmarkPanelContent #editBMPanel_descriptionField {
+    -moz-appearance: none !important;
+    background-color: var(--grey-60) !important;
+    color: var(--primary-light-color) !important;
+  }
+
+  /*  Bookmark Tag Options  */
+
+  listbox {
+    -moz-appearance: none !important;
+    background-color: var(--grey-60) !important;
+    color: var(--primary-light-color) !important;
+  }
+
+  #places listbox:focus > listitem[selected="true"] {
+    background-color: var(--primary-accent-color) !important;
+    color: black !important;
+  }
+
+  /*					*
+	 *	  Tree Items	*
+	 *					*/
+
+  #places treechildren::-moz-tree-row {
+    background-color: transparent !important;
+    overflow-y: scroll  !important;
+  }
+
+  /* Change the outline of icons to light instead of dark */
+
+  #places treechildren::-moz-tree-image,
+  #places treechildren::-moz-tree-image {
+    fill: var(--primary-light-color) !important;
+  }
+
+  /* Selected, in focus */
+
+  #places treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, current, focus) {
+    background: var(--primary-accent-color) !important;
+  }
+
+  /* Selected, not in focus */
+
+  #places treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, current) {
+    background: var(--blue-40) !important;
+  }
 }
 /* Remove 1px border underneath bookmarks bar */
 

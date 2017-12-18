@@ -74,5 +74,5 @@
 	--dark-accent: var(--grey-80); /* darker shade of main color */
 	--mid-way-color: var(--grey-60); /* inbetween main dark and light color */
 	--primary-accent-color: var(--blue-40); 
-	--primary-accent-color-dark: var(--blue-60); /* Darker cyan color */
+	--primary-accent-color-dark: var(--blue-50); 
 }
