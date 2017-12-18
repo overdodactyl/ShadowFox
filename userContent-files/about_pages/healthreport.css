@@ -1,0 +1,23 @@
+.headerContainer {
+    background: var(--grey-70) !important;
+    color: var(--primary-light-color) !important;
+}
+
+.persistentHeader {
+  background-color: transparent !important;
+}
+
+
+body {
+    background: var(--primary-dark-color) !important;
+    color: var(--primary-light-color) !important;
+}
+
+.statsBoxSection-header {
+    color: var(--primary-accent-color) !important;
+}
+
+.statsBoxSection-content li,
+.statsBoxSection-content li > .statsBoxSection-value{
+    color: var(--primary-light-color) !important;
+}
