@@ -71,6 +71,18 @@
   --primary-accent-color: var(--blue-40);
   --primary-accent-color-dark: var(--blue-50);
 }
+/* Thanks @Sporif for themeing the About Firefox Dialog */
+
+@-moz-document url(chrome://browser/content/aboutDialog.xul)  {
+  #clientBox {
+    color: var(--primary-light-color) !important;
+    background-color: var(--primary-dark-color) !important;
+  }
+
+  #bottomBox {
+    background: var(--primary-dark-color) !important;
+  }
+}
 /* The following code is based on that found on
 * https://www.jeffersonscher.com/gm/url-bar-tweaks.html
 * Copyright © 2017 Jefferson Scher (BSD-3-Clause License or CC-BY License) */

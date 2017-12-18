@@ -1,0 +1,11 @@
+/* Thanks @Sporif for themeing the About Firefox Dialog */
+@-moz-document url(chrome://browser/content/aboutDialog.xul) {
+    #clientBox {
+        color: var(--primary-light-color) !important;
+        background-color: var(--primary-dark-color) !important;
+    }
+
+    #bottomBox {
+        background: var(--primary-dark-color) !important;
+    }
+}
