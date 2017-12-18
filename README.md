@@ -25,7 +25,7 @@ Modification to the following items have been made to match the Firefox dark the
 
 #### about: pages
 
-All `about:` pages have been styled (e.g. `about:addons`, `about:preferences`, `about:config`, `about:profiles` etc.
+All `about:` pages have been styled (e.g. `about:addons`, `about:preferences`, `about:config`, `about:profiles` etc.)
 
 #### Webpages
 
@@ -62,27 +62,17 @@ Context Menus and Sidebar                   | `about:` pages
 
 To help stay notified of all the changes made to this repository, please see [here](changelog.md).
 
-# Important Update 11/29/2017 
+# Looking for more information or experiencing problems?
 
-Some extensions have preferences built into the `about:addon` page that do not utilize the default styling settings utilized by Firefox.  
+Please take a look through the [wiki](https://github.com/overdodactyl/ShadowFox/wiki) and [Issues](https://github.com/overdodactyl/ShadowFox/issues?q=is%3Aopen) (both open and closed).  If you can't find what you need, don't hesitate to open up a new issue.  
 
-Due to this, some compatibility issues may arise (such as Tree Style Tabs), or simply undesirable/ugly appearances (such as Stylus). 
+# Have a feature request?
 
-Current workaround:
+Please read through the current issues and search old ones.  If it doesn't already exist, feel free to ask!
 
-Additional code is being written to resolve this.  Since not all users use the same extensions, the code will not be placed in the main userContent.css file.  Instead, they will be placed in individual files - one file per extension - in the webextension-tweaks folder.  To use these files, do the following:
+# Contributing
 
-* Download the corresponding css file of interest, and put it in a folder titled `webextension-tweaks` within your chrome directory
+I welcome any contributions and would be excited to have a team of people helping with this project.  If you are uncomfortable making pull requests, you can simply open up an issue and attach any code you would like included.
 
-* Go to `about:debugging#addons` and find the corresponding addon.  
-
-* Copy the Internal UUID of the extension
-
-* Replace the ID in the css file you downloaded with this ID
-
-* In your userContent.css file, add an import statement at the top of the file. For example, `@import "webextension-tweaks/tree_style_tabs.css";` 
-
-* Save all your files and restart your browser.  
- 
 
 
