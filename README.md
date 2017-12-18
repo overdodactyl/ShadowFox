@@ -4,7 +4,7 @@ ShadowFox is a collection of `userChrome.css` and `userContent.css` tweaks to su
 
 # What modifications does ShadowFox make?
 
-All modifications can be split into two categories: (1) Changes to the user interface (`userChrome.css`) and (2) Changes to webpages (`userContent.css`)
+All modifications can be split into two categories: (1) Changes to the user interface (`userChrome.css`) and (2) Changes to webpages (`userContent.css`).
 
 ## userChrome tweaks
 
@@ -23,7 +23,7 @@ Modification to the following items have been made to match the Firefox dark the
 
 ## userContent tweaks
 
-#### `about:` pages
+#### about: pages
 
 All `about:` pages have been styled (e.g. `about:addons`, `about:preferences`, `about:config`, `about:profiles` etc.
 
