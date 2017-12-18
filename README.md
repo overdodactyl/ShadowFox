@@ -58,9 +58,9 @@ Context Menus and Sidebar                   | `about:` pages
 ![dark_menus](Screenshots/viewsource.png)   | ![dark_menus](Screenshots/addons.png)
 
 
-# New changelog created
+# Keeping up-to-date with Changes
 
-To stay up-to-date with all changes made to this repository, please see [here](changelog.md).
+To help stay notified of all the changes made to this repository, please see [here](changelog.md).
 
 # Important Update 11/29/2017 
 
