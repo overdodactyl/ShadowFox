@@ -89,6 +89,11 @@
 		border-color: var(--primary-accent-color-dark) !important;
 		box-shadow: 0 0 0 2px var(--primary-accent-color) !important;
 	}
+	
+	/* Pocket Suggestions Arrow */
+	.topic .topic-read-more::after {
+		fill: var(--primary-accent-color) !important;
+	}
 
 
 	/* Onboarding Message */
