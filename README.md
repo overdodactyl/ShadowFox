@@ -60,7 +60,7 @@ Context Menus and Sidebar                   | `about:` pages
 
 # Keeping up-to-date with Changes
 
-To help stay notified of all the changes made to this repository, please see [here](changelog.md).
+To help stay notified of all the changes made to this repository, please see the [changelog](changelog.md).
 
 # Looking for more information or experiencing problems?
 
