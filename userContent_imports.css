@@ -1,0 +1,42 @@
+/* Required for all users */
+@import "color_variables.css";
+@import "userContent-files/all_about_pages.css";
+
+
+
+
+/* Import about page files 
+ * Recomended for everyone using the dark theme */
+@import "userContent-files/about_pages/about.css";
+@import "userContent-files/about_pages/accounts.css";
+@import "userContent-files/about_pages/addons.css";
+@import "userContent-files/about_pages/config.css";
+@import "userContent-files/about_pages/memory.css";
+@import "userContent-files/about_pages/neterror.css";
+@import "userContent-files/about_pages/newtab_and_home.css";
+@import "userContent-files/about_pages/performance.css";
+@import "userContent-files/about_pages/plugins.css";
+@import "userContent-files/about_pages/preferences.css";
+@import "userContent-files/about_pages/profiles.css";
+@import "userContent-files/about_pages/serviceworkers.css";
+@import "userContent-files/about_pages/studies.css";
+@import "userContent-files/about_pages/support.css";
+@import "userContent-files/about_pages/url-classifier.css";
+@import "userContent-files/about_pages/webrtc.css";
+@import "userContent-files/about_pages/reader.css";
+
+
+
+
+
+/* Import Relevant webextension tweaks here
+ * IMPORTANT: If used, change the Internal UUID in the corresponding css file */
+@import "userContent-files/webextension-tweaks/tree_style_tabs.css";
+@import "userContent-files/webextension-tweaks/stylus.css";
+@import "userContent-files/webextension-tweaks/multiple_tabs_handler.css";
+
+
+
+/* Import relevent website dark themes */
+@import "userContent-files/webpages/view_source.css";
+@import 'userContent-files/webpages/amo_store.css';
