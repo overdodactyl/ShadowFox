@@ -20,6 +20,10 @@
     border: none !important;
     color: var(--primary-light-color) !important;
   }
+  
+  #debug-configs { 
+    color: var(--primary-light-color) !important; 
+  } 
       
 }
 
