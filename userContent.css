@@ -426,6 +426,28 @@
     color: var(--primary-accent-color) !important;
   }
 }
+.headerContainer {
+  background: var(--grey-70) !important;
+  color: var(--primary-light-color) !important;
+}
+
+.persistentHeader {
+  background-color: transparent !important;
+}
+
+body {
+  background: var(--primary-dark-color) !important;
+  color: var(--primary-light-color) !important;
+}
+
+.statsBoxSection-header {
+  color: var(--primary-accent-color) !important;
+}
+
+.statsBoxSection-content li,
+.statsBoxSection-content li > .statsBoxSection-value {
+  color: var(--primary-light-color) !important;
+}
 @-moz-document url(about:memory)  {
   div.opsRow {
     background-color: var(--dark-accent) !important;
@@ -536,6 +558,12 @@
   .search-wrapper input:focus {
     border-color: var(--primary-accent-color-dark) !important;
     box-shadow: 0 0 0 2px var(--primary-accent-color) !important;
+  }
+
+  /* Pocket Suggestions Arrow */
+
+  .topic .topic-read-more::after {
+    fill: var(--primary-accent-color) !important;
   }
 
   /* Onboarding Message */
