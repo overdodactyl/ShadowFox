@@ -1,3 +1,14 @@
+## 12/19/2017 00:06 UTC
+
+* Added support for `manifest.json` pages.
+
+* Updated README.md
+
+* Added a wiki entry: [ShadowFox is incompatible with the preferences page of one of on my addons](https://github.com/overdodactyl/ShadowFox/wiki/ShadowFox-is-incompatible-with-the-preferences-page-of-one-of-on-my-addons)
+
+
+
+
 ## 12/18/2017 21:03 UTC
 
 I've neglected to update the changelog for quite some time, so I'm going to try and just hit the major changes here:
