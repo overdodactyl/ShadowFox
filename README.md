@@ -11,7 +11,7 @@ All modifications can be split into two categories: (1) Changes to the user inte
 Modification to the following items have been made to match the Firefox dark theme:
 
 * Sidebar
-* Libray
+* Library
 * Smart bar and search bar drop downs
 * Context menus 
 * Menus accesssed from the nav bar
