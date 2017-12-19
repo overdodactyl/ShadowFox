@@ -606,6 +606,64 @@ url(chrome://browser/content/places/bookmarkProperties.xul)  {
     background: var(--blue-40) !important;
   }
 }
+@-moz-document url(chrome://browser/content/pageinfo/pageInfo.xul)  {
+  #topBar {
+    -moz-appearance: none !important;
+    background: var(--grey-80) !important;
+  }
+
+  #mainDeck {
+    background: var(--primary-dark-color) !important;
+    color: white !important;
+  }
+
+  textbox {
+    color: var(--primary-light-color) !important;
+  }
+
+  tree {
+    -moz-appearance: none !important;
+    border: 1px solid rgb(0,0,0) !important;
+    color: rgb(200,200,200) !important;
+    background-color: var(--grey-60) !important;
+  }
+
+  treechildren::-moz-tree-row {
+    background-color: transparent !important;
+    overflow-y: scroll  !important;
+  }
+
+  treecol {
+    -moz-appearance: none !important;
+    border: 0px solid !important;
+    border-bottom: 1px solid !important;
+    border-right: 1px solid rgb(0,0,0) !important;
+    -moz-border-bottom-colors: rgb(0,0,0) !important;
+    background: linear-gradient(to bottom, 
+			           rgba(56,70,82,1) 0%,
+			           rgba(35,39,48,1) 100%) !important;
+    color: white !important;
+  }
+
+  treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, current, focus) {
+    background: var(--primary-accent-color) !important;
+  }
+
+  .permission {
+    -moz-appearance: none !important;
+    background: var(--grey-60) !important;
+    color: var(--primary-light-color) !important;
+    border-color: var(--grey-70) !important;
+  }
+
+  #permPluginTemplate {
+    color: var(--primary-light-color) !important;
+  }
+
+  #permList {
+    border: 2px solid var(--grey-70) !important;
+  }
+}
 /* Remove 1px border underneath bookmarks bar */
 
 #navigator-toolbox::after {
