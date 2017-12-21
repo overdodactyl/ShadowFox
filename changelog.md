@@ -1,13 +1,14 @@
-## 12/19/2017 00:06 UTC
+## 12/21/2017 18:23 UTC
 
-* Added support for `manifest.json` pages.
+* Added support for the following things:
+    * Directory Listings pages (`file:///`).
+    * Downloads section of the Library
+    * Page Info Dialog
 
-* Updated README.md
-
-* Added a wiki entry: [ShadowFox is incompatible with the preferences page of one of on my addons](https://github.com/overdodactyl/ShadowFox/wiki/ShadowFox-is-incompatible-with-the-preferences-page-of-one-of-on-my-addons)
-
-
-
+* Improvements to:
+    * Library
+    * About Firefox Dialog
+    * Removed stray references to `darkcyan`
 
 ## 12/18/2017 21:03 UTC
 
