@@ -80,7 +80,7 @@
   }
 
   #bottomBox {
-    background: var(--primary-dark-color) !important;
+    background: var(--dark-accent) !important;
   }
 }
 /* The following code is based on that found on
