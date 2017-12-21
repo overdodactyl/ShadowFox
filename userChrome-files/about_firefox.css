@@ -6,6 +6,6 @@
     }
 
     #bottomBox {
-        background: var(--primary-dark-color) !important;
+        background: var(--dark-accent) !important;
     }
 }
