@@ -64,7 +64,7 @@ photonpanelmultiview panelview {
 
 /* Button */
 .identity-popup-expander[panel-multiview-anchor] {
-    background-color: darkcyan !important;
+    background-color: var(--primary-accent-color) !important;
     fill: var(--primary-light-color) !important;
 }
 
