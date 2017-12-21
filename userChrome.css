@@ -513,9 +513,8 @@ statuspanel .statuspanel-label {
 }
 @-moz-document url(chrome://browser/content/places/places.xul),
 url(chrome://browser/content/places/bookmarkProperties.xul)  {
-  /* Toolbar and Details Dock */
+  /* Details Dock and Bookmark Properties*/
 
-  toolbar,
   #detailsDeck,
   #bookmarkproperties {
     -moz-appearance: none !important;
@@ -524,14 +523,30 @@ url(chrome://browser/content/places/bookmarkProperties.xul)  {
     border: 0px solid black !important;
   }
 
-  /* Sidebar and Main Area */
+  /* Toolbar */
 
-  #places tree,
+  toolbar {
+    -moz-appearance: none !important;
+    background-color: var(--grey-80) !important;
+    border: 0px solid black !important;
+  }
+
+  /* Main Area */
+
+  #placeContent,
   #places #downloadsRichListBox {
     -moz-appearance: none !important;
     border: 1px solid rgb(0,0,0) !important;
     color: rgb(200,200,200) !important;
     background-color: var(--grey-60) !important;
+  }
+
+  /* Sidebar */
+
+  #placesList {
+    -moz-appearance: none !important;
+    color: rgb(200,200,200) !important;
+    background-color: rgba(12, 12, 13, .8) !important;
   }
 
   /* Column Header */
@@ -605,6 +620,18 @@ url(chrome://browser/content/places/bookmarkProperties.xul)  {
 
   #places treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, current) {
     background: var(--blue-40) !important;
+  }
+
+  #placeContent treechildren:not(.autocomplete-treebody)::-moz-tree-row(odd) {
+    background: rgba(12, 12, 13, .1) !important;
+  }
+
+  #places treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
+    background: var(--dark-accent) !important;
+  }
+
+  #places treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover, selected) {
+    background: var(--primary-accent-color) !important;
   }
 }
 @-moz-document url(chrome://browser/content/pageinfo/pageInfo.xul)  {
