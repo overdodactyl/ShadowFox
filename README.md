@@ -34,6 +34,7 @@ The following webpages have been styled to match the dark theme:
 * addons.mozilla.org
 * `view-source` pages
 * manifest.json pages
+* Dierectory listing pages (`file:///`)
 
 #### Webextension Tweaks
 
