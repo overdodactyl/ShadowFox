@@ -80,7 +80,7 @@
   }
 
   #bottomBox {
-    background: var(--primary-dark-color) !important;
+    background: var(--dark-accent) !important;
   }
 }
 /* The following code is based on that found on
@@ -526,7 +526,8 @@ url(chrome://browser/content/places/bookmarkProperties.xul)  {
 
   /* Sidebar and Main Area */
 
-  #places tree {
+  #places tree,
+  #places #downloadsRichListBox {
     -moz-appearance: none !important;
     border: 1px solid rgb(0,0,0) !important;
     color: rgb(200,200,200) !important;
