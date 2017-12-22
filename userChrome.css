@@ -71,8 +71,6 @@
   --primary-accent-color: var(--blue-40);
   --primary-accent-color-dark: var(--blue-50);
 }
-/* Thanks @Sporif for themeing the About Firefox Dialog */
-
 @-moz-document url(chrome://browser/content/aboutDialog.xul)  {
   #clientBox {
     color: var(--primary-light-color) !important;
@@ -510,6 +508,42 @@ statuspanel .statuspanel-label {
   background-color: var(--grey-80) !important;
   color: var(--primary-light-color) !important;
   border: none !important;
+}
+/* Top Border */
+
+.browserContainer > findbar {
+  border-top: 1px solid var(--grey-80) !important;
+}
+
+/* Alter buttons */
+
+.findbar-find-previous,
+.findbar-find-next {
+  border: none !important;
+  background: none !important;
+  border-radius: 2px !important;
+  fill: var(--primary-light-color) !important;
+}
+
+/* Fix spacing */
+
+.findbar-find-previous {
+  margin-left: 6px !important;
+}
+
+/* Buttons on hover */
+
+.findbar-find-previous:hover,
+.findbar-find-next:hover {
+  background: var(--toolbarbutton-hover-background) !important;
+}
+
+/* Alter text */
+
+description,
+label {
+  color: var(--primary-light-color) !important;
+  text-shadow: none !important;
 }
 @-moz-document url(chrome://browser/content/places/places.xul),
 url(chrome://browser/content/places/bookmarkProperties.xul)  {
