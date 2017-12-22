@@ -1,4 +1,3 @@
-/* Thanks @Sporif for themeing the About Firefox Dialog */
 @-moz-document url(chrome://browser/content/aboutDialog.xul) {
     #clientBox {
         color: var(--primary-light-color) !important;
