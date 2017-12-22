@@ -961,6 +961,106 @@
     color: var(--primary-light-color) !important;
   }
 }
+@-moz-document url-prefix("moz-extension://de835161-ee69-c14d-9940-203fbacf2276/")  {
+  /* header */
+
+  #appinfo {
+    background-color: var(--grey-80) !important;
+    color: var(--primary-light-color) !important;
+  }
+
+  /* Right Column */
+
+  body[dir="ltr"] #panes > div {
+    background: var(--grey-70) !important;
+    color: var(--primary-light-color) !important;
+  }
+
+  body,
+  #panes {
+    background: var(--grey-70) !important;
+  }
+
+  /* Power Switch */
+
+  #switch .fa {
+    color: var(--primary-accent-color) !important;
+  }
+
+  /* Power Switch - Off */
+
+  body.off #switch .fa {
+    color: var(--primary-light-color) !important;
+  }
+
+  /* Tool Buttons */
+
+  .tool {
+    color: var(--primary-light-color) !important;
+  }
+
+  .tool:hover {
+    color: var(--grey-80) !important;
+  }
+
+  /* Stripped row */
+
+  h2,
+  #extraTools {
+    background-color: var(--grey-80) !important;
+    color: var(--primary-light-color) !important;
+  }
+
+  /* Refresh Button */
+
+  #refresh {
+    background-color: var(--grey-80) !important;
+    border-color: var(--grey-50) !important;
+  }
+
+  /* Badge number */
+
+  #extraTools > span > span.badge {
+    color: var(--primary-light-color) !important;
+  }
+
+  /* Firewall Container */
+
+  #firewallContainer > div {
+    background-color: var(--grey-60) !important;
+  }
+
+  #firewallContainer > div > span {
+    color: var(--primary-light-color) !important;
+    border-color: var(--grey-50) !important;
+  }
+
+  body.advancedUser #firewallContainer > div > span.blockRule.ownRule {
+    background-color: var(--red-80) !important;
+  }
+
+  body.advancedUser #firewallContainer > div > span.blockRule {
+    background-color: var(--red-90) !important;
+  }
+
+  body.advancedUser #firewallContainer > div > span.allowRule.ownRule {
+    background-color: var(--green-70) !important;
+  }
+
+  body.advancedUser #firewallContainer > div > span.allowRule {
+    background-color: var(--green-80) !important;
+  }
+
+  #firewallContainer > div.blocked > span:first-of-type::before,
+  #firewallContainer.minimized > div.isDomain.totalBlocked > span:first-of-type::before {
+    background-color: var(--red-80) !important;
+  }
+
+  #firewallContainer > div.allowed > span:first-of-type::before,
+  #firewallContainer.minimized > div.isDomain.totalAllowed > span:first-of-type::before {
+    background-color: var(--green-80) !important;
+  }
+}
 @-moz-document url-prefix("https://addons.mozilla.org")  {
   /* Header & Footer */
 
