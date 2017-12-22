@@ -1,0 +1,137 @@
+/* Place the contents of this file in your Violentmonkey settings:
+   Dashboard > Settings > Custom Style  */
+
+:root {
+  --primary-light-color: var(--grey-40);
+  --light-accent-color: var(--grey-50);
+  --mid-way-color: var(--grey-60);
+  --primary-dark-color: var(--grey-70);
+  --dark-accent: var(--grey-80);
+  --primary-accent-color: var(--blue-40);
+  --primary-accent-color-dark: var(--blue-50);
+}
+
+.tab,
+.CodeMirror-gutter-elt ,
+.CodeMirror-gutter,
+.CodeMirror-gutters,
+.CodeMirror-linenumber,
+.CodeMirror-scroll,
+.CodeMirror-sizer,
+.edit-settings {
+    background: var(--primary-dark-color) !important;
+ }
+
+aside {
+    background: var(--dark-accent) !important;
+}
+
+h1, h2 {
+    color: var(--primary-accent-color) !important;
+}
+
+.sidemenu > a.active, .sidemenu > a:hover {
+    color: var(--primary-accent-color) !important;
+}
+
+body {
+    color: var(--primary-light-color) !important;
+}
+
+section > h3 {
+    background: var(--primary-dark-color) !important;
+}
+
+.script {
+    background: var(--mid-way-color) !important;
+}
+
+svg {
+    fill: var(--primary-light-color) !important;
+}
+
+input[type="text"], textarea {
+    background: var(--mid-way-color) !important;
+    color: var(--primary-light-color) !important;
+    border-color: var(--mid-way-color) !important;
+}
+
+.export-list > .ellipsis.active {
+    border-color: var(--primary-accent-color) !important;
+    background: var(--primary-accent-color) !important;
+}
+
+button {
+    background: var(--dark-accent) !important;
+    border: 2px solid var(--mid-way-color) !important;
+    color: var(--primary-light-color) !important;
+}
+
+.btn-ghost:hover {
+    border-color: var(--primary-dark-color) !important;
+    background: var(--dark-accent) !important;
+}
+
+.CodeMirror-lines {
+    color: var(--primary-light-color) !important;
+    background: var(--primary-dark-color) !important;
+}
+
+
+/* Green Text */
+.cm-s-eclipse span.cm-comment,
+.cm-s-eclipse span.cm-number {
+    color: #86de74 !important;
+}
+
+/* Blue Text */
+.cm-s-eclipse span.cm-string,
+.cm-s-eclipse span.cm-def,
+.cm-s-eclipse span.cm-type,
+.cm-s-eclipse span.cm-variable-2,
+.cm-s-eclipse span.cm-variable-3 {
+    color: #75bfff !important;
+}
+
+/* Purple Text */
+.cm-s-eclipse span.cm-keyword,
+.cm-s-eclipse span.cm-atom {
+    color: #b78cfd !important;
+}
+
+/* Orange Text */
+.cm-s-eclipse span.cm-string-2 {
+    color: #dea174 !important;
+}
+
+.cm-s-eclipse span.cm-operator,
+.cm-s-eclipse span.cm-property,
+.cm-s-eclipse span.cm-variable {
+    color: var(--primary-light-color) !important;
+}
+
+.CodeMirror-activeline-background.CodeMirror-linebackground{
+    background: var(--dark-accent) !important;
+}
+
+.edit-nav > div.active {
+    background: var(--primary-dark-color) !important;
+    color: var(--primary-light-color) !important;
+}
+
+.flex.edit-header {
+    background: var(--dark-accent) !important;
+}
+
+.CodeMirror-gutters {
+    border-right: 1px solid var(--mid-way-color) !important;
+}
+
+html {
+  background: var(--mid-way-color) !important;
+}
+
+.submenu ,
+.menu.expand {
+  background: var(--mid-way-color) !important;
+}
