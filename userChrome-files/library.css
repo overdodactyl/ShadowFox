@@ -9,30 +9,30 @@ url(chrome://browser/content/places/bookmarkProperties.xul) {
 		color: var(--primary-light-color) !important;
 		border: 0px solid black !important;
 	}
-	
+
 	/* Toolbar */
 	toolbar {
 		-moz-appearance: none !important;
 		background-color: var(--grey-80) !important;
 		border: 0px solid black !important;
 	}
-	  
+
 	/* Main Area */
 	#placeContent,
 	#places #downloadsRichListBox {
 		-moz-appearance: none !important;
-		border: 1px solid rgb(0,0,0) !important;
+		border: 1px solid var(--grey-60) !important;
 		color: rgb(200,200,200) !important;
 		background-color: var(--grey-60) !important;
 	}
-	
+
 	/* Sidebar */
 	#placesList {
 		-moz-appearance: none !important;
 		color: rgb(200,200,200) !important;
 		background-color: rgba(12, 12, 13, .8) !important;
 	}
-	
+
 	/* Column Header */
 	#contentView treecol {
 		-moz-appearance: none !important;
@@ -40,12 +40,12 @@ url(chrome://browser/content/places/bookmarkProperties.xul) {
 		border-bottom: 1px solid !important;
 		border-right: 1px solid rgb(0,0,0) !important;
 		-moz-border-bottom-colors: rgb(0,0,0) !important;
-		background: linear-gradient(to bottom, 
+		background: linear-gradient(to bottom,
 		           rgba(56,70,82,1) 0%,
 		           rgba(35,39,48,1) 100%) !important;
 		color: white !important;
 	}
-	
+
     /* Text Boxes - One Line */
 	#places textbox:not([multiline="true"]),
 	#editBookmarkPanelContent textbox:not([multiline="true"]) {
@@ -53,7 +53,7 @@ url(chrome://browser/content/places/bookmarkProperties.xul) {
         color: var(--primary-light-color) !important;
         background-color: var(--grey-60) !important;
      }
-	 
+
 	/* Bookmarks Description Field */
 	#places #editBMPanel_descriptionField,
 	#editBookmarkPanelContent #editBMPanel_descriptionField {
@@ -61,7 +61,7 @@ url(chrome://browser/content/places/bookmarkProperties.xul) {
 		background-color: var(--grey-60) !important;
 		color: var(--primary-light-color) !important;
 	}
-	
+
 	/*  Bookmark Tag Options  */
 	listbox {
 		-moz-appearance: none !important;
@@ -74,17 +74,17 @@ url(chrome://browser/content/places/bookmarkProperties.xul) {
 		color: black !important;
 	}
 
-	
-	/*					*
+
+	/*								*
 	 *	  Tree Items	*
-	 *					*/	
-	
+	 *								*/
+
 	#places treechildren::-moz-tree-row {
 		background-color: transparent !important;
 		overflow-y: scroll  !important;
 	}
 
-  
+
 	/* Change the outline of icons to light instead of dark */
 	#places treechildren::-moz-tree-image, #places treechildren::-moz-tree-image {
 	  fill: var(--primary-light-color) !important;
@@ -99,19 +99,22 @@ url(chrome://browser/content/places/bookmarkProperties.xul) {
 	#places treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, current) {
 	  background: var(--blue-40) !important;
 	}
-	
+
 	#placeContent treechildren:not(.autocomplete-treebody)::-moz-tree-row(odd) {
 	    background: rgba(12, 12, 13, .1) !important;
 	}
-	
+
 	#places treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
 	    background: var(--dark-accent) !important;
+			-moz-border-top-colors: var(--dark-accent) !important;
+			-moz-border-right-colors: var(--dark-accent) !important;
+			-moz-border-left-colors: var(--dark-accent) !important;
+			-moz-border-bottom-colors: var(--dark-accent) !important;	
 	}
-	
+
 	#places treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover, selected) {
 	    background: var(--primary-accent-color) !important;
 	}
-		
-	 
-}
 
+
+}
