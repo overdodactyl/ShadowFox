@@ -1,6 +1,6 @@
 # What is ShadowFox?
 
-ShadowFox is a collection of `userChrome.css` and `userContent.css` tweaks to supplement and expand the dark theme provided by Mozilla. 
+ShadowFox is a collection of `userChrome.css` and `userContent.css` tweaks to supplement and expand the dark theme provided by Mozilla.
 
 # What modifications does ShadowFox make?
 
@@ -13,13 +13,14 @@ Modification to the following items have been made to match the Firefox dark the
 * Sidebar
 * Library
 * Smart bar and search bar drop downs
-* Context menus 
+* Context menus
 * Menus accesssed from the nav bar
 * Customization page
 * Tab line and secure connection icon
 * About Firefox dialog box
 * Status panels
 * Remove white flash on page load
+* Findbar
 
 ## userContent tweaks
 
@@ -44,6 +45,8 @@ Tweaks for the following webextensions have been made:
 * Stylus - preferences page
 * Multiple Tabs Handler - preferences page
 * Dark Mode - preferences page
+* Violentmonkey - Settings, text editor and popup
+* uBlockOrigin - Popup
 
 
 # What do the changes look like?
@@ -78,6 +81,3 @@ Please read through the current issues and search old ones.  If it doesn't alrea
 # Contributing
 
 I welcome any contributions and would be excited to have a team of people helping with this project.  If you are uncomfortable making pull requests, you can simply open up an issue and attach any code you would like included.
-
-
-
