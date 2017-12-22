@@ -20,9 +20,3 @@
 .findbar-find-next:hover {
   background: var(--toolbarbutton-hover-background) !important;
 }
-
-/* Alter text */
-description, label {
-    color: var(--primary-light-color) !important;
-    text-shadow: none !important;
-}
