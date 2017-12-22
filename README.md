@@ -59,6 +59,10 @@ Context Menus and Sidebar                   | `about:` pages
 ![dark_menus](Screenshots/viewsource.png)   | ![dark_menus](Screenshots/addons.png)
 
 
+# How do I install/modify ShadowFox
+
+Please see [here](https://github.com/overdodactyl/ShadowFox/wiki).
+
 # Keeping up-to-date with Changes
 
 To help stay notified of all the changes made to this repository, please see the [changelog](changelog.md).
