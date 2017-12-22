@@ -570,7 +570,7 @@ url(chrome://browser/content/places/bookmarkProperties.xul)  {
   #placeContent,
   #places #downloadsRichListBox {
     -moz-appearance: none !important;
-    border: 1px solid rgb(0,0,0) !important;
+    border: 1px solid var(--grey-60) !important;
     color: rgb(200,200,200) !important;
     background-color: var(--grey-60) !important;
   }
@@ -662,6 +662,10 @@ url(chrome://browser/content/places/bookmarkProperties.xul)  {
 
   #places treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
     background: var(--dark-accent) !important;
+    -moz-border-top-colors: var(--dark-accent) !important;
+    -moz-border-right-colors: var(--dark-accent) !important;
+    -moz-border-left-colors: var(--dark-accent) !important;
+    -moz-border-bottom-colors: var(--dark-accent) !important;
   }
 
   #places treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover, selected) {
