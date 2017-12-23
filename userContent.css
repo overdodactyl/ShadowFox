@@ -1076,6 +1076,10 @@
     background-color: var(--grey-70) !important;
     border-bottom: 1px solid var(--grey-70) !important;
   }
+
+  input[type="number"] {
+    background-color: var(--grey-60);
+  }
 }
 @-moz-document url-prefix("https://addons.mozilla.org")  {
   /* Header & Footer */
