@@ -1060,6 +1060,22 @@
   #firewallContainer.minimized > div.isDomain.totalAllowed > span:first-of-type::before {
     background-color: var(--green-80) !important;
   }
+
+  #dashboard-nav-widgets {
+    border-bottom: 1px solid var(--grey-60) !important;
+    background-color: var(--grey-80) !important;
+  }
+
+  .tabButton {
+    background-color: var(--grey-70) !important;
+    border: 1px solid var(--grey-60) !important;
+    border-bottom: 1px solid var(--grey-60) !important;
+  }
+
+  .tabButton.selected {
+    background-color: var(--grey-70) !important;
+    border-bottom: 1px solid var(--grey-70) !important;
+  }
 }
 @-moz-document url-prefix("https://addons.mozilla.org")  {
   /* Header & Footer */
