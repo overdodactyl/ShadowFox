@@ -35,6 +35,8 @@
 @import "userContent-files/webextension-tweaks/dark_mode.css";
 @import "userContent-files/webextension-tweaks/uBlockOrigin.css";
 @import "userContent-files/webextension-tweaks/uBO_Scope.css";
+@import "userContent-files/webextension-tweaks/httpsEverywhere.css";
+@import "userContent-files/webextension-tweaks/decentraleyes.css";
 
 
 /* Import relevent website dark themes */
