@@ -1,0 +1,58 @@
+@-moz-document url-prefix("moz-extension://7ce809b7-4a3b-484c-89de-42aa4db7f5de/") {
+  body {
+    background: var(--grey-60) !important;
+  }
+
+  #topPane {
+    background-color: var(--grey-60) !important;
+    color: var(--primary-light-color) !important;
+  }
+
+  #heatmaps .togglerBar {
+    background: var(--grey-60) !important;
+  }
+
+  body.theoretical #heatmaps .heatmap.theoretical {
+    background: var(--grey-60) !important;
+  }
+
+
+
+  #heatmaps .heatmap {
+    border: none;
+    background: var(--grey-60) !important;
+  }
+
+  #heatmaps.list .hmcell {
+    background-color: var(--grey-60) !important;
+    color: var(--primary-light-color) !important;
+  }
+
+  #domain3rdDetails {
+    background-color: var(--grey-70) !important;
+    border: 1px solid var(--grey-70) !important;
+  }
+
+  #domain3rdDetails #authority {
+    background-color: var(--grey-80) !important;
+    position: relative;
+  }
+  
+  #scores .scores .score.actual {
+    color: white !important;;
+  }
+  
+  #scores .scores .score.theoretical {
+    color: var(--grey-70) !important;;
+  }
+  
+  body.theoretical #scores .scores .score.actual {
+    color: var(--grey-70) !important;;
+  }
+  
+  body.theoretical #scores .scores .score.theoretical {
+    color: var(--primary-light-color) !important;;
+  }
+
+
+}
