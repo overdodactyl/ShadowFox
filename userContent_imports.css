@@ -34,6 +34,7 @@
 @import "userContent-files/webextension-tweaks/multiple_tabs_handler.css";
 @import "userContent-files/webextension-tweaks/dark_mode.css";
 @import "userContent-files/webextension-tweaks/uBlockOrigin.css";
+@import "userContent-files/webextension-tweaks/uBO_Scope.css";
 
 
 /* Import relevent website dark themes */
