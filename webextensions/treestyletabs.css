@@ -1,0 +1,83 @@
+/* Copyright (c) 2017 overdodactyl
+   Available for use under the MIT License:
+   https://opensource.org/licenses/MIT
+   https://github.com/overdodactyl/ShadowFox  */
+
+ /* (1) Use Plain Dark Appearance
+    (2) Place the contents of this file in the extra styles rules section  */
+
+/* background color */
+:root {
+   background-color: var(--primary-dark-color);
+}
+
+/* Tabs */
+.tab {
+ background: var(--primary-dark-color);
+ border-color: var(--dark-accent);
+}
+
+.tab .label {
+ color: var(--primary-light-color);
+}
+
+.tab:hover {
+   background-color: var(--dark-accent) !important;
+}
+
+
+/* Active Tab */
+.tab.active {
+   background-color: var(--primary-accent-color) !important;
+}
+
+.tab.active .label {
+ color: white;
+}
+
+.tab.active:hover {
+   background-color: var(--primary-accent-color-dark)!important;
+}
+
+/* Unloaded Tabs */
+.tab.discarded {
+ opacity: 0.75;
+}
+
+.tab.discarded .label {
+ color: var(--grey-50);
+}
+
+/* Unread Tabs */
+.tab.unread .label {
+ font-style: italic;
+}
+
+
+/* Only show closebox on hover */
+.tab:not(:hover) .closebox {
+ display: none;
+}
+
+
+/* Drop Down Arrow */
+.twisty {
+ color: var(--primary-light-color)
+}
+
+.tab.active .twisty {
+ color: white
+}
+
+
+/* Hide 'new tab' button. */
+.newtab-button {
+   opacity: 0;
+}
+
+
+/* Changes for favicons */
+
+#all-tabs .tab:not(.active)[data-current-uri*="github.com"] .favicon {
+   filter: invert(65%);
+}
