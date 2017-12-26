@@ -42,11 +42,14 @@ The following webpages have been styled to match the dark theme:
 Tweaks for the following webextensions have been made:
 
 * Tree Style Tabs - preferences page and context menus
-* Stylus - preferences page
+* Stylus - preferences page and sidebar
 * Multiple Tabs Handler - preferences page
 * Dark Mode - preferences page
 * Violentmonkey - Settings, text editor and popup
-* uBlockOrigin - Popup
+* uBlockOrigin - Popup and Settings
+* uBO-Scope - Popup
+* Decentraleyes - Popup and settings
+* HTTPSEverywhere - Popup
 
 
 # What do the changes look like?

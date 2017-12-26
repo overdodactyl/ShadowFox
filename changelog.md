@@ -1,3 +1,15 @@
+## 12/26/2017 22:34 UTC
+
+* Added Support for the following things:
+  * uBO-Scope
+  * Decentraleyes
+  * HTTPSEverywhere
+  * Tree Style Tabs sidebar
+* Improvements to:
+  * uBlock Origin
+  * Library
+
+
 ## 12/21/2017 21:54 UTC
 
 * Added Support for the following things:
