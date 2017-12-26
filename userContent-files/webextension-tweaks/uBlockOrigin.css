@@ -136,6 +136,49 @@
     background-color: #65bdfb !important;
   }
 
+  /* Color Blind Friendly */
+
+  /* Dark Block Color */
+  body.advancedUser #firewallContainer.colorBlind > div > span.blockRule.ownRule {
+    background-color: #000060 !important;
+  }
+
+  /* Light Block Color */
+  body.advancedUser #firewallContainer.colorBlind > div > span.blockRule {
+    background-color: #787dab !important;
+  }
+
+  /* Dark Allow */
+  body.advancedUser #firewallContainer.colorBlind > div > span.allowRule.ownRule {
+    background-color: #fbb900 !important;
+  }
+
+  /* Light Allow */
+  body.advancedUser #firewallContainer.colorBlind > div > span.allowRule{
+    background-color: #f2d98d !important;
+  }
+
+  /* Dark Noop */
+  body.advancedUser #firewallContainer > div > span.noopRule.ownRule {
+      background-color: #2f2e2e !important;
+  }
+
+
+  /* Light Noop */
+  body.advancedUser #firewallContainer > div > span.noopRule {
+      background-color: #a1a1a1 !important;
+  }
+
+  /* Yellow Side */
+  #firewallContainer.colorBlind > div.allowed > span:first-of-type::before, #firewallContainer.colorBlind.minimized > div.isDomain.totalAllowed > span:first-of-type::before {
+    background-color: #ebd287 !important;
+  }
+
+  /* Blue Side */
+  #firewallContainer.colorBlind > div.blocked > span:first-of-type::before, #firewallContainer.colorBlind.minimized > div.isDomain.totalBlocked > span:first-of-type::before {
+    background-color: #787cab !important;
+  }
+  
   #dashboard-nav-widgets {
       border-bottom: 1px solid var(--grey-60) !important;
       background-color: var(--grey-80) !important;
