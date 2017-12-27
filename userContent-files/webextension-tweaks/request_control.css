@@ -1,0 +1,87 @@
+@-moz-document url-prefix("moz-extension://ed3f80c9-0ccb-ca41-bd62-f71a9fb72d27/") {
+
+  body {
+      background-color: var(--primary-dark-color) !important;
+      color: var(--primary-light-color) !important;
+  }
+
+  .rule:not(.editing):not(:hover) {
+      background-color: var(--grey-60) !important;
+      border: 1px solid var(--grey-50) !important;
+  }
+
+  .rule:hover:not(.editing) {
+      background-color: var(--grey-80) !important;
+      border: 1px solid var(--grey-50) !important;
+  }
+
+  .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+      color: var(--primary-light-color) !important;
+      background-color: var(--grey-80) !important;
+      border: 1px solid var(--grey-50) !important;
+  }
+
+  .nav-tabs > li > a:hover {
+      background-color: var(--grey-80) !important;
+      border: 1px solid var(--grey-50) !important;
+  }
+
+  tabs.nav-justified > li > a {
+      border-bottom: 1px solid var(--grey-50) !important;
+  }
+
+  .btn-default {
+      color: var(--primary-light-color) !important;
+      background-color: var(--grey-80) !important;
+      border-color: var(--grey-50) !important;
+  }
+
+  .btn-default.active {
+    background-color: var(--grey-60) !important;
+  }
+
+  .btn-default:hover {
+      color: var(--primary-light-color) !important;
+      background-color: var(--grey-50) !important;
+      border-color: var(--grey-50) !important;
+  }
+
+  .list-group-item:first-child {
+      background: var(--grey-60) !important;
+      border-color: var(--grey-50) !important;
+
+  }
+
+  .table {
+      background: var(--grey-60) !important;
+  }
+
+  .table-striped > tbody > tr:nth-of-type(2n+1) {
+      background-color: var(--grey-80) !important;
+  }
+
+  .input-group .form-control:first-child,
+  .input-group-addon:first-child,
+  .input-group-btn:first-child > .btn,
+  .input-group-btn:first-child > .btn-group > .btn,
+  .input-group-btn:first-child > .dropdown-toggle,
+  .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+  .input-group-btn:last-child > .btn-group:not(:last-child) > .btn,
+   select.input-sm,
+  .btn-group-params > .tags-input {
+      background: var(--grey-50) !important;
+      color: var(--grey-30) !important;
+      border-color: var(--grey-40) !important;
+  }
+  .list-group-item {
+      background-color: var(--grey-60) !important;
+      border: 1px solid #ddd;
+  }
+
+  .tags-input .tag {
+      background: var(--grey-80) !important;
+      border: 1px solid var(--grey-60) !important;
+      color: var(--primary-light-color) !important;
+  }
+
+}
