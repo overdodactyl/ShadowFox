@@ -1269,9 +1269,12 @@
     background-color: #dda0a2 !important;
   }
 
+  /* Before Red */
+
   #firewallContainer > div.blocked > span:first-of-type::before,
   #firewallContainer.minimized > div.isDomain.totalBlocked > span:first-of-type::before {
-    background-color: #af0202 !important;
+    background-color: #c87576 !important;
+    opacity: 1 !important;
   }
 
   /* Darker Green */
@@ -1286,9 +1289,12 @@
     background-color: #95ca8a !important;
   }
 
+  /* Before Green */
+
   #firewallContainer > div.allowed > span:first-of-type::before,
   #firewallContainer.minimized > div.isDomain.totalAllowed > span:first-of-type::before {
-    background-color: #02af06 !important;
+    background-color: #7ec26f !important;
+    opacity: 1 !important;
   }
 
   /* Darker Blue */
@@ -1307,6 +1313,14 @@
 
   body.advancedUser #firewallContainer > div > span.noopRule {
     background-color: #65bdfb !important;
+  }
+
+  /* Before Yellow */
+
+  #firewallContainer > div.allowed.blocked > span:first-of-type::before,
+  #firewallContainer.minimized > div.isDomain.totalAllowed.totalBlocked > span:first-of-type::before {
+    background-color: #cdc16e !important;
+    opacity: 1 !important;
   }
 
   /* Color Blind Friendly */
@@ -1337,13 +1351,13 @@
 
   /* Dark Noop */
 
-  body.advancedUser #firewallContainer > div > span.noopRule.ownRule {
+  body.advancedUser #firewallContainer.colorBlind > div > span.noopRule.ownRule {
     background-color: #2f2e2e !important;
   }
 
   /* Light Noop */
 
-  body.advancedUser #firewallContainer > div > span.noopRule {
+  body.advancedUser #firewallContainer.colorBlind > div > span.noopRule {
     background-color: #a1a1a1 !important;
   }
 
