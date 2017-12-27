@@ -38,6 +38,7 @@
 @import "userContent-files/webextension-tweaks/httpsEverywhere.css";
 @import "userContent-files/webextension-tweaks/decentraleyes.css";
 @import "userContent-files/webextension-tweaks/skipredirect.css";
+@import "userContent-files/webextension-tweaks/request_control.css";
 
 
 /* Import relevent website dark themes */
