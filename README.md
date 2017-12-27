@@ -36,20 +36,29 @@ The following webpages have been styled to match the dark theme:
 * `view-source` pages
 * manifest.json pages
 * Dierectory listing pages (`file:///`)
+* `https://raw.githubusercontent.com/...`
 
 #### Webextension Tweaks
 
 Tweaks for the following webextensions have been made:
 
-* Tree Style Tabs - preferences page and context menus
-* Stylus - preferences page and sidebar
-* Multiple Tabs Handler - preferences page
-* Dark Mode - preferences page
-* Violentmonkey - Settings, text editor and popup
-* uBlockOrigin - Popup and Settings
-* uBO-Scope - Popup
-* Decentraleyes - Popup and settings
-* HTTPSEverywhere - Popup
+* Dark Mode
+* Decentraleyes
+* HTTPSEverywhere
+* Multiple Tabs Handler
+* Request Control
+* Skip Redirect
+* Stylus
+* Tree Style Tabs
+* uBlockOrigin
+* uBO-Scope
+
+#### Webextension tweaks that go directly into the webextension settings page (custom css)
+
+These tweaks are found in the directory `./webextension`
+
+* Stylus
+* Violentmonkey
 
 
 # What do the changes look like?
