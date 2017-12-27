@@ -37,6 +37,7 @@
 @import "userContent-files/webextension-tweaks/uBO_Scope.css";
 @import "userContent-files/webextension-tweaks/httpsEverywhere.css";
 @import "userContent-files/webextension-tweaks/decentraleyes.css";
+@import "userContent-files/webextension-tweaks/skipredirect.css";
 
 
 /* Import relevent website dark themes */
