@@ -455,6 +455,15 @@
     background-color: var(--dark-accent) !important;
   }
 }
+.advanced-panel {
+  background-color: var(--grey-60) !important;
+  border-color: var(--grey-50) !important;
+}
+
+.exceptionDialogButtonContainer {
+  background-color: var(--grey-80) !important;
+}
+
 @-moz-document url(about:neterror)  {
   /* about:neterror button */
 
@@ -931,249 +940,6 @@
 
   div.fold-trigger {
     color: var(--primary-accent-color) !important;
-  }
-}
-@-moz-document url-prefix("https://addons.mozilla.org")  {
-  /* Header & Footer */
-
-  .Header,
-  .Footer-wrapper,
-  .LanguageTools-header-row {
-    background: var(--grey-80) !important;
-  }
-
-  .LanguageTools-table-row:nth-child(2n) {
-    background: var(--grey-70) !important;
-  }
-
-  /* Background Colors */
-
-  .LandingPage,
-  .Home,
-  .App-content,
-  .Paginate-page-number {
-    background: var(--primary-dark-color) !important;
-  }
-
-  /* Search Box */
-
-  .SearchForm-icon-magnifying-glass {
-    filter: invert(65%) !important;
-  }
-
-  /* Cards */
-
-  .Hero .Card-contents,
-  .Home-SubjectShelf .Card-contents,
-  .Card-header,
-  .AddonsCard--horizontal .Card-contents,
-  .AddonsCard--horizontal ul.AddonsCard-list .SearchResult-link,
-  .SearchForm-query,
-  .LandingPage-header,
-  .Categories .Card-contents,
-  .SectionLinks-dropdown .DropdownMenu-items,
-  .Card-contents,
-  .Card--photon .Card-contents,
-  .Card-footer-link,
-  .MetadataCard,
-  .AddonDescription-more-addons:not(.AddonDescription-more-addons--theme) .Card-contents .AddonsCard-list,
-  .AddonDescription-more-addons--theme .Card-contents .AddonsCard-list,
-  .Search .SearchResults .SearchResult,
-  .SearchForm-suggestions-item.SearchForm-suggestions-item {
-    background: var(--grey-60) !important;
-  }
-
-  .Home-SubjectShelf-subheading,
-  .Home-SubjectShelf-link:link,
-  .Home-SubjectShelf-link:visited,
-  .Card-header,
-  .SearchResult-name,
-  .SearchForm-query,
-  .LandingPage-addonType-name,
-  .LandingPage-heading-content,
-  .Footer-links-header a:link,
-  .Footer a:active,
-  .Footer a:hover,
-  .DropdownMenuItem,
-  .DropdownMenuItem-section,
-  .DropdownMenuItem-link a,
-  .DropdownMenuItem-link a:link,
-  .Card-contents,
-  .Card--photon .Card-contents,
-  .AddonBadges .Badge,
-  .Addon-author,
-  .Addon-author a,
-  .Addon-author a:link
-	.Button--action,
-  .Button--action:link,
-  .Button--action.Button--small:link,
-  .Button--action,
-  .Addon-title,
-  .ReportAbuseButton-show-more,
-  .SearchResult-summary,
-  .SearchContextCard-header,
-  .Paginate-page-number,
-  .SearchSuggestion-name,
-  .ExpandableCard-ToggleLink:link,
-  .Paginate .Paginate-item {
-    color: var(--primary-light-color) !important;
-  }
-
-  .Paginate-previous::before,
-  .Paginate-next::after {
-    filter: invert(70%) !important;
-  }
-
-  .Home-SubjectShelf-link:active,
-  .Home-SubjectShelf-link:focus,
-  .Home-SubjectShelf-link:hover,
-  .SearchResult-link:focus .SearchResult-name,
-  .SearchResult-link:hover .SearchResult-name,
-  .Card-footer-link a,
-  .Card-footer-link a:hover,
-  .Card-footer-link a:link,
-  .DropdownMenuItem-link a:hover,
-  .AddonMoreInfo-contents a:link,
-  .LanguageTools-table a:link,
-  .Addon-details .AddonDescription-contents a:link,
-  .Card.ShowMoreCard.AddonDescription-version-notes a:link {
-    color: var(--primary-accent-color) !important;
-  }
-
-  .Button--action.Button--outline-only {
-    border-color: var(--primary-accent-color) !important;
-  }
-
-  .Button--action,
-  .Button--action.Button--small,
-  .Paginate .Paginate-item,
-  .SearchForm-suggestions-item.SearchForm-suggestions-item--highlighted,
-  .Addon .InstallButton-button {
-    background: var(--primary-accent-color) !important;
-  }
-
-  .Button--action.Button--outline-only:hover,
-  .SearchForm-query:hover,
-  .Button--action:hover {
-    border-color: var(--primary-accent-color-dark) !important;
-  }
-
-  .SearchForm-query:focus {
-    box-shadow: 0 0 5px 0 var(--primary-accent-color) !important;
-    border-color: var(--primary-accent-color-dark) !important;
-  }
-
-  .AddonsCard--horizontal ul.AddonsCard-list .SearchResult-link:hover {
-    background: var(--grey-70) !important;
-    border-radius: 0px !important;
-  }
-
-  .Button--report {
-    text-shadow: none !important;
-  }
-
-  .Icon-external {
-    filter: invert(20%) !important;
-  }
-
-  .Icon-featured {
-    filter: invert(85%) !important;
-  }
-}
-@-moz-document url-prefix(file:///)  {
-  :root {
-    background-color: var(--grey-60) !important;
-  }
-
-  body {
-    border: 1px solid var(--mid-way-color) !important;
-    background-color: var(--primary-dark-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-
-  h1 {
-    border-bottom: 1px solid var(--light-accent-color) !important;
-  }
-
-  body > table > tbody > tr:hover {
-    outline: 1px solid var(--mid-way-color) !important;
-  }
-
-  .dir,
-  .symlink,
-  .file,
-  .up {
-    color: var(--primary-accent-color) !important;
-  }
-}
-@-moz-document regexp("^moz-extension://.*manifest.json$")  {
-  html {
-    background: var(--primary-dark-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-}
-@-moz-document url-prefix(https://raw.githubusercontent.com)  {
-  html {
-    background: var(--primary-dark-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-}
-@-moz-document url-prefix(view-source)  {
-  *|*:root {
-    background-color: var(--primary-dark-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-
-  pre[id]:before,
-  span[id]:before {
-    color: var(--primary-light-color) !important;
-  }
-
-  .highlight .start-tag {
-    color: #b78cfd !important;
-  }
-
-  .highlight .end-tag {
-    color: #b78cfd !important;
-  }
-
-  .highlight .comment {
-    color: #86de74 !important;
-  }
-
-  .highlight .cdata {
-    color: #CC0066 !important;
-  }
-
-  .highlight .doctype {
-    color: steelblue !important;
-  }
-
-  .highlight .pi {
-    color: #ff7de9 !important;
-  }
-
-  .highlight .entity {
-    color: #dea174 !important;
-  }
-
-  .highlight .attribute-name {
-    color: #86de74 !important;
-  }
-
-  .highlight .attribute-value {
-    color: #75bfff !important;
-  }
-
-  .highlight .markupdeclaration {
-    color: steelblue !important;
-    font-style: italic;
-  }
-
-  .highlight .error,
-  .highlight .error > :-moz-any(.start-tag, .end-tag, .comment, .cdata, .doctype,
-	                              .pi, .entity, .attribute-name, .attribute-value) {
-    color: #de7474 !important;
   }
 }
 /* Alters the preferences page for Dark Mode */
@@ -1819,5 +1585,248 @@ html body div#container-panel.panel.container-panel,
     -moz-appearance: none!important;
     background: var(--grey-60) !important;
     color: var(--primary-light-color) !important;
+  }
+}
+@-moz-document url-prefix("https://addons.mozilla.org")  {
+  /* Header & Footer */
+
+  .Header,
+  .Footer-wrapper,
+  .LanguageTools-header-row {
+    background: var(--grey-80) !important;
+  }
+
+  .LanguageTools-table-row:nth-child(2n) {
+    background: var(--grey-70) !important;
+  }
+
+  /* Background Colors */
+
+  .LandingPage,
+  .Home,
+  .App-content,
+  .Paginate-page-number {
+    background: var(--primary-dark-color) !important;
+  }
+
+  /* Search Box */
+
+  .SearchForm-icon-magnifying-glass {
+    filter: invert(65%) !important;
+  }
+
+  /* Cards */
+
+  .Hero .Card-contents,
+  .Home-SubjectShelf .Card-contents,
+  .Card-header,
+  .AddonsCard--horizontal .Card-contents,
+  .AddonsCard--horizontal ul.AddonsCard-list .SearchResult-link,
+  .SearchForm-query,
+  .LandingPage-header,
+  .Categories .Card-contents,
+  .SectionLinks-dropdown .DropdownMenu-items,
+  .Card-contents,
+  .Card--photon .Card-contents,
+  .Card-footer-link,
+  .MetadataCard,
+  .AddonDescription-more-addons:not(.AddonDescription-more-addons--theme) .Card-contents .AddonsCard-list,
+  .AddonDescription-more-addons--theme .Card-contents .AddonsCard-list,
+  .Search .SearchResults .SearchResult,
+  .SearchForm-suggestions-item.SearchForm-suggestions-item {
+    background: var(--grey-60) !important;
+  }
+
+  .Home-SubjectShelf-subheading,
+  .Home-SubjectShelf-link:link,
+  .Home-SubjectShelf-link:visited,
+  .Card-header,
+  .SearchResult-name,
+  .SearchForm-query,
+  .LandingPage-addonType-name,
+  .LandingPage-heading-content,
+  .Footer-links-header a:link,
+  .Footer a:active,
+  .Footer a:hover,
+  .DropdownMenuItem,
+  .DropdownMenuItem-section,
+  .DropdownMenuItem-link a,
+  .DropdownMenuItem-link a:link,
+  .Card-contents,
+  .Card--photon .Card-contents,
+  .AddonBadges .Badge,
+  .Addon-author,
+  .Addon-author a,
+  .Addon-author a:link
+	.Button--action,
+  .Button--action:link,
+  .Button--action.Button--small:link,
+  .Button--action,
+  .Addon-title,
+  .ReportAbuseButton-show-more,
+  .SearchResult-summary,
+  .SearchContextCard-header,
+  .Paginate-page-number,
+  .SearchSuggestion-name,
+  .ExpandableCard-ToggleLink:link,
+  .Paginate .Paginate-item {
+    color: var(--primary-light-color) !important;
+  }
+
+  .Paginate-previous::before,
+  .Paginate-next::after {
+    filter: invert(70%) !important;
+  }
+
+  .Home-SubjectShelf-link:active,
+  .Home-SubjectShelf-link:focus,
+  .Home-SubjectShelf-link:hover,
+  .SearchResult-link:focus .SearchResult-name,
+  .SearchResult-link:hover .SearchResult-name,
+  .Card-footer-link a,
+  .Card-footer-link a:hover,
+  .Card-footer-link a:link,
+  .DropdownMenuItem-link a:hover,
+  .AddonMoreInfo-contents a:link,
+  .LanguageTools-table a:link,
+  .Addon-details .AddonDescription-contents a:link,
+  .Card.ShowMoreCard.AddonDescription-version-notes a:link {
+    color: var(--primary-accent-color) !important;
+  }
+
+  .Button--action.Button--outline-only {
+    border-color: var(--primary-accent-color) !important;
+  }
+
+  .Button--action,
+  .Button--action.Button--small,
+  .Paginate .Paginate-item,
+  .SearchForm-suggestions-item.SearchForm-suggestions-item--highlighted,
+  .Addon .InstallButton-button {
+    background: var(--primary-accent-color) !important;
+  }
+
+  .Button--action.Button--outline-only:hover,
+  .SearchForm-query:hover,
+  .Button--action:hover {
+    border-color: var(--primary-accent-color-dark) !important;
+  }
+
+  .SearchForm-query:focus {
+    box-shadow: 0 0 5px 0 var(--primary-accent-color) !important;
+    border-color: var(--primary-accent-color-dark) !important;
+  }
+
+  .AddonsCard--horizontal ul.AddonsCard-list .SearchResult-link:hover {
+    background: var(--grey-70) !important;
+    border-radius: 0px !important;
+  }
+
+  .Button--report {
+    text-shadow: none !important;
+  }
+
+  .Icon-external {
+    filter: invert(20%) !important;
+  }
+
+  .Icon-featured {
+    filter: invert(85%) !important;
+  }
+}
+@-moz-document url-prefix(file:///)  {
+  :root {
+    background-color: var(--grey-60) !important;
+  }
+
+  body {
+    border: 1px solid var(--mid-way-color) !important;
+    background-color: var(--primary-dark-color) !important;
+    color: var(--primary-light-color) !important;
+  }
+
+  h1 {
+    border-bottom: 1px solid var(--light-accent-color) !important;
+  }
+
+  body > table > tbody > tr:hover {
+    outline: 1px solid var(--mid-way-color) !important;
+  }
+
+  .dir,
+  .symlink,
+  .file,
+  .up {
+    color: var(--primary-accent-color) !important;
+  }
+}
+@-moz-document regexp("^moz-extension://.*manifest.json$")  {
+  html {
+    background: var(--primary-dark-color) !important;
+    color: var(--primary-light-color) !important;
+  }
+}
+@-moz-document url-prefix(https://raw.githubusercontent.com)  {
+  html {
+    background: var(--primary-dark-color) !important;
+    color: var(--primary-light-color) !important;
+  }
+}
+@-moz-document url-prefix(view-source)  {
+  *|*:root {
+    background-color: var(--primary-dark-color) !important;
+    color: var(--primary-light-color) !important;
+  }
+
+  pre[id]:before,
+  span[id]:before {
+    color: var(--primary-light-color) !important;
+  }
+
+  .highlight .start-tag {
+    color: #b78cfd !important;
+  }
+
+  .highlight .end-tag {
+    color: #b78cfd !important;
+  }
+
+  .highlight .comment {
+    color: #86de74 !important;
+  }
+
+  .highlight .cdata {
+    color: #CC0066 !important;
+  }
+
+  .highlight .doctype {
+    color: steelblue !important;
+  }
+
+  .highlight .pi {
+    color: #ff7de9 !important;
+  }
+
+  .highlight .entity {
+    color: #dea174 !important;
+  }
+
+  .highlight .attribute-name {
+    color: #86de74 !important;
+  }
+
+  .highlight .attribute-value {
+    color: #75bfff !important;
+  }
+
+  .highlight .markupdeclaration {
+    color: steelblue !important;
+    font-style: italic;
+  }
+
+  .highlight .error,
+  .highlight .error > :-moz-any(.start-tag, .end-tag, .comment, .cdata, .doctype,
+	                              .pi, .entity, .attribute-name, .attribute-value) {
+    color: #de7474 !important;
   }
 }
