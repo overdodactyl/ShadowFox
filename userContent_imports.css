@@ -39,6 +39,7 @@
 @import "userContent-files/webextension-tweaks/decentraleyes.css";
 @import "userContent-files/webextension-tweaks/skipredirect.css";
 @import "userContent-files/webextension-tweaks/request_control.css";
+@import "userContent-files/webextension-tweaks/multi_account_containers.css";
 
 
 /* Import relevent website dark themes */
