@@ -20,7 +20,8 @@ html body div#container-panel.panel.container-panel,
     color: var(--primary-light-color) !important;
 }
 
-#container-panel #sort-containers-link:hover {
+#container-panel #sort-containers-link:hover,
+.clickable:hover {
     background: var(--grey-70) !important;
 }
 
