@@ -1,3 +1,6 @@
+/*! Alters the webextension Request Control
+  IMPORTANT: change the Internal UUID */
+
 @-moz-document url-prefix("moz-extension://ed3f80c9-0ccb-ca41-bd62-f71a9fb72d27/") {
 
   body {

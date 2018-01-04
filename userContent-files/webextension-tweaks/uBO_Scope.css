@@ -1,3 +1,6 @@
+/*! Alters the webextension uBO-Scope
+  IMPORTANT: change the Internal UUID */
+
 @-moz-document url-prefix("moz-extension://7ce809b7-4a3b-484c-89de-42aa4db7f5de/") {
   body {
     background: var(--grey-60) !important;
@@ -37,19 +40,19 @@
     background-color: var(--grey-80) !important;
     position: relative;
   }
-  
+
   #scores .scores .score.actual {
     color: white !important;;
   }
-  
+
   #scores .scores .score.theoretical {
     color: var(--grey-70) !important;;
   }
-  
+
   body.theoretical #scores .scores .score.actual {
     color: var(--grey-70) !important;;
   }
-  
+
   body.theoretical #scores .scores .score.theoretical {
     color: var(--primary-light-color) !important;;
   }

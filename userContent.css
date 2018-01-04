@@ -942,9 +942,8 @@
     color: var(--primary-accent-color) !important;
   }
 }
-/* Alters the preferences page for Dark Mode */
-
-/* IMPORTANT: change the Internal UUID */
+/*! Alters the webextension Dark Mode
+  IMPORTANT: change the Internal UUID */
 
 @-moz-document url-prefix("moz-extension://32b18bd1-4169-b649-b20a-ebafe1e7e549/")  {
   /* Headers */
@@ -957,6 +956,9 @@
     color: var(--primary-light-color) !important;
   }
 }
+/*! Alters the webextension Decentraleyes
+  IMPORTANT: change the Internal UUID */
+
 @-moz-document url-prefix("moz-extension://20cadb98-5f0e-d748-9a3b-a1eaf7c640f6/")  {
   body {
     background-color: var(--grey-60) !important;
@@ -973,6 +975,9 @@
     background-color: var(--grey-70) !important;
   }
 }
+/*! Alters the webextension HTTPS Everywhere
+  IMPORTANT: change the Internal UUID */
+
 @-moz-document url-prefix("moz-extension://897dfa7c-fa54-be49-996c-594df8db2260/")  {
   body {
     color: var(--primary-light-color) !important;
@@ -987,6 +992,9 @@
     color: var(--primary-light-color) !important;
   }
 }
+/*! Alters the webextension Multi-Account Containers
+  IMPORTANT: change the Internal UUID */
+
 html body div#container-panel.panel.container-panel,
 .column-panel-content {
   background: var(--grey-60) !important;
@@ -1092,7 +1100,8 @@ html body div#container-panel.panel.container-panel,
   background: var(--grey-70) !important;
   color: var(--primary-light-color) !important;
 }
-/* Alters the preferences page */
+/*! Alters the webextension Multiple Tab Handler
+  IMPORTANT: change the Internal UUID */
 
 @-moz-document url-prefix("moz-extension://cd5adf97-491d-f44b-9ea2-d2417d781589/")  {
   h1,
@@ -1102,6 +1111,9 @@ html body div#container-panel.panel.container-panel,
     color: var(--primary-light-color) !important;
   }
 }
+/*! Alters the webextension Request Control
+  IMPORTANT: change the Internal UUID */
+
 @-moz-document url-prefix("moz-extension://ed3f80c9-0ccb-ca41-bd62-f71a9fb72d27/")  {
   body {
     background-color: var(--primary-dark-color) !important;
@@ -1189,6 +1201,9 @@ html body div#container-panel.panel.container-panel,
     color: var(--primary-light-color) !important;
   }
 }
+/*! Alters the webextension Skip Redirect
+  IMPORTANT: change the Internal UUID */
+
 @-moz-document url-prefix("moz-extension://b4b0ef21-3b88-e547-841a-b671a44bdfa7/")  {
   body {
     background: var(--grey-60) !important;
@@ -1207,9 +1222,8 @@ html body div#container-panel.panel.container-panel,
     color: var(--primary-accent-color) !important;
   }
 }
-/* Alters the preferences page */
-
-/* IMPORTANT: change the Internal UUID */
+/*! Alters the webextension Stylus
+  IMPORTANT: change the Internal UUID */
 
 @-moz-document url-prefix("moz-extension://19684a2f-ee86-d644-961c-ab8b8ad10aca/")  {
   body {
@@ -1222,8 +1236,8 @@ html body div#container-panel.panel.container-panel,
     color: var(--primary-light-color) !important;
   }
 }
-/* Alters the preferences page 
- * and context menus */
+/*! Alters the webextension Tree Style Tab
+  IMPORTANT: change the Internal UUID */
 
 @-moz-document url-prefix("moz-extension://2a3d122c-dc21-7f4c-a805-82cbd472de98/")  {
   p,
@@ -1250,6 +1264,9 @@ html body div#container-panel.panel.container-panel,
     color: var(--primary-light-color) !important;
   }
 }
+/*! Alters the webextension uBO-Scope
+  IMPORTANT: change the Internal UUID */
+
 @-moz-document url-prefix("moz-extension://7ce809b7-4a3b-484c-89de-42aa4db7f5de/")  {
   body {
     background: var(--grey-60) !important;
@@ -1304,6 +1321,9 @@ html body div#container-panel.panel.container-panel,
     color: var(--primary-light-color) !important;
   }
 }
+/*! Alters the webextension uBlock Origin
+  IMPORTANT: change the Internal UUID */
+
 @-moz-document url-prefix("moz-extension://de835161-ee69-c14d-9940-203fbacf2276/")  {
   /* header */
 

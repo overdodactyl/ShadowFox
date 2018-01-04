@@ -1,3 +1,6 @@
+/*! Alters the webextension uBlock Origin
+  IMPORTANT: change the Internal UUID */
+
 @-moz-document url-prefix("moz-extension://de835161-ee69-c14d-9940-203fbacf2276/") {
 
   /* header */
@@ -141,7 +144,7 @@
   body.advancedUser #firewallContainer > div > span.noopRule {
     background-color: #65bdfb !important;
   }
-  
+
   /* Before Yellow */
   #firewallContainer > div.allowed.blocked > span:first-of-type::before, #firewallContainer.minimized > div.isDomain.totalAllowed.totalBlocked > span:first-of-type::before {
     background-color: #cdc16e !important;

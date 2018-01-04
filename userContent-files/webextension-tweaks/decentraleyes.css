@@ -1,3 +1,6 @@
+/*! Alters the webextension Decentraleyes
+  IMPORTANT: change the Internal UUID */
+
 @-moz-document url-prefix("moz-extension://20cadb98-5f0e-d748-9a3b-a1eaf7c640f6/") {
 
 
