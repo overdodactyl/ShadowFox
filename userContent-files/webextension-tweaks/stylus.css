@@ -13,4 +13,209 @@
 		color: var(--primary-light-color) !important;
   }
 
+  #header {
+    color: #C0C0C0 !important;
+    background: var(--grey-80) !important;
+    border-style: none !important;
+}
+
+#stylus-popup {
+    background: var(--grey-60) !important;
+    color:#C0C0C0 !important;
+}
+
+#sections,
+.newUI .target,
+#help-popup {
+    color: var(--primary-light-color) !important;
+}
+
+body,
+#message-box > div,
+#message-box-buttons,
+#message-box-title,
+#help-popup {
+    background: var(--grey-80) !important;
+
+}
+
+select,
+input:not([type]),
+button {
+    font-family: arial,sans-serif !important;
+}
+
+input[type="checkbox"]:not(.slider) {
+    background: var(--grey-70) !important;
+
+}
+
+input,
+.applies-to li,
+.firefox select,
+.filter-selection select {
+    background-color: var(--grey-70) !important;
+    color: #C0C0C0 !important;
+    border: 1px solid var(--grey-60) !important;
+}
+
+button {
+	background: var(--grey-80) !important;
+	border: 1px solid !important;
+    border-color: #484848 !important;
+    color: #C0C0C0 !important;
+    border-radius: 3px !important;
+}
+
+.svg-icon.checked {
+    fill: var(--primary-accent-color) !important;
+}
+button:hover {
+    color: var(--primary-accent-color) !important;
+}
+
+a,
+a:visited {
+    color: #e1e1e1 !important;
+}
+select {
+    width: 100px !important;
+}
+#save-button:after {
+    content: 'd' !important;
+}
+body.dirty #save-button:after {
+    content: '?' !important;
+}
+
+.svg-icon:hover,
+.newUI .entry:hover .svg-icon:hover {
+    fill: var(--primary-accent-color) !important;
+}
+
+#message-box.danger #message-box-title {
+    background-color: firebrick !important;
+}
+
+.newUI .no-update:not(.update-problem):not(.update-done) .up-to-date,
+.newUI .can-update .update {
+    color: black !important;
+}
+
+.svg-icon {
+    fill: var(--primary-light-color) !important;
+}
+
+
+
+.CodeMirror {
+    background: var(--primary-dark-color) !important;
+    color: var(--primary-light-color) !important;
+    line-height: 1.3em !important;
+    font-size: 13px !important;
+    height: 70% !important;
+    outline: transparent !important;
+    border: 1px solid #505050 !important;
+}
+
+#url {
+    filter: invert(65%) !important;
+}
+
+
+.CodeMirror-gutters {
+    background: var(--primary-dark-color) !important;
+    color: var(--primary-light-color) !important;
+    border-right: none !important;
+}
+.newUI .entry{
+    background: var(--primary-dark-color) !important;
+}
+
+.newUI .entry:hover {
+    background: var(--grey-80) !important;
+}
+
+.disabled h2::after {
+    border: 1px solid #444 !important;
+}
+
+.svg-icon.select-arrow {
+    fill: #C0C0C0 !important;
+}
+
+
+.newUI .entry .style-name:hover::before {
+    background: transparent !important;
+}
+
+body.all-styles-hidden-by-filters::before,
+body.all-styles-hidden-by-filters::after{
+    color: var(--primary-accent-color) !important;
+}
+
+
+.active #filters-stats {
+    background-color: var(--primary-accent-color) !important;
+	border-color: var(--primary-accent-color) !important;
+}
+
+#reset-filters {
+    fill: var(--primary-accent-color) !important;
+}
+
+.cm-s-base16-dark.CodeMirror {
+    color: #f97bec !important;
+}
+
+/* DEFAULT THEME */
+
+.cm-s-default .cm-header {color: blue !important;}
+.cm-s-default .cm-quote {color: #090 !important;}
+.cm-negative {color: #d44 !important;}
+.cm-positive {color: #292 !important;}
+.cm-header, .cm-strong {font-weight: bold !important;}
+.cm-em {font-style: italic !important;}
+.cm-link {text-decoration: underline !important;}
+.cm-strikethrough {text-decoration: line-through !important;}
+
+.cm-s-default .cm-keyword {color: #fb7bf1 !important;}
+.cm-s-default .cm-atom {color: #fb7bf1 !important;}
+.cm-s-default .cm-number {color: #738dff !important;}
+.cm-s-default .cm-def {color: #00f !important;}
+.cm-s-default .cm-variable,
+.cm-s-default .cm-punctuation,
+.cm-s-default .cm-property,
+.cm-s-default .cm-operator {color: #8cde62 !important;}
+.cm-s-default .cm-variable-2 {color: #7bc0ff !important;}
+.cm-s-default .cm-variable-3, .cm-s-default .cm-type {color: #d4dee9 !important;}
+.cm-s-default .cm-comment {color: #888888 !important;}
+.cm-s-default .cm-string {color: #738dff !important;}
+.cm-s-default .cm-string-2 {color: #738dff !important;}
+.cm-s-default .cm-meta {color: #949597 !important;}
+.cm-s-default .cm-qualifier {color: #7bc0ff !important;}
+.cm-s-default .cm-builtin {color: #fc7ff6 !important;}
+.cm-s-default .cm-bracket {color: #997 !important;}
+.cm-s-default .cm-tag {color: #7bc0ff  !important;}
+.cm-s-default .cm-attribute {color: #00c !important;}
+.cm-s-default .cm-hr {color: #999 !important;}
+.cm-s-default .cm-link {color: #00c !important;}
+
+.cm-s-default .cm-error {color: #de7474 !important;}
+.cm-invalidchar {color: #de7474 !important;}
+
+div.CodeMirror span.CodeMirror-matchingbracket {color: #0b0 !important;}
+div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #de7474 !important;}
+.CodeMirror-matchingtag { background: rgba(255, 150, 0, .3) !important; }
+.CodeMirror-activeline-background {background: #3f434e !important;}
+.CodeMirror-cursor { border-left: 1px solid #807d7c !important; }
+
+
+.CodeMirror-selected { background: var(--grey-50) !important; }
+.CodeMirror-focused .CodeMirror-selected { background: var(--grey-60) !important; }
+.CodeMirror-line::selection, .CodeMirror-line > span::selection, .CodeMirror-line > span > span::selection { background: var(--grey-60) !important; }
+.CodeMirror-line::-moz-selection, .CodeMirror-line > span::-moz-selection, .CodeMirror-line > span > span::-moz-selection { background: var(--grey-60) !important; }
+
+
+
 }
