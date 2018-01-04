@@ -1,3 +1,6 @@
+/*! Alters the webextension Multi-Account Containers
+  IMPORTANT: change the Internal UUID */
+
 html body div#container-panel.panel.container-panel,
 .column-panel-content {
     background: var(--grey-60) !important;

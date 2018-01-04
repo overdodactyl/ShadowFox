@@ -1,8 +1,8 @@
-/* Alters the preferences page */
+/*! Alters the webextension Multiple Tab Handler
+  IMPORTANT: change the Internal UUID */
 
 @-moz-document url-prefix("moz-extension://cd5adf97-491d-f44b-9ea2-d2417d781589/") {
   h1, p, ul, ul li {
     color: var(--primary-light-color) !important;
-  }        
+  }
 }
-
