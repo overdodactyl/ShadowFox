@@ -942,6 +942,68 @@
     color: var(--primary-accent-color) !important;
   }
 }
+/*! Alters the webextension Cookie AutoDelete 
+  IMPORTANT: change the Internal UUID */
+
+@-moz-document url-prefix("moz-extension://236ab159-8704-c84e-8412-e2b8f160bea3/")  {
+  a {
+    color: var(--primary-accent-color);
+  }
+
+  a:hover {
+    color: var(--primary-accent-color-dark);
+  }
+
+  #layout,
+  html {
+    background: var(--primary-dark-color) !important;
+    color: var(--primart-light-color) !important;
+  }
+
+  #menu {
+    background-color: var(--grey-80) !important;
+  }
+
+  .menu-link {
+    background: var(--grey-80) !important;
+  }
+
+  .pure-menu-selected,
+  .pure-menu-item:hover {
+    background-color: var(--grey-60) !important;
+  }
+
+  input[type="number"],
+  .form-control {
+    -moz-appearance: none !important;
+    background: var(--grey-60) !important;
+    color: var(--primary-light-color) !important;
+    border: 1px solid var(--grey-50) !important;
+  }
+
+  .nav-tabs .nav-link {
+    color: var(--primary-light-color) !important;
+  }
+
+  .nav-tabs .nav-link.active {
+    color: var(--primary-accent-color) !important;
+    background-color: var(--grey-60) !important;
+    border-color: #ddd #ddd #fff;
+  }
+
+  /* Popup Specific */
+
+  body {
+    color: var(--primary-light-color) !important;
+    background-color: var(--grey-60) !important;
+  }
+
+  .btn-light {
+    color: var(--primary-light-color) !important;
+    background-color: var(--grey-50) !important;
+    border-color: var(--grey-40) !important;
+  }
+}
 /*! Alters the webextension Dark Mode
   IMPORTANT: change the Internal UUID */
 
@@ -1635,6 +1697,127 @@ html body div#container-panel.panel.container-panel,
     -moz-appearance: none!important;
     background: var(--grey-60) !important;
     color: var(--primary-light-color) !important;
+  }
+}
+/*! Alters the webextension uMatrix
+  IMPORTANT: change the Internal UUID */
+
+@-moz-document url-prefix("moz-extension://9eba7fab-892c-7b42-a57e-b876d4196d70/")  {
+  body[dir="ltr"] {
+    background-color: var(--primary-dark-color) !important;
+    color: var(--primary-light-color) !important;
+  }
+
+  #dashboard-nav-widgets {
+    background-color: var(--grey-80) !important;
+    color: var(--primary-light-color) !important;
+    border-bottom: 1px solid var(--grey-50);
+  }
+
+  .tabButton {
+    background: var(--grey-60) !important;
+    background-color: ;
+    color: var(--primary-light-color) !important;
+    border-color: var(--grey-50) !important;
+    border-bottom: none !important;
+  }
+
+  .tabButton.selected {
+    border-bottom: none !important;
+    background-color: var(--grey-70) !important;
+    border-color: var(--grey-50 ) !important;
+    color: var(--primary-accent-color) !important;
+  }
+
+  #deleteUnusedSessionCookiesAfter,
+  #clearBrowserCacheAfter,
+  #popupScopeLevel,
+  #externalHostsFiles,
+  #backupUserDataButton,
+  #restoreUserDataButton,
+  #resetUserDataButton {
+    -moz-appearance: none !important;
+    background: var(--grey-60) !important;
+    color: var(--primary-light-color) !important;
+    border: 1px solid var(--grey-50) !important;
+  }
+
+  button.custom {
+    border-color: var(--grey-50) !important;
+    background-color: var(--grey-80) !important;
+    background-image: none !important;
+    color: white !important;
+  }
+
+  button.custom.disabled,
+  button.custom[disabled] {
+    border-color: var(--grey-40) !important;
+    background-color: var(--grey-50) !important;
+    background-image: none !important;
+    color: var(--primary-light-color) !important;
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  a {
+    color: var(--primary-accent-color) !important;
+  }
+
+  #diff li {
+    background-color: var(--grey-70) !important;
+  }
+
+  #diff li:nth-of-type(2n) {
+    background-color: var(--grey-80) !important;
+  }
+
+  #diff li:hover {
+    background-color: var(--primary-accent-color) !important;
+    color: white !important;
+  }
+
+  #diff ul {
+    border-top: 1px solid var(--grey-50) !important;
+  }
+
+  #diff textarea {
+    border-top: 1px solid var(--grey-50) !important;
+    background: var(--grey-60) !important;
+    color: var(--primary-light-color) !important;
+  }
+
+  /* Popup Specific */
+
+  .paneHead {
+    background-color: var(--primary-dark-color) !important;
+  }
+
+  .paneContent {
+    background: var(--grey-40) !important;
+  }
+
+  #gotoDashboard {
+    background-color: var(--grey-80) !important;
+    color: var(--primary-light-color) !important;
+  }
+
+  body[dir="ltr"] #gotoDashboard > span:last-of-type {
+    color: var(--primary-light-color) !important;
+  }
+
+  body .toolbar button {
+    background-color: var(--primary-dark-color) !important;
+    color: var(--primary-light-color) !important;
+  }
+
+  body .toolbar button.disabled {
+    color: #ccc;
+    color: var(--grey-60) !important;
+  }
+
+  body .toolbar .scope {
+    background-color: var(--grey-60) !important;
+    border: 1px solid var(--grey-50) !important;
   }
 }
 @-moz-document url-prefix("https://addons.mozilla.org")  {
