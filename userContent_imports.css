@@ -30,7 +30,6 @@
 /* Import Relevant webextension tweaks here
  * IMPORTANT: If used, change the Internal UUID in the corresponding css file */
 @import "userContent-files/webextension-tweaks/tree_style_tabs.css";
-@import "userContent-files/webextension-tweaks/stylus.css";
 @import "userContent-files/webextension-tweaks/multiple_tabs_handler.css";
 @import "userContent-files/webextension-tweaks/dark_mode.css";
 @import "userContent-files/webextension-tweaks/uBlockOrigin.css";
