@@ -1,0 +1,18 @@
+/*! Alters the webextension Smart HTTPS
+  IMPORTANT: change the Internal UUID */
+
+@-moz-document url-prefix("moz-extension://3f7c8927-a1d4-6349-ab7f-91a7f031a571/") {
+
+  .information input[type="number"],
+  input[type="text"] {
+      -moz-appearance: none !important;
+      background: var(--grey-60) !important;
+      color: var(--primary-light-color) !important;
+      border: 1px solid var(--grey-50) !important;
+  }
+
+  .information p {
+    color: var(--primary-light-color) !important;
+  }
+
+}
