@@ -42,23 +42,29 @@ The following webpages have been styled to match the dark theme:
 
 Tweaks for the following webextensions have been made:
 
+* Cookie AutoDelete
 * Dark Mode
 * Decentraleyes
 * HTTPSEverywhere
+* Multi-Account Containers
 * Multiple Tabs Handler
 * Request Control
 * Skip Redirect
-* Stylus
 * Tree Style Tabs
 * uBlockOrigin
 * uBO-Scope
+* uMatrix
 
 #### Webextension tweaks that go directly into the webextension settings page (custom css)
 
 These tweaks are found in the directory `./webextension`
 
-* Stylus
+* Tree Style Tab
 * Violentmonkey
+
+#### Webextension tweaks hosted on userstyles.uBlockOrigin
+
+* [Stylus](https://userstyles.org/styles/153739/stylus-dark-shadowfox)
 
 
 # What do the changes look like?
