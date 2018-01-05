@@ -39,6 +39,8 @@
 @import "userContent-files/webextension-tweaks/skipredirect.css";
 @import "userContent-files/webextension-tweaks/request_control.css";
 @import "userContent-files/webextension-tweaks/multi_account_containers.css";
+@import "userContent-files/webextension-tweaks/cookie_autodelete.css";
+@import "userContent-files/webextension-tweaks/uMatrix.css";
 
 
 /* Import relevent website dark themes */
