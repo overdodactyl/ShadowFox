@@ -1808,8 +1808,24 @@
   }
 
   body .toolbar button {
+    color: var(--primary--light-color) !important;
+  }
+
+  body .toolbar .scopeRel {
+    color: var(--blue-50) !important;
+  }
+
+  #mtxSwitch_matrix-off.switchTrue {
+    color: #a00 !important;
+  }
+
+  button > span.badge {
+    color: white !important;
+    background-color: var(--grey-50) !important;
+  }
+
+  body .toolbar button {
     background-color: var(--primary-dark-color) !important;
-    color: var(--primary-light-color) !important;
   }
 
   body .toolbar button.disabled {
