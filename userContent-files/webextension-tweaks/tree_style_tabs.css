@@ -1,5 +1,5 @@
 /*! Alters the webextension Tree Style Tab
-  IMPORTANT: change the Internal UUID */
+  IMPORTANT: change the Internal UUID in BOTH locations */
 
 @-moz-document url-prefix("moz-extension://2a3d122c-dc21-7f4c-a805-82cbd472de98/") {
   p, ul {
@@ -23,6 +23,20 @@
 
   #debug-configs {
     color: var(--primary-light-color) !important;
+  }
+
+}
+
+/*! Alters the webextension Tree Style Tab
+  IMPORTANT: change the Internal UUID in BOTH locations */
+@-moz-document url-prefix("moz-extension://2a3d122c-dc21-7f4c-a805-82cbd472de98/resources/group-tab.html") {
+  :root {
+      background: var(--primary-dark-color) !important;
+      color: ButtonText;
+    }
+
+  h1::before {
+    background: var(--primary-light-color) !important;
   }
 
 }
