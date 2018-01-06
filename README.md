@@ -50,7 +50,9 @@ Tweaks for the following webextensions have been made:
 * Multiple Tabs Handler
 * Request Control
 * Skip Redirect
-* Tree Style Tabs
+* Smart HTTPS
+* Tab Suspender (memory saver)
+* Tree Style Tab
 * uBlockOrigin
 * uBO-Scope
 * uMatrix
@@ -62,7 +64,7 @@ These tweaks are found in the directory `./webextension`
 * Tree Style Tab
 * Violentmonkey
 
-#### Webextension tweaks hosted on userstyles.uBlockOrigin
+#### Webextension tweaks hosted on userstyles.org
 
 * [Stylus](https://userstyles.org/styles/153739/stylus-dark-shadowfox)
 
