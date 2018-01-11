@@ -1,3 +1,8 @@
+/* Remove white flash on load */
+#sidebar, #sidebar-box {
+    background: var(--primary-dark-color) !important;
+}
+
 /* Sidebar */
 .sidebar-placesTree {
     -moz-appearance: none !important;
@@ -44,8 +49,8 @@
     filter: invert(65%);
 }
 
-/* Sidebar splitter 
- * Adjust width to personal preference - 
+/* Sidebar splitter
+ * Adjust width to personal preference -
  * I keep it at 4 for easy mobility and Tree Style Tabs
  * utilizes it for container indicators */
 #sidebar-splitter {
@@ -65,8 +70,8 @@
     filter: invert(87%);
 }
 
-/* Siderbar slider - thank you u/_Dimitri_ 
- *  Add this section if on Windows 
+/* Siderbar slider - thank you u/_Dimitri_
+ *  Add this section if on Windows
 scrollbar > slider {
   max-width: 4px !important;
 }
@@ -76,6 +81,3 @@ scrollbar > slider > thumb, scrollbar > scrollbarbutton {
   background-color: var(--grey-80) !important;;
 }
 */
-
-
-
