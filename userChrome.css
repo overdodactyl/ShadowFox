@@ -417,6 +417,13 @@ photonpanelmultiview panelview {
   background-color: var(--primary-accent-color) !important;
   border-radius: 50%;
 }
+/* Remove white flash on load */
+
+#sidebar,
+#sidebar-box {
+  background: var(--primary-dark-color) !important;
+}
+
 /* Sidebar */
 
 .sidebar-placesTree {
@@ -471,8 +478,8 @@ photonpanelmultiview panelview {
   filter: invert(65%);
 }
 
-/* Sidebar splitter 
- * Adjust width to personal preference - 
+/* Sidebar splitter
+ * Adjust width to personal preference -
  * I keep it at 4 for easy mobility and Tree Style Tabs
  * utilizes it for container indicators */
 
@@ -493,8 +500,8 @@ photonpanelmultiview panelview {
   filter: invert(87%);
 }
 
-/* Siderbar slider - thank you u/_Dimitri_ 
- *  Add this section if on Windows 
+/* Siderbar slider - thank you u/_Dimitri_
+ *  Add this section if on Windows
 scrollbar > slider {
   max-width: 4px !important;
 }
@@ -740,6 +747,12 @@ browser[type="content-primary"],
 #content,
 browser[type="content"] > html {
   background: var(--primary-dark-color) !important;
+}
+
+/* Remove white flash on tabs */
+
+.tabbrowser-tabbox {
+  background-color: var(--grey-90);
 }
 #identity-box.verifiedIdentity {
   --urlbar-separator-color: var(--grey-50) !important;

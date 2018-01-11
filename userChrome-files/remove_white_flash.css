@@ -2,3 +2,6 @@
 browser[type="content-primary"], #content, browser[type="content"] > html {
     background: var(--primary-dark-color) !important;
 }
+
+/* Remove white flash on tabs */
+.tabbrowser-tabbox { background-color: var(--grey-90); }
