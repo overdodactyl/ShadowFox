@@ -1,0 +1,82 @@
+/* Bookmarks Pop up */
+#editBMPanel_rows > row > textbox,
+#editBMPanel_rows > row > hbox > textbox,
+#editBMPanel_folderMenuList,
+#editBookmarkPanelRemoveButton,
+#editBookmarkPanelDoneButton,
+#editBMPanel_foldersExpander,
+#editBMPanel_tagsSelectorExpander {
+    background: var(--grey-70) !important;
+    color: var(--primary-light-color) !important;
+    border: 1px solid var(--grey-50) !important;
+    box-shadow: none !important;
+}
+
+.button-icon,
+#editBookmarkPanel .expander-down > .button-box > .button-icon {
+    filter: invert(65%) !important;
+}
+
+#editBMPanel_folderTree,
+#editBMPanel_tagsSelector {
+    -moz-appearance: none !important;
+    background: var(--grey-70) !important;
+    color: var(--primary-light-color) !important;
+    opacity: 1 !important;
+}
+
+
+
+
+#editBMPanel_folderTree treechildren:not(.autocomplete-treebody)::-moz-tree-row,
+#editBMPanel_tagsSelector treechildren:not(.autocomplete-treebody)::-moz-tree-row {
+    background: var(--grey-60) !important;
+    color: var(--primary-light-color) !important;
+}
+
+
+#editBMPanel_folderTree treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover),
+#editBMPanel_tagsSelector treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
+    background: var(--dark-accent) !important;
+    color: var(--primary-accent-color) !important;
+    -moz-border-top-colors: var(--dark-accent) !important;
+    -moz-border-right-colors: var(--dark-accent) !important;
+    -moz-border-left-colors: var(--dark-accent) !important;
+    -moz-border-bottom-colors: var(--dark-accent) !important;
+}
+
+/* Change the outline of icons to light instead of dark */
+#editBMPanel_folderTree treechildren::-moz-tree-image{
+  fill: var(--primary-light-color) !important;
+}
+#editBMPanel_folderTree treechildren::-moz-tree-image(selected) {
+  fill: white !important;
+}
+
+
+/* Selected, in focus */
+#editBMPanel_folderTree treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, current, focus){
+  background: var(--primary-accent-color) !important;
+}
+
+listitem[selected="true"] {
+    background-color: var(--primary-accent-color) !important;
+    color: white !important;
+}
+
+#editBMPanel_folderTree treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, current) {
+  background: var(--blue-40) !important;
+}
+
+#editBMPanel_folderTree {
+    border: 1px solid var(--grey-50) !important;
+    border-bottom: none !important;
+}
+
+
+
+#editBMPanel_newFolderBox {
+    background: var(--grey-70) !important;
+    border: 1px solid var(--grey-50) !important;
+    box-shadow: none !important;
+}
