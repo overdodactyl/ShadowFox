@@ -1,5 +1,5 @@
 /* Remove white flash on load */
-#sidebar, #sidebar-box {
+#sidebar, #sidebar-box, #webextpanels-window, #webext-panels-browser {
     background: var(--primary-dark-color) !important;
 }
 
