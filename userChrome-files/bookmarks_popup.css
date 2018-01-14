@@ -12,7 +12,6 @@
     box-shadow: none !important;
 }
 
-.button-icon,
 #editBookmarkPanel .expander-down > .button-box > .button-icon {
     filter: invert(65%) !important;
 }
