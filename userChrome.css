@@ -96,7 +96,6 @@
   box-shadow: none !important;
 }
 
-.button-icon,
 #editBookmarkPanel .expander-down > .button-box > .button-icon {
   filter: invert(65%) !important;
 }
@@ -496,10 +495,33 @@ photonpanelmultiview panelview {
   background-color: var(--primary-accent-color) !important;
   border-radius: 50%;
 }
+
+toolbarbutton {
+  text-shadow: none !important;
+}
+
+.panel-banner-item > .toolbarbutton-multiline-text {
+  color: var(--primary-light-color) !important;
+}
+
+.panel-banner-item {
+  background-color: hsla(96,65%,37%,.9) !important;
+}
+
+#update-manual-whats-new {
+  color: var(--primary-accent-color) !important;
+}
+
+::-moz-selection {
+  background: var(--blue-40);
+  color: white !important;
+}
 /* Remove white flash on load */
 
 #sidebar,
-#sidebar-box {
+#sidebar-box,
+#webextpanels-window,
+#webext-panels-browser {
   background: var(--primary-dark-color) !important;
 }
 

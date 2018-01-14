@@ -115,3 +115,21 @@ photonpanelmultiview panelview {
     background-color: var(--primary-accent-color) !important;
     border-radius: 50%;
 }
+
+toolbarbutton {
+    text-shadow: none !important;
+}
+.panel-banner-item > .toolbarbutton-multiline-text {
+    color: var(--primary-light-color) !important;
+}
+.panel-banner-item {
+    background-color: hsla(96,65%,37%,.9) !important;
+}
+#update-manual-whats-new {
+color: var(--primary-accent-color) !important;}
+
+::-moz-selection {
+  background: var(--blue-40);
+  color: white !important;
+}
+
