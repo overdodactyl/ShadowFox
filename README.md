@@ -48,6 +48,7 @@ Tweaks for the following webextensions have been made:
 * HTTPSEverywhere
 * Multi-Account Containers
 * Multiple Tabs Handler
+* NoScript
 * Request Control
 * Skip Redirect
 * Smart HTTPS
