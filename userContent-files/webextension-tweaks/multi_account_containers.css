@@ -1,5 +1,5 @@
 /*! Alters the webextension Multi-Account Containers
-  IMPORTANT: change the Internal UUID */
+  IMPORTANT: change the Internal UUID in BOTH locations */
 
 @-moz-document url-prefix("moz-extension://6b51b3b1-d8eb-694b-97b5-4e7163a2284d/") {
   html body div#container-panel.panel.container-panel,
@@ -104,6 +104,41 @@
   .container-notification {
     background: var(--grey-70) !important;
     color: var(--primary-light-color) !important;
+  }
+
+}
+
+/*! Alters the webextension Multi-Account Containers
+  IMPORTANT: change the Internal UUID in BOTH locations */
+@-moz-document url-prefix("moz-extension://6b51b3b1-d8eb-694b-97b5-4e7163a2284d/confirm-page") {
+  body {
+    background-color: var(--primary-dark-color) !important;
+  }
+
+  body,
+  .title-text {
+    color: var(--primary-light-color) !important;
+  }
+  #redirect-url {
+    background: var(--grey-80) !important;
+  }
+  .button-container > button:first-child {
+    background: var(--grey-60) !important;
+    border-color: var(--grey-50) !important;
+  }
+  .button-container > button:first-child:hover {
+    background: var(--grey-80) !important;
+  }
+  #never-ask {
+    -moz-appearance: none !important;
+    background-color: var(--grey-60) !important;
+    border-color: var(--grey-50) !important;
+    background-image: none !important;
+    box-shadow: none !important;
+  }
+  #never-ask:checked {
+    background-image: url("chrome://global/skin/in-content/check.svg") !important;
+    background-color: var(--grey-60) !important;
   }
 
 }
