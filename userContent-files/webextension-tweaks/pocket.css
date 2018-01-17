@@ -1,0 +1,40 @@
+.pkt_ext_containersaved h2 {
+  color: var(--primary-light-color) !important;
+}
+.pkt_ext_containersaved .pkt_ext_tag_detail {
+  border: 1px solid var(--grey-50) !important;
+  background: var(--grey-60) !important;
+}
+
+.pkt_ext_containersaved .pkt_ext_tag_input_wrapper {
+  background-color: var(--grey-60) !important;
+  border-right: 1px solid var(--grey-50) !important;
+}
+
+.pkt_ext_containersaved .pkt_ext_tag_input_wrapper input::placeholder {
+    color: var(--primary-light-color) !important;
+}
+
+.pkt_ext_containersaved .pkt_ext_tag_input_wrapper input {
+    background-color: var(--grey-60) !important;
+    color: var(--primary-light-color) !important;
+}
+
+.pkt_ext_containersaved .pkt_ext_btn {
+  background: var(--grey-80) !important;
+}
+
+.pkt_ext_containersaved .token-input-token {
+    border: 1px solid var(--grey-50) !important;
+    background-color: var(--grey-70) !important;
+    color: var(--primary-light-color) !important;
+}
+
+.token-input-dropdown-tag {
+    background: var(--grey-60) !important;
+    border: 1px solid var(--grey-50) !important;
+}
+
+.token-input-dropdown-tag ul li {
+    color: var(--primary-light-color) !important;
+}
