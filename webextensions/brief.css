@@ -1,3 +1,10 @@
+/* Copyright (c) 2017 overdodactyl
+   Available for use under the MIT License:
+   https://opensource.org/licenses/MIT
+   https://github.com/overdodactyl/ShadowFox  */
+
+ /* Place the contents of this file in the custom rules section  */
+
 #sidebar {
     background-color: var(--grey-60) !important;
 }
@@ -57,4 +64,4 @@ tree-folder:not(.selected) > tree-folder-header:hover {
 tree-item.selected > .title,
 #view-list > tree-item.selected > .title {
   color: white !important;
-} 
+}
