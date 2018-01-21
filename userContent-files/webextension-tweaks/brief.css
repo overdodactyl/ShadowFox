@@ -1,0 +1,31 @@
+/*! Alters the webextension Brief
+  IMPORTANT: change the Internal UUID */
+
+@-moz-document url-prefix("moz-extension://e0561760-8efe-b747-9e3b-ffcd6a3f29bc/") {
+  h2 {
+    color: var(--primary-accent-color) !important;
+  }
+  label {
+    color: var(--primary-light-color) !important;
+  }
+
+  #custom-style-textbox,
+  input[type="number"],
+  #clear-all-entries {
+    -moz-appearance: none !important;
+    background: var(--grey-60) !important;
+    color:  var(--primary-light-color) !important;
+    border: 1px solid var(--grey-50) !important;
+  }
+
+  #clear-all-entries {
+    border-radius: 3px !important;
+    -moz-appearance: none !important;
+    background: var(--grey-80) !important;
+    color:  var(--primary-light-color) !important;
+    border: 1px solid var(--grey-60) !important;
+  }
+
+
+
+}
