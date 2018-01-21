@@ -44,6 +44,7 @@
 @import "userContent-files/webextension-tweaks/tab_suspender.css";
 @import "userContent-files/webextension-tweaks/cookie_autodelete.css";
 @import "userContent-files/webextension-tweaks/uMatrix.css";
+@import "userContent-files/webextension-tweaks/brief.css";
 
 
 /* Import relevent website dark themes */
