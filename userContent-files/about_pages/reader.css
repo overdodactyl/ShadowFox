@@ -2,4 +2,56 @@
   body.dark a:link {
 	  color: var(--primary-accent-color) !important;
   }
+
+  .toolbar {
+    background-color: var(--grey-80) !important;
+    border-right: 1px solid var(--grey-60) !important;
+  }
+
+  .toolbar .button {
+    border-right: 1px solid var(--grey-60) !important;
+    border-bottom: 1px solid var(--grey-60) !important;
+    background-color: var(--grey-80) !important;
+  }
+
+  .button:hover,
+  .font-size-buttons > button:hover,
+  .font-type-buttons > button:hover,
+  .content-width-buttons > button:hover,
+  .line-height-buttons > button:hover {
+    background-color: var(--grey-70) !important;
+  }
+
+  .close-button:hover {
+    fill: #fff;
+    background-color: #d94141 !important;
+  }
+
+  .dropdown-popup {
+    background-color: var(--grey-80) !important;
+    border: 1px solid var(--grey-60) !important;
+    box-shadow: 0 1px 3px var(--grey-60) !important;
+  }
+
+  .font-type-buttons > button:active:hover,
+  .font-type-buttons > button.selected {
+    border-bottom: 1px solid var(--primary-accent-color) !important;
+  }
+
+  .font-type-buttons > .sans-serif-button > .name,
+  .font-type-buttons > .serif-button > .name {
+    color: var(--primary-light-color) !important;
+  }
+
+  .font-type-buttons > button, .font-size-buttons > button, .content-width-buttons > button, .line-height-buttons > button {
+    border-left: 1px solid var(--grey-60) !important;
+    border-bottom: 1px solid var(--grey-60) !important;
+  }
+
+  .font-type-buttons > button:active:hover,
+  .font-type-buttons > button.selected,
+  .color-scheme-buttons > button:active:hover,
+  .color-scheme-buttons > button.selected {
+    box-shadow: inset 0 -3px 0 0 var(--primary-accent-color) !important;
+  }
 }
