@@ -3,6 +3,10 @@
 	  color: var(--primary-accent-color) !important;
   }
 
+  body.dark {
+    color: var(--primary-light-color) !important;
+  }
+
   .toolbar {
     background-color: var(--grey-80) !important;
     border-right: 1px solid var(--grey-60) !important;
