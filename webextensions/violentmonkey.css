@@ -78,6 +78,24 @@ button {
     color: var(--primary-light-color) !important;
 }
 
+.flex.edit-header > .buttons > button:nth-child(2):not([disabled="disabled"]):after {
+      content: '?' !important;
+ }
+
+.flex.edit-header > .buttons > button:nth-child(2)[disabled="disabled"]:after {
+      content: 'd' !important;
+ }
+
+.menu-item:hover {
+ background: var(--primary-accent-color) !important;
+ color: white  !important;
+}
+
+.submenu-button {
+ background: var(--primary-accent-color) !important;
+ color: white  !important;
+}
+
 .flex.edit-header {
     background: var(--dark-accent) !important;
 }
