@@ -8,6 +8,11 @@
     background: var(--grey-60) !important;
   }
 
+  html {
+    background-color: var(--grey-60) !important;
+  }
+
+
   a {
     color: var(--primary-accent-color) !important;
   }
