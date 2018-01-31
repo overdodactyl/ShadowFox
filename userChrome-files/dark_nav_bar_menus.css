@@ -1,6 +1,6 @@
 /*Pop Down Arrow */
-.panel-arrow { 
-  filter: invert(70%) !important; 
+.panel-arrow {
+  filter: invert(70%) !important;
 }
 
 /* main menu */
@@ -34,6 +34,10 @@ photonpanelmultiview panelview {
 #downloadsFooterButtons {
     background: var(--grey-70) !important;
     color: var(--primary-light-color) !important;
+}
+
+#downloadsFooter[showingsummary] > stack:not(:hover) {
+  background-color: var(--grey-80) !important;
 }
 
 /* Fix downloads list - only appears to be necessary in Nightly */
@@ -82,13 +86,13 @@ photonpanelmultiview panelview {
     fill: var(--primary-accent-color) !important;
 }
 
-/* Permissions logo - white (can't change background image only) 
+/* Permissions logo - white (can't change background image only)
  * Temporary hack until I fish out the icon and invert that */
 #identity-popup-permissions-content {
     filter: invert(90%) !important;
 }
 
-/* Change color of text to account for ^^ */ 
+/* Change color of text to account for ^^ */
 #identity-popup-permissions-content {
     color: var(--grey-70) !important;
 }
@@ -132,4 +136,3 @@ color: var(--primary-accent-color) !important;}
   background: var(--blue-40);
   color: white !important;
 }
-

@@ -19,7 +19,7 @@
 	
 	/* Selected Color */
 	#configTreeBody::-moz-tree-row(selected) {
-		background: var(--primary-accent-color) !important;
+		background: var(--blue-60) !important;
 	}
 	
 	/* Hover Color */
