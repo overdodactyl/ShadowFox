@@ -86,6 +86,7 @@ treechildren.searchbar-treebody::-moz-tree-row(hover) {
 	border-top: none !important;
 }
 
+
 /* Searchbar */
 
 
@@ -111,4 +112,6 @@ panel[type="autocomplete"], panel[type="autocomplete-richlistbox"], .autocomplet
 .searchbar-treebody::-moz-tree-row(selected) {
     background-color: var(--primary-accent-color) !important;
 }
+
+
 

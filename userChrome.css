@@ -90,6 +90,7 @@
 #editBookmarkPanelDoneButton,
 #editBMPanel_foldersExpander,
 #editBMPanel_tagsSelectorExpander {
+  -moz-appearance: none !important;
   background: var(--grey-70) !important;
   color: var(--primary-light-color) !important;
   border: 1px solid var(--grey-50) !important;
@@ -306,6 +307,24 @@ menuitem {
   color: var(--grey-10) !important;
 }
 
+/* Context menu, display disabled items in a different colour */
+
+menuitem[disabled="true"] {
+  color: var(--grey-50) !important;
+}
+
+menuitem:hover[disabled="true"] {
+  background-color: var(--grey-70) !important;
+}
+
+#context-navigation menuitem[disabled="true"] {
+  color: var(--grey-50) !important;
+}
+
+#context-navigation menuitem:hover[disabled="true"] {
+  background-color: var(--grey-80) !important;
+}
+
 /* Menu Separators - removed */
 
 menupopup menuseparator {
@@ -327,30 +346,114 @@ menuitem:hover {
   background: var(--grey-60) !important;
 }
 
-/* The following snippets are designed to fix promblems 
- * only noticed on Windows computers. Thank you to u/markdarkness!
- * for helping me with these issues. */
+/* The following snippets are designed to fix promblems
+ * only noticed on Windows computers */
 
-/* Remove white separators between menu items */
+/* [WINDOWS ONLY] Remove white separators between menu items */
 
-menupopup menuseparator {
-  -moz-appearance: none !important;
-  background: rgba(0, 0, 0, 0) !important;
-  border: 0px !important;
+@media screen and (-moz-windows-theme) {
+  menupopup menuseparator {
+    -moz-appearance: none !important;
+    background: rgba(0, 0, 0, 0) !important;
+    border: 0px !important;
+  }
 }
 
-/* Increase height between menu items */
+/* [WINDOWS ONLY] Removes white bar between icons and menu items */
 
-menupopup menu,
-menuitem {
-  padding-top: .5px !important;
+@media screen and (-moz-windows-theme) {
+  #context-navigation,
+  #context-sep-navigation {
+    padding: 0px !important;
+  }
 }
 
-/* Removes white bar between icons and menu items */
+/* [WINDOWS ONLY] Bookmarks Toolbar, Toolbar Context menu, spacing tweaks */
 
-#context-navigation,
-#context-sep-navigation {
-  padding: 0px !important;
+@media screen and (-moz-windows-theme) {
+  #personal-bookmarks menupopup .bookmark-item,
+  #bookmarksMenuPopup,
+  menupopup#toolbar-context-menu,
+  menupopup#menu_ToolsPopup,
+  menupopup#goPopup
+  menupopup#tabContextMenu {
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+  }
+}
+
+/* [WINDOWS ONLY] Bookmarks Toolbar, top menu padding to match bottom */
+
+@media screen and (-moz-windows-theme) {
+  menupopup#BMB_bookmarksPopup menupopup[placespopup="true"],
+  menupopup#BMB_bookmarksPopup > menu > menupopup {
+    padding-top: 4px !important;
+  }
+
+  menupopup#bookmarksMenuPopup .openintabs-menuitem {
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+  }
+}
+
+/* [WINDOWS ONLY] Context menu, spacing and font size similar to macOS */
+
+@media screen and (-moz-windows-theme) {
+  menupopup#contentAreaContextMenu menuitem,
+  menupopup#contentAreaContextMenu menu {
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+    font-size: 1.08em !important;
+  }
+}
+
+/* [WINDOWS ONLY] Menus, slightly increase menu items spacing */
+
+@media screen and (-moz-windows-theme) {
+  menupopup menu,
+  menuitem {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+  }
+}
+
+/* [WINDOWS ONLY] Menus, top and bottom padding to match macOS */
+
+@media screen and (-moz-windows-theme) {
+  menupopup {
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+  }
+}
+
+/* [WINDOWS ONLY] Menus, slightly increase separator margin */
+
+@media screen and (-moz-windows-theme) {
+  menupopup menuseparator {
+    margin: 2px !important;
+  }
+}
+
+/* [WINDOWS ONLY] Context menus, border added because Windows has a different drop shadow effect than macOS */
+
+@media screen and (-moz-windows-theme) {
+  #personal-bookmarks menupopup,
+  .panel-arrowcontent,
+  .box-inherit scrollbox-innerbox,
+  #BMB_bookmarksPopup menupopup[placespopup="true"] > hbox,
+  #bookmarksMenuPopup menupopup[placespopup="true"] > hbox,
+  menupopup#BMB_bookmarksPopup > menu > menupopup > hbox,
+  menupopup#bookmarksMenuPopup > menu > menupopup > hbox,
+  menupopup#contentAreaContextMenu,
+  menupopup#placesContext,
+  menupopup#bookmarksMenuPopup,
+  menupopup#PlacesChevronPopup,
+  menupopup#toolbar-context-menu,
+  menupopup#downloadsContextMenu {
+    border-color: var(--grey-70) !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+  }
 }
 #customization-done-button {
   color: var(--primary-light-color);
@@ -405,6 +508,10 @@ photonpanelmultiview panelview {
 #downloadsFooterButtons {
   background: var(--grey-70) !important;
   color: var(--primary-light-color) !important;
+}
+
+#downloadsFooter[showingsummary] > stack:not(:hover) {
+  background-color: var(--grey-80) !important;
 }
 
 /* Fix downloads list - only appears to be necessary in Nightly */
@@ -744,12 +851,6 @@ url(chrome://browser/content/places/bookmarkProperties.xul)  {
     fill: var(--primary-light-color) !important;
   }
 
-  /* Selected, in focus */
-
-  #places treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, current, focus) {
-    background: var(--primary-accent-color) !important;
-  }
-
   /* Selected, not in focus */
 
   #places treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, current) {
@@ -765,6 +866,12 @@ url(chrome://browser/content/places/bookmarkProperties.xul)  {
 
   #placeContent treechildren:not(.autocomplete-treebody)::-moz-tree-row(odd) {
     background: rgba(12, 12, 13, .1) !important;
+  }
+
+  /* Selected, in focus */
+
+  #places treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, current, focus) {
+    background: var(--primary-accent-color) !important;
   }
 
   #places treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
@@ -816,7 +923,7 @@ url(chrome://browser/content/places/bookmarkProperties.xul)  {
     border-bottom: 1px solid !important;
     border-right: 1px solid rgb(0,0,0) !important;
     -moz-border-bottom-colors: rgb(0,0,0) !important;
-    background: linear-gradient(to bottom, 
+    background: linear-gradient(to bottom,
 			           rgba(56,70,82,1) 0%,
 			           rgba(35,39,48,1) 100%) !important;
     color: white !important;
@@ -840,6 +947,43 @@ url(chrome://browser/content/places/bookmarkProperties.xul)  {
   #permList {
     border: 2px solid var(--grey-70) !important;
   }
+
+  /* [WINDOWS ONLY] fixes */
+
+@media screen and (-moz-windows-theme) {
+    #topBar {
+      -moz-appearance: none !important;
+      background-color: var(--grey-80) !important;
+      border: none !important;
+      padding-top: 5px !important;
+      padding-bottom: 5px !important;
+      color: var(--grey-20) !important;
+    }
+}
+
+@media screen and (-moz-windows-theme) {
+    #metaTagsCaption,
+    #security-identity,
+    #security-privacy,
+    #security-technical,
+    #security-identity-groupbox,
+    #security-privacy-groupbox,
+    #security-technical-groupbox {
+      -moz-appearance: none !important;
+      background-color: var(--grey-70) !important;
+      border: none !important;
+      color: var(--grey-10) !important;
+    }
+}
+
+@media screen and (-moz-windows-theme) {
+    #security-identity-groupbox,
+    #security-privacy-groupbox,
+    #security-technical-groupbox {
+      -moz-appearance: none !important;
+      background-color: var(--grey-80) !important;
+    }
+}
 }
 /* Remove 1px border underneath bookmarks bar */
 

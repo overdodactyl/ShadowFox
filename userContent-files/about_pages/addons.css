@@ -1,19 +1,19 @@
 @-moz-document url(about:addons), url-prefix(about:debugging) {
-	
+
 	.detail-view-container {
     	color: var(--primary-light-color) !important;
   	}
-	
+
 	.detail-row, .detail-row-complex, setting {
     	line-height: 20px;
     	text-shadow: none !important;;
-  	} 
-	
+  	}
+
 	.detail-view-container {
     	font-size: 1.25rem;
     	color: #ccc !important;
   	}
-	
+
 	page#addons-page, page.greasemonkey #greasemonkey-sort-bar, #list-view[type="userstyle"] #addon-list-empty[hidden] ~ #userstyle-sorting, #addons-page .global-info-container, .alert, #nav-header, #categories, #header-utils-btn {
 		background: var(--primary-dark-color) !important;
 		color: #ccc important;
@@ -32,14 +32,14 @@
 		background: #565656 !important;
 		-moz-border-start: 4px solid var(--primary-accent-color) !important;
 	}
-	
+
 	.category {
 		background: var(--primary-dark-color) !important;
 		border: none !important;
 
 	}
-	
-	
+
+
 
 	#header-utils-btn:hover {
 		color: white !important;
@@ -49,7 +49,7 @@
 	.addon {
 		color: gray !important;
 	}
-	
+
 	.addon[active="false"] {
 		opacity: 0.4 !important;
 	}
@@ -72,26 +72,26 @@
 	.icon, #view-port-container #detail-view image, #view-port-container #list-view image, deck.view-pane, #detail-contributions {
 		background-color: transparent !important;
 	}
-	
+
 	/* Remove dotted border around addons section when selected */
 	.list > scrollbox > .scrollbox-innerbox {
     	border: 1px dotted transparent !important;
   	}
-	
+
 	/* Cog wheel */
 	#header-utils-btn {
     	fill: var(--primary-light-color) !important;;
   	}
-	
+
 	#header-utils-btn:hover {
-		background: var(--dark-accent) !important;	
+		background: var(--dark-accent) !important;
 	}
-	
+
 	description {
    		margin-bottom: 4px;
     	color: var(--primary-light-color) !important;
   	}
-	
+
 	*|button, menulist {
 		-moz-appearance: none !important;
 		background: linear-gradient(var(--dark-accent), var(--dark-accent)) !important;
@@ -109,88 +109,56 @@
 	#category-discover {
 		display: none !important;
 	}
-	
+
 	.addon-view[notification="warning"] {
 		--view-highlight-color: transparent !important;
 	}
-	
-	
+
+
 	.text-link {
     	color: var(--primary-accent-color) !important;
   	}
-	
+
 	textbox[type="search"] {
     	color: var(--primary-light-color) !important;
 		  background: var(--grey-60) !important;
 		  border: 1px solid var(--grey-50) !important;
   	}
-	
+
 	textbox[focused] {
     	border-color: var(--primary-accent-color) !important;
   	}
-	
-	/*Dark context menu*/
-  menupopup, popup, popup > menu > menupopup, menupopup > menu > menupopup {
-    	-moz-appearance: none !important;
-    	background: var(--grey-70) !important;
-		  border: none !important;
-    	
-	}
-    /* Remove separator */
-  	menupopup menuseparator {
-    	padding: 0 !important;
-	}
- 
-  	menupopup menu, menuitem {
-    	-moz-appearance: none !important;
-    	color: var(--grey-10) !important;   
-  	}
- 
-  	menupopup menu:hover, menuitem:hover {
-    	color: var(--primary-light-color) !important;
-    	background-color: var(--grey-80) !important;
-	 }
-	
-	/* Menu Separators - removed */
-    menupopup menuseparator {
-      padding: 0 !important;
-      border-top: none !important;
-      margin: 2px 6px 2px 6px !important; 
-			-moz-appearance:none !important;
-      background: rgba(0, 0, 0, 0) !important;
-      border: 0px !important;
-    }
-	
+
 	 /* about:debugging#addons */
 	 .addon-target-container {
       background: var(--grey-80) !important;;
   }
-	
+
 	/* icon */
 	.addon-target-container .target-icon[src="chrome://mozapps/skin/extensions/extensionGeneric.svg"] {
 		filter: invert(65%) !important;
 	}
-	
+
 	.addon-target-name {
 		color: var(--primary-light-color) !important;
 	}
-	
+
 	.addon-target-actions {
     border-top: 1px solid var(--primary-light-color) !important;
   }
-	
+
 	input[type="checkbox"] {
 		background: var(--grey-50) !important;
 		border: none !important;
 		box-shadow: none !important;
 	}
-	
+
 	.service-worker-multi-process {
     background-color: var(--grey-60) !important;
 }
-	
-	
-	
-	
-	
+
+
+
+
+
 }

@@ -1,19 +1,23 @@
 @-moz-document url-prefix(about:preferences) {
-	
+
+	:root {
+    --primary-accent-color-dark: var(--blue-40);
+  }
+
 	::-moz-selection {
     background: var(--primary-accent-color) !important;
   }
-	
+
 	.checkbox-check,
 	.radio-check {
 		box-shadow: none !important;
-		background: var(--grey-50) !important;
+		background: var(--grey-60) !important;
 	}
-	
+
 	menulist:not([editable="true"]) > *.menulist-dropmarker {
     filter: invert(65%) !important;
 }
-	
+
 	*.checkbox-check[checked],
 	*.radio-check[selected] {
 		border: none !important;
@@ -26,38 +30,36 @@
 	.search-container {
 		background: var(--primary-dark-color) !important;
 	}
-	
+
 	.category[selected], .category.selected {
 		-moz-border-start: 4px solid var(--primary-accent-color) !important;
 	}
-	
+
 	#searchInput {
     background: var(--grey-60) !important;
 		border: 1px solid var(--primary-light-color) !important;
 		border-radius: 4px !important;
   }
-	
-	
 
 	#handlersView {
     background: var(--grey-60) !important;
   }
-	
+
 	listheader {
 		background: var(--grey-80) !important;
 	}
-	
+
 	#handlersView richlistitem[selected="true"] {
     background: var(--primary-accent-color) !important;
 		color: var(--primary-light-color) !important;;
   }
-	
+
 	#handlersView richlistitem:hover {
     background: var(--grey-70) !important;
 		color: var(--primary-light-color) !important;;
   }
-	
-	
+
+
 	.dialogBox {
 		filter: invert(80%) !important;
 	}
@@ -65,42 +67,9 @@
 	#engineChildren::-moz-tree-row() {
 		background: var(--grey-60) !important;
 	}
-	
+
 	.navigation {
     background: var(--primary-dark-color) !important;
   }
-	
-	/*Dark context menu*/
-  menupopup, popup, popup > menu > menupopup, menupopup > menu > menupopup {
-    	-moz-appearance: none !important;
-    	background: var(--grey-70) !important;
-		  border: none !important;
-    	
-	}
-    /* Remove separator */
-  	menupopup menuseparator {
-    	padding: 0 !important;
-	}
- 
-  	menupopup menu, menuitem {
-    	-moz-appearance: none !important;
-    	color: var(--grey-10) !important;   
-  	}
- 
-  	menupopup menu:hover, menuitem:hover {
-    	color: var(--primary-light-color) !important;
-    	background-color: var(--grey-80) !important;
-	 }
-	
-	/* Menu Separators - removed */
-    menupopup menuseparator {
-      padding: 0 !important;
-      border-top: none !important;
-      margin: 2px 6px 2px 6px !important; 
-			-moz-appearance:none !important;
-      background: rgba(0, 0, 0, 0) !important;
-      border: 0px !important;
-    }
-	
-	
+
 }
