@@ -9,16 +9,17 @@ var concatCss = require('gulp-concat-css');
 *								  *
 **********************************/
 
-/* Add everything to userContent */
-gulp.task('userContent_all', function() {
-  return gulp.src(['color_variables.css', 'userContent-files/all_about_pages.css', 'userContent-files/*/*.css'])
-    .pipe(concatCss('userContent.css'))
-    .pipe(gulp.dest('.'));
+/* userContent file with no addons */
+gulp.task('userContent_no_addons', function() {
+  return gulp.src(['color_variables.css', 'userContent-files/all_about_pages.css', 'userContent-files/webpages/*.css', 'userContent-files/about_pages/*.css'])
+    .pipe(concatCss('userContent_no_addons.css'))
+    .pipe(gulp.dest('./alternative_user_files'));
 });
 
-/* Only make changes to addons.mozilla.org */
-gulp.task('userContent_amo', function() {
-  return gulp.src(['color_variables.css', 'userContent-files/webpages/amo_store.css'])
+
+/* Add everything to userContent */
+gulp.task('userContent_all', ['userContent_no_addons'], function() {
+  return gulp.src(['color_variables.css', 'userContent-files/all_about_pages.css', 'userContent-files/*/*.css'])
     .pipe(concatCss('userContent.css'))
     .pipe(gulp.dest('.'));
 });
@@ -43,4 +44,3 @@ gulp.task('userChrome_basic', function() {
     .pipe(concatCss('userChrome.css'))
     .pipe(gulp.dest('.'));
 });
-
