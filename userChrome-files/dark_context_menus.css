@@ -41,6 +41,7 @@ menuitem[disabled="true"] {
 }
 
 menuitem:hover[disabled="true"] {
+  color: var(--grey-50) !important;
   background-color: var(--grey-70) !important;
 }
 
@@ -49,6 +50,7 @@ menuitem:hover[disabled="true"] {
 }
 
 #context-navigation menuitem:hover[disabled="true"] {
+  color: var(--grey-50) !important;
   background-color: var(--grey-80) !important;
 }
 
@@ -101,17 +103,21 @@ menupopup menu:hover, menuitem:hover {
   }
 }
 
-/* [WINDOWS ONLY] Bookmarks Toolbar, top menu padding to match bottom */
+/* [WINDOWS ONLY] All menus padding tweaks */
 
 @media screen and (-moz-windows-theme) {
-  menupopup#BMB_bookmarksPopup menupopup[placespopup="true"],
-  menupopup#BMB_bookmarksPopup > menu > menupopup {
-    padding-top: 4px !important;
+  menupopup,
+  menupopup > menu > menupopup,
+  #bookmarksMenuPopup menupopup > hbox {
+    padding: 4px 0px 4px 0px  !important;
   }
 
-  menupopup#bookmarksMenuPopup .openintabs-menuitem {
-    padding-top: 4px !important;
-    padding-bottom: 4px !important;
+  #bookmarksMenuPopup menupopup {
+    padding: 0px 0px 0px 0px !important;
+  }
+
+  #BMB_bookmarksPopup menupopup {
+    padding: 4px 0px 0px 0px  !important;
   }
 }
 
@@ -136,14 +142,6 @@ menupopup menu:hover, menuitem:hover {
   }
 }
 
-/* [WINDOWS ONLY] Menus, top and bottom padding to match macOS */
-
-@media screen and (-moz-windows-theme) {
-  menupopup {
-    padding-top: 4px !important;
-    padding-bottom: 4px !important;
-  }
-}
 
 /* [WINDOWS ONLY] Menus, slightly increase separator margin */
 
