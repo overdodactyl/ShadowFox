@@ -453,6 +453,17 @@ menuitem:hover {
 #customization-done-button:-moz-any(:focus, :active, :hover):not([disabled]) {
   background-color: var(--primary-accent-color-dark) !important;
 }
+/* Color of tab throbber animation */
+
+:root {
+  --tab-loading-fill: var(--primary-accent-color) !important;
+}
+
+.tab-throbber::before {
+  fill: var(--primary-accent-color) !important;
+  opacity: 1 !important;
+}
+
 /*Pop Down Arrow */
 
 .panel-arrow {
@@ -605,6 +616,12 @@ toolbarbutton {
 
 #update-manual-whats-new {
   color: var(--primary-accent-color) !important;
+}
+
+/* Color of highlighted buttons */
+
+toolbar[brighttext] {
+  --toolbarbutton-icon-fill-attention: var(--primary-accent-color-dark) !important;
 }
 
 ::-moz-selection {

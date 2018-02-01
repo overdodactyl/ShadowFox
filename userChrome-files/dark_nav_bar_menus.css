@@ -1,3 +1,13 @@
+/* Color of tab throbber animation */
+:root {
+  --tab-loading-fill: var(--primary-accent-color) !important;
+}
+
+.tab-throbber::before {
+  fill: var(--primary-accent-color) !important;
+  opacity: 1 !important;
+}
+
 /*Pop Down Arrow */
 .panel-arrow {
   filter: invert(70%) !important;
@@ -130,7 +140,13 @@ toolbarbutton {
     background-color: hsla(96,65%,37%,.9) !important;
 }
 #update-manual-whats-new {
-color: var(--primary-accent-color) !important;}
+    color: var(--primary-accent-color) !important;
+}
+
+/* Color of highlighted buttons */
+toolbar[brighttext] {
+    --toolbarbutton-icon-fill-attention: var(--primary-accent-color-dark) !important;
+}
 
 ::-moz-selection {
   background: var(--blue-40);
