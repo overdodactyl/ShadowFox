@@ -1,5 +1,8 @@
 /* Main context menu */
-menupopup, popup, popup > menu > menupopup, menupopup > menu > menupopup, menupopup scrollbox {
+menupopup,
+popup, popup > menu > menupopup,
+menupopup > menu > menupopup,
+menupopup scrollbox {
       -moz-appearance: none !important;
       background: var(--grey-60) !important;
       border: none !important;
@@ -54,9 +57,8 @@ menuitem:hover[disabled="true"] {
   background-color: var(--grey-80) !important;
 }
 
-
-
-menupopup menu:hover, menuitem:hover {
+menupopup menu:hover,
+menuitem:hover {
       color: var(--grey-10) !important;
       background-color: var(--grey-80) !important;
 }
@@ -71,104 +73,87 @@ menupopup menu:hover, menuitem:hover {
 /* The following snippets are designed to fix promblems
  * only noticed on Windows computers */
 
-/* [WINDOWS ONLY] Remove white separators between menu items */
+ @media screen and (-moz-windows-theme),
+       screen and (-moz-windows-classic),
+       screen and (-moz-windows-default-theme),
+       screen and (-moz-os-version: windows-win7),
+       screen and (-moz-os-version: windows-win8),
+       screen and (-moz-os-version: windows-win10) {
 
-@media screen and (-moz-windows-theme) {
-  menupopup menuseparator {
-        -moz-appearance:none !important;
-        background: rgba(0, 0, 0, 0) !important;
-        border: 0px !important;
-  }
-}
+         /* Remove white separators between menu items */
+         menupopup menuseparator {
+               -moz-appearance:none !important;
+               background: rgba(0, 0, 0, 0) !important;
+               border: 0px !important;
+         }
 
-/* [WINDOWS ONLY] Removes white bar between icons and menu items */
+         /* Removes white bar between icons and menu items */
+         #context-navigation, #context-sep-navigation {
+           padding: 0px !important;
+         }
 
-@media screen and (-moz-windows-theme) {
-  #context-navigation, #context-sep-navigation {
-    padding: 0px !important;
-  }
-}
+         /* Bookmarks Toolbar, Toolbar Context menu, spacing tweaks */
+         #personal-bookmarks menupopup .bookmark-item,
+         #bookmarksMenuPopup,
+         menupopup#toolbar-context-menu,
+         menupopup#menu_ToolsPopup,
+         menupopup#goPopup,
+         menupopup#tabContextMenu {
+           padding-left: 4px !important;
+           padding-right: 4px !important;
+         }
 
-/* [WINDOWS ONLY] Bookmarks Toolbar, Toolbar Context menu, spacing tweaks */
+         /* All menus padding tweaks */
+         menupopup,
+         menupopup > menu > menupopup,
+         #bookmarksMenuPopup menupopup > hbox {
+           padding: 4px 0px 4px 0px  !important;
+         }
 
-@media screen and (-moz-windows-theme) {
-  #personal-bookmarks menupopup .bookmark-item,
-  #bookmarksMenuPopup,
-  menupopup#toolbar-context-menu,
-  menupopup#menu_ToolsPopup,
-  menupopup#goPopup
-  menupopup#tabContextMenu {
-    padding-left: 4px !important;
-    padding-right: 4px !important;
-  }
-}
+         #bookmarksMenuPopup menupopup {
+           padding: 0px 0px 0px 0px !important;
+         }
 
-/* [WINDOWS ONLY] All menus padding tweaks */
+         #BMB_bookmarksPopup menupopup {
+           padding: 4px 0px 0px 0px  !important;
+         }
 
-@media screen and (-moz-windows-theme) {
-  menupopup,
-  menupopup > menu > menupopup,
-  #bookmarksMenuPopup menupopup > hbox {
-    padding: 4px 0px 4px 0px  !important;
-  }
+         /* Context menu, spacing and font size similar to macOS */
+         menupopup#contentAreaContextMenu menuitem,
+         menupopup#contentAreaContextMenu menu {
+           padding-left: 4px !important;
+           padding-right: 4px !important;
+           font-size: 1.08em !important;
+         }
 
-  #bookmarksMenuPopup menupopup {
-    padding: 0px 0px 0px 0px !important;
-  }
+         /* Menus, slightly increase menu items spacing */
+         menupopup menu,
+         menuitem {
+           padding-top: 2px !important;
+           padding-bottom: 2px !important;
+         }
 
-  #BMB_bookmarksPopup menupopup {
-    padding: 4px 0px 0px 0px  !important;
-  }
-}
+         /* Menus, slightly increase separator margin */
+         menupopup menuseparator {
+           margin: 2px !important;
+         }
 
-/* [WINDOWS ONLY] Context menu, spacing and font size similar to macOS */
-
-@media screen and (-moz-windows-theme) {
-  menupopup#contentAreaContextMenu menuitem,
-  menupopup#contentAreaContextMenu menu {
-    padding-left: 4px !important;
-    padding-right: 4px !important;
-    font-size: 1.08em !important;
-  }
-}
-
-/* [WINDOWS ONLY] Menus, slightly increase menu items spacing */
-
-@media screen and (-moz-windows-theme) {
-  menupopup menu,
-  menuitem {
-    padding-top: 2px !important;
-    padding-bottom: 2px !important;
-  }
-}
-
-
-/* [WINDOWS ONLY] Menus, slightly increase separator margin */
-
-@media screen and (-moz-windows-theme) {
-  menupopup menuseparator {
-    margin: 2px !important;
-  }
-}
-
-/* [WINDOWS ONLY] Context menus, border added because Windows has a different drop shadow effect than macOS */
-
-@media screen and (-moz-windows-theme) {
-  #personal-bookmarks menupopup,
-  .panel-arrowcontent,
-  .box-inherit scrollbox-innerbox,
-  #BMB_bookmarksPopup menupopup[placespopup="true"] > hbox,
-  #bookmarksMenuPopup menupopup[placespopup="true"] > hbox,
-  menupopup#BMB_bookmarksPopup > menu > menupopup > hbox,
-  menupopup#bookmarksMenuPopup > menu > menupopup > hbox,
-  menupopup#contentAreaContextMenu,
-  menupopup#placesContext,
-  menupopup#bookmarksMenuPopup,
-  menupopup#PlacesChevronPopup,
-  menupopup#toolbar-context-menu,
-  menupopup#downloadsContextMenu {
-    border-color: var(--grey-70) !important;
-    border-width: 1px !important;
-    border-style: solid !important;
-  }
-}
+         /* Context menus, border added because Windows has a different drop shadow effect than macOS */
+         #personal-bookmarks menupopup,
+         .panel-arrowcontent,
+         .box-inherit scrollbox-innerbox,
+         #BMB_bookmarksPopup menupopup[placespopup="true"] > hbox,
+         #bookmarksMenuPopup menupopup[placespopup="true"] > hbox,
+         menupopup#BMB_bookmarksPopup > menu > menupopup > hbox,
+         menupopup#bookmarksMenuPopup > menu > menupopup > hbox,
+         menupopup#contentAreaContextMenu,
+         menupopup#placesContext,
+         menupopup#bookmarksMenuPopup,
+         menupopup#PlacesChevronPopup,
+         menupopup#toolbar-context-menu,
+         menupopup#downloadsContextMenu {
+           border-color: var(--grey-70) !important;
+           border-width: 1px !important;
+           border-style: solid !important;
+         }
+       }

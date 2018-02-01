@@ -351,42 +351,41 @@ menuitem:hover {
 /* The following snippets are designed to fix promblems
  * only noticed on Windows computers */
 
-/* [WINDOWS ONLY] Remove white separators between menu items */
+@media screen and (-moz-windows-theme),
+       screen and (-moz-windows-classic),
+       screen and (-moz-windows-default-theme),
+       screen and (-moz-os-version: windows-win7),
+       screen and (-moz-os-version: windows-win8),
+       screen and (-moz-os-version: windows-win10) {
+  /* Remove white separators between menu items */
 
-@media screen and (-moz-windows-theme) {
   menupopup menuseparator {
     -moz-appearance: none !important;
     background: rgba(0, 0, 0, 0) !important;
     border: 0px !important;
   }
-}
 
-/* [WINDOWS ONLY] Removes white bar between icons and menu items */
+  /* Removes white bar between icons and menu items */
 
-@media screen and (-moz-windows-theme) {
   #context-navigation,
   #context-sep-navigation {
     padding: 0px !important;
   }
-}
 
-/* [WINDOWS ONLY] Bookmarks Toolbar, Toolbar Context menu, spacing tweaks */
+  /* Bookmarks Toolbar, Toolbar Context menu, spacing tweaks */
 
-@media screen and (-moz-windows-theme) {
   #personal-bookmarks menupopup .bookmark-item,
   #bookmarksMenuPopup,
   menupopup#toolbar-context-menu,
   menupopup#menu_ToolsPopup,
-  menupopup#goPopup
+  menupopup#goPopup,
   menupopup#tabContextMenu {
     padding-left: 4px !important;
     padding-right: 4px !important;
   }
-}
 
-/* [WINDOWS ONLY] All menus padding tweaks */
+  /* All menus padding tweaks */
 
-@media screen and (-moz-windows-theme) {
   menupopup,
   menupopup > menu > menupopup,
   #bookmarksMenuPopup menupopup > hbox {
@@ -400,40 +399,32 @@ menuitem:hover {
   #BMB_bookmarksPopup menupopup {
     padding: 4px 0px 0px 0px  !important;
   }
-}
 
-/* [WINDOWS ONLY] Context menu, spacing and font size similar to macOS */
+  /* Context menu, spacing and font size similar to macOS */
 
-@media screen and (-moz-windows-theme) {
   menupopup#contentAreaContextMenu menuitem,
   menupopup#contentAreaContextMenu menu {
     padding-left: 4px !important;
     padding-right: 4px !important;
     font-size: 1.08em !important;
   }
-}
 
-/* [WINDOWS ONLY] Menus, slightly increase menu items spacing */
+  /* Menus, slightly increase menu items spacing */
 
-@media screen and (-moz-windows-theme) {
   menupopup menu,
   menuitem {
     padding-top: 2px !important;
     padding-bottom: 2px !important;
   }
-}
 
-/* [WINDOWS ONLY] Menus, slightly increase separator margin */
+  /* Menus, slightly increase separator margin */
 
-@media screen and (-moz-windows-theme) {
   menupopup menuseparator {
     margin: 2px !important;
   }
-}
 
-/* [WINDOWS ONLY] Context menus, border added because Windows has a different drop shadow effect than macOS */
+  /* Context menus, border added because Windows has a different drop shadow effect than macOS */
 
-@media screen and (-moz-windows-theme) {
   #personal-bookmarks menupopup,
   .panel-arrowcontent,
   .box-inherit scrollbox-innerbox,
