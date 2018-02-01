@@ -27,6 +27,13 @@ menupopup menu, menuitem {
       color: var(--grey-10) !important;
 }
 
+/* Menu Separators - removed */
+menupopup menuseparator {
+      padding: 0 !important;
+      border-top: none !important;
+      margin: 2px 6px 2px 6px !important;
+}
+
 /* Context menu, display disabled items in a different colour */
 
 menuitem[disabled="true"] {
@@ -45,12 +52,7 @@ menuitem:hover[disabled="true"] {
   background-color: var(--grey-80) !important;
 }
 
-/* Menu Separators - removed */
-menupopup menuseparator {
-      padding: 0 !important;
-      border-top: none !important;
-      margin: 2px 6px 2px 6px !important;
-}
+
 
 menupopup menu:hover, menuitem:hover {
       color: var(--grey-10) !important;
