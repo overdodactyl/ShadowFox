@@ -73,6 +73,7 @@
 	--light-accent-color: var(--grey-50); /* Slightly darker off white */
 	--dark-accent: var(--grey-80); /* darker shade of main color */
 	--mid-way-color: var(--grey-60); /* inbetween main dark and light color */
-	--primary-accent-color: var(--blue-40); 
-	--primary-accent-color-dark: var(--blue-50); 
+	--primary-accent-color: var(--blue-40);
+	--primary-accent-color-dark: var(--blue-50);
+  --primary-accent-color-darkest: var(--blue-60);
 }
