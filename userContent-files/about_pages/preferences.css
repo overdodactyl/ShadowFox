@@ -1,7 +1,7 @@
 @-moz-document url-prefix(about:preferences) {
 
 	:root {
-    --primary-accent-color-dark: var(--blue-40);
+    --primary-accent-color-dark: var(--primary-accent-color);
   }
 
 	::-moz-selection {

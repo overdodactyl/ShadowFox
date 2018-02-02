@@ -1,31 +1,31 @@
 @-moz-document url(about:support) {
-	
+
 	:root {
-    --primary-accent-color-dark: var(--blue-60);
+    --primary-accent-color-dark: var(--primary-accent-color-darkest);
   }
-	
-	
+
+
 	/* Upper right box */
 	#action-box {
 	    background-color: var(--dark-accent) !important;
 		  color: var(--primary-light-color) !important;
 	}
-	
+
 	th {
 	    background-color: var(--primary-accent-color-dark) !important;
 		  color: var(--grey-30) !important;
 	}
-	
+
 	td {
 	    color: var(--primary-light-color) !important;
 	    background-color: var(--dark-accent) !important;
 		  border: 1px solid var(--grey-60) !important;
 	}
-	
+
 	button {
 	    border: 1px solid var(--primary-light-color) !important;
 		  color: var(--primary-light-color) !important;
 	}
-		
-	
+
+
 }

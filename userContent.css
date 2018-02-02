@@ -70,6 +70,7 @@
   /* inbetween main dark and light color */
   --primary-accent-color: var(--blue-40);
   --primary-accent-color-dark: var(--blue-50);
+  --primary-accent-color-darkest: var(--blue-60);
 }
 @-moz-document url-prefix(about:)  {
   :root {
@@ -744,7 +745,7 @@
 }
 @-moz-document url-prefix(about:preferences)  {
   :root {
-    --primary-accent-color-dark: var(--blue-40);
+    --primary-accent-color-dark: var(--primary-accent-color);
   }
 
   ::-moz-selection {
@@ -928,7 +929,7 @@
 }
 @-moz-document url(about:support)  {
   :root {
-    --primary-accent-color-dark: var(--blue-60);
+    --primary-accent-color-dark: var(--primary-accent-color-darkest);
   }
 
   /* Upper right box */
