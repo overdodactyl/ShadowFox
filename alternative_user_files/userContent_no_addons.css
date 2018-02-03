@@ -223,7 +223,8 @@
   .AddonDescription-more-addons--theme .Card-contents .AddonsCard-list,
   .Search .SearchResults .SearchResult,
   .SearchForm-suggestions-item.SearchForm-suggestions-item,
-  .Card-contents li {
+  .Card-contents li,
+  .Card-footer-text {
     background: var(--grey-60) !important;
   }
 
@@ -259,7 +260,8 @@
   .Paginate-page-number,
   .SearchSuggestion-name,
   .ExpandableCard-ToggleLink:link,
-  .Paginate .Paginate-item {
+  .Paginate .Paginate-item,
+  .Card-footer-text {
     color: var(--primary-light-color) !important;
   }
 
@@ -267,6 +269,10 @@
   .Paginate-next::after,
   .Card-contents li .Rating-star-group {
     filter: invert(70%) !important;
+  }
+
+  .ShowMoreCard-contents::after {
+    background: linear-gradient(rgba(255, 255, 255, 0), var(--grey-60)) !important;
   }
 
   .Home-SubjectShelf-link:active,
