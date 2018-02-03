@@ -179,7 +179,9 @@
 
   .Header,
   .Footer-wrapper,
-  .LanguageTools-header-row {
+  .LanguageTools-header-row,
+  .Footer,
+  .amo {
     background: var(--grey-80) !important;
   }
 
@@ -220,7 +222,8 @@
   .AddonDescription-more-addons:not(.AddonDescription-more-addons--theme) .Card-contents .AddonsCard-list,
   .AddonDescription-more-addons--theme .Card-contents .AddonsCard-list,
   .Search .SearchResults .SearchResult,
-  .SearchForm-suggestions-item.SearchForm-suggestions-item {
+  .SearchForm-suggestions-item.SearchForm-suggestions-item,
+  .Card-contents li {
     background: var(--grey-60) !important;
   }
 
@@ -261,7 +264,8 @@
   }
 
   .Paginate-previous::before,
-  .Paginate-next::after {
+  .Paginate-next::after,
+  .Card-contents li .Rating-star-group {
     filter: invert(70%) !important;
   }
 

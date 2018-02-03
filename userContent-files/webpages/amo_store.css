@@ -1,33 +1,35 @@
 @-moz-document url-prefix("https://addons.mozilla.org") {
-	
+
 	/* Header & Footer */
-	.Header, 
+	.Header,
 	.Footer-wrapper,
-	.LanguageTools-header-row {
+	.LanguageTools-header-row,
+	.Footer,
+	.amo {
 	    background: var(--grey-80) !important;
 	}
-	
+
 	.LanguageTools-table-row:nth-child(2n) {
 	    background: var(--grey-70) !important;
 	}
-	
-	
+
+
 	/* Background Colors */
-	.LandingPage, 
-	.Home, 
+	.LandingPage,
+	.Home,
 	.App-content,
 	.Paginate-page-number {
 	    background: var(--primary-dark-color) !important;
 	}
-	
+
 	/* Search Box */
 	.SearchForm-icon-magnifying-glass {
 	    filter: invert(65%) !important;
 	}
-	
-	
+
+
 	/* Cards */
-	.Hero .Card-contents, 
+	.Hero .Card-contents,
 	.Home-SubjectShelf .Card-contents,
 	.Card-header,
 	.AddonsCard--horizontal .Card-contents,
@@ -42,11 +44,12 @@
 	.AddonDescription-more-addons:not(.AddonDescription-more-addons--theme) .Card-contents .AddonsCard-list,
 	.AddonDescription-more-addons--theme .Card-contents .AddonsCard-list,
 	.Search .SearchResults .SearchResult,
-	.SearchForm-suggestions-item.SearchForm-suggestions-item
+	.SearchForm-suggestions-item.SearchForm-suggestions-item,
+	.Card-contents li
 	{
 	    background: var(--grey-60) !important;
 	}
-	
+
 	.Home-SubjectShelf-subheading,
 	.Home-SubjectShelf-link:link,
 	.Home-SubjectShelf-link:visited,
@@ -62,10 +65,10 @@
 	.DropdownMenuItem-link a, .DropdownMenuItem-link a:link,
 	.Card-contents, .Card--photon .Card-contents,
 	.AddonBadges .Badge,
-	.Addon-author, 
-	.Addon-author a, 
+	.Addon-author,
+	.Addon-author a,
 	.Addon-author a:link
-	.Button--action, 
+	.Button--action,
 	.Button--action:link,
 	.Button--action.Button--small:link,
 	.Button--action,
@@ -80,22 +83,21 @@
 	 {
 	    color: var(--primary-light-color) !important;
 	}
-	
+
 	.Paginate-previous::before,
-	.Paginate-next::after
+	.Paginate-next::after,
+	.Card-contents li .Rating-star-group
 	 {
 		filter: invert(70%) !important
 	}
-	
-
 	
 	.Home-SubjectShelf-link:active,
 	.Home-SubjectShelf-link:focus,
 	.Home-SubjectShelf-link:hover,
 	.SearchResult-link:focus .SearchResult-name,
 	.SearchResult-link:hover .SearchResult-name,
-	.Card-footer-link a, 
-	.Card-footer-link a:hover, 
+	.Card-footer-link a,
+	.Card-footer-link a:hover,
 	.Card-footer-link a:link,
 	.DropdownMenuItem-link a:hover,
 	.AddonMoreInfo-contents a:link,
@@ -104,11 +106,11 @@
 	.Card.ShowMoreCard.AddonDescription-version-notes a:link {
 	    color: var(--primary-accent-color) !important;
 	}
-	
+
 	.Button--action.Button--outline-only {
 		border-color: var(--primary-accent-color) !important;
 	}
-	
+
 	.Button--action,
 	.Button--action.Button--small,
 	.Paginate .Paginate-item,
@@ -116,33 +118,33 @@
 	.Addon .InstallButton-button {
 	    background: var(--primary-accent-color) !important;
 	}
-	
+
 	.Button--action.Button--outline-only:hover,
 	.SearchForm-query:hover,
 	.Button--action:hover {
 		border-color: var(--primary-accent-color-dark) !important;
-		
+
 	}
-	
+
 	.SearchForm-query:focus {
 	    box-shadow: 0 0 5px 0 var(--primary-accent-color) !important;
 	    border-color: var(--primary-accent-color-dark) !important;
 	}
-	
+
 	.AddonsCard--horizontal ul.AddonsCard-list .SearchResult-link:hover {
 		background: var(--grey-70) !important;
 		border-radius: 0px !important;
 	}
-	
+
 	.Button--report {
 	    text-shadow: none !important;
 	}
-	
+
 	.Icon-external {
 	    filter: invert(20%) !important;
 	}
-	
-	.Icon-featured { 
+
+	.Icon-featured {
 	    filter: invert(85%) !important;
 	}
 
