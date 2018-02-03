@@ -90,6 +90,10 @@
 	 {
 		filter: invert(70%) !important
 	}
+
+    .ShowMoreCard-contents::after {
+      background: linear-gradient(rgba(255, 255, 255, 0), var(--grey-60)) !important;
+    }
 	
 	.Home-SubjectShelf-link:active,
 	.Home-SubjectShelf-link:focus,
