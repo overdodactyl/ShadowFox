@@ -479,6 +479,22 @@
   background-color: var(--grey-80) !important;
 }
 
+#learnMoreContainer #learnMoreLink {
+  color: var(--primary-accent-color) !important;
+}
+
+.toggle-container-with-text input[type="checkbox"] {
+  border: 1px solid var(--grey-50) !important;
+  background-color: var(--grey-60) !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.toggle-container-with-text input[type="checkbox"]:checked {
+  background-image: url("chrome://global/skin/in-content/check.svg"), linear-gradient(var(--grey-60), var(--grey-60)) !important;
+  fill: var(--primary-accent-color) !important;
+}
+
 @-moz-document url(about:neterror)  {
   /* about:neterror button */
 
