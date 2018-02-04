@@ -63,14 +63,20 @@ menuitem:hover {
       background-color: var(--grey-80) !important;
 }
 
-/* Sidebar Header Context Menue */
+/* Sidebar Header Context Menu */
 .panel-arrowcontent {
   color: var(--grey-10) !important;
   background: var(--grey-60) !important;
 }
 
+/* Sidebar border */
+vbox#sidebar-box.chromeclass-extrachrome {
+  border-color: var(--grey-80) !important;
+  border-right: 1px !important;
+  border-style: solid !important;
+}
 
-/* The following snippets are designed to fix promblems
+/* The following snippets are designed to fix problems
  * only noticed on Windows computers */
 
  @media screen and (-moz-windows-theme),
@@ -103,6 +109,13 @@ menuitem:hover {
            padding-right: 4px !important;
          }
 
+         /* Tab menu */
+         menupopup > menu > menupopup > .popup-internal-box,
+         menupopup#toolbar-context-menu > menuitem {
+		   padding-left: 1px !important;
+		   padding-right: 1px !important;
+         }
+
          /* All menus padding tweaks */
          menupopup,
          menupopup > menu > menupopup,
@@ -119,18 +132,29 @@ menuitem:hover {
          }
 
          /* Context menu, spacing and font size similar to macOS */
-         menupopup#contentAreaContextMenu menuitem,
-         menupopup#contentAreaContextMenu menu {
-           padding-left: 4px !important;
-           padding-right: 4px !important;
-           font-size: 1.08em !important;
+         menupopup menuitem,
+         menupopup menu {
+     	   font-size: 1.167em !important;
+     	   padding-top: 1px !important;
+     	   padding-bottom: 1px !important;
          }
 
-         /* Menus, slightly increase menu items spacing */
-         menupopup menu,
-         menuitem {
+         menupopup menu menuitem,
+         menupopup menu menu {
+           font-size: 1em !important;
+           padding-top: 1px !important;
+           padding-bottom: 1px !important;
+         }
+
+         menupopup#contentAreaContextMenu menuitem,
+         menupopup#contentAreaContextMenu menu {
            padding-top: 2px !important;
            padding-bottom: 2px !important;
+         }
+
+         /* Menus, slightly adjust arrow */
+         menupopup .menu-right {
+           margin-right: 0px !important;
          }
 
          /* Menus, slightly increase separator margin */
@@ -151,7 +175,9 @@ menuitem:hover {
          menupopup#bookmarksMenuPopup,
          menupopup#PlacesChevronPopup,
          menupopup#toolbar-context-menu,
-         menupopup#downloadsContextMenu {
+         menupopup#downloadsContextMenu,
+         menupopup#tabContextMenu,
+         menupopup > menu > menupopup {
            border-color: var(--grey-70) !important;
            border-width: 1px !important;
            border-style: solid !important;
