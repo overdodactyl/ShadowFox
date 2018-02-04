@@ -25,15 +25,11 @@
     opacity: 1 !important;
 }
 
-
-
-
 #editBMPanel_folderTree treechildren:not(.autocomplete-treebody)::-moz-tree-row,
 #editBMPanel_tagsSelector treechildren:not(.autocomplete-treebody)::-moz-tree-row {
     background: var(--grey-60) !important;
     color: var(--primary-light-color) !important;
 }
-
 
 #editBMPanel_folderTree treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover),
 #editBMPanel_tagsSelector treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
@@ -53,7 +49,6 @@
   fill: white !important;
 }
 
-
 /* Selected, in focus */
 #editBMPanel_folderTree treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, current, focus){
   background: var(--primary-accent-color) !important;
@@ -72,8 +67,6 @@ listitem[selected="true"] {
     border: 1px solid var(--grey-50) !important;
     border-bottom: none !important;
 }
-
-
 
 #editBMPanel_newFolderBox {
     background: var(--grey-70) !important;

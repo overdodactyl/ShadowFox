@@ -1,0 +1,28 @@
+#topBar {
+  -moz-appearance: none !important;
+  background-color: var(--grey-80) !important;
+  border: none !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  color: var(--grey-20) !important;
+}
+
+#metaTagsCaption,
+#security-identity,
+#security-privacy,
+#security-technical,
+#security-identity-groupbox,
+#security-privacy-groupbox,
+#security-technical-groupbox {
+  -moz-appearance: none !important;
+  background-color: var(--grey-70) !important;
+  border: none !important;
+  color: var(--grey-10) !important;
+}
+
+#security-identity-groupbox,
+#security-privacy-groupbox,
+#security-technical-groupbox {
+  -moz-appearance: none !important;
+  background-color: var(--grey-80) !important;
+}

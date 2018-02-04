@@ -4,9 +4,9 @@ var gulp = require('gulp');
 var concatCss = require('gulp-concat-css');
 
 /**********************************
-*								  *
-*		userContent.css			  *
-*								  *
+*								                  *
+*		userContent.css			          *
+*								                  *
 **********************************/
 
 /* userContent file with no addons */
@@ -26,13 +26,21 @@ gulp.task('userContent_all', ['userContent_no_addons'], function() {
 
 
 /**********************************
-*								  *
-*		userChrome.css			  *
-*								  *
+*								                  *
+*		userChrome.css			          *
+*								                  *
 **********************************/
 
 /* Add everything to userContent */
-gulp.task('userChrome_all', function() {
+gulp.task('userChrome_windows', function() {
+  return gulp.src(['color_variables.css', 'userChrome-files/*.css', 'userChrome-files/windows_fixes/*.css' ])
+    .pipe(concatCss('userChrome_windows.css'))
+    .pipe(gulp.dest('./alternative_user_files'));
+});
+
+
+/* Add everything to userContent */
+gulp.task('userChrome_all', [`userChrome_windows`], function() {
   return gulp.src(['color_variables.css', 'userChrome-files/*.css'])
     .pipe(concatCss('userChrome.css'))
     .pipe(gulp.dest('.'));
