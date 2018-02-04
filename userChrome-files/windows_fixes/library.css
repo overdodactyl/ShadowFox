@@ -1,0 +1,19 @@
+#metaTagsCaption,
+#security-identity,
+#security-privacy,
+#security-technical,
+#security-identity-groupbox,
+#security-privacy-groupbox,
+#security-technical-groupbox {
+  -moz-appearance: none !important;
+  background-color: var(--grey-70) !important;
+  border: none !important;
+  color: var(--grey-10) !important;
+}
+
+#security-identity-groupbox,
+#security-privacy-groupbox,
+#security-technical-groupbox {
+  -moz-appearance: none !important;
+  background-color: var(--grey-80) !important;
+}
