@@ -526,7 +526,20 @@
   .search-wrapper .search-button,
   .icon {
     fill: var(--primary-light-color) !important;
-    opacity: .7 !important;
+  }
+
+  .top-sites-list .top-site-outer .context-menu-button {
+    background-color: var(--grey-20) !important;
+    background-image: url("chrome://browser/skin/page-action.svg") !important;
+    border: 1px solid var(--grey-20) !important;
+    filter: invert(95%) !important;
+    box-shadow: none !important;
+  }
+
+  .top-sites-list .top-site-outer:hover .tile,
+  .top-sites-list .top-site-outer:focus .tile,
+  .top-sites-list .top-site-outer.active .tile {
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 0 5px var(--grey-80) !important;
   }
 
   .search-wrapper input {
