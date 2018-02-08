@@ -1,16 +1,16 @@
 @-moz-document url-prefix(about:newtab), url(about:home) {
-	
-	
+
+
 	.top-sites-list .top-site-outer .title span,
 	.card-outer .card-context {
 		color: var(--primary-light-color) !important;
 	}
-	
+
 	.section-top-bar .info-option-manage button,
 	.card-outer:-moz-any(:hover, :focus, .active):not(.placeholder) .card-title {
 	    color: var(--primary-accent-color) !important;
 	}
-		
+
 	.card-outer .card-details,
 	.card-outer > a,
 	.section-top-bar .section-info-option .info-option,
@@ -18,14 +18,25 @@
 		background: var(--grey-60) !important;
 	    color: var(--primary-light-color) !important;
 	}
-	
 
-	.search-wrapper .search-label, 
+
+	.search-wrapper .search-label,
 	.search-wrapper .search-button,
 	.icon {
 	    fill: var(--primary-light-color) !important;
-		opacity: .7 !important;
 	}
+
+	.top-sites-list .top-site-outer .context-menu-button {
+    background-color: var(--grey-20) !important;
+    background-image: url("chrome://browser/skin/page-action.svg") !important;
+    border: 1px solid var(--grey-20) !important;
+    filter: invert(95%) !important;
+		box-shadow: none !important;
+}
+
+.top-sites-list .top-site-outer:hover .tile, .top-sites-list .top-site-outer:focus .tile, .top-sites-list .top-site-outer.active .tile {
+      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 0 5px var(--grey-80) !important;
+		}
 
 	.search-wrapper input {
 	    color: var(--primary-light-color) !important;
@@ -35,13 +46,13 @@
 	.prefs-pane-button button {
 		fill: #4a4a4f !important
 	}
-	
-	/* Preferencs/close button */   
+
+	/* Preferencs/close button */
 	  .prefs-pane-button button:hover {
 	    background-color: var(--grey-90) !important;;
 	  }
-  
-  
+
+
 	/* Main background */
 	.prefs-pane .sidebar {
 		background: var(--primary-dark-color) !important;
@@ -89,7 +100,7 @@
 		border-color: var(--primary-accent-color-dark) !important;
 		box-shadow: 0 0 0 2px var(--primary-accent-color) !important;
 	}
-	
+
 	/* Pocket Suggestions Arrow */
 	.topic .topic-read-more::after {
 		fill: var(--primary-accent-color) !important;
@@ -116,30 +127,30 @@
 	#onboarding-notification-close-btn {
 		filter: invert(65%)!important;
 	}
-	
+
 	.contentSearchHeader, .search-wrapper .contentSearchSuggestionTable {
 	    background-color: var(--grey-60) !important;
 	    color: var(--primary-light-color) !important;
 	    border-bottom: 1px solid var(--primary-light-color) !important;
 	}
 
-	.contentSearchSuggestionsContainer, 
-	.contentSearchHeaderRow, 
-	.contentSearchSuggestionRow, 
-	#contentSearchDefaultEngineHeader, 
+	.contentSearchSuggestionsContainer,
+	.contentSearchHeaderRow,
+	.contentSearchSuggestionRow,
+	#contentSearchDefaultEngineHeader,
 	#contentSearchSearchWithHeader {
 	    background: var(--grey-60) !important;
 	    color: var(--primary-light-color) !important;
 	}
-	
+
 	.contentSearchSearchWithHeaderSearchText {
 	    color: var(--primary-accent-color) !important;
 	}
-	
+
 	#snippets-container {
 	    background: var(--primary-dark-color) !important;
 	 }
-	 
+
 	 #snippets {
 	   color: var(--primary-light-color) !important;
     }
@@ -151,19 +162,19 @@
 	.snippet section {
 	    color: #FFF !important;
 	 }
-	 
+
 	 /* Background color of top site icons */
 	 .top-sites-list .top-site-outer .top-site-icon {
 	     background-color: var(--primary-dark-color) !important;
 	 }
-	 
+
 	 /* Edit Top Sites */
 	 .section-title span,
 	 .actions button.dismiss,
 	 .actions button {
 	 	color: var(--primary-light-color) !important;
 	 }
-	
+
 	 .edit-topsites-wrapper .edit-topsites-inner-wrapper {
 	     background: var(--primary-dark-color) !important;
 	 }
@@ -184,14 +195,14 @@
 	     border: 1px solid #B1B1B3;
 	 	color: var(--primary-light-color) !important;
 	 }
-	 
+
 	 /* overlay background */
 	 .modal-overlay {
 	     background: var(--grey-60) !important;
 	 }
-	 
+
 	 /* Onboarding */
-	 
+
 	#onboarding-overlay {
 		background: var(--grey-60) !important;
 	}
@@ -203,6 +214,6 @@
 		background: var(--primary-dark-color) !important;
 		color: var(--primary-light-color) !important;
 	}
-	 
+
 
 }
