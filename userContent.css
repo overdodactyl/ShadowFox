@@ -407,7 +407,7 @@
   /* Selected Color */
 
   #configTreeBody::-moz-tree-row(selected) {
-    background: var(--blue-60) !important;
+    background: var(--primary-accent-color-darkest) !important;
   }
 
   /* Hover Color */
