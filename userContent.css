@@ -382,6 +382,17 @@
   .service-worker-multi-process {
     background-color: var(--grey-60) !important;
   }
+
+  xul|*.radio-check {
+    border: 1px solid var(--grey-50) !important;
+    background-color: var(--grey-50) !important;
+    background-image: none !important;
+    box-shadow: none !important;
+  }
+
+  xul|*.radio-check[selected] {
+    fill: var(--primary-accent-color) !important;
+  }
 }
 @-moz-document url(about:config)  {
   /* Warning Message */
@@ -2209,6 +2220,53 @@
 
   .recipe .name {
     color: var(--primary-light-color) !important;
+  }
+
+  /* Logger */
+
+  #toolbar,
+  #toolbar .button {
+    background-color: var(--grey-80) !important;
+  }
+
+  input {
+    -moz-appearance: none !important;
+    background: var(--grey-60) !important;
+    color: var(--primary-light-color) !important;
+    border: 1px solid var(--grey-50) !important;
+    padding: 5px 5px 5px 5px !important;
+  }
+
+  #content table tr {
+    background-color: var(--grey-60) !important;
+  }
+
+  #content table tr:nth-of-type(2n+1) {
+    background-color: var(--grey-70) !important;
+  }
+
+  #content table tr.doc {
+    background-color: var(--grey-80) !important;
+  }
+
+  body:not(.popupOn) #content table tr.canMtx td:nth-of-type(2):hover {
+    background: var(--grey-80) !important;
+  }
+
+  body #content td {
+    border: 1px solid var(--grey-50) !important;
+  }
+
+  #content table tr.blocked {
+    color: var(--red-80) !important;
+  }
+
+  #content table tr.cat_info {
+    color: var(--blue-40) !important;
+  }
+
+  #toolbar {
+    border-bottom: 1px solid var(--grey-50) !important;
   }
 }
 @-moz-document url-prefix("https://addons.mozilla.org")  {
