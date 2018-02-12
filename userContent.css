@@ -2218,6 +2218,18 @@
     background-color: var(--grey-80) !important;
   }
 
+  .dropdown-menu > ul > li.dropdown-menu-entry {
+    color: var(--grey-60) !important;
+  }
+
+  #mtxSwitches > li.switchTrue {
+    color: var(--primary-light-color) !important;
+  }
+
+  .dropdown-menu > ul > li.dropdown-menu-entry:hover {
+    background: var(--grey-70) !important;
+  }
+
   .recipe .name {
     color: var(--primary-light-color) !important;
   }
