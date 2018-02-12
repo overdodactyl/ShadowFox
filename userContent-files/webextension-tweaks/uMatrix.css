@@ -66,8 +66,13 @@
     background-color: var(--grey-70) !important;
   }
 
-  #diff li:nth-of-type(2n) {
+  #diff li:nth-of-type(2n),
+  .assets > div:first-of-type {
     background-color: var(--grey-80) !important;
+  }
+
+  .assets {
+    border: 1px solid var(--grey-50) !important;
   }
 
   #diff li:hover {
@@ -79,11 +84,29 @@
     border-top: 1px solid var(--grey-50) !important;
   }
 
+  textarea {
+    -moz-appearance: none !important;
+    background: var(--grey-60) !important;
+    color: var(--primary-light-color) !important;
+    border: 1px solid var(--grey-50) !important;
+    padding: 5px 5px 5px 5px !important;
+  }
+
   #diff textarea {
     border-top: 1px solid var(--grey-50) !important;
     background: var(--grey-60) !important;
     color: var(--primary-light-color) !important;
   }
+
+  #dashboard-nav-widgets {
+    border-bottom: 1px solid var(--grey-50) !important;
+  }
+
+  .whatisthis-expandable {
+    background-color: var(--grey-80) !important;
+    border: 1px dotted var(--grey-50) !important;
+  }
+
 
   /* Popup Specific */
   .paneHead {
@@ -153,6 +176,14 @@
   button#bye:hover {
     background: var(--grey-80) !important;
   }
+  .dropdown-menu > ul,
+  .recipe:hover {
+    border: 1px solid var(--grey-50) !important;
+    background-color: var(--grey-80) !important;
+  }
 
+  .recipe .name {
+    color: var(--primary-light-color) !important;
+  }
 
 }
