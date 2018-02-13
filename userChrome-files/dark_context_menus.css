@@ -39,11 +39,11 @@ menupopup menuseparator {
 
 /* Context menu, display disabled items in a different colour */
 
-menuitem[disabled="true"] {
+menu[disabled="true"], menuitem[disabled="true"] {
   color: var(--grey-50) !important;
 }
 
-menuitem:hover[disabled="true"] {
+menu[disabled="true"]:hover, menuitem:hover[disabled="true"] {
   color: var(--grey-50) !important;
   background-color: var(--grey-70) !important;
 }
