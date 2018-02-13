@@ -61,7 +61,12 @@
 
 	/* [WINDOWS ONLY] fixes */
 	
-	@media screen and (-moz-windows-theme) {
+@media screen and (-moz-windows-theme),
+       screen and (-moz-windows-classic),
+       screen and (-moz-windows-default-theme),
+       screen and (-moz-os-version: windows-win7),
+       screen and (-moz-os-version: windows-win8),
+       screen and (-moz-os-version: windows-win10) {
 		#topBar {
 		  -moz-appearance: none !important;
 		  background-color: var(--grey-80) !important;
@@ -70,9 +75,7 @@
 		  padding-bottom: 5px !important;
 		  color: var(--grey-20) !important;
 		}
-	}
 
-	@media screen and (-moz-windows-theme) {
 		#metaTagsCaption,
 		#security-identity,
 		#security-privacy,
@@ -85,9 +88,7 @@
 		  border: none !important;
 		  color: var(--grey-10) !important;
 		}
-	}
 
-	@media screen and (-moz-windows-theme) {
 		#security-identity-groupbox,
 		#security-privacy-groupbox,
 		#security-technical-groupbox {
