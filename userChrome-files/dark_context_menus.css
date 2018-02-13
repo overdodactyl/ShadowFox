@@ -76,6 +76,12 @@ vbox#sidebar-box.chromeclass-extrachrome {
   border-style: solid !important;
 }
 
+/* Fixes for addon icons */
+#_testpilot-containers_7 .menu-iconic-left,
+#treestyletab_piro_sakura_ne_jp_8 .menu-iconic-left {
+    filter: invert(55%) !important;
+}
+
 /* The following snippets are designed to fix problems
  * only noticed on Windows computers */
 
