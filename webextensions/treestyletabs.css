@@ -30,8 +30,12 @@
 .tab.active {
    background-color: var(--primary-accent-color) !important;
 }
+.tab.selected {
+   background-color: var(--primary-accent-color-dark) !important;
+}
 
-.tab.active .label {
+.tab.active .label,
+.tab.selected .label {
  color: white;
 }
 
@@ -80,4 +84,8 @@
 
 #all-tabs .tab:not(.active)[data-current-uri*="github.com"] .favicon {
    filter: invert(65%);
+}
+
+#tabbar, #background::after, #background {
+    background: var(--primary-dark-color) !important;
 }
