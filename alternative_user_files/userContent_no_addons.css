@@ -363,6 +363,127 @@
     color: var(--primary-light-color) !important;
   }
 }
+@-moz-document regexp(".*\\.(p|P)(d|D)(f|F).*")  {
+  .dropdownToolbarButton > select > option,
+  .overlayButton,
+  .secondaryToolbarButton,
+  body,
+  div#viewer {
+    background-color: var(--grey-60)!important;
+  }
+
+  body {
+    background-image: none!important;
+  }
+
+  .splitToolbarButtonSeparator,
+  .verticalToolbarSeparator {
+    box-shadow: none!important;
+    background-color: var(--grey-60)!important;
+  }
+
+  div#toolbarViewer {
+    background-color: var(--grey-80)!important;
+  }
+
+  #numPages,
+  #pageNumber,
+  #scaleSelect {
+    color: var(--primary-light-color)!important;
+  }
+
+  .pdfViewer .page {
+    border-image: none!important;
+  }
+
+  #pageNumber,
+  #scaleSelectContainer {
+    border: 1px solid var(--grey-60);
+  }
+
+  #loadingBar {
+    position: relative;
+    width: 100%;
+    height: 4px;
+    background-color: var(--primary-accent-color);
+    border-bottom: 1px solid var(--grey-50);
+  }
+
+  #sidebarContainer {
+    background-color: var(--grey-70)!important;
+  }
+
+  #toolbarSidebar {
+    background-color: var(--grey-80)!important;
+    background-image: none!important;
+  }
+
+  .doorHanger,
+  .doorHangerRight {
+    border: 1px solid!important;
+    box-shadow: none!important;
+  }
+
+  #toolbarContainer,
+  .findbar,
+  .secondaryToolbar {
+    background-color: var(--grey-60)!important;
+    background-image: none!important;
+  }
+
+  .dropdownToolbarButton,
+  .overlayButton,
+  .secondaryToolbarButton,
+  .toolbarButton {
+    border: none!important;
+    color: var(--primary-light-color)!important;
+  }
+
+  .dropdownToolbarButton,
+  .overlayButton,
+  .toolbarButton:focus,
+  .toolbarButton:hover {
+    background-color: var(--grey-60)!important;
+    background-image: none!important;
+    border: none!important;
+    box-shadow: none!important;
+  }
+
+  .secondaryToolbarButton:focus,
+  .secondaryToolbarButton:hover {
+    background-color: var(--grey-70)!important;
+    background-image: none!important;
+    box-shadow: none!important;
+  }
+
+  .secondaryToolbarButton::before,
+  .toolbarButton::before {
+    filter: invert(20%)!important;
+  }
+
+  .secondaryToolbarButton.toggled,
+  .splitToolbarButton.toggled > .toolbarButton.toggled,
+  .toolbarButton.toggled {
+    background-color: var(--grey-70)!important;
+    background-image: none!important;
+    box-shadow: none!important;
+    color: #fff!important;
+  }
+
+  .horizontalToolbarSeparator {
+    background-color: var(--grey-50)!important;
+    box-shadow: none!important;
+  }
+
+  .dropdownToolbarButton > select,
+  .toolbarField {
+    background: var(--grey-60)!important;
+  }
+
+  #loadingBar .progress {
+    background-color: var(--grey-60)!important;
+  }
+}
 @-moz-document url-prefix(https://raw.githubusercontent.com)  {
   html {
     background: var(--primary-dark-color) !important;
