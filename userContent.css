@@ -2467,7 +2467,7 @@
   .secondaryToolbarButton,
   body,
   div#viewer {
-    background-color: var(--grey-60)!important;
+    background-color: var(--mid-way-color)!important;
   }
 
   body {
@@ -2477,11 +2477,11 @@
   .splitToolbarButtonSeparator,
   .verticalToolbarSeparator {
     box-shadow: none!important;
-    background-color: var(--grey-60)!important;
+    background-color: var(--mid-way-color)!important;
   }
 
   div#toolbarViewer {
-    background-color: var(--grey-80)!important;
+    background-color: var(--dark-accent)!important;
   }
 
   #numPages,
@@ -2496,7 +2496,7 @@
 
   #pageNumber,
   #scaleSelectContainer {
-    border: 1px solid var(--grey-60);
+    border: 1px solid var(--mid-way-color);
   }
 
   #loadingBar {
@@ -2504,15 +2504,15 @@
     width: 100%;
     height: 4px;
     background-color: var(--primary-accent-color);
-    border-bottom: 1px solid var(--grey-50);
+    border-bottom: 1px solid var(--light-accent-color);
   }
 
   #sidebarContainer {
-    background-color: var(--grey-70)!important;
+    background-color: var(--primary-dark-color)!important;
   }
 
   #toolbarSidebar {
-    background-color: var(--grey-80)!important;
+    background-color: var(--dark-accent)!important;
     background-image: none!important;
   }
 
@@ -2525,7 +2525,7 @@
   #toolbarContainer,
   .findbar,
   .secondaryToolbar {
-    background-color: var(--grey-60)!important;
+    background-color: var(--mid-way-color)!important;
     background-image: none!important;
   }
 
@@ -2541,7 +2541,7 @@
   .overlayButton,
   .toolbarButton:focus,
   .toolbarButton:hover {
-    background-color: var(--grey-60)!important;
+    background-color: var(--mid-way-color)!important;
     background-image: none!important;
     border: none!important;
     box-shadow: none!important;
@@ -2549,7 +2549,7 @@
 
   .secondaryToolbarButton:focus,
   .secondaryToolbarButton:hover {
-    background-color: var(--grey-70)!important;
+    background-color: var(--primary-dark-color)!important;
     background-image: none!important;
     box-shadow: none!important;
   }
@@ -2562,24 +2562,24 @@
   .secondaryToolbarButton.toggled,
   .splitToolbarButton.toggled > .toolbarButton.toggled,
   .toolbarButton.toggled {
-    background-color: var(--grey-70)!important;
+    background-color: var(--primary-dark-color)!important;
     background-image: none!important;
     box-shadow: none!important;
     color: #fff!important;
   }
 
   .horizontalToolbarSeparator {
-    background-color: var(--grey-50)!important;
+    background-color: var(--light-accent-color)!important;
     box-shadow: none!important;
   }
 
   .dropdownToolbarButton > select,
   .toolbarField {
-    background: var(--grey-60)!important;
+    background: var(--mid-way-color)!important;
   }
 
   #loadingBar .progress {
-    background-color: var(--grey-60)!important;
+    background-color: var(--mid-way-color)!important;
   }
 }
 @-moz-document url-prefix(https://raw.githubusercontent.com)  {
