@@ -2,6 +2,8 @@
 
 var gulp = require('gulp');
 var concatCss = require('gulp-concat-css');
+var cleanCSS = require('gulp-clean-css');
+
 
 /**********************************
 *								                  *
@@ -51,4 +53,21 @@ gulp.task('userChrome_basic', function() {
   return gulp.src(['userChrome-files/remove_white_flash.css', 'userChrome-files/remove_bookmarks_bottom_border.css'])
     .pipe(concatCss('userChrome.css'))
     .pipe(gulp.dest('.'));
+});
+
+
+/**********************************
+*								                  *
+*		         Other			          *
+*								                  *
+**********************************/
+
+
+gulp.task('minify-pdf', () => {
+  return gulp.src(['userContent-files/webpages/pdf.css'])
+    .pipe(cleanCSS({
+      level : 2 ,
+      format: 'beautify'
+    }))
+    .pipe(gulp.dest('./userContent-files/webpages'));
 });
