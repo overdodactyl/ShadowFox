@@ -4,7 +4,7 @@ popup, popup > menu > menupopup,
 menupopup > menu > menupopup,
 menupopup scrollbox {
       -moz-appearance: none !important;
-      background: var(--grey-60) !important;
+      background: var(--mid-way-color) !important;
       border: none !important;
       padding: 0px 0px 0px 0px  !important;
 }
@@ -17,11 +17,11 @@ menupopup scrollbox {
 /* Top Row of Navigation Options */
 #context-navigation menuitem {
       color: var(--grey-10) !important;
-      background: var(--grey-70) !important;
+      background: var(--primary-dark-color) !important;
 }
 
 #context-navigation menuitem:hover {
-      background: var(--grey-80) !important;
+      background: var(--dark-accent) !important;
 }
 
 /* Menu items */
@@ -40,21 +40,21 @@ menupopup menuseparator {
 /* Context menu, display disabled items in a different colour */
 
 menu[disabled="true"], menuitem[disabled="true"] {
-  color: var(--grey-50) !important;
+  color: var(--light-accent-color) !important;
 }
 
 menu[disabled="true"]:hover, menuitem:hover[disabled="true"] {
-  color: var(--grey-50) !important;
-  background-color: var(--grey-70) !important;
+  color: var(--light-accent-color) !important;
+  background-color: var(--primary-dark-color) !important;
 }
 
 #context-navigation menuitem[disabled="true"] {
-  color: var(--grey-50) !important;
+  color: var(--light-accent-color) !important;
 }
 
 #context-navigation menuitem:hover[disabled="true"] {
-  color: var(--grey-50) !important;
-  background-color: var(--grey-80) !important;
+  color: var(--light-accent-color) !important;
+  background-color: var(--dark-accent) !important;
 }
 
 menupopup menu:hover,
@@ -62,18 +62,18 @@ menuitem:hover,
 menu[_moz-menuactive="true"],
 menuitem[_moz-menuactive="true"] {
       color: var(--grey-10) !important;
-      background-color: var(--grey-80) !important;
+      background-color: var(--dark-accent) !important;
 }
 
 /* Sidebar Header Context Menu */
 .panel-arrowcontent {
   color: var(--grey-10) !important;
-  background: var(--grey-60) !important;
+  background: var(--mid-way-color) !important;
 }
 
 /* Sidebar border */
 vbox#sidebar-box.chromeclass-extrachrome {
-  border-color: var(--grey-80) !important;
+  border-color: var(--dark-accent) !important;
   border-right: 1px !important;
   border-style: solid !important;
 }
@@ -129,7 +129,7 @@ vbox#sidebar-box.chromeclass-extrachrome {
 		menupopup#tabContextMenu,
 		menupopup#tabContextMenu menupopup,
 		toolbaritem#menubar-items menupopup {
-		  border-color: var(--grey-70) !important;
+		  border-color: var(--primary-dark-color) !important;
 		  border-width: 1px !important;
 		  border-style: solid !important;
 		}

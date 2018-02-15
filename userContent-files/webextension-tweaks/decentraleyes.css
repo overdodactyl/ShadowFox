@@ -5,18 +5,18 @@
 
 
   body {
-    background-color: var(--grey-60) !important;
+    background-color: var(--mid-way-color) !important;
     color: var(--primary-light-color) !important;
   }
 
   header,
   .panel:not(:last-child) {
-    border-bottom: solid var(--grey-50) 1px !important;
+    border-bottom: solid var(--light-accent-color) 1px !important;
   }
 
   .button {
     -moz-user-select: none;
-    background-color: var(--grey-70) !important;
+    background-color: var(--primary-dark-color) !important;
   }
 
 

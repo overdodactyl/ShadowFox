@@ -9,58 +9,58 @@
   }
 
   .rule:not(.editing):not(:hover) {
-      background-color: var(--grey-60) !important;
-      border: 1px solid var(--grey-50) !important;
+      background-color: var(--mid-way-color) !important;
+      border: 1px solid var(--light-accent-color) !important;
   }
 
   .rule:hover:not(.editing) {
-      background-color: var(--grey-80) !important;
-      border: 1px solid var(--grey-50) !important;
+      background-color: var(--dark-accent) !important;
+      border: 1px solid var(--light-accent-color) !important;
   }
 
   .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
       color: var(--primary-light-color) !important;
-      background-color: var(--grey-80) !important;
-      border: 1px solid var(--grey-50) !important;
+      background-color: var(--dark-accent) !important;
+      border: 1px solid var(--light-accent-color) !important;
   }
 
   .nav-tabs > li > a:hover {
-      background-color: var(--grey-80) !important;
-      border: 1px solid var(--grey-50) !important;
+      background-color: var(--dark-accent) !important;
+      border: 1px solid var(--light-accent-color) !important;
   }
 
   tabs.nav-justified > li > a {
-      border-bottom: 1px solid var(--grey-50) !important;
+      border-bottom: 1px solid var(--light-accent-color) !important;
   }
 
   .btn-default {
       color: var(--primary-light-color) !important;
-      background-color: var(--grey-80) !important;
-      border-color: var(--grey-50) !important;
+      background-color: var(--dark-accent) !important;
+      border-color: var(--light-accent-color) !important;
   }
 
   .btn-default.active {
-    background-color: var(--grey-60) !important;
+    background-color: var(--mid-way-color) !important;
   }
 
   .btn-default:hover {
       color: var(--primary-light-color) !important;
-      background-color: var(--grey-50) !important;
-      border-color: var(--grey-50) !important;
+      background-color: var(--light-accent-color) !important;
+      border-color: var(--light-accent-color) !important;
   }
 
   .list-group-item:first-child {
-      background: var(--grey-60) !important;
-      border-color: var(--grey-50) !important;
+      background: var(--mid-way-color) !important;
+      border-color: var(--light-accent-color) !important;
 
   }
 
   .table {
-      background: var(--grey-60) !important;
+      background: var(--mid-way-color) !important;
   }
 
   .table-striped > tbody > tr:nth-of-type(2n+1) {
-      background-color: var(--grey-80) !important;
+      background-color: var(--dark-accent) !important;
   }
 
   .input-group .form-control:first-child,
@@ -72,18 +72,18 @@
   .input-group-btn:last-child > .btn-group:not(:last-child) > .btn,
    select.input-sm,
   .btn-group-params > .tags-input {
-      background: var(--grey-50) !important;
+      background: var(--light-accent-color) !important;
       color: var(--grey-30) !important;
-      border-color: var(--grey-40) !important;
+      border-color: var(--primary-light-color) !important;
   }
   .list-group-item {
-      background-color: var(--grey-60) !important;
+      background-color: var(--mid-way-color) !important;
       border: 1px solid #ddd;
   }
 
   .tags-input .tag {
-      background: var(--grey-80) !important;
-      border: 1px solid var(--grey-60) !important;
+      background: var(--dark-accent) !important;
+      border: 1px solid var(--mid-way-color) !important;
       color: var(--primary-light-color) !important;
   }
 

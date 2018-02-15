@@ -8,14 +8,14 @@
   }
 
   .toolbar {
-    background-color: var(--grey-80) !important;
-    border-right: 1px solid var(--grey-60) !important;
+    background-color: var(--dark-accent) !important;
+    border-right: 1px solid var(--mid-way-color) !important;
   }
 
   .toolbar .button {
-    border-right: 1px solid var(--grey-60) !important;
-    border-bottom: 1px solid var(--grey-60) !important;
-    background-color: var(--grey-80) !important;
+    border-right: 1px solid var(--mid-way-color) !important;
+    border-bottom: 1px solid var(--mid-way-color) !important;
+    background-color: var(--dark-accent) !important;
   }
 
   .button:hover,
@@ -23,7 +23,7 @@
   .font-type-buttons > button:hover,
   .content-width-buttons > button:hover,
   .line-height-buttons > button:hover {
-    background-color: var(--grey-70) !important;
+    background-color: var(--primary-dark-color) !important;
   }
 
   .close-button:hover {
@@ -32,9 +32,9 @@
   }
 
   .dropdown-popup {
-    background-color: var(--grey-80) !important;
-    border: 1px solid var(--grey-60) !important;
-    box-shadow: 0 1px 3px var(--grey-60) !important;
+    background-color: var(--dark-accent) !important;
+    border: 1px solid var(--mid-way-color) !important;
+    box-shadow: 0 1px 3px var(--mid-way-color) !important;
   }
 
   .font-type-buttons > button:active:hover,
@@ -48,8 +48,8 @@
   }
 
   .font-type-buttons > button, .font-size-buttons > button, .content-width-buttons > button, .line-height-buttons > button {
-    border-left: 1px solid var(--grey-60) !important;
-    border-bottom: 1px solid var(--grey-60) !important;
+    border-left: 1px solid var(--mid-way-color) !important;
+    border-bottom: 1px solid var(--mid-way-color) !important;
   }
 
   .font-type-buttons > button:active:hover,

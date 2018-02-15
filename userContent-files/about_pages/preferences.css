@@ -11,7 +11,7 @@
 	.checkbox-check,
 	.radio-check {
 		box-shadow: none !important;
-		background: var(--grey-60) !important;
+		background: var(--mid-way-color) !important;
 	}
 
 	menulist:not([editable="true"]) > *.menulist-dropmarker {
@@ -36,17 +36,17 @@
 	}
 
 	#searchInput {
-    background: var(--grey-60) !important;
+    background: var(--mid-way-color) !important;
 		border: 1px solid var(--primary-light-color) !important;
 		border-radius: 4px !important;
   }
 
 	#handlersView {
-    background: var(--grey-60) !important;
+    background: var(--mid-way-color) !important;
   }
 
 	listheader {
-		background: var(--grey-80) !important;
+		background: var(--dark-accent) !important;
 	}
 
 	#handlersView richlistitem[selected="true"] {
@@ -55,7 +55,7 @@
   }
 
 	#handlersView richlistitem:hover {
-    background: var(--grey-70) !important;
+    background: var(--primary-dark-color) !important;
 		color: var(--primary-light-color) !important;;
   }
 
@@ -65,7 +65,7 @@
 	}
 	/* Search Engines */
 	#engineChildren::-moz-tree-row() {
-		background: var(--grey-60) !important;
+		background: var(--mid-way-color) !important;
 	}
 
 	.navigation {

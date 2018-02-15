@@ -1,7 +1,7 @@
 @-moz-document url(about:healthreport) {
 
 	.headerContainer {
-	    background: var(--grey-70) !important;
+	    background: var(--primary-dark-color) !important;
 	    color: var(--primary-light-color) !important;
 	}
 

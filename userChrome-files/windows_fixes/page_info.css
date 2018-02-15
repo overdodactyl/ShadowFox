@@ -1,6 +1,6 @@
 #topBar {
   -moz-appearance: none !important;
-  background-color: var(--grey-80) !important;
+  background-color: var(--dark-accent) !important;
   border: none !important;
   padding-top: 5px !important;
   padding-bottom: 5px !important;
@@ -15,7 +15,7 @@
 #security-privacy-groupbox,
 #security-technical-groupbox {
   -moz-appearance: none !important;
-  background-color: var(--grey-70) !important;
+  background-color: var(--primary-dark-color) !important;
   border: none !important;
   color: var(--grey-10) !important;
 }
@@ -24,5 +24,5 @@
 #security-privacy-groupbox,
 #security-technical-groupbox {
   -moz-appearance: none !important;
-  background-color: var(--grey-80) !important;
+  background-color: var(--dark-accent) !important;
 }

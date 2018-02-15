@@ -7,7 +7,7 @@
 	
 	#subprocess-reports td {
 	    background-color: var(--dark-accent) !important;
-		  border-color: var(--grey-70) !important;
+		  border-color: var(--primary-dark-color) !important;
 	}
 	
 	

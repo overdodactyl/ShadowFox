@@ -1,5 +1,5 @@
 #identity-box.verifiedIdentity { 
-	--urlbar-separator-color: var(--grey-50) !important;
+	--urlbar-separator-color: var(--light-accent-color) !important;
 }
 
 .identity-popup-connection-secure,

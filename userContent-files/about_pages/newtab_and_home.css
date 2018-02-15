@@ -15,7 +15,7 @@
 	.card-outer > a,
 	.section-top-bar .section-info-option .info-option,
 	.context-menu {
-		background: var(--grey-60) !important;
+		background: var(--mid-way-color) !important;
 	    color: var(--primary-light-color) !important;
 	}
 
@@ -36,7 +36,7 @@
 }
 
 .card-outer:-moz-any(:hover, :focus, .active):not(.placeholder) {
-	box-shadow: 0 0 0 5px var(--grey-80) !important;
+	box-shadow: 0 0 0 5px var(--dark-accent) !important;
 }
 
 .collapsible-section .section-disclaimer {
@@ -44,12 +44,12 @@
 }
 
 .collapsible-section .section-disclaimer button:hover:not(.dismiss) {
-    box-shadow: 0 0 0 5px var(--grey-80) !important;
+    box-shadow: 0 0 0 5px var(--dark-accent) !important;
 	}
 
 .collapsible-section .section-disclaimer button {
-    background: var(--grey-60) !important;
-    border: 1px solid var(--grey-50) !important;
+    background: var(--mid-way-color) !important;
+    border: 1px solid var(--light-accent-color) !important;
     color: var(--primary-light-color) !important;
 }
 
@@ -66,16 +66,16 @@
 .top-sites-list .top-site-outer:hover .tile,
 .top-sites-list .top-site-outer:focus .tile,
 .top-sites-list .top-site-outer.active .tile {
-      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 0 5px var(--grey-80) !important;
+      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 0 5px var(--dark-accent) !important;
 		}
 
 	.search-wrapper input {
 	    color: var(--primary-light-color) !important;
-	    background: #4a4a4f !important;
+	    background: var(--mid-way-color) !important;
 	}
 
 	.prefs-pane-button button {
-		fill: #4a4a4f !important
+		fill: var(--mid-way-color) !important
 	}
 
 	/* Preferencs/close button */
@@ -93,14 +93,14 @@
 
 	/* Inner options panel */
 	.prefs-pane .prefs-modal-inner-wrapper .options {
-		background: #4a4a4f !important;
+		background: var(--mid-way-color) !important;
 		border: 1px solid var(--primary-light-color);
 	}
 
 	/* Check boxes */
 	.prefs-pane [type="checkbox"]:not(:checked) + label::before, .prefs-pane [type="checkbox"]:checked + label::before {
 		border: 1px solid var(--primary-light-color) !important;
-		background: var(--grey-60) !important;
+		background: var(--mid-way-color) !important;
 	}
 
 	/* Check marks */
@@ -160,7 +160,7 @@
 	}
 
 	.contentSearchHeader, .search-wrapper .contentSearchSuggestionTable {
-	    background-color: var(--grey-60) !important;
+	    background-color: var(--mid-way-color) !important;
 	    color: var(--primary-light-color) !important;
 	    border-bottom: 1px solid var(--primary-light-color) !important;
 	}
@@ -170,7 +170,7 @@
 	.contentSearchSuggestionRow,
 	#contentSearchDefaultEngineHeader,
 	#contentSearchSearchWithHeader {
-	    background: var(--grey-60) !important;
+	    background: var(--mid-way-color) !important;
 	    color: var(--primary-light-color) !important;
 	}
 
@@ -217,25 +217,25 @@
 
 	 input[type="text"] {
 	     border: solid 1px var(--primary-light-color) !important;
-	     background: var(--grey-50) !important;
+	     background: var(--light-accent-color) !important;
 	     color: var(--primary-light-color) !important;
 	 }
 
 	 .actions button {
-	     background: var(--grey-60) !important;
+	     background: var(--mid-way-color) !important;
 	     border: 1px solid #B1B1B3;
 	 	color: var(--primary-light-color) !important;
 	 }
 
 	 /* overlay background */
 	 .modal-overlay {
-	     background: var(--grey-60) !important;
+	     background: var(--mid-way-color) !important;
 	 }
 
 	 /* Onboarding */
 
 	#onboarding-overlay {
-		background: var(--grey-60) !important;
+		background: var(--mid-way-color) !important;
 	}
 
 	#onboarding-overlay-dialog,

@@ -2,7 +2,7 @@
 
 	#topBar {
 	    -moz-appearance: none !important;
-		background: var(--grey-80) !important;
+		background: var(--dark-accent) !important;
 	}
 
 
@@ -20,7 +20,7 @@
 			-moz-appearance: none !important;
 			border: 1px solid rgb(0,0,0) !important;
 			color: rgb(200,200,200) !important;
-			background-color: var(--grey-60) !important;
+			background-color: var(--mid-way-color) !important;
 		}
 
 	treechildren::-moz-tree-row {
@@ -46,9 +46,9 @@
 
 	.permission {
 		-moz-appearance: none !important;
-	    background: var(--grey-60) !important;
+	    background: var(--mid-way-color) !important;
 		color: var(--primary-light-color) !important;
-		border-color: var(--grey-70) !important;
+		border-color: var(--primary-dark-color) !important;
 	}
 
 	#permPluginTemplate {
@@ -56,7 +56,7 @@
 	}
 
 	#permList {
-		border: 2px solid var(--grey-70) !important;
+		border: 2px solid var(--primary-dark-color) !important;
 	}
 
 	/* [WINDOWS ONLY] fixes */
@@ -69,7 +69,7 @@
        screen and (-moz-os-version: windows-win10) {
 		#topBar {
 		  -moz-appearance: none !important;
-		  background-color: var(--grey-80) !important;
+		  background-color: var(--dark-accent) !important;
 		  border: none !important;
 		  padding-top: 5px !important;
 		  padding-bottom: 5px !important;
@@ -84,7 +84,7 @@
 		#security-privacy-groupbox,
 		#security-technical-groupbox {
 		  -moz-appearance: none !important;
-		  background-color: var(--grey-70) !important;
+		  background-color: var(--primary-dark-color) !important;
 		  border: none !important;
 		  color: var(--grey-10) !important;
 		}
@@ -93,7 +93,7 @@
 		#security-privacy-groupbox,
 		#security-technical-groupbox {
 		  -moz-appearance: none !important;
-		  background-color: var(--grey-80) !important;
+		  background-color: var(--dark-accent) !important;
 		}
 	}
 }

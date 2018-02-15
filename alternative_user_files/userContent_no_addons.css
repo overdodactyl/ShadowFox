@@ -112,7 +112,7 @@
   popup > menu > menupopup,
   menupopup > menu > menupopup {
     -moz-appearance: none !important;
-    background: var(--grey-70) !important;
+    background: var(--primary-dark-color) !important;
     border: none !important;
   }
 
@@ -131,7 +131,7 @@
   menupopup menu:hover,
   menuitem:hover {
     color: var(--primary-light-color) !important;
-    background-color: var(--grey-80) !important;
+    background-color: var(--dark-accent) !important;
   }
 
   /* Menu Separators - removed */
@@ -155,7 +155,7 @@
     popup,
     popup > menu > menupopup,
     menupopup > menu > menupopup {
-      border: 1px solid var(--grey-80) !important;
+      border: 1px solid var(--dark-accent) !important;
     }
 }
 }
@@ -182,11 +182,11 @@
   .LanguageTools-header-row,
   .Footer,
   .amo {
-    background: var(--grey-80) !important;
+    background: var(--dark-accent) !important;
   }
 
   .LanguageTools-table-row:nth-child(2n) {
-    background: var(--grey-70) !important;
+    background: var(--primary-dark-color) !important;
   }
 
   /* Background Colors */
@@ -225,7 +225,7 @@
   .SearchForm-suggestions-item.SearchForm-suggestions-item,
   .Card-contents li,
   .Card-footer-text {
-    background: var(--grey-60) !important;
+    background: var(--mid-way-color) !important;
   }
 
   .Home-SubjectShelf-subheading,
@@ -272,7 +272,7 @@
   }
 
   .ShowMoreCard-contents::after {
-    background: linear-gradient(rgba(255, 255, 255, 0), var(--grey-60)) !important;
+    background: linear-gradient(rgba(255, 255, 255, 0), var(--mid-way-color)) !important;
   }
 
   .Home-SubjectShelf-link:active,
@@ -315,7 +315,7 @@
   }
 
   .AddonsCard--horizontal ul.AddonsCard-list .SearchResult-link:hover {
-    background: var(--grey-70) !important;
+    background: var(--primary-dark-color) !important;
     border-radius: 0px !important;
   }
 
@@ -333,7 +333,7 @@
 }
 @-moz-document url-prefix(file:///)  {
   :root {
-    background-color: var(--grey-60) !important;
+    background-color: var(--mid-way-color) !important;
   }
 
   body {
@@ -702,7 +702,7 @@
 
   *|button:hover {
     color: var(--primary-light-color) !important;
-    background: var(--grey-80) !important;
+    background: var(--dark-accent) !important;
   }
 
   #category-discover {
@@ -719,8 +719,8 @@
 
   textbox[type="search"] {
     color: var(--primary-light-color) !important;
-    background: var(--grey-60) !important;
-    border: 1px solid var(--grey-50) !important;
+    background: var(--mid-way-color) !important;
+    border: 1px solid var(--light-accent-color) !important;
   }
 
   textbox[focused] {
@@ -730,7 +730,7 @@
   /* about:debugging#addons */
 
   .addon-target-container {
-    background: var(--grey-80) !important;
+    background: var(--dark-accent) !important;
   }
 
   /* icon */
@@ -748,18 +748,18 @@
   }
 
   input[type="checkbox"] {
-    background: var(--grey-50) !important;
+    background: var(--light-accent-color) !important;
     border: none !important;
     box-shadow: none !important;
   }
 
   .service-worker-multi-process {
-    background-color: var(--grey-60) !important;
+    background-color: var(--mid-way-color) !important;
   }
 
   *.radio-check {
-    border: 1px solid var(--grey-50) !important;
-    background-color: var(--grey-50) !important;
+    border: 1px solid var(--light-accent-color) !important;
+    background-color: var(--light-accent-color) !important;
     background-image: none !important;
     box-shadow: none !important;
   }
@@ -779,14 +779,14 @@
   /* Text Box */
 
   textbox {
-    background: var(--grey-60) !important;
+    background: var(--mid-way-color) !important;
     color: var(--primary-light-color) !important;
   }
 
   /* Body Color */
 
   #configTreeBody::-moz-tree-row() {
-    background: var(--grey-60) !important;
+    background: var(--mid-way-color) !important;
   }
 
   /* Selected Color */
@@ -798,7 +798,7 @@
   /* Hover Color */
 
   #configTreeBody::-moz-tree-row(hover) {
-    background: var(--grey-70) !important;
+    background: var(--primary-dark-color) !important;
   }
 
   #configTreeBody::-moz-tree-row(header) {
@@ -828,7 +828,7 @@
 }
 @-moz-document url(about:healthreport)  {
   .headerContainer {
-    background: var(--grey-70) !important;
+    background: var(--primary-dark-color) !important;
     color: var(--primary-light-color) !important;
   }
 
@@ -856,12 +856,12 @@
   }
 }
 .advanced-panel {
-  background-color: var(--grey-60) !important;
-  border-color: var(--grey-50) !important;
+  background-color: var(--mid-way-color) !important;
+  border-color: var(--light-accent-color) !important;
 }
 
 .exceptionDialogButtonContainer {
-  background-color: var(--grey-80) !important;
+  background-color: var(--dark-accent) !important;
 }
 
 #learnMoreContainer #learnMoreLink {
@@ -869,14 +869,14 @@
 }
 
 .toggle-container-with-text input[type="checkbox"] {
-  border: 1px solid var(--grey-50) !important;
-  background-color: var(--grey-60) !important;
+  border: 1px solid var(--light-accent-color) !important;
+  background-color: var(--mid-way-color) !important;
   background-image: none !important;
   box-shadow: none !important;
 }
 
 .toggle-container-with-text input[type="checkbox"]:checked {
-  background-image: url("chrome://global/skin/in-content/check.svg"), linear-gradient(var(--grey-60), var(--grey-60)) !important;
+  background-image: url("chrome://global/skin/in-content/check.svg"), linear-gradient(var(--mid-way-color), var(--mid-way-color)) !important;
   fill: var(--primary-accent-color) !important;
 }
 
@@ -903,7 +903,7 @@
   .card-outer > a,
   .section-top-bar .section-info-option .info-option,
   .context-menu {
-    background: var(--grey-60) !important;
+    background: var(--mid-way-color) !important;
     color: var(--primary-light-color) !important;
   }
 
@@ -923,7 +923,7 @@
   }
 
   .card-outer:-moz-any(:hover, :focus, .active):not(.placeholder) {
-    box-shadow: 0 0 0 5px var(--grey-80) !important;
+    box-shadow: 0 0 0 5px var(--dark-accent) !important;
   }
 
   .collapsible-section .section-disclaimer {
@@ -931,12 +931,12 @@
   }
 
   .collapsible-section .section-disclaimer button:hover:not(.dismiss) {
-    box-shadow: 0 0 0 5px var(--grey-80) !important;
+    box-shadow: 0 0 0 5px var(--dark-accent) !important;
   }
 
   .collapsible-section .section-disclaimer button {
-    background: var(--grey-60) !important;
-    border: 1px solid var(--grey-50) !important;
+    background: var(--mid-way-color) !important;
+    border: 1px solid var(--light-accent-color) !important;
     color: var(--primary-light-color) !important;
   }
 
@@ -955,16 +955,16 @@
   .top-sites-list .top-site-outer:hover .tile,
   .top-sites-list .top-site-outer:focus .tile,
   .top-sites-list .top-site-outer.active .tile {
-    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 0 5px var(--grey-80) !important;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 0 5px var(--dark-accent) !important;
   }
 
   .search-wrapper input {
     color: var(--primary-light-color) !important;
-    background: #4a4a4f !important;
+    background: var(--mid-way-color) !important;
   }
 
   .prefs-pane-button button {
-    fill: #4a4a4f !important;
+    fill: var(--mid-way-color) !important;
   }
 
   /* Preferencs/close button */
@@ -984,7 +984,7 @@
   /* Inner options panel */
 
   .prefs-pane .prefs-modal-inner-wrapper .options {
-    background: #4a4a4f !important;
+    background: var(--mid-way-color) !important;
     border: 1px solid var(--primary-light-color);
   }
 
@@ -993,7 +993,7 @@
   .prefs-pane [type="checkbox"]:not(:checked) + label::before,
   .prefs-pane [type="checkbox"]:checked + label::before {
     border: 1px solid var(--primary-light-color) !important;
-    background: var(--grey-60) !important;
+    background: var(--mid-way-color) !important;
   }
 
   /* Check marks */
@@ -1061,7 +1061,7 @@
 
   .contentSearchHeader,
   .search-wrapper .contentSearchSuggestionTable {
-    background-color: var(--grey-60) !important;
+    background-color: var(--mid-way-color) !important;
     color: var(--primary-light-color) !important;
     border-bottom: 1px solid var(--primary-light-color) !important;
   }
@@ -1071,7 +1071,7 @@
   .contentSearchSuggestionRow,
   #contentSearchDefaultEngineHeader,
   #contentSearchSearchWithHeader {
-    background: var(--grey-60) !important;
+    background: var(--mid-way-color) !important;
     color: var(--primary-light-color) !important;
   }
 
@@ -1120,12 +1120,12 @@
 
   input[type="text"] {
     border: solid 1px var(--primary-light-color) !important;
-    background: var(--grey-50) !important;
+    background: var(--light-accent-color) !important;
     color: var(--primary-light-color) !important;
   }
 
   .actions button {
-    background: var(--grey-60) !important;
+    background: var(--mid-way-color) !important;
     border: 1px solid #B1B1B3;
     color: var(--primary-light-color) !important;
   }
@@ -1133,13 +1133,13 @@
   /* overlay background */
 
   .modal-overlay {
-    background: var(--grey-60) !important;
+    background: var(--mid-way-color) !important;
   }
 
   /* Onboarding */
 
   #onboarding-overlay {
-    background: var(--grey-60) !important;
+    background: var(--mid-way-color) !important;
   }
 
   #onboarding-overlay-dialog,
@@ -1158,7 +1158,7 @@
 
   #subprocess-reports td {
     background-color: var(--dark-accent) !important;
-    border-color: var(--grey-70) !important;
+    border-color: var(--primary-dark-color) !important;
   }
 }
 @-moz-document url(about:plugins)  {
@@ -1191,7 +1191,7 @@
   .checkbox-check,
   .radio-check {
     box-shadow: none !important;
-    background: var(--grey-60) !important;
+    background: var(--mid-way-color) !important;
   }
 
   menulist:not([editable="true"]) > *.menulist-dropmarker {
@@ -1217,17 +1217,17 @@
   }
 
   #searchInput {
-    background: var(--grey-60) !important;
+    background: var(--mid-way-color) !important;
     border: 1px solid var(--primary-light-color) !important;
     border-radius: 4px !important;
   }
 
   #handlersView {
-    background: var(--grey-60) !important;
+    background: var(--mid-way-color) !important;
   }
 
   listheader {
-    background: var(--grey-80) !important;
+    background: var(--dark-accent) !important;
   }
 
   #handlersView richlistitem[selected="true"] {
@@ -1236,7 +1236,7 @@
   }
 
   #handlersView richlistitem:hover {
-    background: var(--grey-70) !important;
+    background: var(--primary-dark-color) !important;
     color: var(--primary-light-color) !important;
   }
 
@@ -1247,7 +1247,7 @@
   /* Search Engines */
 
   #engineChildren::-moz-tree-row() {
-    background: var(--grey-60) !important;
+    background: var(--mid-way-color) !important;
   }
 
   .navigation {
@@ -1264,13 +1264,13 @@
 
   th {
     background-color: var(--primary-accent-color-dark) !important;
-    border-color: var(--grey-80) !important;
+    border-color: var(--dark-accent) !important;
   }
 
   td {
     color: var(--primary-light-color) !important;
     background-color: var(--dark-accent) !important;
-    border-color: var(--grey-80) !important;
+    border-color: var(--dark-accent) !important;
   }
 
   button {
@@ -1288,14 +1288,14 @@
   }
 
   .toolbar {
-    background-color: var(--grey-80) !important;
-    border-right: 1px solid var(--grey-60) !important;
+    background-color: var(--dark-accent) !important;
+    border-right: 1px solid var(--mid-way-color) !important;
   }
 
   .toolbar .button {
-    border-right: 1px solid var(--grey-60) !important;
-    border-bottom: 1px solid var(--grey-60) !important;
-    background-color: var(--grey-80) !important;
+    border-right: 1px solid var(--mid-way-color) !important;
+    border-bottom: 1px solid var(--mid-way-color) !important;
+    background-color: var(--dark-accent) !important;
   }
 
   .button:hover,
@@ -1303,7 +1303,7 @@
   .font-type-buttons > button:hover,
   .content-width-buttons > button:hover,
   .line-height-buttons > button:hover {
-    background-color: var(--grey-70) !important;
+    background-color: var(--primary-dark-color) !important;
   }
 
   .close-button:hover {
@@ -1312,9 +1312,9 @@
   }
 
   .dropdown-popup {
-    background-color: var(--grey-80) !important;
-    border: 1px solid var(--grey-60) !important;
-    box-shadow: 0 1px 3px var(--grey-60) !important;
+    background-color: var(--dark-accent) !important;
+    border: 1px solid var(--mid-way-color) !important;
+    box-shadow: 0 1px 3px var(--mid-way-color) !important;
   }
 
   .font-type-buttons > button:active:hover,
@@ -1331,8 +1331,8 @@
   .font-size-buttons > button,
   .content-width-buttons > button,
   .line-height-buttons > button {
-    border-left: 1px solid var(--grey-60) !important;
-    border-bottom: 1px solid var(--grey-60) !important;
+    border-left: 1px solid var(--mid-way-color) !important;
+    border-bottom: 1px solid var(--mid-way-color) !important;
   }
 
   .font-type-buttons > button:active:hover,
@@ -1354,7 +1354,7 @@
 
   .warningMessage {
     border: 1px solid var(--primary-light-color) !important;
-    background: var(--grey-60) !important;
+    background: var(--mid-way-color) !important;
     color: var(--primary-light-color) !important;
   }
 }
@@ -1383,7 +1383,7 @@
   td {
     color: var(--primary-light-color) !important;
     background-color: var(--dark-accent) !important;
-    border: 1px solid var(--grey-60) !important;
+    border: 1px solid var(--mid-way-color) !important;
   }
 
   button {

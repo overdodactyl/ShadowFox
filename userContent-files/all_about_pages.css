@@ -34,7 +34,7 @@
     /*Dark context menu*/
     menupopup, popup, popup > menu > menupopup, menupopup > menu > menupopup {
       	-moz-appearance: none !important;
-      	background: var(--grey-70) !important;
+      	background: var(--primary-dark-color) !important;
   		  border: none !important;
   	}
 
@@ -50,7 +50,7 @@
 
   	menupopup menu:hover, menuitem:hover {
     	color: var(--primary-light-color) !important;
-    	background-color: var(--grey-80) !important;
+    	background-color: var(--dark-accent) !important;
   	}
 
   	/* Menu Separators - removed */
@@ -72,7 +72,7 @@
   		popup,
   		popup > menu > menupopup,
   		menupopup > menu > menupopup {
-  		  border: 1px solid var(--grey-80) !important;
+  		  border: 1px solid var(--dark-accent) !important;
   		}
   	}
 }
