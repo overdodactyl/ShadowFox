@@ -2272,6 +2272,48 @@
     border-bottom: 1px solid var(--light-accent-color) !important;
   }
 }
+@-moz-document url-prefix("moz-extension://d4da3fda-d6b2-634a-af91-0d8b4f6fa8d1/")  {
+  /* Top Border */
+
+  .vimvixen-console-command-wrapper {
+    border-top: 1px solid var(--grey-60) !important;
+  }
+
+  /* Header */
+
+  .vimvixen-console-completion-title {
+    background-color: var(--grey-90) !important;
+    border-bottom: 1px solid var(--grey-60) !important;
+  }
+
+  /* Main Content */
+
+  .vimvixen-console-completion {
+    background-color: var(--grey-80) !important;
+    color: #b1b1b3 !important;
+  }
+
+  /* Command Line */
+
+  .vimvixen-console-command,
+  .vimvixen-console-command-input {
+    background-color: var(--grey-90) !important;
+    color: var(--grey-30) !important;
+  }
+
+  /* URL color */
+
+  .vimvixen-console-completion-item-url {
+    color: #86de74 !important;
+  }
+
+  /* Error Message */
+
+  .vimvixen-console-error {
+    background-color: rgb(75,49,55) !important;
+    color: rgb(255,148,148) !important;
+  }
+}
 @-moz-document url-prefix("https://addons.mozilla.org")  {
   /* Header & Footer */
 
