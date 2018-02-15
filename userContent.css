@@ -2272,6 +2272,9 @@
     border-bottom: 1px solid var(--light-accent-color) !important;
   }
 }
+/*! Alters the webextension Vim Vixen
+  IMPORTANT: change the Internal UUID */
+
 @-moz-document url-prefix("moz-extension://d4da3fda-d6b2-634a-af91-0d8b4f6fa8d1/")  {
   /* Top Border */
 
@@ -2291,6 +2294,7 @@
   .vimvixen-console-completion {
     background-color: var(--grey-80) !important;
     color: #b1b1b3 !important;
+    font-family: Menlo, monospace !important;
   }
 
   /* Command Line */
@@ -2305,6 +2309,11 @@
 
   .vimvixen-console-completion-item-url {
     color: #86de74 !important;
+  }
+
+  .vimvixen-console-completion-item.vimvixen-completion-selected {
+    background-color: rgb(68,57,31) !important;
+    color: rgb(252,225,159) !important;
   }
 
   /* Error Message */
