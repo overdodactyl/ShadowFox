@@ -6,11 +6,11 @@
 	.LanguageTools-header-row,
 	.Footer,
 	.amo {
-	    background: var(--grey-80) !important;
+	    background: var(--dark-accent) !important;
 	}
 
 	.LanguageTools-table-row:nth-child(2n) {
-	    background: var(--grey-70) !important;
+	    background: var(--primary-dark-color) !important;
 	}
 
 
@@ -47,7 +47,7 @@
 	.Card-contents li,
 	.Card-footer-text
 	{
-	    background: var(--grey-60) !important;
+	    background: var(--mid-way-color) !important;
 	}
 
 	.Home-SubjectShelf-subheading,
@@ -93,7 +93,7 @@
 	}
 
     .ShowMoreCard-contents::after {
-      background: linear-gradient(rgba(255, 255, 255, 0), var(--grey-60)) !important;
+      background: linear-gradient(rgba(255, 255, 255, 0), var(--mid-way-color)) !important;
     }
 
 	.Home-SubjectShelf-link:active,
@@ -137,7 +137,7 @@
 	}
 
 	.AddonsCard--horizontal ul.AddonsCard-list .SearchResult-link:hover {
-		background: var(--grey-70) !important;
+		background: var(--primary-dark-color) !important;
 		border-radius: 0px !important;
 	}
 

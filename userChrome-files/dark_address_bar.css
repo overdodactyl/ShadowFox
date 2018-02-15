@@ -3,7 +3,7 @@
 * Copyright © 2017 Jefferson Scher (BSD-3-Clause License or CC-BY License) */
 
 :root {
-	--panel-separator-color: var(--grey-60) !important;
+	--panel-separator-color: var(--mid-way-color) !important;
 }
 
 
@@ -18,7 +18,7 @@
 /* URL Bar Drop Down */
 
 #PopupAutoCompleteRichResult .autocomplete-richlistbox {
-	background-color: var(--grey-60) !important; 
+	background-color: var(--mid-way-color) !important; 
 } 
 
 #PopupAutoCompleteRichResult .autocomplete-richlistitem { 
@@ -29,7 +29,7 @@
 /* Hover color */
 .autocomplete-richlistitem:hover,
 treechildren.searchbar-treebody::-moz-tree-row(hover) {
-  background-color: var(--grey-70) !important;
+  background-color: var(--primary-dark-color) !important;
 }
 
  
@@ -63,7 +63,7 @@ treechildren.searchbar-treebody::-moz-tree-row(hover) {
 } 
 
 .search-one-offs {
-	background: var(--grey-60) !important;
+	background: var(--mid-way-color) !important;
 }
 
 .search-panel-input-value {
@@ -74,11 +74,11 @@ treechildren.searchbar-treebody::-moz-tree-row(hover) {
 
 /* Search one-offs */
 .search-panel-one-offs {
-	background: var(--grey-80) !important;
+	background: var(--dark-accent) !important;
 }
 
 .search-panel-header {
-	  background-color: var(--grey-80) !important;
+	  background-color: var(--dark-accent) !important;
     border-top: none !important;	
 }
 
@@ -102,11 +102,11 @@ panel[type="autocomplete"], panel[type="autocomplete-richlistbox"], .autocomplet
 }
 
 .searchbar-treebody::-moz-tree-row {
-    background-color: var(--grey-60) !important;
+    background-color: var(--mid-way-color) !important;
 }
 
 .searchbar-treebody::-moz-tree-row(hover) {
-    background-color: background-color: var(--grey-70) !important;
+    background-color: background-color: var(--primary-dark-color) !important;
 }
 
 .searchbar-treebody::-moz-tree-row(selected) {

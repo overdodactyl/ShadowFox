@@ -16,13 +16,13 @@
 /* main menu */
 .panel-subview-body, #appMenu-zoomReset-button {
   color: var(--grey-10) !important;
-  background: var(--grey-60) !important;
+  background: var(--mid-way-color) !important;
 }
 
 /* header of sub menus */
 .panel-subview-footer,[class^="PanelUI-"] {
   color: var(--grey-10) !important;
-  background: var(--grey-70) !important;
+  background: var(--primary-dark-color) !important;
 }
 
 /* webextension popup fix */
@@ -37,17 +37,17 @@ photonpanelmultiview panelview {
 }
 
 #emptyDownloads {
-    background: var(--grey-60) !important;
+    background: var(--mid-way-color) !important;
     color: var(--primary-light-color) !important;
 }
 
 #downloadsFooterButtons {
-    background: var(--grey-70) !important;
+    background: var(--primary-dark-color) !important;
     color: var(--primary-light-color) !important;
 }
 
 #downloadsFooter[showingsummary] > stack:not(:hover) {
-  background-color: var(--grey-80) !important;
+  background-color: var(--dark-accent) !important;
 }
 
 /* Fix downloads list - only appears to be necessary in Nightly */
@@ -58,7 +58,7 @@ photonpanelmultiview panelview {
 
 #appMenu-mainView toolbarbutton:hover,  #customizationui-widget-multiview toolbarbutton:hover,
 #widget-overflow-list toolbarbutton:hover {
-  background: var(--grey-80) !important;
+  background: var(--dark-accent) !important;
 }
 
 #BMB_bookmarksPopup {
@@ -68,7 +68,7 @@ photonpanelmultiview panelview {
 
 /* Secure Connection Drop Down */
 #identity-popup-securityView {
-    background: var(--grey-60) !important;
+    background: var(--mid-way-color) !important;
 }
 
 /* Divider */
@@ -87,7 +87,7 @@ photonpanelmultiview panelview {
 
 /* Main Background */
 #identity-popup-mainView {
-    background: var(--grey-60) !important;
+    background: var(--mid-way-color) !important;
     color: var(--primary-light-color) !important;
 }
 
@@ -104,14 +104,14 @@ photonpanelmultiview panelview {
 
 /* Change color of text to account for ^^ */
 #identity-popup-permissions-content {
-    color: var(--grey-70) !important;
+    color: var(--primary-dark-color) !important;
 }
 
 /* More info right button */
 .identity-popup-expander {
-    border-right: solid 1px var(--grey-50) !important;
-    background-color: var(--grey-60) !important;
-    fill: var(--grey-50) !important;
+    border-right: solid 1px var(--light-accent-color) !important;
+    background-color: var(--mid-way-color) !important;
+    fill: var(--light-accent-color) !important;
 }
 
 
@@ -149,6 +149,6 @@ toolbar[brighttext] {
 }
 
 ::-moz-selection {
-  background: var(--blue-40);
+  background: var(--primary-accent-color);
   color: white !important;
 }

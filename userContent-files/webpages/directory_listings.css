@@ -1,6 +1,6 @@
 @-moz-document url-prefix(file:///) {
 	:root {
-		background-color: var(--grey-60) !important;
+		background-color: var(--mid-way-color) !important;
 	}
 
 	body {

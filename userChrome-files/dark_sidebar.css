@@ -6,7 +6,7 @@
 /* Sidebar */
 .sidebar-placesTree {
     -moz-appearance: none !important;
-    background: var(--grey-70) !important;
+    background: var(--primary-dark-color) !important;
     color: var(--primary-light-color) !important;
     opacity: 1 !important;
 }
@@ -18,13 +18,13 @@
 
 /* Sidebar Header */
 .sidebar-header, #sidebar-header {
-    background: var(--grey-80) !important;
+    background: var(--dark-accent) !important;
     color: var(--primary-light-color) !important;
 }
 
 /* Sidebar search container */
 #sidebar-search-container {
-    background: var(--grey-80) !important;
+    background: var(--dark-accent) !important;
     color: var(--primary-light-color) !important;
 }
 
@@ -33,7 +33,7 @@
 #sidebar-search-container textbox {
     -moz-appearance: none !important;
     border-radius: .3em !important;
-    background-color: var(--grey-60) !important;
+    background-color: var(--mid-way-color) !important;
     color: var(--primary-light-color) !important;
     border: solid 1px var(--mid-way-color) !important;
 }
@@ -78,6 +78,6 @@ scrollbar > slider {
 
 scrollbar > slider > thumb, scrollbar > scrollbarbutton {
   -moz-appearance: none !important;
-  background-color: var(--grey-80) !important;;
+  background-color: var(--dark-accent) !important;;
 }
 */

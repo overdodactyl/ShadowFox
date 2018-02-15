@@ -1,6 +1,6 @@
 /* Top Border */
 .browserContainer > findbar {
-    border-top: 1px solid var(--grey-80) !important;
+    border-top: 1px solid var(--dark-accent) !important;
 }
 
 /* Alter buttons */

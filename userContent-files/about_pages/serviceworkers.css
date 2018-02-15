@@ -6,7 +6,7 @@
 	
 	.warningMessage {
 	    border: 1px solid var(--primary-light-color) !important;
-	    background: var(--grey-60) !important;
+	    background: var(--mid-way-color) !important;
 	    color: var(--primary-light-color) !important;
 	}
 	

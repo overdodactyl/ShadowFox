@@ -19,7 +19,7 @@
 	td {
 	    color: var(--primary-light-color) !important;
 	    background-color: var(--dark-accent) !important;
-		  border: 1px solid var(--grey-60) !important;
+		  border: 1px solid var(--mid-way-color) !important;
 	}
 
 	button {

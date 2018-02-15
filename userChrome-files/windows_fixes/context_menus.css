@@ -90,7 +90,7 @@ menupopup#toolbar-context-menu,
 menupopup#downloadsContextMenu,
 menupopup#tabContextMenu,
 menupopup > menu > menupopup {
-  border-color: var(--grey-70) !important;
+  border-color: var(--primary-dark-color) !important;
   border-width: 1px !important;
   border-style: solid !important;
 }

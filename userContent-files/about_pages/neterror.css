@@ -1,10 +1,10 @@
 .advanced-panel {
-    background-color: var(--grey-60) !important;
-		border-color: var(--grey-50) !important;
+    background-color: var(--mid-way-color) !important;
+		border-color: var(--light-accent-color) !important;
 }
 
 .exceptionDialogButtonContainer {
-    background-color: var(--grey-80) !important;
+    background-color: var(--dark-accent) !important;
 }
 
 #learnMoreContainer #learnMoreLink {
@@ -12,14 +12,14 @@
 }
 
 .toggle-container-with-text input[type="checkbox"] {
-    border: 1px solid var(--grey-50) !important;
-    background-color: var(--grey-60) !important;
+    border: 1px solid var(--light-accent-color) !important;
+    background-color: var(--mid-way-color) !important;
     background-image: none !important;
     box-shadow: none !important;
 }
 
 .toggle-container-with-text input[type="checkbox"]:checked {
-    background-image: url("chrome://global/skin/in-content/check.svg"), linear-gradient(var(--grey-60), var(--grey-60)) !important;
+    background-image: url("chrome://global/skin/in-content/check.svg"), linear-gradient(var(--mid-way-color), var(--mid-way-color)) !important;
     fill: var(--primary-accent-color) !important;
 }
 

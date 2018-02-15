@@ -7,9 +7,9 @@
 #editBMPanel_foldersExpander,
 #editBMPanel_tagsSelectorExpander {
     -moz-appearance: none !important;
-    background: var(--grey-70) !important;
+    background: var(--primary-dark-color) !important;
     color: var(--primary-light-color) !important;
-    border: 1px solid var(--grey-50) !important;
+    border: 1px solid var(--light-accent-color) !important;
     box-shadow: none !important;
 }
 
@@ -20,14 +20,14 @@
 #editBMPanel_folderTree,
 #editBMPanel_tagsSelector {
     -moz-appearance: none !important;
-    background: var(--grey-70) !important;
+    background: var(--primary-dark-color) !important;
     color: var(--primary-light-color) !important;
     opacity: 1 !important;
 }
 
 #editBMPanel_folderTree treechildren:not(.autocomplete-treebody)::-moz-tree-row,
 #editBMPanel_tagsSelector treechildren:not(.autocomplete-treebody)::-moz-tree-row {
-    background: var(--grey-60) !important;
+    background: var(--mid-way-color) !important;
     color: var(--primary-light-color) !important;
 }
 
@@ -60,16 +60,16 @@ listitem[selected="true"] {
 }
 
 #editBMPanel_folderTree treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, current) {
-  background: var(--blue-40) !important;
+  background: var(--primary-accent-color) !important;
 }
 
 #editBMPanel_folderTree {
-    border: 1px solid var(--grey-50) !important;
+    border: 1px solid var(--light-accent-color) !important;
     border-bottom: none !important;
 }
 
 #editBMPanel_newFolderBox {
-    background: var(--grey-70) !important;
-    border: 1px solid var(--grey-50) !important;
+    background: var(--primary-dark-color) !important;
+    border: 1px solid var(--light-accent-color) !important;
     box-shadow: none !important;
 }
