@@ -2322,6 +2322,25 @@
     background-color: rgb(75,49,55) !important;
     color: rgb(255,148,148) !important;
   }
+
+  /* Settings page in about:addons */
+
+  .vimvixen-settings-form,
+  h1 {
+    color: var(--primary-light-color) !important;
+  }
+
+  .vimvixen-settings-form textarea[name="json"] {
+    background-color: var(--grey-60) !important;
+    -moz-appearance: none !important;
+    color: var(--primary-light-color) !important;
+    border-color: var(--grey-60);
+  }
+
+  ::-moz-selection {
+    color: var(--grey-30);
+    background: var(--primary-accent-color-dark);
+  }
 }
 @-moz-document url-prefix("https://addons.mozilla.org")  {
   /* Header & Footer */
