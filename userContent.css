@@ -1359,6 +1359,39 @@
     color: var(--primary-light-color) !important;
   }
 }
+/*! Alters the webextension Neat URL
+  IMPORTANT: change the Internal UUID */
+
+@-moz-document url-prefix("moz-extension://2b51bd1f-a120-ea4b-9c78-2b21416143d8/")  {
+  label,
+  h2,
+  body {
+    color: var(--primary-light-color) !important;
+  }
+
+  textarea,
+  input {
+    -moz-appearance: none !important;
+    background: var(--mid-way-color) !important;
+    color: var(--primary-light-color) !important;
+    border: 1px solid var(--light-accent-color) !important;
+    padding: 5px 5px 5px 5px !important;
+  }
+
+  a:link {
+    color: var(--primary-accent-color) !important;
+  }
+
+  button {
+    background-color: var(--dark-accent) !important;
+    color: var(--primary-light-color) !important;
+    border-color: var(--light-accent-color) !important;
+  }
+
+  button:hover {
+    background-color: var(--primary-dark-color) !important;
+  }
+}
 /*! Alters the webextension NoScript
   IMPORTANT: change the Internal UUID */
 
