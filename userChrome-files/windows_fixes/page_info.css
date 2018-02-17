@@ -1,28 +1,31 @@
-#topBar {
-  -moz-appearance: none !important;
-  background-color: var(--dark-accent) !important;
-  border: none !important;
-  padding-top: 5px !important;
-  padding-bottom: 5px !important;
-  color: var(--grey-20) !important;
-}
+@-moz-document url(chrome://browser/content/pageinfo/pageInfo.xul) {
 
-#metaTagsCaption,
-#security-identity,
-#security-privacy,
-#security-technical,
-#security-identity-groupbox,
-#security-privacy-groupbox,
-#security-technical-groupbox {
-  -moz-appearance: none !important;
-  background-color: var(--primary-dark-color) !important;
-  border: none !important;
-  color: var(--grey-10) !important;
-}
+  #topBar {
+    -moz-appearance: none !important;
+    background-color: var(--dark-accent) !important;
+    border: none !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    color: var(--grey-20) !important;
+  }
 
-#security-identity-groupbox,
-#security-privacy-groupbox,
-#security-technical-groupbox {
-  -moz-appearance: none !important;
-  background-color: var(--dark-accent) !important;
-}
+  #metaTagsCaption,
+  #security-identity,
+  #security-privacy,
+  #security-technical,
+  #security-identity-groupbox,
+  #security-privacy-groupbox,
+  #security-technical-groupbox {
+    -moz-appearance: none !important;
+    background-color: var(--primary-dark-color) !important;
+    border: none !important;
+    color: var(--grey-10) !important;
+  }
+
+  #security-identity-groupbox,
+  #security-privacy-groupbox,
+  #security-technical-groupbox {
+    -moz-appearance: none !important;
+    background-color: var(--dark-accent) !important;
+  }
+  }
