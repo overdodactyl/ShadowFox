@@ -1,19 +1,24 @@
-#metaTagsCaption,
-#security-identity,
-#security-privacy,
-#security-technical,
-#security-identity-groupbox,
-#security-privacy-groupbox,
-#security-technical-groupbox {
-  -moz-appearance: none !important;
-  background-color: var(--primary-dark-color) !important;
-  border: none !important;
-  color: var(--grey-10) !important;
-}
+@-moz-document url(chrome://browser/content/places/places.xul),
+url(chrome://browser/content/places/bookmarkProperties.xul) {
 
-#security-identity-groupbox,
-#security-privacy-groupbox,
-#security-technical-groupbox {
-  -moz-appearance: none !important;
-  background-color: var(--dark-accent) !important;
+  #metaTagsCaption,
+  #security-identity,
+  #security-privacy,
+  #security-technical,
+  #security-identity-groupbox,
+  #security-privacy-groupbox,
+  #security-technical-groupbox {
+    -moz-appearance: none !important;
+    background-color: var(--primary-dark-color) !important;
+    border: none !important;
+    color: var(--grey-10) !important;
+  }
+
+  #security-identity-groupbox,
+  #security-privacy-groupbox,
+  #security-technical-groupbox {
+    -moz-appearance: none !important;
+    background-color: var(--dark-accent) !important;
+  }
+
 }
