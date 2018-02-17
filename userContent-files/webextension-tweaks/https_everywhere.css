@@ -1,7 +1,7 @@
 /*! Alters the webextension HTTPS Everywhere
   IMPORTANT: change the Internal UUID */
 
-@-moz-document url-prefix("moz-extension://897dfa7c-fa54-be49-996c-594df8db2260/") {
+@-moz-document url-prefix("moz-extension://https_everywhere_UUID/") {
 
   body {
     color: var(--primary-light-color) !important;

@@ -1,7 +1,7 @@
 /*! Alters the webextension Dark Mode
   IMPORTANT: change the Internal UUID */
 
-@-moz-document url-prefix("moz-extension://32b18bd1-4169-b649-b20a-ebafe1e7e549/") {
+@-moz-document url-prefix("moz-extension://dark_mode_UUID/") {
 
 	/* Headers */
 	.comment {

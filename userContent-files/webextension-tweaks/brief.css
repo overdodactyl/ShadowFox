@@ -1,7 +1,7 @@
 /*! Alters the webextension Brief
   IMPORTANT: change the Internal UUID */
 
-@-moz-document url-prefix("moz-extension://e0561760-8efe-b747-9e3b-ffcd6a3f29bc/") {
+@-moz-document url-prefix("moz-extension://brief_UUID/") {
   h2 {
     color: var(--primary-accent-color) !important;
   }

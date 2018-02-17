@@ -1,7 +1,7 @@
 /*! Alters the webextension Tab Suspender (memory saver)
   IMPORTANT: change the Internal UUID */
 
-@-moz-document url-prefix("moz-extension://731831ee-3f54-b049-8509-193907bdaa5d/") {
+@-moz-document url-prefix("moz-extension://tab_suspender_UUID/") {
 
   label,
   body {

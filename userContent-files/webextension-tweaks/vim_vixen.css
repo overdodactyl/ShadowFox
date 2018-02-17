@@ -1,7 +1,7 @@
 /*! Alters the webextension Vim Vixen
   IMPORTANT: change the Internal UUID */
 
-@-moz-document url-prefix("moz-extension://d4da3fda-d6b2-634a-af91-0d8b4f6fa8d1/") {
+@-moz-document url-prefix("moz-extension://vim_vixen_UUID/") {
 
   /* Top Border */
   .vimvixen-console-command-wrapper {
