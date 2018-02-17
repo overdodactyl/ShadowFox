@@ -72,6 +72,10 @@
   --primary-accent-color-dark: var(--blue-50);
   --primary-accent-color-darkest: var(--blue-60);
 }
+
+/*! Begin color overrides */
+
+/*! End color overrides */
 @-moz-document url(chrome://browser/content/aboutDialog.xul)  {
   #clientBox {
     color: var(--primary-light-color) !important;
