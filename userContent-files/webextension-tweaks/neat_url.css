@@ -1,7 +1,7 @@
 /*! Alters the webextension Neat URL
   IMPORTANT: change the Internal UUID */
 
-@-moz-document url-prefix("moz-extension://2b51bd1f-a120-ea4b-9c78-2b21416143d8/") {
+@-moz-document url-prefix("moz-extension://neat_url_UUID/") {
   label,
   h2,
   body {

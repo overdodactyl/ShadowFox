@@ -1,7 +1,7 @@
 /*! Alters the webextension Cookie AutoDelete
   IMPORTANT: change the Internal UUID */
 
-@-moz-document url-prefix("moz-extension://789561e8-17c9-874c-ad1c-6a8226b1f2f1/") {
+@-moz-document url-prefix("moz-extension://cookie_autodelete_UUID/") {
 
   a {
       color: var(--primary-accent-color);
