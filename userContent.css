@@ -58,16 +58,12 @@
 }
 
 :root {
-  --primary-dark-color: var(--grey-70);
-  /* Color of FF dark theme nav-bar */
   --primary-light-color: var(--grey-40);
-  /* Off white */
   --light-accent-color: var(--grey-50);
-  /* Slightly darker off white */
-  --dark-accent: var(--grey-80);
-  /* darker shade of main color */
   --mid-way-color: var(--grey-60);
-  /* inbetween main dark and light color */
+  --primary-dark-color: var(--grey-70);
+  --dark-accent: var(--grey-80);
+  --darksest: var(--grey-90);
   --primary-accent-color: var(--blue-40);
   --primary-accent-color-dark: var(--blue-50);
   --primary-accent-color-darkest: var(--blue-60);
@@ -220,7 +216,7 @@
 
   .detail-view-container {
     font-size: 1.25rem;
-    color: #ccc !important;
+    color: var(--primary-light-color) !important;
   }
 
   page#addons-page,
@@ -232,7 +228,7 @@
   #categories,
   #header-utils-btn {
     background: var(--primary-dark-color) !important;
-    color: #ccc important;
+    color: var(--primary-light-color) important;
   }
 
   richlistitem.category:not([selected]),
@@ -600,7 +596,7 @@
   /* Preferencs/close button */
 
   .prefs-pane-button button:hover {
-    background-color: var(--grey-90) !important;
+    background-color: var(--darksest) !important;
   }
 
   /* Main background */
@@ -670,7 +666,7 @@
   /* Onboarding Message */
 
   #onboarding-notification-bar {
-    background: var(--grey-90) !important;
+    background: var(--darksest) !important;
     color: var(--primary-light-color) !important;
     border-top: 2px solid var(--primary-dark-color) !important;
   }
@@ -1055,7 +1051,7 @@
 /*! Alters the webextension Brief
   IMPORTANT: change the Internal UUID */
 
-@-moz-document url-prefix("moz-extension://e0561760-8efe-b747-9e3b-ffcd6a3f29bc/")  {
+@-moz-document url-prefix("moz-extension://brief_UUID/")  {
   h2 {
     color: var(--primary-accent-color) !important;
   }
@@ -1084,7 +1080,7 @@
 /*! Alters the webextension Cookie AutoDelete
   IMPORTANT: change the Internal UUID */
 
-@-moz-document url-prefix("moz-extension://789561e8-17c9-874c-ad1c-6a8226b1f2f1/")  {
+@-moz-document url-prefix("moz-extension://cookie_autodelete_UUID/")  {
   a {
     color: var(--primary-accent-color);
   }
@@ -1146,7 +1142,7 @@
 /*! Alters the webextension Dark Mode
   IMPORTANT: change the Internal UUID */
 
-@-moz-document url-prefix("moz-extension://32b18bd1-4169-b649-b20a-ebafe1e7e549/")  {
+@-moz-document url-prefix("moz-extension://dark_mode_UUID/")  {
   /* Headers */
 
   .comment {
@@ -1395,7 +1391,7 @@
 /*! Alters the webextension NoScript
   IMPORTANT: change the Internal UUID */
 
-@-moz-document url-prefix("moz-extension://856ddafd-d0a5-f04e-b493-1c651b88b555/")  {
+@-moz-document url-prefix("moz-extension://noscript_UUID/")  {
   body {
     background: var(--mid-way-color) !important;
   }
@@ -1612,7 +1608,7 @@
 /*! Alters the webextension Smart HTTPS
   IMPORTANT: change the Internal UUID */
 
-@-moz-document url-prefix("moz-extension://3f7c8927-a1d4-6349-ab7f-91a7f031a571/")  {
+@-moz-document url-prefix("moz-extension://smart_https_UUID/")  {
   body {
     background-color: var(--mid-way-color) !important;
     color: var(--primary-light-color) !important;
@@ -1633,7 +1629,7 @@
 /*! Alters the webextension Tab Suspender (memory saver)
   IMPORTANT: change the Internal UUID */
 
-@-moz-document url-prefix("moz-extension://731831ee-3f54-b049-8509-193907bdaa5d/")  {
+@-moz-document url-prefix("moz-extension://tab_suspender_UUID/")  {
   label,
   body {
     color: var(--primary-light-color) !important;
@@ -1713,63 +1709,6 @@
 
   h1::before {
     background: var(--primary-light-color) !important;
-  }
-}
-/*! Alters the webextension uBO-Scope
-  IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://7ce809b7-4a3b-484c-89de-42aa4db7f5de/")  {
-  body {
-    background: var(--mid-way-color) !important;
-  }
-
-  #topPane {
-    background-color: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-
-  #heatmaps .togglerBar {
-    background: var(--mid-way-color) !important;
-  }
-
-  body.theoretical #heatmaps .heatmap.theoretical {
-    background: var(--mid-way-color) !important;
-  }
-
-  #heatmaps .heatmap {
-    border: none;
-    background: var(--mid-way-color) !important;
-  }
-
-  #heatmaps.list .hmcell {
-    background-color: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-
-  #domain3rdDetails {
-    background-color: var(--primary-dark-color) !important;
-    border: 1px solid var(--primary-dark-color) !important;
-  }
-
-  #domain3rdDetails #authority {
-    background-color: var(--dark-accent) !important;
-    position: relative;
-  }
-
-  #scores .scores .score.actual {
-    color: white !important;
-  }
-
-  #scores .scores .score.theoretical {
-    color: var(--primary-dark-color) !important;
-  }
-
-  body.theoretical #scores .scores .score.actual {
-    color: var(--primary-dark-color) !important;
-  }
-
-  body.theoretical #scores .scores .score.theoretical {
-    color: var(--primary-light-color) !important;
   }
 }
 /*! Alters the webextension uBlock Origin
@@ -2058,6 +1997,63 @@
     color: var(--primary-light-color) !important;
   }
 }
+/*! Alters the webextension uBO-Scope
+  IMPORTANT: change the Internal UUID */
+
+@-moz-document url-prefix("moz-extension://ubo_scope_UUID/")  {
+  body {
+    background: var(--mid-way-color) !important;
+  }
+
+  #topPane {
+    background-color: var(--mid-way-color) !important;
+    color: var(--primary-light-color) !important;
+  }
+
+  #heatmaps .togglerBar {
+    background: var(--mid-way-color) !important;
+  }
+
+  body.theoretical #heatmaps .heatmap.theoretical {
+    background: var(--mid-way-color) !important;
+  }
+
+  #heatmaps .heatmap {
+    border: none;
+    background: var(--mid-way-color) !important;
+  }
+
+  #heatmaps.list .hmcell {
+    background-color: var(--mid-way-color) !important;
+    color: var(--primary-light-color) !important;
+  }
+
+  #domain3rdDetails {
+    background-color: var(--primary-dark-color) !important;
+    border: 1px solid var(--primary-dark-color) !important;
+  }
+
+  #domain3rdDetails #authority {
+    background-color: var(--dark-accent) !important;
+    position: relative;
+  }
+
+  #scores .scores .score.actual {
+    color: white !important;
+  }
+
+  #scores .scores .score.theoretical {
+    color: var(--primary-dark-color) !important;
+  }
+
+  body.theoretical #scores .scores .score.actual {
+    color: var(--primary-dark-color) !important;
+  }
+
+  body.theoretical #scores .scores .score.theoretical {
+    color: var(--primary-light-color) !important;
+  }
+}
 /*! Alters the webextension uMatrix
   IMPORTANT: change the Internal UUID */
 
@@ -2084,7 +2080,7 @@
   .tabButton.selected {
     border-bottom: none !important;
     background-color: var(--primary-dark-color) !important;
-    border-color: var(--grey-50 ) !important;
+    border-color: var(--light-accent-color) !important;
     color: var(--primary-accent-color) !important;
   }
 
@@ -2316,20 +2312,20 @@
   /* Top Border */
 
   .vimvixen-console-command-wrapper {
-    border-top: 1px solid var(--grey-60) !important;
+    border-top: 1px solid var(--mid-way-color) !important;
   }
 
   /* Header */
 
   .vimvixen-console-completion-title {
-    background-color: var(--grey-90) !important;
-    border-bottom: 1px solid var(--grey-60) !important;
+    background-color: var(--darksest) !important;
+    border-bottom: 1px solid var(--mid-way-color) !important;
   }
 
   /* Main Content */
 
   .vimvixen-console-completion {
-    background-color: var(--grey-80) !important;
+    background-color: var(--dark-accent) !important;
     color: #b1b1b3 !important;
     font-family: Menlo, monospace !important;
   }
@@ -2338,7 +2334,7 @@
 
   .vimvixen-console-command,
   .vimvixen-console-command-input {
-    background-color: var(--grey-90) !important;
+    background-color: var(--darksest) !important;
     color: var(--grey-30) !important;
   }
 
@@ -2368,10 +2364,10 @@
   }
 
   .vimvixen-settings-form textarea[name="json"] {
-    background-color: var(--grey-60) !important;
+    background-color: var(--mid-way-color) !important;
     -moz-appearance: none !important;
     color: var(--primary-light-color) !important;
-    border-color: var(--grey-60);
+    border-color: var(--mid-way-color);
   }
 
   ::-moz-selection {

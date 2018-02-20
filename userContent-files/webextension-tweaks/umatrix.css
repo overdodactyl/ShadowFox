@@ -25,7 +25,7 @@
   .tabButton.selected {
     border-bottom: none !important;
     background-color: var(--primary-dark-color) !important;
-    border-color: var(--grey-50 ) !important;
+    border-color: var(--light-accent-color) !important;
     color: var(--primary-accent-color) !important;
   }
 

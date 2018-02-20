@@ -5,18 +5,18 @@
 
   /* Top Border */
   .vimvixen-console-command-wrapper {
-    border-top: 1px solid var(--grey-60) !important;
+    border-top: 1px solid var(--mid-way-color) !important;
   }
 
   /* Header */
   .vimvixen-console-completion-title {
-    background-color: var(--grey-90) !important;
-    border-bottom: 1px solid var(--grey-60) !important;
+    background-color: var(--darksest) !important;
+    border-bottom: 1px solid var(--mid-way-color) !important;
   }
 
   /* Main Content */
   .vimvixen-console-completion {
-    background-color: var(--grey-80) !important;
+    background-color: var(--dark-accent) !important;
     color: #b1b1b3 !important;
     font-family: Menlo, monospace !important;
   }
@@ -24,7 +24,7 @@
   /* Command Line */
   .vimvixen-console-command,
   .vimvixen-console-command-input {
-    background-color: var(--grey-90) !important;
+    background-color: var(--darksest) !important;
     color: var(--grey-30) !important;
   }
 
@@ -52,10 +52,10 @@
   }
 
   .vimvixen-settings-form textarea[name="json"] {
-    background-color: var(--grey-60) !important;
+    background-color: var(--mid-way-color) !important;
     -moz-appearance: none !important;
     color: var(--primary-light-color) !important;
-    border-color: var(--grey-60);
+    border-color: var(--mid-way-color);
   }
 
   ::-moz-selection {

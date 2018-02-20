@@ -80,7 +80,7 @@
 
 	/* Preferencs/close button */
 	  .prefs-pane-button button:hover {
-	    background-color: var(--grey-90) !important;;
+	    background-color: var(--darksest) !important;;
 	  }
 
 
@@ -140,7 +140,7 @@
 
 	/* Onboarding Message */
 	#onboarding-notification-bar {
-		background: var(--grey-90) !important;
+		background: var(--darksest) !important;
 		color: var(--primary-light-color) !important;
 		border-top: 2px solid var(--primary-dark-color) !important;
 	}
