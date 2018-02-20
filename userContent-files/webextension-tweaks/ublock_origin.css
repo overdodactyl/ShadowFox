@@ -97,12 +97,14 @@
   }
 
   /* Darker Red */
-  body.advancedUser #firewallContainer > div > span.blockRule.ownRule {
+  body.advancedUser #firewallContainer > div > span.blockRule.ownRule,
+  #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action.own.block {
     background-color: #ab0000 !important;
   }
 
   /* Lighter Red */
-  body.advancedUser #firewallContainer > div > span.blockRule {
+  body.advancedUser #firewallContainer > div > span.blockRule,
+  #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action > span.block {
     background-color: #dda0a2 !important;
   }
 
@@ -114,12 +116,14 @@
 
 
   /* Darker Green */
-  body.advancedUser #firewallContainer > div > span.allowRule.ownRule {
+  body.advancedUser #firewallContainer > div > span.allowRule.ownRule,
+  #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action.own.allow {
     background-color: #229400 !important;
   }
 
   /* Lighter Green */
-  body.advancedUser #firewallContainer > div > span.allowRule {
+  body.advancedUser #firewallContainer > div > span.allowRule,
+  #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action > span.allow {
     background-color: #95ca8a !important;
 
   }
@@ -131,7 +135,8 @@
   }
 
   /* Darker Blue */
-  body.advancedUser #firewallContainer > div > span.noopRule.ownRule {
+  body.advancedUser #firewallContainer > div > span.noopRule.ownRule,
+  #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action.own.noop {
       background-color: #0c46a7 !important;
   }
 
@@ -141,7 +146,8 @@
   }
 
   /* Lighter Blue */
-  body.advancedUser #firewallContainer > div > span.noopRule {
+  body.advancedUser #firewallContainer > div > span.noopRule,
+  #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action > span.noop {
     background-color: #65bdfb !important;
   }
 
@@ -252,6 +258,82 @@
 
   }
 
+  /* Logger */
+  .permatoolbar {
+    background-color: var(--primary-dark-color) !important;
+  }
 
+  .permatoolbar .button,
+  .permatoolbar #refresh {
+    background-color: transparent !important;
+  }
+
+  .permatoolbar .button:hover,
+  .permatoolbar #refresh {
+    background-color: var(--grey-60) !important;
+  }
+
+  #netInspector tr.blocked {
+    background-color: rgb(75,49,55) !important;
+    color: rgb(255,148,148) !important;
+  }
+
+  #netInspector #filterInput,
+  #netInspector #maxEntries {
+    -moz-appearance: none !important;
+    background: var(--mid-way-color) !important;
+    color: var(--primary-light-color) !important;
+    border: 1px solid var(--light-accent-color) !important;
+    padding: 5px 5px 5px 5px !important;
+  }
+
+  #netInspector tr.cosmetic, #netInspector tr.redirect {
+    background-color: rgb(68,57,31) !important;
+    color: rgb(252,225,159) !important;
+  }
+
+  body:not(.popupOn) #netInspector tr.canMtx td:nth-of-type(2):hover,
+  #netInspector tr.cat_net td:nth-of-type(4):hover {
+    background: var(--dark-accent) !important;
+  }
+
+  .modalDialog .dialog {
+    background-color: var(--dark-accent) !important;
+    border: 2px solid var(--dark-accent) !important;
+  }
+
+  #netFilteringDialog .dialog > div.headers > span.header.selected {
+    background-color: var(--dark-accent) !important;
+    color: var(--primary-light-color) !important;
+    border-color: var(--mid-way-color) !important;
+  }
+  
+  #netFilteringDialog .dialog > div.headers > span.header {
+    background-color: var(--primary-dark-color) !important;
+    border-color: var(--mid-way-color) !important;
+  }
+
+  #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry {
+    background-color: var(--mid-way-color) !important;
+    border-color: var(--light-accent-color) !important;
+  }
+
+  #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td:first-of-type {
+    border-color: var(--light-accent-color) !important;
+  }
+
+  #netFilteringDialog .dialog > div.containers > div.dynamic > table.toolbar #saveRules {
+    background-color: var(--mid-way-color) !important;
+    border: none !important;
+  }
+
+  body #netInspector td {
+    border-color: var(--light-accent-color) !important;
+  }
+
+  #netInspector tr.maindoc {
+    background-color: var(--dark-accent) !important;
+    color: var(--grey-30) !important;
+  }
 
 }
