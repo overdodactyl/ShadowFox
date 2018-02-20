@@ -7,46 +7,56 @@ url(chrome://browser/content/places/bookmarkProperties.xul) {
 		-moz-appearance: none !important;
 		background-color: var(--primary-dark-color) !important;
 		color: var(--primary-light-color) !important;
-		border: 0px solid black !important;
+		border: none !important;
 	}
 
 	/* Toolbar */
 	toolbar {
 		-moz-appearance: none !important;
 		background-color: var(--dark-accent) !important;
-		border: 0px solid black !important;
+		border: none !important;
 	}
+	
+	#placesToolbar > toolbarbutton {
+    margin: 6px 4px 5px !important;
+    -moz-appearance: none !important;
+    background-color: var(--grey-30) !important;
+    border-radius: 5px !important;
+    filter: invert(85%) !important;
+  }
+
 
 	/* Main Area */
 	#placeContent,
 	#places #downloadsRichListBox {
 		-moz-appearance: none !important;
-		border: 1px solid var(--mid-way-color) !important;
-		color: rgb(200,200,200) !important;
+		border: none !important;
+		color: var(--primary-light-color) !important;
 		background-color: var(--mid-way-color) !important;
 	}
 
 	/* Sidebar */
 	#placesList {
 		-moz-appearance: none !important;
-		color: rgb(200,200,200) !important;
-		background-color: rgba(12, 12, 13, .8) !important;
+		color: var(--primary-light-color) !important;
+		background-color: var(--primary-dark-color) !important;
+	}
+	
+	#placesView > splitter {
+    border-inline-end: 1px solid var(--mid-way-color) !important;
 	}
 
 	/* Column Header */
 	#contentView treecol {
 		-moz-appearance: none !important;
-		border: 0px solid !important;
-		border-bottom: 1px solid !important;
-		border-right: 1px solid rgb(0,0,0) !important;
-		-moz-border-bottom-colors: rgb(0,0,0) !important;
-		background: linear-gradient(to bottom,
-		           rgba(56,70,82,1) 0%,
-		           rgba(35,39,48,1) 100%) !important;
-		color: white !important;
+		border: none !important;
+		background: var(--dark-accent) !important;
+		color: var(--grey-30) !important;
+		border-right: 1px solid var(--light-accent-color) !important;
 	}
 
-    /* Text Boxes - One Line */
+
+  /* Text Boxes - One Line */
 	#places textbox:not([multiline="true"]),
 	#editBookmarkPanelContent textbox:not([multiline="true"]) {
         -moz-appearance: none !important;
@@ -61,6 +71,12 @@ url(chrome://browser/content/places/bookmarkProperties.xul) {
 		background-color: var(--mid-way-color) !important;
 		color: var(--primary-light-color) !important;
 	}
+	
+	textbox[type="search"] {
+    padding-left: 3px !important;
+		border-radius: 2px !important;
+		border: 1px solid var(--light-accent-color) !important;
+  }
 
 	/*  Bookmark Tag Options  */
 	listbox {
@@ -78,23 +94,37 @@ url(chrome://browser/content/places/bookmarkProperties.xul) {
 	/*								*
 	 *	  Tree Items	*
 	 *								*/
+	
+	#placesList > treechildren::-moz-tree-cell-text(selected) {  
+    color: var(--grey-30) !important;
+  }
+	
+	#placesList > treechildren::-moz-tree-row(selected) {  
+    -moz-appearance: none !important;
+    -moz-font-smoothing-background-color: none !important;
+		border-top: none !important;
+  }
 
 	#places treechildren::-moz-tree-row {
 		background-color: transparent !important;
 		overflow-y: scroll  !important;
 	}
-
+	
 
 	/* Change the outline of icons to light instead of dark */
-	#places treechildren::-moz-tree-image, #places treechildren::-moz-tree-image {
+	#places treechildren::-moz-tree-image {
 	  fill: var(--primary-light-color) !important;
+	}
+	
+	#places treechildren::-moz-tree-image(selected) {
+	  fill: var(--grey-30) !important;
 	}
 
 	/* Selected, not in focus */
 	#places treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, current) {
 	  background: var(--primary-accent-color) !important;
 	}
-
+	
 	treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected) {
     -moz-border-top-colors: var(--dark-accent) !important;
     -moz-border-right-colors: var(--dark-accent) !important;
@@ -105,6 +135,15 @@ url(chrome://browser/content/places/bookmarkProperties.xul) {
 	#placeContent treechildren:not(.autocomplete-treebody)::-moz-tree-row(odd) {
 	    background: rgba(12, 12, 13, .1) !important;
 	}
+	
+	#placeContent treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected) {
+	    color: var(--grey-30) !important;
+	}
+	
+	#placeContent > treechildren::-moz-tree-cell,
+  #placeContent > treechildren::-moz-tree-column {
+    border-right: 1px solid var(--light-accent-color);
+  }
 
 	/* Selected, in focus */
 	#places treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, current, focus) {
