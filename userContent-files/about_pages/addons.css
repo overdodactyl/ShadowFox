@@ -11,12 +11,12 @@
 
 	.detail-view-container {
     	font-size: 1.25rem;
-    	color: #ccc !important;
+    	color: var(--primary-light-color) !important;
   	}
 
 	page#addons-page, page.greasemonkey #greasemonkey-sort-bar, #list-view[type="userstyle"] #addon-list-empty[hidden] ~ #userstyle-sorting, #addons-page .global-info-container, .alert, #nav-header, #categories, #header-utils-btn {
 		background: var(--primary-dark-color) !important;
-		color: #ccc important;
+		color: var(--primary-light-color) important;
 	}
 
 	richlistitem.category:not([selected]), #detail-contrib-description, page.greasemonkey #greasemonkey-sort-bar .text-link {
