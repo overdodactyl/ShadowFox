@@ -979,17 +979,13 @@ url(chrome://browser/content/places/bookmarkProperties.xul)  {
     -moz-border-bottom-colors: var(--dark-accent) !important;
   }
 
-  #placeContent treechildren:not(.autocomplete-treebody)::-moz-tree-row(odd) {
-    background: rgba(12, 12, 13, .1) !important;
-  }
-
   #placeContent treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected) {
     color: var(--grey-30) !important;
   }
 
   #placeContent > treechildren::-moz-tree-cell,
   #placeContent > treechildren::-moz-tree-column {
-    border-right: 1px solid var(--light-accent-color);
+    border-right: 1px solid var(--light-accent-color) !important;
   }
 
   /* Selected, in focus */
