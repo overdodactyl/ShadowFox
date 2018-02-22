@@ -8,27 +8,27 @@
 
 /* background color */
 :root {
-   background-color: var(--primary-dark-color);
+   background-color: var(--in-content-page-background);
 }
 
 /* Tabs */
 .tab {
- background: var(--primary-dark-color);
- border-color: var(--dark-accent);
+ background: var(--in-content-page-background);
+ border-color: var(--in-content-category-header-background);
 }
 
 .tab .label {
- color: var(--primary-light-color);
+ color: var(--in-content-page-color);
 }
 
 .tab:hover {
-   background-color: var(--dark-accent) !important;
+   background-color: var(--in-content-category-header-background) !important;
 }
 
 
 /* Active Tab */
 .tab.active {
-   background-color: var(--primary-accent-color) !important;
+   background-color: var(--in-content-border-focus) !important;
 }
 .tab.selected {
    background-color: var(--primary-accent-color-dark) !important;
@@ -40,7 +40,7 @@
 }
 
 .tab.active:hover {
-   background-color: var(--primary-accent-color-dark)!important;
+   background-color: var(--in-content-primary-button-background)!important;
 }
 
 /* Unloaded Tabs */
@@ -49,7 +49,7 @@
 }
 
 .tab.discarded .label {
- color: var(--grey-50);
+ color: var(--in-content-box-border-color);
 }
 
 /* Unread Tabs */
@@ -66,11 +66,11 @@
 
 /* Drop Down Arrow */
 .twisty {
- color: var(--primary-light-color)
+ color: var(--in-content-page-color)
 }
 
 .tab.active .twisty {
- color: white
+ color: white !important;
 }
 
 
@@ -87,5 +87,5 @@
 }
 
 #tabbar, #background::after, #background {
-    background: var(--primary-dark-color) !important;
+    background: var(--in-content-page-background) !important;
 }
