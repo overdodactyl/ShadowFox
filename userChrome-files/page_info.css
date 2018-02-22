@@ -1,99 +1,76 @@
 @-moz-document url(chrome://browser/content/pageinfo/pageInfo.xul) {
-
-	#topBar {
-	    -moz-appearance: none !important;
-		background: var(--dark-accent) !important;
-	}
-
-
-	#mainDeck {
-	    background: var(--primary-dark-color) !important;
-	    color: white !important;
-	}
-
-	textbox {
-	    color: var(--primary-light-color) !important;
-	}
-
-
-	tree {
-			-moz-appearance: none !important;
-			border: 1px solid rgb(0,0,0) !important;
-			color: rgb(200,200,200) !important;
-			background-color: var(--mid-way-color) !important;
-		}
-
-	treechildren::-moz-tree-row {
-			background-color: transparent !important;
-			overflow-y: scroll  !important;
-		}
-
-	treecol {
-			-moz-appearance: none !important;
-			border: 0px solid !important;
-			border-bottom: 1px solid !important;
-			border-right: 1px solid rgb(0,0,0) !important;
-			-moz-border-bottom-colors: rgb(0,0,0) !important;
-			background: linear-gradient(to bottom,
-			           rgba(56,70,82,1) 0%,
-			           rgba(35,39,48,1) 100%) !important;
-			color: white !important;
-		}
-
-	treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, current, focus) {
-		  background: var(--primary-accent-color) !important;
-		}
-
-	.permission {
-		-moz-appearance: none !important;
-	    background: var(--mid-way-color) !important;
-		color: var(--primary-light-color) !important;
-		border-color: var(--primary-dark-color) !important;
-	}
-
-	#permPluginTemplate {
-		color: var(--primary-light-color) !important;
-	}
-
-	#permList {
-		border: 2px solid var(--primary-dark-color) !important;
-	}
-
-	/* [WINDOWS ONLY] fixes */
-	
-@media screen and (-moz-windows-theme),
-       screen and (-moz-windows-classic),
-       screen and (-moz-windows-default-theme),
-       screen and (-moz-os-version: windows-win7),
-       screen and (-moz-os-version: windows-win8),
-       screen and (-moz-os-version: windows-win10) {
-		#topBar {
-		  -moz-appearance: none !important;
-		  background-color: var(--dark-accent) !important;
-		  border: none !important;
-		  padding-top: 5px !important;
-		  padding-bottom: 5px !important;
-		  color: var(--grey-20) !important;
-		}
-
-		#metaTagsCaption,
-		#security-identity,
-		#security-privacy,
-		#security-technical,
-		#security-identity-groupbox,
-		#security-privacy-groupbox,
-		#security-technical-groupbox {
-		  -moz-appearance: none !important;
-		  background-color: var(--primary-dark-color) !important;
-		  border: none !important;
-		  color: var(--grey-10) !important;
-		}
-
-		#security-identity-groupbox,
-		#security-privacy-groupbox,
-		#security-technical-groupbox {
-		  -moz-appearance: none !important;
-		  background-color: var(--dark-accent) !important;
-		}
-	}
+  #topBar {
+    -moz-appearance: none!important;
+    background: var(--in-content-category-header-background)!important
+  }
+  #mainDeck {
+    background: var(--in-content-page-background)!important;
+    color: #fff!important
+  }
+  textbox {
+    color: var(--in-content-page-color)!important
+  }
+  tree {
+    -moz-appearance: none!important;
+    border-color: var(--in-content-border-color)!important;
+    color: --in-content-page-color!important;
+    background-color: var(--in-content-box-background)!important
+  }
+  treechildren::-moz-tree-row {
+    background-color: transparent!important
+  }
+  treecol {
+    -moz-appearance: none!important;
+    border: 0 solid!important;
+    border-color: var(--in-content-box-background)!important;
+    color: var(--in-content-selected-text)!important
+  }
+  treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected,current,focus) {
+    background: var(--theme-selection-background-hover)!important
+  }
+  .permission {
+    -moz-appearance: none!important;
+    background: var(--in-content-box-background)!important;
+    color: var(--in-content-page-color)!important;
+    border-color: var(--in-content-border-color)!important
+  }
+  #permPluginTemplate {
+    color: var(--in-content-page-color)!important
+  }
+  #permList {
+    border: 2px solid!important
+  }
+  @media screen and (-moz-windows-theme),
+  screen and (-moz-windows-classic),
+  screen and (-moz-windows-default-theme),
+  screen and (-moz-os-version:windows-win7),
+  screen and (-moz-os-version:windows-win8),
+  screen and (-moz-os-version:windows-win10) {
+    #topBar {
+      -moz-appearance: none!important;
+      background-color: var(--in-content-category-header-background)!important;
+      border: none!important;
+      padding-top: 5px!important;
+      padding-bottom: 5px!important;
+      color: var(--selected-icon-fill-color)!important
+    }
+    #metaTagsCaption,
+    #security-identity,
+    #security-identity-groupbox,
+    #security-privacy,
+    #security-privacy-groupbox,
+    #security-technical,
+    #security-technical-groupbox {
+      -moz-appearance: none!important;
+      background-color: var(--in-content-page-color)!important;
+      border: none!important;
+      color: var(--in-content-selected-text)!important
+    }
+    #security-identity-groupbox,
+    #security-privacy-groupbox,
+    #security-technical-groupbox {
+      -moz-appearance: none!important;
+      background-color: var(--in-content-category-header-background)!important
+    }
+  }
 }

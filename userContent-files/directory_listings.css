@@ -1,0 +1,22 @@
+@-moz-document url-prefix(file:///) {
+  :root {
+    background-color: var(--in-content-box-background)!important
+  }
+  body {
+    border-color: var(--in-content-box-background)!important;
+    background-color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
+  }
+  h1 {
+    border-color: var(--in-content-box-border-color)!important
+  }
+  body > table > tbody > tr:hover {
+    outline-color: var(--in-content-box-background)!important
+  }
+  .dir,
+  .file,
+  .symlink,
+  .up {
+    color: var(--in-content-link-color)!important
+  }
+}

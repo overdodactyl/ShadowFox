@@ -1,7 +1,0 @@
-@-moz-document regexp("^moz-extension://.*manifest.json$") {
-	
-	html {
-		background: var(--primary-dark-color) !important;
-		color: var(--primary-light-color) !important;
-	}	
-}

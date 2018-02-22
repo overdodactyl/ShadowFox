@@ -1,0 +1,130 @@
+@-moz-document url-prefix("https://addons.mozilla.org") {
+  .Footer,
+  .Footer-wrapper,
+  .Header,
+  .LanguageTools-header-row,
+  .amo {
+    background: var(--in-content-category-header-background)!important
+  }
+  .App-content,
+  .Home,
+  .LandingPage,
+  .LanguageTools-table-row:nth-child(2n),
+  .Paginate-page-number {
+    background: var(--in-content-page-background)!important
+  }
+  .SearchForm-icon-magnifying-glass {
+    filter: invert(65%)!important
+  }
+  .AddonDescription-more-addons--theme .Card-contents .AddonsCard-list,
+  .AddonDescription-more-addons:not(.AddonDescription-more-addons--theme) .Card-contents .AddonsCard-list,
+  .AddonsCard--horizontal .Card-contents,
+  .AddonsCard--horizontal ul.AddonsCard-list .SearchResult-link,
+  .Card--photon .Card-contents,
+  .Card-contents,
+  .Card-contents li,
+  .Card-footer-link,
+  .Card-footer-text,
+  .Card-header,
+  .Categories .Card-contents,
+  .Hero .Card-contents,
+  .Home-SubjectShelf .Card-contents,
+  .LandingPage-header,
+  .MetadataCard,
+  .Search .SearchResults .SearchResult,
+  .SearchForm-query,
+  .SearchForm-suggestions-item.SearchForm-suggestions-item,
+  .SectionLinks-dropdown .DropdownMenu-items {
+    background: var(--in-content-box-background)!important
+  }
+  .Addon-author,
+  .Addon-author a,
+  .Addon-author a:link .Button--action,
+  .Addon-title,
+  .AddonBadges .Badge,
+  .Button--action,
+  .Button--action.Button--small:link,
+  .Button--action:link,
+  .Card--photon .Card-contents,
+  .Card-contents,
+  .Card-footer-text,
+  .Card-header,
+  .DropdownMenuItem,
+  .DropdownMenuItem-link a,
+  .DropdownMenuItem-link a:link,
+  .DropdownMenuItem-section,
+  .ExpandableCard-ToggleLink:link,
+  .Footer a:active,
+  .Footer a:hover,
+  .Footer-links-header a:link,
+  .Home-SubjectShelf-link:link,
+  .Home-SubjectShelf-link:visited,
+  .Home-SubjectShelf-subheading,
+  .LandingPage-addonType-name,
+  .LandingPage-heading-content,
+  .Paginate .Paginate-item,
+  .Paginate-page-number,
+  .ReportAbuseButton-show-more,
+  .SearchContextCard-header,
+  .SearchForm-query,
+  .SearchResult-name,
+  .SearchResult-summary,
+  .SearchSuggestion-name {
+    color: var(--in-content-page-color)!important
+  }
+  .Card-contents li .Rating-star-group,
+  .Paginate-next::after,
+  .Paginate-previous::before {
+    filter: invert(70%)!important
+  }
+  .ShowMoreCard-contents::after {
+    background: linear-gradient(rgba(255,255,255,0),var(--in-content-box-background))!important
+  }
+  .Addon-details .AddonDescription-contents a:link,
+  .AddonMoreInfo-contents a:link,
+  .Card-footer-link a,
+  .Card-footer-link a:hover,
+  .Card-footer-link a:link,
+  .Card.ShowMoreCard.AddonDescription-version-notes a:link,
+  .DropdownMenuItem-link a:hover,
+  .Home-SubjectShelf-link:active,
+  .Home-SubjectShelf-link:focus,
+  .Home-SubjectShelf-link:hover,
+  .LanguageTools-table a:link,
+  .SearchResult-link:focus .SearchResult-name,
+  .SearchResult-link:hover .SearchResult-name {
+    color: var(--in-content-link-color)!important
+  }
+  .Button--action.Button--outline-only {
+    border-color: var(--in-content-border-highlight)!important
+  }
+  .Addon .InstallButton-button,
+  .Button--action,
+  .Button--action.Button--small,
+  .Paginate .Paginate-item,
+  .SearchForm-suggestions-item.SearchForm-suggestions-item--highlighted {
+    background: var(--in-content-primary-button-background)!important
+  }
+  .Button--action.Button--outline-only:hover,
+  .Button--action:hover,
+  .SearchForm-query:hover {
+    border-color: var(--in-content-primary-button-background)!important
+  }
+  .SearchForm-query:focus {
+    box-shadow: 0 0 5px 0 var(--in-content-border-highlight)!important;
+    border-color: var(--in-content-primary-button-background)!important
+  }
+  .AddonsCard--horizontal ul.AddonsCard-list .SearchResult-link:hover {
+    background: var(--in-content-page-background)!important;
+    border-radius: 0!important
+  }
+  .Button--report {
+    text-shadow: none!important
+  }
+  .Icon-external {
+    filter: invert(20%)!important
+  }
+  .Icon-featured {
+    filter: invert(85%)!important
+  }
+}

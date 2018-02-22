@@ -1,4 +1,3 @@
-/* Remove 1px border underneath bookmarks bar */
 #navigator-toolbox::after {
-    border-bottom: 0px !important;
+  border-bottom: 0!important
 }

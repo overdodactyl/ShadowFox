@@ -1,0 +1,18 @@
+@-moz-document url-prefix(about:),
+url-prefix(chrome://) {
+  .checkbox-check,
+  .prefs-pane [type=checkbox]:checked + label::before,
+  .prefs-pane [type=checkbox]:not(:checked) + label::before,
+  .radio-check,
+  input[type=checkbox] {
+    -moz-appearance: none!important;
+    border: 1px solid!important;
+    background-color: var(--in-content-box-background)!important;
+    background-image: none!important;
+    box-shadow: none!important
+  }
+  .radio-check[selected] {
+    list-style-image: url(chrome://global/skin/in-content/radio.svg);
+    fill: var(--accent-1)!important
+  }
+}

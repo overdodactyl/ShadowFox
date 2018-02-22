@@ -1,0 +1,108 @@
+:root {
+  --tab-loading-fill: var(--in-content-category-text-selected)!important
+}
+.tab-throbber::before {
+  fill: var(--in-content-category-text-selected)!important;
+  opacity: 1!important
+}
+.panel-arrow {
+  filter: invert(70%)!important
+}
+#appMenu-zoomReset-button,
+.panel-subview-body {
+  color: var(--in-content-selected-text)!important;
+  background: var(--in-content-box-background)!important
+}
+.panel-subview-footer,
+[class^=PanelUI-] {
+  color: var(--in-content-selected-text)!important;
+  background: var(--in-content-page-background)!important
+}
+/*! webextension popup fix */
+.webextension-popup-browser {
+  background: #fff!important
+}
+photonpanelmultiview panelview {
+  background: 0 0!important;
+  color: var(--in-content-page-color)!important
+}
+#emptyDownloads {
+  background: var(--in-content-box-background)!important;
+  color: var(--in-content-page-color)!important
+}
+#downloadsFooterButtons {
+  background: var(--in-content-page-color)!important;
+  color: var(--in-content-page-color)!important
+}
+#downloadsFooter[showingsummary] > stack:not(:hover) {
+  background-color: var(--in-content-category-header-background)!important
+}
+#downloadsListBox {
+  background: var(--in-content-page-background)!important
+}
+#appMenu-mainView toolbarbutton:hover,
+#customizationui-widget-multiview toolbarbutton:hover,
+#widget-overflow-list toolbarbutton:hover {
+  background: var(--in-content-category-header-background)!important
+}
+#BMB_bookmarksPopup {
+  background: 0 0!important
+}
+#identity-popup-securityView {
+  background: var(--in-content-box-background)!important
+}
+#identity-popup-multiView > .panel-viewcontainer > .panel-viewstack > .panel-subviews {
+  background: var(--in-content-box-border-color)!important
+}
+.identity-popup-expander[panel-multiview-anchor] {
+  background-color: var(--in-content-primary-button-background)!important;
+  fill: var(--in-content-text-color)!important
+}
+#identity-popup-mainView {
+  background: var(--in-content-box-background)!important;
+  color: var(--in-content-page-color)!important
+}
+#identity-popup[connection^=secure] .identity-popup-security-content {
+  fill: var(--in-content-category-text-selected)!important
+}
+#identity-popup-permissions-content {
+  filter: invert(90%)!important;
+  color: var(--in-content-page-background)!important
+}
+.identity-popup-expander {
+  border-color: var(--in-content-box-border-color)!important;
+  background-color: var(--in-content-box-background)!important;
+  fill: var(--in-content-box-border-color)!important
+}
+.popup-notification-button[default][highlight=true]:not([disabled]) {
+  background-color: var(--in-content-primary-button-background)!important;
+  color: var(--in-content-text-color)
+}
+#update-available-whats-new {
+  color: var(--in-content-link-color)!important
+}
+.popup-notification-icon[popupid=update-available],
+.popup-notification-icon[popupid=update-manual],
+.popup-notification-icon[popupid=update-restart] {
+  background-color: var(--in-content-item-selected)!important;
+  border-radius: 50%
+}
+toolbarbutton {
+  text-shadow: none!important
+}
+.panel-banner-item > .toolbarbutton-multiline-text {
+  color: var(--in-content-page-color)!important
+}
+.panel-banner-item {
+  background-color: hsla(96,65%,37%,.9)!important
+}
+#update-manual-whats-new {
+  color: var(--in-content-link-color)!important
+}
+toolbar[brighttext] {
+  --toolbarbutton-icon-fill-attention: var(--in-content-primary-button-background)!important
+}
+::-moz-selection {
+  background: var(--in-content-link-color);
+  color: var(--in-content-selected-text)!important
+}
