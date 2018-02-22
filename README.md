@@ -37,37 +37,11 @@ The following webpages have been styled to match the dark theme:
 * manifest.json pages
 * Dierectory listing pages (`file:///`)
 * `https://raw.githubusercontent.com/...`
+* pdfs
 
 #### Webextension Tweaks
 
-Tweaks for the following webextensions have been made:
-
-* Cookie AutoDelete
-* Dark Mode
-* Decentraleyes
-* HTTPSEverywhere
-* Multi-Account Containers
-* Multiple Tabs Handler
-* NoScript
-* Request Control
-* Skip Redirect
-* Smart HTTPS
-* Tab Suspender (memory saver)
-* Tree Style Tab
-* uBlockOrigin
-* uBO-Scope
-* uMatrix
-
-#### Webextension tweaks that go directly into the webextension settings page (custom css)
-
-These tweaks are found in the directory `./webextension`
-
-* Tree Style Tab
-* Violentmonkey
-
-#### Webextension tweaks hosted on userstyles.org
-
-* [Stylus](https://userstyles.org/styles/153739/stylus-dark-shadowfox)
+Themes for 20+ popular webextensions have been made.  By nature, these changes can not go into effect without user action.  To see what extensions have been styled, as well as how to make the changes go into effect, see [here](https://www.reddit.com/r/ShadowFoxCSS/comments/7yt5c0/test_post/).
 
 
 # What do the changes look like?
@@ -87,17 +61,25 @@ Context Menus and Sidebar                   | `about:` pages
 
 Please see [here](https://github.com/overdodactyl/ShadowFox/wiki).
 
-# Keeping up-to-date with Changes
-
-To help stay notified of all the changes made to this repository, please see the [changelog](changelog.md).
-
 # Looking for more information or experiencing problems?
 
 Please take a look through the [wiki](https://github.com/overdodactyl/ShadowFox/wiki) and [Issues](https://github.com/overdodactyl/ShadowFox/issues?q=is%3Aopen) (both open and closed).  If you can't find what you need, don't hesitate to open up a new issue.  
 
+# Run into a bug?
+
+If you'v
+
 # Have a feature request?
 
 Please read through the current issues and search old ones.  If it doesn't already exist, feel free to ask!
+
+# Have a question or need help?
+
+Please be sure to read through the [wiki](https://github.com/overdodactyl/ShadowFox/wiki/), and any
+
+If your question is not addressed, please feel free to either:
+
+* Open a new
 
 # Contributing
 

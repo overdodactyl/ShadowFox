@@ -1,4 +1,0 @@
-/* Change active tab line color */
-.tab-line[selected="true"] {
-  background-color: var(--primary-accent-color) !important;
-}

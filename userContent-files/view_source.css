@@ -1,0 +1,43 @@
+@-moz-document url-prefix(view-source) {
+  :root {
+    background-color: var(--in-content-page-background)!important;
+    color: var(--in-content-page-color)!important
+  }
+  pre[id]:before,
+  span[id]:before {
+    color: var(--in-content-page-color)!important
+  }
+  .highlight .end-tag,
+  .highlight .start-tag {
+    color: #b78cfd!important
+  }
+  .highlight .comment {
+    color: #86de74!important
+  }
+  .highlight .cdata {
+    color: #c06!important
+  }
+  .highlight .doctype {
+    color: #4682b4!important
+  }
+  .highlight .pi {
+    color: #ff7de9!important
+  }
+  .highlight .entity {
+    color: #dea174!important
+  }
+  .highlight .attribute-name {
+    color: #86de74!important
+  }
+  .highlight .attribute-value {
+    color: #75bfff!important
+  }
+  .highlight .markupdeclaration {
+    color: #4682b4!important;
+    font-style: italic
+  }
+  .highlight .error,
+  .highlight .error > :-moz-any(.start-tag,.end-tag,.comment,.cdata,.doctype,.pi,.entity,.attribute-name,.attribute-value) {
+    color: #de7474!important
+  }
+}

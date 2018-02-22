@@ -1,167 +1,86 @@
-@-moz-document url(chrome://browser/content/places/places.xul),
-url(chrome://browser/content/places/bookmarkProperties.xul) {
-
-	/* Details Dock and Bookmark Properties*/
-	#detailsDeck,
-	#bookmarkproperties {
-		-moz-appearance: none !important;
-		background-color: var(--primary-dark-color) !important;
-		color: var(--primary-light-color) !important;
-		border: none !important;
-	}
-
-	/* Toolbar */
-	toolbar {
-		-moz-appearance: none !important;
-		background-color: var(--dark-accent) !important;
-		border: none !important;
-	}
-	
-	#placesToolbar > toolbarbutton {
-    margin: 6px 4px 5px !important;
-    -moz-appearance: none !important;
-    background-color: var(--grey-30) !important;
-    border-radius: 5px !important;
-    filter: invert(85%) !important;
+@-moz-document url(chrome://browser/content/places/places.xul) {
+  toolbar {
+    -moz-appearance: none!important;
+    background-color: var(--in-content-category-header-background)!important;
+    border: none!important
   }
-
-
-	/* Main Area */
-	#placeContent,
-	#places #downloadsRichListBox {
-		-moz-appearance: none !important;
-		border: none !important;
-		color: var(--primary-light-color) !important;
-		background-color: var(--mid-way-color) !important;
-	}
-
-	/* Sidebar */
-	#placesList {
-		-moz-appearance: none !important;
-		color: var(--primary-light-color) !important;
-		background-color: var(--primary-dark-color) !important;
-	}
-	
-	#placesView > splitter {
-    border-inline-end: 1px solid var(--mid-way-color) !important;
-	}
-
-	/* Column Header */
-	#contentView treecol {
-		-moz-appearance: none !important;
-		border: none !important;
-		background: var(--dark-accent) !important;
-		color: var(--grey-30) !important;
-		border-right: 1px solid var(--light-accent-color) !important;
-	}
-
-
-  /* Text Boxes - One Line */
-	#places textbox:not([multiline="true"]),
-	#editBookmarkPanelContent textbox:not([multiline="true"]) {
-        -moz-appearance: none !important;
-        color: var(--primary-light-color) !important;
-        background-color: var(--mid-way-color) !important;
-     }
-
-	/* Bookmarks Description Field */
-	#places #editBMPanel_descriptionField,
-	#editBookmarkPanelContent #editBMPanel_descriptionField {
-		-moz-appearance: none !important;
-		background-color: var(--mid-way-color) !important;
-		color: var(--primary-light-color) !important;
-	}
-	
-	textbox[type="search"] {
-    padding-left: 3px !important;
-		border-radius: 2px !important;
-		border: 1px solid var(--light-accent-color) !important;
+  listbox,
+  textbox {
+    -moz-appearance: none!important;
+    background-color: var(--in-content-box-background)!important;
+    color: var(--in-content-page-color)!important;
+    min-height: 20px!important;
+    padding: 0 0 0 4px!important;
+    border: 1px solid!important;
+    border-color: var(--in-content-box-border-color)!important;
+    border-radius: 3px!important
   }
-
-	/*  Bookmark Tag Options  */
-	listbox {
-		-moz-appearance: none !important;
-		background-color: var(--mid-way-color) !important;
-		color: var(--primary-light-color) !important;
-	}
-
-	#places listbox:focus > listitem[selected="true"] {
-		background-color: var(--primary-accent-color) !important;
-		color: black !important;
-	}
-
-
-	/*								*
-	 *	  Tree Items	*
-	 *								*/
-	
-	#placesList > treechildren::-moz-tree-cell-text(selected) {  
-    color: var(--grey-30) !important;
+  #placesToolbar > toolbarbutton {
+    margin: 6px 4px 5px!important;
+    -moz-appearance: none!important;
+    background-color: var(--tone-4)!important;
+    border-radius: 5px!important;
+    filter: invert(100%)!important
   }
-	
-	#placesList > treechildren::-moz-tree-row(selected) {  
-    -moz-appearance: none !important;
-    -moz-font-smoothing-background-color: none !important;
-		border-top: none !important;
+  #placesList {
+    -moz-appearance: none!important;
+    color: var(--in-content-page-color)!important;
+    background-color: var(--in-content-page-background)!important
   }
-
-	#places treechildren::-moz-tree-row {
-		background-color: transparent !important;
-		overflow-y: scroll  !important;
-	}
-	
-
-	/* Change the outline of icons to light instead of dark */
-	#places treechildren::-moz-tree-image {
-	  fill: var(--primary-light-color) !important;
-	}
-	
-	#places treechildren::-moz-tree-image(selected) {
-	  fill: var(--grey-30) !important;
-	}
-
-	/* Selected, not in focus */
-	#places treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, current) {
-	  background: var(--primary-accent-color) !important;
-	}
-	
-	treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected) {
-    -moz-border-top-colors: var(--dark-accent) !important;
-    -moz-border-right-colors: var(--dark-accent) !important;
-    -moz-border-left-colors: var(--dark-accent) !important;
-    -moz-border-bottom-colors: var(--dark-accent) !important;
+  #placesView > splitter {
+    border-color: var(--in-content-border-color)!important
   }
-
-
-	#placeContent treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected) {
-	    color: var(--grey-30) !important;
-	}
-	
-	#placeContent > treechildren::-moz-tree-cell,
+  #places #downloadsRichListBox {
+    -moz-appearance: none!important;
+    color: var(--in-content-page-color)!important;
+    background-color: var(--in-content-box-background)!important
+  }
+  #detailsDeck {
+    border: none!important;
+    background-color: var(--in-content-page-background)!important;
+    color: var(--in-content-page-color)!important
+  }
+  .expander-down,
+  .expander-up {
+    filter: invert(60%)!important
+  }
+  #placeContent treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text() {
+    color: var(--in-content-text-color)!important
+  }
+  #places treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected),
+  #placesList > treechildren::-moz-tree-row(selected) {
+    -moz-appearance: none!important;
+    -moz-font-smoothing-background-color: none!important;
+    border-top: none!important;
+    background: var(--theme-selection-background)!important;
+    color: var(--in-content-text-color)!important
+  }
+  #placeContent treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected),
+  #placesList > treechildren::-moz-tree-cell-text(selected) {
+    color: var(--in-content-text-color)!important
+  }
+  #places treechildren::-moz-tree-row {
+    background-color: transparent!important
+  }
+  #places treechildren::-moz-tree-image {
+    fill: var(--in-content-page-color)!important
+  }
+  #places treechildren::-moz-tree-image(selected) {
+    fill: var(--selected-icon-fill-color)!important
+  }
+  #placeContent > treechildren::-moz-tree-cell,
   #placeContent > treechildren::-moz-tree-column {
-    border-right: 1px solid var(--light-accent-color) !important;
+    border-color: var(--in-content-box-border-color)!important
   }
-
-	/* Selected, in focus */
-	#places treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, current, focus) {
-		background: var(--primary-accent-color) !important;
-	}
-
-	#places treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
-	    background: var(--dark-accent) !important;
-			-moz-border-top-colors: var(--dark-accent) !important;
-			-moz-border-right-colors: var(--dark-accent) !important;
-			-moz-border-left-colors: var(--dark-accent) !important;
-			-moz-border-bottom-colors: var(--dark-accent) !important;
-	}
-
-	#places treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover, selected) {
-	    background: var(--primary-accent-color) !important;
-	}
-
-	#placesMenu > menu {
-        color: var(--primary-light-color) !important;
+  #contentView treecol {
+    -moz-appearance: none!important;
+    border: none!important;
+    background: var(--in-content-category-header-background)!important;
+    color: var(--in-content-text-color)!important;
+    border-right: 1px solid!important;
+    border-color: var(--in-content-box-border-color)!important
   }
-
-
+  tree {
+    background-color: var(--in-content-box-background)!important
+  }
 }

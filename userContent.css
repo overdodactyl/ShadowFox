@@ -1,48 +1,10 @@
-/* Photon Colors CSS Variables v1.4.0
-* Colors are taken from: https://github.com/FirefoxUX/design-tokens */
-
 :root {
-  --magenta-50: #ff1ad9;
-  --magenta-60: #ed00b5;
-  --magenta-70: #b5007f;
-  --magenta-80: #7d004f;
-  --magenta-90: #440027;
-  --purple-50: #9400ff;
-  --purple-60: #8000d7;
-  --purple-70: #6200a4;
-  --purple-80: #440071;
-  --purple-90: #25003e;
   --blue-40: #45a1ff;
   --blue-50: #0a84ff;
   --blue-60: #0060df;
   --blue-70: #003eaa;
   --blue-80: #002275;
   --blue-90: #000f40;
-  --teal-50: #00feff;
-  --teal-60: #00c8d7;
-  --teal-70: #008ea4;
-  --teal-80: #005a71;
-  --teal-90: #002d3e;
-  --green-50: #30e60b;
-  --green-60: #12bc00;
-  --green-70: #058b00;
-  --green-80: #006504;
-  --green-90: #003706;
-  --yellow-50: #ffe900;
-  --yellow-60: #d7b600;
-  --yellow-70: #a47f00;
-  --yellow-80: #715100;
-  --yellow-90: #3e2800;
-  --red-50: #ff0039;
-  --red-60: #d70022;
-  --red-70: #a4000f;
-  --red-80: #5a0002;
-  --red-90: #3e0200;
-  --orange-50: #ff9400;
-  --orange-60: #d76e00;
-  --orange-70: #a44900;
-  --orange-80: #712b00;
-  --orange-90: #3e1300;
   --grey-10: #f9f9fa;
   --grey-20: #ededf0;
   --grey-30: #d7d7db;
@@ -52,2786 +14,1858 @@
   --grey-70: #38383d;
   --grey-80: #2a2a2e;
   --grey-90: #0c0c0d;
-  --ink-70: #363959;
-  --ink-80: #202340;
-  --ink-90: #0f1126;
+  --tone-1: var(--grey-10);
+  --tone-2: var(--grey-20);
+  --tone-3: var(--grey-30);
+  --tone-4: var(--grey-40);
+  --tone-5: var(--grey-50);
+  --tone-6: var(--grey-60);
+  --tone-7: var(--grey-70);
+  --tone-8: var(--grey-80);
+  --tone-9: var(--grey-90);
+  --accent-1: var(--blue-40);
+  --accent-2: var(--blue-50);
+  --accent-3: var(--blue-60);
+  --in-content-page-color: var(--tone-4)!important;
+  --in-content-page-background: var(--tone-7)!important;
+  --in-content-text-color: var(--tone-3)!important;
+  --in-content-selected-text: var(--tone-1)!important;
+  --in-content-box-background: var(--tone-6)!important;
+  --in-content-box-background-odd: #f3f6fa;
+  --in-content-box-background-hover: var(--tone-6)!important;
+  --in-content-box-background-active: var(--tone-6)!important;
+  --in-content-box-border-color: var(--tone-5)!important;
+  --in-content-item-hover: rgba(0,149,221,0.25);
+  --in-content-item-selected: var(--tone-8)!important;
+  --in-content-border-highlight: var(--accent-1)!important;
+  --in-content-border-focus: var(--accent-1)!important;
+  --in-content-border-color: var(--tone-6)!important;
+  --in-content-category-outline-focus: 1px dotted #0a84ff;
+  --in-content-category-text: var(--tone-4)!important;
+  --in-content-category-text-active: #0c0c0d;
+  --in-content-category-text-selected: var(--accent-1)!important;
+  --in-content-category-text-selected-active: #0060df;
+  --in-content-category-background-hover: rgba(12,12,13,0.1);
+  --in-content-category-background-active: rgba(12,12,13,0.15);
+  --in-content-category-background-selected-hover: rgba(12,12,13,0.15);
+  --in-content-category-background-selected-active: rgba(12,12,13,0.2);
+  --in-content-tab-color: #424f5a;
+  --in-content-link-color: var(--accent-1)!important;
+  --in-content-link-color-hover: var(--accent-2)!important;
+  --in-content-link-color-active: #003eaa;
+  --in-content-link-color-visited: #0a8dff;
+  --in-content-primary-button-background: var(--accent-2)!important;
+  --in-content-primary-button-background-hover: var(--accent-3)!important;
+  --in-content-primary-button-background-active: var(--accent-3)!important;
+  --in-content-table-border-dark-color: var(--tone-7)!important;
+  --in-content-table-header-background: var(--accent-2)!important;
+  --theme-selection-background: var(--accent-2)!important;
+  --theme-selection-background-hover: var(--accent-1)!important;
+  --in-content-category-header-background: var(--tone-8)!important;
+  --selected-icon-fill-color: var(--tone-2)!important
 }
-
-:root {
-  --primary-light-color: var(--grey-40);
-  --light-accent-color: var(--grey-50);
-  --mid-way-color: var(--grey-60);
-  --primary-dark-color: var(--grey-70);
-  --dark-accent: var(--grey-80);
-  --darksest: var(--grey-90);
-  --primary-accent-color: var(--blue-40);
-  --primary-accent-color-dark: var(--blue-50);
-  --primary-accent-color-darkest: var(--blue-60);
-}
-
 /*! Begin color overrides */
-
 /*! End color overrides */
-@-moz-document url-prefix(about:)  {
+@-moz-document url-prefix(about:),
+url-prefix(chrome://) {
+  .checkbox-check,
+  .prefs-pane [type=checkbox]:checked + label::before,
+  .prefs-pane [type=checkbox]:not(:checked) + label::before,
+  .radio-check,
+  input[type=checkbox] {
+    -moz-appearance: none!important;
+    border: 1px solid!important;
+    background-color: var(--in-content-box-background)!important;
+    background-image: none!important;
+    box-shadow: none!important
+  }
+  .radio-check[selected] {
+    list-style-image: url(chrome://global/skin/in-content/radio.svg);
+    fill: var(--accent-1)!important
+  }
+}
+@-moz-document url-prefix(about:),
+url-prefix(chrome://browser/content/preferences/),
+url(chrome://passwordmgr/content/passwordManager.xul),
+url(chrome://formautofill/content/manageAddresses.xhtml),
+url-prefix(chrome://pippki) {
+  treechildren::-moz-tree-row,
+  treechildren:not(.autocomplete-treebody)::-moz-tree-row(multicol,odd) {
+    background-color: var(--in-content-box-background)!important
+  }
+  treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
+    background-color: var(--theme-selection-background-hover)!important
+  }
+  treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected) {
+    background-color: var(--theme-selection-background)!important
+  }
+  tree {
+    background-color: var(--in-content-box-background)!important
+  }
+  treecol:not([hideheader=true]):not(:first-child),
+  treecolpicker {
+    border-image: linear-gradient(transparent 0,transparent 20%,var(--tone-5) 20%,var(--tone-5) 80%,transparent 80%,transparent 100%) 1 1!important
+  }
+  menulist:not([editable=true]) > .menulist-dropmarker,
+  treecol:not([hideheader=true]) > .treecol-sortdirection[sortDirection] {
+    fill: var(--in-content-category-text)!important
+  }
+  fieldset > legend,
+  treecol:not([hideheader=true]),
+  treecolpicker {
+    background-color: var(--in-content-category-header-background)!important;
+    color: var(--in-content-page-color)!important
+  }
+}
+@-moz-document regexp("^about:(?!reader).*"),
+url(https://www.mozilla.org/credits/),
+url-prefix(https://discovery.addons.mozilla.org) {
   :root {
-    --in-content-page-color: var(--primary-light-color) !important;
-    --in-content-page-background: var(--dark-accent) !important;
-    --in-content-text-color: var(--primary-light-color) !important;
-    --in-content-selected-text: var(--primary-light-color) !important;
-    --in-content-box-background: var(--primary-dark-color) !important;
-    --in-content-box-background-odd: var(--light-accent-color) !important;
-    --in-content-box-background-hover: var(--dark-accent) !important;
-    --in-content-box-background-active: var(--dark-accent) !important;
-    --in-content-box-border-color: var(--primary-dark-color) !important;
-    --in-content-item-hover: var(--dark-accent) !important;
-    --in-content-item-selected: var(--dark-accent) !important;
-    --in-content-border-highlight: var(--dark-accent) !important;
-    --in-content-border-focus: var(--dark-accent) !important;
-    --in-content-border-color: var(--primary-dark-color) !important;
-    --in-content-category-outline-focus: 1px dotted var(--dark-accent) !important;
-    --in-content-category-text: var(--primary-light-color) !important;
-    --in-content-category-text-active: var(--primary-light-color) !important;
-    --in-content-category-text-selected: var(--primary-accent-color) !important;
-    --in-content-category-text-selected-active: var(--primary-accent-color-dark) !important;
-    --in-content-category-background-selected-hover: var(--primary-dark-color) !important;
-    --in-content-category-background-selected-active: var(--primary-dark-color) !important;
-    --in-content-link-color: var(--primary-accent-color) !important;
-    --in-content-link-color-hover: var(--primary-accent-color-dark) !important;
-    --in-content-link-color-visited: var(--dark-accent) !important;
-    --in-content-primary-button-background: var(--dark-accent) !important;
-    --in-content-primary-button-background-hover: var(--primary-accent-color-dark) !important;
-    --in-content-primary-button-background-active: var(--primary-accent-color-dark) !important;
-    --in-content-table-header-background: var(--dark-accent) !important;
-    --in-content-category-background: var(--primary-dark-color) !important;
+    --aboutProfiles-table-background: var(--in-content-box-background)!important
   }
-
-  /*Dark context menu*/
-
   menupopup,
+  menupopup > menu > menupopup,
   popup,
-  popup > menu > menupopup,
-  menupopup > menu > menupopup {
-    -moz-appearance: none !important;
-    background: var(--primary-dark-color) !important;
-    border: none !important;
+  popup > menu > menupopup {
+    -moz-appearance: none!important;
+    background: var(--in-content-page-background)!important;
+    border: none!important
   }
-
-  /* Remove separator */
-
+  menuitem,
+  menupopup menu {
+    -moz-appearance: none!important;
+    color: var(--in-content-text-color)!important
+  }
+  menuitem:hover,
+  menupopup menu:hover {
+    color: var(--in-content-text-color)!important;
+    background-color: var(--theme-selection-background-hover)!important
+  }
   menupopup menuseparator {
-    padding: 0 !important;
+    padding: 0!important;
+    margin: 2px 6px!important;
+    -moz-appearance: none!important;
+    background: rgba(0,0,0,0)!important;
+    border: 0!important
   }
-
-  menupopup menu,
-  menuitem {
-    -moz-appearance: none !important;
-    color: var(--grey-10) !important;
-  }
-
-  menupopup menu:hover,
-  menuitem:hover {
-    color: var(--primary-light-color) !important;
-    background-color: var(--dark-accent) !important;
-  }
-
-  /* Menu Separators - removed */
-
-  menupopup menuseparator {
-    padding: 0 !important;
-    border-top: none !important;
-    margin: 2px 6px 2px 6px !important;
-    -moz-appearance: none !important;
-    background: rgba(0, 0, 0, 0) !important;
-    border: 0px !important;
-  }
-
-@media screen and (-moz-windows-theme) {
-    menupopup menu,
-    menuitem {
-      margin: 1px 6px 1px 6px !important;
+  @media screen and (-moz-windows-theme) {
+    menuitem,
+    menupopup menu {
+      margin: 1px 6px!important
     }
-
     menupopup,
+    menupopup > menu > menupopup,
     popup,
-    popup > menu > menupopup,
-    menupopup > menu > menupopup {
-      border: 1px solid var(--dark-accent) !important;
+    popup > menu > menupopup {
+      border: 1px solid!important
     }
-}
-}
-
-/* Basic changes fundamental to all pages */
-
-@-moz-document regexp("^about:(?!reader).*"), url(https://www.mozilla.org/credits/)  {
+  }
+  .prefs-pane [type=checkbox]:checked + label::after,
+  .prefs-pane [type=checkbox]:not(:checked) + label::after,
+  input[type=checkbox]:checked {
+    background-image: url(chrome://global/skin/in-content/check.svg)!important
+  }
+  #newtab-customize-overlay,
   html:not(#ublock0-epicker),
-  html:not(#ublock0-epicker) body,
-  #newtab-customize-overlay {
-    background: var(--primary-dark-color) !important;
-    color: var(--primary-light-color) !important;
+  html:not(#ublock0-epicker) body {
+    background: var(--in-content-page-background)!important;
+    color: var(--in-content-page-color)!important
   }
-
+  #SanitizeDialogPane > groupbox,
+  #mainDiv.non-verbose div.section h2,
+  #onboarding-overlay,
+  .dialogBox > .groupbox-body,
+  .modal,
+  .modal-overlay,
+  .warningBackground {
+    background: var(--in-content-page-background)!important
+  }
+  .collapsible-section .section-top-bar .info-option-manage button,
+  .topic .topic-read-more,
   a:link {
-    color: var(--primary-accent-color) !important;
+    color: var(--in-content-link-color)!important
   }
-}
-@-moz-document url(about:)  {
-  a:link {
-    color: var(--primary-accent-color) !important;
+  .topic .topic-read-more:hover,
+  a:link:hover {
+    color: var(--in-content-link-color-hover)!important
   }
-
-  #aboutLogoContainer {
-    border: none !important;
+  #action-box,
+  #content div.log span.section-heading button.no-print:hover,
+  #content div.stats span.section-heading button.no-print:hover,
+  #contents table tbody tr td,
+  #contents table tr.no-copy td,
+  #controls.no-print div.controls div.control button:hover,
+  #errorPageContainer button#errorTryAgain:hover,
+  #provider table#provider-table tbody#provider-table-body tr td,
+  #subprocess-reports tr td,
+  .aboutPageWideContainer div#debug table#debug-table tbody tr td,
+  .aboutPageWideContainer label input#submit:hover,
+  .alert,
+  .opsRow button:hover,
+  .top-sites-list .top-site-outer .top-site-icon {
+    background-color: var(--in-content-box-background)!important
   }
-}
-@-moz-document url(about:accounts)  {
-  #stage {
-    background: var(--dark-accent) !important;
+  .addon .editorial-description,
+  .addon .heading,
+  .disco-content,
+  .top-sites-list .top-site-outer .title span,
+  header h1 {
+    color: var(--in-content-page-color)!important
   }
-
-  .button-row button,
-  .button-row a.button {
-    background: var(--primary-accent-color) !important;
+  #onboarding-overlay.onboarding-opened > #onboarding-overlay-dialog,
+  .addon .content,
+  .addon .logo,
+  .card-outer .card-context,
+  .card-outer .card-details,
+  .search-wrapper input,
+  .topsite-form .form-wrapper input[type=text],
+  card-outer.active span.context-menu ul.context-menu-list {
+    background: var(--in-content-box-background)!important
   }
-
-  .button-row a.button:active,
-  .button-row a.button:hover,
-  .button-row a.button:focus,
-  .button-row button:active,
-  .button-row button:hover,
-  .button-row button:focus {
-    background: var(--primary-accent-color-dark) !important;
+  .sorter[checkState="1"],
+  .sorter[checkState="2"] {
+    background-color: var(--in-content-category-header-background)!important
   }
-}
-@-moz-document url(about:addons), url-prefix(about:debugging)  {
-  .detail-view-container {
-    color: var(--primary-light-color) !important;
+  #onboarding-overlay.onboarding-opened > #onboarding-overlay-dialog,
+  .addon,
+  .card-outer .card-context,
+  .card-outer .card-host-name,
+  .detail-view-container,
+  .section-title span,
+  .top-sites-list .top-site-outer .top-site-icon,
+  .topsite-form .form-wrapper input[type=text] {
+    color: var(--in-content-page-color)!important
   }
-
+  .card-outer .card-context-icon,
+  .category:not([selected]) > .category-icon,
+  .collapsible-section .section-top-bar .info-option-icon,
+  .context-menu ul.context-menu-list li.context-menu-item a span.icon,
+  .prefs-pane-button button,
+  .search-wrapper .search-button,
+  .search-wrapper .search-label,
+  .section-title span {
+    fill: var(--in-content-page-color)!important
+  }
+  .sorter {
+    color: var(--accent-1)!important
+  }
+  .download-progress {
+    background-color: var(--in-content-box-color)!important
+  }
+  .list > scrollbox > .scrollbox-innerbox {
+    border: none!important
+  }
+  #header-utils-btn:hover,
+  .header-button:hover {
+    background-color: var(--in-content-box-background-hover)!important
+  }
+  #header-utils-btn {
+    fill: var(--in-content-category-text)!important
+  }
+  .collapsible-section .section-top-bar .info-option-manage button:after,
+  .topic .topic-read-more::after {
+    fill: var(--in-content-link-color)!important
+  }
+  .addon-view[notification=warning] {
+    --view-highlight-color: transparent!important
+  }
+  .addon-view[notification],
+  .addon-view[pending] {
+    --view-highlight-color: transparent;
+    background-image: none!important
+  }
+  .addon[active=false] {
+    opacity: .4!important
+  }
   .detail-row,
   .detail-row-complex,
   setting {
-    line-height: 20px;
-    text-shadow: none !important;
+    text-shadow: none!important
   }
-
-  .detail-view-container {
-    font-size: 1.25rem;
-    color: var(--primary-light-color) !important;
-  }
-
-  page#addons-page,
-  page.greasemonkey #greasemonkey-sort-bar,
-  #list-view[type="userstyle"] #addon-list-empty[hidden] ~ #userstyle-sorting,
-  #addons-page .global-info-container,
-  .alert,
-  #nav-header,
-  #categories,
-  #header-utils-btn {
-    background: var(--primary-dark-color) !important;
-    color: var(--primary-light-color) important;
-  }
-
-  richlistitem.category:not([selected]),
-  #detail-contrib-description,
-  page.greasemonkey #greasemonkey-sort-bar .text-link {
-    color: #d2d2d2 !important;
-  }
-
-  .name-container {
-    color: #d2d2d2 !important;
-    font-weight: unset !important;
-  }
-
-  .addon[selected],
-  .category[selected],
-  .category.selected {
-    background: #565656 !important;
-    -moz-border-start: 4px solid var(--primary-accent-color) !important;
-  }
-
-  .category {
-    background: var(--primary-dark-color) !important;
-    border: none !important;
-  }
-
-  #header-utils-btn:hover {
-    color: white !important;
-    background: #222 !important;
-  }
-
-  .addon {
-    color: gray !important;
-  }
-
-  .addon[active="false"] {
-    opacity: 0.4 !important;
-  }
-
-  richlistitem.category[selected],
-  #main #promos.js,
-  #featured-addons,
-  #addons,
-  .category.selected {
-    background: var(--primary-dark-color) !important;
-    color: var(--primary-accent-color) !important;
-  }
-
-  richlistitem.category:hover:not([selected]) {
-    text-decoration: underline !important;
-  }
-
-  #view-port-container #detail-view,
-  #view-port-container #list-view {
-    filter: unset !important;
-    background-color: black !important;
-    color: #d2d2d2 !important;
-  }
-
-  .icon,
-  #view-port-container #detail-view image,
-  #view-port-container #list-view image,
-  deck.view-pane,
-  #detail-contributions {
-    background-color: transparent !important;
-  }
-
-  /* Remove dotted border around addons section when selected */
-
-  .list > scrollbox > .scrollbox-innerbox {
-    border: 1px dotted transparent !important;
-  }
-
-  /* Cog wheel */
-
-  #header-utils-btn {
-    fill: var(--primary-light-color) !important;
-  }
-
-  #header-utils-btn:hover {
-    background: var(--dark-accent) !important;
-  }
-
-  description {
-    margin-bottom: 4px;
-    color: var(--primary-light-color) !important;
-  }
-
-  *|button,
-  menulist {
-    -moz-appearance: none !important;
-    background: linear-gradient(var(--dark-accent), var(--dark-accent)) !important;
-    border: 1px #444 solid !important;
-    color: #999 !important;
-    box-shadow: unset !important;
-    text-decoration: unset !important;
-  }
-
-  *|button:hover {
-    color: var(--primary-light-color) !important;
-    background: var(--dark-accent) !important;
-  }
-
-  #category-discover {
-    display: none !important;
-  }
-
-  .addon-view[notification="warning"] {
-    --view-highlight-color: transparent !important;
-  }
-
-  .text-link {
-    color: var(--primary-accent-color) !important;
-  }
-
-  textbox[type="search"] {
-    color: var(--primary-light-color) !important;
-    background: var(--mid-way-color) !important;
-    border: 1px solid var(--light-accent-color) !important;
-  }
-
-  textbox[focused] {
-    border-color: var(--primary-accent-color) !important;
-  }
-
-  /* about:debugging#addons */
-
-  .addon-target-container {
-    background: var(--dark-accent) !important;
-  }
-
-  /* icon */
-
-  .addon-target-container .target-icon[src="chrome://mozapps/skin/extensions/extensionGeneric.svg"] {
-    filter: invert(65%) !important;
-  }
-
-  .addon-target-name {
-    color: var(--primary-light-color) !important;
-  }
-
-  .addon-target-actions {
-    border-top: 1px solid var(--primary-light-color) !important;
-  }
-
-  input[type="checkbox"] {
-    background: var(--light-accent-color) !important;
-    border: none !important;
-    box-shadow: none !important;
-  }
-
-  .service-worker-multi-process {
-    background-color: var(--mid-way-color) !important;
-  }
-
-  *.radio-check {
-    border: 1px solid var(--light-accent-color) !important;
-    background-color: var(--light-accent-color) !important;
-    background-image: none !important;
-    box-shadow: none !important;
-  }
-
-  *.radio-check[selected] {
-    fill: var(--primary-accent-color) !important;
-  }
-}
-@-moz-document url(about:config)  {
-  /* Warning Message */
-
-  #warningScreen,
   #warningTitle {
-    color: var(--primary-light-color) !important;
+    color: var(--in-content-page-color)!important
   }
-
-  /* Text Box */
-
-  textbox {
-    background: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
+  #configTree {
+    border: none!important
   }
-
-  /* Body Color */
-
-  #configTreeBody::-moz-tree-row() {
-    background: var(--mid-way-color) !important;
-  }
-
-  /* Selected Color */
-
-  #configTreeBody::-moz-tree-row(selected) {
-    background: var(--primary-accent-color-darkest) !important;
-  }
-
-  /* Hover Color */
-
-  #configTreeBody::-moz-tree-row(hover) {
-    background: var(--primary-dark-color) !important;
-  }
-
-  #configTreeBody::-moz-tree-row(header) {
-    background: orange !important;
-  }
-
-  window {
-    color: var(--primary-light-color) !important;
-    background: var(--primary-dark-color) !important;
-  }
-}
-
-@-moz-document url(about:debugging)  {
   .addon-target-container {
-    background: var(--dark-accent) !important;
+    background: var(--in-content-box-background)!important;
+    box-shadow: none!important
   }
-
-  .addon-target-button:enabled:focus,
-  .addon-target-button:enabled:hover {
-    color: var(--primary-accent-color-dark) !important;
+  .service-worker-multi-process {
+    background-color: #44391f!important
   }
-
-  .addon-target-button:enabled:focus,
-  .addon-target-button:enabled {
-    color: var(--primary-accent-color) !important;
-  }
-}
-@-moz-document url(about:healthreport)  {
-  .headerContainer {
-    background: var(--primary-dark-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-
-  .persistentHeader {
-    background-color: transparent !important;
-  }
-
-  body {
-    background: var(--primary-dark-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-
-  .statsBoxSection-header {
-    color: var(--primary-accent-color) !important;
-  }
-
-  .statsBoxSection-content li,
-  .statsBoxSection-content li > .statsBoxSection-value {
-    color: var(--primary-light-color) !important;
-  }
-}
-@-moz-document url(about:memory)  {
-  div.opsRow {
-    background-color: var(--dark-accent) !important;
-  }
-}
-.advanced-panel {
-  background-color: var(--mid-way-color) !important;
-  border-color: var(--light-accent-color) !important;
-}
-
-.exceptionDialogButtonContainer {
-  background-color: var(--dark-accent) !important;
-}
-
-#learnMoreContainer #learnMoreLink {
-  color: var(--primary-accent-color) !important;
-}
-
-.toggle-container-with-text input[type="checkbox"] {
-  border: 1px solid var(--light-accent-color) !important;
-  background-color: var(--mid-way-color) !important;
-  background-image: none !important;
-  box-shadow: none !important;
-}
-
-.toggle-container-with-text input[type="checkbox"]:checked {
-  background-image: url("chrome://global/skin/in-content/check.svg"), linear-gradient(var(--mid-way-color), var(--mid-way-color)) !important;
-  fill: var(--primary-accent-color) !important;
-}
-
-@-moz-document url(about:neterror)  {
-  /* about:neterror button */
-
-  #errorTryAgain {
-    background: var(--primary-accent-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-}
-@-moz-document url-prefix(about:newtab), url(about:home)  {
-  .top-sites-list .top-site-outer .title span,
-  .card-outer .card-context {
-    color: var(--primary-light-color) !important;
-  }
-
-  .section-top-bar .info-option-manage button,
-  .card-outer:-moz-any(:hover, :focus, .active):not(.placeholder) .card-title {
-    color: var(--primary-accent-color) !important;
-  }
-
-  .card-outer .card-details,
-  .card-outer > a,
-  .section-top-bar .section-info-option .info-option,
-  .context-menu {
-    background: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-
-  .search-wrapper .search-label,
-  .search-wrapper .search-button,
-  .icon {
-    fill: var(--primary-light-color) !important;
-  }
-
-  .top-sites-list .top-site-outer .context-menu-button,
-  .card-outer .context-menu-button {
-    background-color: var(--grey-20) !important;
-    background-image: url("chrome://browser/skin/page-action.svg") !important;
-    border: 1px solid var(--grey-20) !important;
-    filter: invert(95%) !important;
-    box-shadow: none !important;
-  }
-
-  .card-outer:-moz-any(:hover, :focus, .active):not(.placeholder) {
-    box-shadow: 0 0 0 5px var(--dark-accent) !important;
-  }
-
-  .collapsible-section .section-disclaimer {
-    color: var(--primary-light-color) !important;
-  }
-
-  .collapsible-section .section-disclaimer button:hover:not(.dismiss) {
-    box-shadow: 0 0 0 5px var(--dark-accent) !important;
-  }
-
-  .collapsible-section .section-disclaimer button {
-    background: var(--mid-way-color) !important;
-    border: 1px solid var(--light-accent-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-
-  .collapsible-section .section-top-bar .info-option-icon {
-    fill: var(--primary-light-color) !important;
-  }
-
-  .collapsible-section .section-top-bar .info-option {
-    border: none !important;
-  }
-
-  .collapsible-section .section-top-bar .info-option-manage button::after {
-    fill: var(--primary-accent-color) !important;
-  }
-
-  .top-sites-list .top-site-outer:hover .tile,
-  .top-sites-list .top-site-outer:focus .tile,
-  .top-sites-list .top-site-outer.active .tile {
-    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 0 5px var(--dark-accent) !important;
-  }
-
-  .search-wrapper input {
-    color: var(--primary-light-color) !important;
-    background: var(--mid-way-color) !important;
-  }
-
-  .prefs-pane-button button {
-    fill: var(--mid-way-color) !important;
-  }
-
-  /* Preferencs/close button */
-
-  .prefs-pane-button button:hover {
-    background-color: var(--darksest) !important;
-  }
-
-  /* Main background */
-
-  .prefs-pane .sidebar {
-    background: var(--primary-dark-color) !important;
-    border-left: 1px solid var(--primary-light-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-
-  /* Inner options panel */
-
-  .prefs-pane .prefs-modal-inner-wrapper .options {
-    background: var(--mid-way-color) !important;
-    border: 1px solid var(--primary-light-color);
-  }
-
-  /* Check boxes */
-
-  .prefs-pane [type="checkbox"]:not(:checked) + label::before,
-  .prefs-pane [type="checkbox"]:checked + label::before {
-    border: 1px solid var(--primary-light-color) !important;
-    background: var(--mid-way-color) !important;
-  }
-
-  /* Check marks */
-
-  .prefs-pane [type="checkbox"]:not(:checked) + label::after,
-  .prefs-pane [type="checkbox"]:checked + label::after {
-    fill: var(--primary-accent-color) !important;
-  }
-
-  /* Bottom Panel */
-
-  .prefs-pane .actions {
-    background-color: var(--primary-dark-color) !important;
-    border-left: 1px solid var(--primary-light-color) !important;
-    border-top: 1px solid var(--primary-light-color) !important;
-  }
-
-  /* "Done Button */
-
-  .actions button.done {
-    background: var(--primary-accent-color) !important;
-    border: solid 1px var(--primary-accent-color-dark) !important;
-    color: var(--primary-light-color) !important;
-  }
-
-  .actions button:hover:not(.dismiss) {
-    box-shadow: 0 0 0 5px var(--primary-light-color) !important;
-  }
-
-  /* Search Bar */
-
-  .search-wrapper:active input,
-  .search-wrapper input:focus {
-    border-color: var(--primary-accent-color-dark) !important;
-    box-shadow: 0 0 0 2px var(--primary-accent-color) !important;
-  }
-
-  /* Pocket Suggestions Arrow */
-
-  .topic .topic-read-more::after {
-    fill: var(--primary-accent-color) !important;
-  }
-
-  /* Onboarding Message */
-
   #onboarding-notification-bar {
-    background: var(--darksest) !important;
-    color: var(--primary-light-color) !important;
-    border-top: 2px solid var(--primary-dark-color) !important;
+    background: var(--in-content-category-header-background)!important;
+    border-top: 2px solid!important
   }
-
-  #onboarding-notification-body {
-    color: var(--primary-light-color) !important;
+  .prefs-pane .actions,
+  .prefs-pane .sidebar {
+    background: var(--in-content-category-header-background)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
-
+  .collapsible-section .section-top-bar .info-option,
+  .prefs-pane .prefs-modal-inner-wrapper .options,
+  .sections-list .section-empty-state {
+    background: var(--in-content-box-background)!important;
+    border-color: var(--in-content-box-border-color)!important
+  }
+  .actions button:hover:not(.dismiss),
+  .card-outer:-moz-any(:hover,:focus,.active):not(.placeholder),
+  .collapsible-section .section-disclaimer button:hover:not(.dismiss),
+  .top-sites-list .top-site-outer.active .tile,
+  .top-sites-list .top-site-outer:focus .tile,
+  .top-sites-list .top-site-outer:hover .tile {
+    box-shadow: 0 0 0 5px var(--in-content-box-background)!important
+  }
+  .card-outer .context-menu-button,
+  .top-sites-list .top-site-outer .context-menu-button {
+    background-color: var(--in-content-page-color)!important;
+    background-image: url(chrome://browser/skin/page-action.svg)!important;
+    border: 1px solid!important;
+    filter: invert(95%)!important;
+    box-shadow: none!important;
+    border-color: var(--in-content-page-color)!important
+  }
+  #onboarding-notification-body *,
+  #onboarding-notification-tour-title,
+  .collapsible-section .section-disclaimer,
+  .manual-migration-container,
+  .onboarding-close-btn,
+  .prefs-pane .prefs-modal-inner-wrapper {
+    color: var(--in-content-page-color)!important
+  }
+  .collapsible-section .section-disclaimer button,
   .onboarding-action-button {
-    background: var(--primary-accent-color) !important;
-    border: 1px solid var(--primary-accent-color-dark) !important;
-    color: var(--primary-light-color) !important;
+    background-color: var(--in-content-page-background)!important;
+    border-color: var(--in-content-box-border-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
-  #onboarding-notification-close-btn {
-    filter: invert(65%)!important;
-  }
-
-  .contentSearchHeader,
-  .search-wrapper .contentSearchSuggestionTable {
-    background-color: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
-    border-bottom: 1px solid var(--primary-light-color) !important;
-  }
-
-  .contentSearchSuggestionsContainer,
-  .contentSearchHeaderRow,
-  .contentSearchSuggestionRow,
-  #contentSearchDefaultEngineHeader,
-  #contentSearchSearchWithHeader {
-    background: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-
-  .contentSearchSearchWithHeaderSearchText {
-    color: var(--primary-accent-color) !important;
-  }
-
-  #snippets-container {
-    background: var(--primary-dark-color) !important;
-  }
-
-  #snippets {
-    color: var(--primary-light-color) !important;
-  }
-
-  .snippet .block-snippet-button {
-    filter: invert(100%) !important;
-  }
-
-  .snippet section {
-    color: #FFF !important;
-  }
-
-  /* Background color of top site icons */
-
-  .top-sites-list .top-site-outer .top-site-icon {
-    background-color: var(--primary-dark-color) !important;
-  }
-
-  /* Edit Top Sites */
-
-  .section-title span,
+  .actions button,
   .actions button.dismiss,
-  .actions button {
-    color: var(--primary-light-color) !important;
+  .onboarding-action-button:hover,
+  .prefs-pane-button button:hover {
+    background-color: var(--in-content-box-background-hover)!important
   }
-
-  .edit-topsites-wrapper .edit-topsites-inner-wrapper {
-    background: var(--primary-dark-color) !important;
+  .actions button.done,
+  .onboarding-tour-action-button {
+    background-color: var(--in-content-primary-button-background)!important
   }
-
-  .actions {
-    border-top: none !important;
-    background: var(--primary-dark-color) !important;
+  .onboarding-tour-action-button:hover {
+    background-color: var(--in-content-primary-button-background-hover)!important
   }
-
-  input[type="text"] {
-    border: solid 1px var(--primary-light-color) !important;
-    background: var(--light-accent-color) !important;
-    color: var(--primary-light-color) !important;
+  .icon.icon-dismiss {
+    fill: var(--in-content-page-color)!important
   }
-
-  .actions button {
-    background: var(--mid-way-color) !important;
-    border: 1px solid #B1B1B3;
-    color: var(--primary-light-color) !important;
+  .context-menu ul.context-menu-list li.context-menu-item a:hover span.icon {
+    fill: var(--in-content-text-color)!important
   }
-
-  /* overlay background */
-
-  .modal-overlay {
-    background: var(--mid-way-color) !important;
+  .dialogBox > .groupbox-title {
+    background-color: var(--in-content-category-header-background)!important;
+    color: var(--in-content-page-color)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
-
-  /* Onboarding */
-
-  #onboarding-overlay {
-    background: var(--mid-way-color) !important;
+  .warningMessage {
+    background: var(--in-content-box-background)!important;
+    border-color: var(--in-content-box-border-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
-  #onboarding-overlay-dialog,
-  .onboarding-hidden,
-  #onboarding-tour-sync-page[data-login-state=logged-in] .show-on-logged-out,
-  #onboarding-tour-sync-page[data-login-state=logged-out] .show-on-logged-in {
-    background: var(--primary-dark-color) !important;
-    color: var(--primary-light-color) !important;
+  #content > div,
+  #errorPageContainer,
+  .info-box-content,
+  .notice,
+  div.opsRow,
+  div.section {
+    background-color: var(--in-content-box-background)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
-}
-@-moz-document url(about:performance)  {
-  #subprocess-reports th {
-    background-color: var(--primary-accent-color) !important;
-    color: white !important;
+  .bar-inner {
+    background-color: var(--accent-1)!important;
+    border: 1px solid!important;
+    border-color: var(--accent-2)!important
   }
-
-  #subprocess-reports td {
-    background-color: var(--dark-accent) !important;
-    border-color: var(--primary-dark-color) !important;
+  #content div.log span.section-heading button.no-print,
+  #content div.stats span.section-heading button.no-print,
+  #controls.no-print div.controls div.control button,
+  #controls.no-print div.controls div.control button input#appid,
+  #errorPageContainer button#errorTryAgain,
+  .aboutPageWideContainer label input#submit,
+  .opsRow button {
+    -moz-appearance: none!important;
+    background-color: var(--in-content-page-background)!important;
+    border: 1px solid!important;
+    border-radius: 3px!important;
+    color: var(--in-content-page-color)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
-}
-@-moz-document url(about:plugins)  {
-  th {
-    background-color: var(--primary-accent-color-dark) !important;
+  .opsRow button {
+    margin-right: 2px!important
   }
-
-  td {
-    color: var(--primary-light-color) !important;
-    background-color: var(--dark-accent) !important;
+  input#appid {
+    background-color: var(--in-content-box-background)!important
   }
-
-  .notice {
-    background: var(--dark-accent) !important;
+  #profiles.tab div table tbody tr td {
+    border-color: var(--in-content-table-border-dark-color)!important
   }
-
-  h2 {
-    color: var(--primary-accent-color) !important;
+  .actions,
+  .context-menu-list li.separator,
+  .edit-topsites-wrapper .edit-topsites-button,
+  .modal,
+  .prefs-pane hr,
+  .topsite-form .form-wrapper input[type=text] {
+    border-color: var(--in-content-box-border-color)!important
   }
-}
-@-moz-document url-prefix(about:preferences)  {
-  :root {
-    --primary-accent-color-dark: var(--primary-accent-color);
+  #outside table.contenttable thead tr th {
+    background-color: var(--in-content-table-header-background)!important
   }
-
-  ::-moz-selection {
-    background: var(--primary-accent-color) !important;
+  #outside table.contenttable {
+    border-color: var(--in-content-table-border-dark-color)!important;
+    background-color: var(--in-content-box-background)!important
   }
-
-  .checkbox-check,
-  .radio-check {
-    box-shadow: none !important;
-    background: var(--mid-way-color) !important;
+  #outside table.contenttable tbody tr td,
+  #outside table.contenttable tbody tr td + #outside table.contenttable tbody tr td,
+  #outside table.contenttable thead tr th + th {
+    border-color: var(--in-content-table-border-dark-color)!important
   }
-
-  menulist:not([editable="true"]) > *.menulist-dropmarker {
-    filter: invert(65%) !important;
+  #outside table.contenttable tbody tr td {
+    color: var(--in-content-page-color)!important
   }
-
-  *.checkbox-check[checked],
-  *.radio-check[selected] {
-    border: none !important;
-    fill: var(--primary-accent-color-dark) !important;
-    box-shadow: none !important;
+  .card-outer .card-context {
+    padding: 2px 16px 12px 14px!important
   }
-
-  #categories,
-  .main-content,
-  .search-container {
-    background: var(--primary-dark-color) !important;
+  .card-outer.placeholder .card {
+    display: none!important
   }
-
-  .category[selected],
-  .category.selected {
-    -moz-border-start: 4px solid var(--primary-accent-color) !important;
+  .context-menu {
+    background-color: var(--in-content-box-background)!important;
+    box-shadow: none!important;
+    border: 1px!important
   }
-
-  #searchInput {
-    background: var(--mid-way-color) !important;
-    border: 1px solid var(--primary-light-color) !important;
-    border-radius: 4px !important;
+  .context-menu > ul > li > a:focus,
+  .context-menu > ul > li > a:hover {
+    background-color: var(--theme-selection-background-hover)!important
   }
-
-  #handlersView {
-    background: var(--mid-way-color) !important;
+  .search-wrapper input:focus,
+  .search-wrapper:active input {
+    box-shadow: 0 0 0 3px var(--in-content-border-focus)!important
   }
-
-  listheader {
-    background: var(--dark-accent) !important;
-  }
-
-  #handlersView richlistitem[selected="true"] {
-    background: var(--primary-accent-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-
-  #handlersView richlistitem:hover {
-    background: var(--primary-dark-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-
-  .dialogBox {
-    filter: invert(80%) !important;
-  }
-
-  /* Search Engines */
-
-  #engineChildren::-moz-tree-row() {
-    background: var(--mid-way-color) !important;
-  }
-
-  .navigation {
-    background: var(--primary-dark-color) !important;
+  .prefs-pane .actions {
+    border-top: none!important
   }
 }
-@-moz-document url(about:profiles)  {
-  /* Upper right box */
-
-  #action-box {
-    background-color: var(--dark-accent) !important;
-    color: var(--primary-light-color) !important;
-  }
-
-  th {
-    background-color: var(--primary-accent-color-dark) !important;
-    border-color: var(--dark-accent) !important;
-  }
-
-  td {
-    color: var(--primary-light-color) !important;
-    background-color: var(--dark-accent) !important;
-    border-color: var(--dark-accent) !important;
-  }
-
-  button {
-    border: 1px solid var(--primary-light-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-}
-@-moz-document url-prefix(about:reader)  {
+@-moz-document url-prefix(about:reader) {
   body.dark a:link {
-    color: var(--primary-accent-color) !important;
+    color: var(--in-content-link-color)!important
   }
-
+  .font-type-buttons > .sans-serif-button > .name,
+  .font-type-buttons > .serif-button > .name,
   body.dark {
-    color: var(--primary-light-color) !important;
+    color: var(--in-content-page-color)!important
   }
-
   .toolbar {
-    background-color: var(--dark-accent) !important;
-    border-right: 1px solid var(--mid-way-color) !important;
+    background-color: var(--in-content-category-header-background)!important;
+    border-right: 1px solid!important
   }
-
   .toolbar .button {
-    border-right: 1px solid var(--mid-way-color) !important;
-    border-bottom: 1px solid var(--mid-way-color) !important;
-    background-color: var(--dark-accent) !important;
+    background-color: var(--in-content-category-header-background)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
-
   .button:hover,
+  .content-width-buttons > button:hover,
   .font-size-buttons > button:hover,
   .font-type-buttons > button:hover,
-  .content-width-buttons > button:hover,
   .line-height-buttons > button:hover {
-    background-color: var(--primary-dark-color) !important;
+    background-color: var(--in-content-primary-button-background-hover)!important
   }
-
-  .close-button:hover {
-    fill: #fff;
-    background-color: #d94141 !important;
-  }
-
   .dropdown-popup {
-    background-color: var(--dark-accent) !important;
-    border: 1px solid var(--mid-way-color) !important;
-    box-shadow: 0 1px 3px var(--mid-way-color) !important;
+    background-color: var(--in-content-category-header-background)!important;
+    box-shadow: 0 1px 3px var(--in-content-category-header-background)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
-
-  .font-type-buttons > button:active:hover,
-  .font-type-buttons > button.selected {
-    border-bottom: 1px solid var(--primary-accent-color) !important;
-  }
-
-  .font-type-buttons > .sans-serif-button > .name,
-  .font-type-buttons > .serif-button > .name {
-    color: var(--primary-light-color) !important;
-  }
-
-  .font-type-buttons > button,
-  .font-size-buttons > button,
   .content-width-buttons > button,
-  .line-height-buttons > button {
-    border-left: 1px solid var(--mid-way-color) !important;
-    border-bottom: 1px solid var(--mid-way-color) !important;
-  }
-
-  .font-type-buttons > button:active:hover,
+  .font-size-buttons > button,
+  .font-type-buttons > button,
   .font-type-buttons > button.selected,
+  .font-type-buttons > button:active:hover,
+  .line-height-buttons > button {
+    border-color: var(--in-content-box-border-color)!important
+  }
+  .color-scheme-buttons > button.selected,
   .color-scheme-buttons > button:active:hover,
-  .color-scheme-buttons > button.selected {
-    box-shadow: inset 0 -3px 0 0 var(--primary-accent-color) !important;
+  .font-type-buttons > button.selected,
+  .font-type-buttons > button:active:hover {
+    box-shadow: inset 0 -3px 0 0 var(--in-content-primary-button-background-hover)!important
   }
 }
-@-moz-document url(about:robots)  {
-  #errorPageContainer {
-    background-color: var(--dark-accent) !important;
+@-moz-document url-prefix(chrome://) {
+  .windowDialog,
+  dialog,
+  prefpane,
+  prefpane > .content-box,
+  prefwindow,
+  window {
+    background-color: var(--in-content-page-background)!important;
+    color: var(--in-content-page-color)!important
+  }
+  #cookieInfoGrid .textbox-input {
+    background-color: var(--in-content-page-background)!important
+  }
+  #historyItems {
+    -moz-appearance: none!important
   }
 }
-@-moz-document url(about:serviceworkers)  {
-  .warningBackground {
-    background: var(--primary-dark-color) !important;
-  }
-
-  .warningMessage {
-    border: 1px solid var(--primary-light-color) !important;
-    background: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-}
-@-moz-document url(about:studies)  {
-  .info-box-content {
-    background-color: var(--dark-accent) !important;
-  }
-}
-@-moz-document url(about:support)  {
-  :root {
-    --primary-accent-color-dark: var(--primary-accent-color-darkest);
-  }
-
-  /* Upper right box */
-
-  #action-box {
-    background-color: var(--dark-accent) !important;
-    color: var(--primary-light-color) !important;
-  }
-
-  th {
-    background-color: var(--primary-accent-color-dark) !important;
-    color: var(--grey-30) !important;
-  }
-
-  td {
-    color: var(--primary-light-color) !important;
-    background-color: var(--dark-accent) !important;
-    border: 1px solid var(--mid-way-color) !important;
-  }
-
-  button {
-    border: 1px solid var(--primary-light-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-}
-@-moz-document url(about:url-classifier)  {
-  /* Upper right box */
-
-  #action-box {
-    background-color: var(--dark-accent) !important;
-    color: var(--primary-light-color) !important;
-  }
-
-  th {
-    background-color: var(--primary-accent-color-dark) !important;
-  }
-
-  td {
-    color: var(--primary-light-color) !important;
-    background-color: var(--dark-accent) !important;
-  }
-
-  button {
-    border: 1px solid var(--primary-light-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-}
-@-moz-document url(about:webrtc)  {
-  #content > div {
-    background: var(--dark-accent) !important;
-  }
-
-  div.fold-trigger {
-    color: var(--primary-accent-color) !important;
-  }
-}
-/*! Alters the webextension Brief
-  IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://brief_UUID/")  {
-  h2 {
-    color: var(--primary-accent-color) !important;
-  }
-
-  label {
-    color: var(--primary-light-color) !important;
-  }
-
-  #custom-style-textbox,
-  input[type="number"],
-  #clear-all-entries {
-    -moz-appearance: none !important;
-    background: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
-    border: 1px solid var(--light-accent-color) !important;
-  }
-
-  #clear-all-entries {
-    border-radius: 3px !important;
-    -moz-appearance: none !important;
-    background: var(--dark-accent) !important;
-    color: var(--primary-light-color) !important;
-    border: 1px solid var(--mid-way-color) !important;
-  }
-}
-/*! Alters the webextension Cookie AutoDelete
-  IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://cookie_autodelete_UUID/")  {
-  a {
-    color: var(--primary-accent-color);
-  }
-
-  a:hover {
-    color: var(--primary-accent-color-dark);
-  }
-
-  #layout,
-  html {
-    background: var(--primary-dark-color) !important;
-    color: var(--primart-light-color) !important;
-  }
-
-  #menu {
-    background-color: var(--dark-accent) !important;
-  }
-
-  .menu-link {
-    background: var(--dark-accent) !important;
-  }
-
-  .pure-menu-selected,
-  .pure-menu-item:hover {
-    background-color: var(--mid-way-color) !important;
-  }
-
-  input[type="number"],
-  .form-control {
-    -moz-appearance: none !important;
-    background: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
-    border: 1px solid var(--light-accent-color) !important;
-  }
-
-  .nav-tabs .nav-link {
-    color: var(--primary-light-color) !important;
-  }
-
-  .nav-tabs .nav-link.active {
-    color: var(--primary-accent-color) !important;
-    background-color: var(--mid-way-color) !important;
-    border-color: #ddd #ddd #fff;
-  }
-
-  /* Popup Specific */
-
-  body {
-    color: var(--primary-light-color) !important;
-    background-color: var(--mid-way-color) !important;
-  }
-
-  .btn-light {
-    color: var(--primary-light-color) !important;
-    background-color: var(--light-accent-color) !important;
-    border-color: var(--primary-light-color) !important;
-  }
-}
-/*! Alters the webextension Dark Mode
-  IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://dark_mode_UUID/")  {
-  /* Headers */
-
-  .comment {
-    color: var(--primary-accent-color) !important;
-  }
-
-  label {
-    color: var(--primary-light-color) !important;
-  }
-}
-/*! Alters the webextension Decentraleyes
-  IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://decentraleyes_UUID/")  {
-  body {
-    background-color: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-
-  header,
-  .panel:not(:last-child) {
-    border-bottom: solid var(--light-accent-color) 1px !important;
-  }
-
-  .button {
-    -moz-user-select: none;
-    background-color: var(--primary-dark-color) !important;
-  }
-}
-/*! Alters the webextension HTTPS Everywhere
-  IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://https_everywhere_UUID/")  {
-  body {
-    color: var(--primary-light-color) !important;
-    background: var(--mid-way-color) !important;
-  }
-
-  html {
-    background-color: var(--mid-way-color) !important;
-  }
-
-  a {
-    color: var(--primary-accent-color) !important;
-  }
-
-  h3 {
-    color: var(--primary-light-color) !important;
-  }
-}
-/*! Alters the webextension Multi-Account Containers
-  IMPORTANT: change the Internal UUID in BOTH locations */
-
-@-moz-document url-prefix("moz-extension://multi_account_containers_UUID/")  {
-  html body div#container-panel.panel.container-panel,
-  .column-panel-content {
-    background: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-
-  #current-tab {
-    background: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-
-  #current-tab > h3,
-  .panel-header-text,
-  .container-info-list {
-    color: var(--primary-light-color) !important;
-  }
-
-  #container-panel #sort-containers-link {
-    border: 1px solid var(--light-accent-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-
-  #container-panel #sort-containers-link:hover,
-  .clickable:hover {
-    background: var(--primary-dark-color) !important;
-  }
-
-  .container-panel-row {
-    background-color: var(--mid-way-color) !important;
-    border-block-end: 1px solid var(--light-accent-color);
-    color: var(--primary-light-color) !important;
-  }
-
-  .scrollable {
-    border-block-start: 1px solid var(--light-accent-color) !important;
-    background: var(--mid-way-color) !important;
-  }
-
-  .panel-footer {
-    background: var(--primary-dark-color) !important;
-    border-block-end: 1px solid var(--primary-dark-color) !important;
-  }
-
-  .panel-header {
-    background: var(--primary-dark-color) !important;
-  }
-
-  .container-panel-row:hover .clickable.userContext-wrapper,
-  .container-panel-row:focus .clickable.userContext-wrapper,
-  .container-panel-row:hover .pop-button {
-    background: var(--primary-dark-color) !important;
-  }
-
-  .panel-back-arrow {
-    background: var(--mid-way-color) !important;
-  }
-
-  .back-arrow-img {
-    filter: invert(65%) !important;
-  }
-
-  .container-panel-row {
-    border-block-end: 1px solid var(--light-accent-color) !important;
-  }
-
-  #current-tab > label > input[disabled] {
-    background-color: var(--light-accent-color) !important;
-    border-color: var(--primary-light-color) !important;
-  }
-
-  #current-tab > label > input:checked {
-    filter: invert(100%);
-    border-color: var(--light-accent-color) !important;
-  }
-
-  .column-panel-content form {
-    background: var(--mid-way-color) !important;
-  }
-
-  .pop-button-image-small {
-    filter: invert(650%) !important;
-  }
-
-  .edit-container-panel fieldset,
-  .edit-containers-text a {
-    color: var(--primary-light-color) !important;
-  }
-
-  .edit-container-panel input[type="text"] {
-    background: var(--dark-accent) !important;
-    color: var(--primary-light-color) !important;
-    border: 1px solid var(--light-accent-color) !important;
-  }
-
-  [data-identity-color="grey"] {
-    --identity-icon-color: var(--primary-light-color) !important;
-  }
-
-  .button {
-    color: var(--primary-light-color) !important;
-  }
-
-  .container-notification {
-    background: var(--primary-dark-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-}
-
-/*! Alters the webextension Multi-Account Containers
-  IMPORTANT: change the Internal UUID in BOTH locations */
-
-@-moz-document url-prefix("moz-extension://multi_account_containers_UUID/confirm-page")  {
-  body {
-    background-color: var(--primary-dark-color) !important;
-  }
-
-  body,
-  .title-text {
-    color: var(--primary-light-color) !important;
-  }
-
-  #redirect-url {
-    background: var(--dark-accent) !important;
-  }
-
-  .button-container > button:first-child {
-    background: var(--mid-way-color) !important;
-    border-color: var(--light-accent-color) !important;
-  }
-
-  .button-container > button:first-child:hover {
-    background: var(--dark-accent) !important;
-  }
-
-  #never-ask {
-    -moz-appearance: none !important;
-    background-color: var(--mid-way-color) !important;
-    border-color: var(--light-accent-color) !important;
-    background-image: none !important;
-    box-shadow: none !important;
-  }
-
-  #never-ask:checked {
-    background-image: url("chrome://global/skin/in-content/check.svg") !important;
-    background-color: var(--mid-way-color) !important;
-  }
-}
-/*! Alters the webextension Multiple Tab Handler
-  IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://multiple_tab_handler_UUID/")  {
-  h1,
-  p,
-  ul,
-  ul li {
-    color: var(--primary-light-color) !important;
-  }
-}
-/*! Alters the webextension Neat URL
-  IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://neat_url_UUID/")  {
-  label,
-  h2,
-  body {
-    color: var(--primary-light-color) !important;
-  }
-
-  textarea,
-  input {
-    -moz-appearance: none !important;
-    background: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
-    border: 1px solid var(--light-accent-color) !important;
-    padding: 5px 5px 5px 5px !important;
-  }
-
-  a:link {
-    color: var(--primary-accent-color) !important;
-  }
-
-  button {
-    background-color: var(--dark-accent) !important;
-    color: var(--primary-light-color) !important;
-    border-color: var(--light-accent-color) !important;
-  }
-
-  button:hover {
-    background-color: var(--primary-dark-color) !important;
-  }
-}
-/*! Alters the webextension NoScript
-  IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://noscript_UUID/")  {
-  body {
-    background: var(--mid-way-color) !important;
-  }
-
-  #top {
-    border-bottom: 0.06em solid var(--light-accent-color) !important;
-  }
-
-  #top #close,
-  #top #reload,
-  #top #options,
-  #top #revoke-temp,
-  #top #temp-allow-page {
-    background-color: var(--mid-way-color) !important;
-  }
-
-  .site .url[data-key="secure"] .domain,
-  .site .url[data-key="secure"] .sub,
-  .site .url[data-key="full"] span {
-    color: var(--primary-light-color) !important;
-  }
-
-  .sites > tr:nth-child(2n) {
-    background: var(--mid-way-color) !important;
-  }
-
-  .sites > tr:nth-child(2n+1) {
-    background: var(--primary-dark-color) !important;
-  }
-
-  .presets input.preset:checked,
-  #presets input.preset {
-    color: var(--primary-light-color) !important;
-    background-color: var(--dark-accent) !important;
-  }
-
-  .presets label.preset {
-    color: var(--primary-light-color) !important;
-  }
-
-  #sect-general {
-    color: var(--primary-light-color) !important;
-  }
-
-  button,
-  input[type="text"] {
-    -moz-appearance: none !important;
-    background-color: var(--primary-dark-color) !important;
-    border: 1px solid var(--light-accent-color) !important;
-    color: var(--primar-light-color) !important;
-  }
-
-  #top #close,
-  #top #reload,
-  #top #options,
-  #top #revoke-temp,
-  #top #temp-allow-page {
-    background-color: var(--mid-way-color) !important;
-    border: none !important;
-  }
-}
-.pkt_ext_containersaved h2 {
-  color: var(--primary-light-color) !important;
-}
-
-.pkt_ext_containersaved .pkt_ext_tag_detail {
-  border: 1px solid var(--light-accent-color) !important;
-  background: var(--mid-way-color) !important;
-}
-
-.pkt_ext_containersaved .pkt_ext_tag_input_wrapper {
-  background-color: var(--mid-way-color) !important;
-  border-right: 1px solid var(--light-accent-color) !important;
-}
-
-.pkt_ext_containersaved .pkt_ext_tag_input_wrapper input::placeholder {
-  color: var(--primary-light-color) !important;
-}
-
-.pkt_ext_containersaved .pkt_ext_tag_input_wrapper input {
-  background-color: var(--mid-way-color) !important;
-  color: var(--primary-light-color) !important;
-}
-
-.pkt_ext_containersaved .pkt_ext_btn {
-  background: var(--dark-accent) !important;
-}
-
-.pkt_ext_containersaved .token-input-token {
-  border: 1px solid var(--light-accent-color) !important;
-  background-color: var(--primary-dark-color) !important;
-  color: var(--primary-light-color) !important;
-}
-
-.token-input-dropdown-tag {
-  background: var(--mid-way-color) !important;
-  border: 1px solid var(--light-accent-color) !important;
-}
-
-.token-input-dropdown-tag ul li {
-  color: var(--primary-light-color) !important;
-}
-/*! Alters the webextension Request Control
-  IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://request_control_UUID/")  {
-  body {
-    background-color: var(--primary-dark-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-
-  .rule:not(.editing):not(:hover) {
-    background-color: var(--mid-way-color) !important;
-    border: 1px solid var(--light-accent-color) !important;
-  }
-
-  .rule:hover:not(.editing) {
-    background-color: var(--dark-accent) !important;
-    border: 1px solid var(--light-accent-color) !important;
-  }
-
-  .nav-tabs > li.active > a,
-  .nav-tabs > li.active > a:hover,
-  .nav-tabs > li.active > a:focus {
-    color: var(--primary-light-color) !important;
-    background-color: var(--dark-accent) !important;
-    border: 1px solid var(--light-accent-color) !important;
-  }
-
-  .nav-tabs > li > a:hover {
-    background-color: var(--dark-accent) !important;
-    border: 1px solid var(--light-accent-color) !important;
-  }
-
-  tabs.nav-justified > li > a {
-    border-bottom: 1px solid var(--light-accent-color) !important;
-  }
-
-  .btn-default {
-    color: var(--primary-light-color) !important;
-    background-color: var(--dark-accent) !important;
-    border-color: var(--light-accent-color) !important;
-  }
-
-  .btn-default.active {
-    background-color: var(--mid-way-color) !important;
-  }
-
-  .btn-default:hover {
-    color: var(--primary-light-color) !important;
-    background-color: var(--light-accent-color) !important;
-    border-color: var(--light-accent-color) !important;
-  }
-
-  .list-group-item:first-child {
-    background: var(--mid-way-color) !important;
-    border-color: var(--light-accent-color) !important;
-  }
-
-  .table {
-    background: var(--mid-way-color) !important;
-  }
-
-  .table-striped > tbody > tr:nth-of-type(2n+1) {
-    background-color: var(--dark-accent) !important;
-  }
-
-  .input-group .form-control:first-child,
-  .input-group-addon:first-child,
-  .input-group-btn:first-child > .btn,
-  .input-group-btn:first-child > .btn-group > .btn,
-  .input-group-btn:first-child > .dropdown-toggle,
-  .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
-  .input-group-btn:last-child > .btn-group:not(:last-child) > .btn,
-  select.input-sm,
-  .btn-group-params > .tags-input {
-    background: var(--light-accent-color) !important;
-    color: var(--grey-30) !important;
-    border-color: var(--primary-light-color) !important;
-  }
-
-  .list-group-item {
-    background-color: var(--mid-way-color) !important;
-    border: 1px solid #ddd;
-  }
-
-  .tags-input .tag {
-    background: var(--dark-accent) !important;
-    border: 1px solid var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-}
-/*! Alters the webextension Skip Redirect
-  IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://skip_redirect_UUID/")  {
-  body {
-    background: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-
-  textarea,
-  input[type="text"],
-  input[type="number"] {
-    -moz-appearance: none !important;
-    background: var(--light-accent-color) !important;
-    color: var(--grey-30) !important;
-  }
-
-  label a {
-    color: var(--primary-accent-color) !important;
-  }
-}
-/*! Alters the webextension Smart HTTPS
-  IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://smart_https_UUID/")  {
-  body {
-    background-color: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-
-  .information input[type="number"],
-  input[type="text"] {
-    -moz-appearance: none !important;
-    background: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
-    border: 1px solid var(--light-accent-color) !important;
-  }
-
-  .information p {
-    color: var(--primary-light-color) !important;
-  }
-}
-/*! Alters the webextension Tab Suspender (memory saver)
-  IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://tab_suspender_UUID/")  {
-  label,
-  body {
-    color: var(--primary-light-color) !important;
-  }
-
-  input[type="number"],
-  textarea {
-    -moz-appearance: none !important;
-    background: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
-    border: 1px solid var(--light-accent-color) !important;
-  }
-
-  #recovery,
-  #save {
-    -moz-appearance: none !important;
-    height: 20px !important;
-    background: var(--dark-accent) !important;
-    color: var(--primary-light-color) !important;
-    border: 1px solid var(--mid-way-color) !important;
-    border-radius: 4px !important;
-  }
-}
-/*! Alters the webextension Tree Style Tab
-  IMPORTANT: change the Internal UUID in BOTH locations */
-
-@-moz-document url-prefix("moz-extension://tree_style_tab_UUID/")  {
-  p,
-  ul {
-    color: var(--primary-light-color) !important;
-  }
-
-  h1,
-  legend {
-    color: var(--primary-accent-color) !important;
-  }
-
-  a {
-    color: var(--primary-accent-color-dark) !important;
-  }
-
-  #debug-configs {
-    color: var(--primary-light-color) !important;
-  }
-
-  #userStyleRules,
-  #legacyConfigsNextMigrationVersion,
-  #importedTreeStructureFromLegacy,
-  #importedConfigsFromLegacy,
-  #autoGroupNewTabsDelayOnNewWindow,
-  #autoGroupNewTabsTimeout {
-    -moz-appearance: none !important;
-    background: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
-    border: 1px solid var(--light-accent-color) !important;
-  }
-
-  /* Context Menus */
-
-  #tabContextMenu,
-  .extra.has-submenu ul,
-  #contextual-identities-selector,
-  #newtab-action-selector {
-    background: var(--mid-way-color) !important;
-    border: none !important;
-  }
-}
-
-/*! Alters the webextension Tree Style Tab
-  IMPORTANT: change the Internal UUID in BOTH locations */
-
-@-moz-document url-prefix("moz-extension://tree_style_tab_UUID/resources/group-tab.html")  {
-  :root {
-    background: var(--primary-dark-color) !important;
-    color: ButtonText;
-  }
-
-  h1::before {
-    background: var(--primary-light-color) !important;
-  }
-}
-/*! Alters the webextension uBlock Origin
-  IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://ublock_origin_UUID/")  {
-  /* header */
-
-  #appinfo {
-    background-color: var(--dark-accent) !important;
-    color: var(--primary-light-color) !important;
-  }
-
-  /* Right Column */
-
-  body[dir="ltr"] #panes > div {
-    background: var(--primary-dark-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-
-  body,
-  #panes {
-    background: var(--primary-dark-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-
-  label a,
-  p a,
-  ul a {
-    color: var(--primary-accent-color) !important;
-  }
-
-  /* Subgroup in Settings */
-
-  ul#userSettings .subgroup > span {
-    color: var(--primary-accent-color) !important;
-  }
-
-  #dashboard-nav-widgets span {
-    color: var(--primary-light-color) !important;
-  }
-
-  /* info icons */
-
-  a.info {
-    color: var(--primary-light-color) !important;
-    opacity: .5;
-  }
-
-  li.listEntry span.status {
-    color: var(--primary-light-color) !important;
-  }
-
-  li.listEntry > a.remove,
-  li.listEntry > a.remove:visited {
-    color: var(--red-80) !important;
-  }
-
-  /* Power Switch */
-
-  #switch .fa {
-    color: var(--primary-accent-color) !important;
-  }
-
-  /* Power Switch - Off */
-
-  body.off #switch .fa {
-    color: var(--primary-light-color) !important;
-  }
-
-  /* Tool Buttons */
-
-  .tool {
-    color: var(--primary-light-color) !important;
-  }
-
-  .tool:hover {
-    color: var(--dark-accent) !important;
-  }
-
-  /* Stripped row */
-
-  h2,
-  #extraTools {
-    background-color: var(--dark-accent) !important;
-    color: var(--primary-light-color) !important;
-  }
-
-  /* Refresh Button */
-
-  #refresh {
-    background-color: var(--dark-accent) !important;
-    border-color: var(--light-accent-color) !important;
-  }
-
-  /* Badge number */
-
-  #extraTools > span > span.badge {
-    color: var(--primary-light-color) !important;
-  }
-
-  /* Firewall Container */
-
-  #firewallContainer > div {
-    background-color: var(--mid-way-color) !important;
-  }
-
-  #firewallContainer > div > span {
-    color: var(--primary-light-color) !important;
-    border-color: var(--light-accent-color) !important;
-  }
-
-  /* Darker Red */
-
-  body.advancedUser #firewallContainer > div > span.blockRule.ownRule,
-  #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action.own.block {
-    background-color: #ab0000 !important;
-  }
-
-  /* Lighter Red */
-
-  body.advancedUser #firewallContainer > div > span.blockRule,
-  #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action > span.block {
-    background-color: #dda0a2 !important;
-  }
-
-  /* Before Red */
-
-  #firewallContainer > div.blocked > span:first-of-type::before,
-  #firewallContainer.minimized > div.isDomain.totalBlocked > span:first-of-type::before {
-    background-color: #c87576 !important;
-    opacity: 1 !important;
-  }
-
-  /* Darker Green */
-
-  body.advancedUser #firewallContainer > div > span.allowRule.ownRule,
-  #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action.own.allow {
-    background-color: #229400 !important;
-  }
-
-  /* Lighter Green */
-
-  body.advancedUser #firewallContainer > div > span.allowRule,
-  #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action > span.allow {
-    background-color: #95ca8a !important;
-  }
-
-  /* Before Green */
-
-  #firewallContainer > div.allowed > span:first-of-type::before,
-  #firewallContainer.minimized > div.isDomain.totalAllowed > span:first-of-type::before {
-    background-color: #7ec26f !important;
-    opacity: 1 !important;
-  }
-
-  /* Darker Blue */
-
-  body.advancedUser #firewallContainer > div > span.noopRule.ownRule,
-  #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action.own.noop {
-    background-color: #0c46a7 !important;
-  }
-
-  /* Blue on hover */
-
-  #actionSelector > span:nth-of-type(2) {
-    background-color: #0c46a7 !important;
-  }
-
-  /* Lighter Blue */
-
-  body.advancedUser #firewallContainer > div > span.noopRule,
-  #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action > span.noop {
-    background-color: #65bdfb !important;
-  }
-
-  /* Before Yellow */
-
-  #firewallContainer > div.allowed.blocked > span:first-of-type::before,
-  #firewallContainer.minimized > div.isDomain.totalAllowed.totalBlocked > span:first-of-type::before {
-    background-color: #cdc16e !important;
-    opacity: 1 !important;
-  }
-
-  /* Color Blind Friendly */
-
-  /* Dark Block Color */
-
-  body.advancedUser #firewallContainer.colorBlind > div > span.blockRule.ownRule {
-    background-color: #000060 !important;
-  }
-
-  /* Light Block Color */
-
-  body.advancedUser #firewallContainer.colorBlind > div > span.blockRule {
-    background-color: #787dab !important;
-  }
-
-  /* Dark Allow */
-
-  body.advancedUser #firewallContainer.colorBlind > div > span.allowRule.ownRule {
-    background-color: #fbb900 !important;
-  }
-
-  /* Light Allow */
-
-  body.advancedUser #firewallContainer.colorBlind > div > span.allowRule {
-    background-color: #f2d98d !important;
-  }
-
-  /* Dark Noop */
-
-  body.advancedUser #firewallContainer.colorBlind > div > span.noopRule.ownRule {
-    background-color: #2f2e2e !important;
-  }
-
-  /* Light Noop */
-
-  body.advancedUser #firewallContainer.colorBlind > div > span.noopRule {
-    background-color: #a1a1a1 !important;
-  }
-
-  /* Yellow Side */
-
-  #firewallContainer.colorBlind > div.allowed > span:first-of-type::before,
-  #firewallContainer.colorBlind.minimized > div.isDomain.totalAllowed > span:first-of-type::before {
-    background-color: #ebd287 !important;
-  }
-
-  /* Blue Side */
-
-  #firewallContainer.colorBlind > div.blocked > span:first-of-type::before,
-  #firewallContainer.colorBlind.minimized > div.isDomain.totalBlocked > span:first-of-type::before {
-    background-color: #787cab !important;
-  }
-
-  #dashboard-nav-widgets {
-    border-bottom: 1px solid var(--mid-way-color) !important;
-    background-color: var(--dark-accent) !important;
-  }
-
-  .tabButton {
-    background-color: var(--primary-dark-color) !important;
-    color: var(--primary-light-color) !important;
-    border: 1px solid var(--mid-way-color) !important;
-    border-bottom: 1px solid var(--mid-way-color) !important;
-  }
-
-  .tabButton.selected {
-    background-color: var(--dark-accent) !important;
-    border-bottom: 1px solid var(--primary-dark-color) !important;
-  }
-
-  input[type="number"] {
-    -moz-appearance: none!important;
-    background-color: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-
-  li.listEntry .content {
-    color: var(--primary-accent-color) !important;
-  }
-
-  #diff .pane {
-    color: var(--primary-light-color) !important;
-    background: var(--primary-dark-color) !important;
-  }
-
-  #diff li {
-    background-color: var(--mid-way-color) !important;
-  }
-
-  #diff li:nth-child(2n) {
-    background-color: var(--primary-dark-color) !important;
-  }
-
-  /* Textbox */
-
-  code {
-    background-color: var(--mid-way-color) !important;
-  }
-
-  #whitelist textarea {
-    background: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-
-  textarea#userFilters.userFilters,
-  textarea#externalLists {
-    -moz-appearance: none!important;
-    background: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-
-  /* Logger */
-
-  .permatoolbar {
-    background-color: var(--primary-dark-color) !important;
-  }
-
-  .permatoolbar .button,
-  .permatoolbar #refresh {
-    background-color: transparent !important;
-  }
-
-  .permatoolbar .button:hover,
-  .permatoolbar #refresh {
-    background-color: var(--grey-60) !important;
-  }
-
-  #netInspector tr.blocked {
-    background-color: rgb(75,49,55) !important;
-    color: rgb(255,148,148) !important;
-  }
-
-  #netInspector #filterInput,
-  #netInspector #maxEntries {
-    -moz-appearance: none !important;
-    background: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
-    border: 1px solid var(--light-accent-color) !important;
-    padding: 5px 5px 5px 5px !important;
-  }
-
-  #netInspector tr.cosmetic,
-  #netInspector tr.redirect {
-    background-color: rgb(68,57,31) !important;
-    color: rgb(252,225,159) !important;
-  }
-
-  body:not(.popupOn) #netInspector tr.canMtx td:nth-of-type(2):hover,
-  #netInspector tr.cat_net td:nth-of-type(4):hover {
-    background: var(--dark-accent) !important;
-  }
-
-  .modalDialog .dialog {
-    background-color: var(--dark-accent) !important;
-    border: 2px solid var(--dark-accent) !important;
-  }
-
-  #netFilteringDialog .dialog > div.headers > span.header.selected {
-    background-color: var(--dark-accent) !important;
-    color: var(--primary-light-color) !important;
-    border-color: var(--mid-way-color) !important;
-  }
-
-  #netFilteringDialog .dialog > div.headers > span.header {
-    background-color: var(--primary-dark-color) !important;
-    border-color: var(--mid-way-color) !important;
-  }
-
-  #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry {
-    background-color: var(--mid-way-color) !important;
-    border-color: var(--light-accent-color) !important;
-  }
-
-  #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td:first-of-type {
-    border-color: var(--light-accent-color) !important;
-  }
-
-  #netFilteringDialog .dialog > div.containers > div.dynamic > table.toolbar #saveRules {
-    background-color: var(--mid-way-color) !important;
-    border: none !important;
-  }
-
-  body #netInspector td {
-    border-color: var(--light-accent-color) !important;
-  }
-
-  #netInspector tr.maindoc {
-    background-color: var(--dark-accent) !important;
-    color: var(--grey-30) !important;
-  }
-}
-/*! Alters the webextension uBO-Scope
-  IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://ubo_scope_UUID/")  {
-  body {
-    background: var(--mid-way-color) !important;
-  }
-
-  #topPane {
-    background-color: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-
-  #heatmaps .togglerBar {
-    background: var(--mid-way-color) !important;
-  }
-
-  body.theoretical #heatmaps .heatmap.theoretical {
-    background: var(--mid-way-color) !important;
-  }
-
-  #heatmaps .heatmap {
-    border: none;
-    background: var(--mid-way-color) !important;
-  }
-
-  #heatmaps.list .hmcell {
-    background-color: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-
-  #domain3rdDetails {
-    background-color: var(--primary-dark-color) !important;
-    border: 1px solid var(--primary-dark-color) !important;
-  }
-
-  #domain3rdDetails #authority {
-    background-color: var(--dark-accent) !important;
-    position: relative;
-  }
-
-  #scores .scores .score.actual {
-    color: white !important;
-  }
-
-  #scores .scores .score.theoretical {
-    color: var(--primary-dark-color) !important;
-  }
-
-  body.theoretical #scores .scores .score.actual {
-    color: var(--primary-dark-color) !important;
-  }
-
-  body.theoretical #scores .scores .score.theoretical {
-    color: var(--primary-light-color) !important;
-  }
-}
-/*! Alters the webextension uMatrix
-  IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://umatrix_UUID/")  {
-  body[dir="ltr"] {
-    background-color: var(--primary-dark-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-
-  #dashboard-nav-widgets {
-    background-color: var(--dark-accent) !important;
-    color: var(--primary-light-color) !important;
-    border-bottom: 1px solid var(--light-accent-color);
-  }
-
-  .tabButton {
-    background: var(--mid-way-color) !important;
-    background-color: ;
-    color: var(--primary-light-color) !important;
-    border-color: var(--light-accent-color) !important;
-    border-bottom: none !important;
-  }
-
-  .tabButton.selected {
-    border-bottom: none !important;
-    background-color: var(--primary-dark-color) !important;
-    border-color: var(--light-accent-color) !important;
-    color: var(--primary-accent-color) !important;
-  }
-
-  #deleteUnusedSessionCookiesAfter,
-  #clearBrowserCacheAfter,
-  #popupScopeLevel,
-  #externalHostsFiles,
-  #backupUserDataButton,
-  #restoreUserDataButton,
-  #resetUserDataButton {
-    -moz-appearance: none !important;
-    background: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
-    border: 1px solid var(--light-accent-color) !important;
-  }
-
-  button.custom {
-    border-color: var(--light-accent-color) !important;
-    background-color: var(--dark-accent) !important;
-    background-image: none !important;
-    color: white !important;
-  }
-
-  button.custom.disabled,
-  button.custom[disabled] {
-    border-color: var(--primary-light-color) !important;
-    background-color: var(--light-accent-color) !important;
-    background-image: none !important;
-    color: var(--primary-light-color) !important;
-    opacity: 0.6;
-    pointer-events: none;
-  }
-
-  a {
-    color: var(--primary-accent-color) !important;
-  }
-
-  #diff li {
-    background-color: var(--primary-dark-color) !important;
-  }
-
-  #diff li:nth-of-type(2n),
-  .assets > div:first-of-type {
-    background-color: var(--dark-accent) !important;
-  }
-
-  .assets {
-    border: 1px solid var(--light-accent-color) !important;
-  }
-
-  #diff li:hover {
-    background-color: var(--primary-accent-color) !important;
-    color: white !important;
-  }
-
-  #diff ul {
-    border-top: 1px solid var(--light-accent-color) !important;
-  }
-
-  textarea {
-    -moz-appearance: none !important;
-    background: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
-    border: 1px solid var(--light-accent-color) !important;
-    padding: 5px 5px 5px 5px !important;
-  }
-
-  #diff textarea {
-    border-top: 1px solid var(--light-accent-color) !important;
-    background: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-
-  #dashboard-nav-widgets {
-    border-bottom: 1px solid var(--light-accent-color) !important;
-  }
-
-  .whatisthis-expandable {
-    background-color: var(--dark-accent) !important;
-    border: 1px dotted var(--light-accent-color) !important;
-  }
-
-  /* Popup Specific */
-
-  .paneHead {
-    background-color: var(--primary-dark-color) !important;
-  }
-
-  .paneContent {
-    background: var(--primary-light-color) !important;
-  }
-
-  #gotoDashboard {
-    background-color: var(--dark-accent) !important;
-    color: var(--primary-light-color) !important;
-  }
-
-  body[dir="ltr"] #gotoDashboard > span:last-of-type {
-    color: var(--primary-light-color) !important;
-  }
-
-  body .toolbar button {
-    color: var(--primary--light-color) !important;
-  }
-
-  body .toolbar .scopeRel {
-    color: var(--primary-accent-color-dark) !important;
-  }
-
-  #mtxSwitch_matrix-off.switchTrue {
-    color: #a00 !important;
-  }
-
-  button > span.badge {
-    color: white !important;
-    background-color: var(--light-accent-color) !important;
-  }
-
-  body .toolbar button {
-    background-color: var(--primary-dark-color) !important;
-  }
-
-  body .toolbar button.disabled {
-    color: var(--primary-light-color);
-    color: var(--mid-way-color) !important;
-  }
-
-  body .toolbar .scope {
-    background-color: var(--mid-way-color) !important;
-    border: 1px solid var(--light-accent-color) !important;
-  }
-
-  #parsed {
-    background-color: var(--dark-accent) !important;
-    border: 1px solid var(--light-accent-color) !important;
-    border-top: none !important;
-  }
-
-  .code {
-    background-color: var(--dark-accent) !important;
-    border: 1px solid var(--light-accent-color) !important;
-    border-bottom: none !important;
-  }
-
-  button#bye {
-    -moz-appearance: none !important;
-    background: var(--mid-way-color) !important;
-    border: 1px solid var(--light-accent-color) !important;
-    color: var(--primary-light-color) !important;
-  }
-
-  button#bye:hover {
-    background: var(--dark-accent) !important;
-  }
-
-  .dropdown-menu > ul,
-  .recipe:hover {
-    border: 1px solid var(--light-accent-color) !important;
-    background-color: var(--dark-accent) !important;
-  }
-
-  .dropdown-menu > ul > li.dropdown-menu-entry {
-    color: var(--mid-way-color) !important;
-  }
-
-  #mtxSwitches > li.switchTrue {
-    color: var(--primary-light-color) !important;
-  }
-
-  .dropdown-menu > ul > li.dropdown-menu-entry:hover {
-    background: var(--primary-dark-color) !important;
-  }
-
-  .recipe .name {
-    color: var(--primary-light-color) !important;
-  }
-
-  /* Logger */
-
-  #toolbar,
-  #toolbar .button {
-    background-color: var(--dark-accent) !important;
-  }
-
-  #toolbar input {
-    -moz-appearance: none !important;
-    background: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
-    border: 1px solid var(--light-accent-color) !important;
-    padding: 5px 5px 5px 5px !important;
-  }
-
-  #content table tr {
-    background-color: var(--mid-way-color) !important;
-  }
-
-  #content table tr:nth-of-type(2n+1) {
-    background-color: var(--primary-dark-color) !important;
-  }
-
-  #content table tr.doc {
-    background-color: var(--dark-accent) !important;
-  }
-
-  body:not(.popupOn) #content table tr.canMtx td:nth-of-type(2):hover {
-    background: var(--dark-accent) !important;
-  }
-
-  body #content td {
-    border: 1px solid var(--light-accent-color) !important;
-  }
-
-  #content table tr.blocked {
-    color: var(--red-80) !important;
-  }
-
-  #content table tr.cat_info {
-    color: var(--primary-accent-color) !important;
-  }
-
-  #toolbar {
-    border-bottom: 1px solid var(--light-accent-color) !important;
-  }
-}
-/*! Alters the webextension Vim Vixen
-  IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://vim_vixen_UUID/")  {
-  /* Top Border */
-
-  .vimvixen-console-command-wrapper {
-    border-top: 1px solid var(--mid-way-color) !important;
-  }
-
-  /* Header */
-
-  .vimvixen-console-completion-title {
-    background-color: var(--darksest) !important;
-    border-bottom: 1px solid var(--mid-way-color) !important;
-  }
-
-  /* Main Content */
-
-  .vimvixen-console-completion {
-    background-color: var(--dark-accent) !important;
-    color: #b1b1b3 !important;
-    font-family: Menlo, monospace !important;
-  }
-
-  /* Command Line */
-
-  .vimvixen-console-command,
-  .vimvixen-console-command-input {
-    background-color: var(--darksest) !important;
-    color: var(--grey-30) !important;
-  }
-
-  /* URL color */
-
-  .vimvixen-console-completion-item-url {
-    color: #86de74 !important;
-  }
-
-  .vimvixen-console-completion-item.vimvixen-completion-selected {
-    background-color: rgb(68,57,31) !important;
-    color: rgb(252,225,159) !important;
-  }
-
-  /* Error Message */
-
-  .vimvixen-console-error {
-    background-color: rgb(75,49,55) !important;
-    color: rgb(255,148,148) !important;
-  }
-
-  /* Settings page in about:addons */
-
-  .vimvixen-settings-form,
-  h1 {
-    color: var(--primary-light-color) !important;
-  }
-
-  .vimvixen-settings-form textarea[name="json"] {
-    background-color: var(--mid-way-color) !important;
-    -moz-appearance: none !important;
-    color: var(--primary-light-color) !important;
-    border-color: var(--mid-way-color);
-  }
-
-  ::-moz-selection {
-    color: var(--grey-30);
-    background: var(--primary-accent-color-dark);
-  }
-}
-@-moz-document url-prefix("https://addons.mozilla.org")  {
-  /* Header & Footer */
-
-  .Header,
-  .Footer-wrapper,
-  .LanguageTools-header-row,
+@-moz-document url-prefix("https://addons.mozilla.org") {
   .Footer,
+  .Footer-wrapper,
+  .Header,
+  .LanguageTools-header-row,
   .amo {
-    background: var(--dark-accent) !important;
+    background: var(--in-content-category-header-background)!important
   }
-
-  .LanguageTools-table-row:nth-child(2n) {
-    background: var(--primary-dark-color) !important;
-  }
-
-  /* Background Colors */
-
-  .LandingPage,
-  .Home,
   .App-content,
+  .Home,
+  .LandingPage,
+  .LanguageTools-table-row:nth-child(2n),
   .Paginate-page-number {
-    background: var(--primary-dark-color) !important;
+    background: var(--in-content-page-background)!important
   }
-
-  /* Search Box */
-
   .SearchForm-icon-magnifying-glass {
-    filter: invert(65%) !important;
+    filter: invert(65%)!important
   }
-
-  /* Cards */
-
-  .Hero .Card-contents,
-  .Home-SubjectShelf .Card-contents,
-  .Card-header,
+  .AddonDescription-more-addons--theme .Card-contents .AddonsCard-list,
+  .AddonDescription-more-addons:not(.AddonDescription-more-addons--theme) .Card-contents .AddonsCard-list,
   .AddonsCard--horizontal .Card-contents,
   .AddonsCard--horizontal ul.AddonsCard-list .SearchResult-link,
-  .SearchForm-query,
-  .LandingPage-header,
-  .Categories .Card-contents,
-  .SectionLinks-dropdown .DropdownMenu-items,
-  .Card-contents,
   .Card--photon .Card-contents,
-  .Card-footer-link,
-  .MetadataCard,
-  .AddonDescription-more-addons:not(.AddonDescription-more-addons--theme) .Card-contents .AddonsCard-list,
-  .AddonDescription-more-addons--theme .Card-contents .AddonsCard-list,
-  .Search .SearchResults .SearchResult,
-  .SearchForm-suggestions-item.SearchForm-suggestions-item,
+  .Card-contents,
   .Card-contents li,
-  .Card-footer-text {
-    background: var(--mid-way-color) !important;
-  }
-
-  .Home-SubjectShelf-subheading,
-  .Home-SubjectShelf-link:link,
-  .Home-SubjectShelf-link:visited,
+  .Card-footer-link,
+  .Card-footer-text,
   .Card-header,
-  .SearchResult-name,
+  .Categories .Card-contents,
+  .Hero .Card-contents,
+  .Home-SubjectShelf .Card-contents,
+  .LandingPage-header,
+  .MetadataCard,
+  .Search .SearchResults .SearchResult,
   .SearchForm-query,
-  .LandingPage-addonType-name,
-  .LandingPage-heading-content,
-  .Footer-links-header a:link,
-  .Footer a:active,
-  .Footer a:hover,
-  .DropdownMenuItem,
-  .DropdownMenuItem-section,
-  .DropdownMenuItem-link a,
-  .DropdownMenuItem-link a:link,
-  .Card-contents,
-  .Card--photon .Card-contents,
-  .AddonBadges .Badge,
+  .SearchForm-suggestions-item.SearchForm-suggestions-item,
+  .SectionLinks-dropdown .DropdownMenu-items {
+    background: var(--in-content-box-background)!important
+  }
   .Addon-author,
   .Addon-author a,
-  .Addon-author a:link
-	.Button--action,
-  .Button--action:link,
-  .Button--action.Button--small:link,
-  .Button--action,
+  .Addon-author a:link .Button--action,
   .Addon-title,
-  .ReportAbuseButton-show-more,
-  .SearchResult-summary,
-  .SearchContextCard-header,
-  .Paginate-page-number,
-  .SearchSuggestion-name,
+  .AddonBadges .Badge,
+  .Button--action,
+  .Button--action.Button--small:link,
+  .Button--action:link,
+  .Card--photon .Card-contents,
+  .Card-contents,
+  .Card-footer-text,
+  .Card-header,
+  .DropdownMenuItem,
+  .DropdownMenuItem-link a,
+  .DropdownMenuItem-link a:link,
+  .DropdownMenuItem-section,
   .ExpandableCard-ToggleLink:link,
+  .Footer a:active,
+  .Footer a:hover,
+  .Footer-links-header a:link,
+  .Home-SubjectShelf-link:link,
+  .Home-SubjectShelf-link:visited,
+  .Home-SubjectShelf-subheading,
+  .LandingPage-addonType-name,
+  .LandingPage-heading-content,
   .Paginate .Paginate-item,
-  .Card-footer-text {
-    color: var(--primary-light-color) !important;
+  .Paginate-page-number,
+  .ReportAbuseButton-show-more,
+  .SearchContextCard-header,
+  .SearchForm-query,
+  .SearchResult-name,
+  .SearchResult-summary,
+  .SearchSuggestion-name {
+    color: var(--in-content-page-color)!important
   }
-
-  .Paginate-previous::before,
+  .Card-contents li .Rating-star-group,
   .Paginate-next::after,
-  .Card-contents li .Rating-star-group {
-    filter: invert(70%) !important;
+  .Paginate-previous::before {
+    filter: invert(70%)!important
   }
-
   .ShowMoreCard-contents::after {
-    background: linear-gradient(rgba(255, 255, 255, 0), var(--mid-way-color)) !important;
+    background: linear-gradient(rgba(255,255,255,0),var(--in-content-box-background))!important
   }
-
-  .Home-SubjectShelf-link:active,
-  .Home-SubjectShelf-link:focus,
-  .Home-SubjectShelf-link:hover,
-  .SearchResult-link:focus .SearchResult-name,
-  .SearchResult-link:hover .SearchResult-name,
+  .Addon-details .AddonDescription-contents a:link,
+  .AddonMoreInfo-contents a:link,
   .Card-footer-link a,
   .Card-footer-link a:hover,
   .Card-footer-link a:link,
+  .Card.ShowMoreCard.AddonDescription-version-notes a:link,
   .DropdownMenuItem-link a:hover,
-  .AddonMoreInfo-contents a:link,
+  .Home-SubjectShelf-link:active,
+  .Home-SubjectShelf-link:focus,
+  .Home-SubjectShelf-link:hover,
   .LanguageTools-table a:link,
-  .Addon-details .AddonDescription-contents a:link,
-  .Card.ShowMoreCard.AddonDescription-version-notes a:link {
-    color: var(--primary-accent-color) !important;
+  .SearchResult-link:focus .SearchResult-name,
+  .SearchResult-link:hover .SearchResult-name {
+    color: var(--in-content-link-color)!important
   }
-
   .Button--action.Button--outline-only {
-    border-color: var(--primary-accent-color) !important;
+    border-color: var(--in-content-border-highlight)!important
   }
-
+  .Addon .InstallButton-button,
   .Button--action,
   .Button--action.Button--small,
   .Paginate .Paginate-item,
-  .SearchForm-suggestions-item.SearchForm-suggestions-item--highlighted,
-  .Addon .InstallButton-button {
-    background: var(--primary-accent-color) !important;
+  .SearchForm-suggestions-item.SearchForm-suggestions-item--highlighted {
+    background: var(--in-content-primary-button-background)!important
   }
-
   .Button--action.Button--outline-only:hover,
-  .SearchForm-query:hover,
-  .Button--action:hover {
-    border-color: var(--primary-accent-color-dark) !important;
+  .Button--action:hover,
+  .SearchForm-query:hover {
+    border-color: var(--in-content-primary-button-background)!important
   }
-
   .SearchForm-query:focus {
-    box-shadow: 0 0 5px 0 var(--primary-accent-color) !important;
-    border-color: var(--primary-accent-color-dark) !important;
+    box-shadow: 0 0 5px 0 var(--in-content-border-highlight)!important;
+    border-color: var(--in-content-primary-button-background)!important
   }
-
   .AddonsCard--horizontal ul.AddonsCard-list .SearchResult-link:hover {
-    background: var(--primary-dark-color) !important;
-    border-radius: 0px !important;
+    background: var(--in-content-page-background)!important;
+    border-radius: 0!important
   }
-
   .Button--report {
-    text-shadow: none !important;
+    text-shadow: none!important
   }
-
   .Icon-external {
-    filter: invert(20%) !important;
+    filter: invert(20%)!important
   }
-
   .Icon-featured {
-    filter: invert(85%) !important;
+    filter: invert(85%)!important
   }
 }
-@-moz-document url-prefix(file:///)  {
+@-moz-document url-prefix(file:///) {
   :root {
-    background-color: var(--mid-way-color) !important;
+    background-color: var(--in-content-box-background)!important
   }
-
   body {
-    border: 1px solid var(--mid-way-color) !important;
-    background-color: var(--primary-dark-color) !important;
-    color: var(--primary-light-color) !important;
+    border-color: var(--in-content-box-background)!important;
+    background-color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   h1 {
-    border-bottom: 1px solid var(--light-accent-color) !important;
+    border-color: var(--in-content-box-border-color)!important
   }
-
   body > table > tbody > tr:hover {
-    outline: 1px solid var(--mid-way-color) !important;
+    outline-color: var(--in-content-box-background)!important
   }
-
   .dir,
-  .symlink,
   .file,
+  .symlink,
   .up {
-    color: var(--primary-accent-color) !important;
+    color: var(--in-content-link-color)!important
   }
 }
-@-moz-document regexp("^moz-extension://.*manifest.json$")  {
+@-moz-document regexp("^moz-extension://.*manifest.json$") {
   html {
-    background: var(--primary-dark-color) !important;
-    color: var(--primary-light-color) !important;
+    background: var(--in-content-page-background)!important;
+    color: var(--in-content-page-color)!important
   }
 }
-@-moz-document regexp(".*\\.(p|P)(d|D)(f|F).*")  {
+@-moz-document regexp(".*\\.(p|P)(d|D)(f|F).*") {
+  #loadingBar .progress,
+  .dropdownToolbarButton > select,
   .dropdownToolbarButton > select > option,
   .overlayButton,
   .secondaryToolbarButton,
+  .toolbarField,
   body,
   div#viewer {
-    background-color: var(--mid-way-color)!important;
+    background-color: var(--in-content-box-background)!important
   }
-
   body {
-    background-image: none!important;
+    background-image: none!important
   }
-
   .splitToolbarButtonSeparator,
   .verticalToolbarSeparator {
     box-shadow: none!important;
-    background-color: var(--mid-way-color)!important;
+    background-color: var(--in-content-box-background)!important
   }
-
   div#toolbarViewer {
-    background-color: var(--dark-accent)!important;
+    background-color: var(--in-content-category-header-background)!important
   }
-
   #numPages,
   #pageNumber,
   #scaleSelect {
-    color: var(--primary-light-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   .pdfViewer .page {
-    border-image: none!important;
+    border-image: none!important
   }
-
   #pageNumber,
   #scaleSelectContainer {
-    border: 1px solid var(--mid-way-color);
+    border: 1px solid!important
   }
-
   #loadingBar {
     position: relative;
     width: 100%;
     height: 4px;
-    background-color: var(--primary-accent-color);
-    border-bottom: 1px solid var(--light-accent-color);
+    background-color: var(--theme-selection-background-hover)!important;
+    border-bottom: 1px solid!important
   }
-
   #sidebarContainer {
-    background-color: var(--primary-dark-color)!important;
+    background-color: var(--primary-dark-color)!important
   }
-
   #toolbarSidebar {
     background-color: var(--dark-accent)!important;
     background-image: none!important;
+    border-color: var(--in-content-box-background)!important
   }
-
   .doorHanger,
   .doorHangerRight {
     border: 1px solid!important;
-    box-shadow: none!important;
+    border-color: var(--in-content-box-background)!important;
+    box-shadow: none!important
   }
-
   #toolbarContainer,
   .findbar,
   .secondaryToolbar {
-    background-color: var(--mid-way-color)!important;
-    background-image: none!important;
+    background-color: var(--in-content-box-background)!important;
+    background-image: none!important
   }
-
   .dropdownToolbarButton,
   .overlayButton,
   .secondaryToolbarButton,
   .toolbarButton {
     border: none!important;
-    color: var(--primary-light-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   .dropdownToolbarButton,
   .overlayButton,
   .toolbarButton:focus,
   .toolbarButton:hover {
-    background-color: var(--mid-way-color)!important;
+    background-color: var(--in-content-box-background)!important;
     background-image: none!important;
     border: none!important;
-    box-shadow: none!important;
+    box-shadow: none!important
   }
-
   .secondaryToolbarButton:focus,
   .secondaryToolbarButton:hover {
     background-color: var(--primary-dark-color)!important;
     background-image: none!important;
-    box-shadow: none!important;
+    box-shadow: none!important
   }
-
   .secondaryToolbarButton::before,
   .toolbarButton::before {
-    filter: invert(20%)!important;
+    filter: invert(20%)!important
   }
-
   .secondaryToolbarButton.toggled,
   .splitToolbarButton.toggled > .toolbarButton.toggled,
   .toolbarButton.toggled {
-    background-color: var(--primary-dark-color)!important;
+    background-color: var(--in-content-page-background)!important;
     background-image: none!important;
     box-shadow: none!important;
-    color: #fff!important;
+    color: var(--in-content-selected-text)!important
   }
-
   .horizontalToolbarSeparator {
-    background-color: var(--light-accent-color)!important;
-    box-shadow: none!important;
-  }
-
-  .dropdownToolbarButton > select,
-  .toolbarField {
-    background: var(--mid-way-color)!important;
-  }
-
-  #loadingBar .progress {
-    background-color: var(--mid-way-color)!important;
+    background-color: var(--in-content-box-border-color)!important;
+    box-shadow: none!important
   }
 }
-@-moz-document url-prefix(https://raw.githubusercontent.com)  {
+@-moz-document url-prefix(https://raw.githubusercontent.com) {
   html {
-    background: var(--primary-dark-color) !important;
-    color: var(--primary-light-color) !important;
+    background: var(--in-content-page-background)!important;
+    color: var(--in-content-page-color)!important
   }
 }
-@-moz-document url-prefix(view-source)  {
-  *|*:root {
-    background-color: var(--primary-dark-color) !important;
-    color: var(--primary-light-color) !important;
+@-moz-document url-prefix(view-source) {
+  :root {
+    background-color: var(--in-content-page-background)!important;
+    color: var(--in-content-page-color)!important
   }
-
   pre[id]:before,
   span[id]:before {
-    color: var(--primary-light-color) !important;
+    color: var(--in-content-page-color)!important
   }
-
+  .highlight .end-tag,
   .highlight .start-tag {
-    color: #b78cfd !important;
+    color: #b78cfd!important
   }
-
-  .highlight .end-tag {
-    color: #b78cfd !important;
-  }
-
   .highlight .comment {
-    color: #86de74 !important;
+    color: #86de74!important
   }
-
   .highlight .cdata {
-    color: #CC0066 !important;
+    color: #c06!important
   }
-
   .highlight .doctype {
-    color: steelblue !important;
+    color: #4682b4!important
   }
-
   .highlight .pi {
-    color: #ff7de9 !important;
+    color: #ff7de9!important
   }
-
   .highlight .entity {
-    color: #dea174 !important;
+    color: #dea174!important
   }
-
   .highlight .attribute-name {
-    color: #86de74 !important;
+    color: #86de74!important
   }
-
   .highlight .attribute-value {
-    color: #75bfff !important;
+    color: #75bfff!important
   }
-
   .highlight .markupdeclaration {
-    color: steelblue !important;
-    font-style: italic;
+    color: #4682b4!important;
+    font-style: italic
   }
-
   .highlight .error,
-  .highlight .error > :-moz-any(.start-tag, .end-tag, .comment, .cdata, .doctype,
-	                              .pi, .entity, .attribute-name, .attribute-value) {
-    color: #de7474 !important;
+  .highlight .error > :-moz-any(.start-tag,.end-tag,.comment,.cdata,.doctype,.pi,.entity,.attribute-name,.attribute-value) {
+    color: #de7474!important
+  }
+}
+/*! Alters the webextension Brief
+  IMPORTANT: change the Internal UUID */
+@-moz-document url-prefix("moz-extension://brief_UUID/") {
+  h2 {
+    color: var(--primary-accent-color)!important
+  }
+  label {
+    color: var(--primary-light-color)!important
+  }
+  #clear-all-entries,
+  #custom-style-textbox,
+  input[type=number] {
+    -moz-appearance: none!important;
+    background: var(--mid-way-color)!important;
+    color: var(--primary-light-color)!important;
+    border: 1px solid!important
+  }
+  #clear-all-entries {
+    border-radius: 3px!important;
+    -moz-appearance: none!important;
+    background: var(--dark-accent)!important;
+    color: var(--primary-light-color)!important;
+    border: 1px solid!important
+  }
+}
+/*! Alters the webextension Cookie AutoDelete
+  IMPORTANT: change the Internal UUID */
+@-moz-document url-prefix("moz-extension://cookie_autodelete_UUID/") {
+  a {
+    color: var(--primary-accent-color)
+  }
+  a:hover {
+    color: var(--primary-accent-color-dark)
+  }
+  #layout,
+  html {
+    background: var(--primary-dark-color)!important;
+    color: var(--primart-light-color)!important
+  }
+  #menu {
+    background-color: var(--dark-accent)!important
+  }
+  .menu-link {
+    background: var(--dark-accent)!important
+  }
+  .pure-menu-item:hover,
+  .pure-menu-selected {
+    background-color: var(--mid-way-color)!important
+  }
+  .form-control,
+  input[type=number] {
+    -moz-appearance: none!important;
+    background: var(--mid-way-color)!important;
+    color: var(--primary-light-color)!important;
+    border: 1px solid!important
+  }
+  .nav-tabs .nav-link {
+    color: var(--primary-light-color)!important
+  }
+  .nav-tabs .nav-link.active {
+    color: var(--primary-accent-color)!important;
+    background-color: var(--mid-way-color)!important;
+    border-color: #ddd #ddd #fff
+  }
+  body {
+    color: var(--primary-light-color)!important;
+    background-color: var(--mid-way-color)!important
+  }
+  .btn-light {
+    color: var(--primary-light-color)!important;
+    background-color: var(--light-accent-color)!important;
+    border-color: var(--primary-light-color)!important
+  }
+}
+/*! Alters the webextension Dark Mode
+  IMPORTANT: change the Internal UUID */
+@-moz-document url-prefix("moz-extension://dark_mode_UUID/") {
+  .comment {
+    color: var(--primary-accent-color)!important
+  }
+  label {
+    color: var(--primary-light-color)!important
+  }
+}
+/*! Alters the webextension Decentraleyes
+  IMPORTANT: change the Internal UUID */
+@-moz-document url-prefix("moz-extension://decentraleyes_UUID/") {
+  body {
+    background-color: var(--mid-way-color)!important;
+    color: var(--primary-light-color)!important
+  }
+  .panel:not(:last-child),
+  header {
+    border-bottom: solid var(--light-accent-color) 1px!important
+  }
+  .button {
+    -moz-user-select: none;
+    background-color: var(--primary-dark-color)!important
+  }
+}
+/*! Alters the webextension HTTPS Everywhere
+  IMPORTANT: change the Internal UUID */
+@-moz-document url-prefix("moz-extension://https_everywhere_UUID/") {
+  body {
+    color: var(--primary-light-color)!important;
+    background: var(--mid-way-color)!important
+  }
+  html {
+    background-color: var(--mid-way-color)!important
+  }
+  a {
+    color: var(--primary-accent-color)!important
+  }
+  h3 {
+    color: var(--primary-light-color)!important
+  }
+}
+/*! Alters the webextension Multi-Account Containers
+  IMPORTANT: change the Internal UUID in BOTH locations */
+@-moz-document url-prefix("moz-extension://multi_account_containers_UUID/") {
+  #current-tab,
+  .column-panel-content,
+  html body div#container-panel.panel.container-panel {
+    background: var(--mid-way-color)!important;
+    color: var(--primary-light-color)!important
+  }
+  #current-tab > h3,
+  .container-info-list,
+  .panel-header-text {
+    color: var(--primary-light-color)!important
+  }
+  #container-panel #sort-containers-link {
+    border: 1px solid!important;
+    color: var(--primary-light-color)!important
+  }
+  #container-panel #sort-containers-link:hover,
+  .clickable:hover {
+    background: var(--primary-dark-color)!important
+  }
+  .container-panel-row {
+    background-color: var(--mid-way-color)!important;
+    border-block-end: 1px solid var(--light-accent-color);
+    color: var(--primary-light-color)!important
+  }
+  .scrollable {
+    border-block-start: 1px solid var(--light-accent-color)!important;
+    background: var(--mid-way-color)!important
+  }
+  .panel-footer {
+    background: var(--primary-dark-color)!important;
+    border-block-end: 1px solid var(--primary-dark-color)!important
+  }
+  .container-panel-row:focus .clickable.userContext-wrapper,
+  .container-panel-row:hover .clickable.userContext-wrapper,
+  .container-panel-row:hover .pop-button,
+  .panel-header {
+    background: var(--primary-dark-color)!important
+  }
+  .panel-back-arrow {
+    background: var(--mid-way-color)!important
+  }
+  .back-arrow-img {
+    filter: invert(65%)!important
+  }
+  .container-panel-row {
+    border-block-end: 1px solid var(--light-accent-color)!important
+  }
+  #current-tab > label > input[disabled] {
+    background-color: var(--light-accent-color)!important;
+    border-color: var(--primary-light-color)!important
+  }
+  #current-tab > label > input:checked {
+    filter: invert(100%);
+    border-color: var(--light-accent-color)!important
+  }
+  .column-panel-content form {
+    background: var(--mid-way-color)!important
+  }
+  .pop-button-image-small {
+    filter: invert(650%)!important
+  }
+  .edit-container-panel fieldset,
+  .edit-containers-text a {
+    color: var(--primary-light-color)!important
+  }
+  .edit-container-panel input[type=text] {
+    background: var(--dark-accent)!important;
+    color: var(--primary-light-color)!important;
+    border: 1px solid!important
+  }
+  [data-identity-color=grey] {
+    --identity-icon-color: var(--primary-light-color)!important
+  }
+  .button {
+    color: var(--primary-light-color)!important
+  }
+  .container-notification {
+    background: var(--primary-dark-color)!important;
+    color: var(--primary-light-color)!important
+  }
+}
+/*! Alters the webextension Multi-Account Containers
+  IMPORTANT: change the Internal UUID in BOTH locations */
+@-moz-document url-prefix("moz-extension://multi_account_containers_UUID/confirm-page") {
+  body {
+    background-color: var(--primary-dark-color)!important
+  }
+  .title-text,
+  body {
+    color: var(--primary-light-color)!important
+  }
+  #redirect-url {
+    background: var(--dark-accent)!important
+  }
+  .button-container > button:first-child {
+    background: var(--mid-way-color)!important;
+    border-color: var(--light-accent-color)!important
+  }
+  .button-container > button:first-child:hover {
+    background: var(--dark-accent)!important
+  }
+  #never-ask {
+    -moz-appearance: none!important;
+    background-color: var(--mid-way-color)!important;
+    border-color: var(--light-accent-color)!important;
+    background-image: none!important;
+    box-shadow: none!important
+  }
+  #never-ask:checked {
+    background-image: url(chrome://global/skin/in-content/check.svg)!important;
+    background-color: var(--mid-way-color)!important
+  }
+}
+/*! Alters the webextension Multiple Tab Handler
+  IMPORTANT: change the Internal UUID */
+@-moz-document url-prefix("moz-extension://multiple_tab_handler_UUID/") {
+  h1,
+  p,
+  ul,
+  ul li {
+    color: var(--primary-light-color)!important
+  }
+}
+/*! Alters the webextension Neat URL
+  IMPORTANT: change the Internal UUID */
+@-moz-document url-prefix("moz-extension://neat_url_UUID/") {
+  body,
+  h2,
+  label {
+    color: var(--primary-light-color)!important
+  }
+  input,
+  textarea {
+    -moz-appearance: none!important;
+    background: var(--mid-way-color)!important;
+    color: var(--primary-light-color)!important;
+    border: 1px solid!important;
+    padding: 5px!important
+  }
+  a:link {
+    color: var(--primary-accent-color)!important
+  }
+  button {
+    background-color: var(--dark-accent)!important;
+    color: var(--primary-light-color)!important;
+    border-color: var(--light-accent-color)!important
+  }
+  button:hover {
+    background-color: var(--primary-dark-color)!important
+  }
+}
+/*! Alters the webextension NoScript
+  IMPORTANT: change the Internal UUID */
+@-moz-document url-prefix("moz-extension://noscript_UUID/") {
+  body {
+    background: var(--mid-way-color)!important
+  }
+  #top {
+    border-bottom: .06em solid!important
+  }
+  .site .url[data-key=full] span,
+  .site .url[data-key=secure] .domain,
+  .site .url[data-key=secure] .sub {
+    color: var(--primary-light-color)!important
+  }
+  .sites > tr:nth-child(2n) {
+    background: var(--mid-way-color)!important
+  }
+  .sites > tr:nth-child(2n+1) {
+    background: var(--primary-dark-color)!important
+  }
+  #presets input.preset,
+  .presets input.preset:checked {
+    color: var(--primary-light-color)!important;
+    background-color: var(--dark-accent)!important
+  }
+  #sect-general,
+  .presets label.preset {
+    color: var(--primary-light-color)!important
+  }
+  button,
+  input[type=text] {
+    -moz-appearance: none!important;
+    background-color: var(--primary-dark-color)!important;
+    border: 1px solid!important;
+    color: var(--primar-light-color)!important
+  }
+  #top #close,
+  #top #options,
+  #top #reload,
+  #top #revoke-temp,
+  #top #temp-allow-page {
+    background-color: var(--mid-way-color)!important;
+    border: none!important
+  }
+}
+.pkt_ext_containersaved h2 {
+  color: var(--primary-light-color)!important
+}
+.pkt_ext_containersaved .pkt_ext_tag_detail {
+  border: 1px solid!important;
+  background: var(--mid-way-color)!important
+}
+.pkt_ext_containersaved .pkt_ext_tag_input_wrapper {
+  background-color: var(--mid-way-color)!important;
+  border-right: 1px solid!important
+}
+.pkt_ext_containersaved .pkt_ext_tag_input_wrapper input::placeholder {
+  color: var(--primary-light-color)!important
+}
+.pkt_ext_containersaved .pkt_ext_tag_input_wrapper input {
+  background-color: var(--mid-way-color)!important;
+  color: var(--primary-light-color)!important
+}
+.pkt_ext_containersaved .pkt_ext_btn {
+  background: var(--dark-accent)!important
+}
+.pkt_ext_containersaved .token-input-token {
+  border: 1px solid!important;
+  background-color: var(--primary-dark-color)!important;
+  color: var(--primary-light-color)!important
+}
+.token-input-dropdown-tag {
+  background: var(--mid-way-color)!important;
+  border: 1px solid!important
+}
+.token-input-dropdown-tag ul li {
+  color: var(--primary-light-color)!important
+}
+/*! Alters the webextension Request Control
+  IMPORTANT: change the Internal UUID */
+@-moz-document url-prefix("moz-extension://request_control_UUID/") {
+  body {
+    background-color: var(--primary-dark-color)!important;
+    color: var(--primary-light-color)!important
+  }
+  .rule:not(.editing):not(:hover) {
+    background-color: var(--mid-way-color)!important;
+    border: 1px solid!important
+  }
+  .rule:hover:not(.editing) {
+    background-color: var(--dark-accent)!important;
+    border: 1px solid!important
+  }
+  .nav-tabs > li.active > a,
+  .nav-tabs > li.active > a:focus,
+  .nav-tabs > li.active > a:hover {
+    color: var(--primary-light-color)!important;
+    background-color: var(--dark-accent)!important;
+    border: 1px solid!important
+  }
+  .nav-tabs > li > a:hover {
+    background-color: var(--dark-accent)!important;
+    border: 1px solid!important
+  }
+  tabs.nav-justified > li > a {
+    border-bottom: 1px solid!important
+  }
+  .btn-default {
+    color: var(--primary-light-color)!important;
+    background-color: var(--dark-accent)!important;
+    border-color: var(--light-accent-color)!important
+  }
+  .btn-default.active {
+    background-color: var(--mid-way-color)!important
+  }
+  .btn-default:hover {
+    color: var(--primary-light-color)!important;
+    background-color: var(--light-accent-color)!important;
+    border-color: var(--light-accent-color)!important
+  }
+  .list-group-item:first-child {
+    background: var(--mid-way-color)!important;
+    border-color: var(--light-accent-color)!important
+  }
+  .table {
+    background: var(--mid-way-color)!important
+  }
+  .table-striped > tbody > tr:nth-of-type(2n+1) {
+    background-color: var(--dark-accent)!important
+  }
+  .btn-group-params > .tags-input,
+  .input-group .form-control:first-child,
+  .input-group-addon:first-child,
+  .input-group-btn:first-child > .btn,
+  .input-group-btn:first-child > .btn-group > .btn,
+  .input-group-btn:first-child > .dropdown-toggle,
+  .input-group-btn:last-child > .btn-group:not(:last-child) > .btn,
+  .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+  select.input-sm {
+    background: var(--light-accent-color)!important;
+    color: var(--grey-30)!important;
+    border-color: var(--primary-light-color)!important
+  }
+  .list-group-item {
+    background-color: var(--mid-way-color)!important;
+    border: 1px solid #ddd
+  }
+  .tags-input .tag {
+    background: var(--dark-accent)!important;
+    border: 1px solid!important;
+    color: var(--primary-light-color)!important
+  }
+}
+/*! Alters the webextension Skip Redirect
+  IMPORTANT: change the Internal UUID */
+@-moz-document url-prefix("moz-extension://skip_redirect_UUID/") {
+  body {
+    background: var(--mid-way-color)!important;
+    color: var(--primary-light-color)!important
+  }
+  input[type=number],
+  input[type=text],
+  textarea {
+    -moz-appearance: none!important;
+    background: var(--light-accent-color)!important;
+    color: var(--grey-30)!important
+  }
+  label a {
+    color: var(--primary-accent-color)!important
+  }
+}
+/*! Alters the webextension Smart HTTPS
+  IMPORTANT: change the Internal UUID */
+@-moz-document url-prefix("moz-extension://smart_https_UUID/") {
+  body {
+    background-color: var(--mid-way-color)!important;
+    color: var(--primary-light-color)!important
+  }
+  .information input[type=number],
+  input[type=text] {
+    -moz-appearance: none!important;
+    background: var(--mid-way-color)!important;
+    color: var(--primary-light-color)!important;
+    border: 1px solid!important
+  }
+  .information p {
+    color: var(--primary-light-color)!important
+  }
+}
+/*! Alters the webextension Tab Suspender (memory saver)
+  IMPORTANT: change the Internal UUID */
+@-moz-document url-prefix("moz-extension://tab_suspender_UUID/") {
+  body,
+  label {
+    color: var(--primary-light-color)!important
+  }
+  input[type=number],
+  textarea {
+    -moz-appearance: none!important;
+    background: var(--mid-way-color)!important;
+    color: var(--primary-light-color)!important;
+    border: 1px solid!important
+  }
+  #recovery,
+  #save {
+    -moz-appearance: none!important;
+    height: 20px!important;
+    background: var(--dark-accent)!important;
+    color: var(--primary-light-color)!important;
+    border: 1px solid!important;
+    border-radius: 4px!important
+  }
+}
+/*! Alters the webextension Tree Style Tab
+  IMPORTANT: change the Internal UUID in BOTH locations */
+@-moz-document url-prefix("moz-extension://tree_style_tab_UUID/") {
+  #debug-configs,
+  p,
+  ul {
+    color: var(--primary-light-color)!important
+  }
+  h1,
+  legend {
+    color: var(--primary-accent-color)!important
+  }
+  a {
+    color: var(--primary-accent-color-dark)!important
+  }
+  #autoGroupNewTabsDelayOnNewWindow,
+  #autoGroupNewTabsTimeout,
+  #importedConfigsFromLegacy,
+  #importedTreeStructureFromLegacy,
+  #legacyConfigsNextMigrationVersion,
+  #userStyleRules {
+    -moz-appearance: none!important;
+    background: var(--mid-way-color)!important;
+    color: var(--primary-light-color)!important;
+    border: 1px solid!important
+  }
+  #contextual-identities-selector,
+  #newtab-action-selector,
+  #tabContextMenu,
+  .extra.has-submenu ul {
+    background: var(--mid-way-color)!important;
+    border: none!important
+  }
+}
+/*! Alters the webextension Tree Style Tab
+  IMPORTANT: change the Internal UUID in BOTH locations */
+@-moz-document url-prefix("moz-extension://tree_style_tab_UUID/resources/group-tab.html") {
+  :root {
+    background: var(--primary-dark-color)!important;
+    color: ButtonText
+  }
+  h1::before {
+    background: var(--primary-light-color)!important
+  }
+}
+/*! Alters the webextension uBlock Origin
+  IMPORTANT: change the Internal UUID */
+@-moz-document url-prefix("moz-extension://ublock_origin_UUID/") {
+  #appinfo {
+    background-color: var(--dark-accent)!important;
+    color: var(--primary-light-color)!important
+  }
+  #panes,
+  body,
+  body[dir=ltr] #panes>div {
+    background: var(--primary-dark-color)!important;
+    color: var(--primary-light-color)!important
+  }
+  label a,
+  p a,
+  ul a,
+  ul#userSettings .subgroup>span {
+    color: var(--primary-accent-color)!important
+  }
+  #dashboard-nav-widgets span {
+    color: var(--primary-light-color)!important
+  }
+  a.info {
+    color: var(--primary-light-color)!important;
+    opacity: .5
+  }
+  li.listEntry span.status {
+    color: var(--primary-light-color)!important
+  }
+  li.listEntry > a.remove,
+  li.listEntry > a.remove:visited {
+    color: var(--red-80)!important
+  }
+  #switch .fa {
+    color: var(--primary-accent-color)!important
+  }
+  .tool,
+  body.off #switch .fa {
+    color: var(--primary-light-color)!important
+  }
+  .tool:hover {
+    color: var(--dark-accent)!important
+  }
+  #extraTools,
+  h2 {
+    background-color: var(--dark-accent)!important;
+    color: var(--primary-light-color)!important
+  }
+  #refresh {
+    background-color: var(--dark-accent)!important;
+    border-color: var(--light-accent-color)!important
+  }
+  #extraTools > span > span.badge {
+    color: var(--primary-light-color)!important
+  }
+  #firewallContainer > div {
+    background-color: var(--mid-way-color)!important
+  }
+  #firewallContainer > div > span {
+    color: var(--primary-light-color)!important;
+    border-color: var(--light-accent-color)!important
+  }
+  #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action.own.block,
+  body.advancedUser #firewallContainer > div > span.blockRule.ownRule {
+    background-color: #ab0000!important
+  }
+  #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action > span.block,
+  body.advancedUser #firewallContainer > div > span.blockRule {
+    background-color: #dda0a2!important
+  }
+  #firewallContainer > div.blocked > span:first-of-type::before,
+  #firewallContainer.minimized > div.isDomain.totalBlocked > span:first-of-type::before {
+    background-color: #c87576!important;
+    opacity: 1!important
+  }
+  #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action.own.allow,
+  body.advancedUser #firewallContainer > div > span.allowRule.ownRule {
+    background-color: #229400!important
+  }
+  #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action > span.allow,
+  body.advancedUser #firewallContainer > div > span.allowRule {
+    background-color: #95ca8a!important
+  }
+  #firewallContainer > div.allowed > span:first-of-type::before,
+  #firewallContainer.minimized > div.isDomain.totalAllowed > span:first-of-type::before {
+    background-color: #7ec26f!important;
+    opacity: 1!important
+  }
+  #actionSelector>span:nth-of-type(2),
+  #netFilteringDialog .dialog>div.containers>div.dynamic tr.entry>td>div.action.own.noop,
+  body.advancedUser #firewallContainer>div>span.noopRule.ownRule {
+    background-color: #0c46a7!important
+  }
+  #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action > span.noop,
+  body.advancedUser #firewallContainer > div > span.noopRule {
+    background-color: #65bdfb!important
+  }
+  #firewallContainer > div.allowed.blocked > span:first-of-type::before,
+  #firewallContainer.minimized > div.isDomain.totalAllowed.totalBlocked > span:first-of-type::before {
+    background-color: #cdc16e!important;
+    opacity: 1!important
+  }
+  body.advancedUser #firewallContainer.colorBlind > div > span.blockRule.ownRule {
+    background-color: #000060!important
+  }
+  body.advancedUser #firewallContainer.colorBlind > div > span.blockRule {
+    background-color: #787dab!important
+  }
+  body.advancedUser #firewallContainer.colorBlind > div > span.allowRule.ownRule {
+    background-color: #fbb900!important
+  }
+  body.advancedUser #firewallContainer.colorBlind > div > span.allowRule {
+    background-color: #f2d98d!important
+  }
+  body.advancedUser #firewallContainer.colorBlind > div > span.noopRule.ownRule {
+    background-color: #2f2e2e!important
+  }
+  body.advancedUser #firewallContainer.colorBlind > div > span.noopRule {
+    background-color: #a1a1a1!important
+  }
+  #firewallContainer.colorBlind > div.allowed > span:first-of-type::before,
+  #firewallContainer.colorBlind.minimized > div.isDomain.totalAllowed > span:first-of-type::before {
+    background-color: #ebd287!important
+  }
+  #firewallContainer.colorBlind > div.blocked > span:first-of-type::before,
+  #firewallContainer.colorBlind.minimized > div.isDomain.totalBlocked > span:first-of-type::before {
+    background-color: #787cab!important
+  }
+  #dashboard-nav-widgets {
+    border-bottom: 1px solid!important;
+    background-color: var(--dark-accent)!important
+  }
+  .tabButton {
+    background-color: var(--primary-dark-color)!important;
+    color: var(--primary-light-color)!important;
+    border: 1px solid!important;
+    border-bottom: 1px solid!important
+  }
+  .tabButton.selected {
+    background-color: var(--dark-accent)!important;
+    border-bottom: 1px solid!important
+  }
+  input[type=number] {
+    -moz-appearance: none!important;
+    background-color: var(--mid-way-color)!important;
+    color: var(--primary-light-color)!important
+  }
+  li.listEntry .content {
+    color: var(--primary-accent-color)!important
+  }
+  #diff .pane {
+    color: var(--primary-light-color)!important;
+    background: var(--primary-dark-color)!important
+  }
+  #diff li,
+  code {
+    background-color: var(--mid-way-color)!important
+  }
+  #diff li:nth-child(2n) {
+    background-color: var(--primary-dark-color)!important
+  }
+  #whitelist textarea {
+    background: var(--mid-way-color)!important;
+    color: var(--primary-light-color)!important
+  }
+  textarea#externalLists,
+  textarea#userFilters.userFilters {
+    -moz-appearance: none!important;
+    background: var(--mid-way-color)!important;
+    color: var(--primary-light-color)!important
+  }
+  .permatoolbar {
+    background-color: var(--primary-dark-color)!important
+  }
+  .permatoolbar #refresh,
+  .permatoolbar .button {
+    background-color: transparent!important
+  }
+  .permatoolbar #refresh,
+  .permatoolbar .button:hover {
+    background-color: var(--grey-60)!important
+  }
+  #netInspector tr.blocked {
+    background-color: #4b3137!important;
+    color: #ff9494!important
+  }
+  #netInspector #filterInput,
+  #netInspector #maxEntries {
+    -moz-appearance: none!important;
+    background: var(--mid-way-color)!important;
+    color: var(--primary-light-color)!important;
+    border: 1px solid!important;
+    padding: 5px!important
+  }
+  #netInspector tr.cosmetic,
+  #netInspector tr.redirect {
+    background-color: #44391f!important;
+    color: #fce19f!important
+  }
+  #netInspector tr.cat_net td:nth-of-type(4):hover,
+  body:not(.popupOn) #netInspector tr.canMtx td:nth-of-type(2):hover {
+    background: var(--dark-accent)!important
+  }
+  .modalDialog .dialog {
+    background-color: var(--dark-accent)!important;
+    border: 2px solid!important
+  }
+  #netFilteringDialog .dialog > div.headers > span.header.selected {
+    background-color: var(--dark-accent)!important;
+    color: var(--primary-light-color)!important;
+    border-color: var(--mid-way-color)!important
+  }
+  #netFilteringDialog .dialog > div.headers > span.header {
+    background-color: var(--primary-dark-color)!important;
+    border-color: var(--mid-way-color)!important
+  }
+  #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry {
+    background-color: var(--mid-way-color)!important;
+    border-color: var(--light-accent-color)!important
+  }
+  #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td:first-of-type {
+    border-color: var(--light-accent-color)!important
+  }
+  #netFilteringDialog .dialog > div.containers > div.dynamic > table.toolbar #saveRules {
+    background-color: var(--mid-way-color)!important;
+    border: none!important
+  }
+  body #netInspector td {
+    border-color: var(--light-accent-color)!important
+  }
+  #netInspector tr.maindoc {
+    background-color: var(--dark-accent)!important;
+    color: var(--grey-30)!important
+  }
+}
+/*! Alters the webextension uBO-Scope
+  IMPORTANT: change the Internal UUID */
+@-moz-document url-prefix("moz-extension://ubo_scope_UUID/") {
+  #heatmaps .togglerBar,
+  body,
+  body.theoretical #heatmaps .heatmap.theoretical {
+    background: var(--mid-way-color)!important
+  }
+  #topPane {
+    background-color: var(--mid-way-color)!important;
+    color: var(--primary-light-color)!important
+  }
+  #heatmaps .heatmap {
+    border: none;
+    background: var(--mid-way-color)!important
+  }
+  #heatmaps.list .hmcell {
+    background-color: var(--mid-way-color)!important;
+    color: var(--primary-light-color)!important
+  }
+  #domain3rdDetails {
+    background-color: var(--primary-dark-color)!important;
+    border: 1px solid!important
+  }
+  #domain3rdDetails #authority {
+    background-color: var(--dark-accent)!important;
+    position: relative
+  }
+  #scores .scores .score.actual {
+    color: #fff!important
+  }
+  #scores .scores .score.theoretical,
+  body.theoretical #scores .scores .score.actual {
+    color: var(--primary-dark-color)!important
+  }
+  body.theoretical #scores .scores .score.theoretical {
+    color: var(--primary-light-color)!important
+  }
+}
+/*! Alters the webextension uMatrix
+  IMPORTANT: change the Internal UUID */
+@-moz-document url-prefix("moz-extension://umatrix_UUID/") {
+  body[dir=ltr] {
+    background-color: var(--primary-dark-color)!important;
+    color: var(--primary-light-color)!important
+  }
+  #dashboard-nav-widgets {
+    background-color: var(--dark-accent)!important;
+    color: var(--primary-light-color)!important;
+    border-bottom: 1px solid var(--light-accent-color)
+  }
+  .tabButton {
+    background: var(--mid-way-color)!important;
+    color: var(--primary-light-color)!important;
+    border-color: var(--light-accent-color)!important;
+    border-bottom: none!important
+  }
+  .tabButton.selected {
+    border-bottom: none!important;
+    background-color: var(--primary-dark-color)!important;
+    border-color: var(--light-accent-color)!important;
+    color: var(--primary-accent-color)!important
+  }
+  #backupUserDataButton,
+  #clearBrowserCacheAfter,
+  #deleteUnusedSessionCookiesAfter,
+  #externalHostsFiles,
+  #popupScopeLevel,
+  #resetUserDataButton,
+  #restoreUserDataButton {
+    -moz-appearance: none!important;
+    background: var(--mid-way-color)!important;
+    color: var(--primary-light-color)!important;
+    border: 1px solid!important
+  }
+  button.custom {
+    border-color: var(--light-accent-color)!important;
+    background-color: var(--dark-accent)!important;
+    background-image: none!important;
+    color: #fff!important
+  }
+  button.custom.disabled,
+  button.custom[disabled] {
+    border-color: var(--primary-light-color)!important;
+    background-color: var(--light-accent-color)!important;
+    background-image: none!important;
+    color: var(--primary-light-color)!important;
+    opacity: .6;
+    pointer-events: none
+  }
+  a {
+    color: var(--primary-accent-color)!important
+  }
+  #diff li {
+    background-color: var(--primary-dark-color)!important
+  }
+  #diff li:nth-of-type(2n),
+  .assets > div:first-of-type {
+    background-color: var(--dark-accent)!important
+  }
+  .assets {
+    border: 1px solid!important
+  }
+  #diff li:hover {
+    background-color: var(--primary-accent-color)!important;
+    color: #fff!important
+  }
+  #diff ul {
+    border-top: 1px solid!important
+  }
+  textarea {
+    -moz-appearance: none!important;
+    background: var(--mid-way-color)!important;
+    color: var(--primary-light-color)!important;
+    border: 1px solid!important;
+    padding: 5px!important
+  }
+  #diff textarea {
+    border-top: 1px solid!important;
+    background: var(--mid-way-color)!important;
+    color: var(--primary-light-color)!important
+  }
+  #dashboard-nav-widgets {
+    border-bottom: 1px solid!important
+  }
+  .whatisthis-expandable {
+    background-color: var(--dark-accent)!important;
+    border: 1px dotted!important
+  }
+  .paneHead {
+    background-color: var(--primary-dark-color)!important
+  }
+  .paneContent {
+    background: var(--primary-light-color)!important
+  }
+  #gotoDashboard {
+    background-color: var(--dark-accent)!important;
+    color: var(--primary-light-color)!important
+  }
+  body[dir=ltr] #gotoDashboard > span:last-of-type {
+    color: var(--primary-light-color)!important
+  }
+  body .toolbar button {
+    color: var(--primary--light-color)!important
+  }
+  body .toolbar .scopeRel {
+    color: var(--primary-accent-color-dark)!important
+  }
+  #mtxSwitch_matrix-off.switchTrue {
+    color: #a00!important
+  }
+  button > span.badge {
+    color: #fff!important;
+    background-color: var(--light-accent-color)!important
+  }
+  body .toolbar button {
+    background-color: var(--primary-dark-color)!important
+  }
+  body .toolbar button.disabled {
+    color: var(--primary-light-color);
+    color: var(--mid-way-color)!important
+  }
+  body .toolbar .scope {
+    background-color: var(--mid-way-color)!important;
+    border: 1px solid!important
+  }
+  #parsed {
+    background-color: var(--dark-accent)!important;
+    border: 1px solid!important;
+    border-top: none!important
+  }
+  .code {
+    background-color: var(--dark-accent)!important;
+    border: 1px solid!important;
+    border-bottom: none!important
+  }
+  button#bye {
+    -moz-appearance: none!important;
+    background: var(--mid-way-color)!important;
+    border: 1px solid!important;
+    color: var(--primary-light-color)!important
+  }
+  button#bye:hover {
+    background: var(--dark-accent)!important
+  }
+  .dropdown-menu > ul,
+  .recipe:hover {
+    border: 1px solid!important;
+    background-color: var(--dark-accent)!important
+  }
+  .dropdown-menu > ul > li.dropdown-menu-entry {
+    color: var(--mid-way-color)!important
+  }
+  #mtxSwitches > li.switchTrue {
+    color: var(--primary-light-color)!important
+  }
+  .dropdown-menu > ul > li.dropdown-menu-entry:hover {
+    background: var(--primary-dark-color)!important
+  }
+  .recipe .name {
+    color: var(--primary-light-color)!important
+  }
+  #toolbar,
+  #toolbar .button {
+    background-color: var(--dark-accent)!important
+  }
+  #toolbar input {
+    -moz-appearance: none!important;
+    background: var(--mid-way-color)!important;
+    color: var(--primary-light-color)!important;
+    border: 1px solid!important;
+    padding: 5px!important
+  }
+  #content table tr {
+    background-color: var(--mid-way-color)!important
+  }
+  #content table tr:nth-of-type(2n+1) {
+    background-color: var(--primary-dark-color)!important
+  }
+  #content table tr.doc {
+    background-color: var(--dark-accent)!important
+  }
+  body:not(.popupOn) #content table tr.canMtx td:nth-of-type(2):hover {
+    background: var(--dark-accent)!important
+  }
+  body #content td {
+    border: 1px solid!important
+  }
+  #content table tr.blocked {
+    color: var(--red-80)!important
+  }
+  #content table tr.cat_info {
+    color: var(--primary-accent-color)!important
+  }
+  #toolbar {
+    border-bottom: 1px solid!important
+  }
+}
+/*! Alters the webextension Vim Vixen
+  IMPORTANT: change the Internal UUID */
+@-moz-document url-prefix("moz-extension://vim_vixen_UUID/") {
+  .vimvixen-console-command-wrapper {
+    border-top: 1px solid!important
+  }
+  .vimvixen-console-completion-title {
+    background-color: var(--darksest)!important;
+    border-bottom: 1px solid!important
+  }
+  .vimvixen-console-completion {
+    background-color: var(--dark-accent)!important;
+    color: #b1b1b3!important;
+    font-family: Menlo,monospace!important
+  }
+  .vimvixen-console-command,
+  .vimvixen-console-command-input {
+    background-color: var(--darksest)!important;
+    color: var(--grey-30)!important
+  }
+  .vimvixen-console-completion-item-url {
+    color: #86de74!important
+  }
+  .vimvixen-console-completion-item.vimvixen-completion-selected {
+    background-color: #44391f!important;
+    color: #fce19f!important
+  }
+  .vimvixen-console-error {
+    background-color: #4b3137!important;
+    color: #ff9494!important
+  }
+  .vimvixen-settings-form,
+  h1 {
+    color: var(--primary-light-color)!important
+  }
+  .vimvixen-settings-form textarea[name=json] {
+    background-color: var(--mid-way-color)!important;
+    -moz-appearance: none!important;
+    color: var(--primary-light-color)!important;
+    border-color: var(--mid-way-color)
+  }
+  ::-moz-selection {
+    color: var(--grey-30);
+    background: var(--primary-accent-color-dark)
   }
 }

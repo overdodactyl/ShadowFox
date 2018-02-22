@@ -1,10 +1,13 @@
 @-moz-document regexp(".*\\.(p|P)(d|D)(f|F).*") {
+  #loadingBar .progress,
+  .dropdownToolbarButton > select,
   .dropdownToolbarButton > select > option,
   .overlayButton,
   .secondaryToolbarButton,
+  .toolbarField,
   body,
   div#viewer {
-    background-color: var(--mid-way-color)!important
+    background-color: var(--in-content-box-background)!important
   }
   body {
     background-image: none!important
@@ -12,46 +15,48 @@
   .splitToolbarButtonSeparator,
   .verticalToolbarSeparator {
     box-shadow: none!important;
-    background-color: var(--mid-way-color)!important
+    background-color: var(--in-content-box-background)!important
   }
   div#toolbarViewer {
-    background-color: var(--dark-accent)!important
+    background-color: var(--in-content-category-header-background)!important
   }
   #numPages,
   #pageNumber,
   #scaleSelect {
-    color: var(--primary-light-color)!important
+    color: var(--in-content-page-color)!important
   }
   .pdfViewer .page {
     border-image: none!important
   }
   #pageNumber,
   #scaleSelectContainer {
-    border: 1px solid var(--mid-way-color)
+    border: 1px solid!important
   }
   #loadingBar {
     position: relative;
     width: 100%;
     height: 4px;
-    background-color: var(--primary-accent-color);
-    border-bottom: 1px solid var(--light-accent-color)
+    background-color: var(--theme-selection-background-hover)!important;
+    border-bottom: 1px solid!important
   }
   #sidebarContainer {
     background-color: var(--primary-dark-color)!important
   }
   #toolbarSidebar {
     background-color: var(--dark-accent)!important;
-    background-image: none!important
+    background-image: none!important;
+    border-color: var(--in-content-box-background)!important
   }
   .doorHanger,
   .doorHangerRight {
     border: 1px solid!important;
+    border-color: var(--in-content-box-background)!important;
     box-shadow: none!important
   }
   #toolbarContainer,
   .findbar,
   .secondaryToolbar {
-    background-color: var(--mid-way-color)!important;
+    background-color: var(--in-content-box-background)!important;
     background-image: none!important
   }
   .dropdownToolbarButton,
@@ -59,13 +64,13 @@
   .secondaryToolbarButton,
   .toolbarButton {
     border: none!important;
-    color: var(--primary-light-color)!important
+    color: var(--in-content-page-color)!important
   }
   .dropdownToolbarButton,
   .overlayButton,
   .toolbarButton:focus,
   .toolbarButton:hover {
-    background-color: var(--mid-way-color)!important;
+    background-color: var(--in-content-box-background)!important;
     background-image: none!important;
     border: none!important;
     box-shadow: none!important
@@ -83,20 +88,13 @@
   .secondaryToolbarButton.toggled,
   .splitToolbarButton.toggled > .toolbarButton.toggled,
   .toolbarButton.toggled {
-    background-color: var(--primary-dark-color)!important;
+    background-color: var(--in-content-page-background)!important;
     background-image: none!important;
     box-shadow: none!important;
-    color: #fff!important
+    color: var(--in-content-selected-text)!important
   }
   .horizontalToolbarSeparator {
-    background-color: var(--light-accent-color)!important;
+    background-color: var(--in-content-box-border-color)!important;
     box-shadow: none!important
-  }
-  .dropdownToolbarButton > select,
-  .toolbarField {
-    background: var(--mid-way-color)!important
-  }
-  #loadingBar .progress {
-    background-color: var(--mid-way-color)!important
   }
 }

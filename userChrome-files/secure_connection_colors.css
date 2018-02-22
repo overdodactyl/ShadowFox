@@ -1,14 +1,12 @@
-#identity-box.verifiedIdentity { 
-	--urlbar-separator-color: var(--light-accent-color) !important;
+#identity-box.verifiedIdentity {
+  --urlbar-separator-color: var(--in-content-border-focus)!important
 }
-
-.identity-popup-connection-secure,
-#identity-box.verifiedIdentity #identity-icon-labels {
-	color: var(--primary-accent-color) !important;
+#identity-box.verifiedIdentity #identity-icon-labels,
+.identity-popup-connection-secure {
+  color: var(--in-content-link-color)!important
 }
-
-#identity-popup[connection^=secure] #identity-popup-securityView, 
+#connection-icon,
 #identity-popup[connection^=secure] #identity-popup-security-content,
-#connection-icon {
-	fill: var(--primary-accent-color) !important;
+#identity-popup[connection^=secure] #identity-popup-securityView {
+  fill: var(--in-content-link-color)!important
 }
