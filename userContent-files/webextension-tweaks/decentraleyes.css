@@ -1,22 +1,31 @@
 /*! Alters the webextension Decentraleyes
   IMPORTANT: change the Internal UUID */
 
-@-moz-document url-prefix("moz-extension://decentraleyes_UUID/") {
+@-moz-document url-prefix("moz-extension://20cadb98-5f0e-d748-9a3b-a1eaf7c640f6/") {
 
 
   body {
-    background-color: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
+    background-color: var(--in-content-box-background) !important;
+    color: var(--in-content-page-color) !important;
   }
 
   header,
   .panel:not(:last-child) {
-    border-bottom: solid var(--light-accent-color) 1px !important;
+    border-color: var(--in-content-box-border-color) 1px !important;
   }
 
   .button {
-    -moz-user-select: none;
-    background-color: var(--primary-dark-color) !important;
+    background-color: var(--in-content-box-background) !important;
+    border-color: var(--in-content-box-border-color) !important;
+  }
+
+  .button:hover {
+    background-color: var(--in-content-page-background) !important;
+  }
+
+  header,
+  .panel:not(:last-child) {
+    border-color: var(--in-content-box-border-color) !important;
   }
 
 

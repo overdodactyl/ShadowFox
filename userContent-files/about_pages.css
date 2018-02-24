@@ -252,7 +252,6 @@ url-prefix(https://discovery.addons.mozilla.org) {
     color: var(--in-content-page-color)!important
   }
   #content > div,
-  #errorPageContainer,
   .info-box-content,
   .notice,
   div.opsRow,
