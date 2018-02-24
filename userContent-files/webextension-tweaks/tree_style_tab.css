@@ -1,59 +1,45 @@
 /*! Alters the webextension Tree Style Tab
   IMPORTANT: change the Internal UUID in BOTH locations */
-
-@-moz-document url-prefix("moz-extension://2a3d122c-dc21-7f4c-a805-82cbd472de98/") {
-  p, ul {
-    color: var(--tone-4) !important;
+@-moz-document url-prefix("moz-extension://tree_style_tab_UUID/") {
+  #debug-configs,
+  p,
+  ul {
+    color: var(--tone-4)!important
   }
-
-  h1, legend {
-  color: var(--accent-1) !important;
+  h1,
+  legend {
+    color: var(--accent-1)!important
   }
-
-
   a {
-    color: var(--accent-2) !important;;
+    color: var(--accent-2)!important
   }
-
-
-
-  #debug-configs {
-    color: var(--tone-4) !important;
-  }
-
-  #userStyleRules,
-  #legacyConfigsNextMigrationVersion,
-  #importedTreeStructureFromLegacy,
-  #importedConfigsFromLegacy,
   #autoGroupNewTabsDelayOnNewWindow,
-  #autoGroupNewTabsTimeout {
-    -moz-appearance: none !important;
-    background: var(--tone-6) !important;
-    color:  var(--tone-4) !important;
-    border: 1px solid var(--tone-5) !important;;
+  #autoGroupNewTabsTimeout,
+  #importedConfigsFromLegacy,
+  #importedTreeStructureFromLegacy,
+  #legacyConfigsNextMigrationVersion,
+  #userStyleRules {
+    -moz-appearance: none!important;
+    background: var(--tone-6)!important;
+    color: var(--tone-4)!important;
+    border-color: var(--tone-5)!important
   }
-
-  /* Context Menus */
-  #tabContextMenu,
-  .extra.has-submenu ul,
   #contextual-identities-selector,
-  #newtab-action-selector {
-    background: var(--tone-6) !important;
-    border: none !important;
+  #newtab-action-selector,
+  #tabContextMenu,
+  .extra.has-submenu ul {
+    background: var(--tone-6)!important;
+    border-color: var(--tone-5)!important
   }
-
 }
-
 /*! Alters the webextension Tree Style Tab
   IMPORTANT: change the Internal UUID in BOTH locations */
-@-moz-document url-prefix("moz-extension://2a3d122c-dc21-7f4c-a805-82cbd472de98/resources/group-tab.html") {
+@-moz-document url-prefix("moz-extension://tree_style_tab_UUID/resources/group-tab.html") {
   :root {
-      background: var(--tone-7) !important;
-      color: ButtonText;
-    }
-
-  h1::before {
-    background: var(--tone-4) !important;
+    background: var(--tone-7)!important;
+    color: ButtonText
   }
-
+  h1::before {
+    background: var(--tone-4)!important
+  }
 }

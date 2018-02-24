@@ -1,242 +1,212 @@
 /*! Alters the webextension uMatrix
   IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://9eba7fab-892c-7b42-a57e-b876d4196d70/") {
-
-  body[dir="ltr"] {
-    background-color: var(--tone-7) !important;
-    color: var(--tone-4) !important;
+@-moz-document url-prefix("moz-extension://umatrix_UUID/") {
+  body[dir=ltr] {
+    background-color: var(--tone-7)!important;
+    color: var(--tone-4)!important
   }
-
   #dashboard-nav-widgets {
-      background-color: var(--tone-8) !important;
-      color: var(--tone-4) !important;
-      border-bottom: 1px solid var(--tone-5);
+    background-color: var(--tone-8)!important;
+    color: var(--tone-4)!important;
+    border-bottom: 1px solid var(--tone-5);
+    border-color: var(--tone-5)!important
   }
-
   .tabButton {
-    background: var(--tone-6) !important;
-        background-color: ;
-    color: var(--tone-4) !important;
-    border-color: var(--tone-5) !important;
-    border-bottom: none !important;
+    background: var(--tone-6)!important;
+    color: var(--tone-4)!important;
+    border-color: var(--tone-5)!important;
+    border-bottom: none!important
   }
-
   .tabButton.selected {
-    border-bottom: none !important;
-    background-color: var(--tone-7) !important;
-    border-color: var(--tone-5) !important;
-    color: var(--accent-1) !important;
+    border-bottom: none!important;
+    background-color: var(--tone-7)!important;
+    border-color: var(--tone-5)!important;
+    color: var(--accent-1)!important
   }
-
-  #deleteUnusedSessionCookiesAfter,
-  #clearBrowserCacheAfter,
-  #popupScopeLevel,
-  #externalHostsFiles,
   #backupUserDataButton,
-  #restoreUserDataButton,
-  #resetUserDataButton {
-    -moz-appearance: none !important;
-    background: var(--tone-6) !important;
-    color: var(--tone-4) !important;
-    border: 1px solid var(--tone-5) !important;
+  #clearBrowserCacheAfter,
+  #deleteUnusedSessionCookiesAfter,
+  #externalHostsFiles,
+  #popupScopeLevel,
+  #resetUserDataButton,
+  #restoreUserDataButton {
+    -moz-appearance: none!important;
+    background: var(--tone-6)!important;
+    color: var(--tone-4)!important;
+    border: 1px solid!important;
+    border-color: var(--tone-5)!important
   }
-
   button.custom {
-    border-color: var(--tone-5) !important;
-    background-color: var(--tone-8) !important;
-    background-image: none !important;
-    color: white !important;
+    border-color: var(--tone-5)!important;
+    background-color: var(--tone-8)!important;
+    background-image: none!important;
+    color: #fff!important
   }
-
-  button.custom.disabled, button.custom[disabled] {
-    border-color: var(--tone-4) !important;
-    background-color: var(--tone-5) !important;
-    background-image: none !important;
-    color: var(--tone-4) !important;
-    opacity: 0.6;
-    pointer-events: none;
+  button.custom.disabled,
+  button.custom[disabled] {
+    border-color: var(--tone-4)!important;
+    background-color: var(--tone-5)!important;
+    background-image: none!important;
+    color: var(--tone-4)!important;
+    opacity: .6;
+    pointer-events: none
   }
-
   a {
-    color: var(--accent-1) !important;
+    color: var(--accent-1)!important
   }
-
   #diff li {
-    background-color: var(--tone-7) !important;
+    background-color: var(--tone-7)!important
   }
-
   #diff li:nth-of-type(2n),
   .assets > div:first-of-type {
-    background-color: var(--tone-8) !important;
+    background-color: var(--tone-8)!important
   }
-
   .assets {
-    border: 1px solid var(--tone-5) !important;
+    border: 1px solid!important;
+    border-color: var(--tone-5)!important
   }
-
   #diff li:hover {
-    background-color: var(--accent-1) !important;
-    color: white !important;
+    background-color: var(--accent-1)!important;
+    color: #fff!important
   }
-
   #diff ul {
-    border-top: 1px solid var(--tone-5) !important;
+    border-top: 1px solid!important
   }
-
   textarea {
-    -moz-appearance: none !important;
-    background: var(--tone-6) !important;
-    color: var(--tone-4) !important;
-    border: 1px solid var(--tone-5) !important;
-    padding: 5px 5px 5px 5px !important;
+    -moz-appearance: none!important;
+    background: var(--tone-6)!important;
+    color: var(--tone-4)!important;
+    border: 1px solid!important;
+    border-color: var(--tone-5)!important;
+    padding: 5px!important
   }
-
   #diff textarea {
-    border-top: 1px solid var(--tone-5) !important;
-    background: var(--tone-6) !important;
-    color: var(--tone-4) !important;
+    border-top: 1px solid!important;
+    border-color: var(--tone-5)!important;
+    background: var(--tone-6)!important;
+    color: var(--tone-4)!important
   }
-
   #dashboard-nav-widgets {
-    border-bottom: 1px solid var(--tone-5) !important;
+    border-bottom: 1px solid!important
   }
-
   .whatisthis-expandable {
-    background-color: var(--tone-8) !important;
-    border: 1px dotted var(--tone-5) !important;
+    background-color: var(--tone-8)!important;
+    border: 1px dotted!important;
+    border-color: var(--tone-5)!important
   }
-
-
-  /* Popup Specific */
   .paneHead {
-    background-color: var(--tone-7) !important;
+    background-color: var(--tone-7)!important
   }
-
   .paneContent {
-    background: var(--tone-4) !important;
+    background: var(--tone-4)!important
   }
-
   #gotoDashboard {
-    background-color: var(--tone-8) !important;
-    color: var(--tone-4) !important;
+    background-color: var(--tone-8)!important;
+    color: var(--tone-4)!important
   }
-
-  body[dir="ltr"] #gotoDashboard > span:last-of-type {
-    color: var(--tone-4) !important;
+  body[dir=ltr] #gotoDashboard > span:last-of-type {
+    color: var(--tone-4)!important
   }
-
   body .toolbar button {
-    color: var(--primary--light-color) !important;
+    color: var(--primary--light-color)!important
   }
-
   body .toolbar .scopeRel {
-    color: var(--accent-2) !important;
+    color: var(--accent-2)!important
   }
-
   #mtxSwitch_matrix-off.switchTrue {
-    color: #a00 !important;;
+    color: #a00!important
   }
-
   button > span.badge {
-    color: white !important;
-    background-color: var(--tone-5) !important;
+    color: #fff!important;
+    background-color: var(--tone-5)!important
   }
-
   body .toolbar button {
-    background-color: var(--tone-7) !important;
+    background-color: var(--tone-7)!important
   }
-
   body .toolbar button.disabled {
     color: var(--tone-4);
-    color: var(--tone-6) !important;
+    color: var(--tone-6)!important
   }
-
   body .toolbar .scope {
-    background-color: var(--tone-6) !important;
-    border: 1px solid var(--tone-5) !important;
+    background-color: var(--tone-6)!important;
+    border: 1px solid!important;
+    border-color: var(--tone-5)!important
   }
-
   #parsed {
-    background-color: var(--tone-8) !important;
-    border: 1px solid var(--tone-5) !important;
-    border-top: none !important;
+    background-color: var(--tone-8)!important;
+    border: 1px solid!important;
+    border-top: none!important;
+    border-color: var(--tone-5)!important
   }
   .code {
-    background-color: var(--tone-8) !important;
-    border: 1px solid var(--tone-5) !important;
-    border-bottom: none !important;
+    background-color: var(--tone-8)!important;
+    border: 1px solid!important;
+    border-bottom: none!important;
+    border-color: var(--tone-5)!important
   }
   button#bye {
-    -moz-appearance: none !important;
-    background: var(--tone-6) !important;
-    border: 1px solid var(--tone-5) !important;
-    color: var(--tone-4) !important;
+    -moz-appearance: none!important;
+    background: var(--tone-6)!important;
+    border: 1px solid!important;
+    border-color: var(--tone-5)!important;
+    color: var(--tone-4)!important
   }
   button#bye:hover {
-    background: var(--tone-8) !important;
+    background: var(--tone-8)!important
   }
   .dropdown-menu > ul,
   .recipe:hover {
-    border: 1px solid var(--tone-5) !important;
-    background-color: var(--tone-8) !important;
+    border: 1px solid!important;
+    border-color: var(--tone-5)!important;
+    background-color: var(--tone-8)!important
   }
   .dropdown-menu > ul > li.dropdown-menu-entry {
-    color: var(--tone-6) !important;
+    color: var(--tone-6)!important
   }
-
   #mtxSwitches > li.switchTrue {
-    color: var(--tone-4) !important;
+    color: var(--tone-4)!important
   }
-
   .dropdown-menu > ul > li.dropdown-menu-entry:hover {
-    background: var(--tone-7) !important;
+    background: var(--tone-7)!important
   }
-
   .recipe .name {
-    color: var(--tone-4) !important;
+    color: var(--tone-4)!important
   }
-
-  /* Logger */
   #toolbar,
-  #toolbar .button{
-      background-color: var(--tone-8) !important;
+  #toolbar .button {
+    background-color: var(--tone-8)!important
   }
-
   #toolbar input {
-      -moz-appearance: none !important;
-      background: var(--tone-6) !important;
-      color: var(--tone-4) !important;
-      border: 1px solid var(--tone-5) !important;
-      padding: 5px 5px 5px 5px !important;
+    -moz-appearance: none!important;
+    background: var(--tone-6)!important;
+    color: var(--tone-4)!important;
+    border: 1px solid!important;
+    border-color: var(--tone-5)!important;
+    padding: 5px!important
   }
-
   #content table tr {
-      background-color: var(--tone-6) !important;
+    background-color: var(--tone-6)!important
   }
-
   #content table tr:nth-of-type(2n+1) {
-      background-color: var(--tone-7) !important;
+    background-color: var(--tone-7)!important
   }
   #content table tr.doc {
-    background-color: var(--tone-8) !important;
+    background-color: var(--tone-8)!important
   }
   body:not(.popupOn) #content table tr.canMtx td:nth-of-type(2):hover {
-      background: var(--tone-8) !important;;
+    background: var(--tone-8)!important
   }
-
   body #content td {
-      border: 1px solid var(--tone-5) !important;
+    border-color: var(--tone-5)!important
   }
-
   #content table tr.blocked {
-      color: var(--red-80) !important;
+    color: var(--red-80)!important
   }
   #content table tr.cat_info {
-      color: var(--accent-1) !important;;
+    color: var(--accent-1)!important
   }
-
   #toolbar {
-    border-bottom: 1px solid var(--tone-5) !important;;
+    border-bottom: 1px solid!important;
+    border-color: var(--tone-5)!important
   }
 }

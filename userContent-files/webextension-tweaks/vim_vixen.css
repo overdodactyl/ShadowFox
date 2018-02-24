@@ -1,66 +1,46 @@
 /*! Alters the webextension Vim Vixen
   IMPORTANT: change the Internal UUID */
-
 @-moz-document url-prefix("moz-extension://vim_vixen_UUID/") {
-
-  /* Top Border */
   .vimvixen-console-command-wrapper {
-    border-top: 1px solid var(--tone-6) !important;
+    border-top: 1px solid!important
   }
-
-  /* Header */
   .vimvixen-console-completion-title {
-    background-color: var(--tone-9) !important;
-    border-bottom: 1px solid var(--tone-6) !important;
+    background-color: var(--tone-9)!important;
+    border-color: var(--tone-5)!important
   }
-
-  /* Main Content */
   .vimvixen-console-completion {
-    background-color: var(--tone-8) !important;
-    color: #b1b1b3 !important;
-    font-family: Menlo, monospace !important;
+    background-color: var(--tone-8)!important;
+    color: #b1b1b3!important;
+    font-family: Menlo,monospace!important
   }
-
-  /* Command Line */
   .vimvixen-console-command,
   .vimvixen-console-command-input {
-    background-color: var(--tone-9) !important;
-    color: var(--grey-30) !important;
+    background-color: var(--tone-9)!important;
+    color: var(--grey-30)!important
   }
-
-  /* URL color */
   .vimvixen-console-completion-item-url {
-    color: #86de74 !important;
+    color: #86de74!important
   }
-
   .vimvixen-console-completion-item.vimvixen-completion-selected {
-    background-color: rgb(68,57,31) !important;
-    color: rgb(252,225,159) !important;
+    background-color: #44391f!important;
+    color: #fce19f!important
   }
-
-  /* Error Message */
   .vimvixen-console-error {
-    background-color: rgb(75,49,55) !important;
-    color: rgb(255,148,148) !important;
+    background-color: #4b3137!important;
+    color: #ff9494!important
   }
-
-
-  /* Settings page in about:addons */
   .vimvixen-settings-form,
   h1 {
-    color: var(--tone-4) !important;
+    color: var(--tone-4)!important
   }
-
-  .vimvixen-settings-form textarea[name="json"] {
-    background-color: var(--tone-6) !important;
-    -moz-appearance: none !important;
-    color: var(--tone-4) !important;
-    border-color: var(--tone-6);
+  .vimvixen-settings-form textarea[name=json] {
+    background-color: var(--tone-6)!important;
+    -moz-appearance: none!important;
+    color: var(--tone-4)!important;
+    border-color: var(--tone-6)
   }
-
   ::-moz-selection {
     color: var(--grey-30);
-    background: var(--accent-2);
+    background: var(--accent-2)
   }
-
 }
