@@ -83,6 +83,13 @@
   --in-content-category-header-background: var(--tone-8) !important;
   --selected-icon-fill-color: var(--tone-2) !important;
 
+  --in-content-dark-header-background: var(--tone-9) !important;
+
+  --code-green: #86de74 !important;
+
+  --warning-color: #FCE19F;
+  --warning-background-color: #44391F;
+
 }
 
 /*! Begin color overrides */

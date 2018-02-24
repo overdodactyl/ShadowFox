@@ -1,7 +1,7 @@
 /*! Alters the webextension uBlock Origin
   IMPORTANT: change the Internal UUID */
 
-@-moz-document url-prefix("moz-extension://ublock_origin_UUID/") {
+@-moz-document url-prefix("moz-extension://2435721f-2666-4c42-b92a-70873b87cbf9/") {
 
   /* header */
   #appinfo {
