@@ -7,7 +7,7 @@
   }
 
   body {
-      color: var(--in-content-page-color) !important;
+      color: var(--tone-4) !important;
   }
 
   a:link {
@@ -22,11 +22,11 @@
   #completions {
     overflow: visible !important;
     background: var(--in-content-page-background) !important;
-    border-color: var(--in-content-box-border-color) !important;
+    border-color: var(--tone-5) !important;
   }
 
   table {
-    color: var(--in-content-page-color) !important;
+    color: var(--tone-4) !important;
   }
 
   .option:not(.focused) .url {

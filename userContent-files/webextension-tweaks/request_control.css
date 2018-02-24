@@ -4,63 +4,63 @@
 @-moz-document url-prefix("moz-extension://ed3f80c9-0ccb-ca41-bd62-f71a9fb72d27/") {
 
   body {
-      background-color: var(--primary-dark-color) !important;
-      color: var(--primary-light-color) !important;
+      background-color: var(--tone-7) !important;
+      color: var(--tone-4) !important;
   }
 
   .rule:not(.editing):not(:hover) {
-      background-color: var(--mid-way-color) !important;
-      border: 1px solid var(--light-accent-color) !important;
+      background-color: var(--tone-6) !important;
+      border: 1px solid var(--tone-5) !important;
   }
 
   .rule:hover:not(.editing) {
-      background-color: var(--dark-accent) !important;
-      border: 1px solid var(--light-accent-color) !important;
+      background-color: var(--tone-8) !important;
+      border: 1px solid var(--tone-5) !important;
   }
 
   .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-      color: var(--primary-light-color) !important;
-      background-color: var(--dark-accent) !important;
-      border: 1px solid var(--light-accent-color) !important;
+      color: var(--tone-4) !important;
+      background-color: var(--tone-8) !important;
+      border: 1px solid var(--tone-5) !important;
   }
 
   .nav-tabs > li > a:hover {
-      background-color: var(--dark-accent) !important;
-      border: 1px solid var(--light-accent-color) !important;
+      background-color: var(--tone-8) !important;
+      border: 1px solid var(--tone-5) !important;
   }
 
   tabs.nav-justified > li > a {
-      border-bottom: 1px solid var(--light-accent-color) !important;
+      border-bottom: 1px solid var(--tone-5) !important;
   }
 
   .btn-default {
-      color: var(--primary-light-color) !important;
-      background-color: var(--dark-accent) !important;
-      border-color: var(--light-accent-color) !important;
+      color: var(--tone-4) !important;
+      background-color: var(--tone-8) !important;
+      border-color: var(--tone-5) !important;
   }
 
   .btn-default.active {
-    background-color: var(--mid-way-color) !important;
+    background-color: var(--tone-6) !important;
   }
 
   .btn-default:hover {
-      color: var(--primary-light-color) !important;
-      background-color: var(--light-accent-color) !important;
-      border-color: var(--light-accent-color) !important;
+      color: var(--tone-4) !important;
+      background-color: var(--tone-5) !important;
+      border-color: var(--tone-5) !important;
   }
 
   .list-group-item:first-child {
-      background: var(--mid-way-color) !important;
-      border-color: var(--light-accent-color) !important;
+      background: var(--tone-6) !important;
+      border-color: var(--tone-5) !important;
 
   }
 
   .table {
-      background: var(--mid-way-color) !important;
+      background: var(--tone-6) !important;
   }
 
   .table-striped > tbody > tr:nth-of-type(2n+1) {
-      background-color: var(--dark-accent) !important;
+      background-color: var(--tone-8) !important;
   }
 
   .input-group .form-control:first-child,
@@ -72,19 +72,19 @@
   .input-group-btn:last-child > .btn-group:not(:last-child) > .btn,
    select.input-sm,
   .btn-group-params > .tags-input {
-      background: var(--light-accent-color) !important;
+      background: var(--tone-5) !important;
       color: var(--grey-30) !important;
-      border-color: var(--primary-light-color) !important;
+      border-color: var(--tone-4) !important;
   }
   .list-group-item {
-      background-color: var(--mid-way-color) !important;
+      background-color: var(--tone-6) !important;
       border: 1px solid #ddd;
   }
 
   .tags-input .tag {
-      background: var(--dark-accent) !important;
-      border: 1px solid var(--mid-way-color) !important;
-      color: var(--primary-light-color) !important;
+      background: var(--tone-8) !important;
+      border: 1px solid var(--tone-6) !important;
+      color: var(--tone-4) !important;
   }
 
 }

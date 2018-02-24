@@ -4,21 +4,21 @@
 @-moz-document url-prefix("moz-extension://897dfa7c-fa54-be49-996c-594df8db2260/") {
 
   body {
-    color: var(--primary-light-color) !important;
-    background: var(--mid-way-color) !important;
+    color: var(--tone-4) !important;
+    background: var(--tone-6) !important;
   }
 
   html {
-    background-color: var(--mid-way-color) !important;
+    background-color: var(--tone-6) !important;
   }
 
 
   a {
-    color: var(--primary-accent-color) !important;
+    color: var(--accent-1) !important;
   }
 
   h3 {
-    color: var(--primary-light-color) !important;
+    color: var(--tone-4) !important;
   }
 
 }

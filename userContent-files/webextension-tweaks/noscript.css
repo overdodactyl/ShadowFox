@@ -3,11 +3,11 @@
 
 @-moz-document url-prefix("moz-extension://noscript_UUID/") {
   body{
-    background: var(--mid-way-color) !important;
+    background: var(--tone-6) !important;
   }
 
   #top {
-    border-bottom: 0.06em solid var(--light-accent-color) !important;
+    border-bottom: 0.06em solid var(--tone-5) !important;
   }
 
   #top #close,
@@ -15,38 +15,38 @@
   #top #options,
   #top #revoke-temp,
   #top #temp-allow-page {
-    background-color: var(--mid-way-color) !important;
+    background-color: var(--tone-6) !important;
   }
 
   .site .url[data-key="secure"] .domain, .site .url[data-key="secure"] .sub, .site .url[data-key="full"] span {
-    color: var(--primary-light-color) !important;
+    color: var(--tone-4) !important;
   }
 
   .sites > tr:nth-child(2n) {
-    background: var(--mid-way-color) !important;
+    background: var(--tone-6) !important;
   }
 
   .sites > tr:nth-child(2n+1) {
-    background: var(--primary-dark-color) !important;
+    background: var(--tone-7) !important;
   }
 
   .presets input.preset:checked, #presets input.preset {
-    color: var(--primary-light-color) !important;
-    background-color: var(--dark-accent) !important;
+    color: var(--tone-4) !important;
+    background-color: var(--tone-8) !important;
   }
   .presets label.preset {
-    color: var(--primary-light-color) !important;
+    color: var(--tone-4) !important;
   }
 
   #sect-general {
-    color: var(--primary-light-color) !important;
+    color: var(--tone-4) !important;
   }
 
   button,
   input[type="text"] {
     -moz-appearance: none !important;
-    background-color: var(--primary-dark-color) !important;
-    border: 1px solid var(--light-accent-color) !important;
+    background-color: var(--tone-7) !important;
+    border: 1px solid var(--tone-5) !important;
     color: var(--primar-light-color) !important;
   }
   #top #close,
@@ -54,7 +54,7 @@
   #top #options,
   #top #revoke-temp,
   #top #temp-allow-page {
-    background-color: var(--mid-way-color) !important;
+    background-color: var(--tone-6) !important;
     border: none !important;
   }
 }

@@ -3,41 +3,41 @@
 
 @-moz-document url-prefix("moz-extension://ubo_scope_UUID/") {
   body {
-    background: var(--mid-way-color) !important;
+    background: var(--tone-6) !important;
   }
 
   #topPane {
-    background-color: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
+    background-color: var(--tone-6) !important;
+    color: var(--tone-4) !important;
   }
 
   #heatmaps .togglerBar {
-    background: var(--mid-way-color) !important;
+    background: var(--tone-6) !important;
   }
 
   body.theoretical #heatmaps .heatmap.theoretical {
-    background: var(--mid-way-color) !important;
+    background: var(--tone-6) !important;
   }
 
 
 
   #heatmaps .heatmap {
     border: none;
-    background: var(--mid-way-color) !important;
+    background: var(--tone-6) !important;
   }
 
   #heatmaps.list .hmcell {
-    background-color: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
+    background-color: var(--tone-6) !important;
+    color: var(--tone-4) !important;
   }
 
   #domain3rdDetails {
-    background-color: var(--primary-dark-color) !important;
-    border: 1px solid var(--primary-dark-color) !important;
+    background-color: var(--tone-7) !important;
+    border: 1px solid var(--tone-7) !important;
   }
 
   #domain3rdDetails #authority {
-    background-color: var(--dark-accent) !important;
+    background-color: var(--tone-8) !important;
     position: relative;
   }
 
@@ -46,15 +46,15 @@
   }
 
   #scores .scores .score.theoretical {
-    color: var(--primary-dark-color) !important;;
+    color: var(--tone-7) !important;;
   }
 
   body.theoretical #scores .scores .score.actual {
-    color: var(--primary-dark-color) !important;;
+    color: var(--tone-7) !important;;
   }
 
   body.theoretical #scores .scores .score.theoretical {
-    color: var(--primary-light-color) !important;;
+    color: var(--tone-4) !important;;
   }
 
 
