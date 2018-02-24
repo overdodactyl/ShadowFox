@@ -61,7 +61,7 @@
   --accent-1: var(--blue-40);
   --accent-2: var(--blue-50);
   --accent-3: var(--blue-60);
-  --in-content-page-color: var(--tone-4)!important;
+  /*! Begin color overrides *//*! End color overrides */--in-content-page-color: var(--tone-4)!important;
   --in-content-page-background: var(--tone-7)!important;
   --in-content-text-color: var(--tone-3)!important;
   --in-content-selected-text: var(--tone-1)!important;
@@ -103,5 +103,3 @@
   --warning-color: #FCE19F;
   --warning-background-color: #44391F
 }
-/*! Begin color overrides */
-/*! End color overrides */

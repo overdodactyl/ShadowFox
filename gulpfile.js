@@ -5,7 +5,7 @@ var concatCss = require('gulp-concat-css');
 var cleanCSS = require('gulp-clean-css');
 
 gulp.task('minify_code', () => {
-  return gulp.src(['userContent-files/*.css', 'userContent-files/*/*.css', 'userChrome-files/*', 'userChrome-files/*/*.css'])
+  return gulp.src(['color_variables.css', 'common-files/*.css', 'userContent-files/*.css', 'userContent-files/*/*.css', 'userChrome-files/*', 'userChrome-files/*/*.css'])
     .pipe(cleanCSS({
       level : 2 ,
       format: 'beautify'
@@ -73,11 +73,23 @@ gulp.task('userChrome_windows', function() {
 
 
 /* Add everything to userChrome */
-gulp.task('userChrome_all', [`userChrome_windows`], function() {
+gulp.task('userChrome_all', ['minify_code', 'userChrome_windows'], function() {
   return gulp.src(['color_variables.css', 'common-files/*.css', 'userChrome-files/*.css'])
     .pipe(concatCss('userChrome.css'))
     .pipe(gulp.dest('.'));
 });
+
+/* Add everything to userChrome */
+gulp.task('all', ['userChrome_all', 'userContent_all'], function() {
+  return gulp.src(['userChrome.css', 'userContent.css'])
+    .pipe(cleanCSS({
+      level : 2 ,
+      format: 'beautify'
+    }))
+    .pipe(gulp.dest('.'));
+});
+
+
 
 
 /**********************************
