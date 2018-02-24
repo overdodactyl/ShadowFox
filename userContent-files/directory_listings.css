@@ -1,4 +1,4 @@
-@-moz-document url-prefix(file:///) {
+@-moz-document regexp("^(file:///).*[^(.html)]$") {
   :root {
     background-color: var(--in-content-box-background)!important
   }
