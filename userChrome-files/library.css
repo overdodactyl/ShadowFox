@@ -83,4 +83,30 @@
   tree {
     background-color: var(--in-content-box-background)!important
   }
+  @media screen and (-moz-windows-theme),
+  screen and (-moz-windows-classic),
+  screen and (-moz-windows-default-theme),
+  screen and (-moz-os-version:windows-win7),
+  screen and (-moz-os-version:windows-win8),
+  screen and (-moz-os-version:windows-win10) {
+    #metaTagsCaption,
+    #security-identity,
+    #security-privacy,
+    #security-technical,
+    #security-identity-groupbox,
+    #security-privacy-groupbox,
+    #security-technical-groupbox {
+      -moz-appearance: none !important;
+      background-color: var(--primary-dark-color) !important;
+      border: none !important;
+      color: var(--grey-10) !important;
+    }
+
+    #security-identity-groupbox,
+    #security-privacy-groupbox,
+    #security-technical-groupbox {
+      -moz-appearance: none !important;
+      background-color: var(--dark-accent) !important;
+    }
+  }
 }
