@@ -1,4 +1,4 @@
-@-moz-document url-prefix(file:///) {
+@-moz-document regexp("^(file:///).*[^(.html)]$") {
 	:root {
 		background-color: var(--mid-way-color) !important;
 	}
@@ -16,9 +16,9 @@
 	body > table > tbody > tr:hover {
 		outline: 1px solid var(--mid-way-color) !important;
 	}
-	
+
 	.dir, .symlink, .file, .up {
 		color: var(--primary-accent-color) !important;
 	}
-  
+
 }

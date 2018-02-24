@@ -2618,7 +2618,7 @@
     filter: invert(85%) !important;
   }
 }
-@-moz-document url-prefix(file:///)  {
+@-moz-document regexp("^(file:///).*[^(.html)]$")  {
   :root {
     background-color: var(--mid-way-color) !important;
   }
