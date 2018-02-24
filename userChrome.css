@@ -61,7 +61,7 @@
   --accent-1: var(--blue-40);
   --accent-2: var(--blue-50);
   --accent-3: var(--blue-60);
-  --in-content-page-color: var(--tone-4)!important;
+  /*! Begin color overrides *//*! End color overrides */--in-content-page-color: var(--tone-4)!important;
   --in-content-page-background: var(--tone-7)!important;
   --in-content-text-color: var(--tone-3)!important;
   --in-content-selected-text: var(--tone-1)!important;
@@ -102,13 +102,11 @@
   --code-green: #86de74!important;
   --warning-color: #FCE19F;
   --warning-background-color: #44391F;
+  --panel-separator-color: var(--in-content-border-color)!important;
+  --tab-loading-fill: var(--in-content-category-text-selected)!important
 }
-
-/*! Begin color overrides */
-
-/*! End color overrides */
 @-moz-document url-prefix(about:),
-url-prefix(chrome://)  {
+url-prefix(chrome://) {
   .checkbox-check,
   .prefs-pane [type=checkbox]:checked + label::before,
   .prefs-pane [type=checkbox]:not(:checked) + label::before,
@@ -119,97 +117,80 @@ url-prefix(chrome://)  {
     background-color: var(--in-content-box-background)!important;
     background-image: none!important;
     box-shadow: none!important;
-    border-color: var(--in-content-box-border-color)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
-
   .radio-check[selected] {
-    list-style-image: url("chrome://global/skin/in-content/radio.svg");
-    fill: var(--in-content-border-highlight)!important;
+    list-style-image: url(chrome://global/skin/in-content/radio.svg);
+    fill: var(--in-content-border-highlight)!important
   }
 }
 @-moz-document url-prefix(about:),
 url-prefix(chrome://browser/content/preferences/),
 url(chrome://passwordmgr/content/passwordManager.xul),
 url(chrome://formautofill/content/manageAddresses.xhtml),
-url-prefix(chrome://pippki)  {
+url-prefix(chrome://pippki) {
   treechildren::-moz-tree-row,
   treechildren:not(.autocomplete-treebody)::-moz-tree-row(multicol,odd) {
-    background-color: var(--in-content-box-background)!important;
+    background-color: var(--in-content-box-background)!important
   }
-
   treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
-    background-color: var(--theme-selection-background-hover)!important;
+    background-color: var(--theme-selection-background-hover)!important
   }
-
   treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected) {
-    background-color: var(--theme-selection-background)!important;
+    background-color: var(--theme-selection-background)!important
   }
-
   tree {
-    background-color: var(--in-content-box-background)!important;
+    background-color: var(--in-content-box-background)!important
   }
-
   treecol:not([hideheader=true]):not(:first-child),
   treecolpicker {
-    border-image: linear-gradient(transparent 0,transparent 20%,var(--tone-5) 20%,var(--tone-5) 80%,transparent 80%,transparent 100%) 1 1!important;
+    border-image: linear-gradient(transparent 0,transparent 20%,var(--tone-5) 20%,var(--tone-5) 80%,transparent 80%,transparent 100%) 1 1!important
   }
-
   menulist:not([editable=true]) > .menulist-dropmarker,
   treecol:not([hideheader=true]) > .treecol-sortdirection[sortDirection] {
-    fill: var(--in-content-category-text)!important;
+    fill: var(--in-content-category-text)!important
   }
-
   fieldset > legend,
   treecol:not([hideheader=true]),
   treecolpicker {
     background-color: var(--in-content-category-header-background)!important;
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
 }
-@-moz-document url(chrome://browser/content/aboutDialog.xul)  {
+@-moz-document url(chrome://browser/content/aboutDialog.xul) {
   #clientBox {
     color: var(--in-content-page-color)!important;
-    background-color: var(--in-content-page-background)!important;
+    background-color: var(--in-content-page-background)!important
   }
-
   #bottomBox {
-    background: var(--in-content-category-header-background)!important;
+    background: var(--in-content-category-header-background)!important
   }
 }
-:root {
-  --panel-separator-color: var(--in-content-border-color)!important;
-}
-
 #urlbar[focused=true],
 .searchbar-textbox[focused=true] {
   border: 1px solid!important;
   box-shadow: 0 1px 4px var(--in-content-border-focus)!important;
-  border-color: var(--in-content-border-focus)!important;
+  border-color: var(--in-content-border-focus)!important
 }
-
 #PopupAutoCompleteRichResult .autocomplete-richlistbox,
 .searchbar-treebody::-moz-tree-row {
-  background-color: var(--in-content-box-background)!important;
+  background-color: var(--in-content-box-background)!important
 }
-
 #PopupAutoCompleteRichResult .autocomplete-richlistitem,
 .autocomplete-tree {
-  border-bottom-color: var(--in-content-page-color)!important;
+  border-bottom-color: var(--in-content-page-color)!important
 }
-
 #PopupSearchAutoComplete,
 .autocomplete-richlistitem .ac-action,
 .autocomplete-richlistitem .ac-separator,
 .autocomplete-richlistitem .ac-title,
 .autocomplete-tree {
-  color: var(--in-content-page-color)!important;
+  color: var(--in-content-page-color)!important
 }
-
 .autocomplete-richlistitem[selected=true],
 .searchbar-treebody::-moz-tree-row(selected) {
-  background-color: var(--theme-selection-background)!important;
+  background-color: var(--theme-selection-background)!important
 }
-
 .ac-action[selected],
 .ac-separator[selected],
 .ac-title[selected],
@@ -218,35 +199,30 @@ url-prefix(chrome://pippki)  {
 .autocomplete-richlistitem[selected=true] .ac-separator,
 .autocomplete-richlistitem[selected=true] .ac-title,
 .autocomplete-richlistitem[selected=true] .ac-url {
-  color: var(--in-content-selected-text)!important;
+  color: var(--in-content-selected-text)!important
 }
-
 .ac-url,
 .search-panel-input-value {
-  color: var(--in-content-link-color)!important;
+  color: var(--in-content-link-color)!important
 }
-
 .search-one-offs {
-  background: var(--in-content-box-background)!important;
+  background: var(--in-content-box-background)!important
 }
-
 .search-panel-header,
 .search-panel-one-offs {
   background: var(--in-content-category-header-background)!important;
-  border-top: none!important;
+  border-top: none!important
 }
-
 .autocomplete-history-popup,
 panel[type=autocomplete-richlistbox],
 panel[type=autocomplete] {
   color: var(--in-content-page-color)!important;
-  background: var(--in-content-page-color)!important;
+  background: var(--in-content-page-color)!important
 }
-
 .autocomplete-richlistitem:hover,
 .searchbar-treebody::-moz-tree-row(hover),
 treechildren.searchbar-treebody::-moz-tree-row(hover) {
-  background-color: var(--in-content-page-background)!important;
+  background-color: var(--in-content-page-background)!important
 }
 #editBMPanel_folderMenuList,
 #editBMPanel_foldersExpander,
@@ -260,27 +236,23 @@ treechildren.searchbar-treebody::-moz-tree-row(hover) {
   color: var(--in-content-page-color)!important;
   border: 1px solid!important;
   border-color: var(--in-content-box-border-color)!important;
-  box-shadow: none!important;
+  box-shadow: none!important
 }
-
 #editBookmarkPanel .expander-down > .button-box > .button-icon {
-  filter: invert(65%)!important;
+  filter: invert(65%)!important
 }
-
 #editBMPanel_folderTree,
 #editBMPanel_tagsSelector {
   -moz-appearance: none!important;
   background: var(--in-content-page-background)!important;
   color: var(--in-content-page-color)!important;
-  opacity: 1!important;
+  opacity: 1!important
 }
-
 #editBMPanel_folderTree treechildren:not(.autocomplete-treebody)::-moz-tree-row,
 #editBMPanel_tagsSelector treechildren:not(.autocomplete-treebody)::-moz-tree-row {
   background: var(--in-content-box-background)!important;
-  color: var(--in-content-page-background)!important;
+  color: var(--in-content-page-background)!important
 }
-
 #editBMPanel_folderTree treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover),
 #editBMPanel_tagsSelector treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
   background: var(--theme-selection-background-hover)!important;
@@ -288,45 +260,38 @@ treechildren.searchbar-treebody::-moz-tree-row(hover) {
   -moz-border-top-colors: var(--theme-selection-background-hover)!important;
   -moz-border-right-colors: var(--theme-selection-background-hover)!important;
   -moz-border-left-colors: var(--theme-selection-background-hover)!important;
-  -moz-border-bottom-colors: var(--theme-selection-background-hover)!important;
+  -moz-border-bottom-colors: var(--theme-selection-background-hover)!important
 }
-
 #editBMPanel_folderTree treechildren::-moz-tree-image {
-  fill: var(--in-content-page-color)!important;
+  fill: var(--in-content-page-color)!important
 }
-
 #editBMPanel_folderTree treechildren::-moz-tree-image(selected) {
-  fill: var(--in-content-item-selected)!important;
+  fill: var(--in-content-item-selected)!important
 }
-
 #editBMPanel_folderTree treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected,current,focus) {
-  background: var(--theme-selection-background)!important;
+  background: var(--theme-selection-background)!important
 }
-
 listitem[selected=true] {
   background-color: var(--theme-selection-background)!important;
-  color: var(--in-content-selected-text)!important;
+  color: var(--in-content-selected-text)!important
 }
-
 #editBMPanel_folderTree treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected,current) {
-  background: var(--theme-selection-background)!important;
+  background: var(--theme-selection-background)!important
 }
-
 #editBMPanel_folderTree {
   border-color: var(--in-content-box-border-color)!important;
-  border-bottom: none!important;
+  border-bottom: none!important
 }
-
 #editBMPanel_newFolderBox {
   background: var(--in-content-page-background)!important;
   border-color: var(--in-content-box-border-color)!important;
-  box-shadow: none!important;
+  box-shadow: none!important
 }
-@-moz-document url("chrome://global/content/commonDialog.xul")  {
+@-moz-document url("chrome://global/content/commonDialog.xul") {
   #commonDialog {
     -moz-appearance: none!important;
     background: var(--in-content-page-background)!important;
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
 }
 menupopup,
@@ -337,75 +302,62 @@ popup > menu > menupopup {
   -moz-appearance: none!important;
   background: var(--in-content-box-background)!important;
   border: none!important;
-  padding: 0!important;
+  padding: 0!important
 }
-
 .menu-right {
-  filter: invert(95%)!important;
+  filter: invert(95%)!important
 }
-
 #context-navigation menuitem {
   color: var(--in-content-selected-text)!important;
-  background: var(--in-content-page-background)!important;
+  background: var(--in-content-page-background)!important
 }
-
 #context-navigation menuitem:hover {
-  background: var(--in-content-category-header-background)!important;
+  background: var(--in-content-category-header-background)!important
 }
-
 menuitem,
 menupopup menu {
   -moz-appearance: none!important;
-  color: var(--in-content-selected-text)!important;
+  color: var(--in-content-selected-text)!important
 }
-
 menupopup menuseparator {
   padding: 0!important;
   border-top: none!important;
-  margin: 2px 6px!important;
+  margin: 2px 6px!important
 }
-
 #context-navigation menuitem[disabled=true],
 menu[disabled=true],
 menuitem[disabled=true] {
-  color: var(--in-content-box-border-color)!important;
+  color: var(--in-content-box-border-color)!important
 }
-
 menu[disabled=true]:hover,
 menuitem:hover[disabled=true] {
   color: var(--in-content-box-border-color)!important;
-  background-color: var(--in-content-page-background)!important;
+  background-color: var(--in-content-page-background)!important
 }
-
 #context-navigation menuitem:hover[disabled=true] {
   color: var(--in-content-box-border-color)!important;
-  background-color: var(--in-content-category-header-background)!important;
+  background-color: var(--in-content-category-header-background)!important
 }
-
 menu[_moz-menuactive=true],
 menuitem:hover,
 menuitem[_moz-menuactive=true],
 menupopup menu:hover {
   color: var(--in-content-selected-text)!important;
-  background-color: var(--in-content-category-header-background)!important;
+  background-color: var(--in-content-category-header-background)!important
 }
-
 .panel-arrowcontent {
   color: var(--in-content-selected-text)!important;
-  background: var(--in-content-box-background)!important;
+  background: var(--in-content-box-background)!important
 }
-
 vbox#sidebar-box.chromeclass-extrachrome {
   border-color: var(--in-content-category-header-background)!important;
   border-right: 1px!important;
-  border-style: solid!important;
+  border-style: solid!important
 }
-
 #_testpilot-containers_7 .menu-iconic-left,
 #treestyletab_piro_sakura_ne_jp_8 .menu-iconic-left {
-  filter: invert(55%)!important;
+  filter: invert(55%)!important
 }
-
 @media screen and (-moz-windows-theme),
 screen and (-moz-windows-classic),
 screen and (-moz-windows-default-theme),
@@ -415,18 +367,15 @@ screen and (-moz-os-version:windows-win10) {
   menupopup menuseparator {
     -moz-appearance: none!important;
     background: rgba(0,0,0,0)!important;
-    border: 0!important;
+    border: 0!important
   }
-
   #context-navigation,
   #context-sep-navigation {
-    padding: 0!important;
+    padding: 0!important
   }
-
   #BMB_bookmarksPopup menupopup {
-    padding: 4px 0 0!important;
+    padding: 4px 0 0!important
   }
-
   #BMB_bookmarksPopup menupopup[placespopup=true] > hbox,
   #personal-bookmarks menupopup,
   .box-inherit scrollbox-innerbox,
@@ -446,28 +395,24 @@ screen and (-moz-os-version:windows-win10) {
   toolbaritem#menubar-items menupopup {
     border-color: var(--in-content-page-color)!important;
     border-width: 1px!important;
-    border-style: solid!important;
+    border-style: solid!important
   }
-
   #bookmarksMenuPopup,
   #personal-bookmarks menupopup .bookmark-item,
   menupopup#goPopup {
     padding-left: 4px!important;
-    padding-right: 4px!important;
+    padding-right: 4px!important
   }
-
   menupopup#contentAreaContextMenu menupopup,
   menupopup#tabContextMenu > menu > menupopup > .popup-internal-box,
   menupopup#toolbar-context-menu {
     padding-left: 2px!important;
-    padding-right: 2px!important;
+    padding-right: 2px!important
   }
-
   menupopup,
   menupopup > menu > menupopup {
-    padding: 4px 0!important;
+    padding: 4px 0!important
   }
-
   #PlacesToolbar menupopup > menu,
   #PlacesToolbar menupopup > menuitem,
   menupopup#contentAreaContextMenu > menu,
@@ -480,9 +425,8 @@ screen and (-moz-os-version:windows-win10) {
   menupopup#toolbar-context-menu > menuitem {
     font-size: 1.167em!important;
     padding-top: 1px!important;
-    padding-bottom: 1px!important;
+    padding-bottom: 1px!important
   }
-
   #PlacesToolbar menupopup menupopup > menu,
   #PlacesToolbar menupopup menupopup > menuitem,
   menupopup#contentAreaContextMenu menupopup > menu,
@@ -490,78 +434,67 @@ screen and (-moz-os-version:windows-win10) {
   menupopup#tabContextMenu menupopup > menu,
   menupopup#tabContextMenu menupopup > menuitem,
   menupopup.textbox-contextmenu > menuitem {
-    font-size: 1em!important;
+    font-size: 1em!important
   }
-
   toolbaritem#menubar-items menupopup > menu,
   toolbaritem#menubar-items menupopup > menuitem {
-    font-size: 1.167em!important;
+    font-size: 1.167em!important
   }
-
   toolbaritem#menubar-items menupopup menupopup > menu,
   toolbaritem#menubar-items menupopup menupopup > menuitem {
-    font-size: 1em!important;
+    font-size: 1em!important
   }
-
   #customization-toolbar-menu,
   toolbaritem#menubar-items menupopup,
   toolbaritem#menubar-items menupopup > menu > menupopup {
     padding-left: 2px!important;
-    padding-right: 2px!important;
+    padding-right: 2px!important
   }
-
   #personal-bookmarks menupopup menuitem,
   menupopup#contentAreaContextMenu menu,
   menupopup#contentAreaContextMenu menuitem {
     padding-top: 1px!important;
-    padding-bottom: 1px!important;
+    padding-bottom: 1px!important
   }
-
   menupopup#contentAreaContextMenu > .menuitem-iconic {
     padding-top: 0!important;
-    padding-bottom: 0!important;
+    padding-bottom: 0!important
   }
-
   menupopup .menu-right {
-    margin-right: 0!important;
+    margin-right: 0!important
   }
 }
 #customization-done-button {
   color: var(--in-content-text-color);
   border-color: var(--in-content-primary-button-background)!important;
-  background-color: var(---in-content-primary-button-background)!important;
+  background-color: var(---in-content-primary-button-background)!important
 }
-
 #customization-done-button:-moz-any(:focus,:active,:hover):not([disabled]) {
-  background-color: var(--in-content-primary-button-background-hover)!important;
+  background-color: var(--in-content-primary-button-background-hover)!important
 }
 .browserContainer > findbar {
-  border-top: 1px solid!important;
+  border-top: 1px solid!important
 }
-
 .findbar-find-next,
 .findbar-find-previous {
   border: none!important;
   background: 0 0!important;
   border-radius: 2px!important;
-  fill: var(--in-content-page-color)!important;
+  fill: var(--in-content-page-color)!important
 }
-
 .findbar-find-previous {
-  margin-left: 6px!important;
+  margin-left: 6px!important
 }
-
 .findbar-find-next:hover,
 .findbar-find-previous:hover {
-  background: var(--toolbarbutton-hover-background)!important;
+  background: var(--toolbarbutton-hover-background)!important
 }
-@-moz-document url(chrome://browser/content/places/places.xul)  {
+@-moz-document url(chrome://browser/content/places/places.xul) {
   toolbar {
     -moz-appearance: none!important;
     background-color: var(--in-content-category-header-background)!important;
-    border: none!important;
+    border: none!important
   }
-
   listbox,
   textbox {
     -moz-appearance: none!important;
@@ -571,93 +504,77 @@ screen and (-moz-os-version:windows-win10) {
     padding: 0 0 0 4px!important;
     border: 1px solid!important;
     border-color: var(--in-content-box-border-color)!important;
-    border-radius: 3px!important;
+    border-radius: 3px!important
   }
-
   #placesToolbar > toolbarbutton {
     margin: 6px 4px 5px!important;
     -moz-appearance: none!important;
     background-color: var(--tone-4)!important;
     border-radius: 5px!important;
-    filter: invert(100%)!important;
+    filter: invert(100%)!important
   }
-
   #placesList {
     -moz-appearance: none!important;
     color: var(--in-content-page-color)!important;
-    background-color: var(--in-content-page-background)!important;
+    background-color: var(--in-content-page-background)!important
   }
-
   #placesView > splitter {
-    border-color: var(--in-content-border-color)!important;
+    border-color: var(--in-content-border-color)!important
   }
-
   #places #downloadsRichListBox {
     -moz-appearance: none!important;
     color: var(--in-content-page-color)!important;
-    background-color: var(--in-content-box-background)!important;
+    background-color: var(--in-content-box-background)!important
   }
-
   #detailsDeck {
     border: none!important;
     background-color: var(--in-content-page-background)!important;
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   .expander-down,
   .expander-up {
-    filter: invert(60%)!important;
+    filter: invert(60%)!important
   }
-
   #placeContent treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text() {
-    color: var(--in-content-text-color)!important;
+    color: var(--in-content-text-color)!important
   }
-
   #places treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected),
   #placesList > treechildren::-moz-tree-row(selected) {
     -moz-appearance: none!important;
     -moz-font-smoothing-background-color: none!important;
     border-top: none!important;
     background: var(--theme-selection-background)!important;
-    color: var(--in-content-text-color)!important;
+    color: var(--in-content-text-color)!important
   }
-
   #placeContent treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected),
   #placesList > treechildren::-moz-tree-cell-text(selected) {
-    color: var(--in-content-text-color)!important;
+    color: var(--in-content-text-color)!important
   }
-
   #places treechildren::-moz-tree-row {
-    background-color: transparent!important;
+    background-color: transparent!important
   }
-
   #places treechildren::-moz-tree-image {
-    fill: var(--in-content-page-color)!important;
+    fill: var(--in-content-page-color)!important
   }
-
   #places treechildren::-moz-tree-image(selected) {
-    fill: var(--selected-icon-fill-color)!important;
+    fill: var(--selected-icon-fill-color)!important
   }
-
   #placeContent > treechildren::-moz-tree-cell,
   #placeContent > treechildren::-moz-tree-column {
-    border-color: var(--in-content-box-border-color)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
-
   #contentView treecol {
     -moz-appearance: none!important;
     border: none!important;
     background: var(--in-content-category-header-background)!important;
     color: var(--in-content-text-color)!important;
     border-right: 1px solid!important;
-    border-color: var(--in-content-box-border-color)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
-
   tree {
-    background-color: var(--in-content-box-background)!important;
+    background-color: var(--in-content-box-background)!important
   }
-
-@media screen and (-moz-windows-theme),
+  @media screen and (-moz-windows-theme),
   screen and (-moz-windows-classic),
   screen and (-moz-windows-default-theme),
   screen and (-moz-os-version:windows-win7),
@@ -673,207 +590,164 @@ screen and (-moz-os-version:windows-win10) {
       -moz-appearance: none!important;
       background-color: var(--in-content-page-background)!important;
       border: none!important;
-      color: var(--in-content-selected-text)!important;
+      color: var(--in-content-selected-text)!important
     }
-
     #security-identity-groupbox,
     #security-privacy-groupbox,
     #security-technical-groupbox {
       -moz-appearance: none!important;
-      background-color: var(--in-content-category-header-background)!important;
+      background-color: var(--in-content-category-header-background)!important
     }
+  }
 }
-}
-:root {
-  --tab-loading-fill: var(--in-content-category-text-selected)!important;
-}
-
 .tab-throbber::before {
   fill: var(--in-content-category-text-selected)!important;
-  opacity: 1!important;
+  opacity: 1!important
 }
-
 .panel-arrow {
-  filter: invert(70%)!important;
+  filter: invert(70%)!important
 }
-
 #appMenu-zoomReset-button,
 .panel-subview-body {
   color: var(--in-content-selected-text)!important;
-  background: var(--in-content-box-background)!important;
+  background: var(--in-content-box-background)!important
 }
-
 .panel-subview-footer,
 [class^=PanelUI-] {
   color: var(--in-content-selected-text)!important;
-  background: var(--in-content-page-background)!important;
+  background: var(--in-content-page-background)!important
 }
-
 /*! webextension popup fix */
-
 .webextension-popup-browser {
-  background: #fff!important;
+  background: #fff!important
 }
-
 photonpanelmultiview panelview {
   background: 0 0!important;
-  color: var(--in-content-page-color)!important;
+  color: var(--in-content-page-color)!important
 }
-
 #emptyDownloads {
   background: var(--in-content-box-background)!important;
-  color: var(--in-content-page-color)!important;
+  color: var(--in-content-page-color)!important
 }
-
 #downloadsFooterButtons {
   background: var(--in-content-page-color)!important;
-  color: var(--in-content-page-color)!important;
+  color: var(--in-content-page-color)!important
 }
-
 #downloadsFooter[showingsummary] > stack:not(:hover) {
-  background-color: var(--in-content-category-header-background)!important;
+  background-color: var(--in-content-category-header-background)!important
 }
-
 #downloadsListBox {
-  background: var(--in-content-page-background)!important;
+  background: var(--in-content-page-background)!important
 }
-
 #appMenu-mainView toolbarbutton:hover,
 #customizationui-widget-multiview toolbarbutton:hover,
 #widget-overflow-list toolbarbutton:hover {
-  background: var(--in-content-category-header-background)!important;
+  background: var(--in-content-category-header-background)!important
 }
-
 #BMB_bookmarksPopup {
-  background: 0 0!important;
+  background: 0 0!important
 }
-
 #identity-popup-securityView {
-  background: var(--in-content-box-background)!important;
+  background: var(--in-content-box-background)!important
 }
-
 #identity-popup-multiView > .panel-viewcontainer > .panel-viewstack > .panel-subviews {
-  background: var(--in-content-box-border-color)!important;
+  background: var(--in-content-box-border-color)!important
 }
-
 .identity-popup-expander[panel-multiview-anchor] {
   background-color: var(--in-content-primary-button-background)!important;
-  fill: var(--in-content-text-color)!important;
+  fill: var(--in-content-text-color)!important
 }
-
 #identity-popup-mainView {
   background: var(--in-content-box-background)!important;
-  color: var(--in-content-page-color)!important;
+  color: var(--in-content-page-color)!important
 }
-
 #identity-popup[connection^=secure] .identity-popup-security-content {
-  fill: var(--in-content-category-text-selected)!important;
+  fill: var(--in-content-category-text-selected)!important
 }
-
 #identity-popup-permissions-content {
   filter: invert(90%)!important;
-  color: var(--in-content-page-background)!important;
+  color: var(--in-content-page-background)!important
 }
-
 .identity-popup-expander {
   border-color: var(--in-content-box-border-color)!important;
   background-color: var(--in-content-box-background)!important;
-  fill: var(--in-content-box-border-color)!important;
+  fill: var(--in-content-box-border-color)!important
 }
-
 .popup-notification-button[default][highlight=true]:not([disabled]) {
   background-color: var(--in-content-primary-button-background)!important;
-  color: var(--in-content-text-color);
+  color: var(--in-content-text-color)
 }
-
 #update-available-whats-new {
-  color: var(--in-content-link-color)!important;
+  color: var(--in-content-link-color)!important
 }
-
 .popup-notification-icon[popupid=update-available],
 .popup-notification-icon[popupid=update-manual],
 .popup-notification-icon[popupid=update-restart] {
   background-color: var(--in-content-item-selected)!important;
-  border-radius: 50%;
+  border-radius: 50%
 }
-
 toolbarbutton {
-  text-shadow: none!important;
+  text-shadow: none!important
 }
-
 .panel-banner-item > .toolbarbutton-multiline-text {
-  color: var(--in-content-page-color)!important;
+  color: var(--in-content-page-color)!important
 }
-
 .panel-banner-item {
-  background-color: hsla(96,65%,37%,.9)!important;
+  background-color: hsla(96,65%,37%,.9)!important
 }
-
 #update-manual-whats-new {
-  color: var(--in-content-link-color)!important;
+  color: var(--in-content-link-color)!important
 }
-
 toolbar[brighttext] {
-  --toolbarbutton-icon-fill-attention: var(--in-content-primary-button-background)!important;
+  --toolbarbutton-icon-fill-attention: var(--in-content-primary-button-background)!important
 }
-
 ::-moz-selection {
   background: var(--in-content-link-color);
-  color: var(--in-content-selected-text)!important;
+  color: var(--in-content-selected-text)!important
 }
-@-moz-document url(chrome://browser/content/pageinfo/pageInfo.xul)  {
+@-moz-document url(chrome://browser/content/pageinfo/pageInfo.xul) {
   #topBar {
     -moz-appearance: none!important;
-    background: var(--in-content-category-header-background)!important;
+    background: var(--in-content-category-header-background)!important
   }
-
   #mainDeck {
     background: var(--in-content-page-background)!important;
-    color: #fff!important;
+    color: #fff!important
   }
-
   textbox {
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   tree {
     -moz-appearance: none!important;
     border-color: var(--in-content-border-color)!important;
     color: --in-content-page-color!important;
-    background-color: var(--in-content-box-background)!important;
+    background-color: var(--in-content-box-background)!important
   }
-
   treechildren::-moz-tree-row {
-    background-color: transparent!important;
+    background-color: transparent!important
   }
-
   treecol {
     -moz-appearance: none!important;
     border: 0 solid!important;
     border-color: var(--in-content-box-background)!important;
-    color: var(--in-content-selected-text)!important;
+    color: var(--in-content-selected-text)!important
   }
-
   treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected,current,focus) {
-    background: var(--theme-selection-background-hover)!important;
+    background: var(--theme-selection-background-hover)!important
   }
-
   .permission {
     -moz-appearance: none!important;
     background: var(--in-content-box-background)!important;
     color: var(--in-content-page-color)!important;
-    border-color: var(--in-content-border-color)!important;
+    border-color: var(--in-content-border-color)!important
   }
-
   #permPluginTemplate {
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   #permList {
-    border: 2px solid!important;
+    border: 2px solid!important
   }
-
-@media screen and (-moz-windows-theme),
+  @media screen and (-moz-windows-theme),
   screen and (-moz-windows-classic),
   screen and (-moz-windows-default-theme),
   screen and (-moz-os-version:windows-win7),
@@ -885,9 +759,8 @@ toolbar[brighttext] {
       border: none!important;
       padding-top: 5px!important;
       padding-bottom: 5px!important;
-      color: var(--selected-icon-fill-color)!important;
+      color: var(--selected-icon-fill-color)!important
     }
-
     #metaTagsCaption,
     #security-identity,
     #security-identity-groupbox,
@@ -898,47 +771,43 @@ toolbar[brighttext] {
       -moz-appearance: none!important;
       background-color: var(--in-content-page-color)!important;
       border: none!important;
-      color: var(--in-content-selected-text)!important;
+      color: var(--in-content-selected-text)!important
     }
-
     #security-identity-groupbox,
     #security-privacy-groupbox,
     #security-technical-groupbox {
       -moz-appearance: none!important;
-      background-color: var(--in-content-category-header-background)!important;
+      background-color: var(--in-content-category-header-background)!important
     }
-}
+  }
 }
 #navigator-toolbox::after {
-  border-bottom: 0!important;
+  border-bottom: 0!important
 }
 #content,
 browser[type=content-primary],
 browser[type=content] > html {
-  background: var(--in-content-page-background)!important;
+  background: var(--in-content-page-background)!important
 }
 #identity-box.verifiedIdentity {
-  --urlbar-separator-color: var(--in-content-border-focus)!important;
+  --urlbar-separator-color: var(--in-content-border-focus)!important
 }
-
 #identity-box.verifiedIdentity #identity-icon-labels,
 .identity-popup-connection-secure {
-  color: var(--in-content-link-color)!important;
+  color: var(--in-content-link-color)!important
 }
-
 #connection-icon,
 #identity-popup[connection^=secure] #identity-popup-security-content,
 #identity-popup[connection^=secure] #identity-popup-securityView {
-  fill: var(--in-content-link-color)!important;
+  fill: var(--in-content-link-color)!important
 }
 #sidebar-header,
 #sidebar-search-container,
 #sidebar-search-container #viewButton,
 .sidebar-header {
   background: var(--in-content-category-header-background)!important;
-  color: var(--in-content-page-color)!important;
+  color: var(--in-content-page-color)!important
 }
-
 hbox#sidebar-search-container textbox#search-box {
   -moz-appearance: none!important;
   background-color: var(--in-content-box-background)!important;
@@ -947,45 +816,39 @@ hbox#sidebar-search-container textbox#search-box {
   padding: 0 0 0 4px!important;
   border: 1px solid!important;
   border-color: var(--in-content-box-border-color)!important;
-  border-radius: 3px!important;
+  border-radius: 3px!important
 }
-
 #sidebar,
 #sidebar-box,
 #webext-panels-browser,
 #webextpanels-window {
-  background: var(--in-content-page-background)!important;
+  background: var(--in-content-page-background)!important
 }
-
 .sidebar-placesTree {
   -moz-appearance: none!important;
   color: var(--in-content-page-color)!important;
   background-color: var(--in-content-page-background)!important;
-  opacity: 1!important;
+  opacity: 1!important
 }
-
 #sidebar-box[sidebarcommand=treestyletab_piro_sakura_ne_jp-sidebar-action] #sidebar-icon {
-  filter: invert(60%);
+  filter: invert(60%)
 }
-
 #button_treestyletab_piro_sakura_ne_jp-sidebar-action .toolbarbutton-icon {
-  filter: invert(87%);
+  filter: invert(87%)
 }
-
 .button-menu-dropmarker,
 .button-menubutton-dropmarker {
-  filter: invert(65%);
+  filter: invert(65%)
 }
-
 .sidebar-placesTree::-moz-tree-image,
 .sidebar-placesTreechildren::-moz-tree-image {
-  fill: var(--in-content-page-color)!important;
+  fill: var(--in-content-page-color)!important
 }
 statuspanel .statuspanel-label {
   background-color: var(--in-content-category-header-background)!important;
   color: var(--in-content-page-color)!important;
-  border: none!important;
+  border: none!important
 }
 .tab-line[selected=true] {
-  background-color: var(--in-content-border-focus)!important;
+  background-color: var(--in-content-border-focus)!important
 }
