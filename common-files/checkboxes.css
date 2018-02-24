@@ -9,10 +9,11 @@ url-prefix(chrome://) {
     border: 1px solid!important;
     background-color: var(--in-content-box-background)!important;
     background-image: none!important;
-    box-shadow: none!important
+    box-shadow: none!important;
+    border-color: var(--in-content-box-border-color)!important
   }
   .radio-check[selected] {
     list-style-image: url(chrome://global/skin/in-content/radio.svg);
-    fill: var(--accent-1)!important
+    fill: var(--in-content-border-highlight)!important
   }
 }

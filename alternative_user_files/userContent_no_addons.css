@@ -1,13 +1,45 @@
-/* Photon Colors CSS Variables v1.4.0
-* Colors are taken from: https://github.com/FirefoxUX/design-tokens */
-
 :root {
+  --magenta-50: #ff1ad9;
+  --magenta-60: #ed00b5;
+  --magenta-70: #b5007f;
+  --magenta-80: #7d004f;
+  --magenta-90: #440027;
+  --purple-50: #9400ff;
+  --purple-60: #8000d7;
+  --purple-70: #6200a4;
+  --purple-80: #440071;
+  --purple-90: #25003e;
   --blue-40: #45a1ff;
   --blue-50: #0a84ff;
   --blue-60: #0060df;
   --blue-70: #003eaa;
   --blue-80: #002275;
   --blue-90: #000f40;
+  --teal-50: #00feff;
+  --teal-60: #00c8d7;
+  --teal-70: #008ea4;
+  --teal-80: #005a71;
+  --teal-90: #002d3e;
+  --green-50: #30e60b;
+  --green-60: #12bc00;
+  --green-70: #058b00;
+  --green-80: #006504;
+  --green-90: #003706;
+  --yellow-50: #ffe900;
+  --yellow-60: #d7b600;
+  --yellow-70: #a47f00;
+  --yellow-80: #715100;
+  --yellow-90: #3e2800;
+  --red-50: #ff0039;
+  --red-60: #d70022;
+  --red-70: #a4000f;
+  --red-80: #5a0002;
+  --red-90: #3e0200;
+  --orange-50: #ff9400;
+  --orange-60: #d76e00;
+  --orange-70: #a44900;
+  --orange-80: #712b00;
+  --orange-90: #3e1300;
   --grey-10: #f9f9fa;
   --grey-20: #ededf0;
   --grey-30: #d7d7db;
@@ -29,64 +61,47 @@
   --accent-1: var(--blue-40);
   --accent-2: var(--blue-50);
   --accent-3: var(--blue-60);
-  /*
-  --primary-light-color: var(--grey-40);
-  --light-accent-color: var(--grey-50);
-  --mid-way-color: var(--grey-60);
-  --primary-dark-color: var(--grey-70);
-  --dark-accent: var(--grey-80);
-  --darksest: var(--grey-90);
-  --primary-accent-color: var(--blue-40);
-  --primary-accent-color-dark: var(--blue-50);
-  --primary-accent-color-darkest: var(--blue-60);
-*/
-  --in-content-page-color: var(--tone-4) !important;
-  /* Main Background Color */
-  --in-content-page-background: var(--tone-7) !important;
-  /* Main Text Color       */
-  --in-content-text-color: var(--tone-3) !important;
-  /* Text in Search Boxes  */
-  --in-content-selected-text: var(--tone-1) !important;
-  --in-content-box-background: var(--tone-6) !important;
-  /* Text Boxes */
+  --in-content-page-color: var(--tone-4)!important;
+  --in-content-page-background: var(--tone-7)!important;
+  --in-content-text-color: var(--tone-3)!important;
+  --in-content-selected-text: var(--tone-1)!important;
+  --in-content-box-background: var(--tone-6)!important;
   --in-content-box-background-odd: #f3f6fa;
-  --in-content-box-background-hover: var(--tone-6) !important;
-  /* Box Hover */
-  --in-content-box-background-active: var(--tone-6) !important;
-  /* Selected, but not hovered */
-  --in-content-box-border-color: var(--tone-5) !important;
-  /* Text Box Border */
+  --in-content-box-background-hover: var(--tone-6)!important;
+  --in-content-box-background-active: var(--tone-6)!important;
+  --in-content-box-border-color: var(--tone-5)!important;
   --in-content-item-hover: rgba(0,149,221,0.25);
-  --in-content-item-selected: var(--tone-8) !important;
-  --in-content-border-highlight: var(--accent-1) !important;
-  --in-content-border-focus: var(--accent-1) !important;
-  /* Border on Focus */
-  --in-content-border-color: var(--tone-6) !important;
+  --in-content-item-selected: var(--tone-8)!important;
+  --in-content-border-highlight: var(--accent-1)!important;
+  --in-content-border-focus: var(--accent-1)!important;
+  --in-content-border-color: var(--tone-6)!important;
   --in-content-category-outline-focus: 1px dotted #0a84ff;
-  --in-content-category-text: var(--tone-4) !important;
-  /* Non-selected Menu Items */
+  --in-content-category-text: var(--tone-4)!important;
   --in-content-category-text-active: #0c0c0d;
-  --in-content-category-text-selected: var(--accent-1) !important;
-  /* Selected Menu Itemes */
+  --in-content-category-text-selected: var(--accent-1)!important;
   --in-content-category-text-selected-active: #0060df;
   --in-content-category-background-hover: rgba(12,12,13,0.1);
   --in-content-category-background-active: rgba(12,12,13,0.15);
   --in-content-category-background-selected-hover: rgba(12,12,13,0.15);
   --in-content-category-background-selected-active: rgba(12,12,13,0.2);
   --in-content-tab-color: #424f5a;
-  --in-content-link-color: var(--accent-1) !important;
-  --in-content-link-color-hover: var(--accent-2) !important;
+  --in-content-link-color: var(--accent-1)!important;
+  --in-content-link-color-hover: var(--accent-2)!important;
   --in-content-link-color-active: #003eaa;
   --in-content-link-color-visited: #0a8dff;
-  --in-content-primary-button-background: var(--accent-2) !important;
-  --in-content-primary-button-background-hover: var(--accent-3) !important;
-  --in-content-primary-button-background-active: var(--accent-3) !important;
-  --in-content-table-border-dark-color: var(--tone-7) !important;
-  --in-content-table-header-background: var(--accent-2) !important;
-  --theme-selection-background: var(--accent-2) !important;
-  --theme-selection-background-hover: var(--accent-1) !important;
-  --in-content-category-header-background: var(--tone-8) !important;
-  --selected-icon-fill-color: var(--tone-2) !important;
+  --in-content-primary-button-background: var(--accent-2)!important;
+  --in-content-primary-button-background-hover: var(--accent-3)!important;
+  --in-content-primary-button-background-active: var(--accent-3)!important;
+  --in-content-table-border-dark-color: var(--tone-7)!important;
+  --in-content-table-header-background: var(--accent-2)!important;
+  --theme-selection-background: var(--accent-2)!important;
+  --theme-selection-background-hover: var(--accent-1)!important;
+  --in-content-category-header-background: var(--tone-8)!important;
+  --selected-icon-fill-color: var(--tone-2)!important;
+  --in-content-dark-header-background: var(--tone-9)!important;
+  --code-green: #86de74!important;
+  --warning-color: #FCE19F;
+  --warning-background-color: #44391F;
 }
 
 /*! Begin color overrides */
@@ -104,11 +119,12 @@ url-prefix(chrome://)  {
     background-color: var(--in-content-box-background)!important;
     background-image: none!important;
     box-shadow: none!important;
+    border-color: var(--in-content-box-border-color)!important;
   }
 
   .radio-check[selected] {
     list-style-image: url("chrome://global/skin/in-content/radio.svg");
-    fill: var(--accent-1)!important;
+    fill: var(--in-content-border-highlight)!important;
   }
 }
 @-moz-document url-prefix(about:),
@@ -117,43 +133,37 @@ url(chrome://passwordmgr/content/passwordManager.xul),
 url(chrome://formautofill/content/manageAddresses.xhtml),
 url-prefix(chrome://pippki)  {
   treechildren::-moz-tree-row,
-  treechildren:not(.autocomplete-treebody)::-moz-tree-row(multicol, odd) {
-    background-color: var(--in-content-box-background) !important;
+  treechildren:not(.autocomplete-treebody)::-moz-tree-row(multicol,odd) {
+    background-color: var(--in-content-box-background)!important;
   }
 
   treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
-    background-color: var(--theme-selection-background-hover) !important;
+    background-color: var(--theme-selection-background-hover)!important;
   }
 
   treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected) {
-    background-color: var(--theme-selection-background) !important;
+    background-color: var(--theme-selection-background)!important;
   }
 
   tree {
-    background-color: var(--in-content-box-background) !important;
+    background-color: var(--in-content-box-background)!important;
   }
 
-  /* Inbetween Border */
-
-  treecol:not([hideheader="true"]):not(:first-child),
+  treecol:not([hideheader=true]):not(:first-child),
   treecolpicker {
-    border-image: linear-gradient(transparent 0%, transparent 20%, var(--tone-5) 20%, var(--tone-5) 80%, transparent 80%, transparent 100%) 1 1 !important;
+    border-image: linear-gradient(transparent 0,transparent 20%,var(--tone-5) 20%,var(--tone-5) 80%,transparent 80%,transparent 100%) 1 1!important;
   }
 
-  /* Dropdown Markers */
-
-  menulist:not([editable="true"]) > *.menulist-dropmarker,
-  treecol:not([hideheader="true"]) > *.treecol-sortdirection[sortDirection] {
-    fill: var(--in-content-category-text) !important;
+  menulist:not([editable=true]) > .menulist-dropmarker,
+  treecol:not([hideheader=true]) > .treecol-sortdirection[sortDirection] {
+    fill: var(--in-content-category-text)!important;
   }
 
-  /* Tree Headers */
-
-  treecol:not([hideheader="true"]),
-  treecolpicker,
-  fieldset > legend {
-    background-color: var(--in-content-category-header-background) !important;
-    color: var(--in-content-page-color) !important;
+  fieldset > legend,
+  treecol:not([hideheader=true]),
+  treecolpicker {
+    background-color: var(--in-content-category-header-background)!important;
+    color: var(--in-content-page-color)!important;
   }
 }
 @-moz-document regexp("^about:(?!reader).*"),
@@ -456,7 +466,6 @@ url-prefix(https://discovery.addons.mozilla.org)  {
   }
 
   #content > div,
-  #errorPageContainer,
   .info-box-content,
   .notice,
   div.opsRow,
@@ -853,11 +862,11 @@ url-prefix(https://discovery.addons.mozilla.org)  {
   }
 
   #sidebarContainer {
-    background-color: var(--primary-dark-color)!important;
+    background-color: var(--in-content-table-header-background)!important;
   }
 
   #toolbarSidebar {
-    background-color: var(--dark-accent)!important;
+    background-color: var(--in-content-table-header-background)!important;
     background-image: none!important;
     border-color: var(--in-content-box-background)!important;
   }
@@ -896,7 +905,7 @@ url-prefix(https://discovery.addons.mozilla.org)  {
 
   .secondaryToolbarButton:focus,
   .secondaryToolbarButton:hover {
-    background-color: var(--primary-dark-color)!important;
+    background-color: var(--in-content-page-background)!important;
     background-image: none!important;
     box-shadow: none!important;
   }
