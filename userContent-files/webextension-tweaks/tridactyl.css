@@ -1,46 +1,38 @@
 /*! Alters the webextension Tridactyl
   IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://3b2b5b72-a7b0-e247-8964-0439fe556827/") {
+@-moz-document url-prefix("moz-extension://tridactyl_UUID/") {
   html {
-    background: var(--in-content-page-background) !important;
+    background: var(--in-content-page-background)!important
   }
-
   body {
-      color: var(--tone-4) !important;
+    color: var(--tone-4)!important
   }
-
   a:link {
-    color: var(--in-content-link-color) !important;
+    color: var(--in-content-link-color)!important
   }
-
   #completions .sectionHeader {
-    background: var(--in-content-category-header-background) !important;
-    color: var(--in-content-text-color) !important;
+    background: var(--in-content-category-header-background)!important;
+    color: var(--in-content-text-color)!important
   }
-
   #completions {
-    overflow: visible !important;
-    background: var(--in-content-page-background) !important;
-    border-color: var(--tone-5) !important;
+    overflow: visible!important;
+    background: var(--in-content-page-background)!important;
+    border-color: var(--tone-5)!important
   }
-
   table {
-    color: var(--tone-4) !important;
+    color: var(--tone-4)!important
   }
-
   .option:not(.focused) .url {
-    color: var(--code-green) !important;
-    background: var(--in-content-page-background) !important;
+    color: var(--code-green)!important;
+    background: var(--in-content-page-background)!important
   }
-
   input {
-    background: var(--in-content-category-header-background) !important;
-    color: var(--in-content-text-color) !important;
+    background: var(--in-content-category-header-background)!important;
+    color: var(--in-content-text-color)!important
   }
-
-  .focused, .focused .url {
-    background: var(--warning-background-color) !important;
-    color: var(--warning-color) !important;
+  .focused,
+  .focused .url {
+    background: var(--warning-background-color)!important;
+    color: var(--warning-color)!important
   }
 }

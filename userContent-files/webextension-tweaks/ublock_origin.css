@@ -1,339 +1,235 @@
 /*! Alters the webextension uBlock Origin
   IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://2435721f-2666-4c42-b92a-70873b87cbf9/") {
-
-  /* header */
+@-moz-document url-prefix("moz-extension://ublock_origin_UUID/") {
   #appinfo {
-      background-color: var(--tone-8) !important;
-      color: var(--tone-4) !important;
+    background-color: var(--tone-8)!important;
+    color: var(--tone-4)!important
   }
-
-  /* Right Column */
-  body[dir="ltr"] #panes > div {
-    background: var(--tone-7) !important;
-    color: var(--tone-4) !important;
+  #panes,
+  body,
+  body[dir=ltr] #panes > div {
+    background: var(--tone-7)!important;
+    color: var(--tone-4)!important
   }
-
-  body, #panes {
-    background: var(--tone-7) !important;
-    color: var(--tone-4) !important;
-  }
-
   label a,
   p a,
-  ul a {
-    color: var(--accent-1) !important;
-  }
-
-  /* Subgroup in Settings */
+  ul a,
   ul#userSettings .subgroup > span {
-    color: var(--accent-1) !important;
+    color: var(--accent-1)!important
   }
-
   #dashboard-nav-widgets span {
-    color: var(--tone-4) !important;
+    color: var(--tone-4)!important
   }
-
-  /* info icons */
   a.info {
-    color: var(--tone-4) !important;
-    opacity: .5;
+    color: var(--tone-4)!important;
+    opacity: .5
   }
-
   li.listEntry span.status {
-    color: var(--tone-4) !important;
+    color: var(--tone-4)!important
   }
-
-  li.listEntry > a.remove, li.listEntry > a.remove:visited {
-    color: var(--red-80) !important;
+  li.listEntry > a.remove,
+  li.listEntry > a.remove:visited {
+    color: var(--red-80)!important
   }
-
-  /* Power Switch */
   #switch .fa {
-    color: var(--accent-1) !important;
+    color: var(--accent-1)!important
   }
-
-  /* Power Switch - Off */
+  .tool,
   body.off #switch .fa {
-      color: var(--tone-4) !important;
+    color: var(--tone-4)!important
   }
-
-  /* Tool Buttons */
-  .tool {
-    color: var(--tone-4) !important;
-  }
-
   .tool:hover {
-    color: var(--tone-8) !important;
+    color: var(--tone-8)!important
   }
-
-  /* Stripped row */
-  h2,
-  #extraTools {
-    background-color: var(--tone-8) !important;
-    color: var(--tone-4) !important;
+  #extraTools,
+  h2 {
+    background-color: var(--tone-8)!important;
+    color: var(--tone-4)!important
   }
-
-  /* Refresh Button */
   #refresh {
-    background-color: var(--tone-8) !important;
-    border-color: var(--tone-5) !important;
+    background-color: var(--tone-8)!important;
+    border-color: var(--tone-5)!important
   }
-
-  /* Badge number */
   #extraTools > span > span.badge {
-    color: var(--tone-4) !important;
+    color: var(--tone-4)!important
   }
-
-  /* Firewall Container */
   #firewallContainer > div {
-    background-color: var(--tone-6) !important;
+    background-color: var(--tone-6)!important
   }
-
   #firewallContainer > div > span {
-    color: var(--tone-4) !important;
-    border-color: var(--tone-5) !important;
+    color: var(--tone-4)!important;
+    border-color: var(--tone-5)!important
   }
-
-  /* Darker Red */
-  body.advancedUser #firewallContainer > div > span.blockRule.ownRule,
-  #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action.own.block {
-    background-color: #ab0000 !important;
+  #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action.own.block,
+  body.advancedUser #firewallContainer > div > span.blockRule.ownRule {
+    background-color: #ab0000!important
   }
-
-  /* Lighter Red */
-  body.advancedUser #firewallContainer > div > span.blockRule,
-  #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action > span.block {
-    background-color: #dda0a2 !important;
+  #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action > span.block,
+  body.advancedUser #firewallContainer > div > span.blockRule {
+    background-color: #dda0a2!important
   }
-
-  /* Before Red */
-  #firewallContainer > div.blocked > span:first-of-type::before, #firewallContainer.minimized > div.isDomain.totalBlocked > span:first-of-type::before {
-    background-color: #c87576 !important;
-    opacity: 1 !important;
+  #firewallContainer > div.blocked > span:first-of-type::before,
+  #firewallContainer.minimized > div.isDomain.totalBlocked > span:first-of-type::before {
+    background-color: #c87576!important;
+    opacity: 1!important
   }
-
-
-  /* Darker Green */
-  body.advancedUser #firewallContainer > div > span.allowRule.ownRule,
-  #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action.own.allow {
-    background-color: #229400 !important;
+  #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action.own.allow,
+  body.advancedUser #firewallContainer > div > span.allowRule.ownRule {
+    background-color: #229400!important
   }
-
-  /* Lighter Green */
-  body.advancedUser #firewallContainer > div > span.allowRule,
-  #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action > span.allow {
-    background-color: #95ca8a !important;
-
+  #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action > span.allow,
+  body.advancedUser #firewallContainer > div > span.allowRule {
+    background-color: #95ca8a!important
   }
-
-  /* Before Green */
-  #firewallContainer > div.allowed > span:first-of-type::before, #firewallContainer.minimized > div.isDomain.totalAllowed > span:first-of-type::before {
-      background-color: #7ec26f !important;
-      opacity: 1 !important;
+  #firewallContainer > div.allowed > span:first-of-type::before,
+  #firewallContainer.minimized > div.isDomain.totalAllowed > span:first-of-type::before {
+    background-color: #7ec26f!important;
+    opacity: 1!important
   }
-
-  /* Darker Blue */
-  body.advancedUser #firewallContainer > div > span.noopRule.ownRule,
-  #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action.own.noop {
-      background-color: #0c46a7 !important;
+  #actionSelector > span:nth-of-type(2),
+  #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action.own.noop,
+  body.advancedUser #firewallContainer > div > span.noopRule.ownRule {
+    background-color: #0c46a7!important
   }
-
-  /* Blue on hover */
-  #actionSelector > span:nth-of-type(2) {
-    background-color: #0c46a7 !important;
+  #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action > span.noop,
+  body.advancedUser #firewallContainer > div > span.noopRule {
+    background-color: #65bdfb!important
   }
-
-  /* Lighter Blue */
-  body.advancedUser #firewallContainer > div > span.noopRule,
-  #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action > span.noop {
-    background-color: #65bdfb !important;
+  #firewallContainer > div.allowed.blocked > span:first-of-type::before,
+  #firewallContainer.minimized > div.isDomain.totalAllowed.totalBlocked > span:first-of-type::before {
+    background-color: #cdc16e!important;
+    opacity: 1!important
   }
-
-  /* Before Yellow */
-  #firewallContainer > div.allowed.blocked > span:first-of-type::before, #firewallContainer.minimized > div.isDomain.totalAllowed.totalBlocked > span:first-of-type::before {
-    background-color: #cdc16e !important;
-    opacity: 1 !important;
-  }
-
-  /* Color Blind Friendly */
-
-  /* Dark Block Color */
   body.advancedUser #firewallContainer.colorBlind > div > span.blockRule.ownRule {
-    background-color: #000060 !important;
+    background-color: #000060!important
   }
-
-  /* Light Block Color */
   body.advancedUser #firewallContainer.colorBlind > div > span.blockRule {
-    background-color: #787dab !important;
+    background-color: #787dab!important
   }
-
-  /* Dark Allow */
   body.advancedUser #firewallContainer.colorBlind > div > span.allowRule.ownRule {
-    background-color: #fbb900 !important;
+    background-color: #fbb900!important
   }
-
-  /* Light Allow */
-  body.advancedUser #firewallContainer.colorBlind > div > span.allowRule{
-    background-color: #f2d98d !important;
+  body.advancedUser #firewallContainer.colorBlind > div > span.allowRule {
+    background-color: #f2d98d!important
   }
-
-  /* Dark Noop */
   body.advancedUser #firewallContainer.colorBlind > div > span.noopRule.ownRule {
-      background-color: #2f2e2e !important;
+    background-color: #2f2e2e!important
   }
-
-
-  /* Light Noop */
   body.advancedUser #firewallContainer.colorBlind > div > span.noopRule {
-      background-color: #a1a1a1 !important;
+    background-color: #a1a1a1!important
   }
-
-  /* Yellow Side */
-  #firewallContainer.colorBlind > div.allowed > span:first-of-type::before, #firewallContainer.colorBlind.minimized > div.isDomain.totalAllowed > span:first-of-type::before {
-    background-color: #ebd287 !important;
+  #firewallContainer.colorBlind > div.allowed > span:first-of-type::before,
+  #firewallContainer.colorBlind.minimized > div.isDomain.totalAllowed > span:first-of-type::before {
+    background-color: #ebd287!important
   }
-
-  /* Blue Side */
-  #firewallContainer.colorBlind > div.blocked > span:first-of-type::before, #firewallContainer.colorBlind.minimized > div.isDomain.totalBlocked > span:first-of-type::before {
-    background-color: #787cab !important;
+  #firewallContainer.colorBlind > div.blocked > span:first-of-type::before,
+  #firewallContainer.colorBlind.minimized > div.isDomain.totalBlocked > span:first-of-type::before {
+    background-color: #787cab!important
   }
-
   #dashboard-nav-widgets {
-      border-bottom: 1px solid var(--tone-6) !important;
-      background-color: var(--tone-8) !important;
-    }
-
+    border-color: var(--tone-5)!important;
+    background-color: var(--tone-8)!important
+  }
   .tabButton {
-    background-color: var(--tone-7) !important;
-    color: var(--tone-4) !important;
-    border: 1px solid var(--tone-6) !important;
-    border-bottom: 1px solid var(--tone-6) !important;
+    background-color: var(--tone-7)!important;
+    color: var(--tone-4)!important;
+    border-color: var(--tone-5)!important;
+    border-bottom: 1px solid!important
   }
-
   .tabButton.selected {
-    background-color: var(--tone-8) !important;
-    border-bottom: 1px solid var(--tone-7) !important;
+    background-color: var(--tone-8)!important;
+    border-color: var(--tone-5)!important
   }
-
-  input[type="number"] {
+  input[type=number] {
     -moz-appearance: none!important;
-    background-color: var(--tone-6) !important;
-    color: var(--tone-4) !important;
+    background-color: var(--tone-6)!important;
+    color: var(--tone-4)!important
   }
-
   li.listEntry .content {
-    color: var(--accent-1) !important
+    color: var(--accent-1)!important
   }
-
   #diff .pane {
-    color: var(--tone-4) !important;
-    background: var(--tone-7) !important;
+    color: var(--tone-4)!important;
+    background: var(--tone-7)!important
   }
-
-  #diff li {
-    background-color: var(--tone-6) !important;
-  }
-
-  #diff li:nth-child(2n) {
-    background-color: var(--tone-7) !important;
-  }
-
-  /* Textbox */
+  #diff li,
   code {
-    background-color: var(--tone-6) !important;
+    background-color: var(--tone-6)!important
   }
-
+  #diff li:nth-child(2n) {
+    background-color: var(--tone-7)!important
+  }
   #whitelist textarea {
-    background: var(--tone-6) !important;
-    color: var(--tone-4) !important;
+    background: var(--tone-6)!important;
+    color: var(--tone-4)!important
   }
-
-  textarea#userFilters.userFilters,
-  textarea#externalLists {
+  textarea#externalLists,
+  textarea#userFilters.userFilters {
     -moz-appearance: none!important;
-    background: var(--tone-6) !important;
-    color: var(--tone-4) !important;
-
+    background: var(--tone-6)!important;
+    color: var(--tone-4)!important
   }
-
-  /* Logger */
   .permatoolbar {
-    background-color: var(--tone-7) !important;
+    background-color: var(--tone-7)!important
   }
-
-  .permatoolbar .button,
-  .permatoolbar #refresh {
-    background-color: transparent !important;
+  .permatoolbar #refresh,
+  .permatoolbar .button {
+    background-color: transparent!important
   }
-
-  .permatoolbar .button:hover,
-  .permatoolbar #refresh {
-    background-color: var(--grey-60) !important;
+  .permatoolbar #refresh,
+  .permatoolbar .button:hover {
+    background-color: var(--grey-60)!important
   }
-
   #netInspector tr.blocked {
-    background-color: rgb(75,49,55) !important;
-    color: rgb(255,148,148) !important;
+    background-color: #4b3137!important;
+    color: #ff9494!important
   }
-
   #netInspector #filterInput,
   #netInspector #maxEntries {
-    -moz-appearance: none !important;
-    background: var(--tone-6) !important;
-    color: var(--tone-4) !important;
-    border: 1px solid var(--tone-5) !important;
-    padding: 5px 5px 5px 5px !important;
+    -moz-appearance: none!important;
+    background: var(--tone-6)!important;
+    color: var(--tone-4)!important;
+    border: 1px solid!important;
+    padding: 5px!important
   }
-
-  #netInspector tr.cosmetic, #netInspector tr.redirect {
-    background-color: rgb(68,57,31) !important;
-    color: rgb(252,225,159) !important;
+  #netInspector tr.cosmetic,
+  #netInspector tr.redirect {
+    background-color: #44391f!important;
+    color: #fce19f!important
   }
-
-  body:not(.popupOn) #netInspector tr.canMtx td:nth-of-type(2):hover,
-  #netInspector tr.cat_net td:nth-of-type(4):hover {
-    background: var(--tone-8) !important;
+  #netInspector tr.cat_net td:nth-of-type(4):hover,
+  body:not(.popupOn) #netInspector tr.canMtx td:nth-of-type(2):hover {
+    background: var(--tone-8)!important
   }
-
   .modalDialog .dialog {
-    background-color: var(--tone-8) !important;
-    border: 2px solid var(--tone-8) !important;
+    background-color: var(--tone-8)!important;
+    border-color: var(--tone-5)!important
   }
-
   #netFilteringDialog .dialog > div.headers > span.header.selected {
-    background-color: var(--tone-8) !important;
-    color: var(--tone-4) !important;
-    border-color: var(--tone-6) !important;
+    background-color: var(--tone-8)!important;
+    color: var(--tone-4)!important;
+    border-color: var(--tone-6)!important
   }
-  
   #netFilteringDialog .dialog > div.headers > span.header {
-    background-color: var(--tone-7) !important;
-    border-color: var(--tone-6) !important;
+    background-color: var(--tone-7)!important;
+    border-color: var(--tone-6)!important
   }
-
   #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry {
-    background-color: var(--tone-6) !important;
-    border-color: var(--tone-5) !important;
+    background-color: var(--tone-6)!important;
+    border-color: var(--tone-5)!important
   }
-
   #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td:first-of-type {
-    border-color: var(--tone-5) !important;
+    border-color: var(--tone-5)!important
   }
-
   #netFilteringDialog .dialog > div.containers > div.dynamic > table.toolbar #saveRules {
-    background-color: var(--tone-6) !important;
-    border: none !important;
+    background-color: var(--tone-6)!important;
+    border: none!important
   }
-
   body #netInspector td {
-    border-color: var(--tone-5) !important;
+    border-color: var(--tone-5)!important
   }
-
   #netInspector tr.maindoc {
-    background-color: var(--tone-8) !important;
-    color: var(--grey-30) !important;
+    background-color: var(--tone-8)!important;
+    color: var(--grey-30)!important
   }
-
 }
