@@ -15,22 +15,23 @@
 
 /* Import Relevant webextension tweaks here
  * IMPORTANT: If used, change the Internal UUID in the corresponding css file */
-@import "userContent-files/webextension-tweaks/tree_style_tab.css";
-@import "userContent-files/webextension-tweaks/multiple_tabs_handler.css";
+@import "userContent-files/webextension-tweaks/brief.css";
+@import "userContent-files/webextension-tweaks/cookie_autodelete.css";
 @import "userContent-files/webextension-tweaks/dark_mode.css";
-@import "userContent-files/webextension-tweaks/ublock_origin.css";
-@import "userContent-files/webextension-tweaks/ubo_scope.css";
-@import "userContent-files/webextension-tweaks/https_everywhere.css";
 @import "userContent-files/webextension-tweaks/decentraleyes.css";
-@import "userContent-files/webextension-tweaks/pocket.css";
-@import "userContent-files/webextension-tweaks/skip_redirect.css";
-@import "userContent-files/webextension-tweaks/request_control.css";
+@import "userContent-files/webextension-tweaks/https_everywhere.css";
 @import "userContent-files/webextension-tweaks/multi_account_containers.css";
+@import "userContent-files/webextension-tweaks/multiple_tab_handler.css";
+@import "userContent-files/webextension-tweaks/neat_url.css";
+@import "userContent-files/webextension-tweaks/noscript.css";
+@import "userContent-files/webextension-tweaks/pocket.css";
+@import "userContent-files/webextension-tweaks/request_control.css";
+@import "userContent-files/webextension-tweaks/skip_redirect.css";
 @import "userContent-files/webextension-tweaks/smart_https.css";
 @import "userContent-files/webextension-tweaks/tab_suspender.css";
-@import "userContent-files/webextension-tweaks/cookie_autodelete.css";
-@import "userContent-files/webextension-tweaks/umatrix.css";
-@import "userContent-files/webextension-tweaks/brief.css";
-@import "userContent-files/webextension-tweaks/vim_vixen.css";
-@import "userContent-files/webextension-tweaks/neat_url.css";
+@import "userContent-files/webextension-tweaks/tree_style_tab.css";
 @import "userContent-files/webextension-tweaks/tridactyl.css";
+@import "userContent-files/webextension-tweaks/ublock_origin.css";
+@import "userContent-files/webextension-tweaks/ubo_scope.css";
+@import "userContent-files/webextension-tweaks/umatrix.css";
+@import "userContent-files/webextension-tweaks/vim_vixen.css";
