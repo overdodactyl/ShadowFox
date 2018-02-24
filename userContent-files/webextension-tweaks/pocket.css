@@ -1,40 +1,40 @@
 .pkt_ext_containersaved h2 {
-  color: var(--primary-light-color) !important;
+  color: var(--tone-4) !important;
 }
 .pkt_ext_containersaved .pkt_ext_tag_detail {
-  border: 1px solid var(--light-accent-color) !important;
-  background: var(--mid-way-color) !important;
+  border: 1px solid var(--tone-5) !important;
+  background: var(--tone-6) !important;
 }
 
 .pkt_ext_containersaved .pkt_ext_tag_input_wrapper {
-  background-color: var(--mid-way-color) !important;
-  border-right: 1px solid var(--light-accent-color) !important;
+  background-color: var(--tone-6) !important;
+  border-right: 1px solid var(--tone-5) !important;
 }
 
 .pkt_ext_containersaved .pkt_ext_tag_input_wrapper input::placeholder {
-    color: var(--primary-light-color) !important;
+    color: var(--tone-4) !important;
 }
 
 .pkt_ext_containersaved .pkt_ext_tag_input_wrapper input {
-    background-color: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
+    background-color: var(--tone-6) !important;
+    color: var(--tone-4) !important;
 }
 
 .pkt_ext_containersaved .pkt_ext_btn {
-  background: var(--dark-accent) !important;
+  background: var(--tone-8) !important;
 }
 
 .pkt_ext_containersaved .token-input-token {
-    border: 1px solid var(--light-accent-color) !important;
-    background-color: var(--primary-dark-color) !important;
-    color: var(--primary-light-color) !important;
+    border: 1px solid var(--tone-5) !important;
+    background-color: var(--tone-7) !important;
+    color: var(--tone-4) !important;
 }
 
 .token-input-dropdown-tag {
-    background: var(--mid-way-color) !important;
-    border: 1px solid var(--light-accent-color) !important;
+    background: var(--tone-6) !important;
+    border: 1px solid var(--tone-5) !important;
 }
 
 .token-input-dropdown-tag ul li {
-    color: var(--primary-light-color) !important;
+    color: var(--tone-4) !important;
 }

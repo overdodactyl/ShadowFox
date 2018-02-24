@@ -5,24 +5,24 @@
 
   label,
   body {
-      color: var(--primary-light-color) !important;
+      color: var(--tone-4) !important;
   }
 
   input[type="number"],
   textarea {
       -moz-appearance: none !important;
-      background: var(--mid-way-color) !important;
-      color: var(--primary-light-color) !important;
-      border: 1px solid var(--light-accent-color) !important;
+      background: var(--tone-6) !important;
+      color: var(--tone-4) !important;
+      border: 1px solid var(--tone-5) !important;
   }
 
   #recovery,
   #save {
     -moz-appearance: none !important;
     height: 20px !important;
-    background: var(--dark-accent) !important;
-    color: var(--primary-light-color) !important;
-    border: 1px solid var(--mid-way-color) !important;
+    background: var(--tone-8) !important;
+    color: var(--tone-4) !important;
+    border: 1px solid var(--tone-6) !important;
     border-radius: 4px !important;
 
   }

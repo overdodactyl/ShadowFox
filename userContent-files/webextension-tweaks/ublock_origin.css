@@ -5,44 +5,44 @@
 
   /* header */
   #appinfo {
-      background-color: var(--dark-accent) !important;
-      color: var(--primary-light-color) !important;
+      background-color: var(--tone-8) !important;
+      color: var(--tone-4) !important;
   }
 
   /* Right Column */
   body[dir="ltr"] #panes > div {
-    background: var(--primary-dark-color) !important;
-    color: var(--primary-light-color) !important;
+    background: var(--tone-7) !important;
+    color: var(--tone-4) !important;
   }
 
   body, #panes {
-    background: var(--primary-dark-color) !important;
-    color: var(--primary-light-color) !important;
+    background: var(--tone-7) !important;
+    color: var(--tone-4) !important;
   }
 
   label a,
   p a,
   ul a {
-    color: var(--primary-accent-color) !important;
+    color: var(--accent-1) !important;
   }
 
   /* Subgroup in Settings */
   ul#userSettings .subgroup > span {
-    color: var(--primary-accent-color) !important;
+    color: var(--accent-1) !important;
   }
 
   #dashboard-nav-widgets span {
-    color: var(--primary-light-color) !important;
+    color: var(--tone-4) !important;
   }
 
   /* info icons */
   a.info {
-    color: var(--primary-light-color) !important;
+    color: var(--tone-4) !important;
     opacity: .5;
   }
 
   li.listEntry span.status {
-    color: var(--primary-light-color) !important;
+    color: var(--tone-4) !important;
   }
 
   li.listEntry > a.remove, li.listEntry > a.remove:visited {
@@ -51,49 +51,49 @@
 
   /* Power Switch */
   #switch .fa {
-    color: var(--primary-accent-color) !important;
+    color: var(--accent-1) !important;
   }
 
   /* Power Switch - Off */
   body.off #switch .fa {
-      color: var(--primary-light-color) !important;
+      color: var(--tone-4) !important;
   }
 
   /* Tool Buttons */
   .tool {
-    color: var(--primary-light-color) !important;
+    color: var(--tone-4) !important;
   }
 
   .tool:hover {
-    color: var(--dark-accent) !important;
+    color: var(--tone-8) !important;
   }
 
   /* Stripped row */
   h2,
   #extraTools {
-    background-color: var(--dark-accent) !important;
-    color: var(--primary-light-color) !important;
+    background-color: var(--tone-8) !important;
+    color: var(--tone-4) !important;
   }
 
   /* Refresh Button */
   #refresh {
-    background-color: var(--dark-accent) !important;
-    border-color: var(--light-accent-color) !important;
+    background-color: var(--tone-8) !important;
+    border-color: var(--tone-5) !important;
   }
 
   /* Badge number */
   #extraTools > span > span.badge {
-    color: var(--primary-light-color) !important;
+    color: var(--tone-4) !important;
   }
 
   /* Firewall Container */
   #firewallContainer > div {
-    background-color: var(--mid-way-color) !important;
+    background-color: var(--tone-6) !important;
   }
 
   #firewallContainer > div > span {
-    color: var(--primary-light-color) !important;
-    border-color: var(--light-accent-color) !important;
+    color: var(--tone-4) !important;
+    border-color: var(--tone-5) !important;
   }
 
   /* Darker Red */
@@ -201,66 +201,66 @@
   }
 
   #dashboard-nav-widgets {
-      border-bottom: 1px solid var(--mid-way-color) !important;
-      background-color: var(--dark-accent) !important;
+      border-bottom: 1px solid var(--tone-6) !important;
+      background-color: var(--tone-8) !important;
     }
 
   .tabButton {
-    background-color: var(--primary-dark-color) !important;
-    color: var(--primary-light-color) !important;
-    border: 1px solid var(--mid-way-color) !important;
-    border-bottom: 1px solid var(--mid-way-color) !important;
+    background-color: var(--tone-7) !important;
+    color: var(--tone-4) !important;
+    border: 1px solid var(--tone-6) !important;
+    border-bottom: 1px solid var(--tone-6) !important;
   }
 
   .tabButton.selected {
-    background-color: var(--dark-accent) !important;
-    border-bottom: 1px solid var(--primary-dark-color) !important;
+    background-color: var(--tone-8) !important;
+    border-bottom: 1px solid var(--tone-7) !important;
   }
 
   input[type="number"] {
     -moz-appearance: none!important;
-    background-color: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
+    background-color: var(--tone-6) !important;
+    color: var(--tone-4) !important;
   }
 
   li.listEntry .content {
-    color: var(--primary-accent-color) !important
+    color: var(--accent-1) !important
   }
 
   #diff .pane {
-    color: var(--primary-light-color) !important;
-    background: var(--primary-dark-color) !important;
+    color: var(--tone-4) !important;
+    background: var(--tone-7) !important;
   }
 
   #diff li {
-    background-color: var(--mid-way-color) !important;
+    background-color: var(--tone-6) !important;
   }
 
   #diff li:nth-child(2n) {
-    background-color: var(--primary-dark-color) !important;
+    background-color: var(--tone-7) !important;
   }
 
   /* Textbox */
   code {
-    background-color: var(--mid-way-color) !important;
+    background-color: var(--tone-6) !important;
   }
 
   #whitelist textarea {
-    background: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
+    background: var(--tone-6) !important;
+    color: var(--tone-4) !important;
   }
 
   textarea#userFilters.userFilters,
   textarea#externalLists {
     -moz-appearance: none!important;
-    background: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
+    background: var(--tone-6) !important;
+    color: var(--tone-4) !important;
 
   }
 
   /* Logger */
   .permatoolbar {
-    background-color: var(--primary-dark-color) !important;
+    background-color: var(--tone-7) !important;
   }
 
   .permatoolbar .button,
@@ -281,9 +281,9 @@
   #netInspector #filterInput,
   #netInspector #maxEntries {
     -moz-appearance: none !important;
-    background: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
-    border: 1px solid var(--light-accent-color) !important;
+    background: var(--tone-6) !important;
+    color: var(--tone-4) !important;
+    border: 1px solid var(--tone-5) !important;
     padding: 5px 5px 5px 5px !important;
   }
 
@@ -294,45 +294,45 @@
 
   body:not(.popupOn) #netInspector tr.canMtx td:nth-of-type(2):hover,
   #netInspector tr.cat_net td:nth-of-type(4):hover {
-    background: var(--dark-accent) !important;
+    background: var(--tone-8) !important;
   }
 
   .modalDialog .dialog {
-    background-color: var(--dark-accent) !important;
-    border: 2px solid var(--dark-accent) !important;
+    background-color: var(--tone-8) !important;
+    border: 2px solid var(--tone-8) !important;
   }
 
   #netFilteringDialog .dialog > div.headers > span.header.selected {
-    background-color: var(--dark-accent) !important;
-    color: var(--primary-light-color) !important;
-    border-color: var(--mid-way-color) !important;
+    background-color: var(--tone-8) !important;
+    color: var(--tone-4) !important;
+    border-color: var(--tone-6) !important;
   }
   
   #netFilteringDialog .dialog > div.headers > span.header {
-    background-color: var(--primary-dark-color) !important;
-    border-color: var(--mid-way-color) !important;
+    background-color: var(--tone-7) !important;
+    border-color: var(--tone-6) !important;
   }
 
   #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry {
-    background-color: var(--mid-way-color) !important;
-    border-color: var(--light-accent-color) !important;
+    background-color: var(--tone-6) !important;
+    border-color: var(--tone-5) !important;
   }
 
   #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td:first-of-type {
-    border-color: var(--light-accent-color) !important;
+    border-color: var(--tone-5) !important;
   }
 
   #netFilteringDialog .dialog > div.containers > div.dynamic > table.toolbar #saveRules {
-    background-color: var(--mid-way-color) !important;
+    background-color: var(--tone-6) !important;
     border: none !important;
   }
 
   body #netInspector td {
-    border-color: var(--light-accent-color) !important;
+    border-color: var(--tone-5) !important;
   }
 
   #netInspector tr.maindoc {
-    background-color: var(--dark-accent) !important;
+    background-color: var(--tone-8) !important;
     color: var(--grey-30) !important;
   }
 

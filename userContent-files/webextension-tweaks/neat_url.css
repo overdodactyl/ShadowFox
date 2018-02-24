@@ -5,30 +5,30 @@
   label,
   h2,
   body {
-    color: var(--primary-light-color) !important;
+    color: var(--tone-4) !important;
   }
 
   textarea,
   input {
     -moz-appearance: none !important;
-    background: var(--mid-way-color) !important;
-    color: var(--primary-light-color) !important;
-    border: 1px solid var(--light-accent-color) !important;
+    background: var(--tone-6) !important;
+    color: var(--tone-4) !important;
+    border: 1px solid var(--tone-5) !important;
     padding: 5px 5px 5px 5px !important;
   }
 
   a:link {
-    color: var(--primary-accent-color) !important;
+    color: var(--accent-1) !important;
   }
 
   button {
-    background-color: var(--dark-accent) !important;
-    color: var(--primary-light-color) !important;
-    border-color: var(--light-accent-color) !important;
+    background-color: var(--tone-8) !important;
+    color: var(--tone-4) !important;
+    border-color: var(--tone-5) !important;
   }
 
   button:hover {
-    background-color: var(--primary-dark-color) !important;
+    background-color: var(--tone-7) !important;
   }
 
 }
