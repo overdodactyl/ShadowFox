@@ -61,7 +61,9 @@
   --accent-1: var(--blue-40);
   --accent-2: var(--blue-50);
   --accent-3: var(--blue-60);
-  /*! Begin color overrides *//*! End color overrides */--in-content-page-color: var(--tone-4)!important;
+  --start-indicator-for-updater-scripts: black;
+  --end-indicator-for-updater-scripts: black;
+  --in-content-page-color: var(--tone-4)!important;
   --in-content-page-background: var(--tone-7)!important;
   --in-content-text-color: var(--tone-3)!important;
   --in-content-selected-text: var(--tone-1)!important;
@@ -101,9 +103,7 @@
   --in-content-dark-header-background: var(--tone-9)!important;
   --code-green: #86de74!important;
   --warning-color: #FCE19F;
-  --warning-background-color: #44391F;
-  --panel-separator-color: var(--in-content-border-color)!important;
-  --tab-loading-fill: var(--in-content-category-text-selected)!important
+  --warning-background-color: #44391F
 }
 @-moz-document url-prefix(about:),
 url-prefix(chrome://) {
@@ -165,6 +165,9 @@ url-prefix(chrome://pippki) {
   #bottomBox {
     background: var(--in-content-category-header-background)!important
   }
+}
+:root {
+  --panel-separator-color: var(--in-content-border-color)!important
 }
 #urlbar[focused=true],
 .searchbar-textbox[focused=true] {
@@ -599,6 +602,9 @@ screen and (-moz-os-version:windows-win10) {
       background-color: var(--in-content-category-header-background)!important
     }
   }
+}
+:root {
+  --tab-loading-fill: var(--in-content-category-text-selected)!important
 }
 .tab-throbber::before {
   fill: var(--in-content-category-text-selected)!important;
