@@ -91,22 +91,21 @@
   screen and (-moz-os-version:windows-win10) {
     #metaTagsCaption,
     #security-identity,
+    #security-identity-groupbox,
     #security-privacy,
+    #security-privacy-groupbox,
     #security-technical,
-    #security-identity-groupbox,
-    #security-privacy-groupbox,
     #security-technical-groupbox {
-      -moz-appearance: none !important;
-      background-color: var(--primary-dark-color) !important;
-      border: none !important;
-      color: var(--grey-10) !important;
+      -moz-appearance: none!important;
+      background-color: var(--primary-dark-color)!important;
+      border: none!important;
+      color: var(--grey-10)!important
     }
-
     #security-identity-groupbox,
     #security-privacy-groupbox,
     #security-technical-groupbox {
-      -moz-appearance: none !important;
-      background-color: var(--dark-accent) !important;
+      -moz-appearance: none!important;
+      background-color: var(--dark-accent)!important
     }
   }
 }
