@@ -47,7 +47,7 @@
 @import "userContent-files/webextension-tweaks/brief.css";
 @import "userContent-files/webextension-tweaks/vim_vixen.css";
 @import "userContent-files/webextension-tweaks/neat_url.css";
-
+@import "userContent-files/webextension-tweaks/noscript.css";
 
 /* Import relevent website dark themes */
 @import "userContent-files/webpages/view_source.css";
