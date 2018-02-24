@@ -93,12 +93,13 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 
   if [ -s ./ShadowFox_customization/colorOverrides.css ]; then
     ## Delete everything inbetween override markers
-    sed -i '/\/\*! Begin color overrides \*\//,/\/\*! End color overrides \*\//{//!d;}' userContent.css
-    sed -i '/\/\*! Begin color overrides \*\//,/\/\*! End color overrides \*\//{//!d;}' userChrome.css
+    sed -i '/--start-indicator-for-updater-scripts: black;/,/--end-indicator-for-updater-scripts: black;/{//!d;}' userContent.css
+    sed -i '/--start-indicator-for-updater-scripts: black;/,/--end-indicator-for-updater-scripts: black;/{//!d;}' userChrome.css
 
     ## Insert everything from colorOverrides.css
-    sed -i '/\/\*! Begin color overrides \*\// r ./ShadowFox_customization/colorOverrides.css' userContent.css
-    sed -i '/\/\*! Begin color overrides \*\// r ./ShadowFox_customization/colorOverrides.css' userChrome.css
+    sed -i '/--start-indicator-for-updater-scripts: black;/ r ./ShadowFox_customization/colorOverrides.css' userContent.css
+    sed -i '/--start-indicator-for-updater-scripts: black;/ r ./ShadowFox_customization/colorOverrides.css' userChrome.css
+
 
     echo -e "\nYour custom colors have been set.\n"
   else

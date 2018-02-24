@@ -5,7 +5,7 @@ var concatCss = require('gulp-concat-css');
 var cleanCSS = require('gulp-clean-css');
 
 gulp.task('minify_code', () => {
-  return gulp.src(['color_variables.css', 'common-files/*.css', 'userContent-files/*.css', 'userContent-files/*/*.css', 'userChrome-files/*', 'userChrome-files/*/*.css'])
+  return gulp.src(['common-files/*.css', 'userContent-files/*.css', 'userContent-files/*/*.css', 'userChrome-files/*', 'userChrome-files/*/*.css'])
     .pipe(cleanCSS({
       level : 2 ,
       format: 'beautify'
@@ -83,7 +83,7 @@ gulp.task('userChrome_all', ['minify_code', 'userChrome_windows'], function() {
 gulp.task('all', ['userChrome_all', 'userContent_all'], function() {
   return gulp.src(['userChrome.css', 'userContent.css'])
     .pipe(cleanCSS({
-      level : 2 ,
+      level : 1 ,
       format: 'beautify'
     }))
     .pipe(gulp.dest('.'));
@@ -102,7 +102,7 @@ gulp.task('all', ['userChrome_all', 'userContent_all'], function() {
 gulp.task('minify-pdf', () => {
   return gulp.src(['userContent-files/webpages/pdf.css'])
     .pipe(cleanCSS({
-      level : 2 ,
+      level : 1 ,
       format: 'beautify'
     }))
     .pipe(gulp.dest('./userContent-files/webpages'));
