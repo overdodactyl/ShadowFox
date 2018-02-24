@@ -5,7 +5,7 @@ var concatCss = require('gulp-concat-css');
 var cleanCSS = require('gulp-clean-css');
 
 gulp.task('minify_code', () => {
-  return gulp.src(['userContent-files/*.css', 'userChrome-files/*'])
+  return gulp.src(['userContent-files/*.css', 'userContent-files/*/*.css', 'userChrome-files/*', 'userChrome-files/*/*.css'])
     .pipe(cleanCSS({
       level : 2 ,
       format: 'beautify'
@@ -51,7 +51,7 @@ gulp.task('userContent_no_addons', function() {
 
 
 /* Add everything to userContent */
-gulp.task('userContent_all', ['userContent_no_addons'], function() {
+gulp.task('userContent_all', ['minify_code', 'userContent_no_addons'], function() {
   return gulp.src(['color_variables.css', 'common-files/*.css', 'userContent-files/*.css', 'userContent-files/*/*.css'])
     .pipe(concatCss('userContent.css'))
     .pipe(gulp.dest('.'));
