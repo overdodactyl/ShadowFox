@@ -120,16 +120,31 @@ url-prefix(chrome://)  {
     border-color: var(--in-content-box-border-color)!important;
   }
 
+  radio[disabled=true] {
+    color: var(--in-content-box-border-color)!important;
+  }
+
   .radio-check[selected] {
     list-style-image: url("chrome://global/skin/in-content/radio.svg");
     fill: var(--in-content-border-highlight)!important;
+    -moz-context-properties: fill,stroke;
+    stroke: none;
+    border-radius: 50%!important;
+  }
+
+  .checkbox-check[checked] {
+    list-style-image: url("chrome://global/skin/in-content/check.svg")!important;
+    fill: var(--in-content-border-highlight)!important;
+    -moz-context-properties: fill,stroke;
+    stroke: none;
   }
 }
 @-moz-document url-prefix(about:),
 url-prefix(chrome://browser/content/preferences/),
 url(chrome://passwordmgr/content/passwordManager.xul),
 url(chrome://formautofill/content/manageAddresses.xhtml),
-url-prefix(chrome://pippki)  {
+url-prefix(chrome://pippki),
+url(chrome://browser/content/pageinfo/pageInfo.xul)  {
   treechildren::-moz-tree-row,
   treechildren:not(.autocomplete-treebody)::-moz-tree-row(multicol,odd) {
     background-color: var(--in-content-box-background)!important;
@@ -137,6 +152,11 @@ url-prefix(chrome://pippki)  {
 
   treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
     background-color: var(--theme-selection-background-hover)!important;
+  }
+
+  treechildren::-moz-tree-cell-text(hover),
+  treechildren::-moz-tree-cell-text(selected) {
+    color: var(--in-content-text-color)!important;
   }
 
   treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected) {
