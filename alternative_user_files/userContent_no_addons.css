@@ -49,6 +49,18 @@
   --grey-70: #38383d;
   --grey-80: #2a2a2e;
   --grey-90: #0c0c0d;
+  --code-green: #86de74!important;
+  --warning-color: #FCE19F;
+  --warning-background-color: #44391F;
+  --theme-highlight-green: #86DE74;
+  --theme-highlight-blue: #75BFFF;
+  --theme-highlight-purple: #B98EFF;
+  --theme-highlight-red: #FF7DE9;
+  --theme-highlight-yellow: #FFF89E;
+  --theme-highlight-bluegrey: #5e88b0;
+  --theme-highlight-lightorange: #d99b28;
+  --theme-highlight-orange: #d96629;
+  --theme-highlight-pink: #FF7DE9;
   --tone-1: var(--grey-10);
   --tone-2: var(--grey-20);
   --tone-3: var(--grey-30);
@@ -101,9 +113,6 @@
   --in-content-category-header-background: var(--tone-8)!important;
   --selected-icon-fill-color: var(--tone-2)!important;
   --in-content-dark-header-background: var(--tone-9)!important;
-  --code-green: #86de74!important;
-  --warning-color: #FCE19F;
-  --warning-background-color: #44391F;
 }
 @-moz-document url-prefix(about:),
 url-prefix(chrome://)  {
@@ -154,8 +163,8 @@ url(chrome://browser/content/pageinfo/pageInfo.xul)  {
     background-color: var(--theme-selection-background-hover)!important;
   }
 
-  treechildren::-moz-tree-cell-text(selected),
-  treechildren::-moz-tree-cell-text(hover) {
+  treechildren::-moz-tree-cell-text(hover),
+  treechildren::-moz-tree-cell-text(selected) {
     color: var(--in-content-text-color)!important;
   }
 
@@ -169,7 +178,7 @@ url(chrome://browser/content/pageinfo/pageInfo.xul)  {
 
   treecol:not([hideheader=true]):not(:first-child),
   treecolpicker {
-    border-image: linear-gradient(transparent 0,transparent 20%,var(--tone-5) 20%,var(--tone-5) 80%,transparent 80%,transparent 100%) 1 1 !important;
+    border-image: linear-gradient(transparent 0,transparent 20%,var(--tone-5) 20%,var(--tone-5) 80%,transparent 80%,transparent 100%) 1 1!important;
   }
 
   menulist:not([editable=true]) > .menulist-dropmarker,
@@ -973,11 +982,11 @@ url-prefix(https://discovery.addons.mozilla.org)  {
 
   .highlight .end-tag,
   .highlight .start-tag {
-    color: #b78cfd!important;
+    color: var(--theme-highlight-purple)!important;
   }
 
   .highlight .comment {
-    color: #86de74!important;
+    color: var(--theme-highlight-green)!important;
   }
 
   .highlight .cdata {
@@ -989,7 +998,7 @@ url-prefix(https://discovery.addons.mozilla.org)  {
   }
 
   .highlight .pi {
-    color: #ff7de9!important;
+    color: var(--theme-highlight-red)!important;
   }
 
   .highlight .entity {
@@ -997,16 +1006,15 @@ url-prefix(https://discovery.addons.mozilla.org)  {
   }
 
   .highlight .attribute-name {
-    color: #86de74!important;
+    color: var(--theme-highlight-green)!important;
   }
 
   .highlight .attribute-value {
-    color: #75bfff!important;
+    color: var(--theme-highlight-blue)!important;
   }
 
   .highlight .markupdeclaration {
     color: #4682b4!important;
-    font-style: italic;
   }
 
   .highlight .error,

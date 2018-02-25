@@ -33,7 +33,7 @@
     color: var(--theme-highlight-blue)!important
   }
   .highlight .markupdeclaration {
-    color: #4682b4!important;
+    color: #4682b4!important
   }
   .highlight .error,
   .highlight .error > :-moz-any(.start-tag,.end-tag,.comment,.cdata,.doctype,.pi,.entity,.attribute-name,.attribute-value) {
