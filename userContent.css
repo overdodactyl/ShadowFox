@@ -49,6 +49,18 @@
   --grey-70: #38383d;
   --grey-80: #2a2a2e;
   --grey-90: #0c0c0d;
+  --code-green: #86de74!important;
+  --warning-color: #FCE19F;
+  --warning-background-color: #44391F;
+  --theme-highlight-green: #86DE74;
+  --theme-highlight-blue: #75BFFF;
+  --theme-highlight-purple: #B98EFF;
+  --theme-highlight-red: #FF7DE9;
+  --theme-highlight-yellow: #FFF89E;
+  --theme-highlight-bluegrey: #5e88b0;
+  --theme-highlight-lightorange: #d99b28;
+  --theme-highlight-orange: #d96629;
+  --theme-highlight-pink: #FF7DE9;
   --tone-1: var(--grey-10);
   --tone-2: var(--grey-20);
   --tone-3: var(--grey-30);
@@ -100,13 +112,10 @@
   --theme-selection-background-hover: var(--accent-1)!important;
   --in-content-category-header-background: var(--tone-8)!important;
   --selected-icon-fill-color: var(--tone-2)!important;
-  --in-content-dark-header-background: var(--tone-9)!important;
-  --code-green: #86de74!important;
-  --warning-color: #FCE19F;
-  --warning-background-color: #44391F;
+  --in-content-dark-header-background: var(--tone-9)!important
 }
 @-moz-document url-prefix(about:),
-url-prefix(chrome://)  {
+url-prefix(chrome://) {
   .checkbox-check,
   .prefs-pane [type=checkbox]:checked + label::before,
   .prefs-pane [type=checkbox]:not(:checked) + label::before,
@@ -117,26 +126,23 @@ url-prefix(chrome://)  {
     background-color: var(--in-content-box-background)!important;
     background-image: none!important;
     box-shadow: none!important;
-    border-color: var(--in-content-box-border-color)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
-
   radio[disabled=true] {
-    color: var(--in-content-box-border-color)!important;
+    color: var(--in-content-box-border-color)!important
   }
-
   .radio-check[selected] {
-    list-style-image: url("chrome://global/skin/in-content/radio.svg");
+    list-style-image: url(chrome://global/skin/in-content/radio.svg);
     fill: var(--in-content-border-highlight)!important;
     -moz-context-properties: fill,stroke;
     stroke: none;
-    border-radius: 50%!important;
+    border-radius: 50%!important
   }
-
   .checkbox-check[checked] {
-    list-style-image: url("chrome://global/skin/in-content/check.svg")!important;
+    list-style-image: url(chrome://global/skin/in-content/check.svg)!important;
     fill: var(--in-content-border-highlight)!important;
     -moz-context-properties: fill,stroke;
-    stroke: none;
+    stroke: none
   }
 }
 @-moz-document url-prefix(about:),
@@ -144,114 +150,97 @@ url-prefix(chrome://browser/content/preferences/),
 url(chrome://passwordmgr/content/passwordManager.xul),
 url(chrome://formautofill/content/manageAddresses.xhtml),
 url-prefix(chrome://pippki),
-url(chrome://browser/content/pageinfo/pageInfo.xul)  {
+url(chrome://browser/content/pageinfo/pageInfo.xul) {
   treechildren::-moz-tree-row,
   treechildren:not(.autocomplete-treebody)::-moz-tree-row(multicol,odd) {
-    background-color: var(--in-content-box-background)!important;
+    background-color: var(--in-content-box-background)!important
   }
-
   treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
-    background-color: var(--theme-selection-background-hover)!important;
+    background-color: var(--theme-selection-background-hover)!important
   }
-
   treechildren::-moz-tree-cell-text(hover),
   treechildren::-moz-tree-cell-text(selected) {
-    color: var(--in-content-text-color)!important;
+    color: var(--in-content-text-color)!important
   }
-
   treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected) {
-    background-color: var(--theme-selection-background)!important;
+    background-color: var(--theme-selection-background)!important
   }
-
   tree {
-    background-color: var(--in-content-box-background)!important;
+    background-color: var(--in-content-box-background)!important
   }
-
   treecol:not([hideheader=true]):not(:first-child),
   treecolpicker {
-    border-image: linear-gradient(transparent 0,transparent 20%,var(--tone-5) 20%,var(--tone-5) 80%,transparent 80%,transparent 100%) 1 1!important;
+    border-image: linear-gradient(transparent 0,transparent 20%,var(--tone-5) 20%,var(--tone-5) 80%,transparent 80%,transparent 100%) 1 1!important
   }
-
   menulist:not([editable=true]) > .menulist-dropmarker,
   treecol:not([hideheader=true]) > .treecol-sortdirection[sortDirection] {
-    fill: var(--in-content-category-text)!important;
+    fill: var(--in-content-category-text)!important
   }
-
   fieldset > legend,
   treecol:not([hideheader=true]),
   treecolpicker {
     background-color: var(--in-content-category-header-background)!important;
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   prefpane#mainPrefPane groupbox#applicationsGroup richlistbox#handlersView richlistitem[selected=true] {
     background: var(--in-content-page-background)!important;
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
 }
 @-moz-document regexp("^about:(?!reader).*"),
 url(https://www.mozilla.org/credits/),
-url-prefix(https://discovery.addons.mozilla.org)  {
+url-prefix(https://discovery.addons.mozilla.org) {
   :root {
-    --aboutProfiles-table-background: var(--in-content-box-background)!important;
+    --aboutProfiles-table-background: var(--in-content-box-background)!important
   }
-
   menupopup,
   menupopup > menu > menupopup,
   popup,
   popup > menu > menupopup {
     -moz-appearance: none!important;
     background: var(--in-content-page-background)!important;
-    border: none!important;
+    border: none!important
   }
-
   menuitem,
   menupopup menu {
     -moz-appearance: none!important;
-    color: var(--in-content-text-color)!important;
+    color: var(--in-content-text-color)!important
   }
-
   menuitem:hover,
   menupopup menu:hover {
     color: var(--in-content-text-color)!important;
-    background-color: var(--theme-selection-background-hover)!important;
+    background-color: var(--theme-selection-background-hover)!important
   }
-
   menupopup menuseparator {
     padding: 0!important;
     margin: 2px 6px!important;
     -moz-appearance: none!important;
     background: rgba(0,0,0,0)!important;
-    border: 0!important;
+    border: 0!important
   }
-
-@media screen and (-moz-windows-theme) {
+  @media screen and (-moz-windows-theme) {
     menuitem,
     menupopup menu {
-      margin: 1px 6px!important;
+      margin: 1px 6px!important
     }
-
     menupopup,
     menupopup > menu > menupopup,
     popup,
     popup > menu > menupopup {
-      border: 1px solid!important;
+      border: 1px solid!important
     }
-}
-
+  }
   .prefs-pane [type=checkbox]:checked + label::after,
   .prefs-pane [type=checkbox]:not(:checked) + label::after,
   input[type=checkbox]:checked {
-    background-image: url("chrome://global/skin/in-content/check.svg")!important;
+    background-image: url(chrome://global/skin/in-content/check.svg)!important
   }
-
   #newtab-customize-overlay,
   html:not(#ublock0-epicker),
   html:not(#ublock0-epicker) body {
     background: var(--in-content-page-background)!important;
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   #SanitizeDialogPane > groupbox,
   #mainDiv.non-verbose div.section h2,
   #onboarding-overlay,
@@ -259,20 +248,17 @@ url-prefix(https://discovery.addons.mozilla.org)  {
   .modal,
   .modal-overlay,
   .warningBackground {
-    background: var(--in-content-page-background)!important;
+    background: var(--in-content-page-background)!important
   }
-
   .collapsible-section .section-top-bar .info-option-manage button,
   .topic .topic-read-more,
   a:link {
-    color: var(--in-content-link-color)!important;
+    color: var(--in-content-link-color)!important
   }
-
   .topic .topic-read-more:hover,
   a:link:hover {
-    color: var(--in-content-link-color-hover)!important;
+    color: var(--in-content-link-color-hover)!important
   }
-
   #action-box,
   #content div.log span.section-heading button.no-print:hover,
   #content div.stats span.section-heading button.no-print:hover,
@@ -288,17 +274,15 @@ url-prefix(https://discovery.addons.mozilla.org)  {
   .alert,
   .opsRow button:hover,
   .top-sites-list .top-site-outer .top-site-icon {
-    background-color: var(--in-content-box-background)!important;
+    background-color: var(--in-content-box-background)!important
   }
-
   .addon .editorial-description,
   .addon .heading,
   .disco-content,
   .top-sites-list .top-site-outer .title span,
   header h1 {
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   #onboarding-overlay.onboarding-opened > #onboarding-overlay-dialog,
   .addon .content,
   .addon .logo,
@@ -307,14 +291,12 @@ url-prefix(https://discovery.addons.mozilla.org)  {
   .search-wrapper input,
   .topsite-form .form-wrapper input[type=text],
   card-outer.active span.context-menu ul.context-menu-list {
-    background: var(--in-content-box-background)!important;
+    background: var(--in-content-box-background)!important
   }
-
   .sorter[checkState="1"],
   .sorter[checkState="2"] {
-    background-color: var(--in-content-category-header-background)!important;
+    background-color: var(--in-content-category-header-background)!important
   }
-
   #onboarding-overlay.onboarding-opened > #onboarding-overlay-dialog,
   .addon,
   .card-outer .card-context,
@@ -323,9 +305,8 @@ url-prefix(https://discovery.addons.mozilla.org)  {
   .section-title span,
   .top-sites-list .top-site-outer .top-site-icon,
   .topsite-form .form-wrapper input[type=text] {
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   .card-outer .card-context-icon,
   .category:not([selected]) > .category-icon,
   .collapsible-section .section-top-bar .info-option-icon,
@@ -334,176 +315,145 @@ url-prefix(https://discovery.addons.mozilla.org)  {
   .search-wrapper .search-button,
   .search-wrapper .search-label,
   .section-title span {
-    fill: var(--in-content-page-color)!important;
+    fill: var(--in-content-page-color)!important
   }
-
   .sorter {
-    color: var(--accent-1)!important;
+    color: var(--accent-1)!important
   }
-
   .download-progress {
-    background-color: var(--in-content-box-color)!important;
+    background-color: var(--in-content-box-color)!important
   }
-
   .list > scrollbox > .scrollbox-innerbox {
-    border: none!important;
+    border: none!important
   }
-
   #header-utils-btn:hover,
   .header-button:hover {
-    background-color: var(--in-content-box-background-hover)!important;
+    background-color: var(--in-content-box-background-hover)!important
   }
-
   #header-utils-btn {
-    fill: var(--in-content-category-text)!important;
+    fill: var(--in-content-category-text)!important
   }
-
   .collapsible-section .section-top-bar .info-option-manage button:after,
   .topic .topic-read-more::after {
-    fill: var(--in-content-link-color)!important;
+    fill: var(--in-content-link-color)!important
   }
-
   .addon-view[notification=warning] {
-    --view-highlight-color: transparent!important;
+    --view-highlight-color: transparent!important
   }
-
   .addon-view[notification],
   .addon-view[pending] {
     --view-highlight-color: transparent;
-    background-image: none!important;
+    background-image: none!important
   }
-
   .addon[active=false] {
-    opacity: .4!important;
+    opacity: .4!important
   }
-
   .detail-row,
   .detail-row-complex,
   setting {
-    text-shadow: none!important;
+    text-shadow: none!important
   }
-
   #warningTitle {
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   #configTree {
-    border: none!important;
+    border: none!important
   }
-
   .addon-target-container {
     background: var(--in-content-box-background)!important;
-    box-shadow: none!important;
+    box-shadow: none!important
   }
-
   .service-worker-multi-process {
-    background-color: #44391f!important;
+    background-color: #44391f!important
   }
-
   #onboarding-notification-bar {
     background: var(--in-content-category-header-background)!important;
-    border-top: 2px solid!important;
+    border-top: 2px solid!important
   }
-
   .prefs-pane .actions,
   .prefs-pane .sidebar {
     background: var(--in-content-category-header-background)!important;
-    border-color: var(--in-content-box-border-color)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
-
   .collapsible-section .section-top-bar .info-option,
   .prefs-pane .prefs-modal-inner-wrapper .options,
   .sections-list .section-empty-state {
     background: var(--in-content-box-background)!important;
-    border-color: var(--in-content-box-border-color)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
-
   .actions button:hover:not(.dismiss),
   .card-outer:-moz-any(:hover,:focus,.active):not(.placeholder),
   .collapsible-section .section-disclaimer button:hover:not(.dismiss),
   .top-sites-list .top-site-outer.active .tile,
   .top-sites-list .top-site-outer:focus .tile,
   .top-sites-list .top-site-outer:hover .tile {
-    box-shadow: 0 0 0 5px var(--in-content-box-background)!important;
+    box-shadow: 0 0 0 5px var(--in-content-box-background)!important
   }
-
   .card-outer .context-menu-button,
   .top-sites-list .top-site-outer .context-menu-button {
     background-color: var(--in-content-page-color)!important;
-    background-image: url("chrome://browser/skin/page-action.svg")!important;
+    background-image: url(chrome://browser/skin/page-action.svg)!important;
     border: 1px solid!important;
     filter: invert(95%)!important;
     box-shadow: none!important;
-    border-color: var(--in-content-page-color)!important;
+    border-color: var(--in-content-page-color)!important
   }
-
   #onboarding-notification-body *,
   #onboarding-notification-tour-title,
   .collapsible-section .section-disclaimer,
   .manual-migration-container,
   .onboarding-close-btn,
   .prefs-pane .prefs-modal-inner-wrapper {
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   .collapsible-section .section-disclaimer button,
   .onboarding-action-button {
     background-color: var(--in-content-page-background)!important;
     border-color: var(--in-content-box-border-color)!important;
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   .actions button,
   .actions button.dismiss,
   .onboarding-action-button:hover,
   .prefs-pane-button button:hover {
-    background-color: var(--in-content-box-background-hover)!important;
+    background-color: var(--in-content-box-background-hover)!important
   }
-
   .actions button.done,
   .onboarding-tour-action-button {
-    background-color: var(--in-content-primary-button-background)!important;
+    background-color: var(--in-content-primary-button-background)!important
   }
-
   .onboarding-tour-action-button:hover {
-    background-color: var(--in-content-primary-button-background-hover)!important;
+    background-color: var(--in-content-primary-button-background-hover)!important
   }
-
   .icon.icon-dismiss {
-    fill: var(--in-content-page-color)!important;
+    fill: var(--in-content-page-color)!important
   }
-
   .context-menu ul.context-menu-list li.context-menu-item a:hover span.icon {
-    fill: var(--in-content-text-color)!important;
+    fill: var(--in-content-text-color)!important
   }
-
   .dialogBox > .groupbox-title {
     background-color: var(--in-content-category-header-background)!important;
     color: var(--in-content-page-color)!important;
-    border-color: var(--in-content-box-border-color)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
-
   .warningMessage {
     background: var(--in-content-box-background)!important;
     border-color: var(--in-content-box-border-color)!important;
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   #content > div,
   .info-box-content,
   .notice,
   div.opsRow,
   div.section {
     background-color: var(--in-content-box-background)!important;
-    border-color: var(--in-content-box-border-color)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
-
   .bar-inner {
     background-color: var(--accent-1)!important;
     border: 1px solid!important;
-    border-color: var(--accent-2)!important;
+    border-color: var(--accent-2)!important
   }
-
   #content div.log span.section-heading button.no-print,
   #content div.stats span.section-heading button.no-print,
   #controls.no-print div.controls div.control button,
@@ -516,131 +466,108 @@ url-prefix(https://discovery.addons.mozilla.org)  {
     border: 1px solid!important;
     border-radius: 3px!important;
     color: var(--in-content-page-color)!important;
-    border-color: var(--in-content-box-border-color)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
-
   .opsRow button {
-    margin-right: 2px!important;
+    margin-right: 2px!important
   }
-
   input#appid {
-    background-color: var(--in-content-box-background)!important;
+    background-color: var(--in-content-box-background)!important
   }
-
   #profiles.tab div table tbody tr td {
-    border-color: var(--in-content-table-border-dark-color)!important;
+    border-color: var(--in-content-table-border-dark-color)!important
   }
-
   .actions,
   .context-menu-list li.separator,
   .edit-topsites-wrapper .edit-topsites-button,
   .modal,
   .prefs-pane hr,
   .topsite-form .form-wrapper input[type=text] {
-    border-color: var(--in-content-box-border-color)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
-
   #outside table.contenttable thead tr th {
-    background-color: var(--in-content-table-header-background)!important;
+    background-color: var(--in-content-table-header-background)!important
   }
-
   #outside table.contenttable {
     border-color: var(--in-content-table-border-dark-color)!important;
-    background-color: var(--in-content-box-background)!important;
+    background-color: var(--in-content-box-background)!important
   }
-
   #outside table.contenttable tbody tr td,
   #outside table.contenttable tbody tr td + #outside table.contenttable tbody tr td,
   #outside table.contenttable thead tr th + th {
-    border-color: var(--in-content-table-border-dark-color)!important;
+    border-color: var(--in-content-table-border-dark-color)!important
   }
-
   #outside table.contenttable tbody tr td {
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   .card-outer .card-context {
-    padding: 2px 16px 12px 14px!important;
+    padding: 2px 16px 12px 14px!important
   }
-
   .card-outer.placeholder .card {
-    display: none!important;
+    display: none!important
   }
-
   .context-menu {
     background-color: var(--in-content-box-background)!important;
     box-shadow: none!important;
-    border: 1px!important;
+    border: 1px!important
   }
-
   .context-menu > ul > li > a:focus,
   .context-menu > ul > li > a:hover {
-    background-color: var(--theme-selection-background-hover)!important;
+    background-color: var(--theme-selection-background-hover)!important
   }
-
   .search-wrapper input:focus,
   .search-wrapper:active input {
-    box-shadow: 0 0 0 3px var(--in-content-border-focus)!important;
+    box-shadow: 0 0 0 3px var(--in-content-border-focus)!important
   }
-
   .prefs-pane .actions {
-    border-top: none!important;
+    border-top: none!important
   }
 }
-
-@-moz-document url-prefix(about:reader)  {
+@-moz-document url-prefix(about:reader) {
   body.dark a:link {
-    color: var(--in-content-link-color)!important;
+    color: var(--in-content-link-color)!important
   }
-
   .font-type-buttons > .sans-serif-button > .name,
   .font-type-buttons > .serif-button > .name,
   body.dark {
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   .toolbar {
     background-color: var(--in-content-category-header-background)!important;
-    border-right: 1px solid!important;
+    border-right: 1px solid!important
   }
-
   .toolbar .button {
     background-color: var(--in-content-category-header-background)!important;
-    border-color: var(--in-content-box-border-color)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
-
   .button:hover,
   .content-width-buttons > button:hover,
   .font-size-buttons > button:hover,
   .font-type-buttons > button:hover,
   .line-height-buttons > button:hover {
-    background-color: var(--in-content-primary-button-background-hover)!important;
+    background-color: var(--in-content-primary-button-background-hover)!important
   }
-
   .dropdown-popup {
     background-color: var(--in-content-category-header-background)!important;
     box-shadow: 0 1px 3px var(--in-content-category-header-background)!important;
-    border-color: var(--in-content-box-border-color)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
-
   .content-width-buttons > button,
   .font-size-buttons > button,
   .font-type-buttons > button,
   .font-type-buttons > button.selected,
   .font-type-buttons > button:active:hover,
   .line-height-buttons > button {
-    border-color: var(--in-content-box-border-color)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
-
   .color-scheme-buttons > button.selected,
   .color-scheme-buttons > button:active:hover,
   .font-type-buttons > button.selected,
   .font-type-buttons > button:active:hover {
-    box-shadow: inset 0 -3px 0 0 var(--in-content-primary-button-background-hover)!important;
+    box-shadow: inset 0 -3px 0 0 var(--in-content-primary-button-background-hover)!important
   }
 }
-
-@-moz-document url-prefix(chrome://)  {
+@-moz-document url-prefix(chrome://) {
   .windowDialog,
   dialog,
   prefpane,
@@ -648,38 +575,33 @@ url-prefix(https://discovery.addons.mozilla.org)  {
   prefwindow,
   window {
     background-color: var(--in-content-page-background)!important;
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   #cookieInfoGrid .textbox-input {
-    background-color: var(--in-content-page-background)!important;
+    background-color: var(--in-content-page-background)!important
   }
-
   #historyItems {
-    -moz-appearance: none!important;
+    -moz-appearance: none!important
   }
 }
-@-moz-document url-prefix("https://addons.mozilla.org")  {
+@-moz-document url-prefix("https://addons.mozilla.org") {
   .Footer,
   .Footer-wrapper,
   .Header,
   .LanguageTools-header-row,
   .amo {
-    background: var(--in-content-category-header-background)!important;
+    background: var(--in-content-category-header-background)!important
   }
-
   .App-content,
   .Home,
   .LandingPage,
   .LanguageTools-table-row:nth-child(2n),
   .Paginate-page-number {
-    background: var(--in-content-page-background)!important;
+    background: var(--in-content-page-background)!important
   }
-
   .SearchForm-icon-magnifying-glass {
-    filter: invert(65%)!important;
+    filter: invert(65%)!important
   }
-
   .AddonDescription-more-addons--theme .Card-contents .AddonsCard-list,
   .AddonDescription-more-addons:not(.AddonDescription-more-addons--theme) .Card-contents .AddonsCard-list,
   .AddonsCard--horizontal .Card-contents,
@@ -699,9 +621,8 @@ url-prefix(https://discovery.addons.mozilla.org)  {
   .SearchForm-query,
   .SearchForm-suggestions-item.SearchForm-suggestions-item,
   .SectionLinks-dropdown .DropdownMenu-items {
-    background: var(--in-content-box-background)!important;
+    background: var(--in-content-box-background)!important
   }
-
   .Addon-author,
   .Addon-author a,
   .Addon-author a:link .Button--action,
@@ -735,19 +656,16 @@ url-prefix(https://discovery.addons.mozilla.org)  {
   .SearchResult-name,
   .SearchResult-summary,
   .SearchSuggestion-name {
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   .Card-contents li .Rating-star-group,
   .Paginate-next::after,
   .Paginate-previous::before {
-    filter: invert(70%)!important;
+    filter: invert(70%)!important
   }
-
   .ShowMoreCard-contents::after {
-    background: linear-gradient(rgba(255,255,255,0),var(--in-content-box-background))!important;
+    background: linear-gradient(rgba(255,255,255,0),var(--in-content-box-background))!important
   }
-
   .Addon-details .AddonDescription-contents a:link,
   .AddonMoreInfo-contents a:link,
   .Card-footer-link a,
@@ -761,83 +679,71 @@ url-prefix(https://discovery.addons.mozilla.org)  {
   .LanguageTools-table a:link,
   .SearchResult-link:focus .SearchResult-name,
   .SearchResult-link:hover .SearchResult-name {
-    color: var(--in-content-link-color)!important;
+    color: var(--in-content-link-color)!important
   }
-
   .Button--action.Button--outline-only {
-    border-color: var(--in-content-border-highlight)!important;
+    border-color: var(--in-content-border-highlight)!important
   }
-
   .Addon .InstallButton-button,
   .Button--action,
   .Button--action.Button--small,
   .Paginate .Paginate-item,
   .SearchForm-suggestions-item.SearchForm-suggestions-item--highlighted {
-    background: var(--in-content-primary-button-background)!important;
+    background: var(--in-content-primary-button-background)!important
   }
-
   .Button--action.Button--outline-only:hover,
   .Button--action:hover,
   .SearchForm-query:hover {
-    border-color: var(--in-content-primary-button-background)!important;
+    border-color: var(--in-content-primary-button-background)!important
   }
-
   .SearchForm-query:focus {
     box-shadow: 0 0 5px 0 var(--in-content-border-highlight)!important;
-    border-color: var(--in-content-primary-button-background)!important;
+    border-color: var(--in-content-primary-button-background)!important
   }
-
   .AddonsCard--horizontal ul.AddonsCard-list .SearchResult-link:hover {
     background: var(--in-content-page-background)!important;
-    border-radius: 0!important;
+    border-radius: 0!important
   }
-
   .Button--report {
-    text-shadow: none!important;
+    text-shadow: none!important
   }
-
   .Icon-external {
-    filter: invert(20%)!important;
+    filter: invert(20%)!important
   }
-
   .Icon-featured {
-    filter: invert(85%)!important;
+    filter: invert(85%)!important
   }
 }
-@-moz-document regexp("^[file:///].*[^(html)]$")  {
+@-moz-document regexp("^[file:///].*[^(html)]$") {
   :root {
-    background-color: var(--in-content-page-background)!important;
+    background-color: var(--in-content-page-background)!important
   }
-
   body {
     border-color: var(--in-content-box-background)!important;
     background-color: var(--in-content-box-background)!important;
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   h1 {
-    border-color: var(--in-content-box-border-color)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
-
   body > table > tbody > tr:hover {
     outline-color: var(--in-content-box-background-hover)!important;
-    background-color: var(--in-content-box-background-hover)!important;
+    background-color: var(--in-content-box-background-hover)!important
   }
-
   .dir,
   .file,
   .symlink,
   .up {
-    color: var(--in-content-link-color)!important;
+    color: var(--in-content-link-color)!important
   }
 }
-@-moz-document regexp("^moz-extension://.*manifest.json$")  {
+@-moz-document regexp("^moz-extension://.*manifest.json$") {
   html {
     background: var(--in-content-page-background)!important;
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
 }
-@-moz-document regexp(".*\\.(p|P)(d|D)(f|F).*")  {
+@-moz-document regexp(".*\\.(p|P)(d|D)(f|F).*") {
   #loadingBar .progress,
   .dropdownToolbarButton > select,
   .dropdownToolbarButton > select > option,
@@ -846,78 +752,65 @@ url-prefix(https://discovery.addons.mozilla.org)  {
   .toolbarField,
   body,
   div#viewer {
-    background-color: var(--in-content-box-background)!important;
+    background-color: var(--in-content-box-background)!important
   }
-
   body {
-    background-image: none!important;
+    background-image: none!important
   }
-
   .splitToolbarButtonSeparator,
   .verticalToolbarSeparator {
     box-shadow: none!important;
-    background-color: var(--in-content-box-background)!important;
+    background-color: var(--in-content-box-background)!important
   }
-
   div#toolbarViewer {
-    background-color: var(--in-content-category-header-background)!important;
+    background-color: var(--in-content-category-header-background)!important
   }
-
   #numPages,
   #pageNumber,
   #scaleSelect {
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   .pdfViewer .page {
-    border-image: none!important;
+    border-image: none!important
   }
-
   #pageNumber,
   #scaleSelectContainer {
-    border: 1px solid!important;
+    border: 1px solid!important
   }
-
   #loadingBar {
     position: relative;
     width: 100%;
     height: 4px;
     background-color: var(--theme-selection-background-hover)!important;
-    border-bottom: 1px solid!important;
+    border-bottom: 1px solid!important
   }
-
   #sidebarContainer {
-    background-color: var(--in-content-table-header-background)!important;
+    background-color: var(--in-content-table-header-background)!important
   }
-
   #toolbarSidebar {
     background-color: var(--in-content-table-header-background)!important;
     background-image: none!important;
-    border-color: var(--in-content-box-background)!important;
+    border-color: var(--in-content-box-background)!important
   }
-
   .doorHanger,
   .doorHangerRight {
     border: 1px solid!important;
     border-color: var(--in-content-box-background)!important;
-    box-shadow: none!important;
+    box-shadow: none!important
   }
-
   #toolbarContainer,
   .findbar,
   .secondaryToolbar {
     background-color: var(--in-content-box-background)!important;
-    background-image: none!important;
+    background-image: none!important
   }
-
   .dropdownToolbarButton,
   .overlayButton,
   .secondaryToolbarButton,
   .toolbarButton {
     border: none!important;
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   .dropdownToolbarButton,
   .overlayButton,
   .toolbarButton:focus,
@@ -925,588 +818,483 @@ url-prefix(https://discovery.addons.mozilla.org)  {
     background-color: var(--in-content-box-background)!important;
     background-image: none!important;
     border: none!important;
-    box-shadow: none!important;
+    box-shadow: none!important
   }
-
   .secondaryToolbarButton:focus,
   .secondaryToolbarButton:hover {
     background-color: var(--in-content-page-background)!important;
     background-image: none!important;
-    box-shadow: none!important;
+    box-shadow: none!important
   }
-
   .secondaryToolbarButton::before,
   .toolbarButton::before {
-    filter: invert(20%)!important;
+    filter: invert(20%)!important
   }
-
   .secondaryToolbarButton.toggled,
   .splitToolbarButton.toggled > .toolbarButton.toggled,
   .toolbarButton.toggled {
     background-color: var(--in-content-page-background)!important;
     background-image: none!important;
     box-shadow: none!important;
-    color: var(--in-content-selected-text)!important;
+    color: var(--in-content-selected-text)!important
   }
-
   .horizontalToolbarSeparator {
     background-color: var(--in-content-box-border-color)!important;
-    box-shadow: none!important;
+    box-shadow: none!important
   }
 }
-@-moz-document url-prefix(https://raw.githubusercontent.com)  {
+@-moz-document url-prefix(https://raw.githubusercontent.com) {
   html {
     background: var(--in-content-page-background)!important;
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
 }
-@-moz-document url-prefix(view-source)  {
+@-moz-document url-prefix(view-source) {
   :root {
     background-color: var(--in-content-page-background)!important;
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   pre[id]:before,
   span[id]:before {
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   .highlight .end-tag,
   .highlight .start-tag {
-    color: #b78cfd!important;
+    color: var(--theme-highlight-purple)!important
   }
-
   .highlight .comment {
-    color: #86de74!important;
+    color: var(--theme-highlight-green)!important
   }
-
   .highlight .cdata {
-    color: #c06!important;
+    color: #c06!important
   }
-
   .highlight .doctype {
-    color: #4682b4!important;
+    color: #4682b4!important
   }
-
   .highlight .pi {
-    color: #ff7de9!important;
+    color: var(--theme-highlight-red)!important
   }
-
   .highlight .entity {
-    color: #dea174!important;
+    color: #dea174!important
   }
-
   .highlight .attribute-name {
-    color: #86de74!important;
+    color: var(--theme-highlight-green)!important
   }
-
   .highlight .attribute-value {
-    color: #75bfff!important;
+    color: var(--theme-highlight-blue)!important
   }
-
   .highlight .markupdeclaration {
-    color: #4682b4!important;
-    font-style: italic;
+    color: #4682b4!important
   }
-
   .highlight .error,
   .highlight .error > :-moz-any(.start-tag,.end-tag,.comment,.cdata,.doctype,.pi,.entity,.attribute-name,.attribute-value) {
-    color: #de7474!important;
+    color: #de7474!important
   }
 }
 /*! Alters the webextension Brief
   IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://brief_UUID/")  {
+@-moz-document url-prefix("moz-extension://brief_UUID/") {
   h2 {
-    color: var(--accent-1)!important;
+    color: var(--accent-1)!important
   }
-
   label {
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   #clear-all-entries,
   #custom-style-textbox,
   input[type=number] {
     -moz-appearance: none!important;
     background: var(--tone-6)!important;
     color: var(--tone-4)!important;
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
-
   #clear-all-entries {
     border-radius: 3px!important;
     -moz-appearance: none!important;
     background: var(--tone-8)!important;
     color: var(--tone-4)!important;
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
 }
 /*! Alters the webextension Cookie AutoDelete
   IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://cookie_autodelete_UUID/")  {
+@-moz-document url-prefix("moz-extension://cookie_autodelete_UUID/") {
   a {
-    color: var(--accent-1);
+    color: var(--accent-1)
   }
-
   a:hover {
-    color: var(--accent-2);
+    color: var(--accent-2)
   }
-
   #layout,
   html {
     background: var(--tone-7)!important;
-    color: var(--primart-light-color)!important;
+    color: var(--primart-light-color)!important
   }
-
   #menu {
-    background-color: var(--tone-8)!important;
+    background-color: var(--tone-8)!important
   }
-
   .menu-link {
-    background: var(--tone-8)!important;
+    background: var(--tone-8)!important
   }
-
   .pure-menu-item:hover,
   .pure-menu-selected {
-    background-color: var(--tone-6)!important;
+    background-color: var(--tone-6)!important
   }
-
   .form-control,
   input[type=number] {
     -moz-appearance: none!important;
     background: var(--tone-6)!important;
     color: var(--tone-4)!important;
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
-
   .nav-tabs .nav-link {
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   .nav-tabs .nav-link.active {
     color: var(--accent-1)!important;
     background-color: var(--tone-6)!important;
-    border-color: #ddd #ddd #fff!important;
+    border-color: #ddd #ddd #fff!important
   }
-
   body {
     color: var(--tone-4)!important;
-    background-color: var(--tone-6)!important;
+    background-color: var(--tone-6)!important
   }
-
   .btn-light {
     color: var(--tone-4)!important;
     background-color: var(--tone-5)!important;
-    border-color: var(--tone-4)!important;
+    border-color: var(--tone-4)!important
   }
 }
 /*! Alters the webextension Dark Mode
   IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://dark_mode_UUID/")  {
+@-moz-document url-prefix("moz-extension://dark_mode_UUID/") {
   .comment {
-    color: var(--accent-1)!important;
+    color: var(--accent-1)!important
   }
-
   label {
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
 }
 /*! Alters the webextension Decentraleyes
   IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://decentraleyes_UUID/")  {
+@-moz-document url-prefix("moz-extension://decentraleyes_UUID/") {
   body {
     background-color: var(--in-content-box-background)!important;
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   .panel:not(:last-child),
   header {
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
-
   .button {
     background-color: var(--in-content-box-background)!important;
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
-
   .button:hover {
-    background-color: var(--in-content-page-background)!important;
+    background-color: var(--in-content-page-background)!important
   }
 }
 /*! Alters the webextension HTTPS Everywhere
   IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://https_everywhere_UUID/")  {
+@-moz-document url-prefix("moz-extension://https_everywhere_UUID/") {
   body {
     color: var(--tone-4)!important;
-    background: var(--tone-6)!important;
+    background: var(--tone-6)!important
   }
-
   html {
-    background-color: var(--tone-6)!important;
+    background-color: var(--tone-6)!important
   }
-
   a {
-    color: var(--accent-1)!important;
+    color: var(--accent-1)!important
   }
-
   h3 {
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
 }
 /*! Alters the webextension Multi-Account Containers
   IMPORTANT: change the Internal UUID in BOTH locations */
-
-@-moz-document url-prefix("moz-extension://multi_account_containers_UUID/")  {
+@-moz-document url-prefix("moz-extension://multi_account_containers_UUID/") {
   #current-tab,
   .column-panel-content,
   html body div#container-panel.panel.container-panel {
     background: var(--tone-6)!important;
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   #current-tab > h3,
   .container-info-list,
   .panel-header-text {
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   #container-panel #sort-containers-link {
     border-color: var(--tone-5)!important;
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   #container-panel #sort-containers-link:hover,
   .clickable:hover {
-    background: var(--tone-7)!important;
+    background: var(--tone-7)!important
   }
-
   .container-panel-row {
     background-color: var(--tone-6)!important;
     border-block-end: 1px solid var(--tone-5);
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   .scrollable {
     border-block-start: 1px solid var(--tone-5)!important;
-    background: var(--tone-6)!important;
+    background: var(--tone-6)!important
   }
-
   .panel-footer {
     background: var(--tone-7)!important;
-    border-block-end: 1px solid var(--tone-7)!important;
+    border-block-end: 1px solid var(--tone-7)!important
   }
-
   .container-panel-row:focus .clickable.userContext-wrapper,
   .container-panel-row:hover .clickable.userContext-wrapper,
   .container-panel-row:hover .pop-button,
   .panel-header {
-    background: var(--tone-7)!important;
+    background: var(--tone-7)!important
   }
-
   .panel-back-arrow {
-    background: var(--tone-6)!important;
+    background: var(--tone-6)!important
   }
-
   .back-arrow-img {
-    filter: invert(65%)!important;
+    filter: invert(65%)!important
   }
-
   .container-panel-row {
-    border-block-end: 1px solid var(--tone-5)!important;
+    border-block-end: 1px solid var(--tone-5)!important
   }
-
   #current-tab > label > input[disabled] {
     background-color: var(--tone-5)!important;
-    border-color: var(--tone-4)!important;
+    border-color: var(--tone-4)!important
   }
-
   #current-tab > label > input:checked {
     filter: invert(100%);
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
-
   .column-panel-content form {
-    background: var(--tone-6)!important;
+    background: var(--tone-6)!important
   }
-
   .pop-button-image-small {
-    filter: invert(650%)!important;
+    filter: invert(650%)!important
   }
-
   .edit-container-panel fieldset,
   .edit-containers-text a {
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   .edit-container-panel input[type=text] {
     background: var(--tone-8)!important;
     color: var(--tone-4)!important;
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
-
   [data-identity-color=grey] {
-    --identity-icon-color: var(--tone-4)!important;
+    --identity-icon-color: var(--tone-4)!important
   }
-
   .button {
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   .container-notification {
     background: var(--tone-7)!important;
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
 }
-
 /*! Alters the webextension Multi-Account Containers
   IMPORTANT: change the Internal UUID in BOTH locations */
-
-@-moz-document url-prefix("moz-extension://multi_account_containers_UUID/confirm-page")  {
+@-moz-document url-prefix("moz-extension://multi_account_containers_UUID/confirm-page") {
   body {
-    background-color: var(--tone-7)!important;
+    background-color: var(--tone-7)!important
   }
-
   .title-text,
   body {
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   #redirect-url {
-    background: var(--tone-8)!important;
+    background: var(--tone-8)!important
   }
-
   .button-container > button:first-child {
     background: var(--tone-6)!important;
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
-
   .button-container > button:first-child:hover {
-    background: var(--tone-8)!important;
+    background: var(--tone-8)!important
   }
-
   #never-ask {
     -moz-appearance: none!important;
     background-color: var(--tone-6)!important;
     border-color: var(--tone-5)!important;
     background-image: none!important;
-    box-shadow: none!important;
+    box-shadow: none!important
   }
-
   #never-ask:checked {
-    background-image: url("chrome://global/skin/in-content/check.svg")!important;
-    background-color: var(--tone-6)!important;
+    background-image: url(chrome://global/skin/in-content/check.svg)!important;
+    background-color: var(--tone-6)!important
   }
 }
 /*! Alters the webextension Multiple Tab Handler
   IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://multiple_tab_handler_UUID/")  {
+@-moz-document url-prefix("moz-extension://multiple_tab_handler_UUID/") {
   h1,
   p,
   ul,
   ul li {
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
 }
 /*! Alters the webextension Neat URL
   IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://neat_url_UUID/")  {
+@-moz-document url-prefix("moz-extension://neat_url_UUID/") {
   body,
   h2,
   label {
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   input,
   textarea {
     -moz-appearance: none!important;
     background: var(--tone-6)!important;
     color: var(--tone-4)!important;
     border-color: var(--tone-5)!important;
-    padding: 5px!important;
+    padding: 5px!important
   }
-
   a:link {
-    color: var(--accent-1)!important;
+    color: var(--accent-1)!important
   }
-
   button {
     background-color: var(--tone-8)!important;
     color: var(--tone-4)!important;
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
-
   button:hover {
-    background-color: var(--tone-7)!important;
+    background-color: var(--tone-7)!important
   }
 }
 /*! Alters the webextension NoScript
   IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://noscript_UUID/")  {
+@-moz-document url-prefix("moz-extension://noscript_UUID/") {
   body {
-    background: var(--tone-6)!important;
+    background: var(--tone-6)!important
   }
-
   #top {
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
-
   .site .url[data-key=full] span,
   .site .url[data-key=secure] .domain,
   .site .url[data-key=secure] .sub {
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   .sites > tr:nth-child(2n) {
-    background: var(--tone-6)!important;
+    background: var(--tone-6)!important
   }
-
   .sites > tr:nth-child(2n+1) {
-    background: var(--tone-7)!important;
+    background: var(--tone-7)!important
   }
-
   #presets input.preset,
   .presets input.preset:checked {
     color: var(--tone-4)!important;
-    background-color: var(--tone-8)!important;
+    background-color: var(--tone-8)!important
   }
-
   #sect-general,
   .presets label.preset {
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   button,
   input[type=text] {
     -moz-appearance: none!important;
     background-color: var(--tone-7)!important;
     border-color: var(--tone-5)!important;
-    color: var(--primar-light-color)!important;
+    color: var(--primar-light-color)!important
   }
-
   #top #close,
   #top #options,
   #top #reload,
   #top #revoke-temp,
   #top #temp-allow-page {
     background-color: var(--tone-6)!important;
-    border: none!important;
+    border: none!important
   }
 }
 .pkt_ext_containersaved h2 {
-  color: var(--tone-4)!important;
+  color: var(--tone-4)!important
 }
-
 .pkt_ext_containersaved .pkt_ext_tag_detail {
   border-color: var(--tone-5)!important;
-  background: var(--tone-6)!important;
+  background: var(--tone-6)!important
 }
-
 .pkt_ext_containersaved .pkt_ext_tag_input_wrapper {
   background-color: var(--tone-6)!important;
-  border-color: var(--tone-5)!important;
+  border-color: var(--tone-5)!important
 }
-
 .pkt_ext_containersaved .pkt_ext_tag_input_wrapper input::placeholder {
-  color: var(--tone-4)!important;
+  color: var(--tone-4)!important
 }
-
 .pkt_ext_containersaved .pkt_ext_tag_input_wrapper input {
   background-color: var(--tone-6)!important;
-  color: var(--tone-4)!important;
+  color: var(--tone-4)!important
 }
-
 .pkt_ext_containersaved .pkt_ext_btn {
-  background: var(--tone-8)!important;
+  background: var(--tone-8)!important
 }
-
 .pkt_ext_containersaved .token-input-token {
   border-color: var(--tone-5)!important;
   background-color: var(--tone-7)!important;
-  color: var(--tone-4)!important;
+  color: var(--tone-4)!important
 }
-
 .token-input-dropdown-tag {
   background: var(--tone-6)!important;
-  border-color: var(--tone-5)!important;
+  border-color: var(--tone-5)!important
 }
-
 .token-input-dropdown-tag ul li {
-  color: var(--tone-4)!important;
+  color: var(--tone-4)!important
 }
 /*! Alters the webextension Request Control
   IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://request_control_UUID/")  {
+@-moz-document url-prefix("moz-extension://request_control_UUID/") {
   body {
     background-color: var(--tone-7)!important;
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   .rule:not(.editing):not(:hover) {
     background-color: var(--tone-6)!important;
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
-
   .rule:hover:not(.editing) {
     background-color: var(--tone-8)!important;
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
-
   .nav-tabs > li.active > a,
   .nav-tabs > li.active > a:focus,
   .nav-tabs > li.active > a:hover {
     color: var(--tone-4)!important;
     background-color: var(--tone-8)!important;
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
-
   .nav-tabs > li > a:hover {
     background-color: var(--tone-8)!important;
-    border: 1px solid!important;
+    border: 1px solid!important
   }
-
   tabs.nav-justified > li > a {
-    border-bottom: 1px solid!important;
+    border-bottom: 1px solid!important
   }
-
   .btn-default {
     color: var(--tone-4)!important;
     background-color: var(--tone-8)!important;
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
-
   .btn-default.active {
-    background-color: var(--tone-6)!important;
+    background-color: var(--tone-6)!important
   }
-
   .btn-default:hover {
     color: var(--tone-4)!important;
     background-color: var(--tone-5)!important;
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
-
   .list-group-item:first-child {
     background: var(--tone-6)!important;
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
-
   .table {
-    background: var(--tone-6)!important;
+    background: var(--tone-6)!important
   }
-
   .table-striped > tbody > tr:nth-of-type(2n+1) {
-    background-color: var(--tone-8)!important;
+    background-color: var(--tone-8)!important
   }
-
   .btn-group-params > .tags-input,
   .input-group .form-control:first-child,
   .input-group-addon:first-child,
@@ -1518,79 +1306,68 @@ url-prefix(https://discovery.addons.mozilla.org)  {
   select.input-sm {
     background: var(--tone-5)!important;
     color: var(--grey-30)!important;
-    border-color: var(--tone-4)!important;
+    border-color: var(--tone-4)!important
   }
-
   .list-group-item {
     background-color: var(--tone-6)!important;
-    border: 1px solid #ddd;
+    border: 1px solid #ddd
   }
-
   .tags-input .tag {
     background: var(--tone-8)!important;
     border-color: var(--tone-5)!important;
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
 }
 /*! Alters the webextension Skip Redirect
   IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://skip_redirect_UUID/")  {
+@-moz-document url-prefix("moz-extension://skip_redirect_UUID/") {
   body {
     background: var(--tone-6)!important;
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   input[type=number],
   input[type=text],
   textarea {
     -moz-appearance: none!important;
     background: var(--tone-5)!important;
-    color: var(--grey-30)!important;
+    color: var(--grey-30)!important
   }
-
   label a {
-    color: var(--accent-1)!important;
+    color: var(--accent-1)!important
   }
 }
 /*! Alters the webextension Smart HTTPS
   IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://smart_https_UUID/")  {
+@-moz-document url-prefix("moz-extension://smart_https_UUID/") {
   body {
     background-color: var(--tone-6)!important;
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   .information input[type=number],
   input[type=text] {
     -moz-appearance: none!important;
     background: var(--tone-6)!important;
     color: var(--tone-4)!important;
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
-
   .information p {
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
 }
 /*! Alters the webextension Tab Suspender (memory saver)
   IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://tab_suspender_UUID/")  {
+@-moz-document url-prefix("moz-extension://tab_suspender_UUID/") {
   body,
   label {
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   input[type=number],
   textarea {
     -moz-appearance: none!important;
     background: var(--tone-6)!important;
     color: var(--tone-4)!important;
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
-
   #recovery,
   #save {
     -moz-appearance: none!important;
@@ -1598,28 +1375,24 @@ url-prefix(https://discovery.addons.mozilla.org)  {
     background: var(--tone-8)!important;
     color: var(--tone-4)!important;
     border-color: var(--tone-5)!important;
-    border-radius: 4px!important;
+    border-radius: 4px!important
   }
 }
 /*! Alters the webextension Tree Style Tab
   IMPORTANT: change the Internal UUID in BOTH locations */
-
-@-moz-document url-prefix("moz-extension://tree_style_tab_UUID/")  {
+@-moz-document url-prefix("moz-extension://tree_style_tab_UUID/") {
   #debug-configs,
   p,
   ul {
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   h1,
   legend {
-    color: var(--accent-1)!important;
+    color: var(--accent-1)!important
   }
-
   a {
-    color: var(--accent-2)!important;
+    color: var(--accent-2)!important
   }
-
   #autoGroupNewTabsDelayOnNewWindow,
   #autoGroupNewTabsTimeout,
   #importedConfigsFromLegacy,
@@ -1629,448 +1402,364 @@ url-prefix(https://discovery.addons.mozilla.org)  {
     -moz-appearance: none!important;
     background: var(--tone-6)!important;
     color: var(--tone-4)!important;
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
-
   #contextual-identities-selector,
   #newtab-action-selector,
   #tabContextMenu,
   .extra.has-submenu ul {
     background: var(--tone-6)!important;
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
 }
-
 /*! Alters the webextension Tree Style Tab
   IMPORTANT: change the Internal UUID in BOTH locations */
-
-@-moz-document url-prefix("moz-extension://tree_style_tab_UUID/resources/group-tab.html")  {
+@-moz-document url-prefix("moz-extension://tree_style_tab_UUID/resources/group-tab.html") {
   :root {
     background: var(--tone-7)!important;
-    color: ButtonText;
+    color: ButtonText
   }
-
   h1::before {
-    background: var(--tone-4)!important;
+    background: var(--tone-4)!important
   }
 }
 /*! Alters the webextension Tridactyl
   IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://tridactyl_UUID/")  {
+@-moz-document url-prefix("moz-extension://tridactyl_UUID/") {
   html {
-    background: var(--in-content-page-background)!important;
+    background: var(--in-content-page-background)!important
   }
-
   body {
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   a:link {
-    color: var(--in-content-link-color)!important;
+    color: var(--in-content-link-color)!important
   }
-
   #completions .sectionHeader {
     background: var(--in-content-category-header-background)!important;
-    color: var(--in-content-text-color)!important;
+    color: var(--in-content-text-color)!important
   }
-
   #completions {
     overflow: visible!important;
     background: var(--in-content-page-background)!important;
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
-
   table {
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   .option:not(.focused) .url {
     color: var(--code-green)!important;
-    background: var(--in-content-page-background)!important;
+    background: var(--in-content-page-background)!important
   }
-
   input {
     background: var(--in-content-category-header-background)!important;
-    color: var(--in-content-text-color)!important;
+    color: var(--in-content-text-color)!important
   }
-
   .focused,
   .focused .url {
     background: var(--warning-background-color)!important;
-    color: var(--warning-color)!important;
+    color: var(--warning-color)!important
   }
 }
 /*! Alters the webextension uBlock Origin
   IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://ublock_origin_UUID/")  {
+@-moz-document url-prefix("moz-extension://ublock_origin_UUID/") {
   #appinfo {
     background-color: var(--tone-8)!important;
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   #panes,
   body,
   body[dir=ltr] #panes > div {
     background: var(--tone-7)!important;
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   label a,
   p a,
   ul a,
   ul#userSettings .subgroup > span {
-    color: var(--accent-1)!important;
+    color: var(--accent-1)!important
   }
-
   #dashboard-nav-widgets span {
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   a.info {
     color: var(--tone-4)!important;
-    opacity: .5;
+    opacity: .5
   }
-
   li.listEntry span.status {
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   li.listEntry > a.remove,
   li.listEntry > a.remove:visited {
-    color: var(--red-80)!important;
+    color: var(--red-80)!important
   }
-
   #switch .fa {
-    color: var(--accent-1)!important;
+    color: var(--accent-1)!important
   }
-
   .tool,
   body.off #switch .fa {
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   .tool:hover {
-    color: var(--tone-8)!important;
+    color: var(--tone-8)!important
   }
-
   #extraTools,
   h2 {
     background-color: var(--tone-8)!important;
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   #refresh {
     background-color: var(--tone-8)!important;
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
-
   #extraTools > span > span.badge {
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   #firewallContainer > div {
-    background-color: var(--tone-6)!important;
+    background-color: var(--tone-6)!important
   }
-
   #firewallContainer > div > span {
     color: var(--tone-4)!important;
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
-
   #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action.own.block,
   body.advancedUser #firewallContainer > div > span.blockRule.ownRule {
-    background-color: #ab0000!important;
+    background-color: #ab0000!important
   }
-
   #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action > span.block,
   body.advancedUser #firewallContainer > div > span.blockRule {
-    background-color: #dda0a2!important;
+    background-color: #dda0a2!important
   }
-
   #firewallContainer > div.blocked > span:first-of-type::before,
   #firewallContainer.minimized > div.isDomain.totalBlocked > span:first-of-type::before {
     background-color: #c87576!important;
-    opacity: 1!important;
+    opacity: 1!important
   }
-
   #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action.own.allow,
   body.advancedUser #firewallContainer > div > span.allowRule.ownRule {
-    background-color: #229400!important;
+    background-color: #229400!important
   }
-
   #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action > span.allow,
   body.advancedUser #firewallContainer > div > span.allowRule {
-    background-color: #95ca8a!important;
+    background-color: #95ca8a!important
   }
-
   #firewallContainer > div.allowed > span:first-of-type::before,
   #firewallContainer.minimized > div.isDomain.totalAllowed > span:first-of-type::before {
     background-color: #7ec26f!important;
-    opacity: 1!important;
+    opacity: 1!important
   }
-
   #actionSelector > span:nth-of-type(2),
   #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action.own.noop,
   body.advancedUser #firewallContainer > div > span.noopRule.ownRule {
-    background-color: #0c46a7!important;
+    background-color: #0c46a7!important
   }
-
   #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action > span.noop,
   body.advancedUser #firewallContainer > div > span.noopRule {
-    background-color: #65bdfb!important;
+    background-color: #65bdfb!important
   }
-
   #firewallContainer > div.allowed.blocked > span:first-of-type::before,
   #firewallContainer.minimized > div.isDomain.totalAllowed.totalBlocked > span:first-of-type::before {
     background-color: #cdc16e!important;
-    opacity: 1!important;
+    opacity: 1!important
   }
-
   body.advancedUser #firewallContainer.colorBlind > div > span.blockRule.ownRule {
-    background-color: #000060!important;
+    background-color: #000060!important
   }
-
   body.advancedUser #firewallContainer.colorBlind > div > span.blockRule {
-    background-color: #787dab!important;
+    background-color: #787dab!important
   }
-
   body.advancedUser #firewallContainer.colorBlind > div > span.allowRule.ownRule {
-    background-color: #fbb900!important;
+    background-color: #fbb900!important
   }
-
   body.advancedUser #firewallContainer.colorBlind > div > span.allowRule {
-    background-color: #f2d98d!important;
+    background-color: #f2d98d!important
   }
-
   body.advancedUser #firewallContainer.colorBlind > div > span.noopRule.ownRule {
-    background-color: #2f2e2e!important;
+    background-color: #2f2e2e!important
   }
-
   body.advancedUser #firewallContainer.colorBlind > div > span.noopRule {
-    background-color: #a1a1a1!important;
+    background-color: #a1a1a1!important
   }
-
   #firewallContainer.colorBlind > div.allowed > span:first-of-type::before,
   #firewallContainer.colorBlind.minimized > div.isDomain.totalAllowed > span:first-of-type::before {
-    background-color: #ebd287!important;
+    background-color: #ebd287!important
   }
-
   #firewallContainer.colorBlind > div.blocked > span:first-of-type::before,
   #firewallContainer.colorBlind.minimized > div.isDomain.totalBlocked > span:first-of-type::before {
-    background-color: #787cab!important;
+    background-color: #787cab!important
   }
-
   #dashboard-nav-widgets {
     border-color: var(--tone-5)!important;
-    background-color: var(--tone-8)!important;
+    background-color: var(--tone-8)!important
   }
-
   .tabButton {
     background-color: var(--tone-7)!important;
     color: var(--tone-4)!important;
     border-color: var(--tone-5)!important;
-    border-bottom: 1px solid!important;
+    border-bottom: 1px solid!important
   }
-
   .tabButton.selected {
     background-color: var(--tone-8)!important;
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
-
   input[type=number] {
     -moz-appearance: none!important;
     background-color: var(--tone-6)!important;
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   li.listEntry .content {
-    color: var(--accent-1)!important;
+    color: var(--accent-1)!important
   }
-
   #diff .pane {
     color: var(--tone-4)!important;
-    background: var(--tone-7)!important;
+    background: var(--tone-7)!important
   }
-
   #diff li,
   code {
-    background-color: var(--tone-6)!important;
+    background-color: var(--tone-6)!important
   }
-
   #diff li:nth-child(2n) {
-    background-color: var(--tone-7)!important;
+    background-color: var(--tone-7)!important
   }
-
   #whitelist textarea {
     background: var(--tone-6)!important;
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   textarea#externalLists,
   textarea#userFilters.userFilters {
     -moz-appearance: none!important;
     background: var(--tone-6)!important;
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   .permatoolbar {
-    background-color: var(--tone-7)!important;
+    background-color: var(--tone-7)!important
   }
-
   .permatoolbar #refresh,
   .permatoolbar .button {
-    background-color: transparent!important;
+    background-color: transparent!important
   }
-
   .permatoolbar #refresh,
   .permatoolbar .button:hover {
-    background-color: var(--grey-60)!important;
+    background-color: var(--grey-60)!important
   }
-
   #netInspector tr.blocked {
     background-color: #4b3137!important;
-    color: #ff9494!important;
+    color: #ff9494!important
   }
-
   #netInspector #filterInput,
   #netInspector #maxEntries {
     -moz-appearance: none!important;
     background: var(--tone-6)!important;
     color: var(--tone-4)!important;
     border: 1px solid!important;
-    padding: 5px!important;
+    padding: 5px!important
   }
-
   #netInspector tr.cosmetic,
   #netInspector tr.redirect {
     background-color: #44391f!important;
-    color: #fce19f!important;
+    color: #fce19f!important
   }
-
   #netInspector tr.cat_net td:nth-of-type(4):hover,
   body:not(.popupOn) #netInspector tr.canMtx td:nth-of-type(2):hover {
-    background: var(--tone-8)!important;
+    background: var(--tone-8)!important
   }
-
   .modalDialog .dialog {
     background-color: var(--tone-8)!important;
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
-
   #netFilteringDialog .dialog > div.headers > span.header.selected {
     background-color: var(--tone-8)!important;
     color: var(--tone-4)!important;
-    border-color: var(--tone-6)!important;
+    border-color: var(--tone-6)!important
   }
-
   #netFilteringDialog .dialog > div.headers > span.header {
     background-color: var(--tone-7)!important;
-    border-color: var(--tone-6)!important;
+    border-color: var(--tone-6)!important
   }
-
   #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry {
     background-color: var(--tone-6)!important;
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
-
   #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td:first-of-type {
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
-
   #netFilteringDialog .dialog > div.containers > div.dynamic > table.toolbar #saveRules {
     background-color: var(--tone-6)!important;
-    border: none!important;
+    border: none!important
   }
-
   body #netInspector td {
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
-
   #netInspector tr.maindoc {
     background-color: var(--tone-8)!important;
-    color: var(--grey-30)!important;
+    color: var(--grey-30)!important
   }
 }
 /*! Alters the webextension uBO-Scope
   IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://ubo_scope_UUID/")  {
+@-moz-document url-prefix("moz-extension://ubo_scope_UUID/") {
   #heatmaps .togglerBar,
   body,
   body.theoretical #heatmaps .heatmap.theoretical {
-    background: var(--tone-6)!important;
+    background: var(--tone-6)!important
   }
-
   #topPane {
     background-color: var(--tone-6)!important;
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   #heatmaps .heatmap {
     border: none;
-    background: var(--tone-6)!important;
+    background: var(--tone-6)!important
   }
-
   #heatmaps.list .hmcell {
     background-color: var(--tone-6)!important;
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   #domain3rdDetails {
     background-color: var(--tone-7)!important;
-    border: 1px solid!important;
+    border: 1px solid!important
   }
-
   #domain3rdDetails #authority {
     background-color: var(--tone-8)!important;
-    position: relative;
+    position: relative
   }
-
   #scores .scores .score.actual {
-    color: #fff!important;
+    color: #fff!important
   }
-
   #scores .scores .score.theoretical,
   body.theoretical #scores .scores .score.actual {
-    color: var(--tone-7)!important;
+    color: var(--tone-7)!important
   }
-
   body.theoretical #scores .scores .score.theoretical {
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
 }
 /*! Alters the webextension uMatrix
   IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://umatrix_UUID/")  {
+@-moz-document url-prefix("moz-extension://umatrix_UUID/") {
   body[dir=ltr] {
     background-color: var(--tone-7)!important;
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   #dashboard-nav-widgets {
     background-color: var(--tone-8)!important;
     color: var(--tone-4)!important;
     border-bottom: 1px solid var(--tone-5);
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
-
   .tabButton {
     background: var(--tone-6)!important;
     color: var(--tone-4)!important;
     border-color: var(--tone-5)!important;
-    border-bottom: none!important;
+    border-bottom: none!important
   }
-
   .tabButton.selected {
     border-bottom: none!important;
     background-color: var(--tone-7)!important;
     border-color: var(--tone-5)!important;
-    color: var(--accent-1)!important;
+    color: var(--accent-1)!important
   }
-
   #backupUserDataButton,
   #clearBrowserCacheAfter,
   #deleteUnusedSessionCookiesAfter,
@@ -2082,16 +1771,14 @@ url-prefix(https://discovery.addons.mozilla.org)  {
     background: var(--tone-6)!important;
     color: var(--tone-4)!important;
     border: 1px solid!important;
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
-
   button.custom {
     border-color: var(--tone-5)!important;
     background-color: var(--tone-8)!important;
     background-image: none!important;
-    color: #fff!important;
+    color: #fff!important
   }
-
   button.custom.disabled,
   button.custom[disabled] {
     border-color: var(--tone-4)!important;
@@ -2099,286 +1786,232 @@ url-prefix(https://discovery.addons.mozilla.org)  {
     background-image: none!important;
     color: var(--tone-4)!important;
     opacity: .6;
-    pointer-events: none;
+    pointer-events: none
   }
-
   a {
-    color: var(--accent-1)!important;
+    color: var(--accent-1)!important
   }
-
   #diff li {
-    background-color: var(--tone-7)!important;
+    background-color: var(--tone-7)!important
   }
-
   #diff li:nth-of-type(2n),
   .assets > div:first-of-type {
-    background-color: var(--tone-8)!important;
+    background-color: var(--tone-8)!important
   }
-
   .assets {
     border: 1px solid!important;
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
-
   #diff li:hover {
     background-color: var(--accent-1)!important;
-    color: #fff!important;
+    color: #fff!important
   }
-
   #diff ul {
-    border-top: 1px solid!important;
+    border-top: 1px solid!important
   }
-
   textarea {
     -moz-appearance: none!important;
     background: var(--tone-6)!important;
     color: var(--tone-4)!important;
     border: 1px solid!important;
     border-color: var(--tone-5)!important;
-    padding: 5px!important;
+    padding: 5px!important
   }
-
   #diff textarea {
     border-top: 1px solid!important;
     border-color: var(--tone-5)!important;
     background: var(--tone-6)!important;
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   #dashboard-nav-widgets {
-    border-bottom: 1px solid!important;
+    border-bottom: 1px solid!important
   }
-
   .whatisthis-expandable {
     background-color: var(--tone-8)!important;
     border: 1px dotted!important;
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
-
   .paneHead {
-    background-color: var(--tone-7)!important;
+    background-color: var(--tone-7)!important
   }
-
   .paneContent {
-    background: var(--tone-4)!important;
+    background: var(--tone-4)!important
   }
-
   #gotoDashboard {
     background-color: var(--tone-8)!important;
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   body[dir=ltr] #gotoDashboard > span:last-of-type {
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   body .toolbar button {
-    color: var(--primary--light-color)!important;
+    color: var(--primary--light-color)!important
   }
-
   body .toolbar .scopeRel {
-    color: var(--accent-2)!important;
+    color: var(--accent-2)!important
   }
-
   #mtxSwitch_matrix-off.switchTrue {
-    color: #a00!important;
+    color: #a00!important
   }
-
   button > span.badge {
     color: #fff!important;
-    background-color: var(--tone-5)!important;
+    background-color: var(--tone-5)!important
   }
-
   body .toolbar button {
-    background-color: var(--tone-7)!important;
+    background-color: var(--tone-7)!important
   }
-
   body .toolbar button.disabled {
     color: var(--tone-4);
-    color: var(--tone-6)!important;
+    color: var(--tone-6)!important
   }
-
   body .toolbar .scope {
     background-color: var(--tone-6)!important;
     border: 1px solid!important;
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
-
   #parsed {
     background-color: var(--tone-8)!important;
     border: 1px solid!important;
     border-top: none!important;
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
-
   .code {
     background-color: var(--tone-8)!important;
     border: 1px solid!important;
     border-bottom: none!important;
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
-
   button#bye {
     -moz-appearance: none!important;
     background: var(--tone-6)!important;
     border: 1px solid!important;
     border-color: var(--tone-5)!important;
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   button#bye:hover {
-    background: var(--tone-8)!important;
+    background: var(--tone-8)!important
   }
-
   .dropdown-menu > ul,
   .recipe:hover {
     border: 1px solid!important;
     border-color: var(--tone-5)!important;
-    background-color: var(--tone-8)!important;
+    background-color: var(--tone-8)!important
   }
-
   .dropdown-menu > ul > li.dropdown-menu-entry {
-    color: var(--tone-6)!important;
+    color: var(--tone-6)!important
   }
-
   #mtxSwitches > li.switchTrue {
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   .dropdown-menu > ul > li.dropdown-menu-entry:hover {
-    background: var(--tone-7)!important;
+    background: var(--tone-7)!important
   }
-
   .recipe .name {
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   #toolbar,
   #toolbar .button {
-    background-color: var(--tone-8)!important;
+    background-color: var(--tone-8)!important
   }
-
   #toolbar input {
     -moz-appearance: none!important;
     background: var(--tone-6)!important;
     color: var(--tone-4)!important;
     border: 1px solid!important;
     border-color: var(--tone-5)!important;
-    padding: 5px!important;
+    padding: 5px!important
   }
-
   #content table tr {
-    background-color: var(--tone-6)!important;
+    background-color: var(--tone-6)!important
   }
-
   #content table tr:nth-of-type(2n+1) {
-    background-color: var(--tone-7)!important;
+    background-color: var(--tone-7)!important
   }
-
   #content table tr.doc {
-    background-color: var(--tone-8)!important;
+    background-color: var(--tone-8)!important
   }
-
   body:not(.popupOn) #content table tr.canMtx td:nth-of-type(2):hover {
-    background: var(--tone-8)!important;
+    background: var(--tone-8)!important
   }
-
   body #content td {
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
-
   #content table tr.blocked {
-    color: var(--red-80)!important;
+    color: var(--red-80)!important
   }
-
   #content table tr.cat_info {
-    color: var(--accent-1)!important;
+    color: var(--accent-1)!important
   }
-
   #toolbar {
     border-bottom: 1px solid!important;
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
 }
 /*! Alters the webextension Vim Vixen
   IMPORTANT: change the Internal UUID */
-
-@-moz-document url-prefix("moz-extension://vim_vixen_UUID/")  {
+@-moz-document url-prefix("moz-extension://vim_vixen_UUID/") {
   .vimvixen-console-command-wrapper {
-    border-top: 1px solid!important;
+    border-top: 1px solid!important
   }
-
   .vimvixen-console-completion-title {
     background-color: var(--tone-9)!important;
-    border-color: var(--tone-5)!important;
+    border-color: var(--tone-5)!important
   }
-
   .vimvixen-console-completion {
     background-color: var(--tone-8)!important;
     color: #b1b1b3!important;
-    font-family: Menlo,monospace!important;
+    font-family: Menlo,monospace!important
   }
-
   .vimvixen-console-command,
   .vimvixen-console-command-input {
     background-color: var(--tone-9)!important;
-    color: var(--grey-30)!important;
+    color: var(--grey-30)!important
   }
-
   .vimvixen-console-completion-item-url {
-    color: #86de74!important;
+    color: #86de74!important
   }
-
   .vimvixen-console-completion-item.vimvixen-completion-selected {
     background-color: #44391f!important;
-    color: #fce19f!important;
+    color: #fce19f!important
   }
-
   .vimvixen-console-error {
     background-color: #4b3137!important;
-    color: #ff9494!important;
+    color: #ff9494!important
   }
-
   .vimvixen-settings-form,
   h1 {
-    color: var(--tone-4)!important;
+    color: var(--tone-4)!important
   }
-
   .vimvixen-settings-form textarea[name=json] {
     background-color: var(--tone-6)!important;
     -moz-appearance: none!important;
     color: var(--tone-4)!important;
-    border-color: var(--tone-6);
+    border-color: var(--tone-6)
   }
-
   ::-moz-selection {
     color: var(--grey-30);
-    background: var(--accent-2);
+    background: var(--accent-2)
   }
 }
-@-moz-document regexp("^(file:///).*[^(.html)]$")  {
+@-moz-document regexp("^(file:///).*[^(.html)]$") {
   :root {
-    background-color: var(--mid-way-color)!important;
+    background-color: var(--mid-way-color)!important
   }
-
   body {
     border: 1px solid!important;
     background-color: var(--primary-dark-color)!important;
-    color: var(--primary-light-color)!important;
+    color: var(--primary-light-color)!important
   }
-
   h1 {
-    border-bottom: 1px solid!important;
+    border-bottom: 1px solid!important
   }
-
   body > table > tbody > tr:hover {
-    outline: solid 1px!important;
+    outline: solid 1px!important
   }
-
   .dir,
   .file,
   .symlink,
   .up {
-    color: var(--primary-accent-color)!important;
+    color: var(--primary-accent-color)!important
   }
 }
