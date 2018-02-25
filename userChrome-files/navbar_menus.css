@@ -34,7 +34,8 @@ photonpanelmultiview panelview {
   background: var(--in-content-page-color)!important;
   color: var(--in-content-page-color)!important
 }
-#downloadsFooter[showingsummary] > stack:not(:hover) {
+#downloadsFooter[showingsummary] > stack:not(:hover),
+.downloadsPanelFooterButton {
   background-color: var(--in-content-category-header-background)!important
 }
 #downloadsListBox {
