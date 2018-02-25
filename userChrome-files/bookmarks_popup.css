@@ -36,11 +36,15 @@
   -moz-border-left-colors: var(--theme-selection-background-hover)!important;
   -moz-border-bottom-colors: var(--theme-selection-background-hover)!important
 }
+#editBMPanel_folderTree treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(hover) {
+  color: var(--in-content-selected-text)!important
+}
 #editBMPanel_folderTree treechildren::-moz-tree-image {
   fill: var(--in-content-page-color)!important
 }
+#editBMPanel_folderTree treechildren::-moz-tree-image(hover),
 #editBMPanel_folderTree treechildren::-moz-tree-image(selected) {
-  fill: var(--in-content-item-selected)!important
+  fill: var(--selected-icon-fill-color)!important
 }
 #editBMPanel_folderTree treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected,current,focus) {
   background: var(--theme-selection-background)!important
