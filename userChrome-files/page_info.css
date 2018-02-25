@@ -5,13 +5,13 @@
   }
   #mainDeck {
     background: var(--in-content-page-background)!important;
-    color: var(--in-content-page-color) !important
+    color: var(--in-content-page-color)!important
   }
   textbox {
     color: var(--in-content-page-color)!important
   }
   .text-link {
-    color: var(--in-content-link-color) !important;
+    color: var(--in-content-link-color)!important
   }
   button {
     -moz-appearance: none!important;
@@ -22,70 +22,68 @@
     border-color: var(--in-content-box-border-color)!important
   }
   button:hover {
-    background-color: var(--in-content-box-background)!important;
+    background-color: var(--in-content-box-background)!important
   }
-
-  .permission,
   #feedListbox,
   #feedListbox > richlistitem,
   #imagecontainerbox,
-  .groupbox-body{
+  .groupbox-body,
+  .permission {
     -moz-appearance: none!important;
     background: var(--in-content-box-background)!important;
     color: var(--in-content-page-color)!important;
     border-color: var(--in-content-box-border-color)!important
   }
   #feedListbox richlistitem {
-    border-color: var(--in-content-box-border-color) !important;
+    border-color: var(--in-content-box-border-color)!important
   }
   #permPluginTemplate {
     color: var(--in-content-page-color)!important
   }
-  #permList,
   #feedListbox,
   #imagecontainerbox,
+  #permList,
   .groupbox-body {
     border: 1px solid!important;
     border-color: var(--in-content-box-border-color)!important
   }
   groupbox.collapsable caption .caption-icon {
-    filter: invert(65%) !important;
+    filter: invert(65%)!important
   }
   tree {
     -moz-appearance: none!important;
-    color: var(--in-content-page-color) !important;
+    color: var(--in-content-page-color)!important
   }
   treecol {
     -moz-appearance: none!important;
     border: 0 solid!important;
-    border-color: var(--in-content-box-background)!important;
+    border-color: var(--in-content-box-background)!important
   }
   treecolpicker {
     -moz-appearance: none;
-    border: none !important;
+    border: none!important
   }
-  
   #viewGroup > radio {
-    -moz-appearance: none !important;
+    -moz-appearance: none!important;
     background-color: var(--in-content-box-background)!important;
-    text-shadow: none !important;
-    padding: 0 8px 0px 8px !important;
+    text-shadow: none!important;
+    padding: 0 8px!important;
     color: var(--in-content-page-color);
-    border-right: 1px solid !important;
-    border-color: var(--in-content-box-border-color) !important;
+    border-right: 1px solid!important;
+    border-color: var(--in-content-box-border-color)!important
   }
-  #viewGroup > radio[selected="true"] {
-    color: var(--in-content-selected-text) !important;
+  #viewGroup > radio[selected=true] {
+    color: var(--in-content-selected-text)!important
   }
   #viewGroup > radio:first-of-type {
-    border-top-left-radius: 4px !important;
-    border-bottom-left-radius: 4px !important;
+    border-top-left-radius: 4px!important;
+    border-bottom-left-radius: 4px!important
   }
   #viewGroup > radio:last-of-type {
-    border: none !important;
-    border-top-right-radius: 4px !important;
-    border-bottom-right-radius: 4px !important;
-  } 
+    border: none!important;
+    border-top-right-radius: 4px!important;
+    border-bottom-right-radius: 4px!important
+  }
   @media screen and (-moz-windows-theme),
   screen and (-moz-windows-classic),
   screen and (-moz-windows-default-theme),

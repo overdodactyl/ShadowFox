@@ -9,10 +9,10 @@ url(chrome://browser/content/pageinfo/pageInfo.xul) {
     background-color: var(--in-content-box-background)!important
   }
   treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
-    background-color: var(--theme-selection-background-hover)!important;
+    background-color: var(--theme-selection-background-hover)!important
   }
-  treechildren::-moz-tree-cell-text(selected),
-  treechildren::-moz-tree-cell-text(hover){
+  treechildren::-moz-tree-cell-text(hover),
+  treechildren::-moz-tree-cell-text(selected) {
     color: var(--in-content-text-color)!important
   }
   treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected) {
@@ -23,7 +23,7 @@ url(chrome://browser/content/pageinfo/pageInfo.xul) {
   }
   treecol:not([hideheader=true]):not(:first-child),
   treecolpicker {
-    border-image: linear-gradient(transparent 0,transparent 20%,var(--tone-5) 20%,var(--tone-5) 80%,transparent 80%,transparent 100%) 1 1 !important;
+    border-image: linear-gradient(transparent 0,transparent 20%,var(--tone-5) 20%,var(--tone-5) 80%,transparent 80%,transparent 100%) 1 1!important
   }
   menulist:not([editable=true]) > .menulist-dropmarker,
   treecol:not([hideheader=true]) > .treecol-sortdirection[sortDirection] {

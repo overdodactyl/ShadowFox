@@ -105,12 +105,46 @@
   --warning-color: #FCE19F;
   --warning-background-color: #44391F;
 }
+@-moz-document url-prefix(about:),
+url-prefix(chrome://)  {
+  .checkbox-check,
+  .prefs-pane [type=checkbox]:checked + label::before,
+  .prefs-pane [type=checkbox]:not(:checked) + label::before,
+  .radio-check,
+  input[type=checkbox] {
+    -moz-appearance: none!important;
+    border: 1px solid!important;
+    background-color: var(--in-content-box-background)!important;
+    background-image: none!important;
+    box-shadow: none!important;
+    border-color: var(--in-content-box-border-color)!important;
+  }
 
+  radio[disabled=true] {
+    color: var(--in-content-box-border-color)!important;
+  }
+
+  .radio-check[selected] {
+    list-style-image: url("chrome://global/skin/in-content/radio.svg");
+    fill: var(--in-content-border-highlight)!important;
+    -moz-context-properties: fill,stroke;
+    stroke: none;
+    border-radius: 50%!important;
+  }
+
+  .checkbox-check[checked] {
+    list-style-image: url("chrome://global/skin/in-content/check.svg")!important;
+    fill: var(--in-content-border-highlight)!important;
+    -moz-context-properties: fill,stroke;
+    stroke: none;
+  }
+}
 @-moz-document url-prefix(about:),
 url-prefix(chrome://browser/content/preferences/),
 url(chrome://passwordmgr/content/passwordManager.xul),
 url(chrome://formautofill/content/manageAddresses.xhtml),
-url-prefix(chrome://pippki)  {
+url-prefix(chrome://pippki),
+url(chrome://browser/content/pageinfo/pageInfo.xul)  {
   treechildren::-moz-tree-row,
   treechildren:not(.autocomplete-treebody)::-moz-tree-row(multicol,odd) {
     background-color: var(--in-content-box-background)!important;
@@ -118,6 +152,11 @@ url-prefix(chrome://pippki)  {
 
   treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
     background-color: var(--theme-selection-background-hover)!important;
+  }
+
+  treechildren::-moz-tree-cell-text(selected),
+  treechildren::-moz-tree-cell-text(hover) {
+    color: var(--in-content-text-color)!important;
   }
 
   treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected) {
@@ -130,7 +169,7 @@ url-prefix(chrome://pippki)  {
 
   treecol:not([hideheader=true]):not(:first-child),
   treecolpicker {
-    border-image: linear-gradient(transparent 0,transparent 20%,var(--tone-5) 20%,var(--tone-5) 80%,transparent 80%,transparent 100%) 1 1!important;
+    border-image: linear-gradient(transparent 0,transparent 20%,var(--tone-5) 20%,var(--tone-5) 80%,transparent 80%,transparent 100%) 1 1 !important;
   }
 
   menulist:not([editable=true]) > .menulist-dropmarker,
@@ -142,6 +181,11 @@ url-prefix(chrome://pippki)  {
   treecol:not([hideheader=true]),
   treecolpicker {
     background-color: var(--in-content-category-header-background)!important;
+    color: var(--in-content-page-color)!important;
+  }
+
+  prefpane#mainPrefPane groupbox#applicationsGroup richlistbox#handlersView richlistitem[selected=true] {
+    background: var(--in-content-page-background)!important;
     color: var(--in-content-page-color)!important;
   }
 }
@@ -236,6 +280,7 @@ url-prefix(https://discovery.addons.mozilla.org)  {
   #contents table tr.no-copy td,
   #controls.no-print div.controls div.control button:hover,
   #errorPageContainer button#errorTryAgain:hover,
+  #header-utils-btn[open=true],
   #provider table#provider-table tbody#provider-table-body tr td,
   #subprocess-reports tr td,
   .aboutPageWideContainer div#debug table#debug-table tbody tr td,
@@ -759,14 +804,14 @@ url-prefix(https://discovery.addons.mozilla.org)  {
     filter: invert(85%)!important;
   }
 }
-@-moz-document url-prefix(file:///)  {
+@-moz-document regexp("^[file:///].*[^(html)]$")  {
   :root {
-    background-color: var(--in-content-box-background)!important;
+    background-color: var(--in-content-page-background)!important;
   }
 
   body {
     border-color: var(--in-content-box-background)!important;
-    background-color: var(--in-content-page-color)!important;
+    background-color: var(--in-content-box-background)!important;
     color: var(--in-content-page-color)!important;
   }
 
@@ -775,7 +820,8 @@ url-prefix(https://discovery.addons.mozilla.org)  {
   }
 
   body > table > tbody > tr:hover {
-    outline-color: var(--in-content-box-background)!important;
+    outline-color: var(--in-content-box-background-hover)!important;
+    background-color: var(--in-content-box-background-hover)!important;
   }
 
   .dir,

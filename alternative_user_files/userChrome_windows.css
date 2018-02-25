@@ -110,7 +110,8 @@
 url-prefix(chrome://browser/content/preferences/),
 url(chrome://passwordmgr/content/passwordManager.xul),
 url(chrome://formautofill/content/manageAddresses.xhtml),
-url-prefix(chrome://pippki)  {
+url-prefix(chrome://pippki),
+url(chrome://browser/content/pageinfo/pageInfo.xul)  {
   treechildren::-moz-tree-row,
   treechildren:not(.autocomplete-treebody)::-moz-tree-row(multicol,odd) {
     background-color: var(--in-content-box-background)!important;
@@ -118,6 +119,11 @@ url-prefix(chrome://pippki)  {
 
   treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
     background-color: var(--theme-selection-background-hover)!important;
+  }
+
+  treechildren::-moz-tree-cell-text(hover),
+  treechildren::-moz-tree-cell-text(selected) {
+    color: var(--in-content-text-color)!important;
   }
 
   treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected) {
@@ -142,6 +148,11 @@ url-prefix(chrome://pippki)  {
   treecol:not([hideheader=true]),
   treecolpicker {
     background-color: var(--in-content-category-header-background)!important;
+    color: var(--in-content-page-color)!important;
+  }
+
+  prefpane#mainPrefPane groupbox#applicationsGroup richlistbox#handlersView richlistitem[selected=true] {
+    background: var(--in-content-page-background)!important;
     color: var(--in-content-page-color)!important;
   }
 }
@@ -270,12 +281,17 @@ treechildren.searchbar-treebody::-moz-tree-row(hover) {
   -moz-border-bottom-colors: var(--theme-selection-background-hover)!important;
 }
 
+#editBMPanel_folderTree treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(hover) {
+  color: var(--in-content-selected-text)!important;
+}
+
 #editBMPanel_folderTree treechildren::-moz-tree-image {
   fill: var(--in-content-page-color)!important;
 }
 
+#editBMPanel_folderTree treechildren::-moz-tree-image(hover),
 #editBMPanel_folderTree treechildren::-moz-tree-image(selected) {
-  fill: var(--in-content-item-selected)!important;
+  fill: var(--selected-icon-fill-color)!important;
 }
 
 #editBMPanel_folderTree treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected,current,focus) {
@@ -750,8 +766,7 @@ photonpanelmultiview panelview {
 }
 
 #identity-popup-permissions-content {
-  filter: invert(90%)!important;
-  color: var(--in-content-page-background)!important;
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0IDI0IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxkZWZzPg0KCTxmaWx0ZXIgaWQ9IkFkb2JlX09wYWNpdHlNYXNrRmlsdGVyIiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiIHg9IjAiIHk9IjAiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+DQoJCTxmZUNvbG9yTWF0cml4ICB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMSAwIDAgMCAwICAwIDEgMCAwIDAgIDAgMCAxIDAgMCAgMCAwIDAgMSAwIi8+DQoJPC9maWx0ZXI+DQo8L2RlZnM+DQo8bWFzayBtYXNrVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4PSIwIiB5PSIwIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGlkPSJtYXNrLXBlcm1pc3Npb25zIj4NCgk8cGF0aCBmaWxsPSIjRkZGRkZGIiBmaWx0ZXI9InVybCgjQWRvYmVfT3BhY2l0eU1hc2tGaWx0ZXIpIiBkPSJNMiwxaDIwYzEuMSwwLDIsMC45LDIsMnYxOGMwLDEuMS0wLjksMi0yLDJIMmMtMS4xLDAtMi0wLjktMi0yVjMNCgkJQzAsMS45LDAuOSwxLDIsMXoiLz4NCgk8cGF0aCBkPSJNMTIsM2g5YzAuNiwwLDEsMC40LDEsMXYxNmMwLDAuNi0wLjQsMS0xLDFoLTlWM3oiLz4NCgk8cGF0aCBkPSJNNS41LDEyLjVsMi43LTMuN0M4LjQsOC41LDguOCw4LjUsOSw4LjdsMC43LDAuNWMwLjIsMC4yLDAuMiwwLjUsMCwwLjdMNS44LDE1Yy0wLjIsMC4yLTAuNSwwLjMtMC44LDAuMUwyLjgsMTIuOQ0KCQljLTAuMi0wLjItMC4yLTAuNSwwLTAuN2wwLjgtMC44YzAuMi0wLjIsMC41LTAuMiwwLjcsMEw1LjUsMTIuNXoiLz4NCgkNCgkJPHJlY3QgeD0iMTYuMzM1IiB5PSI4LjQ4NSIgdHJhbnNmb3JtPSJtYXRyaXgoLTAuNzA3MyAwLjcwNjkgLTAuNzA2OSAtMC43MDczIDM3LjU5MiA4LjUwNTEpIiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iMS40IiBoZWlnaHQ9IjcuMTAxIi8+DQoJDQoJCTxyZWN0IHg9IjE2LjMzNSIgeT0iOC40MTUiIHRyYW5zZm9ybT0ibWF0cml4KDAuNzA2OCAwLjcwNzUgLTAuNzA3NSAwLjcwNjggMTMuNDYwMiAtOC41NDI5KSIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjEuNCIgaGVpZ2h0PSI3LjEiLz4NCjwvbWFzaz4NCjxyZWN0IGlkPSJwZXJtaXNzaW9ucyIgbWFzaz0idXJsKCNtYXNrLXBlcm1pc3Npb25zKSIgZmlsbD0iI0IxQjFCMyIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ii8+DQo8L3N2Zz4NCg==")!important;
 }
 
 .identity-popup-expander {
@@ -765,7 +780,8 @@ photonpanelmultiview panelview {
   color: var(--in-content-text-color);
 }
 
-#update-available-whats-new {
+#update-available-whats-new,
+.text-link {
   color: var(--in-content-link-color)!important;
 }
 
@@ -808,48 +824,100 @@ toolbar[brighttext] {
 
   #mainDeck {
     background: var(--in-content-page-background)!important;
-    color: #fff!important;
+    color: var(--in-content-page-color)!important;
   }
 
   textbox {
     color: var(--in-content-page-color)!important;
   }
 
-  tree {
+  .text-link {
+    color: var(--in-content-link-color)!important;
+  }
+
+  button {
     -moz-appearance: none!important;
-    border-color: var(--in-content-border-color)!important;
-    color: --in-content-page-color!important;
+    background-color: var(--in-content-page-background)!important;
+    border: 1px solid!important;
+    border-radius: 3px!important;
+    color: var(--in-content-page-color)!important;
+    border-color: var(--in-content-box-border-color)!important;
+  }
+
+  button:hover {
     background-color: var(--in-content-box-background)!important;
   }
 
-  treechildren::-moz-tree-row {
-    background-color: transparent!important;
-  }
-
-  treecol {
-    -moz-appearance: none!important;
-    border: 0 solid!important;
-    border-color: var(--in-content-box-background)!important;
-    color: var(--in-content-selected-text)!important;
-  }
-
-  treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected,current,focus) {
-    background: var(--theme-selection-background-hover)!important;
-  }
-
+  #feedListbox,
+  #feedListbox > richlistitem,
+  #imagecontainerbox,
+  .groupbox-body,
   .permission {
     -moz-appearance: none!important;
     background: var(--in-content-box-background)!important;
     color: var(--in-content-page-color)!important;
-    border-color: var(--in-content-border-color)!important;
+    border-color: var(--in-content-box-border-color)!important;
+  }
+
+  #feedListbox richlistitem {
+    border-color: var(--in-content-box-border-color)!important;
   }
 
   #permPluginTemplate {
     color: var(--in-content-page-color)!important;
   }
 
-  #permList {
-    border: 2px solid!important;
+  #feedListbox,
+  #imagecontainerbox,
+  #permList,
+  .groupbox-body {
+    border: 1px solid!important;
+    border-color: var(--in-content-box-border-color)!important;
+  }
+
+  groupbox.collapsable caption .caption-icon {
+    filter: invert(65%)!important;
+  }
+
+  tree {
+    -moz-appearance: none!important;
+    color: var(--in-content-page-color)!important;
+  }
+
+  treecol {
+    -moz-appearance: none!important;
+    border: 0 solid!important;
+    border-color: var(--in-content-box-background)!important;
+  }
+
+  treecolpicker {
+    -moz-appearance: none;
+    border: none!important;
+  }
+
+  #viewGroup > radio {
+    -moz-appearance: none!important;
+    background-color: var(--in-content-box-background)!important;
+    text-shadow: none!important;
+    padding: 0 8px!important;
+    color: var(--in-content-page-color);
+    border-right: 1px solid!important;
+    border-color: var(--in-content-box-border-color)!important;
+  }
+
+  #viewGroup > radio[selected=true] {
+    color: var(--in-content-selected-text)!important;
+  }
+
+  #viewGroup > radio:first-of-type {
+    border-top-left-radius: 4px!important;
+    border-bottom-left-radius: 4px!important;
+  }
+
+  #viewGroup > radio:last-of-type {
+    border: none!important;
+    border-top-right-radius: 4px!important;
+    border-bottom-right-radius: 4px!important;
   }
 
 @media screen and (-moz-windows-theme),
