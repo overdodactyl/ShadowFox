@@ -17,6 +17,7 @@ hbox#sidebar-search-container textbox#search-box {
 }
 #sidebar,
 #sidebar-box,
+#template-container,
 #webext-panels-browser,
 #webextpanels-window {
   background: var(--in-content-page-background)!important
