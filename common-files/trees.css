@@ -2,13 +2,18 @@
 url-prefix(chrome://browser/content/preferences/),
 url(chrome://passwordmgr/content/passwordManager.xul),
 url(chrome://formautofill/content/manageAddresses.xhtml),
-url-prefix(chrome://pippki) {
+url-prefix(chrome://pippki),
+url(chrome://browser/content/pageinfo/pageInfo.xul) {
   treechildren::-moz-tree-row,
   treechildren:not(.autocomplete-treebody)::-moz-tree-row(multicol,odd) {
     background-color: var(--in-content-box-background)!important
   }
   treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
-    background-color: var(--theme-selection-background-hover)!important
+    background-color: var(--theme-selection-background-hover)!important;
+  }
+  treechildren::-moz-tree-cell-text(selected),
+  treechildren::-moz-tree-cell-text(hover){
+    color: var(--in-content-text-color)!important
   }
   treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected) {
     background-color: var(--theme-selection-background)!important
@@ -18,7 +23,7 @@ url-prefix(chrome://pippki) {
   }
   treecol:not([hideheader=true]):not(:first-child),
   treecolpicker {
-    border-image: linear-gradient(transparent 0,transparent 20%,var(--tone-5) 20%,var(--tone-5) 80%,transparent 80%,transparent 100%) 1 1!important
+    border-image: linear-gradient(transparent 0,transparent 20%,var(--tone-5) 20%,var(--tone-5) 80%,transparent 80%,transparent 100%) 1 1 !important;
   }
   menulist:not([editable=true]) > .menulist-dropmarker,
   treecol:not([hideheader=true]) > .treecol-sortdirection[sortDirection] {
@@ -28,6 +33,10 @@ url-prefix(chrome://pippki) {
   treecol:not([hideheader=true]),
   treecolpicker {
     background-color: var(--in-content-category-header-background)!important;
+    color: var(--in-content-page-color)!important
+  }
+  prefpane#mainPrefPane groupbox#applicationsGroup richlistbox#handlersView richlistitem[selected=true] {
+    background: var(--in-content-page-background)!important;
     color: var(--in-content-page-color)!important
   }
 }
