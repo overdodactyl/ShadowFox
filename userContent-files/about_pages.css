@@ -77,6 +77,7 @@ url-prefix(https://discovery.addons.mozilla.org) {
   #contents table tr.no-copy td,
   #controls.no-print div.controls div.control button:hover,
   #errorPageContainer button#errorTryAgain:hover,
+  #header-utils-btn[open=true],
   #provider table#provider-table tbody#provider-table-body tr td,
   #subprocess-reports tr td,
   .aboutPageWideContainer div#debug table#debug-table tbody tr td,
