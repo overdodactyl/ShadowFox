@@ -112,10 +112,10 @@
   --theme-selection-background-hover: var(--accent-1)!important;
   --in-content-category-header-background: var(--tone-8)!important;
   --selected-icon-fill-color: var(--tone-2)!important;
-  --in-content-dark-header-background: var(--tone-9)!important;
+  --in-content-dark-header-background: var(--tone-9)!important
 }
 @-moz-document url-prefix(about:),
-url-prefix(chrome://)  {
+url-prefix(chrome://) {
   .checkbox-check,
   .prefs-pane [type=checkbox]:checked + label::before,
   .prefs-pane [type=checkbox]:not(:checked) + label::before,
@@ -126,26 +126,23 @@ url-prefix(chrome://)  {
     background-color: var(--in-content-box-background)!important;
     background-image: none!important;
     box-shadow: none!important;
-    border-color: var(--in-content-box-border-color)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
-
   radio[disabled=true] {
-    color: var(--in-content-box-border-color)!important;
+    color: var(--in-content-box-border-color)!important
   }
-
   .radio-check[selected] {
-    list-style-image: url("chrome://global/skin/in-content/radio.svg");
+    list-style-image: url(chrome://global/skin/in-content/radio.svg);
     fill: var(--in-content-border-highlight)!important;
     -moz-context-properties: fill,stroke;
     stroke: none;
-    border-radius: 50%!important;
+    border-radius: 50%!important
   }
-
   .checkbox-check[checked] {
-    list-style-image: url("chrome://global/skin/in-content/check.svg")!important;
+    list-style-image: url(chrome://global/skin/in-content/check.svg)!important;
     fill: var(--in-content-border-highlight)!important;
     -moz-context-properties: fill,stroke;
-    stroke: none;
+    stroke: none
   }
 }
 @-moz-document url-prefix(about:),
@@ -153,114 +150,97 @@ url-prefix(chrome://browser/content/preferences/),
 url(chrome://passwordmgr/content/passwordManager.xul),
 url(chrome://formautofill/content/manageAddresses.xhtml),
 url-prefix(chrome://pippki),
-url(chrome://browser/content/pageinfo/pageInfo.xul)  {
+url(chrome://browser/content/pageinfo/pageInfo.xul) {
   treechildren::-moz-tree-row,
   treechildren:not(.autocomplete-treebody)::-moz-tree-row(multicol,odd) {
-    background-color: var(--in-content-box-background)!important;
+    background-color: var(--in-content-box-background)!important
   }
-
   treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
-    background-color: var(--theme-selection-background-hover)!important;
+    background-color: var(--theme-selection-background-hover)!important
   }
-
   treechildren::-moz-tree-cell-text(hover),
   treechildren::-moz-tree-cell-text(selected) {
-    color: var(--in-content-text-color)!important;
+    color: var(--in-content-text-color)!important
   }
-
   treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected) {
-    background-color: var(--theme-selection-background)!important;
+    background-color: var(--theme-selection-background)!important
   }
-
   tree {
-    background-color: var(--in-content-box-background)!important;
+    background-color: var(--in-content-box-background)!important
   }
-
   treecol:not([hideheader=true]):not(:first-child),
   treecolpicker {
-    border-image: linear-gradient(transparent 0,transparent 20%,var(--tone-5) 20%,var(--tone-5) 80%,transparent 80%,transparent 100%) 1 1!important;
+    border-image: linear-gradient(transparent 0,transparent 20%,var(--tone-5) 20%,var(--tone-5) 80%,transparent 80%,transparent 100%) 1 1!important
   }
-
   menulist:not([editable=true]) > .menulist-dropmarker,
   treecol:not([hideheader=true]) > .treecol-sortdirection[sortDirection] {
-    fill: var(--in-content-category-text)!important;
+    fill: var(--in-content-category-text)!important
   }
-
   fieldset > legend,
   treecol:not([hideheader=true]),
   treecolpicker {
     background-color: var(--in-content-category-header-background)!important;
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   prefpane#mainPrefPane groupbox#applicationsGroup richlistbox#handlersView richlistitem[selected=true] {
     background: var(--in-content-page-background)!important;
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
 }
 @-moz-document regexp("^about:(?!reader).*"),
 url(https://www.mozilla.org/credits/),
-url-prefix(https://discovery.addons.mozilla.org)  {
+url-prefix(https://discovery.addons.mozilla.org) {
   :root {
-    --aboutProfiles-table-background: var(--in-content-box-background)!important;
+    --aboutProfiles-table-background: var(--in-content-box-background)!important
   }
-
   menupopup,
   menupopup > menu > menupopup,
   popup,
   popup > menu > menupopup {
     -moz-appearance: none!important;
     background: var(--in-content-page-background)!important;
-    border: none!important;
+    border: none!important
   }
-
   menuitem,
   menupopup menu {
     -moz-appearance: none!important;
-    color: var(--in-content-text-color)!important;
+    color: var(--in-content-text-color)!important
   }
-
   menuitem:hover,
   menupopup menu:hover {
     color: var(--in-content-text-color)!important;
-    background-color: var(--theme-selection-background-hover)!important;
+    background-color: var(--theme-selection-background-hover)!important
   }
-
   menupopup menuseparator {
     padding: 0!important;
     margin: 2px 6px!important;
     -moz-appearance: none!important;
     background: rgba(0,0,0,0)!important;
-    border: 0!important;
+    border: 0!important
   }
-
-@media screen and (-moz-windows-theme) {
+  @media screen and (-moz-windows-theme) {
     menuitem,
     menupopup menu {
-      margin: 1px 6px!important;
+      margin: 1px 6px!important
     }
-
     menupopup,
     menupopup > menu > menupopup,
     popup,
     popup > menu > menupopup {
-      border: 1px solid!important;
+      border: 1px solid!important
     }
-}
-
+  }
   .prefs-pane [type=checkbox]:checked + label::after,
   .prefs-pane [type=checkbox]:not(:checked) + label::after,
   input[type=checkbox]:checked {
-    background-image: url("chrome://global/skin/in-content/check.svg")!important;
+    background-image: url(chrome://global/skin/in-content/check.svg)!important
   }
-
   #newtab-customize-overlay,
   html:not(#ublock0-epicker),
   html:not(#ublock0-epicker) body {
     background: var(--in-content-page-background)!important;
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   #SanitizeDialogPane > groupbox,
   #mainDiv.non-verbose div.section h2,
   #onboarding-overlay,
@@ -268,20 +248,17 @@ url-prefix(https://discovery.addons.mozilla.org)  {
   .modal,
   .modal-overlay,
   .warningBackground {
-    background: var(--in-content-page-background)!important;
+    background: var(--in-content-page-background)!important
   }
-
   .collapsible-section .section-top-bar .info-option-manage button,
   .topic .topic-read-more,
   a:link {
-    color: var(--in-content-link-color)!important;
+    color: var(--in-content-link-color)!important
   }
-
   .topic .topic-read-more:hover,
   a:link:hover {
-    color: var(--in-content-link-color-hover)!important;
+    color: var(--in-content-link-color-hover)!important
   }
-
   #action-box,
   #content div.log span.section-heading button.no-print:hover,
   #content div.stats span.section-heading button.no-print:hover,
@@ -297,17 +274,15 @@ url-prefix(https://discovery.addons.mozilla.org)  {
   .alert,
   .opsRow button:hover,
   .top-sites-list .top-site-outer .top-site-icon {
-    background-color: var(--in-content-box-background)!important;
+    background-color: var(--in-content-box-background)!important
   }
-
   .addon .editorial-description,
   .addon .heading,
   .disco-content,
   .top-sites-list .top-site-outer .title span,
   header h1 {
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   #onboarding-overlay.onboarding-opened > #onboarding-overlay-dialog,
   .addon .content,
   .addon .logo,
@@ -316,14 +291,12 @@ url-prefix(https://discovery.addons.mozilla.org)  {
   .search-wrapper input,
   .topsite-form .form-wrapper input[type=text],
   card-outer.active span.context-menu ul.context-menu-list {
-    background: var(--in-content-box-background)!important;
+    background: var(--in-content-box-background)!important
   }
-
   .sorter[checkState="1"],
   .sorter[checkState="2"] {
-    background-color: var(--in-content-category-header-background)!important;
+    background-color: var(--in-content-category-header-background)!important
   }
-
   #onboarding-overlay.onboarding-opened > #onboarding-overlay-dialog,
   .addon,
   .card-outer .card-context,
@@ -332,9 +305,8 @@ url-prefix(https://discovery.addons.mozilla.org)  {
   .section-title span,
   .top-sites-list .top-site-outer .top-site-icon,
   .topsite-form .form-wrapper input[type=text] {
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   .card-outer .card-context-icon,
   .category:not([selected]) > .category-icon,
   .collapsible-section .section-top-bar .info-option-icon,
@@ -343,176 +315,145 @@ url-prefix(https://discovery.addons.mozilla.org)  {
   .search-wrapper .search-button,
   .search-wrapper .search-label,
   .section-title span {
-    fill: var(--in-content-page-color)!important;
+    fill: var(--in-content-page-color)!important
   }
-
   .sorter {
-    color: var(--accent-1)!important;
+    color: var(--accent-1)!important
   }
-
   .download-progress {
-    background-color: var(--in-content-box-color)!important;
+    background-color: var(--in-content-box-color)!important
   }
-
   .list > scrollbox > .scrollbox-innerbox {
-    border: none!important;
+    border: none!important
   }
-
   #header-utils-btn:hover,
   .header-button:hover {
-    background-color: var(--in-content-box-background-hover)!important;
+    background-color: var(--in-content-box-background-hover)!important
   }
-
   #header-utils-btn {
-    fill: var(--in-content-category-text)!important;
+    fill: var(--in-content-category-text)!important
   }
-
   .collapsible-section .section-top-bar .info-option-manage button:after,
   .topic .topic-read-more::after {
-    fill: var(--in-content-link-color)!important;
+    fill: var(--in-content-link-color)!important
   }
-
   .addon-view[notification=warning] {
-    --view-highlight-color: transparent!important;
+    --view-highlight-color: transparent!important
   }
-
   .addon-view[notification],
   .addon-view[pending] {
     --view-highlight-color: transparent;
-    background-image: none!important;
+    background-image: none!important
   }
-
   .addon[active=false] {
-    opacity: .4!important;
+    opacity: .4!important
   }
-
   .detail-row,
   .detail-row-complex,
   setting {
-    text-shadow: none!important;
+    text-shadow: none!important
   }
-
   #warningTitle {
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   #configTree {
-    border: none!important;
+    border: none!important
   }
-
   .addon-target-container {
     background: var(--in-content-box-background)!important;
-    box-shadow: none!important;
+    box-shadow: none!important
   }
-
   .service-worker-multi-process {
-    background-color: #44391f!important;
+    background-color: #44391f!important
   }
-
   #onboarding-notification-bar {
     background: var(--in-content-category-header-background)!important;
-    border-top: 2px solid!important;
+    border-top: 2px solid!important
   }
-
   .prefs-pane .actions,
   .prefs-pane .sidebar {
     background: var(--in-content-category-header-background)!important;
-    border-color: var(--in-content-box-border-color)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
-
   .collapsible-section .section-top-bar .info-option,
   .prefs-pane .prefs-modal-inner-wrapper .options,
   .sections-list .section-empty-state {
     background: var(--in-content-box-background)!important;
-    border-color: var(--in-content-box-border-color)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
-
   .actions button:hover:not(.dismiss),
   .card-outer:-moz-any(:hover,:focus,.active):not(.placeholder),
   .collapsible-section .section-disclaimer button:hover:not(.dismiss),
   .top-sites-list .top-site-outer.active .tile,
   .top-sites-list .top-site-outer:focus .tile,
   .top-sites-list .top-site-outer:hover .tile {
-    box-shadow: 0 0 0 5px var(--in-content-box-background)!important;
+    box-shadow: 0 0 0 5px var(--in-content-box-background)!important
   }
-
   .card-outer .context-menu-button,
   .top-sites-list .top-site-outer .context-menu-button {
     background-color: var(--in-content-page-color)!important;
-    background-image: url("chrome://browser/skin/page-action.svg")!important;
+    background-image: url(chrome://browser/skin/page-action.svg)!important;
     border: 1px solid!important;
     filter: invert(95%)!important;
     box-shadow: none!important;
-    border-color: var(--in-content-page-color)!important;
+    border-color: var(--in-content-page-color)!important
   }
-
   #onboarding-notification-body *,
   #onboarding-notification-tour-title,
   .collapsible-section .section-disclaimer,
   .manual-migration-container,
   .onboarding-close-btn,
   .prefs-pane .prefs-modal-inner-wrapper {
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   .collapsible-section .section-disclaimer button,
   .onboarding-action-button {
     background-color: var(--in-content-page-background)!important;
     border-color: var(--in-content-box-border-color)!important;
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   .actions button,
   .actions button.dismiss,
   .onboarding-action-button:hover,
   .prefs-pane-button button:hover {
-    background-color: var(--in-content-box-background-hover)!important;
+    background-color: var(--in-content-box-background-hover)!important
   }
-
   .actions button.done,
   .onboarding-tour-action-button {
-    background-color: var(--in-content-primary-button-background)!important;
+    background-color: var(--in-content-primary-button-background)!important
   }
-
   .onboarding-tour-action-button:hover {
-    background-color: var(--in-content-primary-button-background-hover)!important;
+    background-color: var(--in-content-primary-button-background-hover)!important
   }
-
   .icon.icon-dismiss {
-    fill: var(--in-content-page-color)!important;
+    fill: var(--in-content-page-color)!important
   }
-
   .context-menu ul.context-menu-list li.context-menu-item a:hover span.icon {
-    fill: var(--in-content-text-color)!important;
+    fill: var(--in-content-text-color)!important
   }
-
   .dialogBox > .groupbox-title {
     background-color: var(--in-content-category-header-background)!important;
     color: var(--in-content-page-color)!important;
-    border-color: var(--in-content-box-border-color)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
-
   .warningMessage {
     background: var(--in-content-box-background)!important;
     border-color: var(--in-content-box-border-color)!important;
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   #content > div,
   .info-box-content,
   .notice,
   div.opsRow,
   div.section {
     background-color: var(--in-content-box-background)!important;
-    border-color: var(--in-content-box-border-color)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
-
   .bar-inner {
     background-color: var(--accent-1)!important;
     border: 1px solid!important;
-    border-color: var(--accent-2)!important;
+    border-color: var(--accent-2)!important
   }
-
   #content div.log span.section-heading button.no-print,
   #content div.stats span.section-heading button.no-print,
   #controls.no-print div.controls div.control button,
@@ -525,131 +466,108 @@ url-prefix(https://discovery.addons.mozilla.org)  {
     border: 1px solid!important;
     border-radius: 3px!important;
     color: var(--in-content-page-color)!important;
-    border-color: var(--in-content-box-border-color)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
-
   .opsRow button {
-    margin-right: 2px!important;
+    margin-right: 2px!important
   }
-
   input#appid {
-    background-color: var(--in-content-box-background)!important;
+    background-color: var(--in-content-box-background)!important
   }
-
   #profiles.tab div table tbody tr td {
-    border-color: var(--in-content-table-border-dark-color)!important;
+    border-color: var(--in-content-table-border-dark-color)!important
   }
-
   .actions,
   .context-menu-list li.separator,
   .edit-topsites-wrapper .edit-topsites-button,
   .modal,
   .prefs-pane hr,
   .topsite-form .form-wrapper input[type=text] {
-    border-color: var(--in-content-box-border-color)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
-
   #outside table.contenttable thead tr th {
-    background-color: var(--in-content-table-header-background)!important;
+    background-color: var(--in-content-table-header-background)!important
   }
-
   #outside table.contenttable {
     border-color: var(--in-content-table-border-dark-color)!important;
-    background-color: var(--in-content-box-background)!important;
+    background-color: var(--in-content-box-background)!important
   }
-
   #outside table.contenttable tbody tr td,
   #outside table.contenttable tbody tr td + #outside table.contenttable tbody tr td,
   #outside table.contenttable thead tr th + th {
-    border-color: var(--in-content-table-border-dark-color)!important;
+    border-color: var(--in-content-table-border-dark-color)!important
   }
-
   #outside table.contenttable tbody tr td {
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   .card-outer .card-context {
-    padding: 2px 16px 12px 14px!important;
+    padding: 2px 16px 12px 14px!important
   }
-
   .card-outer.placeholder .card {
-    display: none!important;
+    display: none!important
   }
-
   .context-menu {
     background-color: var(--in-content-box-background)!important;
     box-shadow: none!important;
-    border: 1px!important;
+    border: 1px!important
   }
-
   .context-menu > ul > li > a:focus,
   .context-menu > ul > li > a:hover {
-    background-color: var(--theme-selection-background-hover)!important;
+    background-color: var(--theme-selection-background-hover)!important
   }
-
   .search-wrapper input:focus,
   .search-wrapper:active input {
-    box-shadow: 0 0 0 3px var(--in-content-border-focus)!important;
+    box-shadow: 0 0 0 3px var(--in-content-border-focus)!important
   }
-
   .prefs-pane .actions {
-    border-top: none!important;
+    border-top: none!important
   }
 }
-
-@-moz-document url-prefix(about:reader)  {
+@-moz-document url-prefix(about:reader) {
   body.dark a:link {
-    color: var(--in-content-link-color)!important;
+    color: var(--in-content-link-color)!important
   }
-
   .font-type-buttons > .sans-serif-button > .name,
   .font-type-buttons > .serif-button > .name,
   body.dark {
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   .toolbar {
     background-color: var(--in-content-category-header-background)!important;
-    border-right: 1px solid!important;
+    border-right: 1px solid!important
   }
-
   .toolbar .button {
     background-color: var(--in-content-category-header-background)!important;
-    border-color: var(--in-content-box-border-color)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
-
   .button:hover,
   .content-width-buttons > button:hover,
   .font-size-buttons > button:hover,
   .font-type-buttons > button:hover,
   .line-height-buttons > button:hover {
-    background-color: var(--in-content-primary-button-background-hover)!important;
+    background-color: var(--in-content-primary-button-background-hover)!important
   }
-
   .dropdown-popup {
     background-color: var(--in-content-category-header-background)!important;
     box-shadow: 0 1px 3px var(--in-content-category-header-background)!important;
-    border-color: var(--in-content-box-border-color)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
-
   .content-width-buttons > button,
   .font-size-buttons > button,
   .font-type-buttons > button,
   .font-type-buttons > button.selected,
   .font-type-buttons > button:active:hover,
   .line-height-buttons > button {
-    border-color: var(--in-content-box-border-color)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
-
   .color-scheme-buttons > button.selected,
   .color-scheme-buttons > button:active:hover,
   .font-type-buttons > button.selected,
   .font-type-buttons > button:active:hover {
-    box-shadow: inset 0 -3px 0 0 var(--in-content-primary-button-background-hover)!important;
+    box-shadow: inset 0 -3px 0 0 var(--in-content-primary-button-background-hover)!important
   }
 }
-
-@-moz-document url-prefix(chrome://)  {
+@-moz-document url-prefix(chrome://) {
   .windowDialog,
   dialog,
   prefpane,
@@ -657,38 +575,33 @@ url-prefix(https://discovery.addons.mozilla.org)  {
   prefwindow,
   window {
     background-color: var(--in-content-page-background)!important;
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   #cookieInfoGrid .textbox-input {
-    background-color: var(--in-content-page-background)!important;
+    background-color: var(--in-content-page-background)!important
   }
-
   #historyItems {
-    -moz-appearance: none!important;
+    -moz-appearance: none!important
   }
 }
-@-moz-document url-prefix("https://addons.mozilla.org")  {
+@-moz-document url-prefix("https://addons.mozilla.org") {
   .Footer,
   .Footer-wrapper,
   .Header,
   .LanguageTools-header-row,
   .amo {
-    background: var(--in-content-category-header-background)!important;
+    background: var(--in-content-category-header-background)!important
   }
-
   .App-content,
   .Home,
   .LandingPage,
   .LanguageTools-table-row:nth-child(2n),
   .Paginate-page-number {
-    background: var(--in-content-page-background)!important;
+    background: var(--in-content-page-background)!important
   }
-
   .SearchForm-icon-magnifying-glass {
-    filter: invert(65%)!important;
+    filter: invert(65%)!important
   }
-
   .AddonDescription-more-addons--theme .Card-contents .AddonsCard-list,
   .AddonDescription-more-addons:not(.AddonDescription-more-addons--theme) .Card-contents .AddonsCard-list,
   .AddonsCard--horizontal .Card-contents,
@@ -708,9 +621,8 @@ url-prefix(https://discovery.addons.mozilla.org)  {
   .SearchForm-query,
   .SearchForm-suggestions-item.SearchForm-suggestions-item,
   .SectionLinks-dropdown .DropdownMenu-items {
-    background: var(--in-content-box-background)!important;
+    background: var(--in-content-box-background)!important
   }
-
   .Addon-author,
   .Addon-author a,
   .Addon-author a:link .Button--action,
@@ -744,19 +656,16 @@ url-prefix(https://discovery.addons.mozilla.org)  {
   .SearchResult-name,
   .SearchResult-summary,
   .SearchSuggestion-name {
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   .Card-contents li .Rating-star-group,
   .Paginate-next::after,
   .Paginate-previous::before {
-    filter: invert(70%)!important;
+    filter: invert(70%)!important
   }
-
   .ShowMoreCard-contents::after {
-    background: linear-gradient(rgba(255,255,255,0),var(--in-content-box-background))!important;
+    background: linear-gradient(rgba(255,255,255,0),var(--in-content-box-background))!important
   }
-
   .Addon-details .AddonDescription-contents a:link,
   .AddonMoreInfo-contents a:link,
   .Card-footer-link a,
@@ -770,83 +679,71 @@ url-prefix(https://discovery.addons.mozilla.org)  {
   .LanguageTools-table a:link,
   .SearchResult-link:focus .SearchResult-name,
   .SearchResult-link:hover .SearchResult-name {
-    color: var(--in-content-link-color)!important;
+    color: var(--in-content-link-color)!important
   }
-
   .Button--action.Button--outline-only {
-    border-color: var(--in-content-border-highlight)!important;
+    border-color: var(--in-content-border-highlight)!important
   }
-
   .Addon .InstallButton-button,
   .Button--action,
   .Button--action.Button--small,
   .Paginate .Paginate-item,
   .SearchForm-suggestions-item.SearchForm-suggestions-item--highlighted {
-    background: var(--in-content-primary-button-background)!important;
+    background: var(--in-content-primary-button-background)!important
   }
-
   .Button--action.Button--outline-only:hover,
   .Button--action:hover,
   .SearchForm-query:hover {
-    border-color: var(--in-content-primary-button-background)!important;
+    border-color: var(--in-content-primary-button-background)!important
   }
-
   .SearchForm-query:focus {
     box-shadow: 0 0 5px 0 var(--in-content-border-highlight)!important;
-    border-color: var(--in-content-primary-button-background)!important;
+    border-color: var(--in-content-primary-button-background)!important
   }
-
   .AddonsCard--horizontal ul.AddonsCard-list .SearchResult-link:hover {
     background: var(--in-content-page-background)!important;
-    border-radius: 0!important;
+    border-radius: 0!important
   }
-
   .Button--report {
-    text-shadow: none!important;
+    text-shadow: none!important
   }
-
   .Icon-external {
-    filter: invert(20%)!important;
+    filter: invert(20%)!important
   }
-
   .Icon-featured {
-    filter: invert(85%)!important;
+    filter: invert(85%)!important
   }
 }
-@-moz-document regexp("^[file:///].*[^(html)]$")  {
+@-moz-document regexp("^[file:///].*[^(html)]$") {
   :root {
-    background-color: var(--in-content-page-background)!important;
+    background-color: var(--in-content-page-background)!important
   }
-
   body {
     border-color: var(--in-content-box-background)!important;
     background-color: var(--in-content-box-background)!important;
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   h1 {
-    border-color: var(--in-content-box-border-color)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
-
   body > table > tbody > tr:hover {
     outline-color: var(--in-content-box-background-hover)!important;
-    background-color: var(--in-content-box-background-hover)!important;
+    background-color: var(--in-content-box-background-hover)!important
   }
-
   .dir,
   .file,
   .symlink,
   .up {
-    color: var(--in-content-link-color)!important;
+    color: var(--in-content-link-color)!important
   }
 }
-@-moz-document regexp("^moz-extension://.*manifest.json$")  {
+@-moz-document regexp("^moz-extension://.*manifest.json$") {
   html {
     background: var(--in-content-page-background)!important;
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
 }
-@-moz-document regexp(".*\\.(p|P)(d|D)(f|F).*")  {
+@-moz-document regexp(".*\\.(p|P)(d|D)(f|F).*") {
   #loadingBar .progress,
   .dropdownToolbarButton > select,
   .dropdownToolbarButton > select > option,
@@ -855,78 +752,65 @@ url-prefix(https://discovery.addons.mozilla.org)  {
   .toolbarField,
   body,
   div#viewer {
-    background-color: var(--in-content-box-background)!important;
+    background-color: var(--in-content-box-background)!important
   }
-
   body {
-    background-image: none!important;
+    background-image: none!important
   }
-
   .splitToolbarButtonSeparator,
   .verticalToolbarSeparator {
     box-shadow: none!important;
-    background-color: var(--in-content-box-background)!important;
+    background-color: var(--in-content-box-background)!important
   }
-
   div#toolbarViewer {
-    background-color: var(--in-content-category-header-background)!important;
+    background-color: var(--in-content-category-header-background)!important
   }
-
   #numPages,
   #pageNumber,
   #scaleSelect {
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   .pdfViewer .page {
-    border-image: none!important;
+    border-image: none!important
   }
-
   #pageNumber,
   #scaleSelectContainer {
-    border: 1px solid!important;
+    border: 1px solid!important
   }
-
   #loadingBar {
     position: relative;
     width: 100%;
     height: 4px;
     background-color: var(--theme-selection-background-hover)!important;
-    border-bottom: 1px solid!important;
+    border-bottom: 1px solid!important
   }
-
   #sidebarContainer {
-    background-color: var(--in-content-table-header-background)!important;
+    background-color: var(--in-content-table-header-background)!important
   }
-
   #toolbarSidebar {
     background-color: var(--in-content-table-header-background)!important;
     background-image: none!important;
-    border-color: var(--in-content-box-background)!important;
+    border-color: var(--in-content-box-background)!important
   }
-
   .doorHanger,
   .doorHangerRight {
     border: 1px solid!important;
     border-color: var(--in-content-box-background)!important;
-    box-shadow: none!important;
+    box-shadow: none!important
   }
-
   #toolbarContainer,
   .findbar,
   .secondaryToolbar {
     background-color: var(--in-content-box-background)!important;
-    background-image: none!important;
+    background-image: none!important
   }
-
   .dropdownToolbarButton,
   .overlayButton,
   .secondaryToolbarButton,
   .toolbarButton {
     border: none!important;
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   .dropdownToolbarButton,
   .overlayButton,
   .toolbarButton:focus,
@@ -934,91 +818,76 @@ url-prefix(https://discovery.addons.mozilla.org)  {
     background-color: var(--in-content-box-background)!important;
     background-image: none!important;
     border: none!important;
-    box-shadow: none!important;
+    box-shadow: none!important
   }
-
   .secondaryToolbarButton:focus,
   .secondaryToolbarButton:hover {
     background-color: var(--in-content-page-background)!important;
     background-image: none!important;
-    box-shadow: none!important;
+    box-shadow: none!important
   }
-
   .secondaryToolbarButton::before,
   .toolbarButton::before {
-    filter: invert(20%)!important;
+    filter: invert(20%)!important
   }
-
   .secondaryToolbarButton.toggled,
   .splitToolbarButton.toggled > .toolbarButton.toggled,
   .toolbarButton.toggled {
     background-color: var(--in-content-page-background)!important;
     background-image: none!important;
     box-shadow: none!important;
-    color: var(--in-content-selected-text)!important;
+    color: var(--in-content-selected-text)!important
   }
-
   .horizontalToolbarSeparator {
     background-color: var(--in-content-box-border-color)!important;
-    box-shadow: none!important;
+    box-shadow: none!important
   }
 }
-@-moz-document url-prefix(https://raw.githubusercontent.com)  {
+@-moz-document url-prefix(https://raw.githubusercontent.com) {
   html {
     background: var(--in-content-page-background)!important;
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
 }
-@-moz-document url-prefix(view-source)  {
+@-moz-document url-prefix(view-source) {
   :root {
     background-color: var(--in-content-page-background)!important;
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   pre[id]:before,
   span[id]:before {
-    color: var(--in-content-page-color)!important;
+    color: var(--in-content-page-color)!important
   }
-
   .highlight .end-tag,
   .highlight .start-tag {
-    color: var(--theme-highlight-purple)!important;
+    color: var(--theme-highlight-purple)!important
   }
-
   .highlight .comment {
-    color: var(--theme-highlight-green)!important;
+    color: var(--theme-highlight-green)!important
   }
-
   .highlight .cdata {
-    color: #c06!important;
+    color: #c06!important
   }
-
   .highlight .doctype {
-    color: #4682b4!important;
+    color: #4682b4!important
   }
-
   .highlight .pi {
-    color: var(--theme-highlight-red)!important;
+    color: var(--theme-highlight-red)!important
   }
-
   .highlight .entity {
-    color: #dea174!important;
+    color: #dea174!important
   }
-
   .highlight .attribute-name {
-    color: var(--theme-highlight-green)!important;
+    color: var(--theme-highlight-green)!important
   }
-
   .highlight .attribute-value {
-    color: var(--theme-highlight-blue)!important;
+    color: var(--theme-highlight-blue)!important
   }
-
   .highlight .markupdeclaration {
-    color: #4682b4!important;
+    color: #4682b4!important
   }
-
   .highlight .error,
   .highlight .error > :-moz-any(.start-tag,.end-tag,.comment,.cdata,.doctype,.pi,.entity,.attribute-name,.attribute-value) {
-    color: #de7474!important;
+    color: #de7474!important
   }
 }
