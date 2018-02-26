@@ -73,8 +73,6 @@
   --accent-1: var(--blue-40);
   --accent-2: var(--blue-50);
   --accent-3: var(--blue-60);
-  --start-indicator-for-updater-scripts: black;
-  --end-indicator-for-updater-scripts: black;
   --in-content-page-color: var(--tone-4)!important;
   --in-content-page-background: var(--tone-7)!important;
   --in-content-text-color: var(--tone-3)!important;
@@ -113,6 +111,9 @@
   --in-content-category-header-background: var(--tone-8)!important;
   --selected-icon-fill-color: var(--tone-2)!important;
   --in-content-dark-header-background: var(--tone-9)!important;
+  --secure-connection-color: var(--accent-1);
+  --start-indicator-for-updater-scripts: black;
+  --end-indicator-for-updater-scripts: black;
   --panel-separator-color: var(--in-content-border-color)!important;
   --tab-loading-fill: var(--in-content-category-text-selected)!important
 }
@@ -875,16 +876,16 @@ browser[type=content] > html {
   background: var(--in-content-page-background)!important
 }
 #identity-box.verifiedIdentity {
-  --urlbar-separator-color: var(--in-content-border-focus)!important
+  --urlbar-separator-color: var(--secure-connection-color)!important
 }
 #identity-box.verifiedIdentity #identity-icon-labels,
 .identity-popup-connection-secure {
-  color: var(--in-content-link-color)!important
+  color: var(--secure-connection-color)!important
 }
 #connection-icon,
 #identity-popup[connection^=secure] #identity-popup-security-content,
 #identity-popup[connection^=secure] #identity-popup-securityView {
-  fill: var(--in-content-link-color)!important
+  fill: var(--secure-connection-color)!important
 }
 #sidebar-header,
 #sidebar-search-container,

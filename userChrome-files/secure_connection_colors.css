@@ -1,12 +1,12 @@
 #identity-box.verifiedIdentity {
-  --urlbar-separator-color: var(--in-content-border-focus)!important
+  --urlbar-separator-color: var(--secure-connection-color)!important
 }
 #identity-box.verifiedIdentity #identity-icon-labels,
 .identity-popup-connection-secure {
-  color: var(--in-content-link-color)!important
+  color: var(--secure-connection-color)!important
 }
 #connection-icon,
 #identity-popup[connection^=secure] #identity-popup-security-content,
 #identity-popup[connection^=secure] #identity-popup-securityView {
-  fill: var(--in-content-link-color)!important
+  fill: var(--secure-connection-color)!important
 }
