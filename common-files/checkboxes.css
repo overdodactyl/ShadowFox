@@ -1,5 +1,5 @@
 @-moz-document url-prefix(about:),
-url-prefix(chrome://) {
+url-prefix(chrome://browser) {
   .checkbox-check,
   .prefs-pane [type=checkbox]:checked + label::before,
   .prefs-pane [type=checkbox]:not(:checked) + label::before,
