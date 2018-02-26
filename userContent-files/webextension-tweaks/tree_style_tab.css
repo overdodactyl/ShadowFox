@@ -29,7 +29,10 @@
   #tabContextMenu,
   .extra.has-submenu ul {
     background: var(--tone-6)!important;
-    border-color: var(--tone-5)!important
+    border: none!important
+  }
+  .menu-ui-59858.menu-ui.menu li.separator {
+    border-color: var(--in-content-box-border-color)!important
   }
 }
 /*! Alters the webextension Tree Style Tab
