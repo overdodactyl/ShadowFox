@@ -1,5 +1,6 @@
 .browserContainer > findbar {
-  border-top: 1px solid!important
+  border-top: 1px solid!important;
+  border-color: var(--in-content-box-border-color)!important
 }
 .findbar-find-next,
 .findbar-find-previous {
