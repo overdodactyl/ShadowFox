@@ -891,28 +891,6 @@ url-prefix(https://discovery.addons.mozilla.org) {
     color: #de7474!important
   }
 }
-@-moz-document regexp("^(file:///).*[^(.html)]$") {
-  :root {
-    background-color: var(--mid-way-color)!important
-  }
-  body {
-    border: 1px solid!important;
-    background-color: var(--primary-dark-color)!important;
-    color: var(--primary-light-color)!important
-  }
-  h1 {
-    border-bottom: 1px solid!important
-  }
-  body > table > tbody > tr:hover {
-    outline: solid 1px!important
-  }
-  .dir,
-  .file,
-  .symlink,
-  .up {
-    color: var(--primary-accent-color)!important
-  }
-}
 /*! Alters the webextension Brief
   IMPORTANT: change the Internal UUID */
 @-moz-document url-prefix("moz-extension://brief_UUID/") {
@@ -1340,22 +1318,22 @@ url-prefix(https://discovery.addons.mozilla.org) {
     color: var(--tone-4)!important
   }
 }
-/*! Alters the webextension Smart HTTPS
+/*! Alters the webextension Skip Redirect
   IMPORTANT: change the Internal UUID */
-@-moz-document url-prefix("moz-extension://smart_https_UUID/") {
+@-moz-document url-prefix("moz-extension://skip_redirect_UUID/") {
   body {
-    background-color: var(--tone-6)!important;
-    color: var(--tone-4)!important
-  }
-  .information input[type=number],
-  input[type=text] {
-    -moz-appearance: none!important;
     background: var(--tone-6)!important;
-    color: var(--tone-4)!important;
-    border-color: var(--tone-5)!important
-  }
-  .information p {
     color: var(--tone-4)!important
+  }
+  input[type=number],
+  input[type=text],
+  textarea {
+    -moz-appearance: none!important;
+    background: var(--tone-5)!important;
+    color: var(--grey-30)!important
+  }
+  label a {
+    color: var(--accent-1)!important
   }
 }
 /*! Alters the webextension Tab Suspender (memory saver)
@@ -1995,5 +1973,27 @@ url-prefix(https://discovery.addons.mozilla.org) {
   ::-moz-selection {
     color: var(--grey-30);
     background: var(--accent-2)
+  }
+}
+@-moz-document regexp("^(file:///).*[^(.html)]$") {
+  :root {
+    background-color: var(--mid-way-color)!important
+  }
+  body {
+    border: 1px solid!important;
+    background-color: var(--primary-dark-color)!important;
+    color: var(--primary-light-color)!important
+  }
+  h1 {
+    border-bottom: 1px solid!important
+  }
+  body > table > tbody > tr:hover {
+    outline: solid 1px!important
+  }
+  .dir,
+  .file,
+  .symlink,
+  .up {
+    color: var(--primary-accent-color)!important
   }
 }
