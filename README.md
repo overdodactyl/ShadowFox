@@ -65,10 +65,6 @@ Please see [here](https://github.com/overdodactyl/ShadowFox/wiki).
 
 Please take a look through the [wiki](https://github.com/overdodactyl/ShadowFox/wiki) and [Issues](https://github.com/overdodactyl/ShadowFox/issues?q=is%3Aopen) (both open and closed).  If you can't find what you need, don't hesitate to open up a new issue.  
 
-# Run into a bug?
-
-If you'v
-
 # Have a feature request?
 
 Please read through the current issues and search old ones.  If it doesn't already exist, feel free to ask!
