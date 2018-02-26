@@ -3,8 +3,10 @@
 var gulp = require('gulp');
 var concatCss = require('gulp-concat-css');
 var cleanCSS = require('gulp-clean-css');
+var exec = require('gulp-exec');
 
-gulp.task('minify_code', () => {
+/* Minify all base code, edit in place */
+gulp.task('minify_base_code', () => {
   return gulp.src(['common-files/*.css', 'userContent-files/*.css', 'userContent-files/*/*.css', 'userChrome-files/*', 'userChrome-files/*/*.css'])
     .pipe(cleanCSS({
       level : 2 ,
@@ -15,32 +17,13 @@ gulp.task('minify_code', () => {
     }));
 });
 
-gulp.task('minify_chrome', () => {
-  return gulp.src(['userChrome.css'])
-    .pipe(cleanCSS({
-      level : 2 ,
-      format: 'beautify'
-    }))
-    .pipe(gulp.dest('.'));
-});
-
-gulp.task('minify_content', () => {
-  return gulp.src(['userContent.css'])
-    .pipe(cleanCSS({
-      level : 2 ,
-      format: 'beautify'
-    }))
-    .pipe(gulp.dest('.'));
+/* Remove internal UUIDs */
+gulp.task('remove_UUIDs', function() {
+  return gulp.src('.')
+    .pipe(exec('sh remove_UUIDs.sh'))
 });
 
 
-
-
-/**********************************
-*								                  *
-*		userContent.css			          *
-*								                  *
-**********************************/
 
 /* userContent file with no addons */
 gulp.task('userContent_no_addons', function() {
@@ -51,20 +34,14 @@ gulp.task('userContent_no_addons', function() {
 
 
 /* Add everything to userContent */
-gulp.task('userContent_all', ['minify_code', 'userContent_no_addons'], function() {
+gulp.task('userContent', ['userContent_no_addons'], function() {
   return gulp.src(['color_variables.css', 'common-files/*.css', 'userContent-files/*.css', 'userContent-files/*/*.css'])
     .pipe(concatCss('userContent.css'))
     .pipe(gulp.dest('.'));
 });
 
 
-/**********************************
-*								                  *
-*		userChrome.css			          *
-*								                  *
-**********************************/
-
-/* Add everything to userChrome */
+/* Create Windows version */
 gulp.task('userChrome_windows', function() {
   return gulp.src(['color_variables.css', 'common-files/*.css', 'userChrome-files/*.css', 'userChrome-files/windows_fixes/*.css' ])
     .pipe(concatCss('userChrome_windows.css'))
@@ -73,14 +50,16 @@ gulp.task('userChrome_windows', function() {
 
 
 /* Add everything to userChrome */
-gulp.task('userChrome_all', ['minify_code', 'userChrome_windows'], function() {
+gulp.task('userChrome', ['userChrome_windows'], function() {
   return gulp.src(['color_variables.css', 'common-files/*.css', 'userChrome-files/*.css'])
     .pipe(concatCss('userChrome.css'))
     .pipe(gulp.dest('.'));
 });
 
-/* Add everything to userChrome */
-gulp.task('all', ['userChrome_all', 'userContent_all'], function() {
+
+
+/* All */
+gulp.task('all', ['userChrome', 'userContent'], function() {
   return gulp.src(['userChrome.css', 'userContent.css'])
     .pipe(cleanCSS({
       level : 1 ,
@@ -89,21 +68,22 @@ gulp.task('all', ['userChrome_all', 'userContent_all'], function() {
     .pipe(gulp.dest('.'));
 });
 
-
-
-
-/**********************************
-*								                  *
-*		         Other			          *
-*								                  *
-**********************************/
-
-
-gulp.task('minify-pdf', () => {
-  return gulp.src(['userContent-files/webpages/pdf.css'])
+/* Publish */
+gulp.task('publish', ['remove_UUIDs', 'minify_base_code', 'userChrome', 'userContent'], function() {
+  return gulp.src(['userChrome.css', 'userContent.css', 'alternative_user_files/*.css'])
     .pipe(cleanCSS({
-      level : 1 ,
+      level : 2 ,
       format: 'beautify'
     }))
-    .pipe(gulp.dest('./userContent-files/webpages'));
+    .pipe(gulp.dest(function(file) {
+      return file.base;
+    }));
+});
+
+/* userContent file with no addons */
+gulp.task('test', function() {
+  return gulp.src(['color_variables.css', 'common-files/*.css', 'userContent-files/*.css'])
+    .pipe(exec('sh remove_UUIDs.sh'))
+    .pipe(concatCss('userContent_no_addons.css'))
+    .pipe(gulp.dest('./alternative_user_files'));
 });
