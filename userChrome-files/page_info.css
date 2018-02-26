@@ -118,3 +118,46 @@
     }
   }
 }
+@-moz-document url-prefix(chrome://browser/content/preferences/cookies.xul) {
+  #CookiesDialog {
+    -moz-appearance: none!important;
+    background-color: var(--in-content-page-background)!important
+  }
+  #domainCol,
+  #nameCol {
+    -moz-appearance: none!important;
+    border: none!important
+  }
+  #domainCol {
+    border-right: 1px solid!important;
+    border-color: var(--in-content-box-border-color)!important
+  }
+  .windowDialog,
+  textbox {
+    color: var(--in-content-page-color)!important
+  }
+  textbox[type=search] {
+    -moz-appearance: none!important;
+    background-color: var(--in-content-box-background)!important;
+    border: 1px solid;
+    border-color: var(--in-content-box-border-color)!important;
+    border-radius: 3px!important;
+    padding: 2px 4px 2px 2px!important
+  }
+  #cookiesList {
+    -moz-appearance: none!important;
+    border: 1px solid!important;
+    border-color: var(--in-content-box-border-color)!important
+  }
+  button {
+    -moz-appearance: none!important;
+    background-color: var(--in-content-page-background)!important;
+    border: 1px solid!important;
+    border-radius: 3px!important;
+    color: var(--in-content-page-color)!important;
+    border-color: var(--in-content-box-border-color)!important
+  }
+  button:hover {
+    background-color: var(--in-content-box-background)!important
+  }
+}
