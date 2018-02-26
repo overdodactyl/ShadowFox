@@ -218,7 +218,7 @@ else
         "You are using the default colors set by ShadowFox." & vbNewLine & _
         "You can customize the colors used by editing colorOverrides.css."
     else
-      const replacePattern = "(\/\*! Begin color overrides \*\/)(.*)(\/\*! End color overrides \*\/)"
+      const replacePattern = "(--start-indicator-for-updater-scripts: black;)(.*)(--end-indicator-for-updater-scripts: black;)"
       dim replaceWith: replaceWith = "$1" & vbNewLine & colorOverrides & vbNewLine & "$3"
       chromeFileContent = regExNLReplace(chromeFileContent, replacePattern, replaceWith)
       contentFileContent = regExNLReplace(contentFileContent, replacePattern, replaceWith)
