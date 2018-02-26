@@ -80,10 +80,9 @@ gulp.task('publish', ['remove_UUIDs', 'minify_base_code', 'userChrome', 'userCon
     }));
 });
 
-/* userContent file with no addons */
-gulp.task('test', function() {
-  return gulp.src(['color_variables.css', 'common-files/*.css', 'userContent-files/*.css'])
-    .pipe(exec('sh remove_UUIDs.sh'))
-    .pipe(concatCss('userContent_no_addons.css'))
-    .pipe(gulp.dest('./alternative_user_files'));
+/* Gulp Push - used to push to GitHub and re-add internal UUIDs */
+gulp.task('push', function() {
+  return gulp.src('.')
+    .pipe(exec('git push'))
+    .pipe(exec('sh add_UUIDs.sh'))
 });
