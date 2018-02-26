@@ -1,81 +1,52 @@
-# What is ShadowFox?
+![header](Screenshots/header.png)
 
-ShadowFox is a collection of `userChrome.css` and `userContent.css` tweaks to supplement and expand the dark theme provided by Mozilla.
+ShadowFox was inspired by changes made in Firefox 57, which made it impossible for addons to customize both the user interface and "protected" web pages.
 
-# What modifications does ShadowFox make?
+This project aims at creating a universal dark theme for Firefox while adhering to the modern design principles set by Mozilla.
 
-All modifications can be split into two categories: (1) Changes to the user interface (`userChrome.css`) and (2) Changes to webpages (`userContent.css`).
+## Preview
 
-## userChrome tweaks
+![preferences](Screenshots/preview.png)
 
-Modification to the following items have been made to match the Firefox dark theme:
+ShadowFox styles the entire user interface, protected webpages (such as `about:` pages and addons.mozilla.org), and over 20 popular addons.
 
-* Sidebar
-* Library
-* Smart bar and search bar drop downs
-* Context menus
-* Menus accesssed from the nav bar
-* Customization page
-* Tab line and secure connection icon
-* About Firefox dialog box
-* Status panels
-* Remove white flash on page load
-* Findbar
+## Installation
 
-## userContent tweaks
+* Download the updater script from the [releases](https://github.com/overdodactyl/ShadowFox/releases) page for your operating system.
 
-#### about: pages
+* Place this script in your Firefox profile directory.
 
-All `about:` pages have been styled (e.g. `about:addons`, `about:preferences`, `about:config`, `about:profiles` etc.)
+  * Visit `about:support` by entering this address in the url bar.
 
-#### Webpages
+  * Scroll down to `Application Basics`.
 
-The following webpages have been styled to match the dark theme:
+  * In the `Profile Folder` section, click the button that says "Open Folder", "Show in Finder" or "Open Directory" (OS dependent).
 
-* addons.mozilla.org
-* `view-source` pages
-* manifest.json pages
-* Dierectory listing pages (`file:///`)
-* `https://raw.githubusercontent.com/...`
-* pdfs
+    * On Windows and Linux, this should take you directly to your profile directory. On a Mac, this will take you to a list of Firefox profiles, with the one you want highlighted. In this case, double click that folder to open it.
 
-#### Webextension Tweaks
+* Run the script.
 
-Themes for 20+ popular webextensions have been made.  By nature, these changes can not go into effect without user action.  To see what extensions have been styled, as well as how to make the changes go into effect, see [here](https://www.reddit.com/r/ShadowFoxCSS/comments/7yt5c0/test_post/).
+* Restart Firefox.
+
+***IMPORTANT***: Changes to webextensions do not go into effect by default. For more information, see [here](https://github.com/overdodactyl/ShadowFox/wiki/Altering-webextensions).
+
+## Updating
+
+* Run the updater script.
+
+## Customization
+
+It's easy to customize ShadowFox, everything from the colors used to what elements and webpages are styled.  Depending on how much you want to customize ShadowFox, you may be better suited using a different installation process.  To learn more, see [here](https://github.com/overdodactyl/ShadowFox/wiki/Getting-Started).
 
 
-# What do the changes look like?
+# Find a bug? Have a feature request? Have any questions?
 
-Here are just a few examples:
+Please first read through the [wiki](https://github.com/overdodactyl/ShadowFox/wiki/) (including the getting started information, troubleshooting, and known problems) and take a look at any open [issues](https://github.com/overdodactyl/ShadowFox/issues).  If you can't find a duplicate request, bug, or an answer to your question, please feel free to either:
 
-Context Menus and Sidebar                   | `about:` pages
-:------------------------------------------:| :------------------------------------------:                                         
-![dark_menus](Screenshots/contextmenus.png) | ![dark_menus](Screenshots/preferences.png)
+* Open a [new issue](https://github.com/overdodactyl/ShadowFox/issues/new)
 
-`view-source:` pages                        | Mozilla Addon Store
-:------------------------------------------:| :------------------------------------------:                                         
-![dark_menus](Screenshots/viewsource.png)   | ![dark_menus](Screenshots/addons.png)
+* Make a post on the ShadowFox [Reddit page](https://www.reddit.com/r/ShadowFoxCSS/).
 
-
-# How do I install/modify ShadowFox
-
-Please see [here](https://github.com/overdodactyl/ShadowFox/wiki).
-
-# Looking for more information or experiencing problems?
-
-Please take a look through the [wiki](https://github.com/overdodactyl/ShadowFox/wiki) and [Issues](https://github.com/overdodactyl/ShadowFox/issues?q=is%3Aopen) (both open and closed).  If you can't find what you need, don't hesitate to open up a new issue.  
-
-# Have a feature request?
-
-Please read through the current issues and search old ones.  If it doesn't already exist, feel free to ask!
-
-# Have a question or need help?
-
-Please be sure to read through the [wiki](https://github.com/overdodactyl/ShadowFox/wiki/), and any
-
-If your question is not addressed, please feel free to either:
-
-* Open a new
 
 # Contributing
 
