@@ -128,15 +128,16 @@ url(chrome://browser/content/pageinfo/pageInfo.xul) {
   treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
     background-color: var(--theme-selection-background-hover)!important
   }
+  tree {
+    background-color: var(--in-content-box-background)!important;
+    color: var(--in-content-page-color)!important
+  }
   treechildren::-moz-tree-cell-text(hover),
   treechildren::-moz-tree-cell-text(selected) {
     color: var(--in-content-text-color)!important
   }
   treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected) {
     background-color: var(--theme-selection-background)!important
-  }
-  tree {
-    background-color: var(--in-content-box-background)!important
   }
   treecol:not([hideheader=true]):not(:first-child),
   treecolpicker {
