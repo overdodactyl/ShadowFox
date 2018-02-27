@@ -238,6 +238,7 @@ url-prefix(https://discovery.addons.mozilla.org) {
     background-image: url(chrome://global/skin/in-content/check.svg)!important
   }
   #newtab-customize-overlay,
+  .exceptionDialogButtonContainer,
   html:not(#ublock0-epicker),
   html:not(#ublock0-epicker) body {
     background: var(--in-content-page-background)!important;
@@ -262,6 +263,7 @@ url-prefix(https://discovery.addons.mozilla.org) {
     color: var(--in-content-link-color-hover)!important
   }
   #action-box,
+  #badCertAdvancedPanel,
   #content div.log span.section-heading button.no-print:hover,
   #content div.stats span.section-heading button.no-print:hover,
   #contents table tbody tr td,
@@ -443,6 +445,7 @@ url-prefix(https://discovery.addons.mozilla.org) {
     border-color: var(--in-content-box-border-color)!important;
     color: var(--in-content-page-color)!important
   }
+  #badCertAdvancedPanel.advanced-panel,
   #content > div,
   .info-box-content,
   .notice,
@@ -1996,27 +1999,5 @@ url-prefix(https://discovery.addons.mozilla.org) {
   ::-moz-selection {
     color: var(--grey-30);
     background: var(--accent-2)
-  }
-}
-@-moz-document regexp("^(file:///).*[^(.html)]$") {
-  :root {
-    background-color: var(--mid-way-color)!important
-  }
-  body {
-    border: 1px solid!important;
-    background-color: var(--primary-dark-color)!important;
-    color: var(--primary-light-color)!important
-  }
-  h1 {
-    border-bottom: 1px solid!important
-  }
-  body > table > tbody > tr:hover {
-    outline: solid 1px!important
-  }
-  .dir,
-  .file,
-  .symlink,
-  .up {
-    color: var(--primary-accent-color)!important
   }
 }
