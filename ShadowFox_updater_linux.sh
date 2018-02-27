@@ -70,12 +70,12 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   fi
 
   # download latest ShadowFox userChrome.css
-  echo -e "downloading latest ShadowFox userChrome.css file"
-  curl -O ${userChrome} && echo "ShadowFox userChrome.css has been downloaded"
+  echo -e "Downloading latest ShadowFox userChrome.css file..."
+  curl -O ${userChrome} && echo "ShadowFox userChrome.css has been downloaded."
 
   # download latest ShadowFox userContent.css
-  echo -e "downloading latest ShadowFox userContent.css file"
-  curl -O ${userContent} && echo "ShadowFox userContent.css has been downloaded"
+  echo -e "Downloading latest ShadowFox userContent.css file..."
+  curl -O ${userContent} && echo "ShadowFox userContent.css has been downloaded."
 
   if [ -s ./ShadowFox_customization/internal_UUIDs.txt ]; then
     ## Insert any UUIDs defined in internal_UUIDs.txt into userContent.css
@@ -103,8 +103,8 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 
     echo -e "Your custom colors have been set."
   else
-    echo -e "You are using the default colors set by ShadowFox"
-    echo -e "You can customize the colors used by editing colorOverrides.css"
+    echo -e "You are using the default colors set by ShadowFox."
+    echo -e "You can customize the colors used by editing colorOverrides.css."
   fi
 
   if [ -s ./ShadowFox_customization/userContent_customization.css ]; then
