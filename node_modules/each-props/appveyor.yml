@@ -1,0 +1,24 @@
+# http://www.appveyor.com/docs/appveyor-yml
+# http://www.appveyor.com/docs/lang/nodejs-iojs
+
+environment:
+  matrix:
+    # node.js
+    - nodejs_version: "6"
+    - nodejs_version: "5"
+    - nodejs_version: "4"
+    - nodejs_version: "0.12"
+    - nodejs_version: "0.10"
+
+install:
+  - ps: Install-Product node $env:nodejs_version
+  - npm install
+
+test_script:
+  - node --version
+  - npm --version
+  - cmd: npm test
+
+build: off
+
+version: "{build}"
