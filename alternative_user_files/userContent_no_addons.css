@@ -113,7 +113,8 @@
   --in-content-dark-header-background: var(--tone-9)!important;
   --secure-connection-color: var(--accent-1);
   --start-indicator-for-updater-scripts: black;
-  --end-indicator-for-updater-scripts: black
+  --end-indicator-for-updater-scripts: black;
+  --dummy-variable-for-updater-scripys: black
 }
 @-moz-document url-prefix(about:),
 url-prefix(chrome://browser) {
