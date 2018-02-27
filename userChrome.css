@@ -114,6 +114,7 @@
   --secure-connection-color: var(--accent-1);
   --start-indicator-for-updater-scripts: black;
   --end-indicator-for-updater-scripts: black;
+  --dummy-variable-for-updater-scripys: black;
   --panel-separator-color: var(--in-content-border-color)!important;
   --tab-loading-fill: var(--in-content-category-text-selected)!important
 }
