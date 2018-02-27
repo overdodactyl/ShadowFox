@@ -22,13 +22,13 @@ cd "$(dirname "${sfp}")"
 
 echo "Updating userContent.css and userChrome.css for Firefox profile:\n$(pwd)\n"
 
-if [ -e userContent.css ]; then
+if [ -e chrome/userContent.css ]; then
   echo "Your current userContent.css file for this profile will be backed up and the latest ShadowFox version from github will take its place."
 else
   echo "A userContent.css file does not exist in this profile. If you continue, the latest ShadowFox version from github will be downloaded."
 fi
 
-if [ -e userChrome.css ]; then
+if [ -e chrome/userChrome.css ]; then
   echo "Your current userChrome.css file for this profile will be backed up and the latest ShadowFox version from github will take its place.\n"
 else
   echo "A userChrome.css file does not exist in this profile. If you continue, the latest ShadowFox version from github will be downloaded.\n"
@@ -70,11 +70,11 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   fi
 
   # download latest ShadowFox userChrome.css
-  echo "downloading latest ShadowFox userChrome.css file"
+  echo "Downloading latest ShadowFox userChrome.css file..."
   curl -O ${userChrome} && echo "\nShadowFox userChrome.css has been downloaded"
 
   # download latest ShadowFox userContent.css
-  echo "downloading latest ShadowFox userContent.css file"
+  echo "Downloading latest ShadowFox userContent.css file..."
   curl -O ${userContent} && echo "\nShadowFox userContent.css has been downloaded\n"
 
   if [ -s ./ShadowFox_customization/internal_UUIDs.txt ]; then
@@ -102,8 +102,8 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 
     echo "Your custom colors have been set.\n"
   else
-    echo "You are using the default colors set by ShadowFox"
-    echo "You can customize the colors used by editing colorOverrides.css\n"
+    echo "You are using the default colors set by ShadowFox."
+    echo "You can customize the colors used by editing colorOverrides.css.\n"
   fi
 
   if [ -s ./ShadowFox_customization/userContent_customization.css ]; then
