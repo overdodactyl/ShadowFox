@@ -238,6 +238,7 @@ url-prefix(https://discovery.addons.mozilla.org) {
     background-image: url(chrome://global/skin/in-content/check.svg)!important
   }
   #newtab-customize-overlay,
+  .exceptionDialogButtonContainer,
   html:not(#ublock0-epicker),
   html:not(#ublock0-epicker) body {
     background: var(--in-content-page-background)!important;
@@ -262,6 +263,7 @@ url-prefix(https://discovery.addons.mozilla.org) {
     color: var(--in-content-link-color-hover)!important
   }
   #action-box,
+  #badCertAdvancedPanel,
   #content div.log span.section-heading button.no-print:hover,
   #content div.stats span.section-heading button.no-print:hover,
   #contents table tbody tr td,
@@ -443,6 +445,7 @@ url-prefix(https://discovery.addons.mozilla.org) {
     border-color: var(--in-content-box-border-color)!important;
     color: var(--in-content-page-color)!important
   }
+  #badCertAdvancedPanel.advanced-panel,
   #content > div,
   .info-box-content,
   .notice,
