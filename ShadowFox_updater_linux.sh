@@ -7,7 +7,7 @@
 userChrome="https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/userChrome.css"
 userContent="https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/userContent.css"
 
-echo -e "\nThis script should be run from inside your Firefox profile.\n"
+echo -e "This script should be run from inside your Firefox profile."
 
 currdir=$(pwd)
 
@@ -20,18 +20,18 @@ if [ -z "$sfp" ]; then sfp=${BASH_SOURCE[0]}; fi
 ## change directory to the Firefox profile directory
 cd "$(dirname "${sfp}")"
 
-echo -e "\nUpdating userContent.css and userChrome.css for Firefox profile:\n$(pwd)\n"
+echo -e "Updating userContent.css and userChrome.css for Firefox profile:\n$(pwd)"
 
 if [ -e chrome/userContent.css ]; then
-  echo -e "\nYour current userContent.css file for this profile will be backed up and the latest ShadowFox version from github will take its place.\n"
+  echo -e "Your current userContent.css file for this profile will be backed up\nand the latest ShadowFox version from github will take its place."
 else
-  echo -e "\nA userContent.css file does not exist in this profile. If you continue, the latest ShadowFox version from github will be downloaded.\n"
+  echo -e "A userContent.css file does not exist in this profile.\nIf you continue, the latest ShadowFox version from github will be downloaded."
 fi
 
 if [ -e chrome/userChrome.css ]; then
-  echo -e "\nYour current userChrome.css file for this profile will be backed up and the latest ShadowFox version from github will take its place.\n"
+  echo -e "Your current userChrome.css file for this profile will be backed up\nand the latest ShadowFox version from github will take its place."
 else
-  echo -e "\nA userChrome.css file does not exist in this profile. If you continue, the latest ShadowFox version from github will be downloaded.\n"
+  echo -e "A userChrome.css file does not exist in this profile.\nIf you continue, the latest ShadowFox version from github will be downloaded."
 fi
 
 read -p "Continue Y/N? " -n 1 -r
@@ -70,11 +70,11 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   fi
 
   # download latest ShadowFox userChrome.css
-  echo -e "\ndownloading latest ShadowFox userChrome.css file\n"
+  echo -e "downloading latest ShadowFox userChrome.css file"
   curl -O ${userChrome} && echo "ShadowFox userChrome.css has been downloaded"
 
   # download latest ShadowFox userContent.css
-  echo -e "\ndownloading latest ShadowFox userContent.css file\n"
+  echo -e "downloading latest ShadowFox userContent.css file"
   curl -O ${userContent} && echo "ShadowFox userContent.css has been downloaded"
 
   if [ -s ./ShadowFox_customization/internal_UUIDs.txt ]; then
@@ -83,12 +83,12 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
         IFS='=' read -r -a array <<< "$line"
         sed -i "s/${array[0]}/${array[1]}/" "userContent.css"
     done < "./ShadowFox_customization/internal_UUIDs.txt"
-    echo -e "\nYour internal UUIDs have been inserted.\n"
+    echo -e "Your internal UUIDs have been inserted."
   else
-    echo -e "\nYou have not defined any internal UUIDs for webextensions.\n"
-    echo -e "\nIf you choose not to do so, webextensions will not be styled with a dark theme and may have compatibility issues in about:addons.\n"
-    echo -e "\nFor more information, see here:\n"
-    echo -e "\nhttps://github.com/overdodactyl/ShadowFox/wiki/Altering-webextensions\n"
+    echo -e "You have not defined any internal UUIDs for webextensions."
+    echo -e "If you choose not to do so, webextensions will not be styled with a dark theme and may have compatibility issues in about:addons."
+    echo -e "For more information, see here:"
+    echo -e "https://github.com/overdodactyl/ShadowFox/wiki/Altering-webextensions"
   fi
 
   if [ -s ./ShadowFox_customization/colorOverrides.css ]; then
@@ -101,32 +101,32 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     sed -i '/--start-indicator-for-updater-scripts: black;/ r ./ShadowFox_customization/colorOverrides.css' userChrome.css
 
 
-    echo -e "\nYour custom colors have been set.\n"
+    echo -e "Your custom colors have been set."
   else
-    echo -e "\nYou are using the default colors set by ShadowFox\n"
-    echo -e "\nYou can customize the colors used by editing colorOverrides.css\n"
+    echo -e "You are using the default colors set by ShadowFox"
+    echo -e "You can customize the colors used by editing colorOverrides.css"
   fi
 
   if [ -s ./ShadowFox_customization/userContent_customization.css ]; then
     ## Append tweaks to the end of userContent.css
     cat ./ShadowFox_customization/userContent_customization.css >> userContent.css
-    echo -e "\nYour custom userContent.css tweaks have been applied.\n"
+    echo -e "Your custom userContent.css tweaks have been applied."
   else
-    echo -e "\nYou do not have any custom userContent.css tweaks.\n"
-    echo -e "\nYou can customize userContent.css using userContent_customization.css.\n"
+    echo -e "You do not have any custom userContent.css tweaks."
+    echo -e "You can customize userContent.css using userContent_customization.css."
   fi
 
   if [ -s ./ShadowFox_customization/userChrome_customization.css ]; then
     ## Append tweaks to the end of userContent.css
     cat ./ShadowFox_customization/userChrome_customization.css >> userChrome.css
-    echo -e "\nYour custom userChrome.css tweaks have been applied.\n"
+    echo -e "Your custom userChrome.css tweaks have been applied."
   else
-    echo -e "\nYou do not have any custom userChrome.css tweaks.\n"
-    echo -e "\nYou can customize userChrome.css using userChrome_customization.css.\n"
+    echo -e "You do not have any custom userChrome.css tweaks."
+    echo -e "You can customize userChrome.css using userChrome_customization.css."
   fi
 
 else
-  echo -e "\nProcess aborted\n"
+  echo -e "Process aborted"
 fi
 
 
