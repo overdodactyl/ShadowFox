@@ -22,13 +22,13 @@ cd "$(dirname "${sfp}")"
 
 echo -e "\nUpdating userContent.css and userChrome.css for Firefox profile:\n$(pwd)\n"
 
-if [ -e userContent.css ]; then
+if [ -e chrome/userContent.css ]; then
   echo -e "\nYour current userContent.css file for this profile will be backed up and the latest ShadowFox version from github will take its place.\n"
 else
   echo -e "\nA userContent.css file does not exist in this profile. If you continue, the latest ShadowFox version from github will be downloaded.\n"
 fi
 
-if [ -e userChrome.css ]; then
+if [ -e chrome/userChrome.css ]; then
   echo -e "\nYour current userChrome.css file for this profile will be backed up and the latest ShadowFox version from github will take its place.\n"
 else
   echo -e "\nA userChrome.css file does not exist in this profile. If you continue, the latest ShadowFox version from github will be downloaded.\n"
