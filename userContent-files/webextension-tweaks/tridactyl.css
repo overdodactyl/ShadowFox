@@ -1,8 +1,19 @@
 /*! Alters the webextension Tridactyl
   IMPORTANT: change the Internal UUID */
 @-moz-document url-prefix("moz-extension://tridactyl_UUID/") {
+  .container-main,
+  body,
   html {
     background: var(--in-content-page-background)!important
+  }
+  .tsd-panel {
+    background: var(--in-content-box-background)!important
+  }
+  .tsd-page-title,
+  .tsd-page-toolbar,
+  footer {
+    background: var(--in-content-category-header-background)!important;
+    border-color: var(--in-content-category-header-background)!important
   }
   body {
     color: var(--tone-4)!important
