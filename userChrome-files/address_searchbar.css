@@ -15,11 +15,11 @@
 .autocomplete-tree {
   border-bottom-color: var(--in-content-page-color)!important
 }
-#PopupSearchAutoComplete,
-.autocomplete-richlistitem .ac-action,
-.autocomplete-richlistitem .ac-separator,
-.autocomplete-richlistitem .ac-title,
-.autocomplete-tree {
+popupset#mainPopupSet panel#PopupAutoCompleteRichResult,
+popupset#mainPopupSet panel#PopupAutoCompleteRichResult .autocomplete-richlistitem .ac-action,
+popupset#mainPopupSet panel#PopupAutoCompleteRichResult .autocomplete-richlistitem .ac-separator,
+popupset#mainPopupSet panel#PopupAutoCompleteRichResult .autocomplete-richlistitem .ac-title,
+popupset#mainPopupSet panel#PopupAutoCompleteRichResult .autocomplete-tree {
   color: var(--in-content-page-color)!important
 }
 .autocomplete-richlistitem[selected=true],
@@ -54,8 +54,8 @@ panel[type=autocomplete] {
   color: var(--in-content-page-color)!important;
   background: var(--in-content-page-color)!important
 }
-.autocomplete-richlistitem:hover,
 .searchbar-treebody::-moz-tree-row(hover),
+popupset#mainPopupSet panel#PopupAutoCompleteRichResult .autocomplete-richlistitem:hover,
 treechildren.searchbar-treebody::-moz-tree-row(hover) {
   background-color: var(--in-content-page-background)!important
 }
