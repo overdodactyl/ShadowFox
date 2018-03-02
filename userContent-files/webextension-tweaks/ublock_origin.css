@@ -1,6 +1,96 @@
 /*! Alters the webextension uBlock Origin
   IMPORTANT: change the Internal UUID */
 @-moz-document url-prefix("moz-extension://ublock_origin_UUID/") {
+  .CodeMirror {
+    border: 1px solid!important;
+    border-color: var(--tone-5)!important;
+    border-radius: 4px!important;
+    background: #2a2a2e!important;
+    color: #b1b1b3!important
+  }
+  div.CodeMirror-selected {
+    background: #353b48!important
+  }
+  .CodeMirror-line > span > span::selection,
+  .CodeMirror-line > span::selection,
+  .CodeMirror-line::selection {
+    background: #353b48!important
+  }
+  .CodeMirror-line > span > span::-moz-selection,
+  .CodeMirror-line > span::-moz-selection,
+  .CodeMirror-line::-moz-selection {
+    background: #353b48!important
+  }
+  .CodeMirror-gutters {
+    background: var(--tone-9)!important;
+    border-right: 0 solid #4a4a4f!important
+  }
+  .CodeMirror-guttermarker,
+  .CodeMirror-guttermarker-subtle {
+    color: #555!important
+  }
+  .CodeMirror-linenumber {
+    color: #939393!important
+  }
+  .CodeMirror-cursor {
+    border-left: 1px solid #fff!important
+  }
+  span.cm-comment {
+    color: #dea174!important
+  }
+  span.cm-atom,
+  span.cm-attribute,
+  span.cm-builtin,
+  span.cm-error,
+  span.cm-keyword,
+  span.cm-quote {
+    color: #ff7de9!important
+  }
+  span.cm-number,
+  span.cm-string,
+  span.cm-string-2 {
+    color: #6b89ff!important
+  }
+  span.cm-hr,
+  span.cm-meta {
+    color: #939393!important
+  }
+  span.cm-header,
+  span.cm-qualifier,
+  span.cm-variable-2 {
+    color: #75bfff!important
+  }
+  span.cm-property {
+    color: #86de74!important
+  }
+  span.cm-bracket,
+  span.cm-def,
+  span.cm-link:visited,
+  span.cm-tag {
+    color: #75bfff!important
+  }
+  span.cm-variable {
+    color: #b98eff!important
+  }
+  span.cm-variable-3 {
+    color: #d7d7db!important
+  }
+  span.cm-link {
+    color: #737373!important
+  }
+  span.cm-operator {
+    color: #b1b1b3!important
+  }
+  span.cm-special {
+    color: #d7d7db!important
+  }
+  .CodeMirror-activeline-background {
+    background: rgba(185,215,253,.15)!important
+  }
+  .CodeMirror-matchingbracket {
+    outline: rgba(255,255,255,.25) solid 1px!important;
+    color: #fff!important
+  }
   #appinfo {
     background-color: var(--tone-8)!important;
     color: var(--tone-4)!important
@@ -133,8 +223,8 @@
   .tabButton {
     background-color: var(--tone-7)!important;
     color: var(--tone-4)!important;
-    border-color: var(--tone-5)!important;
-    border-bottom: 1px solid!important
+    border-bottom: 1px solid!important;
+    border-color: var(--tone-5)!important
   }
   .tabButton.selected {
     background-color: var(--tone-8)!important;
@@ -143,6 +233,8 @@
   input[type=number] {
     -moz-appearance: none!important;
     background-color: var(--tone-6)!important;
+    border: 1px solid!important;
+    border-color: var(--tone-5)!important;
     color: var(--tone-4)!important
   }
   li.listEntry .content {
@@ -167,7 +259,9 @@
   textarea#userFilters.userFilters {
     -moz-appearance: none!important;
     background: var(--tone-6)!important;
-    color: var(--tone-4)!important
+    color: var(--tone-4)!important;
+    border: 1px solid!important;
+    border-color: var(--tone-4)!important
   }
   .permatoolbar {
     background-color: var(--tone-7)!important
