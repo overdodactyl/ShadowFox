@@ -28,4 +28,12 @@ url-prefix(chrome://browser) {
     -moz-context-properties: fill,stroke;
     stroke: none
   }
+  html body div.ancillary div div.opsRow div.opsRowLabel label input,
+  html body div.ancillary div div.opsRow div.opsRowLabel label input#verbose {
+    -moz-appearance: checkbox!important;
+    min-height: 10px!important;
+    min-width: 10px!important;
+    margin-top: -5px;
+    margin-bottom: -1px
+  }
 }
