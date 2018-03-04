@@ -146,6 +146,14 @@ url-prefix(chrome://browser) {
     -moz-context-properties: fill,stroke;
     stroke: none
   }
+  html body div.ancillary div div.opsRow div.opsRowLabel label input,
+  html body div.ancillary div div.opsRow div.opsRowLabel label input#verbose {
+    -moz-appearance: checkbox!important;
+    min-height: 10px!important;
+    min-width: 10px!important;
+    margin-top: -5px;
+    margin-bottom: -1px
+  }
 }
 @-moz-document url-prefix(about:),
 url-prefix(chrome://browser/content/preferences/),
@@ -1430,6 +1438,9 @@ url-prefix(https://discovery.addons.mozilla.org) {
   }
   h1::before {
     background: var(--tone-4)!important
+  }
+  #tabs img[src="https://assets-cdn.github.com/favicon.ico"] {
+    filter: invert(55%)!important
   }
 }
 /*! Alters the webextension Tridactyl

@@ -45,4 +45,7 @@
   h1::before {
     background: var(--tone-4)!important
   }
+  #tabs img[src="https://assets-cdn.github.com/favicon.ico"] {
+    filter: invert(55%)!important
+  }
 }
