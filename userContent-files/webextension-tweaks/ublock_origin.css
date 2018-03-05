@@ -21,7 +21,12 @@
     background: #353b48!important
   }
   .cm-search-widget {
-    background-color: var(--tone-9)!important
+    background-color: var(--tone-9)!important;
+    border: 1px solid;
+    border-bottom: none!important;
+    border-color: var(--tone-5)!important;
+    max-height: 15px!important;
+    justify-content: right!important
   }
   .cm-search-widget input {
     -moz-appearance: none!important;
@@ -35,8 +40,9 @@
   .cm-searching {
     background-color: var(--warning-background-color)!important
   }
-  .cm-search-widget .fa {
-    color: var(--tone-6)!important
+  html body div#userFilters.codeMirrorContainer div div.cm-search-widget span.fa {
+    color: var(--tone-6)!important;
+    font-size: 100%!important
   }
   .CodeMirror-gutters {
     background: var(--tone-9)!important;
@@ -60,6 +66,20 @@
   }
   .cm-staticnet.cm-allow {
     color: var(--theme-highlight-green)!important
+  }
+  button.custom {
+    background-color: var(--in-content-page-background)!important;
+    background-image: none!important;
+    border-color: var(--in-content-box-border-color)!important;
+    color: var(--in-content-text-color)!important;
+    opacity: 1!important
+  }
+  button.custom:hover {
+    background-color: var(--in-content-box-background-hover)!important
+  }
+  button.custom.disabled,
+  button.custom[disabled] {
+    opacity: .5!important
   }
   #appinfo {
     background-color: var(--tone-8)!important;
@@ -295,5 +315,19 @@
   #netInspector tr.maindoc {
     background-color: var(--tone-8)!important;
     color: var(--grey-30)!important
+  }
+  li.listEntry span.failed,
+  li.listEntry span.unsecure {
+    color: #de7474!important
+  }
+  a.fa.support,
+  a.mustread {
+    color: var(--in-content-page-color)!important
+  }
+  li.listEntry.mustread > a.mustread:hover {
+    color: var(--accent-2)!important
+  }
+  li.listEntry span.obsolete {
+    color: var(--warning-color)!important
   }
 }
