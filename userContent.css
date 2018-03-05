@@ -1514,6 +1514,9 @@ url-prefix(https://discovery.addons.mozilla.org) {
   .CodeMirror-line::-moz-selection {
     background: #353b48!important
   }
+  .CodeMirror-activeline-background {
+    background: rgba(185,215,253,.15)!important
+  }
   .cm-search-widget {
     background-color: var(--tone-9)!important;
     border: 1px solid;
@@ -1555,10 +1558,10 @@ url-prefix(https://discovery.addons.mozilla.org) {
   .cm-staticext {
     color: var(--theme-highlight-blue)!important
   }
-  .cm-staticnet.cm-block {
+  .cm-staticnetBlock {
     color: #de7474!important
   }
-  .cm-staticnet.cm-allow {
+  .cm-staticnetAllow {
     color: var(--theme-highlight-green)!important
   }
   button.custom {
