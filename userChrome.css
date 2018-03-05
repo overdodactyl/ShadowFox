@@ -923,6 +923,7 @@ toolbar[brighttext] {
 #navigator-toolbox::after {
   border-bottom: 0!important
 }
+#browser vbox#appcontent tabbrowser,
 #content,
 browser[type=content-primary],
 browser[type=content] > html {
