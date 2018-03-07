@@ -7,4 +7,16 @@
   label {
     color: var(--tone-4)!important
   }
+  .title {
+    color: var(--in-content-page-color)!important;
+    background-color: var(--in-content-category-header-background)!important
+  }
+  textarea {
+    color: var(--in-content-page-color)!important;
+    background-color: var(--in-content-box-background)!important;
+    border: none!important
+  }
+  .highlight {
+    background-color: var(--in-content-box-border-color)!important
+  }
 }
