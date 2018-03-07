@@ -46,6 +46,16 @@ url-prefix(https://discovery.addons.mozilla.org) {
   input[type=checkbox]:checked {
     background-image: url(chrome://global/skin/in-content/check.svg)!important
   }
+  .contentSearchSuggestionsList {
+    background-color: var(--in-content-box-background)!important;
+    border: none!important
+  }
+  .contentSearchHeader,
+  .contentSearchOneOffsTable {
+    background-color: var(--in-content-category-header-background)!important;
+    border: none!important;
+    color: var(--in-content-text-color)!important
+  }
   #newtab-customize-overlay,
   .exceptionDialogButtonContainer,
   html:not(#ublock0-epicker),
