@@ -15,13 +15,13 @@
 .autocomplete-tree {
   border-bottom-color: var(--in-content-page-color)!important
 }
+#PopupSearchAutoComplete tree,
 popupset#mainPopupSet panel#PopupAutoCompleteRichResult,
 popupset#mainPopupSet panel#PopupAutoCompleteRichResult .autocomplete-richlistitem .ac-action,
 popupset#mainPopupSet panel#PopupAutoCompleteRichResult .autocomplete-richlistitem .ac-separator,
 popupset#mainPopupSet panel#PopupAutoCompleteRichResult .autocomplete-richlistitem .ac-title,
-popupset#mainPopupSet panel#PopupAutoCompleteRichResult .autocomplete-tree,
-#PopupSearchAutoComplete tree {
-  color: var(--in-content-page-color)!important;
+popupset#mainPopupSet panel#PopupAutoCompleteRichResult .autocomplete-tree {
+  color: var(--in-content-page-color)!important
 }
 .autocomplete-richlistitem[selected=true],
 .searchbar-treebody::-moz-tree-row(selected) {

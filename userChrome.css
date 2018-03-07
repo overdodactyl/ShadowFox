@@ -223,6 +223,7 @@ url(chrome://browser/content/pageinfo/pageInfo.xul) {
 .autocomplete-tree {
   border-bottom-color: var(--in-content-page-color)!important
 }
+#PopupSearchAutoComplete tree,
 popupset#mainPopupSet panel#PopupAutoCompleteRichResult,
 popupset#mainPopupSet panel#PopupAutoCompleteRichResult .autocomplete-richlistitem .ac-action,
 popupset#mainPopupSet panel#PopupAutoCompleteRichResult .autocomplete-richlistitem .ac-separator,
@@ -260,7 +261,7 @@ popupset#mainPopupSet panel#PopupAutoCompleteRichResult .autocomplete-tree {
 panel[type=autocomplete-richlistbox],
 panel[type=autocomplete] {
   color: var(--in-content-page-color)!important;
-  background: var(--in-content-page-color)!important
+  background: var(--in-content-box-background)!important
 }
 .searchbar-treebody::-moz-tree-row(hover),
 popupset#mainPopupSet panel#PopupAutoCompleteRichResult .autocomplete-richlistitem:hover,
