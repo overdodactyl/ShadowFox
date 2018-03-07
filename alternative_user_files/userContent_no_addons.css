@@ -251,7 +251,8 @@ url-prefix(https://discovery.addons.mozilla.org) {
     border: none!important
   }
   .contentSearchHeader,
-  .contentSearchOneOffsTable {
+  .contentSearchOneOffsTable,
+  .contentSearchSettingsButton {
     background-color: var(--in-content-category-header-background)!important;
     border: none!important;
     color: var(--in-content-text-color)!important
