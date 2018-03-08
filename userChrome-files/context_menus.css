@@ -166,3 +166,8 @@ screen and (-moz-os-version:windows-win10) {
     margin-right: 0!important
   }
 }
+
+/* Remove padding in context menu */
+.popup-internal-box {
+	padding: 0px 0 !important;
+}
