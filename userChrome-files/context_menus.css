@@ -42,10 +42,8 @@ menuitem:hover[disabled=true] {
   color: var(--in-content-box-border-color)!important;
   background-color: var(--in-content-category-header-background)!important
 }
-menu[_moz-menuactive=true],
-menuitem:hover,
 menuitem[_moz-menuactive=true],
-menupopup menu:hover {
+menupopup menu[_moz-menuactive=true] {
   color: var(--in-content-selected-text)!important;
   background-color: var(--in-content-category-header-background)!important
 }
@@ -97,7 +95,7 @@ screen and (-moz-os-version:windows-win10) {
   menupopup#tabContextMenu menupopup,
   menupopup#toolbar-context-menu,
   toolbaritem#menubar-items menupopup {
-    border-color: var(--in-content-page-color)!important;
+    border-color: var(--in-content-box-background)!important;
     border-width: 1px!important;
     border-style: solid!important
   }

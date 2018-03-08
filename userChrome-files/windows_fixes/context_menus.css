@@ -27,7 +27,7 @@ menupopup#tabContextMenu,
 menupopup#tabContextMenu menupopup,
 menupopup#toolbar-context-menu,
 toolbaritem#menubar-items menupopup {
-  border-color: var(--in-content-page-color)!important;
+  border-color: var(--in-content-box-background)!important;
   border-width: 1px!important;
   border-style: solid!important
 }
