@@ -39,11 +39,12 @@
     background-color: var(--theme-selection-background-hover)!important;
     border-bottom: 1px solid!important
   }
-  #sidebarContainer {
-    background-color: var(--in-content-table-header-background)!important
+  #sidebarContainer,
+  #sidebarContent {
+    background-color: var(--in-content-page-background)!important
   }
   #toolbarSidebar {
-    background-color: var(--in-content-table-header-background)!important;
+    background-color: var(--in-content-category-header-background)!important;
     background-image: none!important;
     border-color: var(--in-content-box-background)!important
   }
