@@ -81,6 +81,12 @@
     background: var(--tone-7)!important;
     color: var(--tone-4)!important
   }
+
+    /* Remove line between "Edit Containers" and "+" */
+.edit-containers-text {
+	border-inline-end: solid 0px #d8d8d8 !important;
+  }
+  
 }
 /*! Alters the webextension Multi-Account Containers
   IMPORTANT: change the Internal UUID in BOTH locations */
