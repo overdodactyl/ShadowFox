@@ -1130,6 +1130,9 @@ url-prefix(https://discovery.addons.mozilla.org) {
     background: var(--tone-7)!important;
     color: var(--tone-4)!important
   }
+  .edit-containers-text {
+    border-inline-end: solid 0 #d8d8d8!important
+  }
 }
 /*! Alters the webextension Multi-Account Containers
   IMPORTANT: change the Internal UUID in BOTH locations */
