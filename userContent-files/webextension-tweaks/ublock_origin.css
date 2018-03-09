@@ -145,38 +145,45 @@
   }
   #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action.own.block,
   body.advancedUser #firewallContainer > div > span.blockRule.ownRule {
-    background-color: #ab0000!important
+    background-color: #ab0000!important;
+    color: var(--tone-2)!important
   }
   #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action > span.block,
   body.advancedUser #firewallContainer > div > span.blockRule {
-    background-color: #dda0a2!important
+    background-color: #dda0a2!important;
+    color: var(--tone-2)!important
   }
   #firewallContainer > div.blocked > span:first-of-type::before,
   #firewallContainer.minimized > div.isDomain.totalBlocked > span:first-of-type::before {
     background-color: #c87576!important;
-    opacity: 1!important
+    opacity: 1!important color: var(--tone-2)!important
   }
   #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action.own.allow,
   body.advancedUser #firewallContainer > div > span.allowRule.ownRule {
-    background-color: #229400!important
+    background-color: #229400!important;
+    color: var(--tone-2)!important
   }
   #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action > span.allow,
   body.advancedUser #firewallContainer > div > span.allowRule {
-    background-color: #95ca8a!important
+    background-color: #95ca8a!important;
+    color: var(--tone-2)!important
   }
   #firewallContainer > div.allowed > span:first-of-type::before,
   #firewallContainer.minimized > div.isDomain.totalAllowed > span:first-of-type::before {
     background-color: #7ec26f!important;
+    color: var(--tone-2)!important;
     opacity: 1!important
   }
   #actionSelector > span:nth-of-type(2),
   #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action.own.noop,
   body.advancedUser #firewallContainer > div > span.noopRule.ownRule {
-    background-color: #0c46a7!important
+    background-color: #0c46a7!important;
+    color: var(--tone-2)!important
   }
   #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action > span.noop,
   body.advancedUser #firewallContainer > div > span.noopRule {
-    background-color: #65bdfb!important
+    background-color: #65bdfb!important;
+    color: var(--tone-2)!important
   }
   #firewallContainer > div.allowed.blocked > span:first-of-type::before,
   #firewallContainer.minimized > div.isDomain.totalAllowed.totalBlocked > span:first-of-type::before {
