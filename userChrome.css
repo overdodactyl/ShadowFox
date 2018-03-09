@@ -355,9 +355,10 @@ popup > menu > menupopup {
 .menu-right {
   filter: invert(95%)!important
 }
-#context-navigation menuitem {
+#context-navigation menuitem,
+.panel-arrowcontent {
   color: var(--in-content-selected-text)!important;
-  background: var(--in-content-page-background)!important
+  background: var(--in-content-box-background)!important
 }
 #context-navigation menuitem:hover {
   background: var(--in-content-category-header-background)!important
@@ -380,20 +381,16 @@ menuitem[disabled=true] {
 menu[disabled=true]:hover,
 menuitem:hover[disabled=true] {
   color: var(--in-content-box-border-color)!important;
-  background-color: var(--in-content-page-background)!important
+  background-color: var(--in-content-box-background)!important
 }
 #context-navigation menuitem:hover[disabled=true] {
   color: var(--in-content-box-border-color)!important;
-  background-color: var(--in-content-category-header-background)!important
+  background-color: var(--in-content-box-background)!important
 }
 menuitem[_moz-menuactive=true],
 menupopup menu[_moz-menuactive=true] {
   color: var(--in-content-selected-text)!important;
   background-color: var(--in-content-category-header-background)!important
-}
-.panel-arrowcontent {
-  color: var(--in-content-selected-text)!important;
-  background: var(--in-content-box-background)!important
 }
 vbox#sidebar-box.chromeclass-extrachrome {
   border-color: var(--in-content-category-header-background)!important;
