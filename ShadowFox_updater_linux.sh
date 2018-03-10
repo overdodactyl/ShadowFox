@@ -2,10 +2,11 @@
 
 ### ShadowFox updater for Linux
 ## author: @overdodactyl
-## version: 1.1
+## version: 1.2
 
 userChrome="https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/userChrome.css"
 userContent="https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/userContent.css"
+uuid_finder="https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/internal_UUID_finder.sh"
 
 echo -e "This script should be run from inside your Firefox profile."
 
@@ -76,6 +77,32 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   # download latest ShadowFox userContent.css
   echo -e "Downloading latest ShadowFox userContent.css file..."
   curl -O ${userContent} && echo "ShadowFox userContent.css has been downloaded."
+
+  echo -e "Would you like to auto-generate an internal_UUIDs.txt file based on your downloaded extensions?"
+  echo -e "If you do so, your current file will be backed up."
+  echo -e "WARNING: this step requires bash 4 to be installed.\n"
+
+  read -p "Y/N? " -n 1 -r
+  echo -e "\n\n"
+
+  if [[ $REPLY =~ ^[Yy]$ ]]; then
+    # backup current internal_UUIDs.txt file
+    if [ -s ./ShadowFox_customization/internal_UUIDs.txt ]; then
+      bakfile="internal_UUIDs.backup.$(date +"%Y-%m-%d_%H%M%S")"
+      mv ./ShadowFox_customization/internal_UUIDs.txt "chrome_backups/${bakfile}" && echo "Your previous internal_UUIDs.txt file was backed up: ${bakfile}"
+    fi
+    # download latest version of internal_UUID_finder.sh
+    echo "Downloading latest internal_UUID_finder.sh file..."
+    curl -o ./ShadowFox_customization/internal_UUID_finder.sh ${uuid_finder} && echo -e "\ninternal_UUID_finder.sh has been downloaded"
+
+    # make internal_UUID_finder executable
+    chmod +x ShadowFox_customization/internal_UUID_finder.sh
+
+    # execute file
+    ShadowFox_customization/internal_UUID_finder.sh
+    echo "internal_UUIDs.txt has been generated based on your downloaded extensions."
+  fi
+
 
   if [ -s ./ShadowFox_customization/internal_UUIDs.txt ]; then
     ## Insert any UUIDs defined in internal_UUIDs.txt into userContent.css
