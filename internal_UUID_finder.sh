@@ -1,5 +1,9 @@
 #!/usr/local/bin/bash
 
+### UUID finder for Mac
+## author: @overdodactyl
+## version: 1.0
+
 declare -A styled=( ["brief@mozdev.org"]="brief"
                     ["CookieAutoDelete@kennydo.com"]="cookie_autodelete"
                     ["{174b2d58-b983-4501-ab4b-07e71203cb43}"]="dark_mode"
@@ -41,6 +45,6 @@ for i in "${EXTS[@]}"; do
     uuid=${uuid%$suffix}
     if test "${styled[$id]+isset}"
     then
-        echo "${styled[$id]}=$uuid" >> 'ShadowFox_customization/internal_UUIDs.txt'
+        echo "${styled[$id]}_UUID=$uuid" >> 'ShadowFox_customization/internal_UUIDs.txt'
     fi;
 done
