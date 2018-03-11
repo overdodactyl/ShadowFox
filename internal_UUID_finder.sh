@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#!/usr/bin/env bash
 
 ### UUID finder for Mac
 ## author: @overdodactyl
@@ -25,25 +25,13 @@ declare -A styled=( ["brief@mozdev.org"]="brief"
                     ["vim-vixen@i-beam.org"]="vim_vixen"
                   )
 
-line=$(sed -n -e '/^user_pref("extensions.webextensions.uuids"/p' ../prefs.js)
-
-## Remove prefix and suffix
-prefix='user_pref("extensions.webextensions.uuids", "{'
-suffix='}");'
-line=${line#$prefix}
-line=${line%$suffix}
-prefix='\\"'
-suffix='\\"'
+line=$(sed -n -e 's/^user_pref("extensions.webextensions.uuids", "{\(.*\).*}");/\1/p' ../prefs.js)
 
 IFS=',' read -ra EXTS <<< "$line"
 for i in "${EXTS[@]}"; do
-    id=${i%:*}
-    uuid=${i#*:}
-    id=${id#$prefix}
-    id=${id%$suffix}
-    uuid=${uuid#$prefix}
-    uuid=${uuid%$suffix}
-    if test "${styled[$id]+isset}"
+    id=$(echo $i | sed -n 's/.*"\(.*\)\\":.*/\1/p')
+    uuid=$(echo $i | sed -n 's/.*"\(.*\)\\".*/\1/p')
+    if [[ -n "${styled[$id]}" ]]
     then
         echo "${styled[$id]}_UUID=$uuid" >> 'ShadowFox_customization/internal_UUIDs.txt'
     fi;

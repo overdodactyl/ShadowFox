@@ -8,6 +8,7 @@ userChrome="https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/user
 userContent="https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/userContent.css"
 uuid_finder="https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/internal_UUID_finder.sh"
 updater="https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/ShadowFox_updater_linux.sh"
+script_filename="$(basename $0)"
 
 currdir=$(pwd)
 
@@ -22,7 +23,7 @@ cd "$(dirname "${sfp}")"
 
 ## Check if there's a newwer version of the updater script available
 online_version="$(curl -s ${updater} | sed -n '5p')"
-current_version="$(sed '5q;d' ShadowFox_updater_mac.sh)"
+current_version="$(sed '5q;d' ${script_filename})"
 
 ## Remove prefix
 prefix='## version: '
@@ -31,13 +32,13 @@ current_version=${current_version#$prefix}
 
 if (( $(echo "$online_version > $current_version" | bc -l) )); then
   echo -e "There is a new updater script available online.  It will replace this one and be executed.\n"
-  mv ShadowFox_updater_mac.sh old_updater.sh
+  mv ${script_filename} old_updater.sh
   curl -O ${updater} && echo -e "\nThe latest updater script has been downloaded\n"
   # make new file executable
-  chmod +x ShadowFox_updater_mac.sh
+  chmod +x ${script_filename}
 
   # execute new updater script
-  ./ShadowFox_updater_mac.sh
+  ./${script_filename}
 
   # exit script
   exit 1
