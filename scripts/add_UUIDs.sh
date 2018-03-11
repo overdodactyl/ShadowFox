@@ -16,11 +16,11 @@ sfp=$(readlink -f "${BASH_SOURCE[0]}" 2>/dev/null || greadlink -f "${BASH_SOURCE
 if [ -z "$sfp" ]; then sfp=${BASH_SOURCE[0]}; fi
 
 ## change directory to the Firefox profile directory
-cd "$(dirname "${sfp}")"
+cd "$(dirname "${sfp}")" && cd ..
 
 ## Insert any UUIDs defined in internal_UUIDs.txt into userContent.css
 while IFS='' read -r line || [[ -n "$line" ]]; do
     IFS='=' read -r -a array <<< "$line"
     webextension_name=${array[0]%_UUID}
-    sed -i '' "s/${array[0]}/${array[1]}/" "userContent-files/webextension-tweaks/${webextension_name}.css"
+    sed -i '' "s/${array[0]}/${array[1]}/" "css/userContent-files/webextension-tweaks/${webextension_name}.css"
 done < "internal_UUIDs.txt"
