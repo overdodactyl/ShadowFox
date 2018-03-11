@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#!/usr/bin/env bash
 
 ### UUID finder for Mac
 ## author: @overdodactyl
