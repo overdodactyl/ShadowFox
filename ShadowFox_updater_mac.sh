@@ -110,6 +110,13 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   echo -e "\n\n"
 
   if [[ $REPLY =~ ^[Yy]$ ]]; then
+
+    # Check for bash version 4 or higher
+    if [ $(bash -c 'echo ${BASH_VERSINFO[0]}') -lt 4 ]; then
+        echo "Please install bash version 4 or higher."
+        exit 1
+    fi
+
     # backup current internal_UUIDs.txt file
     if [ -s ./ShadowFox_customization/internal_UUIDs.txt ]; then
       bakfile="internal_UUIDs.backup.$(date +"%Y-%m-%d_%H%M%S")"
