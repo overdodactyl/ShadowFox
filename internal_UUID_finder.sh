@@ -25,7 +25,7 @@ declare -A styled=( ["brief@mozdev.org"]="brief"
                     ["vim-vixen@i-beam.org"]="vim_vixen"
                   )
 
-line=$(sed -n -e 's/^user_pref("extensions.webextensions.uuids", "{\(.*\).*}");/\1/p' "$profile/prefs.js")
+line=$(sed -n -e 's/^user_pref("extensions.webextensions.uuids", "{\(.*\).*}");/\1/p' ../prefs.js)
 
 ## Remove prefix and suffix
 prefix='user_pref("extensions.webextensions.uuids", "{'
