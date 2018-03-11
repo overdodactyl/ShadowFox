@@ -1,6 +1,6 @@
 /*! Alters the webextension Tridactyl
   IMPORTANT: change the Internal UUID */
-@-moz-document url-prefix("moz-extension://3b2b5b72-a7b0-e247-8964-0439fe556827/") {
+@-moz-document url-prefix("moz-extension://tridactyl_UUID/") {
   .container-main,
   body,
   html {
