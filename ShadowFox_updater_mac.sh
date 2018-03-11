@@ -7,8 +7,7 @@
 userChrome="https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/userChrome.css"
 userContent="https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/userContent.css"
 uuid_finder="https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/internal_UUID_finder.sh"
-
-echo -e "\nThis script should be run from inside your Firefox profile.\n"
+updater="https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/ShadowFox_updater_mac.sh"
 
 currdir=$(pwd)
 
@@ -20,6 +19,31 @@ if [ -z "$sfp" ]; then sfp=${BASH_SOURCE[0]}; fi
 
 ## change directory to the Firefox profile directory
 cd "$(dirname "${sfp}")"
+
+## Check if there's a newwer version of the updater script available
+online_version="$(curl -s ${updater} | sed -n '5p')"
+current_version="$(sed '5q;d' ShadowFox_updater_mac.sh)"
+
+## Remove prefix
+prefix='## version: '
+online_version=${online_version#$prefix}
+current_version=${current_version#$prefix}
+
+if (( $(echo "$online_version > $current_version" | bc -l) )); then
+  echo -e "There is a new updater script available online.  It will replace this one and be executed.\n"
+  mv ShadowFox_updater_mac.sh old_updater.sh
+  curl -O ${updater} && echo -e "\nThe latest updater script has been downloaded\n"
+  # make new file executable
+  chmod +x ShadowFox_updater_mac.sh
+
+  # execute new updater script
+  ./ShadowFox_updater_mac.sh
+
+  # exit script
+  exit 1
+fi
+
+echo -e "\nThis script should be run from inside your Firefox profile.\n"
 
 echo -e "Updating userContent.css and userChrome.css for Firefox profile:\n$(pwd)\n"
 
@@ -154,6 +178,8 @@ else
   echo "Process aborted"
 fi
 
+## Delete old updater script
+[ -e ./../old_updater.sh ] && rm ./../old_updater.sh
 
 ## change directory back to the original working directory
 cd "${currdir}"
