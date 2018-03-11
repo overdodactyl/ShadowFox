@@ -1,8 +1,0 @@
-#customization-done-button {
-  color: var(--in-content-text-color);
-  border-color: var(--in-content-primary-button-background)!important;
-  background-color: var(--in-content-primary-button-background)!important
-}
-#customization-done-button:-moz-any(:focus,:active,:hover):not([disabled]) {
-  background-color: var(--in-content-primary-button-background-hover)!important
-}
