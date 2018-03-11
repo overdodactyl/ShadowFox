@@ -1,4 +1,4 @@
-![header](Screenshots/header.png)
+![header](.github/Screenshots/header.png)
 
 ShadowFox was inspired by changes made in Firefox 57, which limited the amount addons could customize both the user interface and "protected" web pages.
 
@@ -6,7 +6,7 @@ This project aims at creating a universal dark theme for Firefox while adhering 
 
 ## Preview
 
-![preferences](Screenshots/preview.png)
+![preferences](.github/Screenshots/preview.png)
 
 ShadowFox styles the entire user interface, protected webpages (such as `about:` pages and addons.mozilla.org), and over 20 popular addons.
 
