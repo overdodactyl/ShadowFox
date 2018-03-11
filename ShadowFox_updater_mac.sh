@@ -2,7 +2,7 @@
 
 ### ShadowFox updater for Mac
 ## author: @overdodactyl
-## version: 1.2
+## version: 1.3
 
 userChrome="https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/userChrome.css"
 userContent="https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/userContent.css"
