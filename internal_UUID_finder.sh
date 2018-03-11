@@ -27,14 +27,6 @@ declare -A styled=( ["brief@mozdev.org"]="brief"
 
 line=$(sed -n -e 's/^user_pref("extensions.webextensions.uuids", "{\(.*\).*}");/\1/p' ../prefs.js)
 
-## Remove prefix and suffix
-prefix='user_pref("extensions.webextensions.uuids", "{'
-suffix='}");'
-line=${line#$prefix}
-line=${line%$suffix}
-prefix='\\"'
-suffix='\\"'
-
 IFS=',' read -ra EXTS <<< "$line"
 for i in "${EXTS[@]}"; do
     id=$(echo $i | sed -n 's/.*"\(.*\)\\":.*/\1/p')
