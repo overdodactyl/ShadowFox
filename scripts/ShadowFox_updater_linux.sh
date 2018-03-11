@@ -6,8 +6,8 @@
 
 userChrome="https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/userChrome.css"
 userContent="https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/userContent.css"
-uuid_finder="https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/internal_UUID_finder.sh"
-updater="https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/ShadowFox_updater_linux.sh"
+uuid_finder="https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/scripts/internal_UUID_finder.sh"
+updater="https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/scripts/ShadowFox_updater_linux.sh"
 script_filename="$(basename $0)"
 
 currdir=$(pwd)
