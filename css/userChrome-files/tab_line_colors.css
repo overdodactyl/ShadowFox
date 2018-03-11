@@ -1,0 +1,3 @@
+.tab-line[selected=true] {
+  background-color: var(--in-content-border-focus)!important
+}

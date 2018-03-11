@@ -1,0 +1,111 @@
+@-moz-document url(chrome://browser/content/places/places.xul) {
+  toolbar {
+    -moz-appearance: none!important;
+    background-color: var(--in-content-category-header-background)!important;
+    border: none!important
+  }
+  listbox,
+  textbox {
+    -moz-appearance: none!important;
+    background-color: var(--in-content-box-background)!important;
+    color: var(--in-content-page-color)!important;
+    min-height: 20px!important;
+    padding: 0 0 0 4px!important;
+    border: 1px solid!important;
+    border-color: var(--in-content-box-border-color)!important;
+    border-radius: 3px!important
+  }
+  #placesToolbar > toolbarbutton {
+    margin: 6px 4px 5px!important;
+    -moz-appearance: none!important;
+    background-color: var(--tone-4)!important;
+    border-radius: 5px!important;
+    filter: invert(100%)!important
+  }
+  #placesList {
+    -moz-appearance: none!important;
+    color: var(--in-content-page-color)!important;
+    background-color: var(--in-content-page-background)!important
+  }
+  #placesView > splitter {
+    border-color: var(--in-content-border-color)!important
+  }
+  #places #downloadsRichListBox {
+    -moz-appearance: none!important;
+    color: var(--in-content-page-color)!important;
+    background-color: var(--in-content-box-background)!important
+  }
+  #detailsDeck {
+    border: none!important;
+    background-color: var(--in-content-page-background)!important;
+    color: var(--in-content-page-color)!important
+  }
+  .expander-down,
+  .expander-up {
+    filter: invert(60%)!important
+  }
+  #placeContent treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text() {
+    color: var(--in-content-text-color)!important
+  }
+  #places treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected),
+  #placesList > treechildren::-moz-tree-row(selected) {
+    -moz-appearance: none!important;
+    -moz-font-smoothing-background-color: none!important;
+    border-top: none!important;
+    background: var(--theme-selection-background)!important;
+    color: var(--in-content-text-color)!important
+  }
+  #placeContent treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected),
+  #placesList > treechildren::-moz-tree-cell-text(selected) {
+    color: var(--in-content-text-color)!important
+  }
+  #places treechildren::-moz-tree-row {
+    background-color: transparent!important
+  }
+  #places treechildren::-moz-tree-image {
+    fill: var(--in-content-page-color)!important
+  }
+  #places treechildren::-moz-tree-image(selected) {
+    fill: var(--selected-icon-fill-color)!important
+  }
+  #placeContent > treechildren::-moz-tree-cell,
+  #placeContent > treechildren::-moz-tree-column {
+    border-color: var(--in-content-box-border-color)!important
+  }
+  #contentView treecol {
+    -moz-appearance: none!important;
+    border: none!important;
+    background: var(--in-content-category-header-background)!important;
+    color: var(--in-content-text-color)!important;
+    border-right: 1px solid!important;
+    border-color: var(--in-content-box-border-color)!important
+  }
+  tree {
+    background-color: var(--in-content-box-background)!important
+  }
+  @media screen and (-moz-windows-theme),
+  screen and (-moz-windows-classic),
+  screen and (-moz-windows-default-theme),
+  screen and (-moz-os-version:windows-win7),
+  screen and (-moz-os-version:windows-win8),
+  screen and (-moz-os-version:windows-win10) {
+    #metaTagsCaption,
+    #security-identity,
+    #security-identity-groupbox,
+    #security-privacy,
+    #security-privacy-groupbox,
+    #security-technical,
+    #security-technical-groupbox {
+      -moz-appearance: none!important;
+      background-color: var(--in-content-page-background)!important;
+      border: none!important;
+      color: var(--in-content-selected-text)!important
+    }
+    #security-identity-groupbox,
+    #security-privacy-groupbox,
+    #security-technical-groupbox {
+      -moz-appearance: none!important;
+      background-color: var(--in-content-category-header-background)!important
+    }
+  }
+}

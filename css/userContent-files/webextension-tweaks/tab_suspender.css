@@ -1,0 +1,24 @@
+/*! Alters the webextension Tab Suspender (memory saver)
+  IMPORTANT: change the Internal UUID */
+@-moz-document url-prefix("moz-extension://tab_suspender_UUID/") {
+  body,
+  label {
+    color: var(--tone-4)!important
+  }
+  input[type=number],
+  textarea {
+    -moz-appearance: none!important;
+    background: var(--tone-6)!important;
+    color: var(--tone-4)!important;
+    border-color: var(--tone-5)!important
+  }
+  #recovery,
+  #save {
+    -moz-appearance: none!important;
+    height: 20px!important;
+    background: var(--tone-8)!important;
+    color: var(--tone-4)!important;
+    border-color: var(--tone-5)!important;
+    border-radius: 4px!important
+  }
+}

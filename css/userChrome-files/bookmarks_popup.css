@@ -1,0 +1,67 @@
+#editBMPanel_folderMenuList,
+#editBMPanel_foldersExpander,
+#editBMPanel_rows > row > hbox > textbox,
+#editBMPanel_rows > row > textbox,
+#editBMPanel_tagsSelectorExpander,
+#editBookmarkPanelDoneButton,
+#editBookmarkPanelRemoveButton {
+  -moz-appearance: none!important;
+  background: var(--in-content-page-background)!important;
+  color: var(--in-content-page-color)!important;
+  border: 1px solid!important;
+  border-color: var(--in-content-box-border-color)!important;
+  box-shadow: none!important
+}
+#editBookmarkPanel .expander-down > .button-box > .button-icon {
+  filter: invert(65%)!important
+}
+#editBMPanel_folderTree,
+#editBMPanel_tagsSelector {
+  -moz-appearance: none!important;
+  background: var(--in-content-page-background)!important;
+  color: var(--in-content-page-color)!important;
+  opacity: 1!important
+}
+#editBMPanel_folderTree treechildren:not(.autocomplete-treebody)::-moz-tree-row,
+#editBMPanel_tagsSelector treechildren:not(.autocomplete-treebody)::-moz-tree-row {
+  background: var(--in-content-box-background)!important;
+  color: var(--in-content-page-background)!important
+}
+#editBMPanel_folderTree treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover),
+#editBMPanel_tagsSelector treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
+  background: var(--theme-selection-background-hover)!important;
+  color: var(--in-content-selected-text)!important;
+  -moz-border-top-colors: var(--theme-selection-background-hover)!important;
+  -moz-border-right-colors: var(--theme-selection-background-hover)!important;
+  -moz-border-left-colors: var(--theme-selection-background-hover)!important;
+  -moz-border-bottom-colors: var(--theme-selection-background-hover)!important
+}
+#editBMPanel_folderTree treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(hover) {
+  color: var(--in-content-selected-text)!important
+}
+#editBMPanel_folderTree treechildren::-moz-tree-image {
+  fill: var(--in-content-page-color)!important
+}
+#editBMPanel_folderTree treechildren::-moz-tree-image(hover),
+#editBMPanel_folderTree treechildren::-moz-tree-image(selected) {
+  fill: var(--selected-icon-fill-color)!important
+}
+#editBMPanel_folderTree treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected,current,focus) {
+  background: var(--theme-selection-background)!important
+}
+listitem[selected=true] {
+  background-color: var(--theme-selection-background)!important;
+  color: var(--in-content-selected-text)!important
+}
+#editBMPanel_folderTree treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected,current) {
+  background: var(--theme-selection-background)!important
+}
+#editBMPanel_folderTree {
+  border-color: var(--in-content-box-border-color)!important;
+  border-bottom: none!important
+}
+#editBMPanel_newFolderBox {
+  background: var(--in-content-page-background)!important;
+  border-color: var(--in-content-box-border-color)!important;
+  box-shadow: none!important
+}

@@ -1,0 +1,44 @@
+#sidebar-header,
+#sidebar-search-container,
+#sidebar-search-container #viewButton,
+.sidebar-header {
+  background: var(--in-content-category-header-background)!important;
+  color: var(--in-content-page-color)!important
+}
+hbox#sidebar-search-container textbox#search-box {
+  -moz-appearance: none!important;
+  background-color: var(--in-content-box-background)!important;
+  color: var(--in-content-page-color)!important;
+  min-height: 20px!important;
+  padding: 0 0 0 4px!important;
+  border: 1px solid!important;
+  border-color: var(--in-content-box-border-color)!important;
+  border-radius: 3px!important
+}
+#sidebar,
+#sidebar-box,
+#template-container,
+#webext-panels-browser,
+#webextpanels-window {
+  background: var(--in-content-page-background)!important
+}
+.sidebar-placesTree {
+  -moz-appearance: none!important;
+  color: var(--in-content-page-color)!important;
+  background-color: var(--in-content-page-background)!important;
+  opacity: 1!important
+}
+#sidebar-box[sidebarcommand=treestyletab_piro_sakura_ne_jp-sidebar-action] #sidebar-icon {
+  filter: invert(60%)
+}
+#button_treestyletab_piro_sakura_ne_jp-sidebar-action .toolbarbutton-icon {
+  filter: invert(87%)
+}
+.button-menu-dropmarker,
+.button-menubutton-dropmarker {
+  filter: invert(65%)
+}
+.sidebar-placesTree::-moz-tree-image,
+.sidebar-placesTreechildren::-moz-tree-image {
+  fill: var(--in-content-page-color)!important
+}

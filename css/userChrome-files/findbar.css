@@ -1,0 +1,18 @@
+.browserContainer > findbar {
+  border-top: 1px solid!important;
+  border-color: var(--in-content-box-border-color)!important
+}
+.findbar-find-next,
+.findbar-find-previous {
+  border: none!important;
+  background: 0 0!important;
+  border-radius: 2px!important;
+  fill: var(--in-content-page-color)!important
+}
+.findbar-find-previous {
+  margin-left: 6px!important
+}
+.findbar-find-next:hover,
+.findbar-find-previous:hover {
+  background: var(--toolbarbutton-hover-background)!important
+}

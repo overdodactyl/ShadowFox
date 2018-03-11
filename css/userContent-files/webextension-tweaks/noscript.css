@@ -1,0 +1,45 @@
+/*! Alters the webextension NoScript
+  IMPORTANT: change the Internal UUID */
+@-moz-document url-prefix("moz-extension://noscript_UUID/") {
+  body {
+    background: var(--tone-6)!important
+  }
+  #top {
+    border-color: var(--tone-5)!important
+  }
+  .site .url[data-key=full] span,
+  .site .url[data-key=secure] .domain,
+  .site .url[data-key=secure] .sub {
+    color: var(--tone-4)!important
+  }
+  .sites > tr:nth-child(2n) {
+    background: var(--tone-6)!important
+  }
+  .sites > tr:nth-child(2n+1) {
+    background: var(--tone-7)!important
+  }
+  #presets input.preset,
+  .presets input.preset:checked {
+    color: var(--tone-4)!important;
+    background-color: var(--tone-8)!important
+  }
+  #sect-general,
+  .presets label.preset {
+    color: var(--tone-4)!important
+  }
+  button,
+  input[type=text] {
+    -moz-appearance: none!important;
+    background-color: var(--tone-7)!important;
+    border-color: var(--tone-5)!important;
+    color: var(--primar-light-color)!important
+  }
+  #top #close,
+  #top #options,
+  #top #reload,
+  #top #revoke-temp,
+  #top #temp-allow-page {
+    background-color: var(--tone-6)!important;
+    border: none!important
+  }
+}
