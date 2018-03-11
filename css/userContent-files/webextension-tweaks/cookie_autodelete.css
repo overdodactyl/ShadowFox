@@ -1,0 +1,49 @@
+/*! Alters the webextension Cookie AutoDelete
+  IMPORTANT: change the Internal UUID */
+@-moz-document url-prefix("moz-extension://cookie_autodelete_UUID/") {
+  a {
+    color: var(--accent-1)
+  }
+  a:hover {
+    color: var(--accent-2)
+  }
+  #layout,
+  html {
+    background: var(--tone-7)!important;
+    color: var(--primart-light-color)!important
+  }
+  #menu {
+    background-color: var(--tone-8)!important
+  }
+  .menu-link {
+    background: var(--tone-8)!important
+  }
+  .pure-menu-item:hover,
+  .pure-menu-selected {
+    background-color: var(--tone-6)!important
+  }
+  .form-control,
+  input[type=number] {
+    -moz-appearance: none!important;
+    background: var(--tone-6)!important;
+    color: var(--tone-4)!important;
+    border-color: var(--tone-5)!important
+  }
+  .nav-tabs .nav-link {
+    color: var(--tone-4)!important
+  }
+  .nav-tabs .nav-link.active {
+    color: var(--accent-1)!important;
+    background-color: var(--tone-6)!important;
+    border-color: #ddd #ddd #fff!important
+  }
+  body {
+    color: var(--tone-4)!important;
+    background-color: var(--tone-6)!important
+  }
+  .btn-light {
+    color: var(--tone-4)!important;
+    background-color: var(--tone-5)!important;
+    border-color: var(--tone-4)!important
+  }
+}

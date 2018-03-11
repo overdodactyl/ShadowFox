@@ -1,0 +1,91 @@
+/* Copyright (c) 2017 overdodactyl
+   Available for use under the MIT License:
+   https://opensource.org/licenses/MIT
+   https://github.com/overdodactyl/ShadowFox  */
+
+ /* (1) Use Plain Dark Appearance
+    (2) Place the contents of this file in the extra styles rules section  */
+
+/* background color */
+:root {
+   background-color: var(--in-content-page-background);
+}
+
+/* Tabs */
+.tab {
+ background: var(--in-content-page-background);
+ border-color: var(--in-content-category-header-background);
+}
+
+.tab .label {
+ color: var(--in-content-page-color);
+}
+
+.tab:hover {
+   background-color: var(--in-content-category-header-background) !important;
+}
+
+
+/* Active Tab */
+.tab.active {
+   background-color: var(--in-content-border-focus) !important;
+}
+.tab.selected {
+   background-color: var(--primary-accent-color-dark) !important;
+}
+
+.tab.active .label,
+.tab.selected .label {
+ color: white;
+}
+
+.tab.active:hover {
+   background-color: var(--in-content-primary-button-background)!important;
+}
+
+/* Unloaded Tabs */
+.tab.discarded {
+ opacity: 0.75;
+}
+
+.tab.discarded .label {
+ color: var(--in-content-box-border-color);
+}
+
+/* Unread Tabs */
+.tab.unread .label {
+ font-style: italic;
+}
+
+
+/* Only show closebox on hover */
+.tab:not(:hover) .closebox {
+ display: none;
+}
+
+
+/* Drop Down Arrow */
+.twisty {
+ color: var(--in-content-page-color)
+}
+
+.tab.active .twisty {
+ color: white !important;
+}
+
+
+/* Hide 'new tab' button. */
+.newtab-button {
+   opacity: 0;
+}
+
+
+/* Changes for favicons */
+
+#all-tabs .tab:not(.active)[data-current-uri*="github.com"] .favicon {
+   filter: invert(65%);
+}
+
+#tabbar, #background::after, #background {
+    background: var(--in-content-page-background) !important;
+}

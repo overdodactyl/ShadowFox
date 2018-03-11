@@ -1,0 +1,163 @@
+@-moz-document url(chrome://browser/content/pageinfo/pageInfo.xul) {
+  #topBar {
+    -moz-appearance: none!important;
+    background: var(--in-content-category-header-background)!important
+  }
+  #mainDeck {
+    background: var(--in-content-page-background)!important;
+    color: var(--in-content-page-color)!important
+  }
+  textbox {
+    color: var(--in-content-page-color)!important
+  }
+  .text-link {
+    color: var(--in-content-link-color)!important
+  }
+  button {
+    -moz-appearance: none!important;
+    background-color: var(--in-content-page-background)!important;
+    border: 1px solid!important;
+    border-radius: 3px!important;
+    color: var(--in-content-page-color)!important;
+    border-color: var(--in-content-box-border-color)!important
+  }
+  button:hover {
+    background-color: var(--in-content-box-background)!important
+  }
+  #feedListbox,
+  #feedListbox > richlistitem,
+  #imagecontainerbox,
+  .groupbox-body,
+  .permission {
+    -moz-appearance: none!important;
+    background: var(--in-content-box-background)!important;
+    color: var(--in-content-page-color)!important;
+    border-color: var(--in-content-box-border-color)!important
+  }
+  #feedListbox richlistitem {
+    border-color: var(--in-content-box-border-color)!important
+  }
+  #permPluginTemplate {
+    color: var(--in-content-page-color)!important
+  }
+  #feedListbox,
+  #imagecontainerbox,
+  #permList,
+  .groupbox-body {
+    border: 1px solid!important;
+    border-color: var(--in-content-box-border-color)!important
+  }
+  groupbox.collapsable caption .caption-icon {
+    filter: invert(65%)!important
+  }
+  tree {
+    -moz-appearance: none!important;
+    color: var(--in-content-page-color)!important
+  }
+  treecol {
+    -moz-appearance: none!important;
+    border: 0 solid!important;
+    border-color: var(--in-content-box-background)!important
+  }
+  treecolpicker {
+    -moz-appearance: none;
+    border: none!important
+  }
+  #viewGroup > radio {
+    -moz-appearance: none!important;
+    background-color: var(--in-content-box-background)!important;
+    text-shadow: none!important;
+    padding: 0 8px!important;
+    color: var(--in-content-page-color);
+    border-right: 1px solid!important;
+    border-color: var(--in-content-box-border-color)!important
+  }
+  #viewGroup > radio[selected=true] {
+    color: var(--in-content-selected-text)!important
+  }
+  #viewGroup > radio:first-of-type {
+    border-top-left-radius: 4px!important;
+    border-bottom-left-radius: 4px!important
+  }
+  #viewGroup > radio:last-of-type {
+    border: none!important;
+    border-top-right-radius: 4px!important;
+    border-bottom-right-radius: 4px!important
+  }
+  @media screen and (-moz-windows-theme),
+  screen and (-moz-windows-classic),
+  screen and (-moz-windows-default-theme),
+  screen and (-moz-os-version:windows-win7),
+  screen and (-moz-os-version:windows-win8),
+  screen and (-moz-os-version:windows-win10) {
+    #topBar {
+      -moz-appearance: none!important;
+      background-color: var(--in-content-category-header-background)!important;
+      border: none!important;
+      padding-top: 5px!important;
+      padding-bottom: 5px!important;
+      color: var(--selected-icon-fill-color)!important
+    }
+    #metaTagsCaption,
+    #security-identity,
+    #security-identity-groupbox,
+    #security-privacy,
+    #security-privacy-groupbox,
+    #security-technical,
+    #security-technical-groupbox {
+      -moz-appearance: none!important;
+      background-color: var(--in-content-page-color)!important;
+      border: none!important;
+      color: var(--in-content-selected-text)!important
+    }
+    #security-identity-groupbox,
+    #security-privacy-groupbox,
+    #security-technical-groupbox {
+      -moz-appearance: none!important;
+      background-color: var(--in-content-category-header-background)!important
+    }
+  }
+}
+@-moz-document url-prefix(chrome://browser/content/preferences/cookies.xul) {
+  #CookiesDialog {
+    -moz-appearance: none!important;
+    background-color: var(--in-content-page-background)!important
+  }
+  #domainCol,
+  #nameCol {
+    -moz-appearance: none!important;
+    border: none!important
+  }
+  #domainCol {
+    border-right: 1px solid!important;
+    border-color: var(--in-content-box-border-color)!important
+  }
+  .windowDialog,
+  textbox {
+    color: var(--in-content-page-color)!important
+  }
+  textbox[type=search] {
+    -moz-appearance: none!important;
+    background-color: var(--in-content-box-background)!important;
+    border: 1px solid;
+    border-color: var(--in-content-box-border-color)!important;
+    border-radius: 3px!important;
+    padding: 2px 4px 2px 2px!important
+  }
+  #cookiesList {
+    -moz-appearance: none!important;
+    border: 1px solid!important;
+    border-color: var(--in-content-box-border-color)!important
+  }
+  button {
+    -moz-appearance: none!important;
+    background-color: var(--in-content-page-background)!important;
+    border: 1px solid!important;
+    border-radius: 3px!important;
+    color: var(--in-content-page-color)!important;
+    border-color: var(--in-content-box-border-color)!important
+  }
+  button:hover {
+    background-color: var(--in-content-box-background)!important
+  }
+}

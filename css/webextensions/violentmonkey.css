@@ -1,0 +1,171 @@
+/* Copyright (c) 2017 overdodactyl
+   Available for use under the MIT License:
+   https://opensource.org/licenses/MIT
+   https://github.com/overdodactyl/ShadowFox  */
+
+/* CodeMirror based of Firefox. */
+
+/* Place the contents of this file in your Violentmonkey settings:
+   Dashboard > Settings > Custom Style  */
+
+:root {
+  --primary-light-color: var(--grey-40);
+  --light-accent-color: var(--grey-50);
+  --mid-way-color: var(--grey-60);
+  --primary-dark-color: var(--grey-70);
+  --dark-accent: var(--grey-80);
+  --primary-accent-color: var(--blue-40);
+  --primary-accent-color-dark: var(--blue-50);
+}
+
+.tab,
+.edit-settings,
+section > h3  {
+    background: var(--primary-dark-color) !important;
+ }
+
+aside {
+    background: var(--dark-accent) !important;
+}
+
+h1,
+h2,
+.sidemenu > a.active, .sidemenu > a:hover {
+    color: var(--primary-accent-color) !important;
+}
+
+body {
+    color: var(--primary-light-color) !important;
+}
+
+.script {
+    background: var(--mid-way-color) !important;
+}
+
+svg {
+    fill: var(--primary-light-color) !important;
+}
+.menu-item:hover svg {
+    fill: white !important;
+}
+.menu {
+    border-top: 1px solid var(--grey-50) !important;
+}
+
+input[type="text"], textarea {
+    background: var(--mid-way-color) !important;
+    color: var(--primary-light-color) !important;
+    border-color: var(--mid-way-color) !important;
+}
+
+.export-list > .ellipsis.active {
+    border-color: var(--primary-accent-color) !important;
+    background: var(--primary-accent-color) !important;
+}
+
+button {
+    background: var(--dark-accent) !important;
+    border: 2px solid var(--mid-way-color) !important;
+    color: var(--primary-light-color) !important;
+}
+
+.btn-ghost:hover {
+    border-color: var(--primary-dark-color) !important;
+    background: var(--dark-accent) !important;
+}
+
+.edit-nav > div.active {
+    background: var(--primary-dark-color) !important;
+    color: var(--primary-light-color) !important;
+}
+
+.flex.edit-header > .buttons > button:nth-child(2):not([disabled="disabled"]):after {
+      content: '?' !important;
+ }
+
+.flex.edit-header > .buttons > button:nth-child(2)[disabled="disabled"]:after {
+      content: 'd' !important;
+ }
+
+.menu-item:hover,
+.submenu-button {
+ background: var(--primary-accent-color) !important;
+ color: white  !important;
+}
+
+.flex.edit-header,
+.message.modal-content {
+    background: var(--dark-accent) !important;
+}
+
+html,
+.submenu,
+.menu.expand {
+  background: var(--mid-way-color) !important;
+}
+.vl-dropdown-menu {
+    border: 1px solid var(--grey-50) !important;
+    background: var(--primary-dark-color) !important;
+}
+.dropdown-menu-item:hover {
+    background: var(--grey-80) !important;
+}
+.dropdown-menu-item {
+    color: var(--primary-light-color) !important;
+}
+
+.frame-block {
+    background: var(--grey-60) !important;
+}
+
+/* Code Mirror */
+
+.CodeMirror {
+    border: solid #4a4a4f 1px;
+    border-radius: 4px !important;
+}
+
+.CodeMirror { background: #2a2a2e !important; color: #b1b1b3 !important; }
+div.CodeMirror-selected { background: #353B48 !important; }
+.CodeMirror-line::selection, .CodeMirror-line > span::selection, .CodeMirror-line > span > span::selection { background: #353B48 !important; }
+.CodeMirror-line::-moz-selection, .CodeMirror-line > span::-moz-selection, .CodeMirror-line > span > span::-moz-selection { background: #353B48 !important; }
+.CodeMirror-gutters { background: #2a2a2e !important; border-right: 0px solid #4a4a4f !important; }
+.CodeMirror-guttermarker { color: #555 !important; } /*Don't Know what this is */
+.CodeMirror-guttermarker-subtle { color: #555 !important; }
+.CodeMirror-linenumber { color: #939393 !important; }
+.CodeMirror-cursor { border-left: 1px solid #fff !important; }
+
+span.cm-comment { color: #939393 !important; }
+span.cm-atom { color: #FF7DE9 !important; }
+span.cm-quote { color: #FF7DE9 !important; }
+span.cm-builtin { color: #FF7DE9 !important; }
+span.cm-attribute { color: #FF7DE9 !important; }
+span.cm-keyword { color: #FF7DE9 !important; }
+span.cm-error { color: #FF7DE9 !important; }
+
+span.cm-number { color: #6B89FF !important; }
+span.cm-string { color: #6B89FF !important; }
+span.cm-string-2 { color: #6B89FF !important; }
+
+span.cm-meta { color: #939393 !important; }
+span.cm-hr { color: #939393 !important; }
+
+span.cm-header { color: #75BFFF !important; }
+span.cm-qualifier { color: #75BFFF !important; }
+span.cm-variable-2 { color: #75BFFF !important; }
+
+span.cm-property { color: #86DE74 !important; }
+
+span.cm-def { color: #75BFFF !important; }
+span.cm-bracket { color: #75BFFF !important; }
+span.cm-tag { color: #75BFFF !important; }
+span.cm-link:visited { color: #75BFFF !important; }
+
+span.cm-variable { color: #B98EFF !important; }
+span.cm-variable-3 { color: #d7d7db !important; }
+span.cm-link { color: #737373 !important; }
+span.cm-operator { color: #b1b1b3 !important; }
+span.cm-special { color: #d7d7db !important; }
+
+.CodeMirror-activeline-background { background: rgba(185, 215, 253, .15) !important }
+.CodeMirror-matchingbracket { outline: solid 1px rgba(255, 255, 255, .25) !important; color: white !important; }
