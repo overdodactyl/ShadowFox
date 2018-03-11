@@ -2,13 +2,12 @@
 
 ### ShadowFox updater for Linux
 ## author: @overdodactyl
-## version: 1.2
+## version: 1.3
 
 userChrome="https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/userChrome.css"
 userContent="https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/userContent.css"
 uuid_finder="https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/internal_UUID_finder.sh"
-
-echo -e "This script should be run from inside your Firefox profile."
+updater="https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/ShadowFox_updater_linux.sh"
 
 currdir=$(pwd)
 
@@ -20,6 +19,31 @@ if [ -z "$sfp" ]; then sfp=${BASH_SOURCE[0]}; fi
 
 ## change directory to the Firefox profile directory
 cd "$(dirname "${sfp}")"
+
+## Check if there's a newwer version of the updater script available
+online_version="$(curl -s ${updater} | sed -n '5p')"
+current_version="$(sed '5q;d' ShadowFox_updater_mac.sh)"
+
+## Remove prefix
+prefix='## version: '
+online_version=${online_version#$prefix}
+current_version=${current_version#$prefix}
+
+if (( $(echo "$online_version > $current_version" | bc -l) )); then
+  echo -e "There is a new updater script available online.  It will replace this one and be executed.\n"
+  mv ShadowFox_updater_mac.sh old_updater.sh
+  curl -O ${updater} && echo -e "\nThe latest updater script has been downloaded\n"
+  # make new file executable
+  chmod +x ShadowFox_updater_mac.sh
+
+  # execute new updater script
+  ./ShadowFox_updater_mac.sh
+
+  # exit script
+  exit 1
+fi
+
+echo -e "This script should be run from inside your Firefox profile."
 
 echo -e "Updating userContent.css and userChrome.css for Firefox profile:\n$(pwd)"
 
@@ -103,7 +127,6 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     echo "internal_UUIDs.txt has been generated based on your downloaded extensions."
   fi
 
-
   if [ -s ./ShadowFox_customization/internal_UUIDs.txt ]; then
     ## Insert any UUIDs defined in internal_UUIDs.txt into userContent.css
     while IFS='' read -r line || [[ -n "$line" ]]; do
@@ -126,7 +149,6 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     ## Insert everything from colorOverrides.css
     sed -i '/--start-indicator-for-updater-scripts: black;/ r ./ShadowFox_customization/colorOverrides.css' userContent.css
     sed -i '/--start-indicator-for-updater-scripts: black;/ r ./ShadowFox_customization/colorOverrides.css' userChrome.css
-
 
     echo -e "Your custom colors have been set."
   else
@@ -156,6 +178,8 @@ else
   echo -e "Process aborted"
 fi
 
+## Delete old updater script
+[ -e ./../old_updater.sh ] && rm ./../old_updater.sh
 
 ## change directory back to the original working directory
 cd "${currdir}"
