@@ -1,6 +1,0 @@
-@-moz-document url-prefix(https://raw.githubusercontent.com) {
-  html {
-    background: var(--in-content-page-background)!important;
-    color: var(--in-content-page-color)!important
-  }
-}

@@ -1,7 +1,0 @@
-@-moz-document url("chrome://global/content/commonDialog.xul") {
-  #commonDialog {
-    -moz-appearance: none!important;
-    background: var(--in-content-page-background)!important;
-    color: var(--in-content-page-color)!important
-  }
-}
