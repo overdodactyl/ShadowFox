@@ -1,6 +1,6 @@
 /*! Alters the webextension uBlock Origin
   IMPORTANT: change the Internal UUID */
-@-moz-document url-prefix("moz-extension://2435721f-2666-4c42-b92a-70873b87cbf9/") {
+@-moz-document url-prefix("moz-extension://ublock_origin_UUID/") {
   .CodeMirror {
     border: 1px solid!important;
     border-color: var(--tone-5)!important;

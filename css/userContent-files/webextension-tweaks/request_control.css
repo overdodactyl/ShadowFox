@@ -1,6 +1,6 @@
 /*! Alters the webextension Request Control
   IMPORTANT: change the Internal UUID */
-@-moz-document url-prefix("moz-extension://ed3f80c9-0ccb-ca41-bd62-f71a9fb72d27/") {
+@-moz-document url-prefix("moz-extension://request_control_UUID/") {
   body {
     background-color: var(--tone-7)!important;
     color: var(--tone-4)!important

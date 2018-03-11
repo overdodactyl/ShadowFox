@@ -1,6 +1,6 @@
 /*! Alters the webextension Dark Mode
   IMPORTANT: change the Internal UUID */
-@-moz-document url-prefix("moz-extension://8df07d7f-73aa-9a4c-b9ee-b678d4eab5ea/") {
+@-moz-document url-prefix("moz-extension://dark_mode_UUID/") {
   .comment {
     color: var(--accent-1)!important
   }

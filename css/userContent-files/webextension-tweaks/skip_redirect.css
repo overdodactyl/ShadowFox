@@ -1,6 +1,6 @@
 /*! Alters the webextension Skip Redirect
   IMPORTANT: change the Internal UUID */
-@-moz-document url-prefix("moz-extension://b4b0ef21-3b88-e547-841a-b671a44bdfa7/") {
+@-moz-document url-prefix("moz-extension://skip_redirect_UUID/") {
   body {
     background: var(--tone-6)!important;
     color: var(--tone-4)!important
