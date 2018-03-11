@@ -23,6 +23,9 @@
   .CodeMirror-activeline-background {
     background: rgba(185,215,253,.15)!important
   }
+  .CodeMirror-merge-l-chunk {
+    background: var(--tone-7)!important
+  }
   .cm-search-widget {
     background-color: var(--tone-9)!important;
     border: 1px solid;
@@ -42,6 +45,21 @@
   }
   .cm-searching {
     background-color: var(--warning-background-color)!important
+  }
+  .cm-staticOpt {
+    background-color: var(--tone-6)!important;
+    font-weight: 700
+  }
+  .CodeMirror-merge-gap {
+    background-color: var(--tone-9)!important;
+    border-top: 1px solid!important;
+    border-bottom: 1px solid!important;
+    border-right: none!important;
+    border-left: none!important;
+    border-color: var(--tone-5)!important
+  }
+  .CodeMirror-merge {
+    border: none!important
   }
   html body div#userFilters.codeMirrorContainer div div.cm-search-widget span.fa {
     color: var(--tone-6)!important;
@@ -93,6 +111,9 @@
   body[dir=ltr] #panes > div {
     background: var(--tone-7)!important;
     color: var(--tone-4)!important
+  }
+  #diff {
+    border-color: var(--tone-5)!important
   }
   label a,
   p a,
