@@ -20,14 +20,9 @@ if [ -z "$sfp" ]; then sfp=${BASH_SOURCE[0]}; fi
 ## change directory to the Firefox profile directory
 cd "$(dirname "${sfp}")"
 
-## Check if there's a newwer version of the updater script available
-online_version="$(curl -s ${updater} | sed -n '5p')"
-current_version="$(sed '5q;d' ShadowFox_updater_mac.sh)"
-
-## Remove prefix
-prefix='## version: '
-online_version=${online_version#$prefix}
-current_version=${current_version#$prefix}
+## Check if there's a newer version of the updater script available
+online_version="$(curl -s ${updater} | sed -n '5 s/.*[[:blank:]]\([[:digit:]]*\.[[:digit:]]*\)/\1/p')"
+current_version="$(sed -n '5 s/.*[[:blank:]]\([[:digit:]]*\.[[:digit:]]*\)/\1/p' ShadowFox_updater_mac.sh)"
 
 if (( $(echo "$online_version > $current_version" | bc -l) )); then
   echo -e "There is a new updater script available online.  It will replace this one and be executed.\n"
