@@ -299,6 +299,7 @@ url-prefix(https://discovery.addons.mozilla.org) {
   .top-sites-list .top-site-outer .top-site-icon {
     background-color: var(--in-content-box-background)!important
   }
+  #snippetContainer #snippets,
   .addon .editorial-description,
   .addon .heading,
   .disco-content,
@@ -307,6 +308,7 @@ url-prefix(https://discovery.addons.mozilla.org) {
     color: var(--in-content-page-color)!important
   }
   #onboarding-overlay.onboarding-opened > #onboarding-overlay-dialog,
+  #searchWrapper input#searchText,
   .addon .content,
   .addon .logo,
   .card-outer .card-context,
@@ -320,6 +322,9 @@ url-prefix(https://discovery.addons.mozilla.org) {
   .sorter[checkState="2"] {
     background-color: var(--in-content-category-header-background)!important
   }
+  .contentSearchSettingsButton {
+    display: none!important
+  }
   #onboarding-overlay.onboarding-opened > #onboarding-overlay-dialog,
   .addon,
   .card-outer .card-context,
@@ -330,6 +335,8 @@ url-prefix(https://discovery.addons.mozilla.org) {
   .topsite-form .form-wrapper input[type=text] {
     color: var(--in-content-page-color)!important
   }
+  #searchWrapper #searchIcon,
+  #searchWrapper #searchSubmit,
   .card-outer .card-context-icon,
   .category:not([selected]) > .category-icon,
   .collapsible-section .section-top-bar .info-option-icon,
@@ -539,6 +546,8 @@ url-prefix(https://discovery.addons.mozilla.org) {
   .context-menu > ul > li > a:hover {
     background-color: var(--theme-selection-background-hover)!important
   }
+  #searchText:active,
+  #searchText:focus,
   .search-wrapper input:focus,
   .search-wrapper:active input {
     box-shadow: 0 0 0 3px var(--in-content-border-focus)!important
