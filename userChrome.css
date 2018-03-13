@@ -456,6 +456,9 @@ screen and (-moz-os-version:windows-win10) {
   menupopup > menu > menupopup {
     padding: 4px 0!important
   }
+  /*! Temporarily making de-active due to number of questions about
+      different sized context menus. Will decide what to do with it
+      at a later time.
   #PlacesToolbar menupopup > menu,
   #PlacesToolbar menupopup > menuitem,
   menupopup#contentAreaContextMenu > menu,
@@ -487,7 +490,8 @@ screen and (-moz-os-version:windows-win10) {
   toolbaritem#menubar-items menupopup menupopup > menuitem {
     font-size: 1em!important
   }
-  #customization-toolbar-menu,
+  */
+#customization-toolbar-menu,
   toolbaritem#menubar-items menupopup,
   toolbaritem#menubar-items menupopup > menu > menupopup {
     padding-left: 2px!important;
