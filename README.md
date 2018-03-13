@@ -38,8 +38,11 @@ ShadowFox styles the entire user interface, protected webpages (such as `about:`
 
 It's easy to customize ShadowFox, everything from the colors used to what elements and webpages are styled.  Depending on how much you want to customize ShadowFox, you may be better suited using a different installation process.  To learn more, see [here](https://github.com/overdodactyl/ShadowFox/wiki/Getting-Started).
 
+## Discussion
 
-# Find a bug? Have a feature request? Have any questions?
+* Chat about ShadowFox Slack - [invitation link](https://join.slack.com/t/shadowfox-workspace/shared_invite/enQtMzI5Nzk5OTk1MjcxLThkMDgwOGE5ZDY1MDUyNjIwNWQ2MTlmMjEwZTJiZmZjYTUxODM4ZTRkNzhiNGRhZTFhMjdjMTFjMTQ3YjZjYzU)
+
+## Find a bug? Have a feature request? Have any questions?
 
 Please first read through the [wiki](https://github.com/overdodactyl/ShadowFox/wiki/) (including the getting started information, troubleshooting, and known problems) and take a look at any open [issues](https://github.com/overdodactyl/ShadowFox/issues).  If you can't find a duplicate request, bug, or an answer to your question, please feel free to either:
 
@@ -48,6 +51,6 @@ Please first read through the [wiki](https://github.com/overdodactyl/ShadowFox/w
 * Make a post on the ShadowFox [Reddit page](https://www.reddit.com/r/ShadowFoxCSS/).
 
 
-# Contributing
+## Contributing
 
 I welcome any contributions and would be excited to have a team of people helping with this project.  If you are uncomfortable making pull requests, you can simply open up an issue and attach any code you would like included.
