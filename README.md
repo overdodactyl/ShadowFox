@@ -40,7 +40,7 @@ It's easy to customize ShadowFox, everything from the colors used to what elemen
 
 ## Discussion
 
-* Chat about ShadowFox Slack - [invitation link](https://join.slack.com/t/shadowfox-workspace/shared_invite/enQtMzI5Nzk5OTk1MjcxLThkMDgwOGE5ZDY1MDUyNjIwNWQ2MTlmMjEwZTJiZmZjYTUxODM4ZTRkNzhiNGRhZTFhMjdjMTFjMTQ3YjZjYzU)
+* Chat about ShadowFox on Slack - [invitation link](https://join.slack.com/t/shadowfox-workspace/shared_invite/enQtMzI5Nzk5OTk1MjcxLThkMDgwOGE5ZDY1MDUyNjIwNWQ2MTlmMjEwZTJiZmZjYTUxODM4ZTRkNzhiNGRhZTFhMjdjMTFjMTQ3YjZjYzU)
 
 ## Find a bug? Have a feature request? Have any questions?
 
