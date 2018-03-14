@@ -865,7 +865,7 @@ toolbar[brighttext] {
     #security-technical,
     #security-technical-groupbox {
       -moz-appearance: none!important;
-      background-color: var(--in-content-page-color)!important;
+      background-color: var(--in-content-page-background)!important;
       border: none!important;
       color: var(--in-content-selected-text)!important
     }
