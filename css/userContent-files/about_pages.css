@@ -9,18 +9,19 @@ url-prefix(https://discovery.addons.mozilla.org) {
   popup,
   popup > menu > menupopup {
     -moz-appearance: none!important;
-    background: var(--in-content-page-background)!important;
-    border: none!important
+    background: var(--in-content-box-background)!important;
+    border: none!important;
+    padding: 0!important
   }
   menuitem,
   menupopup menu {
     -moz-appearance: none!important;
-    color: var(--in-content-text-color)!important
+    color: var(--in-content-selected-text)!important
   }
   menuitem:hover,
   menupopup menu:hover {
     color: var(--in-content-text-color)!important;
-    background-color: var(--theme-selection-background-hover)!important
+    background-color: var(--in-content-primary-button-background-hover)!important
   }
   menupopup menuseparator {
     padding: 0!important;
@@ -38,7 +39,8 @@ url-prefix(https://discovery.addons.mozilla.org) {
     menupopup > menu > menupopup,
     popup,
     popup > menu > menupopup {
-      border: 1px solid!important
+      border: 1px solid!important;
+      border-color: var(--in-content-box-background)!important
     }
   }
   .prefs-pane [type=checkbox]:checked + label::after,
