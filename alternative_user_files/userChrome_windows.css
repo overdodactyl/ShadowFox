@@ -361,12 +361,17 @@ popup > menu > menupopup {
   background: var(--in-content-box-background)!important
 }
 #context-navigation menuitem:hover {
-  background: var(--in-content-category-header-background)!important
+  background: var(--in-content-primary-button-background-hover)!important
 }
 menuitem,
 menupopup menu {
   -moz-appearance: none!important;
   color: var(--in-content-selected-text)!important
+}
+menupopup menuseparator {
+  -moz-appearance: none!important;
+  padding: 1px!important;
+  margin: 5px 0!important
 }
 #context-navigation menuitem[disabled=true],
 menu[disabled=true],
@@ -385,7 +390,7 @@ menuitem:hover[disabled=true] {
 menuitem[_moz-menuactive=true],
 menupopup menu[_moz-menuactive=true] {
   color: var(--in-content-selected-text)!important;
-  background-color: var(--in-content-category-header-background)!important
+  background-color: var(--in-content-primary-button-background-hover)!important
 }
 vbox#sidebar-box.chromeclass-extrachrome {
   border-color: var(--in-content-category-header-background)!important;
@@ -403,9 +408,8 @@ screen and (-moz-os-version:windows-win7),
 screen and (-moz-os-version:windows-win8),
 screen and (-moz-os-version:windows-win10) {
   menupopup menuseparator {
-    -moz-appearance: none!important;
-    background: rgba(0,0,0,0)!important;
-    border: 0!important
+    padding: 0!important;
+    border-color: var(--in-content-table-border-dark-color)!important
   }
   #context-navigation,
   #context-sep-navigation {
@@ -990,8 +994,6 @@ statuspanel .statuspanel-label {
   background-color: var(--in-content-border-focus)!important
 }
 menupopup menuseparator {
-  padding: 0!important;
-  margin: 2px 6px!important;
   -moz-appearance: none!important;
   background: rgba(0,0,0,0)!important;
   border: 0!important
