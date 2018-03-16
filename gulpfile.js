@@ -47,7 +47,7 @@ gulp.task('userChrome', function() {
   return gulp.src(['css/common-files/*.css', 'css/userChrome-files/*.css'])
     .pipe(concatCss('userChrome.css'))
     .pipe(gulp.dest('.'));
-}));
+});
 
 /* Minify final user files */
 gulp.task('minify_final', function() {
