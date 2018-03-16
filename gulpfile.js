@@ -42,16 +42,8 @@ gulp.task('userContent', gulp.parallel('userContent_no_addons', function() {
 }));
 
 
-/* Create Windows version */
-gulp.task('userChrome_windows', function() {
-  return gulp.src(['css/common-files/*.css', 'css/userChrome-files/*.css', 'css/userChrome-files/windows_fixes/*.css' ])
-    .pipe(concatCss('userChrome_windows.css'))
-    .pipe(gulp.dest('./alternative_user_files'));
-});
-
-
 /* Add everything to userChrome */
-gulp.task('userChrome', gulp.parallel('userChrome_windows', function() {
+gulp.task('userChrome', function() {
   return gulp.src(['css/common-files/*.css', 'css/userChrome-files/*.css'])
     .pipe(concatCss('userChrome.css'))
     .pipe(gulp.dest('.'));
