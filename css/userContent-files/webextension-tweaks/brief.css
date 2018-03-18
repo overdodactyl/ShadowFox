@@ -1,25 +1,58 @@
 /*! Alters the webextension Brief
   IMPORTANT: change the Internal UUID */
 @-moz-document url-prefix("moz-extension://brief_UUID/") {
-  h2 {
-    color: var(--accent-1)!important
+  #sidebar {
+    background-color: var(--in-content-box-background)!important
   }
-  label {
-    color: var(--tone-4)!important
+  #main-message,
+  #view-list > tree-item > .title,
+  #view-title-label,
+  .content,
+  .day-header,
+  .headline-feed-name,
+  .headline-title,
+  .sidebar-button,
+  tree-item > .title {
+    color: var(--in-content-page-color)!important
   }
-  #clear-all-entries,
-  #custom-style-textbox,
-  input[type=number] {
-    -moz-appearance: none!important;
-    background: var(--tone-6)!important;
-    color: var(--tone-4)!important;
-    border-color: var(--tone-5)!important
+  #sidebar-top {
+    border-bottom: 1px solid!important
   }
-  #clear-all-entries {
-    border-radius: 3px!important;
-    -moz-appearance: none!important;
-    background: var(--tone-8)!important;
-    color: var(--tone-4)!important;
-    border-color: var(--tone-5)!important
+  .sidebar-button:hover {
+    color: var(--in-content-link-color)!important
+  }
+  tree-folder.selected > tree-folder-header,
+  tree-item.selected {
+    border-color: var(--in-content-link-color)!important;
+    background-color: var(--in-content-link-color)!important
+  }
+  #feed-view-header {
+    background: var(--in-content-category-header-background)!important
+  }
+  #sidebar-splitter,
+  #tag-list-splitter {
+    border-left: 3px solid!important;
+    border-right: 1px solid!important;
+    border-right-color: var(--in-content-category-header-background)
+  }
+  #sidebar-splitter:hover,
+  #tag-list-splitter:hover {
+    border-right-color: var(--in-content-link-color)!important
+  }
+  .full-container-inner {
+    background: 0 0!important
+  }
+  .headline-container:hover > .headline-header {
+    background-color: var(--in-content-category-header-background)!important
+  }
+  tree-folder:not(.selected) > tree-folder-header:hover,
+  tree-item:hover:not(.selected) {
+    background-color: var(--in-content-page-background)!important;
+    border-color: var(--in-content-category-header-background)!important
+  }
+  #view-list > tree-item.selected > .title,
+  .unread-count,
+  tree-item.selected > .title {
+    color: var(--in-content-selected-text)!important
   }
 }

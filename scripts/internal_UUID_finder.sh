@@ -23,6 +23,7 @@ declare -A styled=( ["brief@mozdev.org"]="brief"
                     ["uBO-Scope@raymondhill.net"]="ubo_scope"
                     ["uMatrix@raymondhill.net"]="umatrix"
                     ["vim-vixen@i-beam.org"]="vim_vixen"
+                    ["{aecec67f-0d10-4fa7-b7c7-609a2db280cf}"]="violentmonkey"
                   )
 
 line=$(sed -n -e 's/^user_pref("extensions.webextensions.uuids", "{\(.*\).*}");/\1/p' ../prefs.js)
