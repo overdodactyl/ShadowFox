@@ -603,6 +603,7 @@ url-prefix(https://discovery.addons.mozilla.org) {
   }
 }
 @-moz-document url-prefix(chrome://) {
+  #ColorsDialogPane,
   #ConnectionsDialogPane,
   #FontsDialogPane,
   #LanguagesDialogPane,
