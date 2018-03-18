@@ -1,7 +1,21 @@
 /*! Alters the webextension Tree Style Tab
   IMPORTANT: change the Internal UUID in BOTH locations */
+@-moz-document url-prefix("moz-extension://tree_style_tab_UUID/resources/group-tab.html") {
+  :root {
+    background: var(--tone-7)!important
+  }
+  h1::before {
+    background: var(--tone-4)!important
+  }
+  #tabs img[src="https://assets-cdn.github.com/favicon.ico"] {
+    filter: invert(55%)!important
+  }
+}
+/*! Alters the webextension Tree Style Tab
+  IMPORTANT: change the Internal UUID all BOTH locations */
 @-moz-document url-prefix("moz-extension://tree_style_tab_UUID/") {
-  #debug-configs,
+  /*! Use Plain Dark Appearance */
+#debug-configs,
   p,
   ul {
     color: var(--tone-4)!important
@@ -34,18 +48,66 @@
   .menu-ui-59858.menu-ui.menu li.separator {
     border-color: var(--in-content-box-border-color)!important
   }
-}
-/*! Alters the webextension Tree Style Tab
-  IMPORTANT: change the Internal UUID in BOTH locations */
-@-moz-document url-prefix("moz-extension://tree_style_tab_UUID/resources/group-tab.html") {
+  fieldset {
+    border: 2px solid!important;
+    border-color: var(--in-content-box-border-color)!important
+  }
   :root {
-    background: var(--tone-7)!important;
-    color: ButtonText
+    background-color: var(--in-content-page-background)!important
   }
-  h1::before {
-    background: var(--tone-4)!important
+  .tab {
+    background: var(--in-content-page-background)!important;
+    border-color: var(--in-content-category-header-background)!important
   }
-  #tabs img[src="https://assets-cdn.github.com/favicon.ico"] {
-    filter: invert(55%)!important
+  .tab .label {
+    color: var(--in-content-page-color)!important
+  }
+  .tab:hover {
+    background-color: var(--in-content-category-header-background)!important
+  }
+  .tab.active {
+    background-color: var(--in-content-border-focus)!important
+  }
+  .tab.selected {
+    background-color: var(--primary-accent-color-dark)!important
+  }
+  .tab.active .label,
+  .tab.selected .label {
+    color: #fff!important
+  }
+  .tab.active:hover {
+    background-color: var(--in-content-primary-button-background)!important
+  }
+  .tab.discarded {
+    opacity: .75!important
+  }
+  .tab.discarded .label {
+    color: var(--in-content-box-border-color)!important
+  }
+  .tab.unread .label {
+    font-style: italic!important
+  }
+  .tab:not(:hover) .closebox {
+    display: none!important
+  }
+  .twisty {
+    color: var(--in-content-page-color)!important
+  }
+  .tab.active .twisty {
+    color: #fff!important
+  }
+  .newtab-button {
+    opacity: 0!important
+  }
+  #all-tabs .tab:not(.active)[data-current-uri*="github.com"] .favicon {
+    filter: invert(65%)!important
+  }
+  .simulate-svg-context-fill:root .tab.group-tab .favicon-default::before {
+    filter: invert(45%)!important
+  }
+  #background,
+  #background::after,
+  #tabbar {
+    background: var(--in-content-page-background)!important
   }
 }
