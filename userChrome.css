@@ -112,6 +112,7 @@
   --selected-icon-fill-color: var(--tone-2)!important;
   --in-content-dark-header-background: var(--tone-9)!important;
   --secure-connection-color: var(--accent-1);
+  --theme-sidebar-background: #1B1B1D!important;
   --start-indicator-for-updater-scripts: black;
   --end-indicator-for-updater-scripts: black;
   --dummy-variable-for-updater-scripys: black;

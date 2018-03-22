@@ -2,10 +2,11 @@
   IMPORTANT: change the Internal UUID */
 @-moz-document url-prefix("moz-extension://ublock_origin_UUID/") {
   .CodeMirror {
-    border: 1px solid!important;
-    border-color: var(--tone-5)!important;
-    background: #2a2a2e!important;
-    color: #b1b1b3!important
+    border: 1px solid #2a2a2c!important;
+    background: var(--tone-8)!important;
+    color: #b1b1b3!important;
+    font-size: 11px!important;
+    line-height: 14px!important
   }
   div.CodeMirror-selected {
     background: #353b48!important
@@ -27,10 +28,10 @@
     background: var(--tone-7)!important
   }
   .cm-search-widget {
-    background-color: var(--tone-9)!important;
+    background-color: var(--theme-sidebar-background)!important;
     border: 1px solid;
     border-bottom: none!important;
-    border-color: var(--tone-5)!important;
+    border-color: #2a2a2c!important;
     max-height: 15px!important;
     justify-content: right!important
   }
@@ -51,12 +52,12 @@
     font-weight: 700
   }
   .CodeMirror-merge-gap {
-    background-color: var(--tone-9)!important;
+    background-color: var(--theme-sidebar-background)!important;
     border-top: 1px solid!important;
     border-bottom: 1px solid!important;
     border-right: none!important;
     border-left: none!important;
-    border-color: var(--tone-5)!important
+    border-color: #2a2a2c!important
   }
   .CodeMirror-merge {
     border: none!important
@@ -66,7 +67,7 @@
     font-size: 100%!important
   }
   .CodeMirror-gutters {
-    background: var(--tone-9)!important;
+    background: var(--theme-sidebar-background)!important;
     border-right: 0 solid #4a4a4f!important
   }
   .CodeMirror-guttermarker,
@@ -74,10 +75,14 @@
     color: #555!important
   }
   .CodeMirror-linenumber {
-    color: #939393!important
+    padding: 0 8px 0 5px!important;
+    color: #58575c!important
   }
   .CodeMirror-cursor {
     border-left: 1px solid #fff!important
+  }
+  .cm-comment {
+    color: #939393!important
   }
   .cm-staticext {
     color: var(--theme-highlight-blue)!important
