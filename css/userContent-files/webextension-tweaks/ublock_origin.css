@@ -251,6 +251,7 @@
     background-color: var(--tone-8)!important;
     border-color: var(--tone-5)!important
   }
+  #ruleFilter input,
   input[type=number] {
     -moz-appearance: none!important;
     background-color: var(--tone-6)!important;
@@ -347,6 +348,8 @@
     background-color: var(--tone-8)!important;
     color: var(--grey-30)!important
   }
+  li.listEntry > a.remove,
+  li.listEntry > a.remove:visited,
   li.listEntry span.failed,
   li.listEntry span.unsecure {
     color: #de7474!important
