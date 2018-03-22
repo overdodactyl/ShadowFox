@@ -2,10 +2,11 @@
   IMPORTANT: change the Internal UUID */
 @-moz-document url-prefix("moz-extension://umatrix_UUID/") {
   .CodeMirror {
-    border: 1px solid!important;
-    border-color: var(--tone-5)!important;
-    background: #2a2a2e!important;
-    color: #b1b1b3!important
+    border: 1px solid #2a2a2c!important;
+    background: var(--tone-8)!important;
+    color: #b1b1b3!important;
+    font-size: 11px!important;
+    line-height: 14px!important
   }
   div.CodeMirror-selected {
     background: #353b48!important
@@ -30,18 +31,18 @@
     background-color: var(--warning-background-color)!important
   }
   .CodeMirror-merge-gap {
-    background-color: var(--tone-9)!important;
+    background-color: var(--theme-sidebar-background)!important;
     border-top: 1px solid!important;
     border-bottom: 1px solid!important;
     border-right: none!important;
     border-left: none!important;
-    border-color: var(--tone-5)!important
+    border-color: #2a2a2c!important
   }
   .CodeMirror-merge {
     border: none!important
   }
   .CodeMirror-gutters {
-    background: var(--tone-9)!important;
+    background: var(--theme-sidebar-background)!important;
     border-right: 0 solid #4a4a4f!important
   }
   .CodeMirror-guttermarker,
@@ -49,7 +50,8 @@
     color: #555!important
   }
   .CodeMirror-linenumber {
-    color: #939393!important
+    padding: 0 8px 0 5px!important;
+    color: #58575c!important
   }
   .CodeMirror-cursor {
     border-left: 1px solid #fff!important
@@ -123,20 +125,17 @@
   #dashboard-nav-widgets {
     background-color: var(--tone-8)!important;
     color: var(--tone-4)!important;
-    border-bottom: 1px solid var(--tone-5);
+    border-bottom: 1px solid!important;
     border-color: var(--tone-5)!important
   }
   .tabButton {
-    background: var(--tone-6)!important;
+    background-color: var(--tone-7)!important;
     color: var(--tone-4)!important;
-    border-color: var(--tone-5)!important;
-    border-bottom: none!important
+    border-color: var(--tone-5)!important
   }
   .tabButton.selected {
-    border-bottom: none!important;
-    background-color: var(--tone-7)!important;
-    border-color: var(--tone-5)!important;
-    color: var(--accent-1)!important
+    background-color: var(--tone-8)!important;
+    border-color: var(--tone-5)!important
   }
   button.custom.important {
     background-color: #ffcc7f!important;
@@ -234,9 +233,6 @@
     border-color: var(--tone-5)!important;
     background: var(--tone-6)!important;
     color: var(--tone-4)!important
-  }
-  #dashboard-nav-widgets {
-    border-bottom: 1px solid!important
   }
   .whatisthis-expandable {
     background-color: var(--tone-8)!important;
