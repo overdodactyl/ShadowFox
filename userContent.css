@@ -2184,6 +2184,7 @@ url-prefix(https://discovery.addons.mozilla.org) {
     color: #000!important;
     opacity: .8!important
   }
+  .ruleActions button,
   button.custom,
   button.custom.important.disabled,
   button.custom.important[disabled] {
@@ -2196,7 +2197,15 @@ url-prefix(https://discovery.addons.mozilla.org) {
     color: var(--in-content-text-color)!important;
     opacity: 1!important
   }
-  button.custom:hover {
+  #commitButton,
+  #diff.editing #exportButton,
+  #diff.editing #importButton,
+  #editSaveButton,
+  #revertButton {
+    opacity: .25!important
+  }
+  button.custom:hover,
+  button:hover {
     background-color: var(--in-content-box-background-hover)!important
   }
   button.custom.disabled,
@@ -2204,6 +2213,11 @@ url-prefix(https://discovery.addons.mozilla.org) {
   button.custom.important[disabled],
   button.custom[disabled] {
     opacity: .5!important
+  }
+  #diff.dirty:not(.editing) #commitButton,
+  #diff.dirty:not(.editing) #revertButton,
+  #diff.editing #editSaveButton {
+    opacity: 1!important
   }
   button.custom.important:hover {
     background-color: #ffcc7f!important;
@@ -2262,9 +2276,12 @@ url-prefix(https://discovery.addons.mozilla.org) {
   #diff ul {
     border-top: 1px solid!important
   }
+  html body div.assets div {
+    background-color: var(--in-content-box-background)!important
+  }
   textarea {
     -moz-appearance: none!important;
-    background: var(--tone-6)!important;
+    background: var(--tone-8)!important;
     color: var(--tone-4)!important;
     border: 1px solid!important;
     border-color: var(--tone-5)!important;
