@@ -106,6 +106,9 @@ toolbarbutton {
 toolbar[brighttext] {
   --toolbarbutton-icon-fill-attention: var(--in-content-primary-button-background)!important
 }
+toolbarseparator {
+  border-color: var(--in-content-table-border-dark-color)!important
+}
 ::-moz-selection {
   background: var(--in-content-link-color);
   color: var(--in-content-selected-text)!important
