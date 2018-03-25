@@ -42,3 +42,7 @@ hbox#sidebar-search-container textbox#search-box {
 .sidebar-placesTreechildren::-moz-tree-image {
   fill: var(--in-content-page-color)!important
 }
+#sidebar-header,
+.sidebar-splitter {
+  border-color: hsla(240,5%,5%,.1)!important
+}
