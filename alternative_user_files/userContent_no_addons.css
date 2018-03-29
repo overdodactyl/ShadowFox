@@ -261,6 +261,7 @@ url-prefix(https://discovery.addons.mozilla.org) {
   }
   #newtab-customize-overlay,
   .exceptionDialogButtonContainer,
+  .snippet .button-link,
   html:not(#ublock0-epicker),
   html:not(#ublock0-epicker) body {
     background: var(--in-content-page-background)!important;
@@ -274,6 +275,9 @@ url-prefix(https://discovery.addons.mozilla.org) {
   .modal-overlay,
   .warningBackground {
     background: var(--in-content-page-background)!important
+  }
+  .snippet .block-snippet-button {
+    filter: invert(65%)!important
   }
   .collapsible-section .section-top-bar .info-option-manage button,
   .topic .topic-read-more,
@@ -321,6 +325,7 @@ url-prefix(https://discovery.addons.mozilla.org) {
   card-outer.active span.context-menu ul.context-menu-list {
     background: var(--in-content-box-background)!important
   }
+  #snippets-container,
   .sorter[checkState="1"],
   .sorter[checkState="2"] {
     background-color: var(--in-content-category-header-background)!important
@@ -329,11 +334,13 @@ url-prefix(https://discovery.addons.mozilla.org) {
     display: none!important
   }
   #onboarding-overlay.onboarding-opened > #onboarding-overlay-dialog,
+  #scene1 h1,
   .addon,
   .card-outer .card-context,
   .card-outer .card-host-name,
   .detail-view-container,
   .section-title span,
+  .snippet section,
   .top-sites-list .top-site-outer .top-site-icon,
   .topsite-form .form-wrapper input[type=text] {
     color: var(--in-content-page-color)!important
