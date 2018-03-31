@@ -1827,7 +1827,8 @@ url-prefix(https://discovery.addons.mozilla.org) {
   #firewallContainer > div.blocked > span:first-of-type::before,
   #firewallContainer.minimized > div.isDomain.totalBlocked > span:first-of-type::before {
     background-color: #c87576!important;
-    opacity: 1!important color: var(--tone-2)!important
+    opacity: 1!important;
+    color: var(--tone-2)!important
   }
   #netFilteringDialog .dialog > div.containers > div.dynamic tr.entry > td > div.action.own.allow,
   body.advancedUser #firewallContainer > div > span.allowRule.ownRule {
