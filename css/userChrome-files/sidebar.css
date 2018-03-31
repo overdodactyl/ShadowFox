@@ -1,10 +1,12 @@
 #sidebar-header,
 #sidebar-search-container,
 #sidebar-search-container #viewButton,
+.content-header,
 .sidebar-header {
   background: var(--in-content-category-header-background)!important;
   color: var(--in-content-page-color)!important
 }
+.sidebar-search-container.tabs-container.sync-state.selected .search-box,
 hbox#sidebar-search-container textbox#search-box {
   -moz-appearance: none!important;
   background-color: var(--in-content-box-background)!important;
@@ -46,6 +48,7 @@ hbox#sidebar-search-container textbox#search-box {
 .sidebar-splitter {
   border-color: hsla(240,5%,5%,.1)!important
 }
-.deck .instructions {
+.deck .instructions,
+.item-title {
   color: var(--in-content-page-color)!important
 }
