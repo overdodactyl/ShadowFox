@@ -995,6 +995,9 @@ hbox#sidebar-search-container textbox#search-box {
 .sidebar-splitter {
   border-color: hsla(240,5%,5%,.1)!important
 }
+.deck .instructions {
+  color: var(--in-content-page-color)!important
+}
 statuspanel .statuspanel-label {
   background-color: var(--in-content-category-header-background)!important;
   color: var(--in-content-page-color)!important;
