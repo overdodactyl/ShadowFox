@@ -27,6 +27,7 @@
 @import "css/userContent-files/webextension-tweaks/request_control.css";
 @import "css/userContent-files/webextension-tweaks/skip_redirect.css";
 @import "css/userContent-files/webextension-tweaks/smart_https.css";
+@import "css/userContent-files/webextension-tweaks/smart_referer.css";
 @import "css/userContent-files/webextension-tweaks/tab_suspender.css";
 @import "css/userContent-files/webextension-tweaks/tree_style_tab.css";
 @import "css/userContent-files/webextension-tweaks/tridactyl.css";
