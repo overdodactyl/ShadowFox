@@ -100,6 +100,20 @@
     color: var(--in-content-text-color)!important;
     opacity: 1!important
   }
+  button#bye,
+  button#proceedPermanent,
+  button#proceedTemporary {
+    -moz-appearance: none!important;
+    background-image: none!important;
+    background-color: var(--in-content-page-background)!important;
+    color: var(--in-content-page-color)!important;
+    border: 1px solid!important;
+    border-color: var(--in-content-box-border-color)!important;
+    border-radius: 3px!important
+  }
+  button#bye:hover,
+  button#proceedPermanent:hover,
+  button#proceedTemporary:hover,
   button.custom:hover {
     background-color: var(--in-content-box-background-hover)!important
   }
@@ -120,11 +134,16 @@
   #diff {
     border-color: var(--tone-5)!important
   }
+  #whyex a,
   label a,
   p a,
   ul a,
   ul#userSettings .subgroup > span {
     color: var(--accent-1)!important
+  }
+  #whyex a:visited,
+  .content:visited {
+    color: var(--in-content-link-color-visited)!important
   }
   #dashboard-nav-widgets span {
     color: var(--tone-4)!important
