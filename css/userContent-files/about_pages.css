@@ -75,6 +75,8 @@ url-prefix(https://discovery.addons.mozilla.org) {
   .warningBackground {
     background: var(--in-content-page-background)!important
   }
+  #homeContentsGroup checkbox[src] .checkbox-icon,
+  .content-container .icon-container .icon[src=""],
   .snippet .block-snippet-button {
     filter: invert(65%)!important
   }
