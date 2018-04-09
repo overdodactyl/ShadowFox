@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 ### ShadowFox updater for Mac
 ## author: @overdodactyl
@@ -101,17 +101,15 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   touch ./ShadowFox_customization/userContent_customization.css
   touch ./ShadowFox_customization/userChrome_customization.css
 
-  if [ -e userChrome.css ] || [ -e userContent.css ] ; then
-    ## Make chrome backups folder if it doesn't extern
-    mkdir -p chrome_backups
-  fi
   if [ -e userChrome.css ]; then
     # backup current userChrome.css file
+    mkdir -p chrome_backups
     bakfile="userChrome.backup.$(date +"%Y-%m-%d_%H%M%S")"
     mv userChrome.css "chrome_backups/${bakfile}" && echo "Your previous userChrome.css file was backed up: ${bakfile}"
   fi
   if [ -e userContent.css ]; then
     # backup current userChrome.css file
+    mkdir -p chrome_backups
     bakfile="userContent.backup.$(date +"%Y-%m-%d_%H%M%S")"
     mv userContent.css "chrome_backups/${bakfile}" && echo "Your previous userContent.css file was backed up: ${bakfile}"
   fi
