@@ -96,6 +96,7 @@
     background: var(--in-content-category-header-background)!important
   }
   .menu.expand,
+  .page-popup,
   .submenu,
   html {
     background: var(--in-content-box-background)!important
