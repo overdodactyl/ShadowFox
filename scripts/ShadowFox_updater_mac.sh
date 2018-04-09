@@ -1,13 +1,15 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 ### ShadowFox updater for Mac
 ## author: @overdodactyl
-## version: 1.3
+## version: 1.4
 
 userChrome="https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/userChrome.css"
 userContent="https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/userContent.css"
 uuid_finder="https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/scripts/internal_UUID_finder.sh"
 updater="https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/scripts/ShadowFox_updater_mac.sh"
+
+profilePath="$HOME/Library/Application Support/Firefox/Profiles"
 
 currdir=$(pwd)
 
@@ -17,12 +19,39 @@ sfp=$(readlink -f "${BASH_SOURCE[0]}" 2>/dev/null || greadlink -f "${BASH_SOURCE
 ## fallback for Macs without coreutils - may cause problems if symbolic links are encountered
 if [ -z "$sfp" ]; then sfp=${BASH_SOURCE[0]}; fi
 
-## change directory to the Firefox profile directory
-cd "$(dirname "${sfp}")"
+## check to see if file is already in a profile directory
+if [[ $sfp == "$profilePath"* ]]; then
+  ## change directory to the Firefox profile directory
+  cd "$(dirname "${sfp}")"
+else
+  ## if only one profile exists, go to it
+  if [ $(find "$profilePath"/* -maxdepth 0 -type d | wc -l) -eq 1 ]; then
+    profileDirectory=$(echo "$profilePath"/*)
+
+    cd "${profileDirectory}"
+
+  ## if there are multiple directories, list them and let user choose
+  else
+    for d in "$profilePath"/* ; do
+      name=$(echo $d |  sed 's/.*\.//')
+      echo $name
+    done
+    read -p "What profile would you like to update ShadowFox in? " -r
+    echo ""
+
+    profileName=$REPLY
+    profileID=$(ls "$profilePath" | grep $profileName | sed -n 's/\([[:alnum:]]*\).*/\1/p')
+
+    cd "${profilePath}/${profileID}.${profileName}"
+  fi
+fi
 
 ## Check if there's a newer version of the updater script available
 online_version="$(curl -s ${updater} | sed -n '5 s/.*[[:blank:]]\([[:digit:]]*\.[[:digit:]]*\)/\1/p')"
-current_version="$(sed -n '5 s/.*[[:blank:]]\([[:digit:]]*\.[[:digit:]]*\)/\1/p' ShadowFox_updater_mac.sh)"
+echo $online_version
+path_to_script="$(dirname "${sfp}")/ShadowFox_updater_mac.sh"
+current_version="$(sed -n '5 s/.*[[:blank:]]\([[:digit:]]*\.[[:digit:]]*\)/\1/p' "$path_to_script")"
+echo $current_version
 
 if (( $(echo "$online_version > $current_version" | bc -l) )); then
   echo -e "There is a new updater script available online.  It will replace this one and be executed.\n"
@@ -37,8 +66,6 @@ if (( $(echo "$online_version > $current_version" | bc -l) )); then
   # exit script
   exit 1
 fi
-
-echo -e "\nThis script should be run from inside your Firefox profile.\n"
 
 echo -e "Updating userContent.css and userChrome.css for Firefox profile:\n$(pwd)\n"
 
@@ -74,17 +101,15 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   touch ./ShadowFox_customization/userContent_customization.css
   touch ./ShadowFox_customization/userChrome_customization.css
 
-  if [ -e userChrome.css ] || [ -e userContent.css ] ; then
-    ## Make chrome backups folder if it doesn't extern
-    mkdir -p chrome_backups
-  fi
   if [ -e userChrome.css ]; then
     # backup current userChrome.css file
+    mkdir -p chrome_backups
     bakfile="userChrome.backup.$(date +"%Y-%m-%d_%H%M%S")"
     mv userChrome.css "chrome_backups/${bakfile}" && echo "Your previous userChrome.css file was backed up: ${bakfile}"
   fi
   if [ -e userContent.css ]; then
     # backup current userChrome.css file
+    mkdir -p chrome_backups
     bakfile="userContent.backup.$(date +"%Y-%m-%d_%H%M%S")"
     mv userContent.css "chrome_backups/${bakfile}" && echo "Your previous userContent.css file was backed up: ${bakfile}"
   fi
