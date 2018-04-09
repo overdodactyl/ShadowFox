@@ -18,7 +18,7 @@ ShadowFox styles the entire user interface, protected webpages (such as `about:`
 
   * Visit `about:support` by entering this address in the url bar.
 
-  * In the `Profile Directory` section, click the button that says "Open Folder", "Show in Finder" or "Open Directory" (OS dependent).
+  * In the `Profile Folder`/`Profile Directory` section, click the button that says "Open Folder", "Show in Finder" or "Open Directory" (OS dependent).
 
     * On Windows and Linux, this should take you directly to your profile directory. On a Mac, this will take you to a list of Firefox profiles, with the one you want highlighted. In this case, double click that folder to open it.
 
