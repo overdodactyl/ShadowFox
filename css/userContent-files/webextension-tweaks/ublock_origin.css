@@ -166,8 +166,10 @@
   body.off #switch .fa {
     color: var(--tone-4)!important
   }
-  .tool:hover {
-    color: var(--tone-8)!important
+  #extraTools > span:hover,
+  .tool.enabled:hover,
+  body.dirty #refresh:hover {
+    color: var(--tone-2)!important
   }
   #extraTools,
   h2 {
