@@ -129,18 +129,6 @@ dim internalUUIDsFilePath: internalUUIDsFilePath = fso.buildPath(customizationsF
 dim chromeCustomizationsFilePath: chromeCustomizationsFilePath = fso.buildPath(customizationsFolderPath, "userChrome_customization.css")
 dim contentCustomizationsFilePath: contentCustomizationsFilePath = fso.buildPath(customizationsFolderPath, "userContent_customization.css")
 
-' ensure the files & folders are present, creating empty files as placeholders for users to customize
-if not fso.folderExists(chromeFolderPath) then
-  call fso.createFolder(chromeFolderPath)
-end if
-if not fso.folderExists(customizationsFolderPath) then
-  call fso.createFolder(customizationsFolderPath)
-end if
-dim colorOverrides: colorOverrides = processCustomizationFile(colorOverridesFilePath)
-dim internalUUIDs: internalUUIDs = processCustomizationFile(internalUUIDsFilePath)
-dim chromeCustomizations: chromeCustomizations = processCustomizationFile(chromeCustomizationsFilePath)
-dim contentCustomizations: contentCustomizations = processCustomizationFile(contentCustomizationsFilePath)
-
 ' ask if we may continue
 dim prompt: prompt = "Updating userContent.css and userChrome.css for Firefox profile:" & vbNewLine & chromeFolderPath & vbNewLine
 if fso.fileExists(contentFilePath) then
@@ -161,7 +149,15 @@ if vbNo = msgBox(prompt & vbSection & "Continue?", vbYesNo + vbDefaultButton2 + 
   ' no -> tell
   call msgBox("Process aborted.", vbOKOnly, "ShadowFox updater")
 else
-  ' yes -> backup any existing files
+  ' yes -> ensure the folders are present
+  if not fso.folderExists(chromeFolderPath) then
+    call fso.createFolder(chromeFolderPath)
+  end if
+  if not fso.folderExists(customizationsFolderPath) then
+    call fso.createFolder(customizationsFolderPath)
+  end if
+
+  ' backup any existing files
   prompt = "Installing new ShadowFox files."
   if fso.fileExists(contentFilePath) then
     prompt = prompt & vbNewLine & _
@@ -193,6 +189,7 @@ else
     dim contentFileContent: contentFileContent = readFileContent(contentFilePath)
 
     ' do any extension UUID replacements
+    dim internalUUIDs: internalUUIDs = processCustomizationFile(internalUUIDsFilePath)
     if len(internalUUIDs) = 0 then
       prompt = prompt & vbSection & _
         "You have not defined any internal UUIDs for webextensions." & vbNewLine & _
@@ -213,6 +210,7 @@ else
     end if
 
     ' process any color overrides
+    dim colorOverrides: colorOverrides = processCustomizationFile(colorOverridesFilePath)
     if len(colorOverrides) = 0 then
       prompt = prompt & vbSection & _
         "You are using the default colors set by ShadowFox." & vbNewLine & _
@@ -227,6 +225,7 @@ else
     end if
 
     ' add on any overrides
+    dim contentCustomizations: contentCustomizations = processCustomizationFile(contentCustomizationsFilePath)
     if len(contentCustomizations) = 0 then
       prompt = prompt & vbSection & _
         "You do not have any custom userContent.css tweaks." & vbNewLine & _
@@ -236,6 +235,7 @@ else
       prompt = prompt & vbSection & _
         "Your custom userContent.css tweaks have been applied."
     end if
+    dim chromeCustomizations: chromeCustomizations = processCustomizationFile(chromeCustomizationsFilePath)
     if len(chromeCustomizations) = 0 then
       prompt = prompt & vbSection & _
         "You do not have any custom userChrome.css tweaks." & vbNewLine & _
