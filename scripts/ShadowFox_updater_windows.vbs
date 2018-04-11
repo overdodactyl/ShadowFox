@@ -57,12 +57,20 @@ function dateTimeStamp()
 end function
 
 ' backs up the given file
+' creates the backup folder if it doesn't exist yet
 ' returns the used backup file name
-function backupFile(chromeFolderPath, filePath, fileBaseName)
+function backupFile(sourceFilePath, backupFolderPath)
+  ' determine the backup filename
+  dim backupFileName: backupFileName = fso.getBaseName(sourceFilePath) & ".backup." & dateTimeStamp() & "." & fso.getExtensionName(sourceFilePath)
+  dim backupFilePath: backupFilePath = fso.buildPath(backupFolderPath, backupFileName)
+
+  ' ensure the backup folder is there
+  if not fso.folderExists(backupFolderPath) then
+    call fso.createFolder(backupFolderPath)
+  end if
+
   ' backup the file
-  dim backupFileName: backupFileName = fileBaseName & ".backup." & dateTimeStamp() & ".css"
-  dim backupFilePath: backupFilePath = fso.buildPath(chromeFolderPath, backupFileName)
-  call fso.moveFile(filePath, backupFilePath)
+  call fso.moveFile(sourceFilePath, backupFilePath)
 
   ' and tell where the backup ended up
   backupFile = backupFileName
@@ -121,6 +129,7 @@ end function
 
 ' determine where the files need to go
 dim chromeFolderPath: chromeFolderPath = fso.buildPath(fso.getParentFolderName(wscript.scriptFullName), "chrome")
+dim backupFolderPath: backupFolderPath = fso.buildPath(fso.getParentFolderName(wscript.scriptFullName), "chrome_backups")
 dim chromeFilePath: chromeFilePath = fso.buildPath(chromeFolderPath, "userChrome.css")
 dim contentFilePath: contentFilePath = fso.buildPath(chromeFolderPath, "userContent.css")
 dim customizationsFolderPath: customizationsFolderPath = fso.buildPath(chromeFolderPath, "ShadowFox_customization")
@@ -161,11 +170,11 @@ else
   prompt = "Installing new ShadowFox files."
   if fso.fileExists(contentFilePath) then
     prompt = prompt & vbNewLine & _
-      "Your previous userContent.css file was backed up: " & backupFile(chromeFolderPath, contentFilePath, "userContent")
+      "Your previous userContent.css file was backed up: " & backupFile(contentFilePath, backupFolderPath)
   end if
   if fso.fileExists(chromeFilePath) then
     prompt = prompt & vbNewLine & _
-      "Your previous userChrome.css file was backed up: " & backupFile(chromeFolderPath, chromeFilePath, "userChrome")
+      "Your previous userChrome.css file was backed up: " & backupFile(chromeFilePath, backupFolderPath)
   end if
 
   ' download the latest versions
