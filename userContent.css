@@ -667,6 +667,7 @@ url-prefix(https://discovery.addons.mozilla.org) {
   .LandingPage-header,
   .MetadataCard,
   .Search .SearchResults .SearchResult,
+  .Search .SearchResults-message,
   .SearchForm-query,
   .SearchForm-suggestions-item.SearchForm-suggestions-item,
   .SectionLinks-dropdown .DropdownMenu-items {
