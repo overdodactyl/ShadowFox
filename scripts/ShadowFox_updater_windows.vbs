@@ -167,8 +167,11 @@ end function
 ' returns "" if more than one profile exists but the user cancels
 function getProfileFolderPath()
   ' determine where the FireFox files are located
-  dim userDataFolder: userDataFolder = shell.ExpandEnvironmentStrings("%APPDATA%\Mozilla\FireFox")
-  dim profileIniFilePath: profileIniFilePath = fso.buildPath(userDataFolder, "profiles.ini")
+  dim userDataFolderPath: userDataFolderPath = shell.ExpandEnvironmentStrings("%APPDATA%\Mozilla\FireFox")
+  dim profileIniFilePath: profileIniFilePath = fso.buildPath(userDataFolderPath, "profiles.ini")
+
+  ' determine where we are located
+  dim ourPath: ourPath = fso.getParentFolderName(wscript.scriptFullName)
 
   ' get the profiles configuration
   dim iniContent: set iniContent = readIni(profileIniFilePath)
@@ -178,6 +181,7 @@ function getProfileFolderPath()
   profilePaths.compareMode = VBTextCompare
   dim sectionName
   dim defaultProfileName: defaultProfileName = ""
+  dim forcedProfilePath: forcedProfilePath = ""
   for each sectionName in iniContent.keys()
     if lcase(left(sectionName, 7)) = "profile" then
       dim section: set section = iniContent.item(sectionName)
@@ -186,21 +190,27 @@ function getProfileFolderPath()
       if section.item("IsRelative") = "0" then
         path = section.item("Path")
       else
-        path = fso.buildPath(userDataFolder, section.item("Path"))
+        path = fso.buildPath(userDataFolderPath, section.item("Path"))
       end if
       if section.exists("Default") then
         defaultProfileName = name
+      end if
+      if strComp(left(ourPath, len(path)), path, vbTextCompare) = 0 then
+        forcedProfilePath = path
       end if
       profilePaths.item(name) = path
     end if
   next
 
-  ' look how many profile were found
-  if profilePaths.count = 1 then
-    ' just one -> use it
+  ' and look what situation we're in
+  if len(forcedProfilePath) > 0 then
+    ' running from within a profile -> use that one
+    getProfileFolderPath = forcedProfilePath
+  elseif profilePaths.count = 1 then
+    ' just one profile found -> use it
     getProfileFolderPath = profilePaths.items()(0)
   else
-    ' more than one -> ask which one to use
+    ' more than one profile found -> ask which one to use
     do
       dim prompt: prompt = "Which profile would you like to update ShadowFox in?"
       dim profileName
@@ -208,15 +218,15 @@ function getProfileFolderPath()
       for each profileName in profilePaths.keys()
         prompt = prompt & vbNewLine & profileName & ": """ & profilePaths.item(profileName) & """"
       next
-      dim chosenProfile: chosenProfile = trim(inputBox(prompt, "ShadowFox updater", defaultProfileName))
-      if len(chosenProfile) = 0 then
+      dim chosenProfileName: chosenProfileName = trim(inputBox(prompt, "ShadowFox updater", defaultProfileName))
+      if len(chosenProfileName) = 0 then
         getProfileFolderPath = ""
       else
-        if profilePaths.exists(chosenProfile) then
-          getProfileFolderPath = profilePaths.item(chosenProfile)
+        if profilePaths.exists(chosenProfileName) then
+          getProfileFolderPath = profilePaths.item(chosenProfileName)
         else
           ' illegal one -> tell
-          call msgbox("The profile """ & chosenProfile & """ doesn't exist; please select one from the list.", vbOKOnly & vbExclamation, "ShadowFox updater")
+          call msgbox("The profile """ & chosenProfileName & """ doesn't exist; please select one from the list.", vbOKOnly & vbExclamation, "ShadowFox updater")
           profileChosen = false
         end if
       end if
