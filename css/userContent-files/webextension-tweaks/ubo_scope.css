@@ -6,6 +6,14 @@
   body.theoretical #heatmaps .heatmap.theoretical {
     background: var(--tone-6)!important
   }
+  #heatmaps {
+    background-color: var(--in-content-box-border-color)!important
+  }
+  #domain3rdDetails {
+    border-color: var(--in-content-box-border-color)!important;
+    background-color: red!important;
+    border: 1px solid #ff0!important
+  }
   #topPane {
     background-color: var(--tone-6)!important;
     color: var(--tone-4)!important
@@ -17,10 +25,6 @@
   #heatmaps.list .hmcell {
     background-color: var(--tone-6)!important;
     color: var(--tone-4)!important
-  }
-  #domain3rdDetails {
-    background-color: var(--tone-7)!important;
-    border: 1px solid!important
   }
   #domain3rdDetails #authority {
     background-color: var(--tone-8)!important;
@@ -35,5 +39,15 @@
   }
   body.theoretical #scores .scores .score.theoretical {
     color: var(--tone-4)!important
+  }
+}
+@-moz-document url-prefix("moz-extension://ubo_scope_UUID/options.html") {
+  body,
+  html {
+    background-color: var(--in-content-page-background)!important;
+    color: var(--in-content-page-color)!important
+  }
+  * {
+    border-color: var(--in-content-box-border-color)!important
   }
 }
