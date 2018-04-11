@@ -2,17 +2,20 @@ option explicit
 
 ' ShadowFox updater for Windows
 ' author: @CarlColijn
-' version: 1.0
+' version: 1.1
+' ^^^ ensure the version number is a numeric float value!
 
 ' the download urls of the files
 const chromeFileURL = "https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/userChrome.css"
 const contentFileURL = "https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/userContent.css"
+const updaterFileURL = "https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/scripts/ShadowFox_updater_windows.vbs"
 
 ' set up the common worker objects and flags
 dim vbSection: vbSection = vbNewLine & vbNewLine
-const readMode = 1
-const binaryMode = 1
-const overwriteMode = 2
+const forReading = 1
+const adTypeBinary = 1
+const adTypeText = 2
+const adSaveCreateOverWrite = 2
 dim fso: set fso = createObject("Scripting.FileSystemObject")
 dim regEx: set regEx = createObject("VBScript.RegExp")
 regEx.global = true
@@ -77,22 +80,39 @@ function backupFile(sourceFilePath, backupFolderPath)
   backupFile = backupFileName
 end function
 
-' downloads the given file to the given location
-' returns if the download succeeded
-function downloadFile(url, filePath)
+' reads the given file's content
+function readFileContent(filePath)
+  if fso.getFile(filePath).size = 0 then
+    readFileContent = ""
+  else
+    readFileContent = fso.openTextFile(filePath, forReading).readAll()
+  end if
+end function
+
+' writes the given file's content
+function writeFileContent(filePath, content)
+  call fso.createTextFile(filePath, true).write(content)
+end function
+
+' downloads the given file
+' returns the content and if the download succeeded
+function downloadFile(url, content)
   on error resume next
     ' download the file content
     dim xmlHttp: set xmlHttp = createObject("Microsoft.XMLHTTP")
     call xmlHttp.Open("GET", url, false)
     call xmlHttp.Send()
     if err.number = 0 then
-      ' done -> save it
+      ' done -> convert it
       dim stream: set stream = createobject("ADODB.Stream")
       with stream
-        .type = binaryMode
+        .type = adTypeBinary
         call .open
         call .write(xmlHttp.responseBody)
-        call .saveToFile(filePath, overwriteMode)
+        .position = 0
+        .type = adTypeText
+        .charSet = "us-ascii"
+        content = .readText()
       end with
     end if
 
@@ -101,12 +121,15 @@ function downloadFile(url, filePath)
   on error goto 0
 end function
 
-' reads the given file's content
-function readFileContent(filePath)
-  if fso.getFile(filePath).size = 0 then
-    readFileContent = ""
-  else
-    readFileContent = fso.openTextFile(filePath, readMode).readAll()
+' downloads and saves the given file to the given location
+' returns if the download succeeded
+function downloadAndSaveFile(url, filePath)
+  ' download the file's content
+  dim content
+  downloadAndSaveFile = downloadFile(url, content)
+  if downloadAndSaveFile then
+    ' done -> save it's content
+    call writeFileContent(filePath, content)
   end if
 end function
 
@@ -234,153 +257,196 @@ function getProfileFolderPath()
   end if
 end function
 
-
-
-
-' look which profile folder to update
-dim profileFolderPath: profileFolderPath = getProfileFolderPath()
-if len(profileFolderPath) > 0 then
-  ' done -> determine where the files need to go
-  dim chromeFolderPath: chromeFolderPath = fso.buildPath(profileFolderPath, "chrome")
-  dim backupFolderPath: backupFolderPath = fso.buildPath(profileFolderPath, "chrome_backups")
-  dim chromeFilePath: chromeFilePath = fso.buildPath(chromeFolderPath, "userChrome.css")
-  dim contentFilePath: contentFilePath = fso.buildPath(chromeFolderPath, "userContent.css")
-  dim customizationsFolderPath: customizationsFolderPath = fso.buildPath(chromeFolderPath, "ShadowFox_customization")
-  dim colorOverridesFilePath: colorOverridesFilePath = fso.buildPath(customizationsFolderPath, "colorOverrides.css")
-  dim internalUUIDsFilePath: internalUUIDsFilePath = fso.buildPath(customizationsFolderPath, "internal_UUIDs.txt")
-  dim chromeCustomizationsFilePath: chromeCustomizationsFilePath = fso.buildPath(customizationsFolderPath, "userChrome_customization.css")
-  dim contentCustomizationsFilePath: contentCustomizationsFilePath = fso.buildPath(customizationsFolderPath, "userContent_customization.css")
-
-  ' and ask if we may continue
-  dim prompt: prompt = "Updating userContent.css and userChrome.css for Firefox profile:" & vbNewLine & chromeFolderPath & vbNewLine
-  if fso.fileExists(contentFilePath) then
-    prompt = prompt & vbNewLine & _
-      "Your current userContent.css file for this profile will be backed up and the latest ShadowFox version from github will take its place."
+' gets the version of the given updater file
+' return "" if not found
+function getUpdaterVersion(updaterSourceCode)
+  regEx.pattern = "' version: (.*)"
+  dim matches: set matches = regEx.execute(updaterSourceCode)
+  if matches.count > 0 then
+    getUpdaterVersion = matches(0).subMatches(0)
   else
-    prompt = prompt & vbNewLine & _
-      "A userContent.css file does not exist in this profile. If you continue, the latest ShadowFox version from github will be downloaded."
+    getUpdaterVersion = ""
   end if
-  if fso.fileExists(chromeFilePath) then
-    prompt = prompt & vbNewLine & _
-      "Your current userChrome.css file for this profile will be backed up and the latest ShadowFox version from github will take its place."
-  else
-    prompt = prompt & vbNewLine & _
-      "A userChrome.css file does not exist in this profile. If you continue, the latest ShadowFox version from github will be downloaded."
-  end if
-  if vbNo = msgBox(prompt & vbSection & "Continue?", vbYesNo + vbDefaultButton2 + vbQuestion, "ShadowFox updater") then
-    ' no -> tell
-    call msgBox("Process aborted.", vbOKOnly, "ShadowFox updater")
-  else
-    ' yes -> ensure the folders are present
-    if not fso.folderExists(chromeFolderPath) then
-      call fso.createFolder(chromeFolderPath)
-    end if
-    if not fso.folderExists(customizationsFolderPath) then
-      call fso.createFolder(customizationsFolderPath)
-    end if
+end function
 
-    ' backup any existing files
-    prompt = "Installing new ShadowFox files."
+' gets the latest version of the updater
+' returns if a newer version was installed
+function getLatestUpdater(updaterFilePath)
+  ' download the source of the latest updater
+  getLatestUpdater = false
+  dim latestSource
+  if downloadFile(updaterFileURL, latestSource) then
+    ' done -> extract it's version
+    dim latestVersion: latestVersion = getUpdaterVersion(latestSource)
+
+    ' extract our version
+    dim ourVersion: ourVersion = getUpdaterVersion(readFileContent(updaterFilePath))
+
+    ' and see if there is a newer version available
+    if latestVersion > ourVersion then
+      ' yes -> replace us with it
+      dim updaterPath: updaterPath = fso.getParentFolderName(updaterFilePath)
+      call backupFile(updaterFilePath, updaterPath)
+      call writeFileContent(updaterFilePath, latestSource)
+      getLatestUpdater = true
+    end if
+  end if
+end function
+
+
+
+' ensure we're up-to-date
+dim ourPath: ourPath = wscript.scriptFullName
+if getLatestUpdater(ourPath) then
+  ' we weren't, but are now -> tell we're going to run it
+  call msgbox("There is a new updater script available online.  Your old version has been backed up, and the new one has been downloaded and has replaced this one.  It will now be executed instead.", vbOKOnly, "ShadowFox updater")
+  call shell.run("""" & ourPath & """", , false)
+else
+  ' we are -> look which profile folder to update
+  dim profileFolderPath: profileFolderPath = getProfileFolderPath()
+  if len(profileFolderPath) > 0 then
+    ' done -> determine where the files need to go
+    dim chromeFolderPath: chromeFolderPath = fso.buildPath(profileFolderPath, "chrome")
+    dim backupFolderPath: backupFolderPath = fso.buildPath(profileFolderPath, "chrome_backups")
+    dim chromeFilePath: chromeFilePath = fso.buildPath(chromeFolderPath, "userChrome.css")
+    dim contentFilePath: contentFilePath = fso.buildPath(chromeFolderPath, "userContent.css")
+    dim customizationsFolderPath: customizationsFolderPath = fso.buildPath(chromeFolderPath, "ShadowFox_customization")
+    dim colorOverridesFilePath: colorOverridesFilePath = fso.buildPath(customizationsFolderPath, "colorOverrides.css")
+    dim internalUUIDsFilePath: internalUUIDsFilePath = fso.buildPath(customizationsFolderPath, "internal_UUIDs.txt")
+    dim chromeCustomizationsFilePath: chromeCustomizationsFilePath = fso.buildPath(customizationsFolderPath, "userChrome_customization.css")
+    dim contentCustomizationsFilePath: contentCustomizationsFilePath = fso.buildPath(customizationsFolderPath, "userContent_customization.css")
+
+    ' and ask if we may continue
+    dim prompt: prompt = "Updating userContent.css and userChrome.css for Firefox profile:" & vbNewLine & chromeFolderPath & vbNewLine
     if fso.fileExists(contentFilePath) then
       prompt = prompt & vbNewLine & _
-        "Your previous userContent.css file was backed up: " & backupFile(contentFilePath, backupFolderPath)
+        "Your current userContent.css file for this profile will be backed up and the latest ShadowFox version from github will take its place."
+    else
+      prompt = prompt & vbNewLine & _
+        "A userContent.css file does not exist in this profile. If you continue, the latest ShadowFox version from github will be downloaded."
     end if
     if fso.fileExists(chromeFilePath) then
       prompt = prompt & vbNewLine & _
-        "Your previous userChrome.css file was backed up: " & backupFile(chromeFilePath, backupFolderPath)
-    end if
-
-    ' download the latest versions
-    dim allOK
-    allOK = true
-    if _
-      not downloadFile(chromeFileURL, chromeFilePath) or _
-      not downloadFile(contentFileURL, contentFilePath) _
-    then
-      ' error downloading -> tell
-      prompt = prompt & vbSection & _
-        "There was an error downloading the latest ShadowFox userContent.css and/or userChrome.css files."
-      allOK = false
+        "Your current userChrome.css file for this profile will be backed up and the latest ShadowFox version from github will take its place."
     else
-      ' done -> tell
-      prompt = prompt & vbSection & _
-        "ShadowFox userContent.css and userChrome.css have been downloaded."
-
-      ' read their content to manipulate it
-      dim chromeFileContent: chromeFileContent = readFileContent(chromeFilePath)
-      dim contentFileContent: contentFileContent = readFileContent(contentFilePath)
-
-      ' do any extension UUID replacements
-      dim internalUUIDs: internalUUIDs = processCustomizationFile(internalUUIDsFilePath)
-      if len(internalUUIDs) = 0 then
-        prompt = prompt & vbSection & _
-          "You have not defined any internal UUIDs for webextensions." & vbNewLine & _
-          "If you choose not to do so, webextensions will not be styled with a dark theme and may have compatibility issues in about:addons." & vbNewLine & _
-          "For more information, see here:" & vbNewLine & _
-          "https://github.com/overdodactyl/ShadowFox/wiki/Altering-webextensions"
-      else
-        dim internalUUID
-        for each internalUUID in split(normalizeLineEndings(internalUUIDs), vbLf)
-          if instr(internalUUID, "=") > 0 then
-            dim replacementParts: replacementParts = split(internalUUID, "=")
-            regEx.pattern = replacementParts(0)
-            contentFileContent = regEx.replace(contentFileContent, replacementParts(1))
-          end if
-        next
-        prompt = prompt & vbSection & _
-          "Your internal UUIDs have been inserted."
-      end if
-
-      ' process any color overrides
-      dim colorOverrides: colorOverrides = processCustomizationFile(colorOverridesFilePath)
-      if len(colorOverrides) = 0 then
-        prompt = prompt & vbSection & _
-          "You are using the default colors set by ShadowFox." & vbNewLine & _
-          "You can customize the colors used by editing colorOverrides.css."
-      else
-        const replacePattern = "(--start-indicator-for-updater-scripts: black;)(.*)(--end-indicator-for-updater-scripts: black;)"
-        dim replaceWith: replaceWith = "$1" & vbNewLine & colorOverrides & vbNewLine & "$3"
-        chromeFileContent = regExNLReplace(chromeFileContent, replacePattern, replaceWith)
-        contentFileContent = regExNLReplace(contentFileContent, replacePattern, replaceWith)
-        prompt = prompt & vbSection & _
-          "Your custom colors have been set."
-      end if
-
-      ' add on any overrides
-      dim contentCustomizations: contentCustomizations = processCustomizationFile(contentCustomizationsFilePath)
-      if len(contentCustomizations) = 0 then
-        prompt = prompt & vbSection & _
-          "You do not have any custom userContent.css tweaks." & vbNewLine & _
-          "You can customize userContent.css using userContent_customization.css."
-      else
-        contentFileContent = contentFileContent & vbSection & contentCustomizations
-        prompt = prompt & vbSection & _
-          "Your custom userContent.css tweaks have been applied."
-      end if
-      dim chromeCustomizations: chromeCustomizations = processCustomizationFile(chromeCustomizationsFilePath)
-      if len(chromeCustomizations) = 0 then
-        prompt = prompt & vbSection & _
-          "You do not have any custom userChrome.css tweaks." & vbNewLine & _
-          "You can customize userChrome.css using userChrome_customization.css."
-      else
-        chromeFileContent = chromeFileContent & vbSection & chromeCustomizations
-        prompt = prompt & vbSection & _
-          "Your custom userChrome.css tweaks have been applied."
-      end if
-
-      ' write them out again
-      on error resume next
-        call fso.createTextFile(chromeFilePath, true).write(chromeFileContent)
-        call fso.createTextFile(contentFilePath, true).write(contentFileContent)
-        if err.number <> 0 then
-          allOK = false
-          prompt = prompt & vbSection & _
-            "There was an error saving the customized versions of the userChrome.css and/or userContent.css files."
-        end if
-      on error goto 0
+      prompt = prompt & vbNewLine & _
+        "A userChrome.css file does not exist in this profile. If you continue, the latest ShadowFox version from github will be downloaded."
     end if
+    if vbNo = msgBox(prompt & vbSection & "Continue?", vbYesNo + vbDefaultButton2 + vbQuestion, "ShadowFox updater") then
+      ' no -> tell
+      call msgBox("Process aborted.", vbOKOnly, "ShadowFox updater")
+    else
+      ' yes -> ensure the folders are present
+      if not fso.folderExists(chromeFolderPath) then
+        call fso.createFolder(chromeFolderPath)
+      end if
+      if not fso.folderExists(customizationsFolderPath) then
+        call fso.createFolder(customizationsFolderPath)
+      end if
 
-    ' and tell we're done
-    call msgBox(prompt, iif(allOK, vbInformation, vbExclamation), "ShadowFox updater")
+      ' backup any existing files
+      prompt = "Installing new ShadowFox files."
+      if fso.fileExists(contentFilePath) then
+        prompt = prompt & vbNewLine & _
+          "Your previous userContent.css file was backed up: " & backupFile(contentFilePath, backupFolderPath)
+      end if
+      if fso.fileExists(chromeFilePath) then
+        prompt = prompt & vbNewLine & _
+          "Your previous userChrome.css file was backed up: " & backupFile(chromeFilePath, backupFolderPath)
+      end if
+
+      ' download the latest versions
+      dim allOK
+      allOK = true
+      if _
+        not downloadAndSaveFile(chromeFileURL, chromeFilePath) or _
+        not downloadAndSaveFile(contentFileURL, contentFilePath) _
+      then
+        ' error downloading -> tell
+        prompt = prompt & vbSection & _
+          "There was an error downloading the latest ShadowFox userContent.css and/or userChrome.css files."
+        allOK = false
+      else
+        ' done -> tell
+        prompt = prompt & vbSection & _
+          "ShadowFox userContent.css and userChrome.css have been downloaded."
+
+        ' read their content to manipulate it
+        dim chromeFileContent: chromeFileContent = readFileContent(chromeFilePath)
+        dim contentFileContent: contentFileContent = readFileContent(contentFilePath)
+
+        ' do any extension UUID replacements
+        dim internalUUIDs: internalUUIDs = processCustomizationFile(internalUUIDsFilePath)
+        if len(internalUUIDs) = 0 then
+          prompt = prompt & vbSection & _
+            "You have not defined any internal UUIDs for webextensions." & vbNewLine & _
+            "If you choose not to do so, webextensions will not be styled with a dark theme and may have compatibility issues in about:addons." & vbNewLine & _
+            "For more information, see here:" & vbNewLine & _
+            "https://github.com/overdodactyl/ShadowFox/wiki/Altering-webextensions"
+        else
+          dim internalUUID
+          for each internalUUID in split(normalizeLineEndings(internalUUIDs), vbLf)
+            if instr(internalUUID, "=") > 0 then
+              dim replacementParts: replacementParts = split(internalUUID, "=")
+              regEx.pattern = replacementParts(0)
+              contentFileContent = regEx.replace(contentFileContent, replacementParts(1))
+            end if
+          next
+          prompt = prompt & vbSection & _
+            "Your internal UUIDs have been inserted."
+        end if
+
+        ' process any color overrides
+        dim colorOverrides: colorOverrides = processCustomizationFile(colorOverridesFilePath)
+        if len(colorOverrides) = 0 then
+          prompt = prompt & vbSection & _
+            "You are using the default colors set by ShadowFox." & vbNewLine & _
+            "You can customize the colors used by editing colorOverrides.css."
+        else
+          const replacePattern = "(--start-indicator-for-updater-scripts: black;)(.*)(--end-indicator-for-updater-scripts: black;)"
+          dim replaceWith: replaceWith = "$1" & vbNewLine & colorOverrides & vbNewLine & "$3"
+          chromeFileContent = regExNLReplace(chromeFileContent, replacePattern, replaceWith)
+          contentFileContent = regExNLReplace(contentFileContent, replacePattern, replaceWith)
+          prompt = prompt & vbSection & _
+            "Your custom colors have been set."
+        end if
+
+        ' add on any overrides
+        dim contentCustomizations: contentCustomizations = processCustomizationFile(contentCustomizationsFilePath)
+        if len(contentCustomizations) = 0 then
+          prompt = prompt & vbSection & _
+            "You do not have any custom userContent.css tweaks." & vbNewLine & _
+            "You can customize userContent.css using userContent_customization.css."
+        else
+          contentFileContent = contentFileContent & vbSection & contentCustomizations
+          prompt = prompt & vbSection & _
+            "Your custom userContent.css tweaks have been applied."
+        end if
+        dim chromeCustomizations: chromeCustomizations = processCustomizationFile(chromeCustomizationsFilePath)
+        if len(chromeCustomizations) = 0 then
+          prompt = prompt & vbSection & _
+            "You do not have any custom userChrome.css tweaks." & vbNewLine & _
+            "You can customize userChrome.css using userChrome_customization.css."
+        else
+          chromeFileContent = chromeFileContent & vbSection & chromeCustomizations
+          prompt = prompt & vbSection & _
+            "Your custom userChrome.css tweaks have been applied."
+        end if
+
+        ' write them out again
+        on error resume next
+          call fso.createTextFile(chromeFilePath, true).write(chromeFileContent)
+          call fso.createTextFile(contentFilePath, true).write(contentFileContent)
+          if err.number <> 0 then
+            allOK = false
+            prompt = prompt & vbSection & _
+              "There was an error saving the customized versions of the userChrome.css and/or userContent.css files."
+          end if
+        on error goto 0
+      end if
+
+      ' and tell we're done
+      call msgBox(prompt, iif(allOK, vbInformation, vbExclamation), "ShadowFox updater")
+    end if
   end if
 end if
