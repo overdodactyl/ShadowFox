@@ -648,13 +648,18 @@ url-prefix(https://discovery.addons.mozilla.org) {
   .Paginate-page-number {
     background: var(--in-content-page-background)!important
   }
+  .Select {
+    background-color: var(--in-content-page-background)!important
+  }
   .SearchForm-icon-magnifying-glass {
     filter: invert(65%)!important
   }
   .AddonDescription-more-addons--theme .Card-contents .AddonsCard-list,
   .AddonDescription-more-addons:not(.AddonDescription-more-addons--theme) .Card-contents .AddonsCard-list,
+  .AddonsByAuthorsCard .Card-contents .AddonsCard-list,
   .AddonsCard--horizontal .Card-contents,
   .AddonsCard--horizontal ul.AddonsCard-list .SearchResult-link,
+  .AutoSearchInput-suggestions-item,
   .Card--photon .Card-contents,
   .Card-contents,
   .Card-contents li,
@@ -667,9 +672,11 @@ url-prefix(https://discovery.addons.mozilla.org) {
   .LandingPage-header,
   .MetadataCard,
   .Search .SearchResults .SearchResult,
+  .Search .SearchResults-message,
   .SearchForm-query,
   .SearchForm-suggestions-item.SearchForm-suggestions-item,
-  .SectionLinks-dropdown .DropdownMenu-items {
+  .SectionLinks-dropdown .DropdownMenu-items,
+  input.AutoSearchInput-query {
     background: var(--in-content-box-background)!important
   }
   .Addon-author,
@@ -683,7 +690,7 @@ url-prefix(https://discovery.addons.mozilla.org) {
   .Card--photon .Card-contents,
   .Card-contents,
   .Card-footer-text,
-  .Card-header,
+  .Definition-dt,
   .DropdownMenuItem,
   .DropdownMenuItem-link a,
   .DropdownMenuItem-link a:link,
@@ -697,15 +704,24 @@ url-prefix(https://discovery.addons.mozilla.org) {
   .Home-SubjectShelf-subheading,
   .LandingPage-addonType-name,
   .LandingPage-heading-content,
+  .MetadataCard-list dt,
   .Paginate .Paginate-item,
   .Paginate-page-number,
+  .PermissionsCard-subhead,
   .ReportAbuseButton-show-more,
   .SearchContextCard-header,
+  .SearchFilters-label,
   .SearchForm-query,
+  .SearchResult--meta-section,
   .SearchResult-name,
   .SearchResult-summary,
-  .SearchSuggestion-name {
+  .SearchSuggestion-name,
+  .Select,
+  input.AutoSearchInput-query {
     color: var(--in-content-page-color)!important
+  }
+  .Card-header {
+    color: var(--in-content-text-color)!important
   }
   .Card-contents li .Rating-star-group,
   .Paginate-next::after,
@@ -733,6 +749,9 @@ url-prefix(https://discovery.addons.mozilla.org) {
   .Button--action.Button--outline-only {
     border-color: var(--in-content-border-highlight)!important
   }
+  input.AutoSearchInput-query {
+    border-color: var(--in-content-box-border-color)!important
+  }
   .Addon .InstallButton-button,
   .Button--action,
   .Button--action.Button--small,
@@ -756,8 +775,12 @@ url-prefix(https://discovery.addons.mozilla.org) {
   .Button--report {
     text-shadow: none!important
   }
+  .Icon-arrow,
   .Icon-external {
     filter: invert(20%)!important
+  }
+  .Icon-magnifying-glass {
+    filter: invert(65%)
   }
   .Icon-featured {
     filter: invert(85%)!important
