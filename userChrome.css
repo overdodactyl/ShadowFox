@@ -667,6 +667,14 @@ screen and (-moz-os-version:windows-win10) {
   color: var(--in-content-selected-text)!important;
   background: var(--in-content-page-background)!important
 }
+.popup-internal-box > autorepeatbutton {
+  -moz-appearance: none!important;
+  background-color: var(--in-content-page-background)!important
+}
+.popup-internal-box > .autorepeatbutton-down > .autorepeatbutton-icon,
+.popup-internal-box > .autorepeatbutton-up > .autorepeatbutton-icon {
+  filter: invert(40%)!important
+}
 /*! webextension popup fix */
 .webextension-popup-browser {
   background: #fff!important
