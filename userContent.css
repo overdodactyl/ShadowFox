@@ -2082,6 +2082,45 @@ url-prefix(https://discovery.addons.mozilla.org) {
     color: var(--warning-color)!important
   }
 }
+@-moz-document url-prefix("about:blank") {
+  aside {
+    background-color: var(--in-content-page-background)!important;
+    border-color: var(--tone-8)!important;
+    color: var(--in-content-page-color)!important
+  }
+  ul > li > ul > li:hover {
+    background-color: var(--in-content-box-background)!important
+  }
+  section > div:first-child > textarea {
+    background-color: var(--in-content-box-background)!important;
+    color: var(--in-content-page-color)!important
+  }
+  section > div:first-child {
+    border-color: var(--in-content-box-border-color)!important
+  }
+  section.invalidFilter > div:first-child {
+    border-color: red!important
+  }
+  button {
+    background-color: var(--in-content-page-background)!important;
+    border-color: var(--in-content-box-border-color)!important;
+    color: var(--in-content-page-color)!important
+  }
+  button:disabled {
+    color: var(--tone-5)!important
+  }
+  button:not(:disabled):hover {
+    background-color: var(--in-content-box-background-hover)!important
+  }
+  #create:not(:disabled) {
+    background-color: var(--theme-highlight-yellow)!important;
+    color: #000!important
+  }
+  body.preview #preview {
+    background-color: var(--theme-highlight-blue)!important;
+    color: #000!important
+  }
+}
 /*! Alters the webextension uBO-Scope
   IMPORTANT: change the Internal UUID */
 @-moz-document url-prefix("moz-extension://ubo_scope_UUID/") {
