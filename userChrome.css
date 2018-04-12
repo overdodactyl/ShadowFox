@@ -521,6 +521,14 @@ screen and (-moz-os-version:windows-win10) {
 #customization-done-button:-moz-any(:focus,:active,:hover):not([disabled]) {
   background-color: var(--in-content-primary-button-background-hover)!important
 }
+.findbar-textbox {
+  border-radius: 3px!important
+}
+.findbar-textbox:not([status=notfound]) {
+  background-color: var(--in-content-box-background)!important;
+  border-color: var(--in-content-box-border-color)!important;
+  color: var(--in-content-page-color)!important
+}
 .browserContainer > findbar {
   border-top: 1px solid!important;
   border-color: var(--in-content-box-border-color)!important
