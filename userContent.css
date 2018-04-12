@@ -2095,8 +2095,7 @@ url-prefix(https://discovery.addons.mozilla.org) {
   }
   #domain3rdDetails {
     border-color: var(--in-content-box-border-color)!important;
-    background-color: red!important;
-    border: 1px solid #ff0!important
+    background-color: var(--in-content-page-background)!important
   }
   #topPane {
     background-color: var(--tone-6)!important;
