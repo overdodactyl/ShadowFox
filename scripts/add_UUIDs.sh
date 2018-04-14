@@ -5,7 +5,7 @@
 ## designed for users using userContent_imports.css
 ## entries in internal_UUIDs.txt should take on the following format:  webextension_name_UUID=INTERNAL_UUID
 ## author: @overdodactyl
-## version: 1.0
+## version: 1.1
 
 currdir=$(pwd)
 
@@ -22,5 +22,11 @@ cd "$(dirname "${sfp}")" && cd ..
 while IFS='' read -r line || [[ -n "$line" ]]; do
     IFS='=' read -r -a array <<< "$line"
     webextension_name=${array[0]%_UUID}
-    sed -i '' "s/${array[0]}/${array[1]}/" "css/userContent-files/webextension-tweaks/${webextension_name}.css"
+    if [ -e css/userContent-files/webextension-tweaks/${webextension_name}.css ]; then
+      sed -i '' "s/${array[0]}/${array[1]}/" "css/userContent-files/webextension-tweaks/${webextension_name}.css"
+    else
+      sed -i '' "s/${array[0]}/${array[1]}/" "css/userContent-files/webextension-tweaks/generic_style.css"
+    fi
+
+
 done < "internal_UUIDs.txt"

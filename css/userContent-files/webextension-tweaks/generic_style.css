@@ -1,0 +1,75 @@
+@-moz-document url-prefix("moz-extension://1_click_youtube_video_downloader_UUID"),
+               url-prefix("moz-extension://autocopy_UUID"),
+               url-prefix("moz-extension://custom_titlebar_text_UUID"),
+               url-prefix("moz-extension://octopatcher_UUID"),
+               url-prefix("moz-extension://text_link_UUID"),
+               url-prefix("moz-extension://multiple_tab_handler_UUID/"),
+               url-prefix("moz-extension://neat_url_UUID/"),
+               url-prefix("moz-extension://smart_referer_UUID/"),
+               url-prefix("moz-extension://tab_suspender_UUID/"),
+               url-prefix("moz-extension://generic_styling_1_UUID"),
+               url-prefix("moz-extension://generic_styling_2_UUID"),
+               url-prefix("moz-extension://generic_styling_3_UUID"),
+               url-prefix("moz-extension://generic_styling_4_UUID"),
+               url-prefix("moz-extension://generic_styling_5_UUID") {
+  * {
+    color: var(--in-content-page-color) !important;
+    background-color: var(--in-content-page-background)!important;
+    border-color: var(--in-content-box-border-color)!important;
+    text-shadow: none!important
+  }
+  select {
+    color: black !important;
+  }
+  select * {
+    background-color: var(--in-content-box-background) !important;
+  }
+  a {
+    color: var(--in-content-link-color) !important;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--in-content-category-text-selected)!important
+  }
+  fieldset {
+    border: 2px solid!important;
+    border-color: var(--in-content-box-border-color)!important
+  }
+  input:not([type=checkbox])  {
+    background: var(--in-content-box-background)!important;
+    color: var(--in-content-page-color)!important;
+  }
+
+  textarea,
+  input[type="input"],
+  input[type="text"],
+  input[type="number"],
+  input[type="url"],
+  input[type="textbox"]  {
+    -moz-appearance: none!important;
+    background: var(--in-content-box-background)!important;
+    color: var(--in-content-page-color)!important;
+    border: 1px solid!important;
+    border-color: var(--in-content-box-border-color)!important;
+    margin-left: 3px !important;
+    padding-left: 3px !important;
+  }
+  textarea {
+    padding: 5px 5px 5px 5px !important;
+  }
+  button,
+  input[type="submit"] {
+    -moz-appearance: none!important;
+    background-image: none!important;
+    background-color: var(--in-content-page-background)!important;
+    color: var(--in-content-page-color)!important;
+    border: 1px solid!important;
+    border-color: var(--in-content-box-border-color)!important;
+    border-radius: 3px!important
+  }
+  button:hover,
+  input[type="submit"]:hover {
+    background-color: var(--in-content-box-background-hover)!important
+  }
+}
+
+/* Pop Up Background Fixes */
