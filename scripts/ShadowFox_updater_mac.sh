@@ -2,12 +2,13 @@
 
 ### ShadowFox updater for Mac
 ## author: @overdodactyl
-## version: 1.4
+## version: 1.5
 
 userChrome="https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/userChrome.css"
 userContent="https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/userContent.css"
 uuid_finder="https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/scripts/internal_UUID_finder.sh"
 updater="https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/scripts/ShadowFox_updater_mac.sh"
+webextension_mappings="https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/scripts/webextension_mappings.txt"
 
 profilePath="$HOME/Library/Application Support/Firefox/Profiles"
 
@@ -48,10 +49,8 @@ fi
 
 ## Check if there's a newer version of the updater script available
 online_version="$(curl -s ${updater} | sed -n '5 s/.*[[:blank:]]\([[:digit:]]*\.[[:digit:]]*\)/\1/p')"
-echo $online_version
 path_to_script="$(dirname "${sfp}")/ShadowFox_updater_mac.sh"
 current_version="$(sed -n '5 s/.*[[:blank:]]\([[:digit:]]*\.[[:digit:]]*\)/\1/p' "$path_to_script")"
-echo $current_version
 
 if (( $(echo "$online_version > $current_version" | bc -l) )); then
   echo -e "There is a new updater script available online.  It will replace this one and be executed.\n"
@@ -142,16 +141,31 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
       bakfile="internal_UUIDs.backup.$(date +"%Y-%m-%d_%H%M%S")"
       mv ./ShadowFox_customization/internal_UUIDs.txt "chrome_backups/${bakfile}" && echo "Your previous internal_UUIDs.txt file was backed up: ${bakfile}"
     fi
-    # download latest version of internal_UUID_finder.sh
-    echo "Downloading latest internal_UUID_finder.sh file..."
-    curl -o ./ShadowFox_customization/internal_UUID_finder.sh ${uuid_finder} && echo -e "\ninternal_UUID_finder.sh has been downloaded"
 
-    # make internal_UUID_finder executable
-    chmod +x ShadowFox_customization/internal_UUID_finder.sh
+    ## write webextension_mappings.txt to variable
+    web_ex=$(curl -s ${webextension_mappings})
 
-    # execute file
-    ShadowFox_customization/internal_UUID_finder.sh
-    echo "internal_UUIDs.txt has been generated based on your downloaded extensions."
+    ## declare directory
+    declare -A styled=()
+
+    ## Generate dictionary from file
+    while IFS="|" read -r webex_name webex_id; do
+        styled["$webex_id"]+="$webex_name"
+    done <<< "$web_ex"
+
+    ## Get installed extesnsions from prefs.js
+    line=$(sed -n -e 's/^user_pref("extensions.webextensions.uuids", "{\(.*\).*}");/\1/p' ../prefs.js)
+
+    ## Write to internal_UUIDs
+    IFS=',' read -ra EXTS <<< "$line"
+    for i in "${EXTS[@]}"; do
+        id=$(echo $i | sed -n 's/.*"\(.*\)\\":.*/\1/p')
+        uuid=$(echo $i | sed -n 's/.*"\(.*\)\\".*/\1/p')
+        if [[ -n "${styled[$id]}" ]]
+        then
+          echo "${styled[$id]}_UUID=$uuid" >> 'ShadowFox_customization/internal_UUIDs.txt'
+        fi;
+    done
   fi
 
   if [ -s ./ShadowFox_customization/internal_UUIDs.txt ]; then
