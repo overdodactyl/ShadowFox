@@ -14,7 +14,7 @@ declare -A styled=()
 ## Generate dictionaries from file
 while IFS="|" read -r webex_name webex_id; do
     styled["$webex_id"]+="$webex_name"
-done <"webextensions.txt"
+done <<< "$web_ex"
 
 ## Get installed extesnsions from prefs.js
 line=$(sed -n -e 's/^user_pref("extensions.webextensions.uuids", "{\(.*\).*}");/\1/p' ../prefs.js)
