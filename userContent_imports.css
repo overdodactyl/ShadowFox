@@ -14,6 +14,7 @@
 
 /* Import Relevant webextension tweaks here
  * IMPORTANT: If used, change the Internal UUID in the corresponding css file */
+@import "css/userContent-files/webextension-tweaks/generic_style.css";
 @import "css/userContent-files/webextension-tweaks/brief.css";
 @import "css/userContent-files/webextension-tweaks/cookie_autodelete.css";
 @import "css/userContent-files/webextension-tweaks/dark_mode.css";

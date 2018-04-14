@@ -1,5 +1,8 @@
+1_click_youtube_video_downloader|YoutubeDownloader@PeterOlayev.com
+autocopy|autocopy@mozilla.org
 brief|brief@mozdev.org
 cookie_autodelete|CookieAutoDelete@kennydo.com
+custom_titlebar_text|{b5a43a70-4092-4899-9c44-63799150b35e}
 dark_mode|{174b2d58-b983-4501-ab4b-07e71203cb43}
 decentraleyes|jid1-BoFifL9Vbdl2zQ@jetpack
 https_everywhere|https-everywhere@eff.org
@@ -7,11 +10,13 @@ multi_account_containers|@testpilot-containers
 multiple_tab_handler|multipletab@piro.sakura.ne.jp
 neat_url|neaturl@hugsmile.eu
 noscript|{73a6fe31-595d-460b-a920-fcc0f8843232}
+octopatcher|octopatcher_wowmotty@gmail.com
 request_control|{1b1e6108-2d88-4f0f-a338-01f9dbcccd6f}
 skip_redirect|skipredirect@sblask
 smart_https|{b3e677f4-1150-4387-8629-da738260a48e}
 smart_referer|smart-referer@meh.paranoid.pk
 tab_suspender|{e225ac78-5e83-484b-a16b-b6ed0924212f}
+text_link|{54BB9F3F-07E5-486c-9B39-C7398B99391C}
 tree_style_tab|treestyletab@piro.sakura.ne.jp
 tridactyl|tridactyl.vim@cmcaine.co.uk
 ublock_origin|uBlock0@raymondhill.net
