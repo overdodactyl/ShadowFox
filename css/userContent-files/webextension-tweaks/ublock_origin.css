@@ -80,16 +80,14 @@
     color: var(--tone-2)!important
   }
   #extraTools,
-  h2 {
+  h2,
+  #extraTools > span > span.badge {
     background-color: var(--tone-8)!important;
     color: var(--tone-4)!important
   }
   #refresh {
     background-color: var(--tone-8)!important;
     border-color: var(--tone-5)!important
-  }
-  #extraTools > span > span.badge {
-    color: var(--tone-4)!important
   }
   #firewallContainer > div {
     background-color: var(--tone-6)!important
