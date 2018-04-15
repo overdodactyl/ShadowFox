@@ -1,0 +1,273 @@
+/*! Pop Up Background Fixes */
+@-moz-document url-prefix("moz-extension://css_exfil_protection_UUID/popup.html"),
+               url-prefix("moz-extension://https_everywhere_UUID/pages/popup"),
+               url-prefix("moz-extension://decentraleyes_UUID/pages/popup"),
+               url-prefix("moz-extension://smart_https_UUID/data/data/popup.html"),
+               url-prefix("moz-extension://rename_tab_title_UUID/popup/popup.html"),
+               url-prefix("moz-extension://open_in_new_tab_UUID/popup"),
+               url-prefix("moz-extension://greasemonkey_UUID/src/browser/monkey-menu") {
+  :root {
+    --in-content-page-background: var(--tone-6)!important;
+    --in-content-box-background: rgba(11,11,12,0.2)!important;
+    --in-content-box-border-color: rgba(249, 249, 250, 0.3)!important;
+    --in-content-box-background-hover: rgba(11,11,12,0.2)!important;
+  }
+  button {
+    margin-top: 3px !important;
+  }
+  input {
+    margin-top: 3px !important;
+    margin-bottom: 3px !important;
+  }
+  textarea,
+  input  {
+    margin-left: 0px !important;
+  }
+}
+
+@-moz-document url-prefix("moz-extension://1_click_youtube_video_downloader_UUID"),
+               url-prefix("moz-extension://autocopy_UUID"),
+               url-prefix("moz-extension://custom_titlebar_text_UUID"),
+               url-prefix("moz-extension://octopatcher_UUID"),
+               url-prefix("moz-extension://text_link_UUID"),
+               url-prefix("moz-extension://multiple_tab_handler_UUID/"),
+               url-prefix("moz-extension://neat_url_UUID/"),
+               url-prefix("moz-extension://smart_referer_UUID/"),
+               url-prefix("moz-extension://tab_suspender_UUID/"),
+               url-prefix("moz-extension://css_exfil_protection_UUID/"),
+               url-prefix("moz-extension://https_everywhere_UUID/"),
+               url-prefix("moz-extension://skip_redirect_UUID/"),
+               url-prefix("moz-extension://dark_mode_UUID/"),
+               url-prefix("moz-extension://decentraleyes_UUID/"),
+               url-prefix("moz-extension://smart_https_UUID/"),
+               url-prefix("moz-extension://mind_the_time_UUID/options/options"),
+               url-prefix("moz-extension://tree_style_tab_UUID/options/options"),
+               url-prefix("moz-extension://google_translator_for_firefox_UUID"),
+               url-prefix("moz-extension://enhancer_for_youtube_UUID/options.html"),
+               url-prefix("moz-extension://flash_and_video_download_UUID/html/options.html"),
+               url-prefix("moz-extension://back_to_close_we_UUID/"),
+               url-prefix("moz-extension://containers_on_the_go_UUID/"),
+               url-prefix("moz-extension://new_tab_from_location_bar_UUID/"),
+               url-prefix("moz-extension://tab_auto_close_UUID/"),
+               url-prefix("moz-extension://open_in_new_tab_UUID/"),
+               url-prefix("moz-extension://display_anchors_UUID/"),
+               url-prefix("moz-extension://rename_tab_title_UUID/"),
+               url-prefix("moz-extension://greasemonkey_UUID/src/browser/monkey-menu"),
+
+               url-prefix("moz-extension://generic_styling_1_UUID"),
+               url-prefix("moz-extension://generic_styling_2_UUID"),
+               url-prefix("moz-extension://generic_styling_3_UUID"),
+               url-prefix("moz-extension://generic_styling_4_UUID"),
+               url-prefix("moz-extension://generic_styling_5_UUID")
+  {
+  * {
+    color: var(--in-content-page-color) !important;
+    background-color: var(--in-content-page-background)!important;
+    border-color: var(--in-content-box-border-color)!important;
+    text-shadow: none!important
+  }
+  select {
+    color: black !important;
+  }
+  select * {
+    background-color: var(--in-content-box-background) !important;
+  }
+  a {
+    color: var(--in-content-link-color) !important;
+  }
+  a:hover {
+    color: var(--in-content-link-color-hover) !important;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--in-content-category-text-selected)!important
+  }
+  fieldset {
+    border: 2px solid!important;
+    border-color: var(--in-content-box-border-color)!important
+  }
+  input:not([type=checkbox])  {
+    background: var(--in-content-box-background)!important;
+    color: var(--in-content-page-color)!important;
+  }
+  input[type="file"] {
+    background-color: var(--in-content-page-background)!important;
+  }
+  textarea,
+  input[type="input"],
+  input[type="text"],
+  input[type="number"],
+  input[type="url"],
+  input[type="textbox"]  {
+    -moz-appearance: none!important;
+    background: var(--in-content-box-background)!important;
+    color: var(--in-content-page-color)!important;
+    border: 1px solid!important;
+    border-color: var(--in-content-box-border-color)!important;
+    margin-left: 3px !important;
+    padding-left: 3px !important;
+  }
+  input:checked + .slider {
+    background-color: var(--in-content-primary-button-background) !important;
+  }
+  input:not(:checked) + .slider {
+    background-color: var(--in-content-box-background) !important;
+  }
+  textarea {
+    margin: 2px 0 2px 0 !important;
+    padding: 5px 5px 5px 5px !important;
+  }
+  button,
+  .button,
+  input[type="submit"] {
+    -moz-appearance: none!important;
+    background-image: none!important;
+    background-color: var(--in-content-page-background) !important;
+    color: var(--in-content-page-color)!important;
+    border: 1px solid!important;
+    border-color: var(--in-content-box-border-color)!important;
+    border-radius: 3px!important
+  }
+  button:hover,
+  .button:hover,
+  input[type="submit"]:hover {
+    background-color: var(--in-content-box-background-hover)!important
+  }
+}
+
+/*! Code Mirror */
+@-moz-document url-prefix("moz-extension://violentmonkey_UUID/"),
+               url-prefix("moz-extension://ublock_origin_UUID/"),
+               url-prefix("moz-extension://umatrix_UUID/"),
+               url-prefix("moz-extension://greasemonkey_UUID/src/content/edit-user-script") {
+  .CodeMirror {
+     border: 1px solid !important;
+     border-color: var(--cm-background)!important;
+     background: var(--cm-background)!important;
+     color: #b1b1b3!important;
+     font-size: 11px!important;
+     line-height: 14px!important
+  }
+  div.CodeMirror-selected,
+  .CodeMirror-line > span > span::selection,
+  .CodeMirror-line > span::selection,
+  .CodeMirror-line::selection {
+    background: var(--cm-selection)!important
+  }
+  .CodeMirror-gutters {
+    background: var(--theme-sidebar-background)!important;
+    border-right: 0 solid var(--in-content-border-color)!important
+  }
+  .CodeMirror-guttermarker,
+  .CodeMirror-guttermarker-subtle {
+    color: var(--cm-marker)!important
+  }
+  .CodeMirror-linenumber {
+    padding: 0 8px 0 5px!important;
+    color: var(--cm-linenumber)!important
+  }
+  .CodeMirror-cursor {
+    border-left: 1px solid!important;
+    border-color: var(--cm-cursor)!important
+  }
+  span.cm-comment,
+  span.cm-hr,
+  span.cm-meta {
+    color: #939393!important
+  }
+  span.cm-atom,
+  span.cm-attribute,
+  span.cm-builtin,
+  span.cm-error,
+  span.cm-keyword,
+  span.cm-quote {
+    color: var(--theme-highlight-red)!important
+  }
+  span.cm-number,
+  span.cm-string,
+  span.cm-string-2 {
+    color: #6b89ff!important
+  }
+  span.cm-header,
+  span.cm-qualifier,
+  span.cm-variable-2,
+  span.cm-bracket,
+  span.cm-def,
+  span.cm-link:visited,
+  span.cm-tag {
+    color: var(--theme-highlight-blue)!important
+  }
+  span.cm-property {
+    color: var(--theme-highlight-green)!important
+  }
+  span.cm-variable {
+    color: var(--theme-highlight-purple)!important
+  }
+  span.cm-variable-3,
+  span.cm-special {
+    color: var(--in-content-text-color)!important
+  }
+  span.cm-link {
+    color: var(--in-content-box-border-color)!important
+  }
+  span.cm-operator {
+    color: var(--in-content-page-color)!important
+  }
+  .CodeMirror-activeline-background {
+    background: var(--cm-active-line-background)!important
+  }
+  .CodeMirror-matchingbracket {
+    outline: var(--cm-matching-bracket) solid 1px!important;
+    color: var(--cm-cursor)!important
+  }
+  .CodeMirror-merge-l-chunk {
+    background: var(--in-content-page-background)!important
+  }
+  .cm-search-widget {
+    background-color: var(--theme-sidebar-background)!important;
+    border: 1px solid;
+    border-bottom: none!important;
+    border-color: var(--in-content-category-header-background)!important;
+    max-height: 15px!important;
+    justify-content: right!important
+  }
+  .cm-search-widget input {
+    -moz-appearance: none!important;
+    background-color: var(--cm-search-background)!important;
+    border: 1px solid!important;
+    border-color: var(--in-content-table-border-dark-color)!important;
+    color: var(--in-content-page-color)!important;
+    border-radius: 8px!important;
+    padding-left: 8px!important
+  }
+  .cm-searching {
+    background-color: var(--warning-background-color)!important
+  }
+  .cm-staticOpt {
+    background-color: var(--in-content-box-background)!important;
+    font-weight: 700
+  }
+  .CodeMirror-merge-gap {
+    background-color: var(--in-content-category-header-background)!important;
+    border-top: 1px solid!important;
+    border-bottom: 1px solid!important;
+    border-right: none!important;
+    border-left: none!important;
+    border-color: var(--cm-background)!important
+  }
+  .CodeMirror-merge {
+    border: none!important
+  }
+  .cm-search-widget span.fa {
+    color: var(--in-content-border-color)!important;
+    font-size: 100%!important
+  }
+  .cm-staticext {
+    color: var(--theme-highlight-blue)!important
+  }
+  .cm-staticnetBlock {
+    color: var(--cm-red)!important
+  }
+  .cm-staticnetAllow {
+    color: var(--theme-highlight-green)!important
+  }
+}
