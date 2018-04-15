@@ -1,7 +1,8 @@
 /* Pop Up Background Fixes */
 @-moz-document url-prefix("moz-extension://css_exfil_protection_UUID/popup.html"),
                url-prefix("moz-extension://https_everywhere_UUID/pages/popup"),
-               url-prefix("moz-extension://skip_redirect_UUID/") {
+               url-prefix("moz-extension://decentraleyes_UUID/pages/popup"),
+               url-prefix("moz-extension://smart_https_UUID/data/data/popup.html") {
   :root {
     --in-content-page-background: var(--tone-6)!important;
     --in-content-box-background: rgba(11,11,12,0.2)!important;
@@ -34,6 +35,9 @@
                url-prefix("moz-extension://css_exfil_protection_UUID/"),
                url-prefix("moz-extension://https_everywhere_UUID/"),
                url-prefix("moz-extension://skip_redirect_UUID/"),
+               url-prefix("moz-extension://dark_mode_UUID/"),
+               url-prefix("moz-extension://decentraleyes_UUID/"),
+               url-prefix("moz-extension://smart_https_UUID/"),
                url-prefix("moz-extension://generic_styling_1_UUID"),
                url-prefix("moz-extension://generic_styling_2_UUID"),
                url-prefix("moz-extension://generic_styling_3_UUID"),
@@ -88,6 +92,7 @@
     padding-left: 3px !important;
   }
   textarea {
+    margin: 2px 0 2px 0 !important;
     padding: 5px 5px 5px 5px !important;
   }
   button,
@@ -101,6 +106,7 @@
     border-radius: 3px!important
   }
   button:hover,
+  .button:hover,
   input[type="submit"]:hover {
     background-color: var(--in-content-box-background-hover)!important
   }
