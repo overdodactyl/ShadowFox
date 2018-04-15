@@ -6,6 +6,7 @@ cookie_autodelete|CookieAutoDelete@kennydo.com
 custom_titlebar_text|{b5a43a70-4092-4899-9c44-63799150b35e}
 dark_mode|{174b2d58-b983-4501-ab4b-07e71203cb43}
 decentraleyes|jid1-BoFifL9Vbdl2zQ@jetpack
+google_translator_for_firefox|translator@zoli.bod
 https_everywhere|https-everywhere@eff.org
 mind_the_time|jid0-HYNmqxA9zQGfJADREri4n2AHKSI@jetpack
 multi_account_containers|@testpilot-containers
