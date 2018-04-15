@@ -27,17 +27,6 @@
   a {
     color: var(--accent-2)!important
   }
-  #autoGroupNewTabsDelayOnNewWindow,
-  #autoGroupNewTabsTimeout,
-  #importedConfigsFromLegacy,
-  #importedTreeStructureFromLegacy,
-  #legacyConfigsNextMigrationVersion,
-  #userStyleRules {
-    -moz-appearance: none!important;
-    background: var(--tone-6)!important;
-    color: var(--tone-4)!important;
-    border-color: var(--tone-5)!important
-  }
   #contextual-identities-selector,
   #newtab-action-selector,
   #tabContextMenu,
@@ -46,10 +35,6 @@
     border: none!important
   }
   .menu-ui-59858.menu-ui.menu li.separator {
-    border-color: var(--in-content-box-border-color)!important
-  }
-  fieldset {
-    border: 2px solid!important;
     border-color: var(--in-content-box-border-color)!important
   }
   :root {

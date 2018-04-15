@@ -1,4 +1,4 @@
-/* Pop Up Background Fixes */
+/*! Pop Up Background Fixes */
 @-moz-document url-prefix("moz-extension://css_exfil_protection_UUID/popup.html"),
                url-prefix("moz-extension://https_everywhere_UUID/pages/popup"),
                url-prefix("moz-extension://decentraleyes_UUID/pages/popup"),
@@ -20,7 +20,6 @@
   input  {
     margin-left: 0px !important;
   }
-
 }
 
 @-moz-document url-prefix("moz-extension://1_click_youtube_video_downloader_UUID"),
@@ -39,6 +38,7 @@
                url-prefix("moz-extension://decentraleyes_UUID/"),
                url-prefix("moz-extension://smart_https_UUID/"),
                url-prefix("moz-extension://mind_the_time_UUID/options/options"),
+               url-prefix("moz-extension://tree_style_tab_UUID/options/options"),
                url-prefix("moz-extension://generic_styling_1_UUID"),
                url-prefix("moz-extension://generic_styling_2_UUID"),
                url-prefix("moz-extension://generic_styling_3_UUID"),
@@ -77,7 +77,6 @@
   input[type="file"] {
     background-color: var(--in-content-page-background)!important;
   }
-
   textarea,
   input[type="input"],
   input[type="text"],
@@ -112,10 +111,9 @@
   input[type="submit"]:hover {
     background-color: var(--in-content-box-background-hover)!important
   }
-
 }
 
-/* Code Mirror */
+/*! Code Mirror */
 @-moz-document url-prefix("moz-extension://violentmonkey_UUID/"),
                url-prefix("moz-extension://ublock_origin_UUID/"),
                url-prefix("moz-extension://umatrix_UUID/") {
