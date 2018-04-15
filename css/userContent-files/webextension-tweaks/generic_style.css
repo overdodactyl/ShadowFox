@@ -4,7 +4,8 @@
                url-prefix("moz-extension://decentraleyes_UUID/pages/popup"),
                url-prefix("moz-extension://smart_https_UUID/data/data/popup.html"),
                url-prefix("moz-extension://rename_tab_title_UUID/popup/popup.html"),
-               url-prefix("moz-extension://open_in_new_tab_UUID/popup") {
+               url-prefix("moz-extension://open_in_new_tab_UUID/popup"),
+               url-prefix("moz-extension://greasemonkey_UUID/src/browser/monkey-menu") {
   :root {
     --in-content-page-background: var(--tone-6)!important;
     --in-content-box-background: rgba(11,11,12,0.2)!important;
@@ -51,6 +52,8 @@
                url-prefix("moz-extension://open_in_new_tab_UUID/"),
                url-prefix("moz-extension://display_anchors_UUID/"),
                url-prefix("moz-extension://rename_tab_title_UUID/"),
+               url-prefix("moz-extension://greasemonkey_UUID/src/browser/monkey-menu"),
+
                url-prefix("moz-extension://generic_styling_1_UUID"),
                url-prefix("moz-extension://generic_styling_2_UUID"),
                url-prefix("moz-extension://generic_styling_3_UUID"),
@@ -134,7 +137,8 @@
 /*! Code Mirror */
 @-moz-document url-prefix("moz-extension://violentmonkey_UUID/"),
                url-prefix("moz-extension://ublock_origin_UUID/"),
-               url-prefix("moz-extension://umatrix_UUID/") {
+               url-prefix("moz-extension://umatrix_UUID/"),
+               url-prefix("moz-extension://greasemonkey_UUID/src/content/edit-user-script") {
   .CodeMirror {
      border: 1px solid !important;
      border-color: var(--cm-background)!important;
