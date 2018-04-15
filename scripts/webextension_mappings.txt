@@ -1,6 +1,7 @@
 1_click_youtube_video_downloader|YoutubeDownloader@PeterOlayev.com
 autocopy|autocopy@mozilla.org
 brief|brief@mozdev.org
+css_exfil_protection|{7fc8ef53-24ec-4205-87a4-1e745953bb0d}
 cookie_autodelete|CookieAutoDelete@kennydo.com
 custom_titlebar_text|{b5a43a70-4092-4899-9c44-63799150b35e}
 dark_mode|{174b2d58-b983-4501-ab4b-07e71203cb43}
