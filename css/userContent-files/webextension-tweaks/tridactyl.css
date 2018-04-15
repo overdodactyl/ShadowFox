@@ -27,7 +27,6 @@
     color: var(--in-content-text-color)!important
   }
   #completions {
-    overflow: visible!important;
     background: var(--in-content-page-background)!important;
     border-color: var(--in-content-box-border-color)!important
   }
