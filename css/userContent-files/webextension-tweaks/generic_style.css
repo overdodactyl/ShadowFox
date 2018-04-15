@@ -38,6 +38,7 @@
                url-prefix("moz-extension://dark_mode_UUID/"),
                url-prefix("moz-extension://decentraleyes_UUID/"),
                url-prefix("moz-extension://smart_https_UUID/"),
+               url-prefix("moz-extension://mind_the_time_UUID/options/options"),
                url-prefix("moz-extension://generic_styling_1_UUID"),
                url-prefix("moz-extension://generic_styling_2_UUID"),
                url-prefix("moz-extension://generic_styling_3_UUID"),
@@ -96,10 +97,11 @@
     padding: 5px 5px 5px 5px !important;
   }
   button,
+  .button,
   input[type="submit"] {
     -moz-appearance: none!important;
     background-image: none!important;
-
+    background-color: var(--in-content-page-background) !important;
     color: var(--in-content-page-color)!important;
     border: 1px solid!important;
     border-color: var(--in-content-box-border-color)!important;
