@@ -15,8 +15,9 @@
     background: var(--in-content-category-header-background)!important;
     border-color: var(--in-content-category-header-background)!important
   }
-  body {
-    color: var(--tone-4)!important
+  body,
+  table {
+    color: var(--in-content-page-color)!important
   }
   a:link {
     color: var(--in-content-link-color)!important
@@ -26,12 +27,8 @@
     color: var(--in-content-text-color)!important
   }
   #completions {
-    overflow: visible!important;
     background: var(--in-content-page-background)!important;
-    border-color: var(--tone-5)!important
-  }
-  table {
-    color: var(--tone-4)!important
+    border-color: var(--in-content-box-border-color)!important
   }
   .option:not(.focused) .url {
     color: var(--code-green)!important;

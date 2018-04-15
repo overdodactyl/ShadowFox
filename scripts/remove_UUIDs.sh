@@ -22,5 +22,8 @@ cd "$(dirname "${sfp}")" && cd ..
 while IFS='' read -r line || [[ -n "$line" ]]; do
     IFS='=' read -r -a array <<< "$line"
     webextension_name=${array[0]%_UUID}
-    sed -i '' "s/${array[1]}/${array[0]}/" "css/userContent-files/webextension-tweaks/${webextension_name}.css"
+    if [ -e css/userContent-files/webextension-tweaks/${webextension_name}.css ]; then
+      sed -i '' "s/${array[1]}/${array[0]}/" "css/userContent-files/webextension-tweaks/${webextension_name}.css"
+    fi
+    sed -i '' "s/${array[1]}/${array[0]}/" "css/userContent-files/webextension-tweaks/generic_style.css"
 done < "internal_UUIDs.txt"
