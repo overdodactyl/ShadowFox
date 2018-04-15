@@ -2,7 +2,8 @@
 @-moz-document url-prefix("moz-extension://css_exfil_protection_UUID/popup.html"),
                url-prefix("moz-extension://https_everywhere_UUID/pages/popup"),
                url-prefix("moz-extension://decentraleyes_UUID/pages/popup"),
-               url-prefix("moz-extension://smart_https_UUID/data/data/popup.html") {
+               url-prefix("moz-extension://smart_https_UUID/data/data/popup.html"),
+               url-prefix("moz-extension://rename_tab_title_UUID/popup/popup.html") {
   :root {
     --in-content-page-background: var(--tone-6)!important;
     --in-content-box-background: rgba(11,11,12,0.2)!important;
@@ -42,6 +43,12 @@
                url-prefix("moz-extension://google_translator_for_firefox_UUID"),
                url-prefix("moz-extension://enhancer_for_youtube_UUID/options.html"),
                url-prefix("moz-extension://flash_and_video_download_UUID/html/options.html"),
+               url-prefix("moz-extension://back_to_close_we_UUID/"),
+               url-prefix("moz-extension://containers_on_the_go_UUID/"),
+               url-prefix("moz-extension://new_tab_from_location_bar_UUID/"),
+               url-prefix("moz-extension://tab_auto_close_UUID/"),
+               url-prefix("moz-extension://display_anchors_UUID/"),
+               url-prefix("moz-extension://rename_tab_title_UUID/"),
                url-prefix("moz-extension://generic_styling_1_UUID"),
                url-prefix("moz-extension://generic_styling_2_UUID"),
                url-prefix("moz-extension://generic_styling_3_UUID"),
