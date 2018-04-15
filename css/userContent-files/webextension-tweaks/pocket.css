@@ -1,11 +1,11 @@
-.pkt_ext_containersaved h2,
 .pkt_ext_containersaved .pkt_ext_tag_input_wrapper input::placeholder,
+.pkt_ext_containersaved h2,
 .token-input-dropdown-tag ul li {
   color: var(--in-content-page-color)!important
 }
 .pkt_ext_containersaved .pkt_ext_tag_detail,
 .pkt_ext_containersaved .pkt_ext_tag_input_wrapper,
-.token-input-dropdown-tag  {
+.token-input-dropdown-tag {
   border-color: var(--in-content-box-border-color)!important;
   background: var(--in-content-box-background)!important
 }

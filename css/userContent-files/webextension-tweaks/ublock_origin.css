@@ -80,8 +80,8 @@
     color: var(--tone-2)!important
   }
   #extraTools,
-  h2,
-  #extraTools > span > span.badge {
+  #extraTools > span > span.badge,
+  h2 {
     background-color: var(--tone-8)!important;
     color: var(--tone-4)!important
   }

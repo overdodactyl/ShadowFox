@@ -1,28 +1,28 @@
 @-moz-document url-prefix("moz-extension://greasemonkey_UUID/") {
-  html,
-  body {
-    background: var(--in-content-page-background) !important;
+  body,
+  html {
+    background: var(--in-content-page-background)!important
   }
   #tabs .tab.active,
   .command-item {
-    background: var(--tone-8) !important;
-    color: var(--in-content-page-color) !important;
+    background: var(--tone-8)!important;
+    color: var(--in-content-page-color)!important
   }
   .subview-back::before {
     content: url(/skin/back.svg);
-    filter: invert(65%);
+    filter: invert(65%)
   }
-  .subview-back:hover,
   .subview-back:focus,
-  .subview-item:hover,
-  .subview-item:focus {
-    background-color: var(--in-content-category-background-hover) !important;
+  .subview-back:hover,
+  .subview-item:focus,
+  .subview-item:hover {
+    background-color: var(--in-content-category-background-hover)!important;
     cursor: default;
     color: inherit;
-    text-decoration: none;
+    text-decoration: none
   }
-  .subview-item .text,
-  .subview-item .icon {
-    background: transparent !important;
+  .subview-item .icon,
+  .subview-item .text {
+    background: 0 0!important
   }
 }
