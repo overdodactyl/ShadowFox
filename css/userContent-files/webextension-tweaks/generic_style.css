@@ -40,6 +40,7 @@
                url-prefix("moz-extension://mind_the_time_UUID/options/options"),
                url-prefix("moz-extension://tree_style_tab_UUID/options/options"),
                url-prefix("moz-extension://google_translator_for_firefox_UUID"),
+               url-prefix("moz-extension://enhancer_for_youtube_UUID/options.html"),
                url-prefix("moz-extension://generic_styling_1_UUID"),
                url-prefix("moz-extension://generic_styling_2_UUID"),
                url-prefix("moz-extension://generic_styling_3_UUID"),
