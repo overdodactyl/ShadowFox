@@ -12,6 +12,7 @@ display_anchors|display-anchors@robwu.nl
 enhancer_for_youtube_UUID|enhancerforyoutube@maximerf.addons.mozilla.org
 flash_and_video_download_UUID|{bee6eb20-01e0-ebd1-da83-080329fb9a3a}
 google_translator_for_firefox|translator@zoli.bod
+greasemonkey|{e4a8a97b-f2ed-450b-b12d-ee082ba24781}
 https_everywhere|https-everywhere@eff.org
 mind_the_time|jid0-HYNmqxA9zQGfJADREri4n2AHKSI@jetpack
 multi_account_containers|@testpilot-containers
