@@ -2,35 +2,34 @@
   IMPORTANT: change the Internal UUID */
 @-moz-document url-prefix("moz-extension://request_control_UUID/") {
   * {
-    color: var(--in-content-page-color) !important;
+    color: var(--in-content-page-color)!important
   }
-  
   body {
-    background-color: var(--in-content-page-background)!important;
+    background-color: var(--in-content-page-background)!important
   }
-  hr,
-  .page-header{
+  .page-header,
+  hr {
     border-color: var(--in-content-box-border-color)!important
   }
   .nav-tabs.nav-justified > li > a {
     border-bottom-color: var(--in-content-box-border-color)!important
   }
   .badge {
-    color: var(--in-content-text-color) !important;
+    color: var(--in-content-text-color)!important
   }
   .rule:not(.editing):not(:hover) {
-    background-color: var(--in-content-box-background)!important;
+    background-color: var(--in-content-box-background)!important
   }
-  .rule:hover:not(.editing),
+  .editing .rule-header,
   .list-group-item,
-  .editing .rule-header{
+  .rule:hover:not(.editing) {
     background-color: var(--in-content-box-background-hover)!important;
     border-color: var(--in-content-box-border-color)!important
   }
+  .nav-tabs > li > a:hover,
   .nav-tabs > li.active > a,
   .nav-tabs > li.active > a:focus,
-  .nav-tabs > li.active > a:hover,
-  .nav-tabs > li > a:hover{
+  .nav-tabs > li.active > a:hover {
     background-color: var(--in-content-category-header-background)!important;
     border-color: var(--in-content-box-border-color)!important
   }
@@ -56,20 +55,19 @@
   .table-striped > tbody > tr:nth-of-type(2n+1) {
     background-color: var(--in-content-box-background)!important
   }
-  input[type="text"],
-  select,
-  .tags-input {
+  .tags-input,
+  input[type=text],
+  select {
     background: var(--in-content-page-background)!important;
     color: var(--in-content-text-color)!important;
     border-color: var(--in-content-box-border-color)!important
   }
   .tags-input .tag {
     background: var(--in-content-item-selected)!important;
-    border-color: var(--in-content-box-border-color)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
-  img.arrow,
-  button img{
-    filter: invert(65%) !important;
+  button img,
+  img.arrow {
+    filter: invert(65%)!important
   }
-
 }

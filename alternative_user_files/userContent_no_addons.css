@@ -60,7 +60,7 @@
   --theme-highlight-bluegrey: #5e88b0;
   --theme-highlight-lightorange: #d99b28;
   --theme-highlight-orange: #d96629;
-  --theme-highlight-pink: #FF7DE9;
+  --theme-highlight-pink: #df80ff;
   --tone-1: var(--grey-10);
   --tone-2: var(--grey-20);
   --tone-3: var(--grey-30);
@@ -113,6 +113,15 @@
   --in-content-dark-header-background: var(--tone-9)!important;
   --secure-connection-color: var(--accent-1);
   --theme-sidebar-background: #1B1B1D!important;
+  --cm-background: var(--tone-8)!important;
+  --cm-selection: #353b48!important;
+  --cm-marker: #555!important;
+  --cm-linenumber: #58575c!important;
+  --cm-cursor: #fff!important;
+  --cm-active-line-background: rgba(185,215,253,.15)!important;
+  --cm-matching-bracket: rgba(255,255,255,.25)!important;
+  --cm-search-background: rgba(24,29,32,1)!important;
+  --cm-red: #de7474!important;
   --start-indicator-for-updater-scripts: black;
   --end-indicator-for-updater-scripts: black;
   --dummy-variable-for-updater-scripys: black

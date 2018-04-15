@@ -115,15 +115,14 @@
   --theme-sidebar-background: #1B1B1D!important;
   --cm-background: var(--tone-8)!important;
   --cm-selection: #353b48!important;
-  --cm-marker: #555 !important;
-  --cm-linenumber:#58575c!important;
-  --cm-cursor:#fff!important;
+  --cm-marker: #555!important;
+  --cm-linenumber: #58575c!important;
+  --cm-cursor: #fff!important;
   --cm-active-line-background: rgba(185,215,253,.15)!important;
-  --cm-matching-bracket: rgba(255,255,255,.25) !important;
-  --cm-search-background: rgba(24,29,32,1) !important;
+  --cm-matching-bracket: rgba(255,255,255,.25)!important;
+  --cm-search-background: rgba(24,29,32,1)!important;
   --cm-red: #de7474!important;
   --start-indicator-for-updater-scripts: black;
   --end-indicator-for-updater-scripts: black;
   --dummy-variable-for-updater-scripys: black
-
 }
