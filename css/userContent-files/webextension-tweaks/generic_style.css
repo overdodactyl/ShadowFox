@@ -1,3 +1,27 @@
+/* Pop Up Background Fixes */
+@-moz-document url-prefix("moz-extension://css_exfil_protection_UUID/popup.html"),
+               url-prefix("moz-extension://https_everywhere_UUID/pages/popup"),
+               url-prefix("moz-extension://skip_redirect_UUID/") {
+  :root {
+    --in-content-page-background: var(--tone-6)!important;
+    --in-content-box-background: rgba(11,11,12,0.2)!important;
+    --in-content-box-border-color: rgba(249, 249, 250, 0.3)!important;
+    --in-content-box-background-hover: rgba(11,11,12,0.2)!important;
+  }
+  button {
+    margin-top: 3px !important;
+  }
+  input {
+    margin-top: 3px !important;
+    margin-bottom: 3px !important;
+  }
+  textarea,
+  input  {
+    margin-left: 0px !important;
+  }
+
+}
+
 @-moz-document url-prefix("moz-extension://1_click_youtube_video_downloader_UUID"),
                url-prefix("moz-extension://autocopy_UUID"),
                url-prefix("moz-extension://custom_titlebar_text_UUID"),
@@ -7,11 +31,15 @@
                url-prefix("moz-extension://neat_url_UUID/"),
                url-prefix("moz-extension://smart_referer_UUID/"),
                url-prefix("moz-extension://tab_suspender_UUID/"),
+               url-prefix("moz-extension://css_exfil_protection_UUID/"),
+               url-prefix("moz-extension://https_everywhere_UUID/"),
+               url-prefix("moz-extension://skip_redirect_UUID/"),
                url-prefix("moz-extension://generic_styling_1_UUID"),
                url-prefix("moz-extension://generic_styling_2_UUID"),
                url-prefix("moz-extension://generic_styling_3_UUID"),
                url-prefix("moz-extension://generic_styling_4_UUID"),
-               url-prefix("moz-extension://generic_styling_5_UUID") {
+               url-prefix("moz-extension://generic_styling_5_UUID")
+  {
   * {
     color: var(--in-content-page-color) !important;
     background-color: var(--in-content-page-background)!important;
@@ -27,6 +55,9 @@
   a {
     color: var(--in-content-link-color) !important;
   }
+  a:hover {
+    color: var(--in-content-link-color-hover) !important;
+  }
   h1, h2, h3, h4, h5, h6 {
     color: var(--in-content-category-text-selected)!important
   }
@@ -37,6 +68,9 @@
   input:not([type=checkbox])  {
     background: var(--in-content-box-background)!important;
     color: var(--in-content-page-color)!important;
+  }
+  input[type="file"] {
+    background-color: var(--in-content-page-background)!important;
   }
 
   textarea,
@@ -60,7 +94,7 @@
   input[type="submit"] {
     -moz-appearance: none!important;
     background-image: none!important;
-    background-color: var(--in-content-page-background)!important;
+
     color: var(--in-content-page-color)!important;
     border: 1px solid!important;
     border-color: var(--in-content-box-border-color)!important;
@@ -70,6 +104,5 @@
   input[type="submit"]:hover {
     background-color: var(--in-content-box-background-hover)!important
   }
-}
 
-/* Pop Up Background Fixes */
+}
