@@ -4,17 +4,17 @@
   #current-tab,
   .column-panel-content,
   html body div#container-panel.panel.container-panel {
-    background: var(--tone-6)!important;
-    color: var(--tone-4)!important
+    background: var(--in-content-box-background)!important;
+    color: var(--in-content-page-color)!important
   }
   #current-tab > h3,
   .container-info-list,
   .panel-header-text {
-    color: var(--tone-4)!important
+    color: var(--in-content-page-color)!important
   }
   #container-panel #sort-containers-link {
-    border-color: var(--tone-5)!important;
-    color: var(--tone-4)!important
+    border-color: var(--in-content-box-border-color)!important;
+    color: var(--in-content-page-color)!important
   }
   #container-panel #sort-containers-link:hover,
   .clickable:hover {
@@ -23,7 +23,7 @@
   .container-panel-row {
     background-color: var(--tone-6)!important;
     border-block-end: 1px solid var(--tone-5);
-    color: var(--tone-4)!important
+    color: var(--in-content-page-color)!important
   }
   .scrollable {
     border-block-start: 1px solid var(--tone-5)!important;
@@ -64,22 +64,22 @@
   }
   .edit-container-panel fieldset,
   .edit-containers-text a {
-    color: var(--tone-4)!important
+    color: var(--in-content-page-color)!important
   }
   .edit-container-panel input[type=text] {
     background: var(--tone-8)!important;
-    color: var(--tone-4)!important;
+    color: var(--in-content-page-color)!important;
     border-color: var(--tone-5)!important
   }
   [data-identity-color=grey] {
     --identity-icon-color: var(--tone-4)!important
   }
   .button {
-    color: var(--tone-4)!important
+    color: var(--in-content-page-color)!important
   }
   .container-notification {
     background: var(--tone-7)!important;
-    color: var(--tone-4)!important
+    color: var(--in-content-page-color)!important
   }
   .edit-containers-text {
     border-inline-end: solid 0 #d8d8d8!important
@@ -93,13 +93,13 @@
   }
   .title-text,
   body {
-    color: var(--tone-4)!important
+    color: var(--in-content-page-color)!important
   }
   #redirect-url {
     background: var(--tone-8)!important
   }
   .button-container > button:first-child {
-    background: var(--tone-6)!important;
+    background: var(--in-content-box-background)!important;
     border-color: var(--tone-5)!important
   }
   .button-container > button:first-child:hover {
@@ -108,7 +108,7 @@
   #never-ask {
     -moz-appearance: none!important;
     background-color: var(--tone-6)!important;
-    border-color: var(--tone-5)!important;
+    border-color: var(--in-content-box-border-color)!important;
     background-image: none!important;
     box-shadow: none!important
   }
