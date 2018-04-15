@@ -24,9 +24,8 @@ while IFS='' read -r line || [[ -n "$line" ]]; do
     webextension_name=${array[0]%_UUID}
     if [ -e css/userContent-files/webextension-tweaks/${webextension_name}.css ]; then
       sed -i '' "s/${array[0]}/${array[1]}/" "css/userContent-files/webextension-tweaks/${webextension_name}.css"
-    else
-      sed -i '' "s/${array[0]}/${array[1]}/" "css/userContent-files/webextension-tweaks/generic_style.css"
     fi
+    sed -i '' "s/${array[0]}/${array[1]}/" "css/userContent-files/webextension-tweaks/generic_style.css"
 
 
 done < "internal_UUIDs.txt"
