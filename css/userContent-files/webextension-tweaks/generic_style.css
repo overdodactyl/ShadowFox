@@ -154,6 +154,9 @@ url-prefix("moz-extension://greasemonkey_UUID/src/content/edit-user-script") {
   div.CodeMirror-selected {
     background: var(--cm-selection)!important
   }
+  div.CodeMirror-selected {
+    background: #353b48!important
+  }
   .CodeMirror-gutters {
     background: var(--theme-sidebar-background)!important;
     border-right: 0 solid!important
