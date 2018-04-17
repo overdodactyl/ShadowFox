@@ -18,6 +18,9 @@
   color: var(--in-content-selected-text)!important;
   background: var(--in-content-page-background)!important
 }
+#BMB_bookmarksPopup .popup-internal-box {
+  background-color: var(--in-content-box-background)!important
+}
 .popup-internal-box > autorepeatbutton {
   -moz-appearance: none!important;
   background-color: var(--in-content-page-background)!important
