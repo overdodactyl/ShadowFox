@@ -378,7 +378,8 @@ url-prefix(https://discovery.addons.mozilla.org) {
   }
   .toolbar {
     background-color: var(--in-content-category-header-background)!important;
-    border-right: 1px solid!important
+    border-right: 1px solid!important;
+    border-color: var(--in-content-box-border-color)!important
   }
   .toolbar .button {
     background-color: var(--in-content-category-header-background)!important;
