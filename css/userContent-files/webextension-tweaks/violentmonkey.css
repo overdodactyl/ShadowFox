@@ -1,6 +1,6 @@
 /*! Alters the webextension Violentmonkey
   IMPORTANT: change the Internal UUID */
-@-moz-document url-prefix("moz-extension://violentmonkey_UUID/") {
+@-moz-document url-prefix("moz-extension://{aecec67f-0d10-4fa7-b7c7-609a2db280cf}/") {
   .edit-settings,
   .tab,
   section > h3 {

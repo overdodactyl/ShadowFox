@@ -1,6 +1,6 @@
 /*! Alters the webextension Multi-Account Containers
   IMPORTANT: change the Internal UUID in BOTH locations */
-@-moz-document url-prefix("moz-extension://multi_account_containers_UUID/") {
+@-moz-document url-prefix("moz-extension://@testpilot-containers/") {
   #current-tab,
   .column-panel-content,
   html body div#container-panel.panel.container-panel {
@@ -87,7 +87,7 @@
 }
 /*! Alters the webextension Multi-Account Containers
   IMPORTANT: change the Internal UUID in BOTH locations */
-@-moz-document url-prefix("moz-extension://multi_account_containers_UUID/confirm-page") {
+@-moz-document url-prefix("moz-extension://@testpilot-containers/confirm-page") {
   body {
     background-color: var(--tone-7)!important
   }
