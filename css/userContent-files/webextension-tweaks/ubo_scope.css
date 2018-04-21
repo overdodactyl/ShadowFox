@@ -1,6 +1,6 @@
 /*! Alters the webextension uBO-Scope
   IMPORTANT: change the Internal UUID */
-@-moz-document url-prefix("moz-extension://ubo_scope_UUID/") {
+@-moz-document url-prefix("moz-extension://uBO-Scope@raymondhill.net/") {
   #heatmaps .togglerBar,
   body,
   body.theoretical #heatmaps .heatmap.theoretical {
@@ -40,7 +40,7 @@
     color: var(--tone-4)!important
   }
 }
-@-moz-document url-prefix("moz-extension://ubo_scope_UUID/options.html") {
+@-moz-document url-prefix("moz-extension://uBO-Scope@raymondhill.net/options.html") {
   body,
   html {
     background-color: var(--in-content-page-background)!important;
