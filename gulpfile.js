@@ -21,7 +21,7 @@ gulp.task('minify_base_code', function() {
 /* Remove internal UUIDs */
 gulp.task('remove_UUIDs', function() {
   return gulp.src('.')
-    .pipe(exec('sh scripts/remove_UUIDs.sh'))
+    .pipe(exec('sh scripts/uuids.sh remove'))
 });
 
 
@@ -75,7 +75,7 @@ gulp.task('all', gulp.parallel('userChrome', 'userContent', function() {
 }));
 
 /* Publish */
-gulp.task('publish', gulp.series('remove_UUIDs', 'minify_base_code', 'userChrome', 'userContent', 'minify_final'));
+gulp.task('publish', gulp.series('minify_base_code', 'userChrome', 'userContent', 'minify_final', 'remove_UUIDs'));
 
 
 
@@ -83,5 +83,5 @@ gulp.task('publish', gulp.series('remove_UUIDs', 'minify_base_code', 'userChrome
 gulp.task('push', function() {
   return gulp.src('.')
     .pipe(exec('git push'))
-    .pipe(exec('sh scripts/add_UUIDs.sh'))
+    .pipe(exec('sh scripts/uuids.sh add'))
 });
