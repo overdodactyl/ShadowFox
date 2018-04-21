@@ -21,6 +21,7 @@
     color: var(--in-content-link-color)!important
   }
   body {
+    background: var(--in-content-page-background)!important;
     color: var(--in-content-page-color)!important
   }
   .script {
