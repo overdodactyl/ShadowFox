@@ -1,6 +1,6 @@
 /*! Alters the webextension NoScript
   IMPORTANT: change the Internal UUID */
-@-moz-document url-prefix("moz-extension://noscript_UUID/") {
+@-moz-document url-prefix("moz-extension://{73a6fe31-595d-460b-a920-fcc0f8843232}/") {
   body {
     background: var(--tone-6)!important
   }
