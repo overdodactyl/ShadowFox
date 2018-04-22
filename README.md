@@ -18,7 +18,7 @@ ShadowFox styles the entire user interface, protected webpages (such as `about:`
 
 3. Restart Firefox.
 
-For more detailed instructions, please see [here]().
+For more detailed instructions, please see [here](https://github.com/overdodactyl/ShadowFox/wiki/Installation).
 
 ## Updating
 
