@@ -65,31 +65,29 @@ listitem[selected=true] {
   border-color: var(--in-content-box-border-color)!important;
   box-shadow: none!important
 }
-
 @-moz-document url(chrome://browser/content/places/bookmarkProperties.xul) {
   #bookmarkproperties {
-    -moz-appearance: none !important;
-    color: var(--in-content-page-color) !important;
-    background-color: var(--in-content-box-background) !important;
+    -moz-appearance: none!important;
+    color: var(--in-content-page-color)!important;
+    background-color: var(--in-content-box-background)!important
   }
   #editBMPanel_tagsSelectorExpander.expander-down {
-    -moz-appearance: -moz-mac-disclosure-button-closed !important;
-    filter:invert(79%) !important;
+    -moz-appearance: -moz-mac-disclosure-button-closed!important;
+    filter: invert(79%)!important
   }
-  
   #editBMPanel_tagsSelectorExpander.expander-up {
-    -moz-appearance: -moz-mac-disclosure-button-open !important;
-    filter:invert(78%) !important;
+    -moz-appearance: -moz-mac-disclosure-button-open!important;
+    filter: invert(78%)!important
   }
   .dialog-button {
-    -moz-appearance: none !important;
-    background: var(--in-content-page-background) !important;
-    color: var(--in-content-page-color) !important;
-    border: 1px solid !important;
-    border-color: var(--in-content-box-border-color) !important;
-    border-radius: 3px !important;
+    -moz-appearance: none!important;
+    background: var(--in-content-page-background)!important;
+    color: var(--in-content-page-color)!important;
+    border: 1px solid!important;
+    border-color: var(--in-content-box-border-color)!important;
+    border-radius: 3px!important
   }
-  .dialog-button[disabled="true"] {
-    opacity: .4 !important;
+  .dialog-button[disabled=true] {
+    opacity: .4!important
   }
 }
