@@ -8,7 +8,7 @@ This project aims at creating a universal dark theme for Firefox while adhering 
 
 ![preferences](.github/Screenshots/preview.png)
 
-ShadowFox styles the entire user interface, protected webpages (such as `about:` pages and addons.mozilla.org), and over 20 popular addons.
+ShadowFox styles the entire user interface, protected webpages (such as `about:` pages and addons.mozilla.org), and over 40 popular addons.
 
 ## Installation
 
