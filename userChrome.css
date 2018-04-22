@@ -345,6 +345,32 @@ listitem[selected=true] {
   border-color: var(--in-content-box-border-color)!important;
   box-shadow: none!important
 }
+@-moz-document url(chrome://browser/content/places/bookmarkProperties.xul) {
+  #bookmarkproperties {
+    -moz-appearance: none!important;
+    color: var(--in-content-page-color)!important;
+    background-color: var(--in-content-box-background)!important
+  }
+  #editBMPanel_tagsSelectorExpander.expander-down {
+    -moz-appearance: -moz-mac-disclosure-button-closed!important;
+    filter: invert(79%)!important
+  }
+  #editBMPanel_tagsSelectorExpander.expander-up {
+    -moz-appearance: -moz-mac-disclosure-button-open!important;
+    filter: invert(78%)!important
+  }
+  .dialog-button {
+    -moz-appearance: none!important;
+    background: var(--in-content-page-background)!important;
+    color: var(--in-content-page-color)!important;
+    border: 1px solid!important;
+    border-color: var(--in-content-box-border-color)!important;
+    border-radius: 3px!important
+  }
+  .dialog-button[disabled=true] {
+    opacity: .4!important
+  }
+}
 @-moz-document url("chrome://global/content/commonDialog.xul") {
   #commonDialog {
     -moz-appearance: none!important;
@@ -600,7 +626,7 @@ screen and (-moz-os-version:windows-win10) {
   }
   .expander-down,
   .expander-up {
-    filter: invert(60%)!important
+    filter: invert(77%)!important
   }
   #placeContent treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text() {
     color: var(--in-content-text-color)!important
@@ -640,6 +666,14 @@ screen and (-moz-os-version:windows-win10) {
   }
   tree {
     background-color: var(--in-content-box-background)!important
+  }
+  #editBMPanel_tagsSelectorExpander.expander-down {
+    -moz-appearance: -moz-mac-disclosure-button-closed!important;
+    filter: invert(79%)!important
+  }
+  #editBMPanel_tagsSelectorExpander.expander-up {
+    -moz-appearance: -moz-mac-disclosure-button-open!important;
+    filter: invert(79%)!important
   }
   @media screen and (-moz-windows-theme),
   screen and (-moz-windows-classic),
