@@ -1,6 +1,6 @@
 /*! Alters the webextension uBlock Origin
   IMPORTANT: change the Internal UUID */
-@-moz-document url-prefix("moz-extension://ublock_origin_UUID/") {
+@-moz-document url-prefix("moz-extension://uBlock0@raymondhill.net/") {
   button.custom {
     background-color: var(--in-content-page-background)!important;
     background-image: none!important;
