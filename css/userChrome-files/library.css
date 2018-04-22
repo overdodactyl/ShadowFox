@@ -42,7 +42,7 @@
   }
   .expander-down,
   .expander-up {
-    filter: invert(60%)!important
+    filter: invert(77%)!important
   }
   #placeContent treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text() {
     color: var(--in-content-text-color)!important
@@ -83,6 +83,15 @@
   tree {
     background-color: var(--in-content-box-background)!important
   }
+  #editBMPanel_tagsSelectorExpander.expander-down {
+    -moz-appearance: -moz-mac-disclosure-button-closed !important;
+    filter:invert(79%) !important;
+  }
+  #editBMPanel_tagsSelectorExpander.expander-up {
+    -moz-appearance: -moz-mac-disclosure-button-open !important;
+    filter:invert(79%) !important;
+  }
+  
   @media screen and (-moz-windows-theme),
   screen and (-moz-windows-classic),
   screen and (-moz-windows-default-theme),
