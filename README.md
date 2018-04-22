@@ -12,29 +12,23 @@ ShadowFox styles the entire user interface, protected webpages (such as `about:`
 
 ## Installation
 
-* Download the updater script from the [releases](https://github.com/overdodactyl/ShadowFox/releases) page for your operating system.
+1. Download the updater script from the [releases](https://github.com/SrKomodo/shadowfox-updater/releases) page of [shadowfox-updater](https://github.com/SrKomodo/shadowfox-updater) for your operating system and place it in a location you will remember for future use.
 
-* Place this script in your Firefox profile directory.
+2. Run the script.
 
-  * Visit `about:support` by entering this address in the url bar.
+3. Restart Firefox.
 
-  * In the `Profile Folder`/`Profile Directory` section, click the button that says "Open Folder", "Show in Finder" or "Open Directory" (OS dependent).
-
-    * On Windows and Linux, this should take you directly to your profile directory. On a Mac, this will take you to a list of Firefox profiles, with the one you want highlighted. In this case, double click that folder to open it.
-
-* Run the script.
-
-* Restart Firefox.
-
-***IMPORTANT***: Changes to webextensions do not go into effect by default. For more information, see [here](https://github.com/overdodactyl/ShadowFox/wiki/Altering-webextensions).
+For more detailed instructions, please see [here]().
 
 ## Updating
 
-* Run the updater script.
+Any time you want to update ShadowFox or apply custom changes, simply run the updater script again.  
 
 ## Customization
 
-It's easy to customize ShadowFox, everything from the colors used to what elements and webpages are styled.  Depending on how much you want to customize ShadowFox, you may be better suited using a different installation process.  To learn more, see [here](https://github.com/overdodactyl/ShadowFox/wiki/Getting-Started).
+It's easy to customize ShadowFox, everything from the colors used to what elements and webpages are styled.  For more information, see [here](https://github.com/overdodactyl/ShadowFox/wiki/Customization).  
+
+Depending on how much you want to customize ShadowFox, you may be better suited using a different installation process.  To learn more, see [here](https://github.com/overdodactyl/ShadowFox/wiki/Development).
 
 ## Discussion
 
