@@ -1,6 +1,6 @@
 /*! Alters the webextension Brief
   IMPORTANT: change the Internal UUID */
-@-moz-document url-prefix("moz-extension://brief_UUID/") {
+@-moz-document url-prefix("moz-extension://brief@mozdev.org/") {
   #sidebar {
     background-color: var(--in-content-box-background)!important
   }
