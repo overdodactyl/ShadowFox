@@ -599,6 +599,11 @@ screen and (-moz-os-version:windows-win10) {
     border-color: var(--in-content-box-border-color)!important;
     border-radius: 3px!important
   }
+  #editBMPanel_rows > row > hbox > textbox,
+  #editBMPanel_rows > row > textbox,
+  #editBMPanel_tagsSelector {
+    background: var(--in-content-box-background)!important
+  }
   #placesToolbar > toolbarbutton {
     margin: 6px 4px 5px!important;
     -moz-appearance: none!important;
@@ -693,11 +698,21 @@ screen and (-moz-os-version:windows-win10) {
       border: none!important;
       color: var(--in-content-selected-text)!important
     }
+    #placesMenu > menu {
+      color: var(--in-content-page-color)!important
+    }
     #security-identity-groupbox,
     #security-privacy-groupbox,
     #security-technical-groupbox {
       -moz-appearance: none!important;
       background-color: var(--in-content-category-header-background)!important
+    }
+    #places treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover):not(.autocomplete-treebody)::-moz-tree-cell-text(selected) {
+      background: 0 0!important;
+      -moz-border-top-colors: transparent!important;
+      -moz-border-right-colors: transparent!important;
+      -moz-border-left-colors: transparent!important;
+      -moz-border-bottom-colors: transparent!important
     }
   }
 }
