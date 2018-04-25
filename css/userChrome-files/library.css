@@ -131,4 +131,17 @@
       -moz-border-bottom-colors: transparent!important
     }
   }
+  @media screen and (-moz-os-version:windows-win7) {
+    treechildren {
+      --treechildren-outline: none!important;
+      --treechildren-selectedBorder: none!important;
+      --treechildren-selectedBottomBorder: none!important;
+      --treechildren-selectedFocusCurrentBorder: none!important;
+      --treechildren-selectedFocusCurrentBottomBorder: none!important;
+      --treechildren-hoverBorder: none!important;
+      --treechildren-hoverBottomBorder: none!important;
+      --treechildren-hoverSelectedBorder: none!important;
+      --treechildren-hoverSelectedBottomBorder: none!important
+    }
+  }
 }
