@@ -251,7 +251,7 @@ url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/src/content/e
     font-weight: 700
   }
   .CodeMirror-merge-gap {
-    background-color: var(--in-content-category-header-background)!important;
+    background-color: var(--theme-sidebar-background)!important;
     border-top: 1px solid!important;
     border-bottom: 1px solid!important;
     border-right: none!important;
