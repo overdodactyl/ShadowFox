@@ -65,20 +65,24 @@ listitem[selected=true] {
   border-color: var(--in-content-box-border-color)!important;
   box-shadow: none!important
 }
-@-moz-document url(chrome://browser/content/places/bookmarkProperties.xul) {
+@-moz-document url(chrome://browser/content/places/bookmarkProperties.xul),
+url(chrome://browser/content/places/bookmarkProperties2.xul) {
   #bookmarkproperties {
     -moz-appearance: none!important;
     color: var(--in-content-page-color)!important;
     background-color: var(--in-content-box-background)!important
   }
+  #editBMPanel_foldersExpander.expander-down,
   #editBMPanel_tagsSelectorExpander.expander-down {
     -moz-appearance: -moz-mac-disclosure-button-closed!important;
     filter: invert(79%)!important
   }
+  #editBMPanel_foldersExpander.expander-up,
   #editBMPanel_tagsSelectorExpander.expander-up {
     -moz-appearance: -moz-mac-disclosure-button-open!important;
     filter: invert(78%)!important
   }
+  #editBMPanel_newFolderButton,
   .dialog-button {
     -moz-appearance: none!important;
     background: var(--in-content-page-background)!important;
@@ -89,5 +93,10 @@ listitem[selected=true] {
   }
   .dialog-button[disabled=true] {
     opacity: .4!important
+  }
+  #editBMPanel_folderTree {
+    border: 1px solid;
+    border-radius: 3px;
+    border-color: var(--in-content-box-border-color)!important
   }
 }
