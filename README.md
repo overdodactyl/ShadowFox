@@ -14,6 +14,8 @@ ShadowFox styles the entire user interface, protected webpages (such as `about:`
 
 1. Download the updater script from the [releases](https://github.com/SrKomodo/shadowfox-updater/releases) page of [shadowfox-updater](https://github.com/SrKomodo/shadowfox-updater) for your operating system and place it in a location you will remember for future use.
 
+   * On Arch Linux, you can install the package [shadowfox-updater](https://aur.archlinux.org/packages/shadowfox-updater/) from AUR.
+
 2. Run the script.
 
 3. Restart Firefox.
