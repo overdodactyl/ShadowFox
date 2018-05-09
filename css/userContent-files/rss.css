@@ -18,10 +18,18 @@
     color: var(--in-content-link-color)!important
   }
   #subscribeButton {
+    -moz-appearance: none!important;
     background: var(--in-content-page-background)!important;
     color: var(--in-content-page-color)!important;
     border: 1px solid;
     border-color: var(--in-content-box-border-color)!important;
     border-radius: 4px
+  }
+  #subscribeButton:hover {
+    background: var(--in-content-box-background)!important
+  }
+  .enclosures {
+    background: var(--in-content-page-background)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
 }

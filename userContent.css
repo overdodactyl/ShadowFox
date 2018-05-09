@@ -952,11 +952,19 @@ url-prefix(https://discovery.addons.mozilla.org) {
     color: var(--in-content-link-color)!important
   }
   #subscribeButton {
+    -moz-appearance: none!important;
     background: var(--in-content-page-background)!important;
     color: var(--in-content-page-color)!important;
     border: 1px solid;
     border-color: var(--in-content-box-border-color)!important;
     border-radius: 4px
+  }
+  #subscribeButton:hover {
+    background: var(--in-content-box-background)!important
+  }
+  .enclosures {
+    background: var(--in-content-page-background)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
 }
 @-moz-document url-prefix(view-source) {
@@ -1128,7 +1136,9 @@ url-prefix("moz-extension://jid1-BoFifL9Vbdl2zQ@jetpack/pages/popup"),
 url-prefix("moz-extension://{b3e677f4-1150-4387-8629-da738260a48e}/data/data/popup.html"),
 url-prefix("moz-extension://renametabtitle@mozilla.org/popup/popup.html"),
 url-prefix("moz-extension://{6f5f4891-9637-41f9-9ee5-3a0ac02cf254}/popup"),
-url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/src/browser/monkey-menu") {
+url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/src/browser/monkey-menu"),
+url-prefix("moz-extension://{b43b974b-1d3a-4232-b226-eaa2ac6ebb69}/"),
+url-prefix("moz-extension://woop-NoopscooPsnSXQ@jetpack") {
   :root {
     --in-content-page-background: var(--tone-6)!important;
     --in-content-box-background: rgba(11,11,12,0.2)!important;
@@ -1175,6 +1185,8 @@ url-prefix("moz-extension://{6f5f4891-9637-41f9-9ee5-3a0ac02cf254}/"),
 url-prefix("moz-extension://display-anchors@robwu.nl/"),
 url-prefix("moz-extension://renametabtitle@mozilla.org/"),
 url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/src/browser/monkey-menu"),
+url-prefix("moz-extension://{b43b974b-1d3a-4232-b226-eaa2ac6ebb69}/"),
+url-prefix("moz-extension://woop-NoopscooPsnSXQ@jetpack"),
 url-prefix("moz-extension://generic_styling_1"),
 url-prefix("moz-extension://generic_styling_2"),
 url-prefix("moz-extension://generic_styling_3"),
@@ -1612,6 +1624,25 @@ url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/src/content/e
   border-color: var(--in-content-box-border-color)!important;
   background-color: var(--in-content-table-border-dark-color)!important;
   color: var(--in-content-page-color)!important
+}
+@-moz-document url-prefix("moz-extension://{b43b974b-1d3a-4232-b226-eaa2ac6ebb69}/") {
+  .box-min input[type=checkbox]:checked ~ i {
+    background: var(--in-content-link-color)!important;
+    border-color: var(--in-content-link-color)!important
+  }
+  .toggle label {
+    background-color: var(--in-content-page-color)!important
+  }
+  .toggle input:checked + label {
+    background-color: var(--in-content-link-color)!important
+  }
+  #main .block h2 {
+    color: var(--in-content-text-color)!important
+  }
+  #main .block h5,
+  .bugreport-link {
+    color: var(--in-content-page-color)!important
+  }
 }
 /*! Alters the webextension Request Control
   IMPORTANT: change the Internal UUID */
