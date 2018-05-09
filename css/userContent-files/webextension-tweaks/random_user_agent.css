@@ -1,0 +1,19 @@
+@-moz-document url-prefix("moz-extension://{b43b974b-1d3a-4232-b226-eaa2ac6ebb69}/") {
+  .box-min input[type=checkbox]:checked ~ i {
+    background: var(--in-content-link-color)!important;
+    border-color: var(--in-content-link-color)!important
+  }
+  .toggle label {
+    background-color: var(--in-content-page-color)!important
+  }
+  .toggle input:checked + label {
+    background-color: var(--in-content-link-color)!important
+  }
+  #main .block h2 {
+    color: var(--in-content-text-color)!important
+  }
+  #main .block h5,
+  .bugreport-link {
+    color: var(--in-content-page-color)!important
+  }
+}
