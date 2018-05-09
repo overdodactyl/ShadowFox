@@ -22,7 +22,8 @@ popup > menu > menupopup {
 menuitem,
 menupopup menu {
   -moz-appearance: none!important;
-  color: var(--in-content-selected-text)!important
+  color: var(--in-content-selected-text)!important;
+  background: var(--in-content-box-background)!important
 }
 menupopup menuseparator {
   -moz-appearance: none!important;

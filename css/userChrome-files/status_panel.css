@@ -1,3 +1,4 @@
+#statuspanel #statuspanel-label,
 statuspanel .statuspanel-label {
   background-color: var(--in-content-category-header-background)!important;
   color: var(--in-content-page-color)!important;
