@@ -397,6 +397,9 @@ popup > menu > menupopup {
   border: none!important;
   padding: 0!important
 }
+menu.subviewbutton > .menu-right {
+  fill: #000!important
+}
 .menu-right {
   filter: invert(95%)!important
 }
