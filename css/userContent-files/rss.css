@@ -32,4 +32,23 @@
     background: var(--in-content-page-background)!important;
     border-color: var(--in-content-box-border-color)!important
   }
+  #feedHeaderContainer {
+    background-color: var(--in-content-box-background)!important;
+    display: inline-block!important
+  }
+  #feedHeaderContainerSpacer {
+    display: none!important
+  }
+  #feedBody div.entry a[href] {
+    color: var(--in-content-link-color)!important
+  }
+  #feedBody div.entry a[href]:hover {
+    color: var(--in-content-link-color-hover)!important
+  }
+  #feedBody div.entry a[href]:active {
+    color: var(--in-content-link-color-active)!important
+  }
+  #feedBody div.entry a[href]:visited {
+    color: var(--in-content-link-color-visited)!important
+  }
 }
