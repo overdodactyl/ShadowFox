@@ -2,6 +2,8 @@
 @import "css/common-files/color_variables.css";
 @import "css/common-files/trees.css";
 @import "css/common-files/radios_checkboxes.css";
+@import "css/common-files/library.css";
+@import "css/common-files/context_menus.css";
 
 @import "css/userContent-files/about_pages.css";
 @import "css/userContent-files/amo_store.css";
