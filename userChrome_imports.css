@@ -1,15 +1,16 @@
 @import "css/common-files/color_variables.css";
 @import "css/common-files/trees.css";
 @import "css/common-files/radios_checkboxes.css";
+@import "css/common-files/library.css";
+@import "css/common-files/context_menus.css";
 
 @import "css/userChrome-files/about_firefox.css";
 @import "css/userChrome-files/address_searchbar.css";
 @import "css/userChrome-files/bookmarks_popup.css";
 @import "css/userChrome-files/common_dialog.css";
-@import "css/userChrome-files/context_menus.css";
 @import "css/userChrome-files/customization_page.css";
 @import "css/userChrome-files/findbar.css";
-@import "css/userChrome-files/library.css";
+
 @import "css/userChrome-files/navbar_menus.css";
 @import "css/userChrome-files/page_info.css";
 @import "css/userChrome-files/remove_bookmarks_bottom_border.css";

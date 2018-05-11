@@ -117,42 +117,7 @@ screen and (-moz-os-version:windows-win10) {
   menupopup > menu > menupopup {
     padding: 4px 0!important
   }
-  /*! Temporarily making de-active due to number of questions about
-      different sized context menus. Will decide what to do with it
-      at a later time.
-  #PlacesToolbar menupopup > menu,
-  #PlacesToolbar menupopup > menuitem,
-  menupopup#contentAreaContextMenu > menu,
-  menupopup#contentAreaContextMenu > menuitem,
-  menupopup#placesContext menuitem,
-  menupopup#tabContextMenu > menu,
-  menupopup#tabContextMenu > menuitem,
-  menupopup#tabContextMenu menupopup > menu,
-  menupopup#tabContextMenu menupopup > menuitem,
-  menupopup#toolbar-context-menu > menuitem {
-    font-size: 1.167em!important;
-    padding-top: 1px!important;
-    padding-bottom: 1px!important
-  }
-  #PlacesToolbar menupopup menupopup > menu,
-  #PlacesToolbar menupopup menupopup > menuitem,
-  menupopup#contentAreaContextMenu menupopup > menu,
-  menupopup#contentAreaContextMenu menupopup > menuitem,
-  menupopup#tabContextMenu menupopup > menu,
-  menupopup#tabContextMenu menupopup > menuitem,
-  menupopup.textbox-contextmenu > menuitem {
-    font-size: 1em!important
-  }
-  toolbaritem#menubar-items menupopup > menu,
-  toolbaritem#menubar-items menupopup > menuitem {
-    font-size: 1.167em!important
-  }
-  toolbaritem#menubar-items menupopup menupopup > menu,
-  toolbaritem#menubar-items menupopup menupopup > menuitem {
-    font-size: 1em!important
-  }
-  */
-#customization-toolbar-menu,
+  #customization-toolbar-menu,
   toolbaritem#menubar-items menupopup,
   toolbaritem#menubar-items menupopup > menu > menupopup {
     padding-left: 2px!important;
