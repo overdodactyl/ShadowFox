@@ -43,4 +43,8 @@
     background: var(--warning-background-color)!important;
     color: var(--warning-color)!important
   }
+  .spoiler {
+    background-color: var(--in-content-box-background)!important;
+    border-color: var(--in-content-box-border-color)!important
+  }
 }
