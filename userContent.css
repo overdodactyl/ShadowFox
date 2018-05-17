@@ -1756,6 +1756,8 @@ url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/src/content/e
 @-moz-document url-prefix("moz-extension://@testpilot-containers/") {
   #current-tab,
   .column-panel-content,
+  .container-panel-row,
+  .userContext-wrapper,
   html body div#container-panel.panel.container-panel {
     background: var(--in-content-box-background)!important;
     color: var(--in-content-page-color)!important
@@ -2179,6 +2181,10 @@ url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/src/content/e
   .focused .url {
     background: var(--warning-background-color)!important;
     color: var(--warning-color)!important
+  }
+  .spoiler {
+    background-color: var(--in-content-box-background)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
 }
 /*! Alters the webextension uBlock Origin
