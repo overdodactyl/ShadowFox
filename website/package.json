@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "codemirror": "^5.37.0",
+    "critical": "^1.3.2",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.3",
+    "html5shiv": "^3.7.3",
+    "jquery": "^3.3.1",
+    "lazysizes": "^4.0.2",
+    "magnific-popup": "^1.1.0",
+    "rename": "^1.0.4",
+    "resources": "^0.4.3",
+    "vendors": "^1.0.2",
+    "waypoint": "^0.2.8",
+    "waypoints": "^4.0.1"
+  },
+  "devDependencies": {
+    "gulp-gh-pages": "^0.5.4"
+  }
+}
