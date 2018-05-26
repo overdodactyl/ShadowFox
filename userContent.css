@@ -1227,59 +1227,57 @@ url-prefix(https://discovery.addons.mozilla.org) {
     color: var(--in-content-page-color)!important
   }
 }
-@-moz-document regexp(".*\.(atom|rss)$") {
-  body,
-  html {
-    background-color: var(--in-content-page-background)!important;
-    color: var(--in-content-page-color)!important
-  }
-  h1 {
-    border-color: var(--in-content-box-border-color)!important;
-    color: var(--in-content-selected-text)!important
-  }
-  #feedBody,
-  #feedHeader {
-    background-color: var(--in-content-box-background)!important;
-    border-color: var(--in-content-box-border-color)!important;
-    color: var(--in-content-page-color)!important
-  }
-  *|:link {
-    color: var(--in-content-link-color)!important
-  }
-  #subscribeButton {
-    -moz-appearance: none!important;
-    background: var(--in-content-page-background)!important;
-    color: var(--in-content-page-color)!important;
-    border: 1px solid;
-    border-color: var(--in-content-box-border-color)!important;
-    border-radius: 4px
-  }
-  #subscribeButton:hover {
-    background: var(--in-content-box-background)!important
-  }
-  .enclosures {
-    background: var(--in-content-page-background)!important;
-    border-color: var(--in-content-box-border-color)!important
-  }
-  #feedHeaderContainer {
-    background-color: var(--in-content-box-background)!important;
-    display: inline-block!important
-  }
-  #feedHeaderContainerSpacer {
-    display: none!important
-  }
-  #feedBody div.entry a[href] {
-    color: var(--in-content-link-color)!important
-  }
-  #feedBody div.entry a[href]:hover {
-    color: var(--in-content-link-color-hover)!important
-  }
-  #feedBody div.entry a[href]:active {
-    color: var(--in-content-link-color-active)!important
-  }
-  #feedBody div.entry a[href]:visited {
-    color: var(--in-content-link-color-visited)!important
-  }
+html#feedHandler,
+html#feedHandler body {
+  background-color: var(--in-content-page-background)!important;
+  color: var(--in-content-page-color)!important
+}
+html#feedHandler h1 {
+  border-color: var(--in-content-box-border-color)!important;
+  color: var(--in-content-selected-text)!important
+}
+html#feedHandler #feedBody,
+html#feedHandler #feedHeader {
+  background-color: var(--in-content-box-background)!important;
+  border-color: var(--in-content-box-border-color)!important;
+  color: var(--in-content-page-color)!important
+}
+html#feedHandler *|:link {
+  color: var(--in-content-link-color)!important
+}
+html#feedHandler #subscribeButton {
+  -moz-appearance: none!important;
+  background: var(--in-content-page-background)!important;
+  color: var(--in-content-page-color)!important;
+  border: 1px solid;
+  border-color: var(--in-content-box-border-color)!important;
+  border-radius: 4px
+}
+html#feedHandler #subscribeButton:hover {
+  background: var(--in-content-box-background)!important
+}
+html#feedHandler .enclosures {
+  background: var(--in-content-page-background)!important;
+  border-color: var(--in-content-box-border-color)!important
+}
+#feedHeaderContainer {
+  background-color: var(--in-content-box-background)!important;
+  display: inline-block!important
+}
+#feedHeaderContainerSpacer {
+  display: none!important
+}
+#feedBody div.entry a[href] {
+  color: var(--in-content-link-color)!important
+}
+#feedBody div.entry a[href]:hover {
+  color: var(--in-content-link-color-hover)!important
+}
+#feedBody div.entry a[href]:active {
+  color: var(--in-content-link-color-active)!important
+}
+#feedBody div.entry a[href]:visited {
+  color: var(--in-content-link-color-visited)!important
 }
 @-moz-document url-prefix(view-source) {
   :root {
