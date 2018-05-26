@@ -8,6 +8,12 @@
     .row { padding: 0 2%; }
 }
 
+@media only screen and (max-width: 1024px) {
+  header {
+    background-attachment: scroll;
+  }
+}
+
 /* Small tablet to big tablet: from 768px to 1023px */
 @media only screen and (max-width: 1023px) {
 
@@ -90,7 +96,7 @@
 
     .sticky .mobile-nav-icon { margin-top: 10px; }
     .sticky .mobile-nav-icon i { color: #555; }
-    .sticky .mobile-nav-icon i.ion-close-round { color: #fff; }    
+    .sticky .mobile-nav-icon i.ion-close-round { color: #fff; }
 
     h1 { font-size: 180%; }
     h2 { font-size: 150%; }
