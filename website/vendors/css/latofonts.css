@@ -8,7 +8,7 @@
     font-style: normal;
     font-weight: normal;
     text-rendering: optimizeLegibility;
-    font-display: fallback;
+    font-display: swap;
 }
 
 /* Webfont: Lato-LightItalic */@font-face {
@@ -21,5 +21,5 @@
     font-style: italic;
     font-weight: normal;
     text-rendering: optimizeLegibility;
-    font-display: fallback;
+    font-display: swap;
 }
