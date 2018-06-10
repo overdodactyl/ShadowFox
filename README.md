@@ -4,6 +4,8 @@ ShadowFox was inspired by changes made in Firefox 57, which limited the amount a
 
 This project aims at creating a universal dark theme for Firefox while adhering to the modern design principles set by Mozilla.
 
+You can visit the ShadowFox website at [overdodactyl.github.io/ShadowFox/](https://overdodactyl.github.io/ShadowFox/).
+
 ## Preview
 
 ![preferences](.github/Screenshots/preview.png)
