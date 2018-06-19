@@ -47,6 +47,12 @@
   .tab .label {
     color: var(--in-content-page-color)!important
   }
+  .tab .counter {
+    color: var(--in-content-page-color)!important
+  }
+  :root.simulate-svg-context-fill .closebox::after {
+    background: var(--in-content-page-color)!important;
+  }
   .tab:hover {
     background-color: var(--in-content-category-header-background)!important
   }
