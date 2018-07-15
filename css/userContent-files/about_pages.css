@@ -61,8 +61,8 @@ url-prefix(https://discovery.addons.mozilla.org) {
   #newtab-customize-overlay,
   .exceptionDialogButtonContainer,
   .snippet .button-link,
-  html:not(#ublock0-epicker):not(iframe>body) body,
-  html:not(#ublock0-epicker):not(iframe>html) {
+  html:not(#ublock0-epicker),
+  html:not(#ublock0-epicker) body {
     background: var(--in-content-page-background)!important;
     color: var(--in-content-page-color)!important
   }
