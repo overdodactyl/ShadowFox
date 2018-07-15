@@ -1092,7 +1092,7 @@ url-prefix(https://discovery.addons.mozilla.org) {
     filter: invert(85%)!important
   }
 }
-@-moz-document regexp("^[file:///].*[^(html)]$") {
+@-moz-document regexp("^[file:///].*[^(html|svg)]$") {
   :root {
     background-color: var(--in-content-page-background)!important
   }
