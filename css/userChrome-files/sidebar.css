@@ -33,9 +33,11 @@ hbox#sidebar-search-container textbox#search-box {
   background-color: var(--in-content-page-background)!important;
   opacity: 1!important
 }
+#sidebar-box[sidebarcommand=_bbb81fb3-49c1-4a42-bcc9-94bc93e19fb8_-sidebar-action] #sidebar-icon,
 #sidebar-box[sidebarcommand=treestyletab_piro_sakura_ne_jp-sidebar-action] #sidebar-icon {
   filter: invert(60%)
 }
+#button__bbb81fb3-49c1-4a42-bcc9-94bc93e19fb8_-sidebar-action .toolbarbutton-icon,
 #button_treestyletab_piro_sakura_ne_jp-sidebar-action .toolbarbutton-icon {
   filter: invert(87%)
 }
