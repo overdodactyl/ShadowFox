@@ -1442,6 +1442,28 @@ html#feedHandler .enclosures {
     background-color: var(--in-content-box-border-color)!important
   }
 }
+/*! Alters the webextension Downloads sidebar
+  IMPORTANT: change the Internal UUID */
+@-moz-document url-prefix("moz-extension://{bbb81fb3-49c1-4a42-bcc9-94bc93e19fb8}/") {
+  body {
+    background: var(--in-content-page-background)!important;
+    color: var(--in-content-page-color)!important
+  }
+  .btn,
+  .cancel-button,
+  .erase-button {
+    filter: invert(60%)
+  }
+  .toolbar-bottom {
+    border-color: var(--in-content-border-color)!important
+  }
+  .toolbar-bottom button {
+    color: var(--in-content-page-color)!important
+  }
+  .toolbar-bottom button:hover {
+    background: var(--in-content-box-background-hover)!important
+  }
+}
 /*! Pop Up Background Fixes */
 @-moz-document url-prefix("moz-extension://{7fc8ef53-24ec-4205-87a4-1e745953bb0d}/popup.html"),
 url-prefix("moz-extension://https-everywhere@eff.org/pages/popup"),
