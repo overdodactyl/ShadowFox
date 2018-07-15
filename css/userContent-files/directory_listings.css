@@ -1,4 +1,4 @@
-@-moz-document regexp("^[file:///].*[^(html)]$") {
+@-moz-document regexp("^[file:///].*[^(html|svg)]$") {
   :root {
     background-color: var(--in-content-page-background)!important
   }
