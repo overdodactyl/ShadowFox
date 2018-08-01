@@ -18,6 +18,11 @@ ShadowFox styles the entire user interface, protected webpages (such as `about:`
 
    * On Arch Linux, you can install the package [shadowfox-updater](https://aur.archlinux.org/packages/shadowfox-updater/) from AUR.
 
+   * On MacOS, you can install using [Homebrew](https://brew.sh/)
+
+   		- Install: `brew install srkomodo/tap/shadowfox-updater`
+   		- Run: `shadowfox`
+
 2. Run the script.
 
 3. Restart Firefox.
