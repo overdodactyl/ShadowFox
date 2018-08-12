@@ -33,3 +33,16 @@
     background-color: var(--tone-7) !important;
   }
 }
+
+/*! Alters the webextension Dustman
+  IMPORTANT: change the Internal UUID */
+@-moz-document url-prefix("moz-extension://jid1-i37bkuPx3kABMw@jetpack/settings/") {
+  label {
+    color: var(--in-content-page-color);
+    font-weight: bold;
+  }
+
+  .form-group p {
+    color: var(--in-content-page-color) !important;
+  }
+}
