@@ -61,8 +61,10 @@ url-prefix(https://discovery.addons.mozilla.org) {
   #newtab-customize-overlay,
   .exceptionDialogButtonContainer,
   .snippet .button-link,
-  :not(.ze_area) > html,
-  html:not(#ublock0-epicker) body:not(.ze_body) {
+  html[dir=ltr][lang],
+  html[dir=ltr][lang] body,
+  html[dir=rtl][lang],
+  html[dir=rtl][lang] body {
     background: var(--in-content-page-background)!important;
     color: var(--in-content-page-color)!important
   }
