@@ -1,0 +1,48 @@
+/*! Alters the webextension Dustman
+  IMPORTANT: change the Internal UUID */
+@-moz-document url-prefix("moz-extension://jid1-i37bkuPx3kABMw@jetpack/panel/") {
+  .recently-closed {
+    background-color: var(--in-content-box-background) !important;
+    color: var(--in-content-page-color) !important;
+  }
+
+  .recently-closed:empty::before {
+    color: var(--in-content-page-color) !important;
+  }
+
+  .recently-closed a {
+    color: var(--in-content-page-color) !important;
+  }
+
+  .recently-closed a:hover {
+    background-color: var(--in-content-box-background) !important;
+    border: 1px solid var(--tone-5) !important;
+  }
+
+  .button {
+    background-color: var(--tone-7) !important;
+    border-top: 1px solid var(--tone-7) !important;
+    color: var(--in-content-page-color)!important;
+  }
+
+  .button:hover {
+    background-color: var(--tone-7) !important;
+  }
+
+  .button:active {
+    background-color: var(--tone-7) !important;
+  }
+}
+
+/*! Alters the webextension Dustman
+  IMPORTANT: change the Internal UUID */
+@-moz-document url-prefix("moz-extension://jid1-i37bkuPx3kABMw@jetpack/settings/") {
+  label {
+    color: var(--in-content-page-color);
+    font-weight: bold;
+  }
+
+  .form-group p {
+    color: var(--in-content-page-color) !important;
+  }
+}
