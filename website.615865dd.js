@@ -98,7 +98,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({53:[function(require,module,exports) {
+})({71:[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
@@ -128,7 +128,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],31:[function(require,module,exports) {
+},{}],49:[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -159,79 +159,79 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":53}],18:[function(require,module,exports) {
+},{"./bundle-url":71}],36:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":31}],19:[function(require,module,exports) {
+},{"_css_loader":49}],37:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":31}],20:[function(require,module,exports) {
+},{"_css_loader":49}],38:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"./../fonts/ionicons.eot":39,"./../fonts/ionicons.woff":40,"./../fonts/ionicons.ttf":41,"./../fonts/ionicons.svg":42,"./../fonts/Lato-Light.eot":43,"./../fonts/Lato-Light.woff2":44,"./../fonts/Lato-Light.woff":45,"./../fonts/Lato-Light.ttf":46,"./../fonts/Lato-LightItalic.eot":47,"./../fonts/Lato-LightItalic.woff2":48,"./../fonts/Lato-LightItalic.woff":49,"./../fonts/Lato-LightItalic.ttf":50,"_css_loader":31}],21:[function(require,module,exports) {
+},{"./../fonts/ionicons.eot":56,"./../fonts/ionicons.woff":57,"./../fonts/ionicons.ttf":58,"./../fonts/ionicons.svg":59,"./../fonts/Lato-Light.eot":60,"./../fonts/Lato-Light.woff2":61,"./../fonts/Lato-Light.woff":62,"./../fonts/Lato-Light.ttf":63,"./../fonts/Lato-LightItalic.eot":64,"./../fonts/Lato-LightItalic.woff2":65,"./../fonts/Lato-LightItalic.woff":66,"./../fonts/Lato-LightItalic.ttf":67,"_css_loader":49}],39:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":31}],22:[function(require,module,exports) {
+},{"_css_loader":49}],40:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"./../fonts/ionicons.eot":39,"./../fonts/ionicons.woff":40,"./../fonts/ionicons.ttf":41,"./../fonts/ionicons.svg":42,"_css_loader":31}],23:[function(require,module,exports) {
+},{"./../fonts/ionicons.eot":56,"./../fonts/ionicons.woff":57,"./../fonts/ionicons.ttf":58,"./../fonts/ionicons.svg":59,"_css_loader":49}],41:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"./../fonts/Lato-Light.eot":43,"./../fonts/Lato-Light.woff2":44,"./../fonts/Lato-Light.woff":45,"./../fonts/Lato-Light.ttf":46,"./../fonts/Lato-LightItalic.eot":47,"./../fonts/Lato-LightItalic.woff2":48,"./../fonts/Lato-LightItalic.woff":49,"./../fonts/Lato-LightItalic.ttf":50,"_css_loader":31}],24:[function(require,module,exports) {
+},{"./../fonts/Lato-Light.eot":60,"./../fonts/Lato-Light.woff2":61,"./../fonts/Lato-Light.woff":62,"./../fonts/Lato-Light.ttf":63,"./../fonts/Lato-LightItalic.eot":64,"./../fonts/Lato-LightItalic.woff2":65,"./../fonts/Lato-LightItalic.woff":66,"./../fonts/Lato-LightItalic.ttf":67,"_css_loader":49}],42:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":31}],25:[function(require,module,exports) {
+},{"_css_loader":49}],43:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":31}],26:[function(require,module,exports) {
+},{"_css_loader":49}],44:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":31}],27:[function(require,module,exports) {
+},{"_css_loader":49}],45:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"../../vendors/css/combined.css":20,"./img/GcP71BP-min.png":51,"./img/testimonials_bg.jpg":52,"_css_loader":31}],28:[function(require,module,exports) {
+},{"../../vendors/css/combined.css":38,"./img/GcP71BP-min.png":68,"./img/testimonials_bg.jpg":69,"_css_loader":49}],46:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":31}],2:[function(require,module,exports) {
+},{"_css_loader":49}],20:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"./vendors/css/animate.css":18,"./vendors/css/codemirror.css":19,"./vendors/css/combined.css":20,"./vendors/css/grid.css":21,"./vendors/css/ionicons.css":22,"./vendors/css/latofonts.css":23,"./vendors/css/magnific-popup.css":24,"./vendors/css/normalize.css":25,"./vendors/css/shadowfox.css":26,"./resources/css/style":27,"./resources/css/queries":28,"_css_loader":31}],55:[function(require,module,exports) {
+},{"./vendors/css/animate.css":36,"./vendors/css/codemirror.css":37,"./vendors/css/combined.css":38,"./vendors/css/grid.css":39,"./vendors/css/ionicons.css":40,"./vendors/css/latofonts.css":41,"./vendors/css/magnific-popup.css":42,"./vendors/css/normalize.css":43,"./vendors/css/shadowfox.css":44,"./resources/css/style":45,"./resources/css/queries":46,"_css_loader":49}],112:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -260,7 +260,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '55579' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '54296' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -401,7 +401,7 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}],57:[function(require,module,exports) {
+},{}],113:[function(require,module,exports) {
 var getBundleURL = require('./bundle-url').getBundleURL;
 
 function loadBundlesLazy(bundles) {
@@ -482,6 +482,6 @@ LazyPromise.prototype.catch = function (onError) {
   if (this.promise === null) this.promise = new Promise(this.executor);
   return this.promise.catch(onError);
 };
-},{"./bundle-url":53}],0:[function(require,module,exports) {
-var b=require(57);b.load([["ionicons.7ea6beda.eot",39],["ionicons.e9599233.woff",40],["ionicons.8e595e5d.ttf",41],["ionicons.5c32eb05.svg",42],["Lato-Light.3acc152e.eot",43],["Lato-Light.0cf75d24.woff2",44],["Lato-Light.c00f9bd1.woff",45],["Lato-Light.14471854.ttf",46],["Lato-LightItalic.cace5c53.eot",47],["Lato-LightItalic.b3fd8a03.woff2",48],["Lato-LightItalic.e57e9f3b.woff",49],["Lato-LightItalic.f94aeb72.ttf",50],["GcP71BP-min.21c94d22.png",51],["testimonials_bg.24ccf0e1.jpg",52]]);
-},{}]},{},[55,0], null)
+},{"./bundle-url":71}],0:[function(require,module,exports) {
+var b=require(113);b.load([["ionicons.7ea6beda.eot",56],["ionicons.e9599233.woff",57],["ionicons.8e595e5d.ttf",58],["ionicons.5c32eb05.svg",59],["Lato-Light.3acc152e.eot",60],["Lato-Light.0cf75d24.woff2",61],["Lato-Light.c00f9bd1.woff",62],["Lato-Light.14471854.ttf",63],["Lato-LightItalic.cace5c53.eot",64],["Lato-LightItalic.b3fd8a03.woff2",65],["Lato-LightItalic.e57e9f3b.woff",66],["Lato-LightItalic.f94aeb72.ttf",67],["GcP71BP-min.21c94d22.png",68],["testimonials_bg.24ccf0e1.jpg",69]]);
+},{}]},{},[112,0], null)
