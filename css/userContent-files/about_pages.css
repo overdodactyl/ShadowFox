@@ -79,7 +79,8 @@ url-prefix(https://discovery.addons.mozilla.org) {
   }
   #homeContentsGroup checkbox[src] .checkbox-icon,
   .content-container .icon-container .icon[src=""],
-  .snippet .block-snippet-button {
+  .snippet .block-snippet-button,
+  .textbox-search-sign {
     filter: invert(65%)!important
   }
   .collapsible-section .section-top-bar .info-option-manage button,
@@ -114,7 +115,8 @@ url-prefix(https://discovery.addons.mozilla.org) {
   .addon .heading,
   .disco-content,
   .top-sites-list .top-site-outer .title span,
-  header h1 {
+  header h1,
+  xul|groupbox xul|label:not(.menu-accel):not(.menu-text):not(.indent):not(.learnMore):not(.tail-with-learn-more) {
     color: var(--in-content-page-color)!important
   }
   #onboarding-overlay.onboarding-opened > #onboarding-overlay-dialog,
@@ -235,12 +237,8 @@ url-prefix(https://discovery.addons.mozilla.org) {
   }
   .card-outer .context-menu-button,
   .top-sites-list .top-site-outer .context-menu-button {
-    background-color: var(--in-content-page-color)!important;
-    background-image: url(chrome://browser/skin/page-action.svg)!important;
-    border: 1px solid!important;
-    filter: invert(95%)!important;
-    box-shadow: none!important;
-    border-color: var(--in-content-page-color)!important
+    background-color: var(--in-content-box-background)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
   #onboarding-notification-body *,
   #onboarding-notification-tour-title,
