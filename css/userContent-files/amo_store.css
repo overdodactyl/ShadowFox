@@ -1,7 +1,6 @@
 @-moz-document url-prefix("https://addons.mozilla.org") {
   .Footer,
   .Footer-wrapper,
-  .Header,
   .LanguageTools-header-row,
   .amo {
     background: var(--in-content-category-header-background)!important
@@ -10,7 +9,7 @@
   .Home,
   .LandingPage,
   .LanguageTools-table-row:nth-child(2n),
-  .Paginate-page-number {
+  .Paginate {
     background: var(--in-content-page-background)!important
   }
   .Select {
@@ -45,6 +44,9 @@
   input.AutoSearchInput-query {
     background: var(--in-content-box-background)!important
   }
+  .DropdownMenu-items::after {
+    background: var(--in-content-box-background)!important
+  }
   .Addon-author,
   .Addon-author a,
   .Addon-author a:link .Button--action,
@@ -71,7 +73,13 @@
   .LandingPage-addonType-name,
   .LandingPage-heading-content,
   .MetadataCard-list dt,
-  .Paginate .Paginate-item,
+  .Paginate .Button.Paginate-item--current-page,
+  .Paginate .Button.Paginate-item:first-child,
+  .Paginate .Button.Paginate-item:last-child,
+  .Paginate .Button.Paginate-item:link:first-child,
+  .Paginate .Button.Paginate-item:link:last-child,
+  .Paginate .Button.Paginate-item:visited:first-child,
+  .Paginate .Button.Paginate-item:visited:last-child
   .Paginate-page-number,
   .PermissionsCard-subhead,
   .ReportAbuseButton-show-more,
@@ -81,10 +89,16 @@
   .SearchResult--meta-section,
   .SearchResult-name,
   .SearchResult-summary,
-  .SearchSuggestion-name,
   .Select,
   input.AutoSearchInput-query {
     color: var(--in-content-page-color)!important
+  }
+  .Paginate .Button.Paginate-item:active,
+  .Paginate .Button.Paginate-item:hover {
+    background-color: var(--in-content-box-background)!important
+  }
+  .AutoSearchInput-suggestions-item {
+    color: var(--in-content-page-color)
   }
   .Card-header {
     color: var(--in-content-text-color)!important
@@ -93,6 +107,12 @@
   .Paginate-next::after,
   .Paginate-previous::before {
     filter: invert(70%)!important
+  }
+  .Rating-star {
+    background-image: url("data:image/svg+xml,%3Csvg width='17px' height='16px' viewBox='0 0 17 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch --%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs%3E%3C/defs%3E %3Cg id='Screens' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='Extension-Detail---1366px' transform='translate(-1200.000000, -191.000000)' fill-rule='nonzero' fill='%23737373'%3E %3Cpath d='M1216.67559,197.013479 C1216.54115,196.628667 1216.19883,196.344304 1215.78203,196.271203 L1211.45804,195.530952 L1209.42135,191.617039 C1209.22458,191.238958 1208.8214,191 1208.38027,191 C1207.93914,191 1207.53597,191.238958 1207.33919,191.617039 L1205.30145,195.530952 L1200.98592,196.269177 C1200.56542,196.339521 1200.21894,196.624766 1200.08323,197.012329 C1199.94751,197.399891 1200.04437,197.827503 1200.33557,198.126387 L1203.43079,201.313214 L1202.78679,205.728392 C1202.72624,206.141968 1202.91235,206.553231 1203.26889,206.793722 C1203.62542,207.034213 1204.09248,207.063526 1204.47874,206.869654 L1208.37974,204.921305 L1212.28181,206.872692 C1212.66807,207.066564 1213.13512,207.037251 1213.49166,206.79676 C1213.84819,206.556269 1214.0343,206.145006 1213.97376,205.73143 L1213.3287,201.313214 L1216.42286,198.1274 C1216.71414,197.828621 1216.81115,197.401068 1216.67559,197.013479 Z' id='Star'%3E%3C/path%3E %3C/g%3E %3C/g%3E %3C/svg%3E")!important
+  }
+  .Rating-selected-star {
+    background: url("data:image/svg+xml,%3Csvg width='17px' height='16px' viewBox='0 0 17 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch --%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs%3E%3C/defs%3E %3Cg id='Screens' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='Extension-Detail---1366px' transform='translate(-1268.000000, -191.000000)' fill-rule='nonzero' fill='%23D7D7DB'%3E %3Cg id='Icon/Star/Off' transform='translate(1268.093458, 191.000000)'%3E %3Cpath d='M16.9387231,6.0134792 C16.8019739,5.62866693 16.4537759,5.34430427 16.0298163,5.27120279 L11.6315676,4.53095169 L9.55990532,0.617038533 C9.35975238,0.238957594 8.94965505,-8.43205013e-17 8.50094816,0 C8.05224128,5.62136675e-17 7.64214395,0.238957594 7.44199101,0.617038533 L5.36925312,4.53095169 L0.979609481,5.26917748 C0.55189384,5.33952054 0.199461709,5.62476632 0.0614173919,6.01232884 C-0.0766269256,6.39989135 0.0218952463,6.82750347 0.318097391,7.1263875 L3.46646469,10.3132141 L2.81140637,14.7283917 C2.74982246,15.1419679 2.93913032,15.5532305 3.30178728,15.7937216 C3.66444423,16.0342127 4.13951821,16.0635259 4.53241344,15.8696543 L8.50041035,13.9213053 L12.4694829,15.8726923 C12.8623781,16.0665639 13.3374521,16.0372507 13.7001091,15.7967596 C14.062766,15.5562685 14.2520739,15.1450059 14.19049,14.7314296 L13.534356,10.3132141 L16.6816477,7.12740015 C16.9779332,6.82862115 17.0766057,6.40106827 16.9387231,6.0134792 Z' id='Star-Copy'%3E%3C/path%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E") 50%/contain no-repeat !important
   }
   .ShowMoreCard-contents::after {
     background: linear-gradient(rgba(255,255,255,0),var(--in-content-box-background))!important
@@ -121,7 +141,6 @@
   .Addon .InstallButton-button,
   .Button--action,
   .Button--action.Button--small,
-  .Paginate .Paginate-item,
   .SearchForm-suggestions-item.SearchForm-suggestions-item--highlighted {
     background: var(--in-content-primary-button-background)!important
   }
