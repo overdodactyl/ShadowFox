@@ -22,6 +22,7 @@
 @import "css/userContent-files/webextension-tweaks/brief.css";
 @import "css/userContent-files/webextension-tweaks/cookie_autodelete.css";
 @import "css/userContent-files/webextension-tweaks/dark_mode.css";
+@import "css/userContent-files/webextension-tweaks/dustman.css";
 @import "css/userContent-files/webextension-tweaks/downloads_sidebar.css";
 @import "css/userContent-files/webextension-tweaks/greasemonkey.css";
 @import "css/userContent-files/webextension-tweaks/multi_account_containers.css";
@@ -36,3 +37,4 @@
 @import "css/userContent-files/webextension-tweaks/umatrix.css";
 @import "css/userContent-files/webextension-tweaks/vim_vixen.css";
 @import "css/userContent-files/webextension-tweaks/violentmonkey.css";
+@import "css/userContent-files/webextension-tweaks/youtube_video_and_audio_downloader.css"

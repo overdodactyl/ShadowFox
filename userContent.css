@@ -3146,3 +3146,33 @@ url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/src/content/e
     background: var(--in-content-box-background)!important
   }
 }
+/*! Alters the webextension YouTube Video And Audio Downloader (WebEx)
+  IMPORTANT: change the Internal UUID */
+@-moz-document url-prefix("moz-extension://{f73df109-8fb4-453e-8373-f59e61ca4da3}/") {
+  #content,
+  body {
+    color: var(--tone-2)!important;
+    background-color: var(--tone-8)!important
+  }
+  body > div > div:not(#items) {
+    background-color: var(--tone-5)!important
+  }
+  #settings {
+    background-color: var(--tone-8)!important;
+    border-top: 1px solid #fff
+  }
+  #settings > div {
+    background-color: transparent
+  }
+  body[data-loading=true] {
+    background-color: var(--tone-8)!important
+  }
+  .item {
+    background-color: var(--tone-5)!important;
+    color: var(--tone-2)!important
+  }
+  #close,
+  #externals {
+    background-color: var(--tone-5)!important
+  }
+}
