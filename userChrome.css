@@ -498,6 +498,15 @@ url(chrome://browser/content/pageinfo/pageInfo.xul) {
     background: var(--in-content-page-background)!important;
     color: var(--in-content-page-color)!important
   }
+  tab {
+    color: var(--in-content-page-color)!important
+  }
+  tab:hover {
+    color: var(--in-content-selected-text)!important
+  }
+  tab[selected] {
+    color: var(--in-content-link-color)!important
+  }
   @media screen and (-moz-os-version:windows-win7) {
     treechildren {
       --treechildren-outline: none!important
