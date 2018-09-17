@@ -1,0 +1,30 @@
+{
+  "name": "shadowfox",
+  "version": "1.0.0",
+  "description": "a universal dark theme for firefox 57+",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-concat-css": "^3.1.0",
+    "gulp-exec": "^3.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "gulp publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/overdodactyl/ShadowFox.git"
+  },
+  "keywords": [
+    "dark",
+    "theme"
+  ],
+  "author": "@overdodactyl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/overdodactyl/ShadowFox/issues"
+  },
+  "homepage": "https://github.com/overdodactyl/ShadowFox#readme"
+}
