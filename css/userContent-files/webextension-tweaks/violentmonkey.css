@@ -12,7 +12,7 @@
     border-color: var(--in-content-box-background)!important
   }
   .aside-content {
-    background: var(--in-content-category-header-background)!important;
+    background: var(--in-content-category-header-background)!important
   }
   .aside-menu > a.active,
   .aside-menu > a:hover,

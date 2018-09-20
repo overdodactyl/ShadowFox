@@ -3050,11 +3050,11 @@ url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/src/content/e
     background: var(--in-content-category-header-background)!important;
     border-color: var(--in-content-box-background)!important
   }
-  aside {
+  .aside-content {
     background: var(--in-content-category-header-background)!important
   }
-  .sidemenu > a.active,
-  .sidemenu > a:hover,
+  .aside-menu > a.active,
+  .aside-menu > a:hover,
   h1,
   h2 {
     color: var(--in-content-link-color)!important
