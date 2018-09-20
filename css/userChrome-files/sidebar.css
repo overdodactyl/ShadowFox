@@ -58,3 +58,10 @@ hbox#sidebar-search-container textbox#search-box {
 .item-title {
   color: var(--in-content-page-color)!important
 }
+@-moz-document url(chrome://browser/content/places/bookmarksSidebar.xul) {
+  @media screen and (-moz-os-version:windows-win7) {
+    treechildren {
+      --treechildren-outline: none!important
+    }
+  }
+}
