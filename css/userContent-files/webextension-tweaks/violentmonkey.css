@@ -11,11 +11,11 @@
     background: var(--in-content-category-header-background)!important;
     border-color: var(--in-content-box-background)!important
   }
-  aside {
-    background: var(--in-content-category-header-background)!important
+  .aside-content {
+    background: var(--in-content-category-header-background)!important;
   }
-  .sidemenu > a.active,
-  .sidemenu > a:hover,
+  .aside-menu > a.active,
+  .aside-menu > a:hover,
   h1,
   h2 {
     color: var(--in-content-link-color)!important
