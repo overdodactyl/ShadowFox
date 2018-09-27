@@ -79,9 +79,14 @@ url-prefix(https://discovery.addons.mozilla.org) {
   }
   #homeContentsGroup checkbox[src] .checkbox-icon,
   .content-container .icon-container .icon[src=""],
+  .extension-controlled-icon,
   .snippet .block-snippet-button,
   .textbox-search-sign {
     filter: invert(65%)!important
+  }
+  .searchBarHiddenImage,
+  .searchBarShownImage {
+    filter: invert(80%)!important
   }
   .collapsible-section .section-top-bar .info-option-manage button,
   .topic .topic-read-more,
@@ -148,6 +153,7 @@ url-prefix(https://discovery.addons.mozilla.org) {
   .detail-view-container,
   .section-title span,
   .snippet section,
+  .tail-with-learn-more,
   .top-sites-list .top-site-outer .top-site-icon,
   .topsite-form .form-wrapper input[type=text] {
     color: var(--in-content-page-color)!important
@@ -223,6 +229,7 @@ url-prefix(https://discovery.addons.mozilla.org) {
     border-color: var(--in-content-box-border-color)!important
   }
   .collapsible-section .section-top-bar .info-option,
+  .extension-controlled,
   .prefs-pane .prefs-modal-inner-wrapper .options,
   .sections-list .section-empty-state {
     background: var(--in-content-box-background)!important;
