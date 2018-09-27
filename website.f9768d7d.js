@@ -285,7 +285,7 @@ process.chdir = function (dir) {
 process.umask = function () {
     return 0;
 };
-},{}],53:[function(require,module,exports) {
+},{}],52:[function(require,module,exports) {
 var global = arguments[3];
 var process = require("process");
 var define;
@@ -12017,7 +12017,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 }
 ));
 
-},{}],50:[function(require,module,exports) {
+},{}],55:[function(require,module,exports) {
 var define;
 var global = arguments[3];
 // CodeMirror, copyright (c) by Marijn Haverbeke and others
@@ -21698,7 +21698,7 @@ return CodeMirror$1;
 
 })));
 
-},{}],55:[function(require,module,exports) {
+},{}],56:[function(require,module,exports) {
 var define;
 // CodeMirror, copyright (c) by Marijn Haverbeke and others
 // Distributed under an MIT license: http://codemirror.net/LICENSE
@@ -22533,7 +22533,7 @@ CodeMirror.defineMode("css", function(config, parserConfig) {
 
 });
 
-},{"../../lib/codemirror":50}],52:[function(require,module,exports) {
+},{"../../lib/codemirror":55}],50:[function(require,module,exports) {
 var define;
 /*! Magnific Popup - v1.1.0 - 2016-02-20
 * http://dimsemenov.com/plugins/magnific-popup/
@@ -24327,7 +24327,7 @@ var define;
 	/*>>retina*/
 	_checkInstance();
 });
-},{"jquery":53}],70:[function(require,module,exports) {
+},{"jquery":52}],53:[function(require,module,exports) {
 /**
 * @preserve HTML5 Shiv 3.7.3 | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
 */
@@ -24991,7 +24991,7 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
-},{"jquery":53,"waypoints/lib/jquery.waypoints":54,"lazysizes":51,"codemirror":50,"codemirror/mode/css/css":55,"magnific-popup":52,"html5shiv":70}],73:[function(require,module,exports) {
+},{"jquery":52,"waypoints/lib/jquery.waypoints":54,"lazysizes":51,"codemirror":55,"codemirror/mode/css/css":56,"magnific-popup":50,"html5shiv":53}],73:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -25020,7 +25020,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '54296' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '61508' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
