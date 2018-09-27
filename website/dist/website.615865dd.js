@@ -177,7 +177,7 @@ module.exports = reloadCSS;
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"./../fonts/ionicons.eot":56,"./../fonts/ionicons.woff":57,"./../fonts/ionicons.ttf":58,"./../fonts/ionicons.svg":59,"./../fonts/Lato-Light.eot":60,"./../fonts/Lato-Light.woff2":61,"./../fonts/Lato-Light.woff":62,"./../fonts/Lato-Light.ttf":63,"./../fonts/Lato-LightItalic.eot":64,"./../fonts/Lato-LightItalic.woff2":65,"./../fonts/Lato-LightItalic.woff":66,"./../fonts/Lato-LightItalic.ttf":67,"_css_loader":49}],39:[function(require,module,exports) {
+},{"./../fonts/ionicons.eot":57,"./../fonts/ionicons.woff":58,"./../fonts/ionicons.ttf":59,"./../fonts/ionicons.svg":60,"./../fonts/Lato-Light.eot":61,"./../fonts/Lato-Light.woff2":62,"./../fonts/Lato-Light.woff":63,"./../fonts/Lato-Light.ttf":64,"./../fonts/Lato-LightItalic.eot":65,"./../fonts/Lato-LightItalic.woff2":66,"./../fonts/Lato-LightItalic.woff":67,"./../fonts/Lato-LightItalic.ttf":68,"_css_loader":49}],39:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
@@ -189,13 +189,13 @@ module.exports = reloadCSS;
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"./../fonts/ionicons.eot":56,"./../fonts/ionicons.woff":57,"./../fonts/ionicons.ttf":58,"./../fonts/ionicons.svg":59,"_css_loader":49}],41:[function(require,module,exports) {
+},{"./../fonts/ionicons.eot":57,"./../fonts/ionicons.woff":58,"./../fonts/ionicons.ttf":59,"./../fonts/ionicons.svg":60,"_css_loader":49}],41:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"./../fonts/Lato-Light.eot":60,"./../fonts/Lato-Light.woff2":61,"./../fonts/Lato-Light.woff":62,"./../fonts/Lato-Light.ttf":63,"./../fonts/Lato-LightItalic.eot":64,"./../fonts/Lato-LightItalic.woff2":65,"./../fonts/Lato-LightItalic.woff":66,"./../fonts/Lato-LightItalic.ttf":67,"_css_loader":49}],42:[function(require,module,exports) {
+},{"./../fonts/Lato-Light.eot":61,"./../fonts/Lato-Light.woff2":62,"./../fonts/Lato-Light.woff":63,"./../fonts/Lato-Light.ttf":64,"./../fonts/Lato-LightItalic.eot":65,"./../fonts/Lato-LightItalic.woff2":66,"./../fonts/Lato-LightItalic.woff":67,"./../fonts/Lato-LightItalic.ttf":68,"_css_loader":49}],42:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
@@ -219,7 +219,7 @@ module.exports = reloadCSS;
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"../../vendors/css/combined.css":38,"./img/GcP71BP-min.png":68,"./img/testimonials_bg.jpg":69,"_css_loader":49}],46:[function(require,module,exports) {
+},{"../../vendors/css/combined.css":38,"./img/GcP71BP-min.png":69,"./img/testimonials_bg.jpg":70,"_css_loader":49}],46:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
@@ -231,7 +231,7 @@ module.exports = reloadCSS;
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"./vendors/css/animate.css":36,"./vendors/css/codemirror.css":37,"./vendors/css/combined.css":38,"./vendors/css/grid.css":39,"./vendors/css/ionicons.css":40,"./vendors/css/latofonts.css":41,"./vendors/css/magnific-popup.css":42,"./vendors/css/normalize.css":43,"./vendors/css/shadowfox.css":44,"./resources/css/style":45,"./resources/css/queries":46,"_css_loader":49}],112:[function(require,module,exports) {
+},{"./vendors/css/animate.css":36,"./vendors/css/codemirror.css":37,"./vendors/css/combined.css":38,"./vendors/css/grid.css":39,"./vendors/css/ionicons.css":40,"./vendors/css/latofonts.css":41,"./vendors/css/magnific-popup.css":42,"./vendors/css/normalize.css":43,"./vendors/css/shadowfox.css":44,"./resources/css/style":45,"./resources/css/queries":46,"_css_loader":49}],73:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -260,7 +260,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '54296' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '61508' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -401,7 +401,7 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}],113:[function(require,module,exports) {
+},{}],75:[function(require,module,exports) {
 var getBundleURL = require('./bundle-url').getBundleURL;
 
 function loadBundlesLazy(bundles) {
@@ -483,5 +483,5 @@ LazyPromise.prototype.catch = function (onError) {
   return this.promise.catch(onError);
 };
 },{"./bundle-url":71}],0:[function(require,module,exports) {
-var b=require(113);b.load([["ionicons.7ea6beda.eot",56],["ionicons.e9599233.woff",57],["ionicons.8e595e5d.ttf",58],["ionicons.5c32eb05.svg",59],["Lato-Light.3acc152e.eot",60],["Lato-Light.0cf75d24.woff2",61],["Lato-Light.c00f9bd1.woff",62],["Lato-Light.14471854.ttf",63],["Lato-LightItalic.cace5c53.eot",64],["Lato-LightItalic.b3fd8a03.woff2",65],["Lato-LightItalic.e57e9f3b.woff",66],["Lato-LightItalic.f94aeb72.ttf",67],["GcP71BP-min.21c94d22.png",68],["testimonials_bg.24ccf0e1.jpg",69]]);
-},{}]},{},[112,0], null)
+var b=require(75);b.load([["ionicons.7ea6beda.eot",57],["ionicons.e9599233.woff",58],["ionicons.8e595e5d.ttf",59],["ionicons.5c32eb05.svg",60],["Lato-Light.3acc152e.eot",61],["Lato-Light.0cf75d24.woff2",62],["Lato-Light.c00f9bd1.woff",63],["Lato-Light.14471854.ttf",64],["Lato-LightItalic.cace5c53.eot",65],["Lato-LightItalic.b3fd8a03.woff2",66],["Lato-LightItalic.e57e9f3b.woff",67],["Lato-LightItalic.f94aeb72.ttf",68],["GcP71BP-min.21c94d22.png",69],["testimonials_bg.24ccf0e1.jpg",70]]);
+},{}]},{},[73,0], null)
