@@ -134,23 +134,7 @@ menupopup scrollbox,
 popup,
 popup > menu > menupopup {
   -moz-appearance: none!important;
-  background: var(--in-content-box-background)!important;
-  border: none!important;
-  padding: 0!important
-}
-menu.subviewbutton > .menu-right {
-  fill: #000!important
-}
-.menu-right {
-  filter: invert(95%)!important
-}
-#context-navigation menuitem,
-.panel-arrowcontent {
-  color: var(--in-content-selected-text)!important;
   background: var(--in-content-box-background)!important
-}
-#context-navigation menuitem:hover {
-  background: var(--in-content-primary-button-background-hover)!important
 }
 menuitem,
 menupopup menu {
@@ -160,12 +144,17 @@ menupopup menu {
 }
 menupopup menuseparator {
   -moz-appearance: none!important;
-  padding: 1px!important;
-  margin: 5px 0!important;
-  background: var(--in-content-table-border-dark-color)!important;
-  border-top: none!important
+  background: var(--in-content-table-border-dark-color)!important
 }
-#context-navigation menuitem[disabled=true],
+menu.subviewbutton > .menu-right {
+  fill: #000!important
+}
+.menu-right {
+  filter: invert(95%)!important
+}
+.menu-right[_moz-menuactive=true] {
+  filter: invert(10%)!important
+}
 menu[disabled=true],
 menuitem[disabled=true] {
   color: var(--in-content-box-border-color)!important
@@ -175,97 +164,14 @@ menuitem:hover[disabled=true] {
   color: var(--in-content-box-border-color)!important;
   background-color: var(--in-content-box-background)!important
 }
-#context-navigation menuitem:hover[disabled=true] {
-  color: var(--in-content-box-border-color)!important;
-  background-color: var(--in-content-box-background)!important
-}
 menuitem[_moz-menuactive=true],
 menupopup menu[_moz-menuactive=true] {
   color: var(--in-content-selected-text)!important;
   background-color: var(--in-content-primary-button-background-hover)!important
 }
-vbox#sidebar-box.chromeclass-extrachrome {
-  border-color: var(--in-content-category-header-background)!important;
-  border-right: 1px!important;
-  border-style: solid!important
-}
 #_testpilot-containers_7 .menu-iconic-left,
 #treestyletab_piro_sakura_ne_jp_8 .menu-iconic-left {
   filter: invert(55%)!important
-}
-@media screen and (-moz-windows-theme),
-screen and (-moz-windows-classic),
-screen and (-moz-windows-default-theme),
-screen and (-moz-os-version:windows-win7),
-screen and (-moz-os-version:windows-win8),
-screen and (-moz-os-version:windows-win10) {
-  menupopup menuseparator {
-    padding: 0!important;
-    border-color: var(--in-content-table-border-dark-color)!important
-  }
-  #context-navigation,
-  #context-sep-navigation {
-    padding: 0!important
-  }
-  #BMB_bookmarksPopup menupopup {
-    padding: 4px 0 0!important
-  }
-  #BMB_bookmarksPopup menupopup[placespopup=true] > hbox,
-  #personal-bookmarks menupopup,
-  .box-inherit scrollbox-innerbox,
-  .panel-arrowcontent,
-  menupopup#BMB_bookmarksPopup > menu > menupopup > hbox,
-  menupopup#PlacesChevronPopup,
-  menupopup#bookmarksMenuPopup,
-  menupopup#bookmarksMenuPopup > menu > menupopup,
-  menupopup#bookmarksMenuPopup menupopup[placespopup=true],
-  menupopup#contentAreaContextMenu,
-  menupopup#contentAreaContextMenu menupopup,
-  menupopup#downloadsContextMenu,
-  menupopup#placesContext,
-  menupopup#tabContextMenu,
-  menupopup#tabContextMenu menupopup,
-  menupopup#toolbar-context-menu,
-  toolbaritem#menubar-items menupopup {
-    border-color: var(--in-content-box-background)!important;
-    border-width: 1px!important;
-    border-style: solid!important
-  }
-  #bookmarksMenuPopup,
-  #personal-bookmarks menupopup .bookmark-item,
-  menupopup#goPopup {
-    padding-left: 4px!important;
-    padding-right: 4px!important
-  }
-  menupopup#contentAreaContextMenu menupopup,
-  menupopup#tabContextMenu > menu > menupopup > .popup-internal-box,
-  menupopup#toolbar-context-menu {
-    padding-left: 2px!important;
-    padding-right: 2px!important
-  }
-  menupopup,
-  menupopup > menu > menupopup {
-    padding: 4px 0!important
-  }
-  #customization-toolbar-menu,
-  toolbaritem#menubar-items menupopup,
-  toolbaritem#menubar-items menupopup > menu > menupopup {
-    padding-left: 2px!important;
-    padding-right: 2px!important
-  }
-  #personal-bookmarks menupopup menuitem,
-  menupopup#contentAreaContextMenu menu,
-  menupopup#contentAreaContextMenu menuitem {
-    padding-top: 1px!important;
-    padding-bottom: 1px!important
-  }
-  menupopup#contentAreaContextMenu > .menuitem-iconic {
-    padding-top: 0!important;
-    padding-bottom: 0!important
-  }
-  menupopup .menu-right {
-    margin-right: 0!important
-  }
 }
 @-moz-document url(chrome://browser/content/places/places.xul) {
   toolbar {
