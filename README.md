@@ -12,26 +12,9 @@ You can visit the ShadowFox website at [overdodactyl.github.io/ShadowFox/](https
 
 ShadowFox styles the entire user interface, protected webpages (such as `about:` pages and addons.mozilla.org), and over 40 popular addons.
 
-## Installation
+## Installation and Updating
 
-1. Download the updater script from the [releases](https://github.com/SrKomodo/shadowfox-updater/releases) page of [shadowfox-updater](https://github.com/SrKomodo/shadowfox-updater) for your operating system and place it in a location you will remember for future use.
-
-   * On Arch Linux, you can install the package [shadowfox-updater](https://aur.archlinux.org/packages/shadowfox-updater/) from AUR.
-
-   * On MacOS, you can install using [Homebrew](https://brew.sh/)
-
-   		- Install: `brew install srkomodo/tap/shadowfox-updater`
-   		- Run: `shadowfox`
-
-2. Run the script.
-
-3. Restart Firefox.
-
-For more detailed instructions, please see [here](https://github.com/overdodactyl/ShadowFox/wiki/Installation).
-
-## Updating
-
-Any time you want to update ShadowFox or apply custom changes, simply run the updater script again.  
+A cross-platform installer/uninstaller/updater is maintained in the [shadowfox-updater](https://github.com/SrKomodo/shadowfox-updater) repository.  Latest versions can be found in the [releases](https://github.com/SrKomodo/shadowfox-updater/releases) section, or via `Homebrew` and `AUR`.  Please see the [README](https://github.com/SrKomodo/shadowfox-updater/blob/master/README.md) file for details on how to use the updater (GUI and CLI options available) and solutions to common problems.
 
 ## Customization
 
