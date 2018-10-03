@@ -733,6 +733,14 @@ url(chrome://browser/content/places/bookmarkProperties2.xul) {
 .findbar-find-previous:hover {
   background: var(--toolbarbutton-hover-background)!important
 }
+@-moz-document url-prefix(chrome://) {
+  @media screen and (-moz-os-version:windows-win7) {
+    window {
+      background-color: var(--tone-9)!important;
+      color: var(--in-content-page-color)!important
+    }
+  }
+}
 .tab-throbber::before {
   fill: var(--in-content-category-text-selected)!important;
   opacity: 1!important

@@ -1,0 +1,8 @@
+@-moz-document url-prefix(chrome://) {
+  @media screen and (-moz-os-version:windows-win7) {
+    window {
+      background-color: var(--tone-9)!important;
+      color: var(--in-content-page-color)!important
+    }
+  }
+}
