@@ -77,6 +77,7 @@
   --in-content-page-background: var(--tone-7)!important;
   --in-content-text-color: var(--tone-3)!important;
   --in-content-selected-text: var(--tone-1)!important;
+  --in-content-selected-text-background: #5675b9;
   --in-content-box-background: var(--tone-6)!important;
   --in-content-box-background-odd: #f3f6fa;
   --in-content-box-background-hover: var(--tone-6)!important;
@@ -460,6 +461,10 @@ url(chrome://passwordmgr/content/passwordManager.xul),
 url(chrome://formautofill/content/manageAddresses.xhtml),
 url-prefix(chrome://pippki),
 url(chrome://browser/content/pageinfo/pageInfo.xul) {
+  ::-moz-tree-row(selected) {
+    -moz-appearance: none!important;
+    background-color: red!important
+  }
   treechildren::-moz-tree-row,
   treechildren:not(.autocomplete-treebody)::-moz-tree-row(multicol,odd) {
     background-color: var(--in-content-box-background)!important

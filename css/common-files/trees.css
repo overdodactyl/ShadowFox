@@ -4,6 +4,10 @@ url(chrome://passwordmgr/content/passwordManager.xul),
 url(chrome://formautofill/content/manageAddresses.xhtml),
 url-prefix(chrome://pippki),
 url(chrome://browser/content/pageinfo/pageInfo.xul) {
+  ::-moz-tree-row(selected) {
+    -moz-appearance: none!important;
+    background-color: red!important
+  }
   treechildren::-moz-tree-row,
   treechildren:not(.autocomplete-treebody)::-moz-tree-row(multicol,odd) {
     background-color: var(--in-content-box-background)!important

@@ -77,6 +77,7 @@
   --in-content-page-background: var(--tone-7)!important;
   --in-content-text-color: var(--tone-3)!important;
   --in-content-selected-text: var(--tone-1)!important;
+  --in-content-selected-text-background: #5675b9;
   --in-content-box-background: var(--tone-6)!important;
   --in-content-box-background-odd: #f3f6fa;
   --in-content-box-background-hover: var(--tone-6)!important;
@@ -462,6 +463,10 @@ url(chrome://passwordmgr/content/passwordManager.xul),
 url(chrome://formautofill/content/manageAddresses.xhtml),
 url-prefix(chrome://pippki),
 url(chrome://browser/content/pageinfo/pageInfo.xul) {
+  ::-moz-tree-row(selected) {
+    -moz-appearance: none!important;
+    background-color: red!important
+  }
   treechildren::-moz-tree-row,
   treechildren:not(.autocomplete-treebody)::-moz-tree-row(multicol,odd) {
     background-color: var(--in-content-box-background)!important
@@ -580,6 +585,10 @@ panel[type=autocomplete] {
 popupset#mainPopupSet panel#PopupAutoCompleteRichResult .autocomplete-richlistitem:hover,
 treechildren.searchbar-treebody::-moz-tree-row(hover) {
   background-color: var(--in-content-page-background)!important
+}
+#urlbar ::-moz-selection,
+.searchbar-textbox ::-moz-selection {
+  background: var(--in-content-selected-text-background)!important
 }
 #editBMPanel_folderMenuList,
 #editBMPanel_foldersExpander,
@@ -1091,6 +1100,12 @@ hbox#sidebar-search-container textbox#search-box {
 .deck .instructions,
 .item-title {
   color: var(--in-content-page-color)!important
+}
+@-moz-document url-prefix(chrome://browser/content/places) {
+  ::-moz-tree-row(selected) {
+    -moz-appearance: none!important;
+    background-color: var(--theme-selection-background)!important
+  }
 }
 @-moz-document url(chrome://browser/content/places/bookmarksSidebar.xul) {
   @media screen and (-moz-os-version:windows-win7) {

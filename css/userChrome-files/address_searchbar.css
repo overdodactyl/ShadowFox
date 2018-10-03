@@ -60,3 +60,7 @@ popupset#mainPopupSet panel#PopupAutoCompleteRichResult .autocomplete-richlistit
 treechildren.searchbar-treebody::-moz-tree-row(hover) {
   background-color: var(--in-content-page-background)!important
 }
+#urlbar ::-moz-selection,
+.searchbar-textbox ::-moz-selection {
+  background: var(--in-content-selected-text-background)!important
+}
