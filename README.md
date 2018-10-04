@@ -24,7 +24,7 @@ Depending on how much you want to customize ShadowFox, you may be better suited 
 
 ## Discussion
 
-* Chat about ShadowFox on Slack - [invitation link](https://join.slack.com/t/shadowfox-workspace/shared_invite/enQtMzI5Nzk5OTk1MjcxLThkMDgwOGE5ZDY1MDUyNjIwNWQ2MTlmMjEwZTJiZmZjYTUxODM4ZTRkNzhiNGRhZTFhMjdjMTFjMTQ3YjZjYzU)
+* Chat about ShadowFox on Slack - [invitation link](https://join.slack.com/t/shadowfox-workspace/shared_invite/enQtMzU3NTU2NTQ0NDA1LTcwN2I1M2I4MzlkMWFlMWEzODc2MTY1NzU2NjhlYTgzOGY5ZTQzM2UxZTFiZDMxNDM1NDMyNjlhOWQ4MWQ3ZDc)
 
 ## Find a bug? Have a feature request? Have any questions?
 
