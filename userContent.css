@@ -112,6 +112,7 @@
   --in-content-category-header-background: var(--tone-8)!important;
   --selected-icon-fill-color: var(--tone-2)!important;
   --in-content-dark-header-background: var(--tone-9)!important;
+  --tab-line-selected-color: var(--accent-2)!important;
   --secure-connection-color: var(--accent-1);
   --theme-sidebar-background: #1B1B1D!important;
   --cm-background: var(--tone-8)!important;
