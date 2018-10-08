@@ -15,6 +15,7 @@
     "waypoints": "^4.0.1"
   },
   "devDependencies": {
+    "cssnano": "^4.1.4",
     "gulp-gh-pages": "^0.5.4"
   }
 }

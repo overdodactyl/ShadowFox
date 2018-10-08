@@ -171,9 +171,14 @@
     </div>
   </section>
   <section class="section-plans js--section-plans" id="plans">
-    <!-- CURR_VER: 1.7.3 -->
+    <!-- CURR_VER: 1.7.10 -->
     <div class="row">
       <h2>Download Today</h2>
+      <p class="long-copy">
+        A cross-platform installer/uninstaller/updater is maintained in the <a href="https://github.com/SrKomodo/shadowfox-updater">shadowfox-updater</a> repository. <br><br>
+
+        Latest versions can be obtained via the links below, through the <a href="https://github.com/SrKomodo/shadowfox-updater/releases">releases page</a>, <code>Homebrew</code>, or <code>AUR</code>.  Please see the <a href="https://github.com/SrKomodo/shadowfox-updater/blob/master/README.md">README</a> file for details on how to use the updater (GUI and CLI options available) and solutions to common problems.<br><br>
+      </p>
     </div>
     <div class="row">
       <div class="col span-1-of-3">
@@ -184,8 +189,8 @@
           </div>
           <div>
             <ul>
-              <li><i class="ion-android-download icon-small"></i><a href="https://github.com/SrKomodo/shadowfox-updater/releases/download/v1.7.3/shadowfox-updater_1.7.3_MacOS_x32.tar.gz"> MacOS_x32</a></li>
-              <li><i class="ion-android-download icon-small"></i><a href="https://github.com/SrKomodo/shadowfox-updater/releases/download/v1.7.3/shadowfox-updater_1.7.3_MacOS_x64.tar.gz"> MacOS_x64 </a></li>
+              <li><i class="ion-android-download icon-small"></i><a href="https://github.com/SrKomodo/shadowfox-updater/releases/download/v1.7.10/shadowfox_mac_x32"> MacOS_x32</a></li>
+              <li><i class="ion-android-download icon-small"></i><a href="https://github.com/SrKomodo/shadowfox-updater/releases/download/v1.7.10/shadowfox_mac_x64"> MacOS_x64 </a></li>
               <li><i class="ion-android-done icon-small"></i><a href="https://github.com/overdodactyl/ShadowFox#installation"> Homebrew </a></li>
             </ul>
           </div>
@@ -199,8 +204,8 @@
           </div>
           <div>
             <ul>
-              <li><i class="ion-android-download icon-small"></i><a href="https://github.com/SrKomodo/shadowfox-updater/releases/download/v1.7.3/shadowfox-updater_1.7.3_Linux_x32.tar.gz"> linux_x32 </a></li>
-              <li><i class="ion-android-download icon-small"></i><a href="https://github.com/SrKomodo/shadowfox-updater/releases/download/v1.7.3/shadowfox-updater_1.7.3_Linux_x64.tar.gz"> linux_x64 </a></li>
+              <li><i class="ion-android-download icon-small"></i><a href="https://github.com/SrKomodo/shadowfox-updater/releases/download/v1.7.10/shadowfox_linux_x32"> linux_x32 </a></li>
+              <li><i class="ion-android-download icon-small"></i><a href="https://github.com/SrKomodo/shadowfox-updater/releases/download/v1.7.10/shadowfox_linux_x64"> linux_x64 </a></li>
               <li><i class="ion-android-done icon-small"></i><a href="https://aur.archlinux.org/packages/shadowfox-updater/"> AUR package </a></li>
             </ul>
           </div>
@@ -214,8 +219,8 @@
           </div>
           <div>
             <ul>
-              <li><i class="ion-android-download icon-small"></i><a href="https://github.com/SrKomodo/shadowfox-updater/releases/download/v1.7.3/shadowfox-updater_1.7.3_Windows_x32.zip"> windows_x32 </a></li>
-              <li><i class="ion-android-download icon-small"></i><a href="https://github.com/SrKomodo/shadowfox-updater/releases/download/v1.7.3/shadowfox-updater_1.7.3_Windows_x64.zip"> windows_x64 </a></li>
+              <li><i class="ion-android-download icon-small"></i><a href="https://github.com/SrKomodo/shadowfox-updater/releases/download/v1.7.10/shadowfox_windows_x32.exe"> windows_x32 </a></li>
+              <li><i class="ion-android-download icon-small"></i><a href="https://github.com/SrKomodo/shadowfox-updater/releases/download/v1.7.10/shadowfox_windows_x64.exe"> windows_x64 </a></li>
             </ul>
           </div>
         </div>
