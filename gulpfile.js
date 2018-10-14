@@ -4,6 +4,7 @@ var gulp = require('gulp');
 var concatCss = require('gulp-concat-css');
 var cleanCSS = require('gulp-clean-css');
 var exec = require('gulp-exec');
+var exec_ch = require('child_process').exec;
 
 /* Minify all base code, edit in place */
 gulp.task('minify_base_code', function() {
@@ -85,3 +86,17 @@ gulp.task('push', function() {
     .pipe(exec('git push'))
     .pipe(exec('sh scripts/uuids.sh add'))
 });
+
+
+gulp.task('patch', () => {
+  return exec_ch('npx ver patch -p css/common-files/color_variables.css');
+});
+
+gulp.task('minor', () => {
+  return exec_ch('npx ver minor -p css/common-files/color_variables.css');
+});
+
+gulp.task('major', () => {
+  return exec_ch('npx ver major -p css/common-files/color_variables.css');
+});
+
