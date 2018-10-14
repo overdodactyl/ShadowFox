@@ -89,14 +89,14 @@ gulp.task('push', function() {
 
 
 gulp.task('patch', () => {
-  return exec_ch('npx ver patch -p css/common-files/color_variables.css');
+  return exec_ch('npx ver patch -p css/common-files/color_variables.css userChrome.css userContent.css alternative_user_files/userContent_no_addons.css');
 });
 
 gulp.task('minor', () => {
-  return exec_ch('npx ver minor -p css/common-files/color_variables.css');
+  return exec_ch('npx ver minor -p css/common-files/color_variables.css userChrome.css userContent.css alternative_user_files/userContent_no_addons.css');
 });
 
 gulp.task('major', () => {
-  return exec_ch('npx ver major -p css/common-files/color_variables.css');
+  return exec_ch('npx ver major -p css/common-files/color_variables.css userChrome.css userContent.css alternative_user_files/userContent_no_addons.css');
 });
 
