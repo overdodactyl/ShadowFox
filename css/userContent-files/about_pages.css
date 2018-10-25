@@ -456,3 +456,23 @@ url-prefix(about:memory) {
     -moz-appearance: none!important
   }
 }
+/*! Colors hard coded due to variables not being recognized from 
+    color_variables.css ... Firefox bug? */
+@-moz-document url-prefix(https://discovery.addons.mozilla.org) {
+  .addon .ThemeImage,
+  header {
+    border-color: #4a4a4f!important
+  }
+  .addon .editorial-description,
+  .addon .heading span,
+  .disco-content {
+    color: #b1b1b3!important
+  }
+  .Button--action,
+  .Button--action:link,
+  .Button--action:not(.Button--disabled):hover,
+  .addon .heading,
+  header h1 {
+    color: #f9f9fa!important
+  }
+}

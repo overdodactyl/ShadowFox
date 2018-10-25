@@ -4,6 +4,7 @@
 @import "css/common-files/library.css";
 @import "css/common-files/context_menus.css";
 
+@import "css/userChrome-files/about_addons.css";
 @import "css/userChrome-files/about_firefox.css";
 @import "css/userChrome-files/address_searchbar.css";
 @import "css/userChrome-files/bookmarks_popup.css";
