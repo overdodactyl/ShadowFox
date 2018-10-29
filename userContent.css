@@ -2963,9 +2963,6 @@ url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/src/content/e
   body .toolbar .scopeRel {
     color: var(--accent-2)!important
   }
-  #mtxSwitch_matrix-off.switchTrue {
-    color: #a00!important
-  }
   button > span.badge {
     color: #fff!important;
     background-color: var(--tone-5)!important
@@ -3051,7 +3048,7 @@ url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/src/content/e
     border-color: var(--tone-5)!important
   }
   #content table tr.blocked {
-    color: var(--red-80)!important
+    color: var(--cm-red)!important
   }
   #content table tr.cat_info {
     color: var(--accent-1)!important
@@ -3059,6 +3056,28 @@ url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/src/content/e
   #toolbar {
     border-bottom: 1px solid!important;
     border-color: var(--tone-5)!important
+  }
+  .fa-icon {
+    fill: var(--in-content-page-color)!important
+  }
+  .fa-icon.fa-icon-badged > .fa-icon-badge {
+    background-color: var(--in-content-box-background)!important;
+    color: var(--in-content-page-color)!important
+  }
+  .fa-icon:hover {
+    background-color: var(--in-content-box-background)!important
+  }
+  .toolbar .fa-icon {
+    fill: var(--in-content-link-color)!important
+  }
+  #mtxSwitch_matrix-off.switchTrue {
+    fill: red!important;
+    color: red!important
+  }
+  .fa-icon_list-alt,
+  .fa-icon_reply-all,
+  .fa-icon_sync-alt {
+    fill: var(--in-content-page-color)!important
   }
 }
 /*! Alters the webextension Vim Vixen
