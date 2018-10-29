@@ -1,6 +1,6 @@
 /*! Alters the webextension uMatrix
   IMPORTANT: change the Internal UUID */
-@-moz-document url-prefix("moz-extension://uMatrix@raymondhill.net/") {
+@-moz-document url-prefix("moz-extension://153b2fb5-1159-6243-b1af-5d1d014cdd9f/") {
   .t81 {
     color: #fff;
     background-color: #db4c4c!important

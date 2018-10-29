@@ -1,7 +1,7 @@
 /*! =============
 @name             ShadowFox
 @description      A universal dark theme for Firefox 57+
-@version          1.5.1
+@version          1.6.0
 @lastUpdated      October 7, 2018
 @author           overdodactyl
 @homepageURL      https://overdodactyl.github.io/ShadowFox/
@@ -1427,7 +1427,7 @@ html#feedHandler .enclosures {
 }
 /*! Alters the webextension Brief
   IMPORTANT: change the Internal UUID */
-@-moz-document url-prefix("moz-extension://brief@mozdev.org/") {
+@-moz-document url-prefix("moz-extension://240e0d67-1f39-5841-84fe-7f29711dbe54/") {
   #sidebar {
     background-color: var(--in-content-box-background)!important
   }
@@ -1485,7 +1485,7 @@ html#feedHandler .enclosures {
 }
 /*! Alters the webextension Cookie AutoDelete
   IMPORTANT: change the Internal UUID */
-@-moz-document url-prefix("moz-extension://CookieAutoDelete@kennydo.com/") {
+@-moz-document url-prefix("moz-extension://69ea903a-206e-3d4e-b0fe-4a6dce70be65/") {
   a {
     color: var(--accent-1)
   }
@@ -1534,7 +1534,7 @@ html#feedHandler .enclosures {
 }
 /*! Alters the webextension Dark Mode
   IMPORTANT: change the Internal UUID */
-@-moz-document url-prefix("moz-extension://{174b2d58-b983-4501-ab4b-07e71203cb43}/") {
+@-moz-document url-prefix("moz-extension://3d2e4a00-d708-8a4b-81c9-1f23d8b8009f/") {
   .comment {
     color: var(--in-content-link-color)!important
   }
@@ -1547,7 +1547,7 @@ html#feedHandler .enclosures {
 }
 /*! Alters the webextension Downloads sidebar
   IMPORTANT: change the Internal UUID */
-@-moz-document url-prefix("moz-extension://{bbb81fb3-49c1-4a42-bcc9-94bc93e19fb8}/") {
+@-moz-document url-prefix("moz-extension://2be9dc10-da64-824e-838f-c48a91cb150e/") {
   body {
     background: var(--in-content-page-background)!important;
     color: var(--in-content-page-color)!important
@@ -1604,14 +1604,14 @@ html#feedHandler .enclosures {
   }
 }
 /*! Pop Up Background Fixes */
-@-moz-document url-prefix("moz-extension://{7fc8ef53-24ec-4205-87a4-1e745953bb0d}/popup.html"),
-url-prefix("moz-extension://https-everywhere@eff.org/pages/popup"),
-url-prefix("moz-extension://jid1-BoFifL9Vbdl2zQ@jetpack/pages/popup"),
-url-prefix("moz-extension://{b3e677f4-1150-4387-8629-da738260a48e}/data/data/popup.html"),
-url-prefix("moz-extension://renametabtitle@mozilla.org/popup/popup.html"),
-url-prefix("moz-extension://{6f5f4891-9637-41f9-9ee5-3a0ac02cf254}/popup"),
-url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/src/browser/monkey-menu"),
-url-prefix("moz-extension://{b43b974b-1d3a-4232-b226-eaa2ac6ebb69}/"),
+@-moz-document url-prefix("moz-extension://9dc060b7-6350-8e44-bf63-308f2dea7324/popup.html"),
+url-prefix("moz-extension://9ac0511a-88c0-c143-8816-f6a17a32b4ab/pages/popup"),
+url-prefix("moz-extension://dcc92e4c-9af9-bb45-8255-3e024516d311/pages/popup"),
+url-prefix("moz-extension://54e4aa0f-1e08-9a44-b9dd-e457ce8f2dfb/data/data/popup.html"),
+url-prefix("moz-extension://de253981-b5b2-d54d-adf5-a4730672837e/popup/popup.html"),
+url-prefix("moz-extension://5cffed3f-e7f4-7341-a204-456738c459f3/popup"),
+url-prefix("moz-extension://ee290455-5120-2d4b-8a48-c281f7855db8/src/browser/monkey-menu"),
+url-prefix("moz-extension://de63f3b5-6cd0-4b47-83c5-29e7039cbdcd/"),
 url-prefix("moz-extension://woop-NoopscooPsnSXQ@jetpack") {
   :root {
     --in-content-page-background: var(--tone-6)!important;
@@ -1631,37 +1631,37 @@ url-prefix("moz-extension://woop-NoopscooPsnSXQ@jetpack") {
     margin-left: 0!important
   }
 }
-@-moz-document url-prefix("moz-extension://YoutubeDownloader@PeterOlayev.com"),
-url-prefix("moz-extension://autocopy@mozilla.org"),
-url-prefix("moz-extension://{b5a43a70-4092-4899-9c44-63799150b35e}"),
-url-prefix("moz-extension://octopatcher_wowmotty@gmail.com"),
-url-prefix("moz-extension://{54BB9F3F-07E5-486c-9B39-C7398B99391C}"),
-url-prefix("moz-extension://multipletab@piro.sakura.ne.jp/"),
-url-prefix("moz-extension://neaturl@hugsmile.eu/"),
-url-prefix("moz-extension://smart-referer@meh.paranoid.pk/"),
-url-prefix("moz-extension://{e225ac78-5e83-484b-a16b-b6ed0924212f}/"),
-url-prefix("moz-extension://{7fc8ef53-24ec-4205-87a4-1e745953bb0d}/"),
-url-prefix("moz-extension://https-everywhere@eff.org/"),
-url-prefix("moz-extension://skipredirect@sblask/"),
-url-prefix("moz-extension://{174b2d58-b983-4501-ab4b-07e71203cb43}/"),
-url-prefix("moz-extension://jid1-BoFifL9Vbdl2zQ@jetpack/"),
-url-prefix("moz-extension://{b3e677f4-1150-4387-8629-da738260a48e}/"),
-url-prefix("moz-extension://jid0-HYNmqxA9zQGfJADREri4n2AHKSI@jetpack/options/options"),
-url-prefix("moz-extension://treestyletab@piro.sakura.ne.jp/options/options"),
+@-moz-document url-prefix("moz-extension://df990848-0500-a745-b693-1415408a115e"),
+url-prefix("moz-extension://784a29d7-812f-9d4b-aef0-856b961cbdb8"),
+url-prefix("moz-extension://1e5c25b8-df9e-474e-b6cd-d4ccbdd289cd"),
+url-prefix("moz-extension://7d9849af-a19d-9f48-8010-4dfa9fb2651f"),
+url-prefix("moz-extension://b34b6ae5-d5e5-2f4a-963f-fe362555c7aa"),
+url-prefix("moz-extension://f015fd34-1d21-434a-ab87-a604e41063ab/"),
+url-prefix("moz-extension://c600ad9c-8abd-e84e-87ef-bc4fda420523/"),
+url-prefix("moz-extension://1ab2bff6-e3b3-e249-a3a3-1587a3eea631/"),
+url-prefix("moz-extension://309f6dec-ff76-054d-9886-b8cef0b8b43b/"),
+url-prefix("moz-extension://9dc060b7-6350-8e44-bf63-308f2dea7324/"),
+url-prefix("moz-extension://9ac0511a-88c0-c143-8816-f6a17a32b4ab/"),
+url-prefix("moz-extension://9aec40c8-e676-d341-99e6-ba2d2977f948/"),
+url-prefix("moz-extension://3d2e4a00-d708-8a4b-81c9-1f23d8b8009f/"),
+url-prefix("moz-extension://dcc92e4c-9af9-bb45-8255-3e024516d311/"),
+url-prefix("moz-extension://54e4aa0f-1e08-9a44-b9dd-e457ce8f2dfb/"),
+url-prefix("moz-extension://780f059e-0d5f-a949-a596-f28695a52424/options/options"),
+url-prefix("moz-extension://34d8993d-5541-3a41-b3ce-ef109602a426/options/options"),
 url-prefix("moz-extension://translator@zoli.bod"),
 url-prefix("moz-extension://enhancerforyoutube@maximerf.addons.mozilla.org/options.html"),
-url-prefix("moz-extension://{bee6eb20-01e0-ebd1-da83-080329fb9a3a}/html/options.html"),
-url-prefix("moz-extension://back2close@bomjacob.github.io/"),
-url-prefix("moz-extension://{7e56c1ad-71c3-47fe-bdba-372c7770e0cb}/"),
-url-prefix("moz-extension://newtabfromlocationbar@piro.sakura.ne.jp/"),
-url-prefix("moz-extension://mobislan@users.noreply.github.com/"),
-url-prefix("moz-extension://{6f5f4891-9637-41f9-9ee5-3a0ac02cf254}/"),
-url-prefix("moz-extension://display-anchors@robwu.nl/"),
-url-prefix("moz-extension://renametabtitle@mozilla.org/"),
-url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/src/browser/monkey-menu"),
-url-prefix("moz-extension://{b43b974b-1d3a-4232-b226-eaa2ac6ebb69}/"),
+url-prefix("moz-extension://9e57e2f6-d322-9b44-ab2c-b1cf06118f40/html/options.html"),
+url-prefix("moz-extension://dbdfd300-63e1-1d44-823c-36b8cf8bccfd/"),
+url-prefix("moz-extension://b94cc275-3b03-c64b-8482-d29e83f63896/"),
+url-prefix("moz-extension://e14d8153-b6e5-ad40-a90c-5c8de4b11a67/"),
+url-prefix("moz-extension://10c41470-2ad8-a44d-9dd6-d574e8fd97e4/"),
+url-prefix("moz-extension://5cffed3f-e7f4-7341-a204-456738c459f3/"),
+url-prefix("moz-extension://0b8e37ed-b642-b34e-ae90-eff48d885dba/"),
+url-prefix("moz-extension://de253981-b5b2-d54d-adf5-a4730672837e/"),
+url-prefix("moz-extension://ee290455-5120-2d4b-8a48-c281f7855db8/src/browser/monkey-menu"),
+url-prefix("moz-extension://de63f3b5-6cd0-4b47-83c5-29e7039cbdcd/"),
 url-prefix("moz-extension://woop-NoopscooPsnSXQ@jetpack"),
-url-prefix("moz-extension://Chrome-Store-Foxified@jetpack"),
+url-prefix("moz-extension://eaef8085-8506-8647-9b90-2e65ee1774ec"),
 url-prefix("moz-extension://generic_styling_1"),
 url-prefix("moz-extension://generic_styling_2"),
 url-prefix("moz-extension://generic_styling_3"),
@@ -1746,10 +1746,10 @@ url-prefix("moz-extension://generic_styling_5") {
   }
 }
 /*! Code Mirror */
-@-moz-document url-prefix("moz-extension://{aecec67f-0d10-4fa7-b7c7-609a2db280cf}/"),
-url-prefix("moz-extension://uBlock0@raymondhill.net/"),
-url-prefix("moz-extension://uMatrix@raymondhill.net/"),
-url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/src/content/edit-user-script") {
+@-moz-document url-prefix("moz-extension://98876ed3-ff2d-2549-bf31-53c92ac54a27/"),
+url-prefix("moz-extension://73e5f850-fc6f-fd4a-adad-fedbcc7e5a08/"),
+url-prefix("moz-extension://153b2fb5-1159-6243-b1af-5d1d014cdd9f/"),
+url-prefix("moz-extension://ee290455-5120-2d4b-8a48-c281f7855db8/src/content/edit-user-script") {
   .CodeMirror {
     border: 1px solid!important;
     border-color: var(--cm-background)!important;
@@ -1885,7 +1885,7 @@ url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/src/content/e
     color: var(--theme-highlight-green)!important
   }
 }
-@-moz-document url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/") {
+@-moz-document url-prefix("moz-extension://ee290455-5120-2d4b-8a48-c281f7855db8/") {
   body,
   html {
     background: var(--in-content-page-background)!important
@@ -1915,7 +1915,7 @@ url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/src/content/e
 }
 /*! Alters the webextension Multi-Account Containers
   IMPORTANT: change the Internal UUID in BOTH locations */
-@-moz-document url-prefix("moz-extension://@testpilot-containers/") {
+@-moz-document url-prefix("moz-extension://93deaf0f-201d-144f-821e-76cfd61b4552/") {
   #current-tab,
   .column-panel-content,
   .container-panel-row,
@@ -2004,7 +2004,7 @@ url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/src/content/e
 }
 /*! Alters the webextension Multi-Account Containers
   IMPORTANT: change the Internal UUID in BOTH locations */
-@-moz-document url-prefix("moz-extension://@testpilot-containers/confirm-page") {
+@-moz-document url-prefix("moz-extension://93deaf0f-201d-144f-821e-76cfd61b4552/confirm-page") {
   body {
     background-color: var(--tone-7)!important
   }
@@ -2036,7 +2036,7 @@ url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/src/content/e
 }
 /*! Alters the webextension NoScript
   IMPORTANT: change the Internal UUID */
-@-moz-document url-prefix("moz-extension://{73a6fe31-595d-460b-a920-fcc0f8843232}/") {
+@-moz-document url-prefix("moz-extension://41a8d80b-a07c-994f-ab3f-c8969919ee92/") {
   body {
     background: var(--tone-6)!important
   }
@@ -2102,7 +2102,7 @@ url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/src/content/e
   background-color: var(--in-content-table-border-dark-color)!important;
   color: var(--in-content-page-color)!important
 }
-@-moz-document url-prefix("moz-extension://{b43b974b-1d3a-4232-b226-eaa2ac6ebb69}/") {
+@-moz-document url-prefix("moz-extension://de63f3b5-6cd0-4b47-83c5-29e7039cbdcd/") {
   .box-min input[type=checkbox]:checked ~ i {
     background: var(--in-content-link-color)!important;
     border-color: var(--in-content-link-color)!important
@@ -2123,7 +2123,7 @@ url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/src/content/e
 }
 /*! Alters the webextension Request Control
   IMPORTANT: change the Internal UUID */
-@-moz-document url-prefix("moz-extension://{1b1e6108-2d88-4f0f-a338-01f9dbcccd6f}/") {
+@-moz-document url-prefix("moz-extension://1672bab3-79ba-7540-a7bc-950c80cbd5d8/") {
   * {
     color: var(--in-content-page-color)!important
   }
@@ -2196,7 +2196,7 @@ url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/src/content/e
 }
 /*! Alters the webextension Tree Style Tab
   IMPORTANT: change the Internal UUID in BOTH locations */
-@-moz-document url-prefix("moz-extension://treestyletab@piro.sakura.ne.jp/resources/group-tab.html") {
+@-moz-document url-prefix("moz-extension://34d8993d-5541-3a41-b3ce-ef109602a426/resources/group-tab.html") {
   :root {
     background: var(--tone-7)!important
   }
@@ -2209,7 +2209,7 @@ url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/src/content/e
 }
 /*! Alters the webextension Tree Style Tab
   IMPORTANT: change the Internal UUID all BOTH locations */
-@-moz-document url-prefix("moz-extension://treestyletab@piro.sakura.ne.jp/") {
+@-moz-document url-prefix("moz-extension://34d8993d-5541-3a41-b3ce-ef109602a426/") {
   /*! Use Plain Dark Appearance */
 #debug-configs,
   p,
@@ -2302,7 +2302,7 @@ url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/src/content/e
 }
 /*! Alters the webextension Tridactyl
   IMPORTANT: change the Internal UUID */
-@-moz-document url-prefix("moz-extension://tridactyl.vim@cmcaine.co.uk/") {
+@-moz-document url-prefix("moz-extension://21fcb311-6933-c643-a349-214a3fd14e72/") {
   .container-main,
   body,
   html {
@@ -2352,7 +2352,7 @@ url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/src/content/e
 }
 /*! Alters the webextension uBlock Origin
   IMPORTANT: change the Internal UUID */
-@-moz-document url-prefix("moz-extension://uBlock0@raymondhill.net/") {
+@-moz-document url-prefix("moz-extension://73e5f850-fc6f-fd4a-adad-fedbcc7e5a08/") {
   button.custom {
     background-color: var(--in-content-page-background)!important;
     background-image: none!important;
@@ -2691,7 +2691,7 @@ url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/src/content/e
 }
 /*! Alters the webextension uBO-Scope
   IMPORTANT: change the Internal UUID */
-@-moz-document url-prefix("moz-extension://uBO-Scope@raymondhill.net/") {
+@-moz-document url-prefix("moz-extension://3ffbc326-52e5-bb44-84c8-98bc71d2194b/") {
   #heatmaps .togglerBar,
   body,
   body.theoretical #heatmaps .heatmap.theoretical {
@@ -2731,7 +2731,7 @@ url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/src/content/e
     color: var(--tone-4)!important
   }
 }
-@-moz-document url-prefix("moz-extension://uBO-Scope@raymondhill.net/options.html") {
+@-moz-document url-prefix("moz-extension://3ffbc326-52e5-bb44-84c8-98bc71d2194b/options.html") {
   body,
   html {
     background-color: var(--in-content-page-background)!important;
@@ -2743,7 +2743,7 @@ url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/src/content/e
 }
 /*! Alters the webextension uMatrix
   IMPORTANT: change the Internal UUID */
-@-moz-document url-prefix("moz-extension://uMatrix@raymondhill.net/") {
+@-moz-document url-prefix("moz-extension://153b2fb5-1159-6243-b1af-5d1d014cdd9f/") {
   .t81 {
     color: #fff;
     background-color: #db4c4c!important
@@ -3063,7 +3063,7 @@ url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/src/content/e
 }
 /*! Alters the webextension Vim Vixen
   IMPORTANT: change the Internal UUID */
-@-moz-document url-prefix("moz-extension://vim-vixen@i-beam.org/") {
+@-moz-document url-prefix("moz-extension://96dc9281-d485-2c4c-9233-98194b8e29f2/") {
   .vimvixen-console-command-wrapper {
     border-top: 1px solid!important
   }
@@ -3109,7 +3109,7 @@ url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/src/content/e
 }
 /*! Alters the webextension Violentmonkey
   IMPORTANT: change the Internal UUID */
-@-moz-document url-prefix("moz-extension://{aecec67f-0d10-4fa7-b7c7-609a2db280cf}/") {
+@-moz-document url-prefix("moz-extension://98876ed3-ff2d-2549-bf31-53c92ac54a27/") {
   .edit-settings,
   .tab,
   section > h3 {
@@ -3227,7 +3227,7 @@ url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/src/content/e
 }
 /*! Alters the webextension YouTube Video And Audio Downloader (WebEx)
   IMPORTANT: change the Internal UUID */
-@-moz-document url-prefix("moz-extension://{f73df109-8fb4-453e-8373-f59e61ca4da3}/") {
+@-moz-document url-prefix("moz-extension://5fecfac6-2cca-a241-b2d4-ed46b961da4f/") {
   #content,
   body {
     color: var(--tone-2)!important;

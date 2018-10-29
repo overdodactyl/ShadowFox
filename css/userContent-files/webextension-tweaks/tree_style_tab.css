@@ -1,6 +1,6 @@
 /*! Alters the webextension Tree Style Tab
   IMPORTANT: change the Internal UUID in BOTH locations */
-@-moz-document url-prefix("moz-extension://treestyletab@piro.sakura.ne.jp/resources/group-tab.html") {
+@-moz-document url-prefix("moz-extension://34d8993d-5541-3a41-b3ce-ef109602a426/resources/group-tab.html") {
   :root {
     background: var(--tone-7)!important
   }
@@ -13,7 +13,7 @@
 }
 /*! Alters the webextension Tree Style Tab
   IMPORTANT: change the Internal UUID all BOTH locations */
-@-moz-document url-prefix("moz-extension://treestyletab@piro.sakura.ne.jp/") {
+@-moz-document url-prefix("moz-extension://34d8993d-5541-3a41-b3ce-ef109602a426/") {
   /*! Use Plain Dark Appearance */
 #debug-configs,
   p,

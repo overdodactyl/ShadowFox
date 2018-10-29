@@ -1,6 +1,6 @@
 /*! Alters the webextension YouTube Video And Audio Downloader (WebEx)
   IMPORTANT: change the Internal UUID */
-@-moz-document url-prefix("moz-extension://{f73df109-8fb4-453e-8373-f59e61ca4da3}/") {
+@-moz-document url-prefix("moz-extension://5fecfac6-2cca-a241-b2d4-ed46b961da4f/") {
   #content,
   body {
     color: var(--tone-2)!important;

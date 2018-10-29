@@ -1,4 +1,4 @@
-@-moz-document url-prefix("moz-extension://{b43b974b-1d3a-4232-b226-eaa2ac6ebb69}/") {
+@-moz-document url-prefix("moz-extension://de63f3b5-6cd0-4b47-83c5-29e7039cbdcd/") {
   .box-min input[type=checkbox]:checked ~ i {
     background: var(--in-content-link-color)!important;
     border-color: var(--in-content-link-color)!important

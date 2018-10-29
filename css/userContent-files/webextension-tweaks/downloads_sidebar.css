@@ -1,6 +1,6 @@
 /*! Alters the webextension Downloads sidebar
   IMPORTANT: change the Internal UUID */
-@-moz-document url-prefix("moz-extension://{bbb81fb3-49c1-4a42-bcc9-94bc93e19fb8}/") {
+@-moz-document url-prefix("moz-extension://2be9dc10-da64-824e-838f-c48a91cb150e/") {
   body {
     background: var(--in-content-page-background)!important;
     color: var(--in-content-page-color)!important
