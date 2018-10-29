@@ -532,6 +532,9 @@ url(chrome://browser/content/pageinfo/pageInfo.xul) {
   tab[selected] {
     color: var(--in-content-link-color)!important
   }
+  textbox[type=search] > moz-input-box > .textbox-search-sign {
+    filter: invert(65%)
+  }
   @media screen and (-moz-os-version:windows-win7) {
     treechildren {
       --treechildren-outline: none!important
