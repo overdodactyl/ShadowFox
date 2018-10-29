@@ -79,6 +79,7 @@ url-prefix(https://discovery.addons.mozilla.org) {
     background: var(--in-content-page-background)!important
   }
   #homeContentsGroup checkbox[src] .checkbox-icon,
+  .checkbox-icon,
   .content-container .icon-container .icon[src=""],
   .extension-controlled-icon,
   .snippet .block-snippet-button,
@@ -97,6 +98,9 @@ url-prefix(https://discovery.addons.mozilla.org) {
   .topic .topic-read-more:hover,
   a:link:hover {
     color: var(--in-content-link-color-hover)!important
+  }
+  menulist[disabled=true] {
+    color: var(--in-content-box-border-color)!important
   }
   #action-box,
   #badCertAdvancedPanel,
