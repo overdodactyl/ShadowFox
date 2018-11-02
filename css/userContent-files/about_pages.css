@@ -427,13 +427,10 @@ url-prefix(https://discovery.addons.mozilla.org) {
     box-shadow: inset 0 -3px 0 0 var(--in-content-primary-button-background-hover)!important
   }
 }
-@-moz-document url-prefix(about:blank),
-url-prefix(about:memory) {
-  html:not(#ublock0-epicker) {
+@-moz-document url-prefix(about:memory) {
+  html {
     background: var(--in-content-page-background)!important
   }
-}
-@-moz-document url-prefix(about:memory) {
   .legend,
   .opsRowLabel,
   .section,
