@@ -427,6 +427,12 @@ url-prefix(https://discovery.addons.mozilla.org) {
     box-shadow: inset 0 -3px 0 0 var(--in-content-primary-button-background-hover)!important
   }
 }
+@-moz-document url-prefix(about:blank) {
+  html > body:empty {
+    background-color: var(--in-content-page-background)!important;
+    margin: 0!important
+  }
+}
 @-moz-document url-prefix(about:memory) {
   html {
     background: var(--in-content-page-background)!important
