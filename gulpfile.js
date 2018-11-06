@@ -84,7 +84,7 @@ gulp.task('publish', gulp.series('minify_base_code', 'userChrome', 'userContent'
 gulp.task('push', function() {
   return gulp.src('.')
     .pipe(exec('git push'))
-    .pipe(exec('sh scripts/uuids.sh add'))
+    .pipe(exec('sh scripts/uuids.sh add nogen'))
 });
 
 

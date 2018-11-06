@@ -135,6 +135,7 @@ url-prefix(moz-extension) {
     --tab-line-selected-color: var(--accent-2)!important;
     --secure-connection-color: var(--accent-1);
     --theme-sidebar-background: #1B1B1D!important;
+    --card-outline-color: var(--in-content-box-border-color)!important;
     --cm-background: var(--tone-8)!important;
     --cm-selection: #353b48!important;
     --cm-marker: #555!important;

@@ -135,6 +135,7 @@ url-prefix(moz-extension) {
     --tab-line-selected-color: var(--accent-2)!important;
     --secure-connection-color: var(--accent-1);
     --theme-sidebar-background: #1B1B1D!important;
+    --card-outline-color: var(--in-content-box-border-color)!important;
     --cm-background: var(--tone-8)!important;
     --cm-selection: #353b48!important;
     --cm-marker: #555!important;
@@ -1008,8 +1009,8 @@ url-prefix(https://discovery.addons.mozilla.org) {
     -moz-appearance: none!important
   }
 }
-/*! Colors hard coded due to variables not being recognized from 
-    color_variables.css ... Firefox bug? */
+/*! Colors hard coded due to variables not being recognized from
+ color_variables.css ... Firefox bug? */
 @-moz-document url-prefix(https://discovery.addons.mozilla.org) {
   .addon .ThemeImage,
   header {
@@ -1080,6 +1081,7 @@ url-prefix(https://discovery.addons.mozilla.org) {
   .Addon-author a:link .Button--action,
   .Addon-title,
   .AddonBadges .Badge,
+  .AddonTitle,
   .Button--action,
   .Button--action.Button--small:link,
   .Button--action:link,
@@ -1196,6 +1198,18 @@ url-prefix(https://discovery.addons.mozilla.org) {
   }
   .Icon-featured {
     filter: invert(85%)!important
+  }
+  .Icon-plus-dark {
+    filter: invert(100%)!important
+  }
+  .Button--neutral.Button--puffy,
+  .Button--neutral:link.Button--puffy {
+    background: var(--in-content-primary-button-background)!important;
+    color: var(--in-content-selected-text)!important
+  }
+  .Button--neutral.Button--puffy:hover,
+  .Button--neutral:link.Button--puffy:hover {
+    background: var(--in-content-primary-button-background-hover)!important
   }
 }
 @-moz-document regexp("^[file:///].*[^(html|svg)]$") {
