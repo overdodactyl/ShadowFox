@@ -17,7 +17,8 @@ url-prefix(about:),
 url(https://www.mozilla.org/credits/),
 url-prefix(https://addons.mozilla.org),
 url-prefix(http://addons.mozilla.org),
-url-prefix(moz-extension) {
+url-prefix(moz-extension),
+regexp(".*\\.(p|P)(d|D)(f|F).*") {
   :root {
     --magenta-50: #ff1ad9;
     --magenta-60: #ed00b5;
