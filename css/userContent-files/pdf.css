@@ -30,7 +30,8 @@
   }
   #pageNumber,
   #scaleSelectContainer {
-    border: 1px solid!important
+      border: 1px solid!important;
+    border-color: var(--in-content-box-border-color) !important;
   }
   #loadingBar {
     position: relative;
