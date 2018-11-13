@@ -18,6 +18,7 @@ url(https://www.mozilla.org/credits/),
 url-prefix(https://addons.mozilla.org),
 url-prefix(http://addons.mozilla.org),
 url-prefix(moz-extension),
+url-prefix(view-source),
 regexp(".*\\.(p|P)(d|D)(f|F).*") {
   :root {
     --magenta-50: #ff1ad9;
@@ -591,7 +592,7 @@ url-prefix(https://discovery.addons.mozilla.org) {
   .prefs-pane [type=checkbox]:checked + label::after,
   .prefs-pane [type=checkbox]:not(:checked) + label::after,
   input[type=checkbox]:checked {
-    background-image: url(chrome://global/skin/in-content/check.svg)!important
+    background-image: url(chrome://global/skin/in-content/check.svg),url(chrome://global/skin/icons/check.svg)!important
   }
   .contentSearchSuggestionsList {
     background-color: var(--in-content-box-background)!important;
@@ -1274,7 +1275,8 @@ url-prefix(https://discovery.addons.mozilla.org) {
   }
   #pageNumber,
   #scaleSelectContainer {
-    border: 1px solid!important
+    border: 1px solid!important;
+    border-color: var(--in-content-box-border-color)!important
   }
   #loadingBar {
     position: relative;
@@ -1442,6 +1444,9 @@ html#feedHandler .enclosures {
   .highlight .error > :-moz-any(.start-tag,.end-tag,.comment,.cdata,.doctype,.pi,.entity,.attribute-name,.attribute-value) {
     color: #de7474!important
   }
+}
+rss > .start-tag {
+  color: red!important
 }
 /*! Alters the webextension Brief
   IMPORTANT: change the Internal UUID */
@@ -2021,6 +2026,13 @@ url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/src/content/e
   }
 }
 /*! Alters the webextension Multi-Account Containers
+ IMPORTANT: change the Internal UUID in BOTH locations */
+@-moz-document url-prefix("moz-extension://@testpilot-containers/popup") {
+  html {
+    background-color: var(--in-content-box-background)!important
+  }
+}
+/*! Alters the webextension Multi-Account Containers
   IMPORTANT: change the Internal UUID in BOTH locations */
 @-moz-document url-prefix("moz-extension://@testpilot-containers/confirm-page") {
   body {
@@ -2048,7 +2060,7 @@ url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/src/content/e
     box-shadow: none!important
   }
   #never-ask:checked {
-    background-image: url(chrome://global/skin/in-content/check.svg)!important;
+    background-image: url(chrome://global/skin/in-content/check.svg),url(chrome://global/skin/icons/check.svg)!important;
     background-color: var(--tone-6)!important
   }
 }

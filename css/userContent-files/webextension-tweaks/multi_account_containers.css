@@ -88,6 +88,13 @@
   }
 }
 /*! Alters the webextension Multi-Account Containers
+ IMPORTANT: change the Internal UUID in BOTH locations */
+@-moz-document url-prefix("moz-extension://@testpilot-containers/popup") {
+  html {
+    background-color: var(--in-content-box-background)!important
+  }
+}
+/*! Alters the webextension Multi-Account Containers
   IMPORTANT: change the Internal UUID in BOTH locations */
 @-moz-document url-prefix("moz-extension://@testpilot-containers/confirm-page") {
   body {
@@ -115,7 +122,7 @@
     box-shadow: none!important
   }
   #never-ask:checked {
-    background-image: url(chrome://global/skin/in-content/check.svg)!important;
+    background-image: url(chrome://global/skin/in-content/check.svg),url(chrome://global/skin/icons/check.svg)!important;
     background-color: var(--tone-6)!important
   }
 }

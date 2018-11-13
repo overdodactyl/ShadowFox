@@ -46,7 +46,7 @@ url-prefix(https://discovery.addons.mozilla.org) {
   .prefs-pane [type=checkbox]:checked + label::after,
   .prefs-pane [type=checkbox]:not(:checked) + label::after,
   input[type=checkbox]:checked {
-    background-image: url(chrome://global/skin/in-content/check.svg)!important
+    background-image: url(chrome://global/skin/in-content/check.svg),url(chrome://global/skin/icons/check.svg)!important
   }
   .contentSearchSuggestionsList {
     background-color: var(--in-content-box-background)!important;

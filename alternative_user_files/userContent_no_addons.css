@@ -18,6 +18,7 @@ url(https://www.mozilla.org/credits/),
 url-prefix(https://addons.mozilla.org),
 url-prefix(http://addons.mozilla.org),
 url-prefix(moz-extension),
+url-prefix(view-source),
 regexp(".*\\.(p|P)(d|D)(f|F).*") {
   :root {
     --magenta-50: #ff1ad9;
@@ -591,7 +592,7 @@ url-prefix(https://discovery.addons.mozilla.org) {
   .prefs-pane [type=checkbox]:checked + label::after,
   .prefs-pane [type=checkbox]:not(:checked) + label::after,
   input[type=checkbox]:checked {
-    background-image: url(chrome://global/skin/in-content/check.svg)!important
+    background-image: url(chrome://global/skin/in-content/check.svg),url(chrome://global/skin/icons/check.svg)!important
   }
   .contentSearchSuggestionsList {
     background-color: var(--in-content-box-background)!important;
@@ -1274,7 +1275,8 @@ url-prefix(https://discovery.addons.mozilla.org) {
   }
   #pageNumber,
   #scaleSelectContainer {
-    border: 1px solid!important
+    border: 1px solid!important;
+    border-color: var(--in-content-box-border-color)!important
   }
   #loadingBar {
     position: relative;
@@ -1442,4 +1444,7 @@ html#feedHandler .enclosures {
   .highlight .error > :-moz-any(.start-tag,.end-tag,.comment,.cdata,.doctype,.pi,.entity,.attribute-name,.attribute-value) {
     color: #de7474!important
   }
+}
+rss > .start-tag {
+  color: red!important
 }
