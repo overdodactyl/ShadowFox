@@ -1445,9 +1445,6 @@ html#feedHandler .enclosures {
     color: #de7474!important
   }
 }
-rss > .start-tag {
-  color: red!important
-}
 /*! Alters the webextension Brief
   IMPORTANT: change the Internal UUID */
 @-moz-document url-prefix("moz-extension://brief@mozdev.org/") {
