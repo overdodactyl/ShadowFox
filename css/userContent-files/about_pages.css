@@ -444,6 +444,34 @@ url-prefix(https://discovery.addons.mozilla.org) {
     color: var(--in-content-page-color)!important
   }
 }
+@-moz-document url-prefix(about:webrtc) {
+  html {
+    background-color: var(--in-content-page-background)!important;
+    color: var(--in-content-page-color)!important
+  }
+  #content > div,
+  .peer-connection > h3 {
+    background-color: var(--in-content-page-background)!important
+  }
+  .fold-trigger {
+    color: var(--in-content-link-color)!important
+  }
+  table {
+    color: var(--in-content-text-color)!important;
+    background-color: var(--in-content-page-background)!important
+  }
+  .peer-connection table tr {
+    background-color: var(--in-content-box-background)!important
+  }
+  .trickled {
+    background-color: var(--in-content-border-focus)!important;
+    color: var(--in-content-selected-text)!important
+  }
+  .peer-connection table tr:first-of-type {
+    background-color: var(--in-content-table-header-background)!important;
+    color: var(--in-content-selected-text)!important
+  }
+}
 @-moz-document url-prefix(chrome://) {
   #ColorsDialogPane,
   #ConnectionsDialogPane,
