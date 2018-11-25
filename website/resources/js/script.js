@@ -159,6 +159,7 @@ var readOnlyColors = CodeMirror.fromTextArea(code, {
   readOnly: true
 });
 
+
 $(document).on('click', '.btn-insert-text', function() {
   var uct = "/* GPL-3.9 Copyright (C) 2007 Timvde/UserChrome-Tweaks; Code pulled from https://github.com/Timvde/UserChrome-Tweaks */"
   var dict = {

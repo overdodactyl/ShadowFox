@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="ShadowFox is a universal dark theme for Firefox.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <title>ShadowFox</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="resources/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="resources/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="resources/favicons/favicon-16x16.png">
+  <link rel="manifest" href="resources/favicons/site.webmanifest">
+  <link rel="mask-icon" href="resources/favicons/safari-pinned-tab.svg" color="#9440c1">
+  <link rel="shortcut icon" href="resources/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#9440c1">
+  <meta name="msapplication-config" content="resources/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<style>
+	iframe {
+	    background-color: #5e7651;
+	    border: none;
+	}
+	.ion-ios-home {
+		padding: 10px 0 0 10px;
+		font-size: 250%;
+	}
+	section {
+		padding: 0 0 80px 0;
+	}
+	.CodeMirror {
+		max-width: 70%;
+		margin-left: 15%;
+	}
+</style>
+
+<body>
+	<div class="row">
+		<a href="."><i class="ion-ios-home icon-big"></i></a>	
+	</div>
+	<section>		
+		<div class="row">
+			<h2>No Empty iframes</h2><br>
+			<p class="long-copy">
+				ShadowFox styles <code>about:blank</code> in order to maintain a universal dark theme.  An unfortunate consequence of this is that empty iframes on webpages are unintentionally styled (see <a href="https://github.com/overdodactyl/ShadowFox/issues/222">here</a>).  No Empty iframes is a simple extension available on <a href="https://addons.mozilla.org/en-US/firefox/addon/no-empty-iframes/">AMO</a> that solves this problem by adding a content-less <code>div</code> to the body of any empty <code>iframe</code>.<br><br>
+
+				Below is a simple test for No Empty iframes.  The first iframe has no content, and the second does.  Both iframes should have a green background, but with just ShadowFox installed, you will notice the first is grey.<br><br>
+
+				<b>With No Empty iframes installed (or ShadowFox uninstalled), both boxes should be green.</b> <br><br><br>
+	      	</p>
+			<center>
+				<iframe id="iframe_empty" src="about:blank"></iframe>
+				<iframe id="iframe_content" src="about:blank"></iframe>
+			</center>
+		</div>
+	</section>
+	<section>
+		<div class="row">
+		<h2>Alternatives</h2>
+		<p class="long-copy">
+			No Empty iframes is very simple extension, and the following code could be easily be applied via an extension like <a href="https://addons.mozilla.org/en-US/firefox/addon/violentmonkey/">Violentmonkey</a>.<br><br><br>
+		</p>
+              <textarea class="codemirror-textarea" id="iframes_test">// ==UserScript==
+// @name No Empty iframes
+// @grant none
+// ==/UserScript==
+
+window.onload = function () { 
+  var frames = document.getElementsByTagName("iframe");
+  for (var i = 0; i < frames.length; i++) {
+    var doc = frames[i].contentWindow.document;
+    var elemDiv = document.createElement('div');
+    doc.body.appendChild(elemDiv);
+  }
+}
+			</textarea>
+        </div>
+	</section>
+	<footer>
+    <div class="row">
+      <div class="col span-1-of-2">
+        <ul class="footer-nav">
+          <li><a href="https://addons.mozilla.org/en-US/firefox/addon/no-empty-iframes/">Download No Empty iframes</a></li>
+        </ul>
+      </div>
+      <div class="col span-1-of-2">
+        <ul class="social-links">
+          <li><a href="https://github.com/overdodactyl/ShadowFox/"><i class="ion-social-github"></i></a></li>
+          <li><a href="https://www.reddit.com/r/ShadowFoxCSS/"><i class="ion-social-reddit"></i></a></li>
+          <li><a href="https://join.slack.com/t/shadowfox-workspace/shared_invite/enQtMzI5Nzk5OTk1MjcxLThkMDgwOGE5ZDY1MDUyNjIwNWQ2MTlmMjEwZTJiZmZjYTUxODM4ZTRkNzhiNGRhZTFhMjdjMTFjMTQ3YjZjYzU"><i class="ion-pound"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <p>
+        Copyright Pat Johnson &copy; 2018 (MIT). All rights reserved.<br /> Firefox is a registered trademark of the Mozilla Foundation.<br />
+      </p>
+    </div>
+	</footer>
+	<script src="resources/js/testpage.js"></script>
+</body>
+
+</html>
+
+

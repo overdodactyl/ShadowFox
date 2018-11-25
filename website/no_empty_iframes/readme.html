@@ -1,0 +1,13 @@
+<h1 id="no-empty-iframes">No Empty iframes</h1>
+<h2 id="what-it-does">What it does</h2>
+<p>No Empty iframes adds a blank <code>div</code> to any iframes that have an empty <code>body</code>.</p>
+<h2 id="that-sounds-uselesswhats-the-point">That sounds useless…what’s the point?</h2>
+<p><a href="https://github.com/overdodactyl/ShadowFox">ShadowFox</a> utilizes <code>userContent.css</code> and <code>userChrome.css</code> to create a universal dark theme for Firefox. In part, this means styling <code>about:blank</code>. A complication of this is that <code>about:blank</code> is also used for anonymous frames on webpages. Generally, iframes will contain content, making the following css rule specific enough:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode css"><code class="sourceCode css"><a class="sourceLine" id="cb1-1" data-line-number="1">html &gt; body<span class="in">:empty</span> {</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2">    <span class="kw">background-color</span>: var(--in-content-page-background)<span class="at">!important</span>;</a>
+<a class="sourceLine" id="cb1-3" data-line-number="3">    <span class="kw">margin</span>: <span class="dv">0</span><span class="at">!important</span></a>
+<a class="sourceLine" id="cb1-4" data-line-number="4">}</a></code></pre></div>
+<p>Some pages, however, have empty iframes that cause readability issues (see <a href="https://github.com/overdodactyl/ShadowFox/issues/222">#222</a>).</p>
+<p>This extension injects an empty div into such iframes, allowing the rule above to work.</p>
+<h2 id="better-approaches">Better approaches?</h2>
+<p>If anyone has a better approach/workaround for this problem, I would appreciate any suggestions.</p>
