@@ -1123,6 +1123,19 @@ toolbarseparator {
     background-color: var(--in-content-box-background)!important
   }
 }
+@-moz-document url-prefix(chrome://pippki/content/exceptionDialog) {
+  #exceptiondialog {
+    -moz-appearance: none!important;
+    background-color: var(--tone-8)!important
+  }
+  textbox {
+    -moz-appearance: none!important;
+    min-height: 20px!important;
+    background: var(--in-content-box-background)!important;
+    border: 1px solid var(--in-content-box-border-color);
+    padding: 1px
+  }
+}
 #navigator-toolbox::after {
   border-bottom: 0!important
 }
