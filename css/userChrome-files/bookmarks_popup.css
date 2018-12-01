@@ -70,7 +70,22 @@ url(chrome://browser/content/places/bookmarkProperties2.xul) {
   #bookmarkproperties {
     -moz-appearance: none!important;
     color: var(--in-content-page-color)!important;
-    background-color: var(--in-content-box-background)!important
+    background-color: var(--in-content-category-header-background)!important
+  }
+  textbox {
+    -moz-appearance: none!important;
+    min-height: 20px!important;
+    padding: 2px!important;
+    border: 1px solid var(--in-content-box-border-color);
+    color: var(--in-content-page-color)!important;
+    background: var(--in-content-box-background)!important
+  }
+  #editBMPanel_folderTree {
+    background: var(--in-content-box-background)!important
+  }
+  #editBMPanel_folderMenuList {
+    background-color: var(--in-content-box-background)!important;
+    padding: 2px!important
   }
   #editBMPanel_foldersExpander.expander-down,
   #editBMPanel_tagsSelectorExpander.expander-down {
@@ -98,5 +113,8 @@ url(chrome://browser/content/places/bookmarkProperties2.xul) {
     border: 1px solid;
     border-radius: 3px;
     border-color: var(--in-content-box-border-color)!important
+  }
+  #editBMPanel_newFolderBox {
+    background: 0 0!important
   }
 }
