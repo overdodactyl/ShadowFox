@@ -981,8 +981,10 @@ toolbarseparator {
   #imagecontainerbox,
   #permList,
   .groupbox-body {
-    border: 1px solid!important;
-    border-color: var(--in-content-box-border-color)!important
+    border: 1px solid!important
+  }
+  #permList {
+    -moz-appearance: none!important
   }
   groupbox.collapsable caption .caption-icon {
     filter: invert(65%)!important
@@ -998,7 +1000,17 @@ toolbarseparator {
   }
   treecolpicker {
     -moz-appearance: none;
-    border: none!important
+    border: none!important;
+    filter: invert(84%)
+  }
+  .checkbox-check[checked] {
+    list-style-image: url(chrome://global/skin/icons/check.svg);
+    -moz-context-properties: fill;
+    fill: var(--in-content-border-highlight)!important
+  }
+  #imagetree,
+  #metatree {
+    border: 1px solid!important
   }
   #viewGroup > radio {
     -moz-appearance: none!important;
