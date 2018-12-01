@@ -1,0 +1,9 @@
+@-moz-document url-prefix("moz-extension://extension@one-tab.com") {
+  .clickable span {
+    color: var(--in-content-link-color)!important
+  }
+  .clickable div {
+    box-shadow: none!important;
+    background-color: var(--in-content-box-background)!important
+  }
+}

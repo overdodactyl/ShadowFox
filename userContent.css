@@ -1710,6 +1710,7 @@ url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/src/browser/m
 url-prefix("moz-extension://{b43b974b-1d3a-4232-b226-eaa2ac6ebb69}/"),
 url-prefix("moz-extension://woop-NoopscooPsnSXQ@jetpack"),
 url-prefix("moz-extension://Chrome-Store-Foxified@jetpack"),
+url-prefix("moz-extension://extension@one-tab.com"),
 url-prefix("moz-extension://generic_styling_1"),
 url-prefix("moz-extension://generic_styling_2"),
 url-prefix("moz-extension://generic_styling_3"),
@@ -2132,6 +2133,15 @@ url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/src/content/e
   #top #temp-allow-page {
     background-color: var(--tone-6)!important;
     border: none!important
+  }
+}
+@-moz-document url-prefix("moz-extension://extension@one-tab.com") {
+  .clickable span {
+    color: var(--in-content-link-color)!important
+  }
+  .clickable div {
+    box-shadow: none!important;
+    background-color: var(--in-content-box-background)!important
   }
 }
 .pkt_ext_containersaved .pkt_ext_tag_input_wrapper input::placeholder,
