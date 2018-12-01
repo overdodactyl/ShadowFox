@@ -8,10 +8,10 @@
 @import "css/userChrome-files/about_firefox.css";
 @import "css/userChrome-files/address_searchbar.css";
 @import "css/userChrome-files/bookmarks_popup.css";
+@import "css/userChrome-files/clear_history.css";
 @import "css/userChrome-files/common_dialog.css";
 @import "css/userChrome-files/customization_page.css";
 @import "css/userChrome-files/findbar.css";
-
 @import "css/userChrome-files/navbar.css";
 @import "css/userChrome-files/navbar_menus.css";
 @import "css/userChrome-files/page_info.css";

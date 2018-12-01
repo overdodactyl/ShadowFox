@@ -1,0 +1,23 @@
+@-moz-document url(chrome://browser/content/sanitize.xul) {
+  #SanitizeDialog {
+    -moz-appearance: none!important;
+    background: var(--in-content-category-header-background)!important;
+    color: var(--in-content-page-color)!important
+  }
+  .checkbox-check[checked] {
+    list-style-image: url(chrome://global/skin/icons/check.svg);
+    -moz-context-properties: fill;
+    fill: var(--in-content-border-highlight)!important
+  }
+  button {
+    -moz-appearance: none!important;
+    background-color: var(--in-content-page-background)!important;
+    border: 1px solid!important;
+    border-radius: 3px!important;
+    color: var(--in-content-page-color)!important;
+    border-color: var(--in-content-box-border-color)!important
+  }
+  button:hover {
+    background-color: var(--in-content-box-background)!important
+  }
+}
