@@ -974,7 +974,7 @@ url-prefix(https://discovery.addons.mozilla.org) {
   }
 }
 @-moz-document url-prefix(about:blank) {
-  html > body:empty {
+  html > body:empty:not(.vimvixen-console) {
     background-color: var(--in-content-page-background)!important;
     margin: 0!important
   }
