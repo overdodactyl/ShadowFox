@@ -1934,6 +1934,14 @@ url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/src/content/e
     color: var(--theme-highlight-green)!important
   }
 }
+/*! Icons */
+/*! Redirector button for dark Firefox themes */
+toolbarbutton#toggle-button--redirectoreinaregilssoncom-redirector[image*=active] {
+  filter: invert(100%) brightness(600%)
+}
+toolbarbutton#toggle-button--redirectoreinaregilssoncom-redirector[image*=disabled] {
+  filter: invert(100%) brightness(250%)
+}
 @-moz-document url-prefix("moz-extension://{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/") {
   body,
   html {
