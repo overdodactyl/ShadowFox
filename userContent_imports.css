@@ -14,8 +14,6 @@
 @import "css/userContent-files/view_source.css";
 @import "css/userContent-files/rss.css";
 
-
-
 /* Import Relevant webextension tweaks here
  * IMPORTANT: If used, change the Internal UUID in the corresponding css file */
 @import "css/userContent-files/webextension-tweaks/generic_style.css";

@@ -79,7 +79,10 @@ url-prefix(https://discovery.addons.mozilla.org) {
     background: var(--in-content-page-background)!important
   }
   #homeContentsGroup checkbox[src] .checkbox-icon,
+  .arrowhead,
   .checkbox-icon,
+  .content-blocking-cookies-image,
+  .content-blocking-trackers-image,
   .content-container .icon-container .icon[src=""],
   .extension-controlled-icon,
   .snippet .block-snippet-button,
@@ -90,6 +93,8 @@ url-prefix(https://discovery.addons.mozilla.org) {
   .searchBarShownImage {
     filter: invert(80%)!important
   }
+  #trackingGroup .indent > description,
+  #trackingGroup description.indent,
   .collapsible-section .section-top-bar .info-option-manage button,
   .topic .topic-read-more,
   a:link {
@@ -234,6 +239,7 @@ url-prefix(https://discovery.addons.mozilla.org) {
     border-color: var(--in-content-box-border-color)!important
   }
   .collapsible-section .section-top-bar .info-option,
+  .content-blocking-category,
   .extension-controlled,
   .prefs-pane .prefs-modal-inner-wrapper .options,
   .sections-list .section-empty-state {
