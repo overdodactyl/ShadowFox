@@ -1,4 +1,9 @@
 @-moz-document url-prefix(chrome://) {
+  .browser-toolbar.titlebar-color:-moz-lwtheme-brighttext,
+  .tab-background:not([selected]):-moz-lwtheme-brighttext {
+    background-color: var(--tab-background-color)!important;
+    color: var(--tab-color)!important
+  }
   @media screen and (-moz-os-version:windows-win7) {
     window {
       background-color: var(--tone-9)!important;
