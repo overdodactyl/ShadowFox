@@ -14,7 +14,7 @@ ShadowFox styles the entire user interface, protected webpages (such as `about:`
 
 ## Installation and Updating
 
-A cross-platform installer/uninstaller/updater is maintained in the [shadowfox-updater](https://github.com/SrKomodo/shadowfox-updater) repository.  Latest versions can be found in the [releases](https://github.com/SrKomodo/shadowfox-updater/releases) section, or via `Homebrew` and `AUR`.  Please see the [README](https://github.com/SrKomodo/shadowfox-updater/blob/master/README.md) file for details on how to use the updater (GUI and CLI options available) and solutions to common problems.
+A cross-platform installer/uninstaller/updater is maintained in the [shadowfox-updater](https://github.com/SrKomodo/shadowfox-updater) repository.  Latest versions can be found in the [releases](https://github.com/SrKomodo/shadowfox-updater/releases) section, or via `Homebrew`, `MacPorts`, and `AUR`.  Please see the [README](https://github.com/SrKomodo/shadowfox-updater/blob/master/README.md) file for details on how to use the updater (GUI and CLI options available) and solutions to common problems.
 
 ## Customization
 
