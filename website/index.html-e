@@ -191,7 +191,8 @@
             <ul>
               <li><i class="ion-android-download icon-small"></i><a href="https://github.com/SrKomodo/shadowfox-updater/releases/download/v1.7.11/shadowfox_mac_x32"> MacOS_x32</a></li>
               <li><i class="ion-android-download icon-small"></i><a href="https://github.com/SrKomodo/shadowfox-updater/releases/download/v1.7.11/shadowfox_mac_x64"> MacOS_x64 </a></li>
-              <li><i class="ion-android-done icon-small"></i><a href="https://github.com/overdodactyl/ShadowFox#installation"> Homebrew </a></li>
+              <li><i class="ion-android-done icon-small"></i><a href="https://github.com/overdodactyl/ShadowFox#installation-and-updating"> Homebrew </a></li>
+              <li><i class="ion-android-done icon-small"></i><a href="https://github.com/overdodactyl/ShadowFox#installation-and-updating"> MacPorts </a></li>
             </ul>
           </div>
         </div>
