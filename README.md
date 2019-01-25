@@ -26,9 +26,9 @@ Depending on how much you want to customize ShadowFox, you may be better suited 
 
 * Chat about ShadowFox on Slack - [invitation link](https://join.slack.com/t/shadowfox-workspace/shared_invite/enQtMzU3NTU2NTQ0NDA1LTcwN2I1M2I4MzlkMWFlMWEzODc2MTY1NzU2NjhlYTgzOGY5ZTQzM2UxZTFiZDMxNDM1NDMyNjlhOWQ4MWQ3ZDc)
 
-## Find a bug? Have a feature request? Have any questions?
+## Found a bug? Got a feature request? Got any questions?
 
-Please first read through the [wiki](https://github.com/overdodactyl/ShadowFox/wiki/) (including the getting started information, troubleshooting, and known problems) and take a look at any open [issues](https://github.com/overdodactyl/ShadowFox/issues).  If you can't find a duplicate request, bug, or an answer to your question, please feel free to either:
+Please read through the [wiki](https://github.com/overdodactyl/ShadowFox/wiki/) first (including the getting started information, troubleshooting, and known problems) then take a look at any open [issues](https://github.com/overdodactyl/ShadowFox/issues).  If you can't find any duplicate request, bug, or an answer to your question, then please feel free to either:
 
 * Open a [new issue](https://github.com/overdodactyl/ShadowFox/issues/new)
 
