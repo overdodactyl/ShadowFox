@@ -2730,9 +2730,6 @@ toolbarbutton#toggle-button--redirectoreinaregilssoncom-redirector[image*=disabl
   li.listEntry span.obsolete {
     color: var(--warning-color)!important
   }
-  svg {
-    fill: var(--in-content-page-color)!important
-  }
   input[type=text] {
     background: var(--tone-6)!important;
     color: var(--in-content-page-color)!important;
