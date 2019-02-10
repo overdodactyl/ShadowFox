@@ -14,6 +14,7 @@
 @-moz-document url-prefix(https://discovery.addons.mozilla.org),
 url-prefix(chrome://),
 url-prefix(about:),
+url-prefix(file:),
 url(https://www.mozilla.org/credits/),
 url-prefix(https://addons.mozilla.org),
 url-prefix(http://addons.mozilla.org),
@@ -2755,6 +2756,22 @@ toolbarbutton#toggle-button--redirectoreinaregilssoncom-redirector[image*=disabl
   }
   #domInspector li > span:first-child {
     color: var(--in-content-page-color)!important
+  }
+}
+@-moz-document url-prefix("moz-extension://uBlock0@raymondhill.net/logger-ui") {
+  .fa-icon > svg,
+  .ubo-icon > svg {
+    fill: var(--in-content-page-color)!important
+  }
+  .permatoolbar .button.active {
+    fill: var(--in-content-link-color)!important
+  }
+  #netInspector #filterInput > input {
+    background: var(--in-content-box-background)!important;
+    -moz-appearance: none
+  }
+  #netInspector #filterInput {
+    border-color: var(--in-content-box-border-color)!important
   }
 }
 @-moz-document url-prefix("about:blank") {

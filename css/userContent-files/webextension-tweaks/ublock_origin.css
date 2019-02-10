@@ -324,6 +324,22 @@
     color: var(--in-content-page-color)!important
   }
 }
+@-moz-document url-prefix("moz-extension://uBlock0@raymondhill.net/logger-ui") {
+  .fa-icon>svg,
+  .ubo-icon>svg {
+    fill: var(--in-content-page-color)!important
+  }
+  .permatoolbar .button.active {
+    fill: var(--in-content-link-color)!important
+  }
+  #netInspector #filterInput > input {
+    background: var(--in-content-box-background)!important;
+    -moz-appearance: none
+  }
+  #netInspector #filterInput {
+    border-color: var(--in-content-box-border-color)!important
+  }
+}
 @-moz-document url-prefix("about:blank") {
   aside {
     background-color: var(--in-content-page-background)!important;
