@@ -2736,13 +2736,6 @@ toolbarbutton#toggle-button--redirectoreinaregilssoncom-redirector[image*=disabl
     color: var(--in-content-page-color)!important;
     border: none!important
   }
-  #modalOverlay > div > div:nth-of-type(1),
-  #modalOverlay > div > div:nth-of-type(2) {
-    background-color: var(--tone-9)!important
-  }
-  #modalOverlay > div > div:nth-of-type(2) svg {
-    stroke: var(--tone-4)!important
-  }
   #modalOverlay > div > div:nth-of-type(2):hover svg {
     stroke: var(--tone-1)!important
   }
@@ -2773,44 +2766,109 @@ toolbarbutton#toggle-button--redirectoreinaregilssoncom-redirector[image*=disabl
   #netInspector #filterInput {
     border-color: var(--in-content-box-border-color)!important
   }
-}
-@-moz-document url-prefix("about:blank") {
-  aside {
-    background-color: var(--in-content-page-background)!important;
-    border-color: var(--tone-8)!important;
-    color: var(--in-content-page-color)!important
+  textarea {
+    -moz-appearance: none;
+    background: var(--in-content-box-background)!important;
+    color: var(--in-content-text-color)!important;
+    border: 1px solid!important
   }
-  ul > li > ul > li:hover {
-    background-color: var(--in-content-box-background)!important
+  #modalOverlay > div > div:nth-of-type(1),
+  #modalOverlay > div > div:nth-of-type(2) {
+    background-color: var(--in-content-page-background)!important
   }
-  section > div:first-child > textarea {
+  #modalOverlay > div > div:nth-of-type(2) svg {
+    stroke: var(--tone-4)!important
+  }
+  #loggerExportDialog .options span.on[data-i18n],
+  #loggerExportDialog .options span.pushbutton:active {
+    background-color: var(--in-content-primary-button-background)!important;
+    color: var(--in-content-selected-text)!important
+  }
+  #loggerExportDialog .options span[data-i18n] {
+    border: 1px solid!important
+  }
+  #loggerExportDialog .options span[data-i18n]:hover {
+    background-color: var(--in-content-primary-button-background-hover)!important;
+    color: var(--in-content-selected-text)!important;
+    border-color: var(--in-content-primary-button-background-hover)!important
+  }
+  #netInspector #filterExprPicker span.on[data-filtex] {
+    background-color: var(--in-content-primary-button-background)!important;
+    border: 1px solid!important;
+    color: var(--in-content-selected-text)!important
+  }
+  #netInspector #filterExprPicker span[data-filtex]:hover {
+    background-color: var(--in-content-primary-button-background-hover)!important;
+    border: 1px solid!important;
+    color: var(--in-content-selected-text)!important
+  }
+  #netFilteringDialog > .panes > .details > div {
     background-color: var(--in-content-box-background)!important;
-    color: var(--in-content-page-color)!important
-  }
-  section > div:first-child {
     border-color: var(--in-content-box-border-color)!important
   }
-  section.invalidFilter > div:first-child {
-    border-color: red!important
+  #netFilteringDialog > .panes > .details > div[data-status="1"],
+  #vwRenderer .logEntry > div[data-status="1"] {
+    background-color: #463237!important
   }
-  button {
-    background-color: var(--in-content-page-background)!important;
+  body[dir=ltr] #netFilteringDialog > .panes > .details > div > span:nth-of-type(1) {
+    border-color: var(--in-content-box-border-color)!important
+  }
+  #netFilteringDialog > .headers > .header {
+    background-color: var(--in-content-box-background)!important;
+    border-color: var(--in-content-box-border-color)!important
+  }
+  #netFilteringDialog[data-pane=details] > .headers > [data-pane=details],
+  #netFilteringDialog[data-pane=dynamic] > .headers > [data-pane=dynamic],
+  #netFilteringDialog[data-pane=static] > .headers > [data-pane=static] {
+    background-color: var(--in-content-box-background)!important;
     border-color: var(--in-content-box-border-color)!important;
-    color: var(--in-content-page-color)!important
+    color: var(--in-content-selected-text)!important
   }
-  button:disabled {
-    color: var(--tone-5)!important
+  #netFilteringDialog > div.panes > .dynamic .entry {
+    background-color: var(--in-content-box-background)!important;
+    border-color: var(--in-content-box-border-color)!important
   }
-  button:not(:disabled):hover {
-    background-color: var(--in-content-box-background-hover)!important
+  a {
+    color: var(--in-content-link-color)
   }
-  #create:not(:disabled) {
-    background-color: var(--theme-highlight-yellow)!important;
-    color: #000!important
-  }
-  body.preview #preview {
-    background-color: var(--theme-highlight-blue)!important;
-    color: #000!important
+  @-moz-document url-prefix("about:blank") {
+    aside {
+      background-color: var(--in-content-page-background)!important;
+      border-color: var(--tone-8)!important;
+      color: var(--in-content-page-color)!important
+    }
+    ul > li > ul > li:hover {
+      background-color: var(--in-content-box-background)!important
+    }
+    section > div:first-child > textarea {
+      background-color: var(--in-content-box-background)!important;
+      color: var(--in-content-page-color)!important
+    }
+    section > div:first-child {
+      border-color: var(--in-content-box-border-color)!important
+    }
+    section.invalidFilter > div:first-child {
+      border-color: red!important
+    }
+    button {
+      background-color: var(--in-content-page-background)!important;
+      border-color: var(--in-content-box-border-color)!important;
+      color: var(--in-content-page-color)!important
+    }
+    button:disabled {
+      color: var(--tone-5)!important
+    }
+    button:not(:disabled):hover {
+      background-color: var(--in-content-box-background-hover)!important
+    }
+    #create:not(:disabled) {
+      background-color: var(--theme-highlight-yellow)!important;
+      color: #000!important
+    }
+    body.preview #preview {
+      background-color: var(--theme-highlight-blue)!important;
+      color: #000!important
+    }
   }
 }
 /*! Alters the webextension uBO-Scope
