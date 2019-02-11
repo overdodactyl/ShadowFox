@@ -6,7 +6,6 @@
     background-image: none!important;
     border-color: var(--in-content-box-border-color)!important;
     color: var(--in-content-text-color)!important;
-    opacity: 1!important
   }
   button#bye,
   button#proceedPermanent,
@@ -37,7 +36,7 @@
   body,
   body[dir=ltr] #panes > div {
     background: var(--tone-7)!important;
-    color: var(--tone-4)!important
+    color: var(--tone-3)!important
   }
   #diff {
     border-color: var(--tone-5)!important
@@ -298,17 +297,25 @@
     color: var(--warning-color)!important
   }
   input[type=text] {
+    -moz-appearance: none !important;
     background: var(--tone-6)!important;
     color: var(--in-content-page-color)!important;
     border: none!important
-  }
+  }  
   #modalOverlay > div > div:nth-of-type(2):hover svg {
     stroke: var(--tone-1)!important
   }
   #netInspector #filterExprPicker {
     background-color: var(--in-content-box-background)!important;
-    color: var(--tone-4)!important;
+    color: var(--tone-3)!important;
     border-color: var(--in-content-box-border-color)!important
+  }
+  #netInspector #filterExprPicker > div {
+    border: none !important;
+    border-top: 1px solid var(--tone-5) !important
+  }
+  #netInspector #filterExprPicker > div:first-of-type {
+    border: none !important;
   }
   #domInspector ul {
     background-color: var(--in-content-page-background)!important
@@ -397,7 +404,45 @@
   a {
     color: var(--in-content-link-color)
   }
-  @-moz-document url-prefix("about:blank") {
+  #netInspector #filterExprButton {
+    top: 0!important
+  }
+  #netInspector #filterExprButton:hover {
+    background-color: transparent!important
+  }
+  select {
+    color: var(--in-content-selected-text) !important;
+    border-color: var(--in-content-box-border-color)!important;
+    background: var(--tone-6) !important;
+    -moz-appearance: none !important; /* remove default arrow */
+    /* add custom arrow */
+    padding-right: 18px !important;
+    background-image: url(data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2248%22%20height%3D%2248%22%20viewBox%3D%220%200%2048%2048%22%3E%3Cpath%20d%3D%22M20%2020l10%2010%2010-10z%22%20fill%3D%22%23ccc%22%2F%3E%3C%2Fsvg%3E) !important;
+    background-position: center right !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important
+  }
+  select#pageSelector {
+    color: var(--in-content-selected-text) !important;
+    border-color: var(--in-content-box-border-color)!important;
+    background: var(--tone-6) !important;
+    -moz-appearance: none !important; /* remove default arrow */
+    /* add custom arrow */
+    padding-right: 25px !important;
+    background-image: url(data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2248%22%20height%3D%2248%22%20viewBox%3D%220%200%2048%2048%22%3E%3Cpath%20d%3D%22M20%2020l10%2010%2010-10z%22%20fill%3D%22%23ccc%22%2F%3E%3C%2Fsvg%3E) !important;
+    background-position: center right !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important
+  }
+  #domInspector li.isCosmeticHide,
+  #domInspector li.isCosmeticHide ul,
+  #domInspector li.isCosmeticHide li {
+    background-color: var(--red-90) !important
+  }
+  #netFilteringDialog > .headers > .tools > span:hover {
+    var(--in-content-box-background-active) !important
+  }
+ /* @-moz-document url-prefix("about:blank") {
     aside {
       background-color: var(--in-content-page-background)!important;
       border-color: var(--tone-8)!important;
@@ -435,5 +480,5 @@
       background-color: var(--theme-highlight-blue)!important;
       color: #000!important
     }
-  }
+  }/**/
 }
