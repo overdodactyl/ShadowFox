@@ -152,6 +152,6 @@ regexp(".*\\.(p|P)(d|D)(f|F).*") {
     --cm-red: #de7474!important;
     --start-indicator-for-updater-scripts: black;
     --end-indicator-for-updater-scripts: black;
-    --dummy-variable-for-updater-scripys: black
+    --dummy-variable-for-updater-scripts: black
   }
 }
