@@ -144,32 +144,6 @@
     background-color: #cdc16e!important;
     opacity: 1!important
   }
-  body.advancedUser #firewallContainer.colorBlind > div > span.blockRule.ownRule {
-    background-color: #000060!important
-  }
-  body.advancedUser #firewallContainer.colorBlind > div > span.blockRule {
-    background-color: #787dab!important
-  }
-  body.advancedUser #firewallContainer.colorBlind > div > span.allowRule.ownRule {
-    background-color: #fbb900!important
-  }
-  body.advancedUser #firewallContainer.colorBlind > div > span.allowRule {
-    background-color: #f2d98d!important
-  }
-  body.advancedUser #firewallContainer.colorBlind > div > span.noopRule.ownRule {
-    background-color: #2f2e2e!important
-  }
-  body.advancedUser #firewallContainer.colorBlind > div > span.noopRule {
-    background-color: #a1a1a1!important
-  }
-  #firewallContainer.colorBlind > div.allowed > span:first-of-type::before,
-  #firewallContainer.colorBlind.minimized > div.isDomain.totalAllowed > span:first-of-type::before {
-    background-color: #ebd287!important
-  }
-  #firewallContainer.colorBlind > div.blocked > span:first-of-type::before,
-  #firewallContainer.colorBlind.minimized > div.isDomain.totalBlocked > span:first-of-type::before {
-    background-color: #787cab!important
-  }
   #dashboard-nav-widgets {
     border-color: var(--tone-5)!important;
     background-color: var(--tone-8)!important
