@@ -144,32 +144,6 @@
     background-color: #cdc16e!important;
     opacity: 1!important
   }
-  body.advancedUser #firewallContainer.colorBlind > div > span.blockRule.ownRule {
-    background-color: #000060!important
-  }
-  body.advancedUser #firewallContainer.colorBlind > div > span.blockRule {
-    background-color: #787dab!important
-  }
-  body.advancedUser #firewallContainer.colorBlind > div > span.allowRule.ownRule {
-    background-color: #fbb900!important
-  }
-  body.advancedUser #firewallContainer.colorBlind > div > span.allowRule {
-    background-color: #f2d98d!important
-  }
-  body.advancedUser #firewallContainer.colorBlind > div > span.noopRule.ownRule {
-    background-color: #2f2e2e!important
-  }
-  body.advancedUser #firewallContainer.colorBlind > div > span.noopRule {
-    background-color: #a1a1a1!important
-  }
-  #firewallContainer.colorBlind > div.allowed > span:first-of-type::before,
-  #firewallContainer.colorBlind.minimized > div.isDomain.totalAllowed > span:first-of-type::before {
-    background-color: #ebd287!important
-  }
-  #firewallContainer.colorBlind > div.blocked > span:first-of-type::before,
-  #firewallContainer.colorBlind.minimized > div.isDomain.totalBlocked > span:first-of-type::before {
-    background-color: #787cab!important
-  }
   #dashboard-nav-widgets {
     border-color: var(--tone-5)!important;
     background-color: var(--tone-8)!important
@@ -258,6 +232,73 @@
   #modalOverlay > div > div:nth-of-type(2):hover svg {
     stroke: var(--tone-1)!important
   }
+  
+  /*** COLORBLIND MODE START ***/
+  /* Colors can be replaced by changing the first 6 digits of the 8 digit RGBA Hex value */
+  /* #00136e = dark blue */
+  body.colorBlind #vwRenderer .logEntry > div[data-status="1"],
+  body.colorBlind #netFilteringDialog > .panes > .details > div[data-status="1"],
+  body.colorBlind #vwRenderer .logEntry > div.cosmetic,
+  body.colorBlind #vwRenderer .logEntry > div.redirect {
+    background-color: #00136e1a !important;
+  }
+  body.colorBlind #vwRenderer .logEntry > div[data-status="1"] > span:nth-of-type(7) b,
+  body.colorBlind #netFilteringDialog > .panes > .details > div[data-status="1"] b {
+    background-color: #00136e33 !important;
+  }
+  body.colorBlind #netFilteringDialog > div.panes > .dynamic .entry > .action.block,
+  body.advancedUser #firewallContainer.colorBlind > div > span.blockRule {
+    background-color: #00136e66 !important;
+  }
+  body.colorBlind #netFilteringDialog > div.panes > .dynamic .entry > .action.own.block,
+  body.colorBlind #netFilteringDialog > div.panes > .dynamic .entry > .action > .block,
+  #firewallContainer.colorBlind > div.blocked > span:first-of-type::before,
+  #firewallContainer.colorBlind.minimized > div.isDomain.totalBlocked > span:first-of-type::before,
+  body.advancedUser #firewallContainer.colorBlind > div > span.blockRule.ownRule,
+  #actionSelector.colorBlind > span:nth-of-type(3) {
+    background-color: #00136eff !important;
+  }
+
+  /* #606060 = grey */
+  body.colorBlind #vwRenderer .logEntry > div[data-status="3"] {
+    background-color: #6060601a !important;
+  }
+  body.colorBlind #vwRenderer .logEntry > div[data-status="3"] > span:nth-of-type(7) b {
+    background-color: #60606033 !important;
+  }
+  body.colorBlind #netFilteringDialog > div.panes > .dynamic .entry > .action.noop,
+  body.advancedUser #firewallContainer.colorBlind > div > span.noopRule {
+    background-color: #60606066 !important;
+  }
+
+  /* #6c6c6c = light grey */
+  #netFilteringDialog > div.panes > .dynamic .entry > .action.own.noop,
+  body.colorBlind #netFilteringDialog > div.panes > .dynamic .entry > .action.own.noop {
+    background-color: #6c6c6cff !important;
+  }
+
+  /* #ffc239 = yellow */
+  body.colorBlind #vwRenderer .logEntry > div[data-status="2"],
+  body.colorBlind #netFilteringDialog > .panes > .details > div[data-status="2"] {
+    background-color: #ffc2391a !important;
+  }
+  body.colorBlind #vwRenderer .logEntry > div[data-status="2"] > span:nth-of-type(7) b,
+  body.colorBlind #netFilteringDialog > .panes > .details > div[data-status="2"] b {
+    background-color: #ffc23933 !important;
+  }
+  body.colorBlind #netFilteringDialog > div.panes > .dynamic .entry > .action.allow,
+  body.advancedUser #firewallContainer.colorBlind > div > span.allowRule {
+    background-color: #ffc23966 !important;
+  }
+  body.colorBlind #netFilteringDialog > div.panes > .dynamic .entry > .action.own.allow,
+  body.colorBlind #netFilteringDialog > div.panes > .dynamic .entry > .action > .allow,
+  #firewallContainer.colorBlind > div.allowed > span:first-of-type::before,
+  #firewallContainer.colorBlind.minimized > div.isDomain.totalAllowed > span:first-of-type::before,
+  body.advancedUser #firewallContainer.colorBlind > div > span.allowRule.ownRule,
+  #actionSelector.colorBlind > span:first-of-type {
+    background-color: #ffc239ff !important;
+  }
+  /*** COLORBLIND MODE END ***/
 }
 
 @-moz-document url-prefix("moz-extension://uBlock0@raymondhill.net/logger-ui") {
