@@ -22,7 +22,7 @@ gulp.task('minify_base_code', function() {
 /* Remove internal UUIDs */
 gulp.task('remove_UUIDs', function() {
   return gulp.src('.')
-    .pipe(exec('sh scripts/uuids.sh remove'))
+    .pipe(exec('sh scripts/uuids.sh remove nogen'))
 });
 
 

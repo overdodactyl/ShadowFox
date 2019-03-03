@@ -3009,6 +3009,15 @@ body.colorBlind #netFilteringDialog > .panes > .details > div[data-status="2"],
     border-color: var(--in-content-box-border-color)!important
   }
 }
+/*! Alters the webextension UltraWide Video 21:9
+  IMPORTANT: change the Internal UUID */
+@-moz-document url-prefix("moz-extension://{75afe46a-7a50-4c6b-b866-c43a1075b071}/html/popup.html") {
+  html {
+    background: var(--in-content-box-background)!important;
+    color: var(--in-content-page-color)!important;
+    border: 3px solid!important
+  }
+}
 /*! Alters the webextension uMatrix
   IMPORTANT: change the Internal UUID */
 @-moz-document url-prefix("moz-extension://uMatrix@raymondhill.net/") {
