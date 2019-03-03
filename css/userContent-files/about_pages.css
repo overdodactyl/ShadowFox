@@ -433,6 +433,11 @@ url-prefix(https://discovery.addons.mozilla.org) {
     box-shadow: inset 0 -3px 0 0 var(--in-content-primary-button-background-hover)!important
   }
 }
+@-moz-document url-prefix(about:addons) {
+  .DiscoPane-header-intro {
+    color: var(--in-content-text-color)!important
+  }
+}
 @-moz-document url-prefix(about:blank) {
   html > body:empty:not(.vimvixen-console) {
     background-color: var(--in-content-page-background)!important;
