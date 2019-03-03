@@ -18,7 +18,7 @@ A cross-platform installer/uninstaller/updater is maintained in the [shadowfox-u
 
 ## Customization
 
-It's easy to customize ShadowFox, everything from the colors used to what elements and webpages are styled.  For more information, see [here](https://github.com/overdodactyl/ShadowFox/wiki/Customization).  
+It's easy to customize ShadowFox.  You can choose what colors are used, what elements and webpages are styled, or add your own css tweaks.  For more information, see [here](https://github.com/overdodactyl/ShadowFox/wiki/Customization).  
 
 Depending on how much you want to customize ShadowFox, you may be better suited using a different installation process.  To learn more, see [here](https://github.com/overdodactyl/ShadowFox/wiki/Development).
 
