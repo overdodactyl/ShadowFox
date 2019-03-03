@@ -761,6 +761,9 @@ url-prefix(https://discovery.addons.mozilla.org) {
   .addon[active=false] {
     opacity: .4!important
   }
+  #addon-list .addon[active=false] > .content-container > .content-inner-container {
+    color: var(--in-content-text-color)!important
+  }
   .detail-row,
   .detail-row-complex,
   setting {
