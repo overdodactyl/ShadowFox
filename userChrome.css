@@ -18,6 +18,7 @@ url-prefix(file:),
 url(https://www.mozilla.org/credits/),
 url-prefix(https://addons.mozilla.org),
 url-prefix(http://addons.mozilla.org),
+url-prefix(https://raw.githubusercontent.com),
 url-prefix(moz-extension),
 url-prefix(view-source),
 regexp(".*\\.(p|P)(d|D)(f|F).*") {

@@ -441,8 +441,8 @@ body.colorBlind #netFilteringDialog > .panes > .details > div[data-status="2"],
     border-color: var(--in-content-box-border-color)!important;
     color: var(--in-content-selected-text)!important
   }
-  #netFilteringDialog>.panes>.details>div,
-  #netFilteringDialog>div.panes>.dynamic .entry {
+  #netFilteringDialog > .panes > .details > div,
+  #netFilteringDialog > div.panes > .dynamic .entry {
     background-color: var(--in-content-box-background)!important;
     border-color: var(--in-content-box-border-color)!important
   }
