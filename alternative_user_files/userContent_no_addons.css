@@ -152,7 +152,7 @@ regexp(".*\\.(p|P)(d|D)(f|F).*") {
     --cm-red: #de7474!important;
     --start-indicator-for-updater-scripts: black;
     --end-indicator-for-updater-scripts: black;
-    --dummy-variable-for-updater-scripys: black
+    --dummy-variable-for-updater-scripts: black
   }
 }
 menupopup,
@@ -980,6 +980,11 @@ url-prefix(https://discovery.addons.mozilla.org) {
   .font-type-buttons > button.selected,
   .font-type-buttons > button:active:hover {
     box-shadow: inset 0 -3px 0 0 var(--in-content-primary-button-background-hover)!important
+  }
+}
+@-moz-document url-prefix(about:addons) {
+  .DiscoPane-header-intro {
+    color: var(--in-content-text-color)!important
   }
 }
 @-moz-document url-prefix(about:blank) {

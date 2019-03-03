@@ -152,7 +152,7 @@ regexp(".*\\.(p|P)(d|D)(f|F).*") {
     --cm-red: #de7474!important;
     --start-indicator-for-updater-scripts: black;
     --end-indicator-for-updater-scripts: black;
-    --dummy-variable-for-updater-scripys: black
+    --dummy-variable-for-updater-scripts: black
   }
 }
 menupopup,
@@ -980,6 +980,11 @@ url-prefix(https://discovery.addons.mozilla.org) {
   .font-type-buttons > button.selected,
   .font-type-buttons > button:active:hover {
     box-shadow: inset 0 -3px 0 0 var(--in-content-primary-button-background-hover)!important
+  }
+}
+@-moz-document url-prefix(about:addons) {
+  .DiscoPane-header-intro {
+    color: var(--in-content-text-color)!important
   }
 }
 @-moz-document url-prefix(about:blank) {
@@ -2439,8 +2444,7 @@ toolbarbutton#toggle-button--redirectoreinaregilssoncom-redirector[image*=disabl
     background-color: var(--in-content-page-background)!important;
     background-image: none!important;
     border-color: var(--in-content-box-border-color)!important;
-    color: var(--in-content-text-color)!important;
-    opacity: 1!important
+    color: var(--in-content-text-color)!important
   }
   button#bye,
   button#proceedPermanent,
@@ -2471,7 +2475,7 @@ toolbarbutton#toggle-button--redirectoreinaregilssoncom-redirector[image*=disabl
   body,
   body[dir=ltr] #panes > div {
     background: var(--tone-7)!important;
-    color: var(--tone-4)!important
+    color: var(--tone-3)!important
   }
   #diff {
     border-color: var(--tone-5)!important
@@ -2578,32 +2582,6 @@ toolbarbutton#toggle-button--redirectoreinaregilssoncom-redirector[image*=disabl
     background-color: #cdc16e!important;
     opacity: 1!important
   }
-  body.advancedUser #firewallContainer.colorBlind > div > span.blockRule.ownRule {
-    background-color: #000060!important
-  }
-  body.advancedUser #firewallContainer.colorBlind > div > span.blockRule {
-    background-color: #787dab!important
-  }
-  body.advancedUser #firewallContainer.colorBlind > div > span.allowRule.ownRule {
-    background-color: #fbb900!important
-  }
-  body.advancedUser #firewallContainer.colorBlind > div > span.allowRule {
-    background-color: #f2d98d!important
-  }
-  body.advancedUser #firewallContainer.colorBlind > div > span.noopRule.ownRule {
-    background-color: #2f2e2e!important
-  }
-  body.advancedUser #firewallContainer.colorBlind > div > span.noopRule {
-    background-color: #a1a1a1!important
-  }
-  #firewallContainer.colorBlind > div.allowed > span:first-of-type::before,
-  #firewallContainer.colorBlind.minimized > div.isDomain.totalAllowed > span:first-of-type::before {
-    background-color: #ebd287!important
-  }
-  #firewallContainer.colorBlind > div.blocked > span:first-of-type::before,
-  #firewallContainer.colorBlind.minimized > div.isDomain.totalBlocked > span:first-of-type::before {
-    background-color: #787cab!important
-  }
   #dashboard-nav-widgets {
     border-color: var(--tone-5)!important;
     background-color: var(--tone-8)!important
@@ -2663,7 +2641,145 @@ toolbarbutton#toggle-button--redirectoreinaregilssoncom-redirector[image*=disabl
   .permatoolbar .button:hover {
     background-color: var(--grey-60)!important
   }
-  #netInspector tr.blocked {
+  .modalDialog .dialog {
+    background-color: var(--tone-8)!important;
+    border-color: var(--tone-5)!important
+  }
+  li.listEntry > a.remove,
+  li.listEntry > a.remove:visited,
+  li.listEntry span.failed,
+  li.listEntry span.unsecure {
+    color: #de7474!important
+  }
+  a.fa.support,
+  a.mustread {
+    color: var(--in-content-page-color)!important
+  }
+  li.listEntry.mustread > a.mustread:hover {
+    color: var(--accent-2)!important
+  }
+  li.listEntry span.obsolete {
+    color: var(--warning-color)!important
+  }
+  input[type=text] {
+    -moz-appearance: none!important;
+    background: var(--tone-6)!important;
+    color: var(--in-content-page-color)!important;
+    border: none!important
+  }
+  #modalOverlay > div > div:nth-of-type(2):hover svg {
+    stroke: var(--tone-1)!important
+  }
+  /*! COLORBLIND MODE START 
+       Colors can be replaced by changing the first 6 digits of the 8 digit RGBA Hex value
+       #00136e = dark blue */
+body.colorBlind #netFilteringDialog > .panes > .details > div[data-status="1"],
+  body.colorBlind #vwRenderer .logEntry > div.cosmetic,
+  body.colorBlind #vwRenderer .logEntry > div.redirect,
+  body.colorBlind #vwRenderer .logEntry > div[data-status="1"] {
+    background-color: #00136e1a!important
+  }
+  body.colorBlind #netFilteringDialog > .panes > .details > div[data-status="1"] b,
+  body.colorBlind #vwRenderer .logEntry > div[data-status="1"] > span:nth-of-type(7) b {
+    background-color: #00136e33!important
+  }
+  body.advancedUser #firewallContainer.colorBlind > div > span.blockRule,
+  body.colorBlind #netFilteringDialog > div.panes > .dynamic .entry > .action.block {
+    background-color: #00136e66!important
+  }
+  #actionSelector.colorBlind > span:nth-of-type(3),
+  #firewallContainer.colorBlind > div.blocked > span:first-of-type::before,
+  #firewallContainer.colorBlind.minimized > div.isDomain.totalBlocked > span:first-of-type::before,
+  body.advancedUser #firewallContainer.colorBlind > div > span.blockRule.ownRule,
+  body.colorBlind #netFilteringDialog > div.panes > .dynamic .entry > .action > .block,
+  body.colorBlind #netFilteringDialog > div.panes > .dynamic .entry > .action.own.block {
+    background-color: #00136eff!important
+  }
+  /*! #606060 = grey */
+body.colorBlind #vwRenderer .logEntry > div[data-status="3"] {
+    background-color: #6060601a!important
+  }
+  body.colorBlind #vwRenderer .logEntry > div[data-status="3"] > span:nth-of-type(7) b {
+    background-color: #60606033!important
+  }
+  body.advancedUser #firewallContainer.colorBlind > div > span.noopRule,
+  body.colorBlind #netFilteringDialog > div.panes > .dynamic .entry > .action.noop {
+    background-color: #60606066!important
+  }
+  /*! #6c6c6c = light grey */
+#netFilteringDialog > div.panes > .dynamic .entry > .action.own.noop,
+  body.colorBlind #netFilteringDialog > div.panes > .dynamic .entry > .action.own.noop {
+    background-color: #6c6c6cff!important
+  }
+  /*! #ffc239 = yellow */
+body.colorBlind #netFilteringDialog > .panes > .details > div[data-status="2"],
+  body.colorBlind #vwRenderer .logEntry > div[data-status="2"] {
+    background-color: #ffc2391a!important
+  }
+  body.colorBlind #netFilteringDialog > .panes > .details > div[data-status="2"] b,
+  body.colorBlind #vwRenderer .logEntry > div[data-status="2"] > span:nth-of-type(7) b {
+    background-color: #ffc23933!important
+  }
+  body.advancedUser #firewallContainer.colorBlind > div > span.allowRule,
+  body.colorBlind #netFilteringDialog > div.panes > .dynamic .entry > .action.allow {
+    background-color: #ffc23966!important
+  }
+  #actionSelector.colorBlind > span:first-of-type,
+  #firewallContainer.colorBlind > div.allowed > span:first-of-type::before,
+  #firewallContainer.colorBlind.minimized > div.isDomain.totalAllowed > span:first-of-type::before,
+  body.advancedUser #firewallContainer.colorBlind > div > span.allowRule.ownRule,
+  body.colorBlind #netFilteringDialog > div.panes > .dynamic .entry > .action > .allow,
+  body.colorBlind #netFilteringDialog > div.panes > .dynamic .entry > .action.own.allow {
+    background-color: #ffc239ff!important
+  }
+  /*! COLORBLIND MODE END */
+
+}
+@-moz-document url-prefix("moz-extension://uBlock0@raymondhill.net/logger-ui") {
+  .fa-icon > svg,
+  .ubo-icon > svg {
+    fill: var(--in-content-page-color)!important
+  }
+  .permatoolbar .button.active {
+    fill: var(--in-content-link-color)!important
+  }
+  textarea {
+    -moz-appearance: none;
+    background: var(--in-content-box-background)!important;
+    color: var(--in-content-text-color)!important;
+    border: 1px solid!important
+  }
+  #netFilteringDialog > .panes > .details > div[data-status="1"],
+  #vwRenderer .logEntry > div[data-status="1"] {
+    background-color: #463237!important
+  }
+  a {
+    color: var(--in-content-link-color)
+  }
+  select {
+    color: var(--in-content-selected-text)!important;
+    border-color: var(--in-content-box-border-color)!important;
+    background: var(--tone-6)!important;
+    -moz-appearance: none!important;
+    /*! remove default arrow *//*! add custom arrow */padding-right: 18px!important;
+    background-image: url(data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2248%22%20height%3D%2248%22%20viewBox%3D%220%200%2048%2048%22%3E%3Cpath%20d%3D%22M20%2020l10%2010%2010-10z%22%20fill%3D%22%23ccc%22%2F%3E%3C%2Fsvg%3E)!important;
+    background-position: center right!important;
+    background-repeat: no-repeat!important;
+    background-size: contain!important
+  }
+  select#pageSelector {
+    color: var(--in-content-selected-text)!important;
+    border-color: var(--in-content-box-border-color)!important;
+    background: var(--tone-6)!important;
+    -moz-appearance: none!important;
+    /*! remove default arrow *//*! add custom arrow */padding-right: 25px!important;
+    background-image: url(data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2248%22%20height%3D%2248%22%20viewBox%3D%220%200%2048%2048%22%3E%3Cpath%20d%3D%22M20%2020l10%2010%2010-10z%22%20fill%3D%22%23ccc%22%2F%3E%3C%2Fsvg%3E)!important;
+    background-position: center right!important;
+    background-repeat: no-repeat!important;
+    background-size: contain!important
+  }
+  /*! #netInspector */
+#netInspector tr.blocked {
     background-color: #4b3137!important;
     color: #ff9494!important
   }
@@ -2684,11 +2800,53 @@ toolbarbutton#toggle-button--redirectoreinaregilssoncom-redirector[image*=disabl
   body:not(.popupOn) #netInspector tr.canMtx td:nth-of-type(2):hover {
     background: var(--tone-8)!important
   }
-  .modalDialog .dialog {
-    background-color: var(--tone-8)!important;
+  body #netInspector td {
     border-color: var(--tone-5)!important
   }
-  #netFilteringDialog .dialog > div.headers > span.header.selected {
+  #netInspector tr.maindoc {
+    background-color: var(--tone-8)!important;
+    color: var(--grey-30)!important
+  }
+  #netInspector #filterExprPicker {
+    background-color: var(--in-content-box-background)!important;
+    color: var(--tone-3)!important;
+    border-color: var(--in-content-box-border-color)!important
+  }
+  #netInspector #filterExprPicker > div {
+    border: none!important;
+    border-top: 1px solid!important
+  }
+  #netInspector #filterExprPicker > div:first-of-type {
+    border: none!important
+  }
+  #netInspector #filterInput > input {
+    background: var(--in-content-box-background)!important;
+    -moz-appearance: none
+  }
+  #netInspector #filterInput {
+    border-color: var(--in-content-box-border-color)!important
+  }
+  #netInspector #filterExprPicker span.on[data-filtex] {
+    background-color: var(--in-content-primary-button-background)!important;
+    border: 1px solid!important;
+    color: var(--in-content-selected-text)!important
+  }
+  #netInspector #filterExprPicker span[data-filtex]:hover {
+    background-color: var(--in-content-primary-button-background-hover)!important;
+    border: 1px solid!important;
+    color: var(--in-content-selected-text)!important
+  }
+  #netInspector #filterExprButton {
+    top: 0!important
+  }
+  #netInspector #filterExprButton:hover {
+    background-color: transparent!important
+  }
+  #netInspector #vwRenderer .logEntry > div.canDetails:hover > span {
+    background-color: var(--accent-3)!important
+  }
+  /*! #netFilteringDialog */
+#netFilteringDialog .dialog > div.headers > span.header.selected {
     background-color: var(--tone-8)!important;
     color: var(--tone-4)!important;
     border-color: var(--tone-6)!important
@@ -2708,108 +2866,6 @@ toolbarbutton#toggle-button--redirectoreinaregilssoncom-redirector[image*=disabl
     background-color: var(--tone-6)!important;
     border: none!important
   }
-  body #netInspector td {
-    border-color: var(--tone-5)!important
-  }
-  #netInspector tr.maindoc {
-    background-color: var(--tone-8)!important;
-    color: var(--grey-30)!important
-  }
-  li.listEntry > a.remove,
-  li.listEntry > a.remove:visited,
-  li.listEntry span.failed,
-  li.listEntry span.unsecure {
-    color: #de7474!important
-  }
-  a.fa.support,
-  a.mustread {
-    color: var(--in-content-page-color)!important
-  }
-  li.listEntry.mustread > a.mustread:hover {
-    color: var(--accent-2)!important
-  }
-  li.listEntry span.obsolete {
-    color: var(--warning-color)!important
-  }
-  input[type=text] {
-    background: var(--tone-6)!important;
-    color: var(--in-content-page-color)!important;
-    border: none!important
-  }
-  #modalOverlay > div > div:nth-of-type(2):hover svg {
-    stroke: var(--tone-1)!important
-  }
-  #netInspector #filterExprPicker {
-    background-color: var(--in-content-box-background)!important;
-    color: var(--tone-4)!important;
-    border-color: var(--in-content-box-border-color)!important
-  }
-  #domInspector ul {
-    background-color: var(--in-content-page-background)!important
-  }
-  #domInspector li > span:first-child {
-    color: var(--in-content-page-color)!important
-  }
-}
-@-moz-document url-prefix("moz-extension://uBlock0@raymondhill.net/logger-ui") {
-  .fa-icon > svg,
-  .ubo-icon > svg {
-    fill: var(--in-content-page-color)!important
-  }
-  .permatoolbar .button.active {
-    fill: var(--in-content-link-color)!important
-  }
-  #netInspector #filterInput > input {
-    background: var(--in-content-box-background)!important;
-    -moz-appearance: none
-  }
-  #netInspector #filterInput {
-    border-color: var(--in-content-box-border-color)!important
-  }
-  textarea {
-    -moz-appearance: none;
-    background: var(--in-content-box-background)!important;
-    color: var(--in-content-text-color)!important;
-    border: 1px solid!important
-  }
-  #modalOverlay > div > div:nth-of-type(1),
-  #modalOverlay > div > div:nth-of-type(2) {
-    background-color: var(--in-content-page-background)!important
-  }
-  #modalOverlay > div > div:nth-of-type(2) svg {
-    stroke: var(--tone-4)!important
-  }
-  #loggerExportDialog .options span.on[data-i18n],
-  #loggerExportDialog .options span.pushbutton:active {
-    background-color: var(--in-content-primary-button-background)!important;
-    color: var(--in-content-selected-text)!important
-  }
-  #loggerExportDialog .options span[data-i18n] {
-    border: 1px solid!important
-  }
-  #loggerExportDialog .options span[data-i18n]:hover {
-    background-color: var(--in-content-primary-button-background-hover)!important;
-    color: var(--in-content-selected-text)!important;
-    border-color: var(--in-content-primary-button-background-hover)!important
-  }
-  #netInspector #filterExprPicker span.on[data-filtex] {
-    background-color: var(--in-content-primary-button-background)!important;
-    border: 1px solid!important;
-    color: var(--in-content-selected-text)!important
-  }
-  #netInspector #filterExprPicker span[data-filtex]:hover {
-    background-color: var(--in-content-primary-button-background-hover)!important;
-    border: 1px solid!important;
-    color: var(--in-content-selected-text)!important
-  }
-  #netFilteringDialog > .panes > .details > div {
-    background-color: var(--in-content-box-background)!important;
-    border-color: var(--in-content-box-border-color)!important
-  }
-  #netFilteringDialog > .panes > .details > div[data-status="1"],
-  #vwRenderer .logEntry > div[data-status="1"] {
-    background-color: #463237!important
-  }
   body[dir=ltr] #netFilteringDialog > .panes > .details > div > span:nth-of-type(1) {
     border-color: var(--in-content-box-border-color)!important
   }
@@ -2824,51 +2880,80 @@ toolbarbutton#toggle-button--redirectoreinaregilssoncom-redirector[image*=disabl
     border-color: var(--in-content-box-border-color)!important;
     color: var(--in-content-selected-text)!important
   }
+  #netFilteringDialog > .panes > .details > div,
   #netFilteringDialog > div.panes > .dynamic .entry {
     background-color: var(--in-content-box-background)!important;
     border-color: var(--in-content-box-border-color)!important
   }
-  a {
-    color: var(--in-content-link-color)
+  /*! domInspector */
+#domInspector li > span:first-child {
+    color: var(--in-content-page-color)!important
   }
-  @-moz-document url-prefix("about:blank") {
-    aside {
-      background-color: var(--in-content-page-background)!important;
-      border-color: var(--tone-8)!important;
-      color: var(--in-content-page-color)!important
-    }
-    ul > li > ul > li:hover {
-      background-color: var(--in-content-box-background)!important
-    }
-    section > div:first-child > textarea {
-      background-color: var(--in-content-box-background)!important;
-      color: var(--in-content-page-color)!important
-    }
-    section > div:first-child {
-      border-color: var(--in-content-box-border-color)!important
-    }
-    section.invalidFilter > div:first-child {
-      border-color: red!important
-    }
-    button {
-      background-color: var(--in-content-page-background)!important;
-      border-color: var(--in-content-box-border-color)!important;
-      color: var(--in-content-page-color)!important
-    }
-    button:disabled {
-      color: var(--tone-5)!important
-    }
-    button:not(:disabled):hover {
-      background-color: var(--in-content-box-background-hover)!important
-    }
-    #create:not(:disabled) {
-      background-color: var(--theme-highlight-yellow)!important;
-      color: #000!important
-    }
-    body.preview #preview {
-      background-color: var(--theme-highlight-blue)!important;
-      color: #000!important
-    }
+  #domInspector li.isCosmeticHide,
+  #domInspector li.isCosmeticHide li,
+  #domInspector li.isCosmeticHide ul {
+    background-color: var(--red-90)!important
+  }
+  /*! #modalOverlay */
+#modalOverlay > div > div:nth-of-type(1),
+  #modalOverlay > div > div:nth-of-type(2) {
+    background-color: var(--in-content-page-background)!important
+  }
+  #modalOverlay > div > div:nth-of-type(2) svg {
+    stroke: var(--tone-4)!important
+  }
+  /*! #loggerExportDialog */
+#loggerExportDialog .options span.on[data-i18n],
+  #loggerExportDialog .options span.pushbutton:active {
+    background-color: var(--in-content-primary-button-background)!important;
+    color: var(--in-content-selected-text)!important
+  }
+  #loggerExportDialog .options span[data-i18n] {
+    border: 1px solid!important
+  }
+  #loggerExportDialog .options span[data-i18n]:hover {
+    background-color: var(--in-content-primary-button-background-hover)!important;
+    color: var(--in-content-selected-text)!important;
+    border-color: var(--in-content-primary-button-background-hover)!important
+  }
+}
+@-moz-document url-prefix("about:blank") {
+  aside {
+    background-color: var(--in-content-page-background)!important;
+    border-color: var(--tone-8)!important;
+    color: var(--in-content-page-color)!important
+  }
+  ul > li > ul > li:hover {
+    background-color: var(--in-content-box-background)!important
+  }
+  section > div:first-child > textarea {
+    background-color: var(--in-content-box-background)!important;
+    color: var(--in-content-page-color)!important
+  }
+  section > div:first-child {
+    border-color: var(--in-content-box-border-color)!important
+  }
+  section.invalidFilter > div:first-child {
+    border-color: red!important
+  }
+  button {
+    background-color: var(--in-content-page-background)!important;
+    border-color: var(--in-content-box-border-color)!important;
+    color: var(--in-content-page-color)!important
+  }
+  button:disabled {
+    color: var(--tone-5)!important
+  }
+  button:not(:disabled):hover {
+    background-color: var(--in-content-box-background-hover)!important
+  }
+  #create:not(:disabled) {
+    background-color: var(--theme-highlight-yellow)!important;
+    color: #000!important
+  }
+  body.preview #preview {
+    background-color: var(--theme-highlight-blue)!important;
+    color: #000!important
   }
 }
 /*! Alters the webextension uBO-Scope

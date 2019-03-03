@@ -5,8 +5,7 @@
     background-color: var(--in-content-page-background)!important;
     background-image: none!important;
     border-color: var(--in-content-box-border-color)!important;
-    color: var(--in-content-text-color)!important;
-    /*opacity: 1!important/**/
+    color: var(--in-content-text-color)!important/*! opacity: 1!important/**/
   }
   button#bye,
   button#proceedPermanent,
@@ -224,7 +223,7 @@
     color: var(--warning-color)!important
   }
   input[type=text] {
-    -moz-appearance: none !important;
+    -moz-appearance: none!important;
     background: var(--tone-6)!important;
     color: var(--in-content-page-color)!important;
     border: none!important
@@ -232,75 +231,71 @@
   #modalOverlay > div > div:nth-of-type(2):hover svg {
     stroke: var(--tone-1)!important
   }
-  
-  /*** COLORBLIND MODE START ***/
-  /* Colors can be replaced by changing the first 6 digits of the 8 digit RGBA Hex value */
-  /* #00136e = dark blue */
-  body.colorBlind #vwRenderer .logEntry > div[data-status="1"],
-  body.colorBlind #netFilteringDialog > .panes > .details > div[data-status="1"],
+  /*! COLORBLIND MODE START 
+       Colors can be replaced by changing the first 6 digits of the 8 digit RGBA Hex value
+       #00136e = dark blue */
+body.colorBlind #netFilteringDialog > .panes > .details > div[data-status="1"],
   body.colorBlind #vwRenderer .logEntry > div.cosmetic,
-  body.colorBlind #vwRenderer .logEntry > div.redirect {
-    background-color: #00136e1a !important;
+  body.colorBlind #vwRenderer .logEntry > div.redirect,
+  body.colorBlind #vwRenderer .logEntry > div[data-status="1"] {
+    background-color: #00136e1a!important
   }
-  body.colorBlind #vwRenderer .logEntry > div[data-status="1"] > span:nth-of-type(7) b,
-  body.colorBlind #netFilteringDialog > .panes > .details > div[data-status="1"] b {
-    background-color: #00136e33 !important;
+  body.colorBlind #netFilteringDialog > .panes > .details > div[data-status="1"] b,
+  body.colorBlind #vwRenderer .logEntry > div[data-status="1"] > span:nth-of-type(7) b {
+    background-color: #00136e33!important
   }
-  body.colorBlind #netFilteringDialog > div.panes > .dynamic .entry > .action.block,
-  body.advancedUser #firewallContainer.colorBlind > div > span.blockRule {
-    background-color: #00136e66 !important;
+  body.advancedUser #firewallContainer.colorBlind > div > span.blockRule,
+  body.colorBlind #netFilteringDialog > div.panes > .dynamic .entry > .action.block {
+    background-color: #00136e66!important
   }
-  body.colorBlind #netFilteringDialog > div.panes > .dynamic .entry > .action.own.block,
-  body.colorBlind #netFilteringDialog > div.panes > .dynamic .entry > .action > .block,
+  #actionSelector.colorBlind > span:nth-of-type(3),
   #firewallContainer.colorBlind > div.blocked > span:first-of-type::before,
   #firewallContainer.colorBlind.minimized > div.isDomain.totalBlocked > span:first-of-type::before,
   body.advancedUser #firewallContainer.colorBlind > div > span.blockRule.ownRule,
-  #actionSelector.colorBlind > span:nth-of-type(3) {
-    background-color: #00136eff !important;
+  body.colorBlind #netFilteringDialog > div.panes > .dynamic .entry > .action > .block,
+  body.colorBlind #netFilteringDialog > div.panes > .dynamic .entry > .action.own.block {
+    background-color: #00136eff!important
   }
-
-  /* #606060 = grey */
-  body.colorBlind #vwRenderer .logEntry > div[data-status="3"] {
-    background-color: #6060601a !important;
+  /*! #606060 = grey */
+body.colorBlind #vwRenderer .logEntry > div[data-status="3"] {
+    background-color: #6060601a!important
   }
   body.colorBlind #vwRenderer .logEntry > div[data-status="3"] > span:nth-of-type(7) b {
-    background-color: #60606033 !important;
+    background-color: #60606033!important
   }
-  body.colorBlind #netFilteringDialog > div.panes > .dynamic .entry > .action.noop,
-  body.advancedUser #firewallContainer.colorBlind > div > span.noopRule {
-    background-color: #60606066 !important;
+  body.advancedUser #firewallContainer.colorBlind > div > span.noopRule,
+  body.colorBlind #netFilteringDialog > div.panes > .dynamic .entry > .action.noop {
+    background-color: #60606066!important
   }
-
-  /* #6c6c6c = light grey */
-  #netFilteringDialog > div.panes > .dynamic .entry > .action.own.noop,
+  /*! #6c6c6c = light grey */
+#netFilteringDialog > div.panes > .dynamic .entry > .action.own.noop,
   body.colorBlind #netFilteringDialog > div.panes > .dynamic .entry > .action.own.noop {
-    background-color: #6c6c6cff !important;
+    background-color: #6c6c6cff!important
   }
-
-  /* #ffc239 = yellow */
-  body.colorBlind #vwRenderer .logEntry > div[data-status="2"],
-  body.colorBlind #netFilteringDialog > .panes > .details > div[data-status="2"] {
-    background-color: #ffc2391a !important;
+  /*! #ffc239 = yellow */
+body.colorBlind #netFilteringDialog > .panes > .details > div[data-status="2"],
+  body.colorBlind #vwRenderer .logEntry > div[data-status="2"] {
+    background-color: #ffc2391a!important
   }
-  body.colorBlind #vwRenderer .logEntry > div[data-status="2"] > span:nth-of-type(7) b,
-  body.colorBlind #netFilteringDialog > .panes > .details > div[data-status="2"] b {
-    background-color: #ffc23933 !important;
+  body.colorBlind #netFilteringDialog > .panes > .details > div[data-status="2"] b,
+  body.colorBlind #vwRenderer .logEntry > div[data-status="2"] > span:nth-of-type(7) b {
+    background-color: #ffc23933!important
   }
-  body.colorBlind #netFilteringDialog > div.panes > .dynamic .entry > .action.allow,
-  body.advancedUser #firewallContainer.colorBlind > div > span.allowRule {
-    background-color: #ffc23966 !important;
+  body.advancedUser #firewallContainer.colorBlind > div > span.allowRule,
+  body.colorBlind #netFilteringDialog > div.panes > .dynamic .entry > .action.allow {
+    background-color: #ffc23966!important
   }
-  body.colorBlind #netFilteringDialog > div.panes > .dynamic .entry > .action.own.allow,
-  body.colorBlind #netFilteringDialog > div.panes > .dynamic .entry > .action > .allow,
+  #actionSelector.colorBlind > span:first-of-type,
   #firewallContainer.colorBlind > div.allowed > span:first-of-type::before,
   #firewallContainer.colorBlind.minimized > div.isDomain.totalAllowed > span:first-of-type::before,
   body.advancedUser #firewallContainer.colorBlind > div > span.allowRule.ownRule,
-  #actionSelector.colorBlind > span:first-of-type {
-    background-color: #ffc239ff !important;
+  body.colorBlind #netFilteringDialog > div.panes > .dynamic .entry > .action > .allow,
+  body.colorBlind #netFilteringDialog > div.panes > .dynamic .entry > .action.own.allow {
+    background-color: #ffc239ff!important
   }
-  /*** COLORBLIND MODE END ***/
-}
+  /*! COLORBLIND MODE END */
 
+}
 @-moz-document url-prefix("moz-extension://uBlock0@raymondhill.net/logger-ui") {
   .fa-icon > svg,
   .ubo-icon > svg {
@@ -323,32 +318,29 @@
     color: var(--in-content-link-color)
   }
   select {
-    color: var(--in-content-selected-text) !important;
+    color: var(--in-content-selected-text)!important;
     border-color: var(--in-content-box-border-color)!important;
-    background: var(--tone-6) !important;
-    -moz-appearance: none !important; /* remove default arrow */
-    /* add custom arrow */
-    padding-right: 18px !important;
-    background-image: url(data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2248%22%20height%3D%2248%22%20viewBox%3D%220%200%2048%2048%22%3E%3Cpath%20d%3D%22M20%2020l10%2010%2010-10z%22%20fill%3D%22%23ccc%22%2F%3E%3C%2Fsvg%3E) !important;
-    background-position: center right !important;
-    background-repeat: no-repeat !important;
-    background-size: contain !important
+    background: var(--tone-6)!important;
+    -moz-appearance: none!important;
+    /*! remove default arrow *//*! add custom arrow */padding-right: 18px!important;
+    background-image: url(data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2248%22%20height%3D%2248%22%20viewBox%3D%220%200%2048%2048%22%3E%3Cpath%20d%3D%22M20%2020l10%2010%2010-10z%22%20fill%3D%22%23ccc%22%2F%3E%3C%2Fsvg%3E)!important;
+    background-position: center right!important;
+    background-repeat: no-repeat!important;
+    background-size: contain!important
   }
   select#pageSelector {
-    color: var(--in-content-selected-text) !important;
+    color: var(--in-content-selected-text)!important;
     border-color: var(--in-content-box-border-color)!important;
-    background: var(--tone-6) !important;
-    -moz-appearance: none !important; /* remove default arrow */
-    /* add custom arrow */
-    padding-right: 25px !important;
-    background-image: url(data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2248%22%20height%3D%2248%22%20viewBox%3D%220%200%2048%2048%22%3E%3Cpath%20d%3D%22M20%2020l10%2010%2010-10z%22%20fill%3D%22%23ccc%22%2F%3E%3C%2Fsvg%3E) !important;
-    background-position: center right !important;
-    background-repeat: no-repeat !important;
-    background-size: contain !important
+    background: var(--tone-6)!important;
+    -moz-appearance: none!important;
+    /*! remove default arrow *//*! add custom arrow */padding-right: 25px!important;
+    background-image: url(data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2248%22%20height%3D%2248%22%20viewBox%3D%220%200%2048%2048%22%3E%3Cpath%20d%3D%22M20%2020l10%2010%2010-10z%22%20fill%3D%22%23ccc%22%2F%3E%3C%2Fsvg%3E)!important;
+    background-position: center right!important;
+    background-repeat: no-repeat!important;
+    background-size: contain!important
   }
-
-  /* #netInspector */
-  #netInspector tr.blocked {
+  /*! #netInspector */
+#netInspector tr.blocked {
     background-color: #4b3137!important;
     color: #ff9494!important
   }
@@ -382,11 +374,11 @@
     border-color: var(--in-content-box-border-color)!important
   }
   #netInspector #filterExprPicker > div {
-    border: none !important;
-    border-top: 1px solid var(--tone-5) !important
+    border: none!important;
+    border-top: 1px solid!important
   }
   #netInspector #filterExprPicker > div:first-of-type {
-    border: none !important;
+    border: none!important
   }
   #netInspector #filterInput > input {
     background: var(--in-content-box-background)!important;
@@ -414,9 +406,8 @@
   #netInspector #vwRenderer .logEntry > div.canDetails:hover > span {
     background-color: var(--accent-3)!important
   }
-
-  /* #netFilteringDialog */
-  #netFilteringDialog .dialog > div.headers > span.header.selected {
+  /*! #netFilteringDialog */
+#netFilteringDialog .dialog > div.headers > span.header.selected {
     background-color: var(--tone-8)!important;
     color: var(--tone-4)!important;
     border-color: var(--tone-6)!important
@@ -450,42 +441,30 @@
     border-color: var(--in-content-box-border-color)!important;
     color: var(--in-content-selected-text)!important
   }
-  #netFilteringDialog > div.panes > .dynamic .entry {
+  #netFilteringDialog>.panes>.details>div,
+  #netFilteringDialog>div.panes>.dynamic .entry {
     background-color: var(--in-content-box-background)!important;
     border-color: var(--in-content-box-border-color)!important
   }
-  #netFilteringDialog > .panes > .details > div {
-    background-color: var(--in-content-box-background)!important;
-    border-color: var(--in-content-box-border-color)!important
-  }
-  #netFilteringDialog > .headers > .tools > span:hover {
-    var(--in-content-box-background-active) !important
-  }
-
-  /* domInspector */
-  #domInspector ul {
-    background-color: var(--in-content-page-background)!important
-  }
-  #domInspector li > span:first-child {
+  /*! domInspector */
+#domInspector li > span:first-child {
     color: var(--in-content-page-color)!important
   }
   #domInspector li.isCosmeticHide,
-  #domInspector li.isCosmeticHide ul,
-  #domInspector li.isCosmeticHide li {
-    background-color: var(--red-90) !important
+  #domInspector li.isCosmeticHide li,
+  #domInspector li.isCosmeticHide ul {
+    background-color: var(--red-90)!important
   }
-
-  /* #modalOverlay */
-  #modalOverlay > div > div:nth-of-type(1),
+  /*! #modalOverlay */
+#modalOverlay > div > div:nth-of-type(1),
   #modalOverlay > div > div:nth-of-type(2) {
     background-color: var(--in-content-page-background)!important
   }
   #modalOverlay > div > div:nth-of-type(2) svg {
     stroke: var(--tone-4)!important
   }
-
-  /* #loggerExportDialog */
-  #loggerExportDialog .options span.on[data-i18n],
+  /*! #loggerExportDialog */
+#loggerExportDialog .options span.on[data-i18n],
   #loggerExportDialog .options span.pushbutton:active {
     background-color: var(--in-content-primary-button-background)!important;
     color: var(--in-content-selected-text)!important
@@ -499,7 +478,6 @@
     border-color: var(--in-content-primary-button-background-hover)!important
   }
 }
-
 @-moz-document url-prefix("about:blank") {
   aside {
     background-color: var(--in-content-page-background)!important;
