@@ -97,6 +97,7 @@ regexp(".*\\.(p|P)(d|D)(f|F).*") {
     --accent-1: var(--blue-40);
     --accent-2: var(--blue-50);
     --accent-3: var(--blue-60);
+    --dark-overlay: rgba(15, 15, 10, 0.95);
     --in-content-page-color: var(--tone-4)!important;
     --in-content-page-background: var(--tone-7)!important;
     --in-content-text-color: var(--tone-3)!important;

@@ -65,8 +65,13 @@ url-prefix(https://discovery.addons.mozilla.org) {
   html[dir=ltr][lang] body,
   html[dir=rtl][lang],
   html[dir=rtl][lang] body {
-    background: var(--in-content-page-background)!important;
-    color: var(--in-content-page-color)!important
+    --newtab-background-color: var(--in-content-page-background) !important;
+    --newtab-search-header-background-color: var(--dark-overlay) !important;
+    --newtab-text-primary-color: var(--in-content-page-color) !important;
+    --newtab-card-background-color: var(--dark-overlay) !important;
+    --newtab-snippets-background-color: var(--dark-overlay) !important;
+    --newtab-textbox-background-color: var(--tone-6) !important;
+    --newtab-border-secondary-color: var(--tone-9) !important;
   }
   #SanitizeDialogPane > groupbox,
   #mainDiv.non-verbose div.section h2,
@@ -86,7 +91,9 @@ url-prefix(https://discovery.addons.mozilla.org) {
   .content-container .icon-container .icon[src=""],
   .extension-controlled-icon,
   .snippet .block-snippet-button,
-  .textbox-search-sign {
+  .textbox-search-sign,
+  .icon.icon-settings,
+  .blockButton  {
     filter: invert(65%)!important
   }
   .searchBarHiddenImage,
@@ -136,13 +143,9 @@ url-prefix(https://discovery.addons.mozilla.org) {
     color: var(--in-content-page-color)!important
   }
   #onboarding-overlay.onboarding-opened > #onboarding-overlay-dialog,
-  #searchWrapper input#searchText,
   .addon .content,
   .addon .logo,
   .card-outer,
-  .card-outer .card-context,
-  .card-outer .card-details,
-  .search-wrapper input,
   .topsite-form .form-wrapper input[type=text],
   card-outer.active span.context-menu ul.context-menu-list {
     background: var(--in-content-box-background)!important

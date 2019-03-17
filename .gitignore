@@ -3,3 +3,4 @@ internal_UUIDs.txt
 node_modules
 .cache
 ShadowFox.xcodeproj
+*.lock
