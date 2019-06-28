@@ -3460,7 +3460,9 @@ body.colorBlind #netFilteringDialog > .panes > .details > div[data-status="2"],
   h2 {
     color: var(--in-content-link-color)!important
   }
-  body {
+  body,
+  .frame,
+  .edit-values {
     background: var(--in-content-page-background)!important;
     color: var(--in-content-page-color)!important
   }
@@ -3497,7 +3499,8 @@ body.colorBlind #netFilteringDialog > .panes > .details > div[data-status="2"],
     border-color: var(--in-content-primary-button-background-hover)!important;
     background: var(--in-content-primary-button-background-hover)!important
   }
-  button {
+  button,
+  .message {
     -moz-appearance: none!important;
     background: var(--in-content-page-background)!important;
     border: 1px solid!important;
@@ -3517,8 +3520,8 @@ body.colorBlind #netFilteringDialog > .panes > .details > div[data-status="2"],
     border-color: var(--in-content-box-background)!important;
     background: var(--in-content-page-background)!important
   }
-  .edit-nav > div.active {
-    background: var(--in-content-page-background)!important;
+  .edit-nav-item.active {
+    background: var(--in-content-box-background)!important;
     color: var(--in-content-page-color)!important
   }
   .flex.edit-header > .buttons > button:nth-child(2):not([disabled=disabled]):after {
@@ -3539,7 +3542,9 @@ body.colorBlind #netFilteringDialog > .panes > .details > div[data-status="2"],
   .menu.expand,
   .page-popup,
   .submenu,
-  html {
+  html,
+  .menu-area,
+  .menu-buttons {
     background: var(--in-content-box-background)!important
   }
   .vl-dropdown-menu {
