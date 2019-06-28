@@ -990,6 +990,10 @@ url-prefix(https://discovery.addons.mozilla.org) {
   .DiscoPane-header-intro {
     color: var(--in-content-text-color)!important
   }
+  .message-bar {
+    background-color: var(--in-content-button-background)!important;
+    color: var(--in-content-text-color)!important;
+  }
 }
 @-moz-document url-prefix(about:blank) {
   html > body:empty:not(.vimvixen-console) {
