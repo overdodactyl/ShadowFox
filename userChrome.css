@@ -214,7 +214,7 @@ menupopup menu[_moz-menuactive=true] {
 }
 vbox#sidebar-box.chromeclass-extrachrome {
   border-color: var(--in-content-category-header-background)!important;
-  border-right: 1px!important;
+  border-right: 1px var(--in-content-category-header-background) !important;
   border-style: solid!important
 }
 #_testpilot-containers_7 .menu-iconic-left,
