@@ -1,0 +1,7 @@
+/*! Alters the webextension Momentum
+  IMPORTANT: change the Internal UUID */
+@-moz-document url-prefix("moz-extension://momentum@momentumdash.com/dashboard.html") {
+  body {
+    background-color: var(--tone-8)!important
+  }
+}
