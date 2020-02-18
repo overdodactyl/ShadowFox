@@ -9,7 +9,7 @@
     "gulp-exec": "^3.0.2"
   },
   "devDependencies": {
-    "gulp": "github:gulpjs/gulp#4.0"
+    "gulp": "github:gulpjs/gulp#v4.0.2"
   },
   "scripts": {
     "test": "gulp publish"
