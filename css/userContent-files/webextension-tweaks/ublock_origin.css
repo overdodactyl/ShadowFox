@@ -199,7 +199,9 @@
   }
   #firewallContainer > div.allowed > span.noopRule:not(.ownRule)::before,
   #firewallContainer > div.allowed > span.noopRule:not(.ownRule)::after,
+  #firewallContainer > div.totalBlocked > span.noopRule:not(.ownRule)::before,
   #firewallContainer > div.totalBlocked > span.noopRule:not(.ownRule)::after,
+  #firewallContainer > div.totalBlocked > span.blockRule:not(.ownRule)::before,
   #firewallContainer > div.totalBlocked > span.blockRule:not(.ownRule)::after,
   #firewallContainer > div.blocked > span.blockRule:not(.ownRule)::before,
   #firewallContainer > div.blocked > span.blockRule:not(.ownRule)::after,
