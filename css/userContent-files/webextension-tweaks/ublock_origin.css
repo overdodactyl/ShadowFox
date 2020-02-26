@@ -197,16 +197,30 @@
   #firewallContainer.colorBlind.minimized > div.isDomain.totalBlocked > span:first-of-type::before {
     background-color: #787cab!important
   }
-  #firewallContainer > div.allowed > span.noopRule:not(.ownRule)::before,
-  #firewallContainer > div.allowed > span.noopRule:not(.ownRule)::after,
-  #firewallContainer > div.totalBlocked > span.noopRule:not(.ownRule)::before,
-  #firewallContainer > div.totalBlocked > span.noopRule:not(.ownRule)::after,
-  #firewallContainer > div.totalBlocked > span.blockRule:not(.ownRule)::before,
-  #firewallContainer > div.totalBlocked > span.blockRule:not(.ownRule)::after,
-  #firewallContainer > div.blocked > span.blockRule:not(.ownRule)::before,
-  #firewallContainer > div.blocked > span.blockRule:not(.ownRule)::after,
-  #firewallContainer > div.blocked > span.noopRule:not(.ownRule)::before,
-  #firewallContainer > div.blocked > span.noopRule:not(.ownRule)::after {
+  #firewallContainer > .allowed > .allowRule:not(.ownRule)::before,
+  #firewallContainer > .allowed > .allowRule:not(.ownRule)::after,
+  #firewallContainer > .allowed > .noopRule:not(.ownRule)::before,
+  #firewallContainer > .allowed > .noopRule:not(.ownRule)::after,
+  #firewallContainer > .allowed > .blockRule:not(.ownRule)::before,
+  #firewallContainer > .allowed > .blockRule:not(.ownRule)::after,
+  #firewallContainer > .blocked > .allowRule:not(.ownRule)::before,
+  #firewallContainer > .blocked > .allowRule:not(.ownRule)::after,
+  #firewallContainer > .blocked > .noopRule:not(.ownRule)::before,
+  #firewallContainer > .blocked > .noopRule:not(.ownRule)::after,
+  #firewallContainer > .blocked > .blockRule:not(.ownRule)::before,
+  #firewallContainer > .blocked > .blockRule:not(.ownRule)::after,
+  #firewallContainer > .totalBlocked > .allowRule:not(.ownRule)::before,
+  #firewallContainer > .totalBlocked > .allowRule:not(.ownRule)::after,
+  #firewallContainer > .totalBlocked > .noopRule:not(.ownRule)::before,
+  #firewallContainer > .totalBlocked > .noopRule:not(.ownRule)::after,
+  #firewallContainer > .totalBlocked > .blockRule:not(.ownRule)::before,
+  #firewallContainer > .totalBlocked > .blockRule:not(.ownRule)::after,
+  #firewallContainer > .totalAllowed > .allowRule:not(.ownRule)::before,
+  #firewallContainer > .totalAllowed > .allowRule:not(.ownRule)::after,
+  #firewallContainer > .totalAllowed > .noopRule:not(.ownRule)::before,
+  #firewallContainer > .totalAllowed > .noopRule:not(.ownRule)::after,
+  #firewallContainer > .totalAllowed > .blockRule:not(.ownRule)::before,
+  #firewallContainer > .totalAllowed > .blockRule:not(.ownRule)::after {
       color: var(--tone-7) !important;
   }
   #firewallContainer > div.isCname > span:first-of-type {
