@@ -224,7 +224,7 @@
       color: var(--tone-7) !important;
   }
   #firewallContainer > div.isCname > span:first-of-type {
-      color: var(--blue-50) !important;
+      color: #9DBBFB !important;
   }
   #dashboard-nav-widgets {
     border-color: var(--tone-5)!important;
