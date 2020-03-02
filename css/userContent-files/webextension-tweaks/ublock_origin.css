@@ -230,6 +230,9 @@
     border-color: var(--tone-5)!important;
     background-color: var(--tone-8)!important
   }
+  [data-i18n="dashboardUnsavedWarning"] {
+    color: black !important;
+  }
   .tabButton {
     background-color: var(--tone-7)!important;
     color: var(--tone-4)!important;
