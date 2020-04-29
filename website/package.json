@@ -5,7 +5,7 @@
     "gulp": "^3.9.1",
     "gulp-rename": "^1.2.3",
     "html5shiv": "^3.7.3",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "lazysizes": "^4.0.2",
     "magnific-popup": "^1.1.0",
     "rename": "^1.0.4",
