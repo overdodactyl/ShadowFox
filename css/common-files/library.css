@@ -1,4 +1,4 @@
-@-moz-document url(chrome://browser/content/places/places.xul) {
+@-moz-document url(chrome://browser/content/places/places.xhtml) {
   toolbar {
     -moz-appearance: none!important;
     background-color: var(--in-content-category-header-background)!important;
