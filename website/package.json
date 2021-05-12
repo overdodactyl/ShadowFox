@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "codemirror": "^5.37.0",
+    "codemirror": "^5.58.2",
     "critical": "^1.3.2",
     "gulp": "^3.9.1",
     "gulp-rename": "^1.2.3",
